@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en" style="margin: 0; padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; width: 100%; height: 100%;">
+<head>
+  <meta charset="UTF-8">
+  <title>Subject Line Goes Here</title>
+  
+  <style type="text/css">
+/*
+
+You can use these comments to help you change any of the text or background colors as well as change the font.
+
+########COLORS#######
+
+To use these colors, you can copy the hash value such as #001871 for aig fore blue and change either the text color or background color of elements. In order to change the color, you can go to the style tag within the relevant table (<table>) or table cell (<td>) and replace an existing "color" or "background" property with the desired color. If neither of those properties exist in the style tag, you can add them.
+
+The final product would look like this for a table or table cell
+<table style="color: #001871; background: #C7DBF4;">
+or
+<td style="color: #001871; background: #C7DBF4;">
+
+primary colors
+aig-core-blue: #001871;
+pale-aig-blue: #C7DBF4;
+cobalt-aig-blue: #1352DE;
+
+secondary colors
+cyan: #00A4E4;
+lightest-cyan: #E0F3FB;
+light-cyan: #C0E7F7;
+medium-cyan: #80D2F2;
+dark-cyan: #00719E;
+
+orange: #FF8200;
+lightest-orange: #FFE5C5;
+light-orange: #FECB8B;
+medium-orange: #FFB466;
+dark-orange: #A9431E;
+
+green: #00BF6F;
+lightest-green: #BDF0DF;
+light-green: #7AE1BF;
+medium-green: #4DD29A;
+dark-green: #047E4B;
+
+red: #E81944;
+lightest-red: #FBE7EB;
+light-red: #F7CED7;
+medium-red: #F68CA2;
+dark-red: #CB0029;
+
+yellow: #FFBF3F;
+lightest-yellow: #FCF2CD;
+light-yellow: #F8E59A;
+medium-yellow: #FFD279;
+dark-yellow: #A9662B;
+
+purple: #904FD8;
+lightest-purple: #E2DAF1;
+light-purple: #C5B4E3;
+medium-purple: #BC95E8;
+dark-purple: #6800DB;
+
+teal: #00BFB3;
+lightest-teal: #E0F8F3;
+light-teal: #C1F0E8;
+medium-teal: #80DFD9;
+dark-teal: #007D7D;
+
+gray: #B1B1B1;
+lightest-gray: #EEEEEE;
+light-gray: #DCDCDC;
+medium-gray: #D0D0D0;
+dark-gray: #343741;
+
+warm-gray: #B6ADA5;
+lightest-warm-gray: #EBE9E5;
+light-warm-gray: #D7D2CB;
+medium-warm-gray: #C8C2BC;
+
+steel: #7086A1;
+lightest-steel: #DCE2EA;
+light-steel: #93A3B7;
+dark-steel: #5D738D;
+
+
+##########FONTS##########
+
+To change the font of any table cell (<td>), you can either find the "font-family" property within the style tag and replace it or add the "font-family" property to the style tag of a table cell (<td>).
+
+The final product would look like this for Source Sans Pro regular:
+<td style="font-family: 'Source Sans Pro', sans-serif;">
+
+source-reg: 'Source Sans Pro', sans-serif; font-weight: 400;
+source-bold: 'Source Sans Pro', sans-serif; font-weight: 700;
+source-italic: 'Source Sans Pro', sans-serif; font-weight: 400; font-style: italic;
+source-italic-bold: 'Source Sans Pro', sans-serif; font-weight: 700; font-style: italic;
+
+*/
+@media (max-width: 600px) {
+  /* line 10, ../../../../src/sass/wrappers/responsive/default.scss */
+  .wrapper, .section {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 600px) {
+  /* line 16, ../../../../src/sass/wrappers/responsive/default.scss */
+  .columns {
+    width: 100%;
+  }
+}
+
+
+/*
+commenting out for the social media icons at bottom
+@media (max-width: 600px) {
+   line 22, ../../../../src/sass/wrappers/responsive/default.scss 
+  .col-2, .col-3 {
+    width: 100% !important;
+    display: block;
+  }
+}
+*/
+/* line 29, ../../../../src/sass/wrappers/responsive/default.scss */
+table {
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt;
+}
+
+@media (max-width: 600px) {
+  /* line 36, ../../../../src/sass/wrappers/responsive/default.scss */
+  .icon-left .icon, .icon-left .text {
+    display: block !important;
+    width: 100% !important;
+  }
+  /* line 40, ../../../../src/sass/wrappers/responsive/default.scss */
+  .icon-left .icon {
+    padding: 0 0 32px !important;
+  }
+  /* line 43, ../../../../src/sass/wrappers/responsive/default.scss */
+  .icon-left .heading {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  /* line 51, ../../../../src/sass/wrappers/responsive/default.scss */
+  .icon-right .icon, .icon-right .text {
+    float: none !important;
+    width: 100% !important;
+  }
+  /* line 55, ../../../../src/sass/wrappers/responsive/default.scss */
+  .icon-right .icon td {
+    padding: 0 0 32px !important;
+    text-align: center;
+  }
+  /* line 59, ../../../../src/sass/wrappers/responsive/default.scss */
+  .icon-right .heading {
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=default.css.map */
+
+</style>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <!--[if mso]>
+  <style>
+    body, td, span, div, h1, a {
+      font-family: sans-serif !important;
+    }
+  </style>
+  <![endif]-->
+</head>
+<body style="margin: 0; padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; width: 100%; height: 100%; line-height: 1;">
+  <table class="body" style="border-collapse: collapse; font-family: 'Source Sans Pro', sans-serif; border-spacing: 0; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; -moz-osx-font-smoothing: grayscale; background: #ebe9e5; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; width: 100%; height: 100%; -moz-font-feature-settings: 'liga' on;">
+    <tr>
+      <td style="margin: 0; padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; font-family: 'Source Sans Pro', sans-serif;">
+        <table align="center" class="wrapper" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', sans-serif; width: 620px; margin: auto;">
+          <tr>
+            <td class="spacer" style="margin: 0; padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; font-family: 'Source Sans Pro', sans-serif; width: 10px;"> </td>
+            <td style="margin: 0; padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; font-family: 'Source Sans Pro', sans-serif;">
+              <table class="preheader" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', sans-serif; width: 100%; color: #767676; font-size: 16px;">
+                <tr>
+                  <td style="margin: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; font-family: 'Source Sans Pro', sans-serif; padding: 16px; text-align: center">Get a quote fast: <a href="tel:18885709519" style="text-decoration: none; color: #343741; border-bottom: 1px dotted #001871;">888.570.9519</a>
+                  </td>
+                </tr>
+              </table>
+              <table align="center" class="main" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', sans-serif; width: 100%; color: #343741; background: #fff; border-radius: 2px; box-shadow: 0 1px 4px #666;">
+                <tr>
+                  <td style="margin: 0; padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; font-family: 'Source Sans Pro', sans-serif;">
+                  <!-- Remove the text below this comment and insert header/content sections -->
+                  
+                  <style type="text/css">
+                  @media (max-width: 600px) {
+                    /* line 9, ../../../../src/sass/headers/responsive/img.scss */
+                    .header img {
+                      width: auto !important;
+                      max-width: 100%;
+                    }
+                  }
+
+                  /*# sourceMappingURL=img.css.map */
+
+                  </style>
+                  <table class="header" style="border-collapse: collapse; border-spacing: 0; width: 100%; text-align: center;">
+                    <tr>
+                      <td style="margin: 0; padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline;">
+                        <img width="600" src="https://www.travelguard.com/content/dam/travelguard/us/images/email/pme/purchase-month-header.jpg" style="border: 0; outline: none; display: block; margin: auto; width: 600px; border-radius: 2px 2px 0 0;">
+                      </td>
+                    </tr>
+                  </table>
+
+
+                  <table class="section" style="border-collapse: collapse; border-spacing: 0; background: #001871; color: #fff; width: 100%;">
+                    <tr>
+                      <td style="margin: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; padding: 32px 0;">
+                        <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                        
+
+                        <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', sans-serif; font-size: 24px; width: 100%; text-align: center;">
+                          <tr>
+                            <td style="margin: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; padding: .25em 1em;">Planning <em>another</em> vacation? Don't forget Travel Guard &reg;</td>
+                          </tr>
+                        </table>
+
+                        <!--[if mso]>
+
+                        <table align="center" class="mso-button" style="border-collapse: collapse; border-spacing: 0; text-align: center; background: #fff; margin: 16px auto;">
+                          <tr>
+                            <td style="margin: 0; font-size: 16px; font: inherit; vertical-align: baseline; padding: 8px 16px; border: 1px solid #ddd;"><a href="https://www.travelguard.com/?cmpid=emc-001-TGUS-RN-PME_Nov2020" style="color: #047E4B; font-family: 'Source Sans Pro', sans-serif; text-decoration: none;">BUTTON</a></td>
+                          </tr>
+                        </table>
+
+                        <![endif]-->
+
+                        <!--[if !mso]-->
+
+
+                        <table class="button" style="border-collapse: collapse; border-spacing: 0; text-align: center; margin: 16px 0; width: 100%;">
+                          <tr>
+                            <td style="margin: 0; padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline;">
+                              <a href="https://www.travelguard.com/?cmpid=emc-001-TGUS-RN-PME_Nov2020" style="border-radius: 2px; box-shadow: 0 1px 4px rgba(0,0,0,0.24); background: #fff; font-family: 'Source Sans Pro', sans-serif; color: #047E4B; text-decoration: none; padding: 8px 16px; display: inline-block; font-weight: bold;">Get a Quote</a>
+                            </td>
+                          </tr>
+                        </table>
+
+
+
+                        <!--[endif]-->
+
+
+                        <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                      </td>
+                    </tr>
+                  </table>
+
+
+
+                  <table class="paragraph" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', sans-serif; width: 100%; margin: 0 auto;">
+                    <tr>
+                      <td style="margin: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; padding: 1em; line-height: 22px;">
+                          Dear {%First_Name%}, <br>
+                          <br>
+                          You're a savvy traveler who knows a vacation, like any other investment, is one that should be covered. <br>
+                          <br>
+                          Since your last vacation, you're likely thinking about where you're headed next. Once your plans are set, we're ready to assist you in selecting an affordable, customized <a style="color: #001871;" href="http://www.travelguard.com/?cmpid=emc-001-TGUS-RN-PME_Nov2020">Travel Guard travel insurance plan</a> to help cover your trip investment. <br>
+                          <br>
+                          When you do, you'll also have access to <a style="color: #001871;" href="https://www.travelguard.com/help-center?cmpid=emc-001-TGUS-RN-PME_Nov2020">24/7 global assistance services</a> to help you with common travel predicaments that can derail even the best laid vacation plans.
+                      </td>
+                    </tr>
+                  </table>
+
+
+
+                  <table class="section" style="border-collapse: collapse; border-spacing: 0; background: #C7DBF4; width: 100%;">
+                    <tr>
+                      <td style="margin: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; padding: 32px 0;">
+                        <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                        
+
+                        <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', sans-serif; font-size: 24px; width: 100%; text-align: center;">
+                          <tr>
+                            <td style="margin: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; padding: 0 1em .5em; color: #001871;">Services Include*</td>
+                          </tr>
+                        </table>
+
+                        <table align="center" class="ul-checked" style="border-collapse: collapse; border-spacing: 0; width: 350px; margin: auto;">
+                          <tr>
+                            <td style="margin: 0; padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline;">
+                              <table class="list" style="border-collapse: collapse; border-spacing: 0;">
+                                <tr>
+                                  <td class="bullet" style="margin: 0; padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; width: 1.75em;"><img src="https://www.travelguard.com/content/dam/travelguard/us/images/email/pme/checkmark.png" width="18" height="14" style="border: 0; outline: none;"></td>
+                                  <td class="li" style="margin: 0; padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; padding-bottom: .5em;">Re-booking delayed or cancelled flights so you don't miss your ship's departure</td>
+                                </tr>
+                                <tr>
+                                  <td class="bullet" style="margin: 0; padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; width: 1.75em;"><img src="https://www.travelguard.com/content/dam/travelguard/us/images/email/pme/checkmark.png" width="18" height="14" style="border: 0; outline: none;"></td>
+                                  <td class="li" style="margin: 0; padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; padding-bottom: .5em;">Finding lost/delayed luggage</td>
+                                </tr>
+                                <tr>
+                                  <td class="bullet" style="margin: 0; padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; width: 1.75em;"><img src="https://www.travelguard.com/content/dam/travelguard/us/images/email/pme/checkmark.png" width="18" height="14" style="border: 0; outline: none;"></td>
+                                  <td class="li" style="margin: 0; padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; padding-bottom: .5em;">Coordinating medical care onboard and at port</td>
+                                </tr>
+                                <tr>
+                                  <td class="bullet" style="margin: 0; padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; width: 1.75em;"><img src="https://www.travelguard.com/content/dam/travelguard/us/images/email/pme/checkmark.png" width="18" height="14" style="border: 0; outline: none;"></td>
+                                  <td class="li" style="margin: 0; padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; padding-bottom: .5em;">Providing physician referrals</td>
+                                </tr>
+                                <tr>
+                                  <td class="bullet" style="margin: 0; padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; width: 1.75em;"><img src="https://www.travelguard.com/content/dam/travelguard/us/images/email/pme/checkmark.png" width="18" height="14" style="border: 0; outline: none;"></td>
+                                  <td class="li" style="margin: 0; padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; padding-bottom: .5em;">Prescription replacement assistance</td>
+                                </tr>
+                                <tr>
+                                  <td class="bullet" style="margin: 0; padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; width: 1.75em;"><img src="https://www.travelguard.com/content/dam/travelguard/us/images/email/pme/checkmark.png" width="18" height="14" style="border: 0; outline: none;"></td>
+                                  <td class="li" style="margin: 0; padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; padding-bottom: .5em;">Passport and ticket replacement assistance</td>
+                                </tr>
+                                <tr>
+                                  <td class="bullet" style="margin: 0; padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; width: 1.75em;"><img src="https://www.travelguard.com/content/dam/travelguard/us/images/email/pme/checkmark.png" width="18" height="14" style="border: 0; outline: none;"></td>
+                                  <td class="li" style="margin: 0; padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; padding-bottom: .5em;">Language interpretation and more!</td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+
+
+                        <!--[if mso]>
+
+                        <table align="center" class="mso-button" style="border-collapse: collapse; border-spacing: 0; text-align: center; background: #001871; margin: 16px auto;">
+                          <tr>
+                            <td style="margin: 0; font-size: 16px; font: inherit; vertical-align: baseline; padding: 8px 16px; border: 1px solid #ddd;"><a href="https://www.travelguard.com/travel-insurance?cmpid=emc-001-TGUS-RN-PME_Nov2020" style="color: #fff; font-family: 'Source Sans Pro', sans-serif; text-decoration: none;">Learn More</a></td>
+                          </tr>
+                        </table>
+
+                        <![endif]-->
+
+                        <!--[if !mso]-->
+
+
+                        <table class="button" style="border-collapse: collapse; border-spacing: 0; text-align: center; margin: 16px 0; width: 100%;">
+                          <tr>
+                            <td style="margin: 0; padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline;">
+                              <a href="https://www.travelguard.com/travel-insurance?cmpid=emc-001-TGUS-RN-PME_Nov2020" style="border-radius: 2px; box-shadow: 0 1px 4px rgba(0,0,0,0.24); background: #001871; font-family: 'Source Sans Pro', sans-serif; color: #fff; text-decoration: none; padding: 8px 16px; display: inline-block; font-weight: bold;">Learn More</a>
+                            </td>
+                          </tr>
+                        </table>
+
+
+
+                        <!--[endif]-->
+
+                        <table class="paragraph" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', sans-serif; width: 100%; margin: 0 auto; font-size: 14px;">
+                          <tr>
+                            <td style="margin: 0; border: 0; font: inherit; vertical-align: baseline; padding: 1em; line-height: 22px; font-style: italic; text-align: center;">
+                                *Expenses incurred from third-party vendors not part of a filed insurance plan are the responsibility of the traveler.
+                            </td>
+                          </tr>
+                        </table>
+
+
+
+                        <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                      </td>
+                    </tr>
+                  </table>
+
+
+                  <table class="paragraph" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', sans-serif; width: 100%; margin: 0 auto;">
+                    <tr>
+                      <td style="margin: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; padding: 1em; line-height: 22px;">
+                          Life has its ups and downs and it's anyone's guess what's in store for the year ahead. So if you're planning on taking a vacation, don't chance it. Make sure you travel with a Travel Guard travel insurance plan. <br>
+                          <br>
+                          We look forward to going along with you on future travels! <br>
+                          <br>
+                          Sincerely, <br>
+                          Travel Guard Customer Service
+                      </td>
+                    </tr>
+                  </table>
+
+
+
+                  <table class="section" style="border-collapse: collapse; border-spacing: 0; background: #001871; color: #fff; width: 100%; text-align: center;">
+                    <tr>
+                      <td style="margin: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; padding: 32px 0;">
+                        <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                        <table class="paragraph" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', sans-serif; width: 100%; margin: 0 auto;">
+                          <tr>
+                            <td style="margin: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; padding: 1em; line-height: 22px;">
+                                <strong>Be sure to cover your next trip!</strong>
+                            </td>
+                          </tr>
+                        </table>
+
+                        <!--[if mso]>
+
+                        <table align="center" class="mso-button" style="border-collapse: collapse; border-spacing: 0; text-align: center; background: #fff; margin: 16px auto;">
+                          <tr>
+                            <td style="margin: 0; font-size: 16px; font: inherit; vertical-align: baseline; padding: 8px 16px; border: 1px solid #ddd;"><a href="https://www.travelguard.com/?cmpid=emc-001-TGUS-RN-PME_Nov2020" style="color: #047E4B; font-family: 'Source Sans Pro', sans-serif; text-decoration: none;">BUTTON</a></td>
+                          </tr>
+                        </table>
+
+                        <![endif]-->
+
+                        <!--[if !mso]-->
+
+
+                        <table class="button" style="border-collapse: collapse; border-spacing: 0; text-align: center; margin: 16px 0; width: 100%;">
+                          <tr>
+                            <td style="margin: 0; padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline;">
+                              <a href="https://www.travelguard.com/?cmpid=emc-001-TGUS-RN-PME_Nov2020" style="border-radius: 2px; box-shadow: 0 1px 4px rgba(0,0,0,0.24); background: #fff; font-family: 'Source Sans Pro', sans-serif; color: #047E4B; text-decoration: none; padding: 8px 16px; display: inline-block; font-weight: bold;">Get a Quote</a>
+                            </td>
+                          </tr>
+                        </table>
+
+
+
+                        <!--[endif]-->
+
+                        <table class="paragraph" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', sans-serif; margin: 0 auto; width: 100%;">
+                            <tbody>
+                                <tr>
+                                    <td style="border: 0; font: inherit; font-size: 100%; margin: 0; padding: 1em; vertical-align: baseline; text-align: center">
+                                        Call us at <a style="color:#fff" href="tel:18885709519">888.570.9519</a>. Visit <a style="color: #fff;" href="https://www.travelguard.com/?cmpid=emc-001-TGUS-RN-TravelTips-November2020">www.travelguard.com</a> . Ask your travel advisor.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                        <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                      </td>
+                    </tr>
+                  </table>
+
+
+
+                  <table class="subheading" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', sans-serif; width: 100%; text-align: center;">
+                    <tr>
+                      <td style="margin: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; padding: .25em 0;"><strong>Find Travel Guard on these social media sites!</strong></td>
+                    </tr>
+                  </table>
+
+
+
+                  <table class="columns" style="border-collapse: collapse; border-spacing: 0;">
+                    <tr>
+                      <td class="col-3" style="padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; margin: auto 0; width: 200px;">
+                        <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                        <table class="img-3col" style="border-collapse: collapse; border-spacing: 0; width: 100%; text-align: center; margin: 1em 0;">
+                          <tr>
+                            <td class="spacer" style="margin: 0; padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; width: 1em;"> </td>
+                            <td style="margin: 0; padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline;">
+                              <a href="https://www.facebook.com/travelguard"><img width="40" src="https://www.travelguard.com/content/dam/travelguard/us/images/email/shared/aig_socialicon_facebook.png" style="border: 0; outline: none; display: block; margin: auto; width: 40px;"></a>
+                            </td>
+                            <td class="spacer" style="margin: 0; padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; width: 1em;"> </td>
+                          </tr>
+                        </table>
+                        <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                      </td>
+                      <td class="col-3" style="padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; margin: auto 0; width: 200px;">
+                        <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                        <table class="img-3col" style="border-collapse: collapse; border-spacing: 0; width: 100%; text-align: center; margin: 1em 0;">
+                          <tr>
+                            <td class="spacer" style="margin: 0; padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; width: 1em;"> </td>
+                            <td style="margin: 0; padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline;">
+                              <a href="https://twitter.com/travelguard"><img width="40" src="https://www.travelguard.com/content/dam/travelguard/us/images/email/shared/aig_socialicon_twitter.png" style="border: 0; outline: none; display: block; margin: auto; width: 40px;"></a>
+                            </td>
+                            <td class="spacer" style="margin: 0; padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; width: 1em;"> </td>
+                          </tr>
+                        </table>
+                        <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                      </td>
+                      <td class="col-3" style="padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; margin: auto 0; width: 200px;">
+                        <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                        <table class="img-3col" style="border-collapse: collapse; border-spacing: 0; width: 100%; text-align: center; margin: 1em 0;">
+                          <tr>
+                            <td class="spacer" style="margin: 0; padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; width: 1em;"> </td>
+                            <td style="margin: 0; padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline;">
+                              <a href="https://www.instagram.com/travelguard/"><img width="40" src="https://www.travelguard.com/content/dam/travelguard/us/images/email/shared/aig_socialicon_instragram-small.png" style="border: 0; outline: none; display: block; margin: auto; width: 40px;"></a>
+                            </td>
+                            <td class="spacer" style="margin: 0; padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; width: 1em;"> </td>
+                          </tr>
+                        </table>
+                        <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                      </td>
+                    </tr>
+                  </table>
+
+
+                  <!-- Remove the text above this comment and insert header/content sections -->
+                  </td>
+                </tr>
+              </table>
+              <table class="footer" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', sans-serif; width: 100%; color: #343741; font-size: 10px;">
+                <tbody>
+                    <tr>
+                        <td style="margin: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; font-family: 'Source Sans Pro', sans-serif; padding: 16px;">
+                            Insurance offered by Travel Guard Group, Inc., a licensed insurance producer. This is only a brief description of the coverage(s) available. The Policy will contain reductions, limitations, exclusions and termination provisions. Insurance underwritten by National Union Fire Insurance Company of Pittsburgh, Pa., a Pennsylvania insurance company, with its principal place of business at <a href="https://www.google.com/maps?q=175+Water+Street,+18th+Floor,+New+York,+NY+10038&amp;entry=gmail&amp;source=g" style="color: #343741;">175 Water Street, 18th Floor, New York, NY 10038</a>. It is currently authorized to transact business in all states and the District of Columbia. NAIC No. 19445. Coverage may not be available in all states. To request to be removed from future Travel Guard mailings, please send your request to us in writing at <a href="mailto:travelguard@travelguard.com" style="color: #343741;">travelguard@travelguard.com</a> or at <a href="https://www.google.com/maps?q=3300+Business+Park+Drive+Stevens+Point,+WI+54482&amp;entry=gmail&amp;source=g" style="color: #343741;">3300 Business Park Dr., Stevens Point, WI 54482</a>.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </td>
+            <td class="spacer" style="margin: 0; padding: 0; border: 0; font-size: 16px; font: inherit; vertical-align: baseline; font-family: 'Source Sans Pro', sans-serif; width: 10px;"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; width: 100%; height: 100%;">
+<head>
+  <meta charset="UTF-8">
+  <title>Subject Line Goes Here</title>
+  
+  <style type="text/css">
+/*
+
+You can use these comments to help you change any of the text or background colors as well as change the font.
+
+########COLORS#######
+
+To use these colors, you can copy the hash value such as #001871 for aig fore blue and change either the text color or background color of elements. In order to change the color, you can go to the style tag within the relevant table (<table>) or table cell (<td>) and replace an existing "color" or "background" property with the desired color. If neither of those properties exist in the style tag, you can add them.
+
+The final product would look like this for a table or table cell
+<table style="color: #001871; background: #C7DBF4;">
+or
+<td style="color: #001871; background: #C7DBF4;">
+
+primary colors
+aig-core-blue: #001871;
+pale-aig-blue: #C7DBF4;
+cobalt-aig-blue: #1352DE;
+
+secondary colors
+cyan: #00A4E4;
+lightest-cyan: #E0F3FB;
+light-cyan: #C0E7F7;
+medium-cyan: #80D2F2;
+dark-cyan: #00719E;
+
+orange: #FF8200;
+lightest-orange: #FFE5C5;
+light-orange: #FECB8B;
+medium-orange: #FFB466;
+dark-orange: #A9431E;
+
+green: #00BF6F;
+lightest-green: #BDF0DF;
+light-green: #7AE1BF;
+medium-green: #4DD29A;
+dark-green: #047E4B;
+
+red: #E81944;
+lightest-red: #FBE7EB;
+light-red: #F7CED7;
+medium-red: #F68CA2;
+dark-red: #CB0029;
+
+yellow: #FFBF3F;
+lightest-yellow: #FCF2CD;
+light-yellow: #F8E59A;
+medium-yellow: #FFD279;
+dark-yellow: #A9662B;
+
+purple: #904FD8;
+lightest-purple: #E2DAF1;
+light-purple: #C5B4E3;
+medium-purple: #BC95E8;
+dark-purple: #6800DB;
+
+teal: #00BFB3;
+lightest-teal: #E0F8F3;
+light-teal: #C1F0E8;
+medium-teal: #80DFD9;
+dark-teal: #007D7D;
+
+gray: #B1B1B1;
+lightest-gray: #EEEEEE;
+light-gray: #DCDCDC;
+medium-gray: #D0D0D0;
+dark-gray: #343741;
+
+warm-gray: #B6ADA5;
+lightest-warm-gray: #EBE9E5;
+light-warm-gray: #D7D2CB;
+medium-warm-gray: #C8C2BC;
+
+steel: #7086A1;
+lightest-steel: #DCE2EA;
+light-steel: #93A3B7;
+dark-steel: #5D738D;
+
+
+##########FONTS##########
+
+To change the font of any table cell (<td>), you can either find the "font-family" property within the style tag and replace it or add the "font-family" property to the style tag of a table cell (<td>).
+
+The final product would look like this for Source Sans Pro regular:
+<td style="font-family: 'Source Sans Pro', sans-serif;">
+
+source-reg: 'Source Sans Pro', sans-serif; font-weight: 400;
+source-bold: 'Source Sans Pro', sans-serif; font-weight: 700;
+source-italic: 'Source Sans Pro', sans-serif; font-weight: 400; font-style: italic;
+source-italic-bold: 'Source Sans Pro', sans-serif; font-weight: 700; font-style: italic;
+
+*/
+@media (max-width: 600px) {
+  /* line 10, ../../../sass/wrappers/responsive/default.scss */
+  .wrapper, .section {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 600px) {
+  /* line 16, ../../../sass/wrappers/responsive/default.scss */
+  .columns {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  /* line 22, ../../../sass/wrappers/responsive/default.scss */
+  .col-2, .col-3 {
+    width: 100% !important;
+    display: block;
+  }
+}
+
+/* line 29, ../../../sass/wrappers/responsive/default.scss */
+table {
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt;
+}
+
+@media (max-width: 600px) {
+  /* line 36, ../../../sass/wrappers/responsive/default.scss */
+  .icon-left .icon, .icon-left .text {
+    display: block !important;
+    width: 100% !important;
+  }
+  /* line 40, ../../../sass/wrappers/responsive/default.scss */
+  .icon-left .icon {
+    padding: 0 0 32px !important;
+  }
+  /* line 43, ../../../sass/wrappers/responsive/default.scss */
+  .icon-left .heading {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  /* line 51, ../../../sass/wrappers/responsive/default.scss */
+  .icon-right .icon, .icon-right .text {
+    float: none !important;
+    width: 100% !important;
+  }
+  /* line 55, ../../../sass/wrappers/responsive/default.scss */
+  .icon-right .icon td {
+    padding: 0 0 32px !important;
+    text-align: center;
+  }
+  /* line 59, ../../../sass/wrappers/responsive/default.scss */
+  .icon-right .heading {
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=default.css.map */
+
+</style>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+</head>
+<body style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; width: 100%; height: 100%; line-height: 1;">
+  <table class="body" style="border-collapse: collapse; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; border-spacing: 0; background: #ebe9e5; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; height: 100%; -moz-font-feature-settings: 'liga' on; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; width: 100%; -moz-osx-font-smoothing: grayscale;">
+    <tr>
+      <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
+        <table align="center" class="wrapper" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 620px; margin: auto;">
+          <tr>
+            <td class="spacer" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 10px;"> </td>
+            <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
+              <table class="preheader" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; color: #343741; font-size: 10px;">
+                <tr>
+                  <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px; text-align: center;">Get a quote fast: <a href="tel:18885709519" style="text-decoration: none; color: #343741; border-bottom: 1px dotted #001871;">888.570.9519</a>
+                  </td>
+                </tr>
+              </table>
+              <table align="center" class="main" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; color: #343741; background: #fff; border-radius: 2px; box-shadow: 0 1px 4px #666;">
+                <tr>
+                  <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
+                  <!-- Remove the text below this comment and insert header/content sections -->
+
+
+                  
+                  <style type="text/css">
+                  @media (max-width: 600px) {
+                    /* line 9, ../../../../src/sass/headers/responsive/img.scss */
+                    .header img {
+                      width: auto !important;
+                      max-width: 100%;
+                    }
+                  }
+
+                  /*# sourceMappingURL=img.css.map */
+
+                  </style>
+                  <table class="header" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center;">
+                    <tr>
+                      <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
+                        <img width="600" src="https://www.travelguard.com/content/dam/travelguard/us/images/email/seasonal-updates/wave-season-email-header.jpg" style="border: 0; outline: none; display: block; margin: auto; width: 600px; border-radius: 2px 2px 0 0;">
+                      </td>
+                    </tr>
+                  </table>
+
+
+
+                  <table class="section" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; background: #001871; color: #fff; width: 100%;">
+                    <tr>
+                      <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 32px 0;">
+                        <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                        
+
+                        <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center;">
+                          <tr>
+                            <td style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 4px 16px; font-size: 24px; font-weight: bold;">Planning a vacation? Don't forget Travel Guard&reg;</td>
+                          </tr>
+                        </table>
+
+
+
+                        <!--[if !mso]-->
+                        <style type="text/css">
+                        /* line 7, ../../../sass/components/responsive/button.scss */
+                        .button {
+                          text-align: center;
+                          margin: 16px 0;
+                        }
+                        /* line 10, ../../../sass/components/responsive/button.scss */
+                        .button td {
+                          background: transparent !important;
+                          padding: 0 !important;
+                          box-shadow: none !important;
+                        }
+                        /* line 15, ../../../sass/components/responsive/button.scss */
+                        .button a {
+                          border-radius: 25px;
+                          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.24);
+                          background: #fff;
+                          padding: 15px 40px;
+                          font-weight: bold;
+                          display: block;
+                        }
+
+                        /*# sourceMappingURL=button.css.map */
+
+                        </style>
+                        <!--[endif]-->
+
+                        <table align="center" class="button" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; text-align: center; margin: 16px auto; border-radius: 25px; box-shadow: 0 1px 4px rgba(0,0,0,0.24); background: #fff;">
+                          <tr>
+                            <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 15px 40px;">
+                              <a href="https://www.travelguard.com/?cmpid=emc-001-TGUS-RN-SUD-Nov2020" style="font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; color: #047E4B; text-decoration: none; font-weight: bold;">GET A QUOTE</a>
+                            </td>
+                          </tr>
+                        </table>
+
+
+
+
+
+                        <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                      </td>
+                    </tr>
+                  </table>
+
+
+
+
+                  <table class="paragraph" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.3;">
+                    <tr>
+                      <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px; color: #343741;">
+                        In the travel industry wave season runs from January through March and it’s a time when cruise lines offer special discounts and extra-value offers for the year to come. It’s an opportunity to get a great deal on a cruise vacation for the upcoming year. The demand on cruising has reached new heights, and in 2020 an astonishing 32 million passengers are expected to set sail<sup>1</sup>. <br>
+                        <br>
+                        If you’re one of those sea-faring travelers, what’s the next step after booking your cruise? Booking your <a style="color: #1352DE;" href="https://www.travelguard.com/travel-insurance?cmpid=emc-001-TGUS-RN-SUD-Nov2020">travel insurance</a> should be priority. Travel Guard travel insurance plans can include coverage for all types of cruises. Whether you’re setting sail on a month long Mediterranean cruise or sailing down the Mississippi River, we have a plan that’s right for you. <br>
+                        <br>
+                        An insurance plan that includes assistance services can help in the event that your carefully laid travel plans go awry. From providing evacuation assistance to flight rebooking, our <a style="color: #1352DE;" href="https://www.travelguard.com/travel-insurance/benefits/assistance-services?cmpid=emc-001-TGUS-RN-SUD-Nov2020">dedicated assistance centers</a> are available <strong>24 hours a day, seven days a week, 365 days a year</strong> to help with your travel-related needs.
+                      </td>
+                    </tr>
+                  </table>
+
+
+                  <table class="section" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; background: #C7DBF4; width: 100%;">
+                    <tr>
+                      <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 32px 0;">
+                        <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                        
+
+                        <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center;">
+                          <tr>
+                            <td style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 4px 16px; font-size: 24px; font-weight: bold; color: #001871;">Services Include*</td>
+                          </tr>
+                        </table>
+
+
+                        <table align="center" class="ul-checked" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 350px; margin: auto;">
+                          <tr>
+                            <td class="spacer" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 16px;"> </td>
+                            <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
+                              <table class="list" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
+                                <tr>
+                                  <td class="bullet" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 28px;"><img src="https://www.travelguard.com/content/dam/travelguard/us/images/email/shared/checkmark.png" width="18" height="14" style="border: 0; outline: none;"></td>
+                                  <td class="li" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 8px; line-height: 1.3;">Re-booking delayed or cancelled flights so you don’t miss your ship’s departure</td>
+                                </tr>
+                                <tr>
+                                  <td class="bullet" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 28px;"><img src="https://www.travelguard.com/content/dam/travelguard/us/images/email/shared/checkmark.png" width="18" height="14" style="border: 0; outline: none;"></td>
+                                  <td class="li" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 8px; line-height: 1.3;">Finding lost/delayed luggage</td>
+                                </tr>
+                                <tr>
+                                  <td class="bullet" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 28px;"><img src="https://www.travelguard.com/content/dam/travelguard/us/images/email/shared/checkmark.png" width="18" height="14" style="border: 0; outline: none;"></td>
+                                  <td class="li" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 8px; line-height: 1.3;">Coordinating medical care onboard and on land</td>
+                                </tr>
+                                <tr>
+                                  <td class="bullet" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 28px;"><img src="https://www.travelguard.com/content/dam/travelguard/us/images/email/shared/checkmark.png" width="18" height="14" style="border: 0; outline: none;"></td>
+                                  <td class="li" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 8px; line-height: 1.3;">Prescription replacement assistance</td>
+                                </tr>
+                                <tr>
+                                  <td class="bullet" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 28px;"><img src="https://www.travelguard.com/content/dam/travelguard/us/images/email/shared/checkmark.png" width="18" height="14" style="border: 0; outline: none;"></td>
+                                  <td class="li" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 8px; line-height: 1.3;">Passport and ticket replacement assistance</td>
+                                </tr>
+                                <tr>
+                                  <td class="bullet" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 28px;"><img src="https://www.travelguard.com/content/dam/travelguard/us/images/email/shared/checkmark.png" width="18" height="14" style="border: 0; outline: none;"></td>
+                                  <td class="li" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 8px; line-height: 1.3;">Language interpretation</td>
+                                </tr>
+                                <tr>
+                                  <td class="bullet" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 28px;"><img src="https://www.travelguard.com/content/dam/travelguard/us/images/email/shared/checkmark.png" width="18" height="14" style="border: 0; outline: none;"></td>
+                                  <td class="li" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 8px; line-height: 1.3;">And more!</td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td class="spacer" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 16px;"> </td>
+                          </tr>
+                        </table>
+
+
+                        
+
+                        <!--[if !mso]-->
+                        <style type="text/css">
+                        /* line 7, ../../../sass/components/responsive/button.scss */
+                        .button {
+                          text-align: center;
+                          margin: 16px 0;
+                        }
+                        /* line 10, ../../../sass/components/responsive/button.scss */
+                        .button td {
+                          background: transparent !important;
+                          padding: 0 !important;
+                          box-shadow: none !important;
+                        }
+                        /* line 15, ../../../sass/components/responsive/button.scss */
+                        .button a#two {
+                          border-radius: 25px;
+                          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.24);
+                          background: #1352DE;
+                          padding: 15px 40px;
+                          font-weight: bold;
+                          display: block;
+                        }
+
+                        /*# sourceMappingURL=button.css.map */
+
+                        </style>
+                        <!--[endif]-->
+
+                        <table align="center" class="button" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; text-align: center; margin: 16px auto; border-radius: 25px; box-shadow: 0 1px 4px rgba(0,0,0,0.24); background: #1352DE;">
+                          <tr>
+                            <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 15px 40px;">
+                              <a id="two" href="https://www.travelguard.com/travel-insurance?cmpid=emc-001-TGUS-RN-SUD-Nov2020" style="font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; color: #fff; text-decoration: none; font-weight: bold;">LEARN MORE</a>
+                            </td>
+                          </tr>
+                        </table>
+
+
+
+
+                        <table class="paragraph" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.3;">
+                          <tr>
+                            <td style="margin: 0; border: 0; font-size: 14px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px; color: #343741; font-style: italic; text-align: center;">* Expenses incurred from third-party vendors for assistance services not part of a filed insurance plan are the responsibility of the traveler.</td>
+                          </tr>
+                        </table>
+
+
+
+                        <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                      </td>
+                    </tr>
+                  </table>
+
+
+
+
+                  <table class="paragraph" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.3;">
+                    <tr>
+                      <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px; color: #343741;">Leaving soon? It’s not too late to purchase your travel insurance. Call us at <a style="color: #1352DE;" href="tel:18885709519">888.570.9519</a>, visit <a style="color: #1352DE;" href="https://www.travelguard.com/?cmpid=emc-001-TGUS-RN-SUD-Nov2020">travelguard.com</a>, or ask your travel agent when you book.</td>
+                    </tr>
+                  </table>
+
+
+
+                  <table class="section" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; background: #C1F0E8; width: 100%;">
+                    <tr>
+                      <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 32px 0;">
+                        <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                        
+
+                        <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center;">
+                          <tr>
+                            <td style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 4px 16px; font-size: 24px; font-weight: bold;">Tips for Wave Season</td>
+                          </tr>
+                        </table>
+
+
+
+
+                        <table class="paragraph" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.3;">
+                          <tr>
+                            <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px; color: #343741;">
+                                Make your cruise vacation the best it can be with these travel tips: <br>
+                                <br>
+                                <strong>Go Prepared</strong> <br>
+                                While your cruise might leave from the U.S., you may need your passport if you plan to leave the ship on any port days if the ships docks internationally (as many ships do). Be sure to check into this before you go so you don’t end up stuck on the ship instead of off exploring. <br>
+                                <br>
+                                <strong>Carry-On</strong><br>
+                                Keep in mind that it can take several hours from the time you board the ship to the time your luggage arrives at your cabin. In order to take full advantage of the ship right away, pack first day necessities like a swimsuit in your carry-on so that you aren’t waiting around for your luggage. <br>
+                                <br>
+                                <strong>Arrive Early</strong><br>
+                                It can be tempting to save those extra vacation days at work and arrive at the port city on the day of your cruise. Doing this puts you on a tight schedule, however, and any delays could mean disaster for your well planned vacation. Arrive a day or two early (especially if you’re traveling during the winter months) and enjoy some pre-cruise relaxation by exploring the port city. <br>
+                                <br>
+                                <strong>Check the Layout</strong><br>
+                                Before booking, check the deck plans online so you can be sure to book a room that isn’t directly below a well-traveled area. Avoid rooming right below the 24-hour buffet or onboard dance club, and you’ll cut down on excess noise in your cabin.
+                            </td>
+                            </tr>
+                        </table>
+
+
+                        <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                      </td>
+                    </tr>
+                  </table>
+
+
+
+
+                  <table class="paragraph" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.3;">
+                    <tr>
+                      <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px; color: #343741;">
+                        Discover more <a style="color: #1352DE;" href="https://www.travelguard.com/travel-news/cruise-news?cmpid=emc-001-TGUS-RN-SUD-Nov2020">cruise news</a> for your next adventure <br>
+                        <br>
+                        Get help <a style="color: #1352DE;" href="https://www.travelguard.com/travel-insurance/plans?cmpid=emc-001-TGUS-RN-SUD-Nov2020">finding the right travel insurance plan</a> for you
+                      </td>
+                    </tr>
+                  </table>
+
+
+
+                  <table class="section" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; background: #001871; color: #fff; width: 100%;">
+                    <tr>
+                      <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 32px 0;">
+                        <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                        
+
+                        <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center;">
+                          <tr>
+                            <td style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 4px 16px; font-size: 18px; font-weight: bold;">Leaving soon? It's not too late to purchase your travel insurance.</td>
+                          </tr>
+                        </table>
+
+
+                        
+
+                        <!--[if !mso]-->
+                        <style type="text/css">
+                        /* line 7, ../../../sass/components/responsive/button.scss */
+                        .button {
+                          text-align: center;
+                          margin: 16px 0;
+                        }
+                        /* line 10, ../../../sass/components/responsive/button.scss */
+                        .button td {
+                          background: transparent !important;
+                          padding: 0 !important;
+                          box-shadow: none !important;
+                        }
+                        /* line 15, ../../../sass/components/responsive/button.scss */
+                        .button a#three {
+                          border-radius: 25px;
+                          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.24);
+                          background: #fff;
+                          padding: 15px 40px;
+                          font-weight: bold;
+                          display: block;
+                        }
+
+                        /*# sourceMappingURL=button.css.map */
+
+                        </style>
+                        <!--[endif]-->
+
+                        <table align="center" class="button" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; text-align: center; margin: 16px auto; border-radius: 25px; box-shadow: 0 1px 4px rgba(0,0,0,0.24); background: #fff;">
+                          <tr>
+                            <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 15px 40px;">
+                              <a id="three" href="https://www.travelguard.com/?cmpid=emc-001-TGUS-RN-SUD-Nov2020" style="font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; color: #047E4B; text-decoration: none; font-weight: bold;">GET A QUOTE</a>
+                            </td>
+                          </tr>
+                        </table>
+
+
+
+
+
+                        <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center;">
+                          <tr>
+                            <td style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 4px 16px; font-size: 16px;">Call us at <a style="color:#fff" href="tel:18885709519">888.570.9519</a>. Visit <a style="color: #fff;" href="https://www.travelguard.com/?cmpid=emc-001-TGUS-RN-SUD-Nov2020">www.travelguard.com</a>. Ask your travel advisor.</td>
+                          </tr>
+                        </table>
+
+                        <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                      </td>
+                    </tr>
+                  </table>
+
+
+
+
+                  <table class="subheading" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center; color: #1352DE;">
+                    <tr>
+                      <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 4px 16px; font-weight: bold;"><br>Find Travel Guard on these social media sites!</td>
+                    </tr>
+                  </table>
+
+
+
+
+
+                  <table align="center" class="social" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
+                    <tr>
+                      <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 8px;"><a href="https://www.facebook.com/travelguard"><img width="40" src="https://www.travelguard.com/content/dam/travelguard/us/images/email/shared/icon-fb.png" style="border: 0; outline: none; display: block; margin: auto; width: 40px;"></a></td>
+                      <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 8px;"><a href="https://www.instagram.com/travelguard/"><img width="40" src="https://www.travelguard.com/content/dam/travelguard/us/images/email/shared/icon-ig.png" style="border: 0; outline: none; display: block; margin: auto; width: 40px;"></a></td>
+                      <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 8px;"><a href="https://www.linkedin.com/company/travel-guard"><img width="40" src="https://www.travelguard.com/content/dam/travelguard/us/images/email/shared/icon-ln.png" style="border: 0; outline: none; display: block; margin: auto; width: 40px;"></a></td>
+                      <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 8px;"><a href="https://www.pinterest.com/travelguard/"><img width="40" src="https://www.travelguard.com/content/dam/travelguard/us/images/email/shared/icon-pin.png" style="border: 0; outline: none; display: block; margin: auto; width: 40px;"></a></td>
+                      <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 8px;"><a href="https://twitter.com/travelguard"><img width="40" src="https://www.travelguard.com/content/dam/travelguard/us/images/email/shared/icon-tw.png" style="border: 0; outline: none; display: block; margin: auto; width: 40px;"></a></td>
+                      <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 8px;"><a href="https://www.youtube.com/travelguard"><img width="40" src="https://www.travelguard.com/content/dam/travelguard/us/images/email/shared/icon-yt.png" style="border: 0; outline: none; display: block; margin: auto; width: 40px;"></a></td>
+                    </tr>
+                  </table>
+
+
+
+
+
+                  <!-- Remove the text above this comment and insert header/content sections -->
+                  </td>
+                </tr>
+              </table>
+              <table class="footer" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; color: #343741; font-size: 10px;">
+                <tr>
+                  <td style="margin: 0; border: 0; font-size: 10px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px;">Sources: <br>
+                    1: https://cruising.org/news-and-research/press-room/2019/december/clia-releases-2020-state-of-the-cruise-industry-outlook-report<br>
+                    <br>
+                    Insurance offered by Travel Guard Group, Inc., a licensed insurance producer. This is only a brief description of the coverage(s) available. The Policy will contain reductions, limitations, exclusions and termination provisions. Insurance underwritten by National Union Fire Insurance Company of Pittsburgh, Pa., a Pennsylvania insurance company, with its principal place of business at <a href="https://www.google.com/maps?q=175+Water+Street,+18th+Floor,+New+York,+NY+10038&amp;entry=gmail&amp;source=g" style="color: #343741;">175 Water Street, 18th Floor, New York, NY 10038</a>. It is currently authorized to transact business in all states and the District of Columbia. NAIC No. 19445. Coverage may not be available in all states. To request to be removed from future Travel Guard mailings, please send your request to us in writing at <a href="mailto:travelguard@travelguard.com" style="color: #343741;">travelguard@travelguard.com</a> or at <a href="https://www.google.com/maps?q=3300+Business+Park+Drive+Stevens+Point,+WI+54482&amp;entry=gmail&amp;source=g" style="color: #343741;">3300 Business Park Dr., Stevens Point, WI 54482</a>.
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td class="spacer" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 10px;"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
