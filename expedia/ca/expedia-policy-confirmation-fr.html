@@ -142,6 +142,7 @@ table {
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
 </head>
 <body style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; width: 100%; height: 100%; line-height: 1;">
+    <div style="display: none; font-size: 1px; line-height: 1px; height: 0px; width: 0px;" class="preheader">Thank you for purchasing a Travel Guard® travel insurance plan! </div>
   <table class="body" style="border-collapse: collapse; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; border-spacing: 0; background: #F7F9FB; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; height: 100%; -moz-font-feature-settings: 'liga' on; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; width: 100%; -moz-osx-font-smoothing: grayscale;">
     <tr>
       <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
@@ -212,154 +213,112 @@ table {
                         <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
                           <tr>
                             <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 25px;">
-                              Hello {{policyDetail-primaryInsured-firstName}}, <br>
+                              Bonjour: {{policyDetail-primaryInsured}}, <br>
                               <br>
-                              Thank you for choosing Travel Guard for your upcoming trip! Please review your plan details and your full policy below.
+                              Merci d’avoir choisi l’assurance voyage Travel Guard® offerte par Travel Guard Group Canada, Inc. et souscrite par Zurich Compagnie d’Assurances SA (Direction canadienne)! <b>Votre</b> numéro de police est le <b>{{policyDetail-policyNumber}}</b> et vous avez souscrit le produit <b>{{policyDetail-productName}}</b>. <br>
+                              <br>
+                              Veuillez <b><a href="https://policy.uat.travelguard.com/aig-travel/be/en">cliquer ici</a></b> pour consulter <b>votre attestation d’assurance</b> et <b>votre</b> police.<br>
+                              <br>
+                              <i><b>Vous</b> aurez besoin de saisir <b>votre</b> numéro de police et <b>votre</b> nom pour ouvrir une session</i>
                             </td>
                           </tr>
                         </table>
 
-                        <table class="section" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; background: #F7F9FB;  width: 100%; margin-bottom: 20px;">
-                          <tbody><tr>
-                            <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 0;">
-                              <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
-                              
-
-                              <table class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
-                                <tr>
-                                  <td class="col-1" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 30px; width: 600px;">
-                                    <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
-
-
-                              <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left;">
-                                <tr>
-                                  <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; padding-top: 0; color: #001871;">Policy Details</td>
-                                </tr>
-                              </table>
-
-
-                              <table style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; border-top: 1px solid #DCDCDC; color: #343741;">
-                                      <tbody>
-                                      <tr>
-                                        <td style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 50%; margin: 0 auto; line-height: 1.3; font-size: 16px;font-weight: bold; padding-top: 10px;">Plan:</td>
-                                        <td style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 50%; margin: 0 auto; line-height: 1.3;font-size: 16px;  text-align: right; padding-top: 10px;">{{policyDetail-planDescription}}</td>
-                                      </tr>
-                                      <tr>
-                                        <td style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 50%; margin: 0 auto; line-height: 1.3; font-size: 16px;font-weight: bold; ">Policy Number:</td>
-                                        <td style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 50%; margin: 0 auto; line-height: 1.3;font-size: 16px;  text-align: right; ">{{policyDetail-policyNumber}}</td>
-                                      </tr>
-                                      <tr>
-                                        <td style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 50%; margin: 0 auto; line-height: 1.3; font-size: 16px;font-weight: bold; ">Effective Date:</td>
-                                        <td style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 50%; margin: 0 auto; line-height: 1.3;font-size: 16px;  text-align: right; ">{{policyDetail-effective}}</td>
-                                      </tr>
-                                    </tbody></table>
-
-                                    <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left;">
-                                <tr>
-                                  <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; padding-top: 30px; color: #001871;">Payment Details</td>
-                                </tr>
-                              </table>
-
-
-                              <table style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; border-top: 1px solid #DCDCDC; color: #343741;">
-                                      <tbody>
-                                      <tr>
-                                        <td style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 50%; margin: 0 auto; line-height: 1.3; font-size: 16px;font-weight: bold; ">TOTAL:</td>
-                                        <td style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 50%; margin: 0 auto; line-height: 1.3;font-size: 16px;  text-align: right; font-weight: bold; ">{{productDetail-amounts-TotalPremium}} </td>
-                                      </tr>
-                                      
-                                    </tbody></table>
-
-                                    <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
-                                      <tr>
-                                        <td class="spacer" style="margin: 0; border: 0; font-size: 12px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-top: 30px; font-style: italic;">
-                                         This travel insurance only covers Trip Costs booked with Expedia, Inc. The total shown here only reflects the amount paid for this travel insurance plan.  The total cost for the Expedia Vacation Waiver (if purchased) and travel insurance plan will be shown on your travel invoice.  Coverage varies by state. Please refer to the Policy of Insurance for complete details.
-                                        </td>
-                                      </tr>
-                                      
-
-                                    </table>
-
-
-                                    <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
-                                  </td>
-                                </tr>
-                              </tbody></table>
-
-                              <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
-                            </td>
-                          </tr>
-                        </tbody></table>
-
                         <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left; margin-bottom: 16px;">
                           <tr>
-                            <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; padding-top: 16px; color: #001871; border-bottom: 1px solid #CADBF2;">Access Your Full Policy Online</td>
+                            <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; padding-top: 16px; color: #001871; border-bottom: 1px solid #CADBF2;">Qu’est-ce qui est couvert?</td>
                           </tr>
                         </table>
 
                         <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
                           <tr>
                             <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 25px;">
-                              You will need to enter your last name and the policy number listed above to access your policy in full. <br>
+                              La liste des indemnités prévues figure dans <b>votre attestation d’assurance</b> et le formulaire d’assurance. Les termes en gras dans le présent document ont le sens défini dans le formulaire d’assurance. <br>
                               <br>
-                              <a href="https://policy.travelguard.com/mypolicy/us" style="color: #1352DE;">Log in to access your full policy online</a><sup>1</sup> to see policy details, including:
+                              Veuillez lire <b>votre</b> police avant de voyager pour <b>vous</b> assurer qu’elle répond à vos exigences spécifiques. Les garanties prévues aux termes de cette police s’appliquent à des situations et à des événements particuliers pendant <b>votre voyage</b>.  Comme certaines exclusions s’appliquent à des circonstances particulières, il vaut mieux passer en revue le formulaire d’assurance dès que <b>vous</b> en avez l’occasion.
+                            </td>
+                          </tr>
+                        </table>
+
+                        <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left; margin-bottom: 16px;">
+                          <tr>
+                            <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; padding-top: 16px; color: #001871; border-bottom: 1px solid #CADBF2;">RAPPELS CONCERNANT L’ADMISSIBILITÉ:</td>
+                          </tr>
+                        </table>
+
+                        <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
+                          <tr>
+                            <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 25px;">
                               <ul>
-                                <li>Detailed policy information</li>
-                                <li>Policy ID cards</li>
-                                <li>Covered reasons</li>
-                                <li>Terms and conditions</li>
+                                <li>Aux termes de la police, seuls les <b>résidents canadiens</b> voyageant à l’extérieur de leur <b>domicile</b> sont couverts. </li>
+                                <li>Veuillez noter les limites concernant l’âge maximal d’admissibilité aux garanties selon le produit :
+                                  <ol>
+                                    <li>Pour être admissibles à la garantie offerte par le plan d’annulation, toutes les <b>personnes assurées</b> <i>doivent avoir moins de 76 ans à la date de départ pour le <b>voyage</b></i>.</li>
+                                    <li>Pour être admissibles à la garantie offerte par le plan de protection, toutes les <b>personnes assurées</b> <i>doivent avoir moins de 66 ans à la date de départ pour le <b>voyage</b></i>. </li>
+                                    <li>Dans le cas de la protection contre les dommages par collision, les <b>personnes assurées</b> <i>doivent être âgées de 25 à 70 ans</i> pour être admissibles à la garantie.</li>
+                                  </ol>
+                                </li>
+                                <li>Réservations d’hôtel exclusivement : Pour les clients achetant l’assurance conjointement à une réservation d’hôtel exclusivement, l’assurance s’applique pendant la période allant du départ de leur <b>domicile</b> ou de leur lieu de résidence habituel dans leur <b>pays de départ</b> (au plus tôt 24  heures avant l’heure d’arrivée prévue à l’hôtel) jusqu’au retour à leur <b>domicile</b> ou à leur lieu de résidence habituel dans leur <b>pays de départ</b>, au plus tard 24  heures après l'heure de départ prévue de l’hôtel réservé par l’intermédiaire d’Expedia.</li>
                               </ul>
                             </td>
                           </tr>
                         </table>
 
-                        <table class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; color: #343741;">
+
+                        <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left; margin-bottom: 16px;">
                           <tr>
-                            <td class="col-2" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 300px;">
-                              <table style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%;">
-                                <tr>
-                                  <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px; text-align: left; line-height: 1.5;">
-                                    <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
-                                    <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left; margin-bottom: 10px;">
-                                      <tr>
-                                        <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 10px 0; font-size: 18px; font-weight: bold; padding-top: 16px; color: #001871; border-bottom: 1px solid #CADBF2;">Visit Our Help Center</td>
-                                      </tr>
-                                    </table>
-                                    <a style="color: #1352DE;" href="https://www.travelguardworldwide.com/egus">COVID-19 FAQs</a>
-                                    <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
-                                  </td>
-                                </tr>
-                              </table>
-                            </td>
-                            <td class="col-2" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 300px;">
-                              <table style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%;">
-                                <tr>
-                                  <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px; text-align: left; line-height: 1.5;">
-                                    <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
-                                    <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left; margin-bottom: 10px;">
-                                      <tr>
-                                        <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 10px 0; font-size: 18px; font-weight: bold; padding-top: 16px; color: #001871; border-bottom: 1px solid #CADBF2;">Claims</td>
-                                      </tr>
-                                    </table>
-                                    <a style="color: #1352DE;" href="https://claims.travelguard.com/myclaim/us/en/claimsv2/home?afAcceptLang=en-us">File a claim online</a> <br>
-                                    <a style="color: #1352DE;" href="https://claims.travelguard.com/myclaim/us/status">Check the status of a claim</a> <br>
-                                    <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
-                                  </td>
-                                </tr>
-                              </table>
-                            </td>
+                            <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; padding-top: 16px; color: #001871; border-bottom: 1px solid #CADBF2;">Coordonnées IMPORTANTES</td>
                           </tr>
                         </table>
-
 
                         <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
                           <tr>
-                            <td class="spacer" style="margin: 0; border: 0; font-size: 14px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 0; text-align: center; font-weight: bold;">
-                              If you have questions regarding your policy coverage, please call <a href="tel:8554002624" style="color: #1352DE;">855-400-2624</a>
+                            <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 25px;">
+                              Questions sur la police : Veuillez appeler à l’un des numéros de téléphone ci-après. <br>
+                              <br>
+                              Résiliation de <b>votre</b> police : Si la police ne <b>vous</b> convient pas, <b>vous</b> pouvez la résilier dans les 15 jours suivant la date d’achat. <b>Vous</b> aurez droit à un remboursement uniquement si : (1) <b>votre période d’assurance</b> n’a pas commencé; et (2) <b>vous</b> n’avez pas présenté de <b>réclamation</b> et <b>vous</b> n’avez pas l’intention d’en présenter une. <br>
+                              <br>
+                              Pour résilier <b>votre</b> police, veuillez ouvrir une session dans le site Web de Travel Guard au moyen de <b>votre</b> numéro d’itinéraire et résilier <b>votre</b> assurance à la page relative à <b>votre</b> itinéraire. <br>
+                              <br>
+                              <b style="color: #001871;">Plan d’annulation et plan de protection</b><br>
+                              Numéro sans frais : 1-866-591-5452 <br>
+                              International : +1-416-621-6820 (à frais virés) <br>
+                              <br>
+                              <b style="color: #001871;">Protection contre les dommages par collision (voiture)</b><br>
+                              Numéro sans frais : 1-877-281-0082 <br>
+                              International : +1-819-780-0646 (à frais virés) <br>
+                              <br>
+                              Heures d’ouverture : <br>
+                              Du lundi au vendredi, de 7 h 00 à 19 h 00, heure normale du Centre, sauf les jours fériés<br>
+                              <br>
+                              <b>Que dois-je faire en cas d’urgence à l’étranger?</b> <br>
+                              Nos centres de services sont ouverts en tout temps. <br>
+                              <b>Assistance en cas d’urgence pour les résidents du Nouveau-Brunswick, de Terre-Neuve-et-Labrador et de la Saskatchewan</b><br>
+                              Téléphone : 1-877-281-0082 <br>
+                              International : +1-819-780-0646 (à frais virés) <br>
+                              <br>
+                              <b>Assistance en cas d’urgence pour les résidents de toutes les autres provinces</b><br>
+                              Téléphone : 1-866-591-5452 <br>
+                              International : +1-416-621-6820 (à frais virés)<br>
+                              <br>
+                              <b>Que dois-je faire pour présenter une réclamation?</b> <br>
+                              <b>IMPORTANT:</b> IMPORTANT : En ce qui concerne les <b>réclamations</b> pour frais médicaux d’urgence et soins dentaires d’urgence, si <b>vous</b> avez souscrit un plan couvrant ces frais et ces soins (garanties B1 et B4 seulement), à moins que <b>votre</b> état de santé ne <b>vous</b> empêche de le faire, <b>vous</b> devez communiquer avec <b>nous</b> avant de consulter un médecin, sans quoi <b>vous</b> pourriez devoir assumer jusqu’à 30 % de tous les frais admissibles engagés, ou pourriez ne pas être remboursé en cas de <b>réclamation</b>. <b>Vous</b> devez communiquer avec nous dès que cela est médicalement possible, ou demander à quelqu’un d’appeler en votre nom. <br>
+                              <br>
+                              <b>Résidents du Nouveau-Brunswick, de Terre-Neuve-et-Labrador et de la Saskatchewan</b><br>
+                              Numéro sans frais : +1-877-281-0082 <br>
+                              International : +1-819-780-0646 (à frais virés) <br>
+                              <br>
+                              <b>Résidents de toutes les autres provinces</b><br>
+                              Numéro sans frais : 1-866-591-5452 <br>
+                              International : +1-416-621-6820 (à frais virés) <br>
+                              <br>
+                              Pour tout autre type de réclamation, veuillez présenter une demande en ligne à l’adresse <a href="https://claims.travelguard.com/myclaim/ca">https://claims.travelguard.com/myclaim/ca</a> <br>
+                              <br>
+                              Bon voyage! <br>
+                              <b>Travel Guard Group Canada, Inc.</b>
                             </td>
                           </tr>
                         </table>
-
 
 
                         <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
@@ -367,85 +326,13 @@ table {
                     </tr>
                   </table>
 
-                  <table class="section" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; background: #001871; color: #fff; width: 100%;">
+                  <table class="header" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center;">
                     <tbody><tr>
-                      <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 0;">
-                        <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
-                        <table class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
-                          <tbody><tr>
-                            <td class="col-2" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: middle; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 200px;">
-                              <table style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%;">
-                                <tbody><tr>
-                                  <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 20px 35px;">
-                                    <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
-                                    
-
-                                    <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left;">
-                                      <tbody><tr>
-                                        <td class="spacer m-ta-c" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; line-height: 1.3; color: #fff;">Follow us!<br>
-                                       
-                                      </td>
-                                      </tr>
-                                    </tbody></table>
-
-                                    <table style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%;">
-                                      <tr>
-                                        <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px 0;">
-                                          <table align="center" class="social" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center;">
-                                            <tr>
-                                              <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 0 8px; display: inline-block;"><a href="https://www.facebook.com/travelguard"><img width="25" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/fb-logo-white.png" style="border: 0; outline: none; display: block; margin: auto; width: 25px;"></a></td>
-                                              <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 0 8px; display: inline-block;"><a href="https://www.instagram.com/travelguard/"><img width="25" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/instagram-white@2x.png" style="border: 0; outline: none; display: block; margin: auto; width: 25px;"></a></td>
-                                              <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 0 8px; display: inline-block;"><a href="https://twitter.com/travelguard"><img width="19" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/youtube@2x.png" style="border: 0; outline: none; display: block; margin: auto; width: 25px;"></a></td>
-                                            </tr>
-                                          </table>
-                                        </td>
-                                      </tr>
-                                    </table>
-
-                             
-
-                              <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
-                            </td>
-                          </tr>
-                        </tbody></table>
-                      </td>
-                      <td class="col-2 mobile-none" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 400px;">
-                        <table style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%;">
-                          <tbody><tr>
-                            <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 0;">
-                              <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
-                              
-
-                              <table class="img-2col" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center;">
-                                <tbody><tr>
-                                  <td class="spacer" style="margin: 0; border: 0; font-size: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 0;">
-                                    <img width="400" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/straight-progress-teal-faded@2x.png" style="border: 0; outline: none; display: block; margin: auto; width: 400px;">
-                                  </td>
-                                </tr>
-                              </tbody></table>
-
-                              <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
-                            </td>
-                          </tr>
-                        </tbody></table>
+                      <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
+                        <img width="600" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/progress.png" style="border: 0; outline: none; display: block; margin: auto; width: 600px; border-radius: 2px 2px 0 0;">
                       </td>
                     </tr>
                   </tbody></table>
-
-
-
-
-
-
-
-                        <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
-                      </td>
-                    </tr>
-                  </tbody></table>
-
-
-
-
 
                   <!-- Remove the text above this comment and insert header/content sections -->
                   </td>
@@ -454,9 +341,7 @@ table {
               <table class="footer" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; color: #343741;">
                 <tr>
                   <td style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px; font-size: 10px;">
-                    <sup>1</sup> Policy information is only accessible via the above link for one year past your travel return date. <br>
-                    <br>
-                    Coverage available to residents of U.S. states and the District of Columbia only.  This plan provides insurance coverage that only applies during the covered trip. Similar travel insurance coverage, offered by Travel Guard or another insurance provider, may be available through a variety of other sources, but may be subject to different terms and conditions (i.e. benefits, limits, exclusions, etc.).  You may wish to compare the terms and conditions of this policy with those of your existing life, health, home and automobile insurance policies, as well as any other coverage which you may already have or is available to you, including through other insurers, as a member of an organization, or through your credit card program(s).  If you have any questions about your current coverage, call your insurer or insurance agent or broker. Coverage is offered by Travel Guard Group, Inc. (Travel Guard). California lic. no.0B93606, 3300 Business Park Drive, Stevens Point, WI 54482, www.travelguard.com. CA DOI toll free number: 800-927-HELP. This is only a brief description of the coverage(s) available. The Policy will contain reductions, limitations, exclusions and termination provisions. Insurance may be underwritten by American Zurich Insurance Company, a New York company (NAIC No. 40142), Zurich American Insurance Company, an Illinois company (NAIC No. 16535), each having its principal place of business at 1299 Zurich Way, Schaumburg, IL 60196, or National Union Fire Insurance Company of Pittsburgh, Pa. (NAIC No. 19445), a Pennsylvania insurance company, having its principal place of business at 1271 Avenue of the Americas, 37th FL, New York, NY 10020-1304.  Please review the Plan offered to or purchased by you to confirm the underwriting insurer for your specific policy of insurance. Coverage may not be available in all states. Your travel retailer may not be licensed to sell insurance, and cannot answer technical questions about the benefits, exclusions, and conditions of this insurance and cannot evaluate the adequacy of your existing insurance. The purchase of travel insurance is not required in order to purchase any other product or service from the Travel Retailer. Travel assistance services provided by Travel Guard.
+                    
                   </td>
                 </tr>
               </table>
