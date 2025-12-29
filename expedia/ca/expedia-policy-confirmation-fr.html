@@ -212,9 +212,9 @@ table {
                             <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 25px;">
                               Bonjour: {{policyDetail-primaryInsured}}, <br>
                               <br>
-                              Merci d’avoir choisi l’assurance voyage Travel Guard® offerte par Travel Guard Group Canada, Inc. et souscrite par Zurich Compagnie d’Assurances SA (Direction canadienne)! <b>Votre</b> numéro de police est le <b>{{policyDetail-policyNumber}}</b> et vous avez souscrit le produit <b>{{policyDetail-productName}}</b>. <br>
+                              Merci d’avoir choisi l’assurance voyage Travel Guard® offerte par Travel Guard Group Canada, Inc. et souscrite par {{OfficeOfficialEntityNameLabel}}! <b>Votre</b> numéro de police est le <b>{{policyDetail-policyNumber}}</b> et vous avez souscrit le produit <b>{{policyDetail-productName}}</b>. <br>
                               <br>
-                              Veuillez <b><a href="https://policy.uat.travelguard.com/aig-travel/be/en">cliquer ici</a></b> pour consulter <b>votre attestation d’assurance</b> et <b>votre</b> police.<br>
+                              Veuillez {{ViewPolicyURL}} pour consulter <b>votre attestation d’assurance</b> et <b>votre</b> police.<br>
                               <br>
                               <i><b>Vous</b> aurez besoin de saisir <b>votre</b> numéro de police et <b>votre</b> nom pour ouvrir une session</i>
                             </td>
@@ -277,39 +277,21 @@ table {
                               <br>
                               Pour résilier <b>votre</b> police, veuillez ouvrir une session dans le site Web de Travel Guard au moyen de <b>votre</b> numéro d’itinéraire et résilier <b>votre</b> assurance à la page relative à <b>votre</b> itinéraire. <br>
                               <br>
-                              <b style="color: #001871;">Plan d’annulation et plan de protection</b><br>
-                              Numéro sans frais : 1-866-591-5452 <br>
-                              International : +1-416-621-6820 (à frais virés) <br>
-                              <br>
-                              <b style="color: #001871;">Protection contre les dommages par collision (voiture)</b><br>
-                              Numéro sans frais : 1-877-281-0082 <br>
-                              International : +1-819-780-0646 (à frais virés) <br>
+                              {{CustomerServicesContactNumber}} <br>
                               <br>
                               Heures d’ouverture : <br>
-                              Du lundi au vendredi, de 7 h 00 à 19 h 00, heure normale du Centre, sauf les jours fériés<br>
+                              {{CustomerServiceOperatingHours}}<br>
                               <br>
                               <b>Que dois-je faire en cas d’urgence à l’étranger?</b> <br>
                               Nos centres de services sont ouverts en tout temps. <br>
-                              <b>Assistance en cas d’urgence pour les résidents du Nouveau-Brunswick, de Terre-Neuve-et-Labrador et de la Saskatchewan</b><br>
-                              Téléphone : 1-877-281-0082 <br>
-                              International : +1-819-780-0646 (à frais virés) <br>
-                              <br>
-                              <b>Assistance en cas d’urgence pour les résidents de toutes les autres provinces</b><br>
-                              Téléphone : 1-866-591-5452 <br>
-                              International : +1-416-621-6820 (à frais virés)<br>
+                              {{AssistanceServicesContactNumber}}<br>
                               <br>
                               <b>Que dois-je faire pour présenter une réclamation?</b> <br>
                               <b>IMPORTANT:</b> IMPORTANT : En ce qui concerne les <b>réclamations</b> pour frais médicaux d’urgence et soins dentaires d’urgence, si <b>vous</b> avez souscrit un plan couvrant ces frais et ces soins (garanties B1 et B4 seulement), à moins que <b>votre</b> état de santé ne <b>vous</b> empêche de le faire, <b>vous</b> devez communiquer avec <b>nous</b> avant de consulter un médecin, sans quoi <b>vous</b> pourriez devoir assumer jusqu’à 30 % de tous les frais admissibles engagés, ou pourriez ne pas être remboursé en cas de <b>réclamation</b>. <b>Vous</b> devez communiquer avec nous dès que cela est médicalement possible, ou demander à quelqu’un d’appeler en votre nom. <br>
                               <br>
-                              <b>Résidents du Nouveau-Brunswick, de Terre-Neuve-et-Labrador et de la Saskatchewan</b><br>
-                              Numéro sans frais : +1-877-281-0082 <br>
-                              International : +1-819-780-0646 (à frais virés) <br>
+                              {{ClaimsContactNumber}} <br>
                               <br>
-                              <b>Résidents de toutes les autres provinces</b><br>
-                              Numéro sans frais : 1-866-591-5452 <br>
-                              International : +1-416-621-6820 (à frais virés) <br>
-                              <br>
-                              Pour tout autre type de réclamation, veuillez présenter une demande en ligne à l’adresse <a href="https://claims.travelguard.com/myclaim/ca">https://claims.travelguard.com/myclaim/ca</a> <br>
+                              Pour tout autre type de réclamation, veuillez présenter une demande en ligne à l’adresse <a href="{{ClaimsEmailAddress}}">{{ClaimsEmailAddress}}</a> <br>
                               <br>
                               Bon voyage! <br>
                               <b>Travel Guard Group Canada, Inc.</b>
