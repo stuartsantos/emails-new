@@ -212,9 +212,9 @@ table {
                             <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 25px;">
                               Hello {{policyDetail-primaryInsured}}, <br>
                               <br>
-                              Thank <b>You</b> for choosing a Travel Guard® Insurance Policy from Travel Guard Group Canada, Inc. and underwritten by Zurich Insurance Company Ltd (Canadian Branch)! <b>Your</b> Policy Number is <b>{{policyDetail-policyNumber}}</b> and <b>You</b> purchased the <b>{{policyDetail-productName}}</b>. <br>
+                              Thank <b>You</b> for choosing a Travel Guard® Insurance Policy from Travel Guard Group Canada, Inc. and underwritten by {{OfficeOfficialEntityNameLabel}}! <b>Your</b> Policy Number is <b>{{policyDetail-policyNumber}}</b> and <b>You</b> purchased the <b>{{policyDetail-productName}}</b>. <br>
                               <br>
-                              Please <b><a href="https://policy.travelguard.com/mypolicy/ca/en" style="color: #0E4E88;">click here</a></b> to view  <b>Your Certificate of Insurance (COI)</b> and  <b>Your Policy Wording</b>.<br>
+                              Please {{ViewPolicyURL}} to view  <b>Your Certificate of Insurance (COI)</b> and  <b>Your Policy Wording</b>.<br>
                               <br>
                               <i>To log on, <b>You</b> will need <b>Your</b> Policy Number, and <b>Your</b> Last Name.</i>
                             </td>
@@ -279,39 +279,21 @@ table {
                               <br>
                               To cancel <b>Your</b> policy, please log on to the Travel Guard website with <b>Your</b> itinerary number and cancel <b>Your</b> insurance on the itinerary page. <br>
                               <br>
-                              <b style="color: #003D6E;">Cancellation Plan, Protection Plan</b> <br>
-                              Toll Free: 866-591-5452<br>
-                              International: +1-416-621-6820 (collect) <br>
-                              <br>
-                              <b style="color: #003D6E;">Collision Damage Plan (Car rental)</b> <br>
-                              Toll free: 1-877-281-0082 <br>
-                              International: +1-819-780-0646 (collect) <br>
+                              {{CustomerServicesContactNumber}} <br>
                               <br>
                               Hours of Operation: <br>
-                              Monday to Friday – 7.00 am to 7.00 pm Central except public holidays <br>
+                              {{CustomerServiceOperatingHours}} <br>
                               <br>
                               <b>What if I have an emergency overseas?</b> <br>
                               Our service centres are open 24/7. <br>
-                              <b>Emergency Assistance for New Brunswick, Newfoundland & Saskatchewan Residents</b><br>
-                              Phone: 1-877-281-0082 <br>
-                              International: +1-819-780-0646 (collect) <br>
-                              <br>
-                              <b>Emergency Assistance For Residents of other provinces</b><br>
-                              Phone: 1-866-591-5452 <br>
-                              International: +1-416-621-6820<br>
+                              {{AssistanceServicesContactNumber}}
                               <br>
                               <b>How do I file a claim?</b> <br>
                               <b>IMPORTANT:</b> For Emergency Medical and Dental Expense claims if applicable to the Plan <b>You</b> have purchased (Benefits B1 & B4 only), <b>You</b> must contact Us before seeking medical attention, and a failure to call will result in <b>Your</b> being responsible for 30% of any eligible expenses incurred, or no reimbursement, unless <b>Your</b> medical condition prevents <b>You</b> from calling. <b>You</b> must call as soon as medically possible or have someone call on <b>Your</b> behalf. <br>
                               <br>
-                              <b>Residents of New Brunswick, Newfoundland & Saskatchewan</b><br>
-                              Phone: 1-877-281-0082 <br>
-                              International: +1-819-780-0646 (collect) <br>
+                              {{ClaimsContactNumber}}
                               <br>
-                              <b>Residents of other provinces</b><br>
-                              Toll Free: 1-866-591-5452 <br>
-                              International: +1-416-621-6820 (collect) <br>
-                              <br>
-                              For other claims, file online at <a href="https://claims.travelguard.com/myclaim/ca" style="color: #0E4E88;">https://claims.travelguard.com/myclaim/ca</a><br>
+                              For other claims, file online at <a href="{{ClaimsEmailAddress}}" style="color: #0E4E88;">{{ClaimsEmailAddress}}</a><br>
                               <br>
                               Safe Travels! <br>
                               <b>Travel Guard Group Canada, Inc.</b>
