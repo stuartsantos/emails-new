@@ -1,43 +1,296 @@
-<p><title>&lt;br _rte_temp_br=&quot;brEOB&quot;&gt;</title></p>
-<p><img style="float: none;" alt="AIG Logo" src="{contenthost}{Image_AIGGlobalLogoHeader}"></p>
-<p><title>&lt;br _rte_temp_br=&quot;brEOB&quot;&gt;</title></p>
-<p>&nbsp;</p>
-<p>Hello {PlaceHolderField2},<br>
-</p>
-<p><br>
-Thank you for choosing {PlaceHolderField4} Travel Insurance underwritten by AIG Insurance Company of Canada.<br>
-Your Policy Number is {PolicyNumber}.<br>
-<br>
-Please {ViewPolicyURL} to view your {PlaceHolderField3}<br>
-<br>
-To view, you will need your Policy Number, and your Last Name.</p>
-<p><br>
-<span style="font-size: 16.0px; color: rgb(0,24,113);"><b>What am I covered for?</b></span><br>
-</p>
-<p>{ProductNamePlaceHolder}</p>
-<p><br>
-<br>
-</p>
-<p><span style="font-size: 16.0px; color: rgb(0,24,113);"><b>IMPORTANT Contact Information</b></span><br>
-</p>
-<table width="100%" cellspacing="0" cellpadding="0" border="1">
-<tbody><tr><td style="text-align: left; padding-top: 2.0px; padding-left: 5.0px; width: 170.0px;" valign="top"><p><b>Questions about your policy?&nbsp;</b></p>
-</td>
-<td style="padding: 2.0px 5.0px 10.0px 5.0px;" valign="top"><p>For questions on any of our products, please call:</p>
-{CustomerServicesContactNumber}</td>
-</tr><tr><td style="text-align: left; padding-top: 2.0px; padding-left: 5.0px; width: 10.0px;" valign="top"><p><b>24-HOUR EMERGENCY ASSISTANCE</b></p>
-</td>
-<td style="padding: 2.0px 5.0px 10.0px 5.0px;" valign="top"><p>If you require emergency medical assistance or emergency travel assistance, please call:</p>
-{AssistanceServicesContactNumber}<p>Note: You must notify Us prior to any Emergency Medical Treatment and prior to any surgery, invasive procedure, or Hospitalization. Failure to do so will result in Your being responsible for 30% of any eligible expenses incurred.</p>
-</td>
-</tr><tr><td style="text-align: left; padding-top: 2.0px; padding-left: 5.0px; width: 10.0px;" valign="top"><p><b>How do I file a claim?</b></p>
-</td>
-<td style="padding-top: 2.0px; padding-left: 5.0px;" valign="top"><p>To submit a claim or for questions regarding your claim, please call:</p>
-{ClaimsContactNumber}</td>
-</tr></tbody></table>
-<p><br>
-<br>
-Enjoy your travel and thank you for choosing {PlaceHolderField4} Travel Insurance!</p>
-<p><input type="hidden" value="{ErrorMsg}">&nbsp;</p>
-<div style="left: -10000.0px; top: 0.0px; width: 9000.0px; height: 16.0px; overflow: hidden;"><div>&nbsp;</div>
-</div>
+<!DOCTYPE html>
+<html lang="en" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; width: 100%; height: 100%;">
+<head>
+  <meta charset="UTF-8">
+  <title>Policy Confirmation Canada</title>
+
+  <style type="text/css">
+/*
+
+You can use these comments to help you change any of the text or background colors as well as change the font.
+
+########COLORS#######
+
+To use these colors, you can copy the hash value such as #001871 for aig fore blue and change either the text or background color of elements. In order to change the color, you can go to the style tag within the relevant table (<table>) or table cell (<td>) and replace an existing "color" or "background" property with the desired color. If neither of those properties exist in the style tag, you can add them.
+
+The final product would look like this for a table or table cell
+<table style="color: #001871; background: #C7DBF4;">
+or
+<td style="color: #001871; background: #C7DBF4;">
+
+primary colors              secondary colors          orange: #FF8200;            green: #00BF6F;
+aig-core-blue: #001871;     cyan: #00A4E4;            lightest-orange: #FFE5C5;   lightest-green: #BDF0DF;
+pale-aig-blue: #C7DBF4;     lightest-cyan: #E0F3FB;   light-orange: #FECB8B;      light-green: #7AE1BF;
+cobalt-aig-blue: #1352DE;   light-cyan: #C0E7F7;      medium-orange: #FFB466;     medium-green: #4DD29A;
+                            medium-cyan: #80D2F2;     dark-orange: #A9431E;       dark-green: #047E4B;
+                            dark-cyan: #00719E;
+
+yellow: #FFBF3F;            purple: #904FD8;            teal: #00BFB3;            gray: #B1B1B1;
+lightest-yellow: #FCF2CD;   lightest-purple: #E2DAF1;   lightest-teal: #E0F8F3;   lightest-gray: #EEEEEE;
+light-yellow: #F8E59A;      light-purple: #C5B4E3;      light-teal: #C1F0E8;      light-gray: #DCDCDC;
+medium-yellow: #FFD279;     medium-purple: #BC95E8;     medium-teal: #80DFD9;     medium-gray: #D0D0D0;
+dark-yellow: #A9662B;       dark-purple: #6800DB;       dark-teal: #007D7D;       dark-gray: #343741;
+
+steel: #7086A1;             red: #E81944;             warm-gray: #B6ADA5;
+lightest-steel: #DCE2EA;    lightest-red: #FBE7EB;    lightest-warm-gray: #EBE9E5;
+light-steel: #93A3B7;       light-red: #F7CED7;       light-warm-gray: #D7D2CB;
+dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
+                            dark-red: #CB0029;
+
+*/
+@media (max-width: 600px) {
+  .wrapper, .section {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .columns {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .col-1 {
+    padding: 16px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .col-2, .col-3 {
+    width: 100% !important;
+    display: block;
+  }
+  .mobile-none {
+    display: none;
+  }
+  .mobile-ta-c {
+    text-align: center !important;
+  }
+  .mobile-pr {
+    padding-right: 16px !important;
+  }
+  .mobile-prl-none {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+table {
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt;
+}
+
+@media (max-width: 600px) {
+  .icon-left .icon, .icon-left .text {
+    display: block !important;
+    width: 250px !important;
+    text-align: center;
+    margin: auto !important;
+  }
+  .icon-left .icon.winter {
+    padding: 0 0 32px !important;
+  }
+  .icon-left .heading {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .icon-right .icon, .icon-right .text {
+    float: none !important;
+    width: 100% !important;
+    text-align: center;
+  }
+  .icon-right .icon td {
+    padding: 0 0 32px !important;
+    text-align: center;
+  }
+  .icon-right .heading {
+    text-align: center;
+  }
+  .m-ta-c {
+    text-align: center !important;
+  }
+  .m-m-a {
+    margin: auto !important;
+  }
+  .m-p-tb {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+  .m-p-lr {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+}
+
+</style>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+</head>
+<body style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; width: 100%; height: 100%; line-height: 1;">
+    <div style="display: none; font-size: 1px; line-height: 1px; height: 0px; width: 0px;" class="preheader">Thank you for choosing Travel Insurance underwritten by AIG Insurance Company of Canada!</div>
+  <table class="body" style="border-collapse: collapse; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; border-spacing: 0; background: #F1F6FB; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; height: 100%; -moz-font-feature-settings: 'liga' on; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; width: 100%; -moz-osx-font-smoothing: grayscale;">
+    <tr>
+      <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
+        <table align="center" class="wrapper" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 620px; margin: auto;">
+          <tr>
+            <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px 0; width: 10px;"> </td>
+            <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
+              <table class="preheader" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; color: #1C252E;">
+                <tr>
+                  <td style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px; font-size: 10px;">
+                  </td>
+                </tr>
+              </table>
+              <table align="center" class="main" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; color: #1C252E; background: #fff; border-radius: 2px;">
+                <tr>
+                  <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
+
+
+                  <style type="text/css">
+                  @media (max-width: 600px) {
+                    .header img {
+                      width: auto !important;
+                      max-width: 100%;
+                    }
+                  }
+                  </style>
+
+
+                  <table class="header" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center; background: #F1F6FB;">
+                    <tbody><tr>
+                      <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;padding-bottom: 30px; padding-top: 30px;">
+                        <img width="600" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/tg_logo_header.png" style="border: 0; outline: none; display: block; margin: auto; width: 600px; border-radius: 2px 2px 0 0; background: transparent;">
+                      </td>
+                    </tr>
+                  </tbody></table>
+
+
+
+                  <table class="header" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center;">
+                    <tr>
+                      <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
+                        <img width="235" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/FulfillmentEmail_HeaderImage.jpg" style="border: 0; outline: none; display: block; margin: auto; width: 235px; border-radius: 2px 2px 0 0;">
+                      </td>
+                      <td class="spacer" style="margin: 0; border: 0; font-size: 18px; vertical-align: middle; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; color: #fff; padding: 0 40px; font-weight: bold; background-color: #003D6E; text-align: left;">
+                        Thank you for choosing Travel Insurance underwritten by AIG Insurance Company of Canada!
+                      </td>
+                    </tr>
+                  </table>
+
+
+
+                  <table class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
+                    <tr>
+                      <td class="col-1" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 40px; width: 600px;">
+
+
+
+                        <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
+                          <tr>
+                            <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 25px;">
+                              Hello {{PlaceHolderField2}},<br>
+                              <br>
+                              Thank you for choosing {{PlaceHolderField4}} Travel Insurance underwritten by AIG Insurance Company of Canada.<br>
+                              Your Policy Number is {{PolicyNumber}}.<br>
+                              <br>
+                              Please {{ViewPolicyURL}} to view your {{PlaceHolderField3}}<br>
+                              <br>
+                              To view, you will need your Policy Number, and your Last Name.
+                            </td>
+                          </tr>
+                        </table>
+
+                        <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left; margin-bottom: 16px;">
+                          <tr>
+                            <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; padding-top: 16px; color: #003D6E; border-bottom: 1px solid #9CC7E6;">What am I covered for?</td>
+                          </tr>
+                        </table>
+
+                        <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
+                          <tr>
+                            <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 25px;">
+                              {{ProductNamePlaceHolder}}
+                            </td>
+                          </tr>
+                        </table>
+
+                        <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left; margin-bottom: 16px;">
+                          <tr>
+                            <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; padding-top: 16px; color: #003D6E; border-bottom: 1px solid #9CC7E6;">Questions about your policy?</td>
+                          </tr>
+                        </table>
+
+                        <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
+                          <tr>
+                            <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 25px;">
+                              For questions on any of our products, please call:<br>
+                              {{CustomerServicesContactNumber}}
+                            </td>
+                          </tr>
+                        </table>
+
+                        <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left; margin-bottom: 16px;">
+                          <tr>
+                            <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; padding-top: 16px; color: #003D6E; border-bottom: 1px solid #9CC7E6;">24-HOUR EMERGENCY ASSISTANCE</td>
+                          </tr>
+                        </table>
+
+                        <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
+                          <tr>
+                            <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 25px;">
+                              If you require emergency medical assistance or emergency travel assistance, please call:<br>
+                              {{AssistanceServicesContactNumber}}<br>
+                              <br>
+                              <b>Note:</b> You must notify Us prior to any Emergency Medical Treatment and prior to any surgery, invasive procedure, or Hospitalization. Failure to do so will result in Your being responsible for 30% of any eligible expenses incurred.
+                            </td>
+                          </tr>
+                        </table>
+
+                        <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left; margin-bottom: 16px;">
+                          <tr>
+                            <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; padding-top: 16px; color: #003D6E; border-bottom: 1px solid #9CC7E6;">How do I file a claim?</td>
+                          </tr>
+                        </table>
+
+                        <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
+                          <tr>
+                            <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 25px;">
+                              To submit a claim or for questions regarding your claim, please call:<br>
+                              {{ClaimsContactNumber}}
+                            </td>
+                          </tr>
+                        </table>
+
+                        <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
+                          <tr>
+                            <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-top: 25px; padding-bottom: 0;">
+                              Enjoy your travel and thank you for choosing {{PlaceHolderField4}} Travel Insurance!
+                            </td>
+                          </tr>
+                        </table>
+
+
+                      </td>
+                    </tr>
+                  </table>
+
+                  </td>
+                </tr>
+              </table>
+              <table class="footer" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; color: #343741;">
+                <tr>
+                  <td style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px; font-size: 10px;">
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px 0; width: 10px;"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
