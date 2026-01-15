@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; width: 100%; height: 100%;">
+<head>
+  <meta charset="UTF-8">
+  <title>Qantas Pre-Departure NZ</title>
+  
+  <style type="text/css">
+/*
+
+You can use these comments to help you change any of the text or background colors as well as change the font.
+
+########COLORS#######
+
+To use these colors, you can copy the hash value such as #001871 for aig fore blue and change either the text color or background color of elements. In order to change the color, you can go to the style tag within the relevant table (<table>) or table cell (<td>) and replace an existing "color" or "background" property with the desired color. If neither of those properties exist in the style tag, you can add them.
+
+The final product would look like this for a table or table cell
+<table style="color: #001871; background: #C7DBF4;">
+or
+<td style="color: #001871; background: #C7DBF4;">
+
+primary colors              secondary colors          orange: #FF8200;            green: #00BF6F;
+aig-core-blue: #001871;     cyan: #00A4E4;            lightest-orange: #FFE5C5;   lightest-green: #BDF0DF;
+pale-aig-blue: #C7DBF4;     lightest-cyan: #E0F3FB;   light-orange: #FECB8B;      light-green: #7AE1BF;
+cobalt-aig-blue: #1352DE;   light-cyan: #C0E7F7;      medium-orange: #FFB466;     medium-green: #4DD29A;
+                            medium-cyan: #80D2F2;     dark-orange: #A9431E;       dark-green: #047E4B;
+                            dark-cyan: #00719E;
+
+yellow: #FFBF3F;            purple: #904FD8;            teal: #00BFB3;            gray: #B1B1B1;
+lightest-yellow: #FCF2CD;   lightest-purple: #E2DAF1;   lightest-teal: #E0F8F3;   lightest-gray: #EEEEEE;
+light-yellow: #F8E59A;      light-purple: #C5B4E3;      light-teal: #C1F0E8;      light-gray: #DCDCDC;
+medium-yellow: #FFD279;     medium-purple: #BC95E8;     medium-teal: #80DFD9;     medium-gray: #D0D0D0;
+dark-yellow: #A9662B;       dark-purple: #6800DB;       dark-teal: #007D7D;       dark-gray: #343741;
+
+steel: #7086A1;             red: #E81944;             warm-gray: #B6ADA5;
+lightest-steel: #DCE2EA;    lightest-red: #FBE7EB;    lightest-warm-gray: #EBE9E5;
+light-steel: #93A3B7;       light-red: #F7CED7;       light-warm-gray: #D7D2CB;
+dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
+                            dark-red: #CB0029;
+
+*/
+@media (max-width: 600px) {
+  /* line 10, ../../../sass/wrappers/responsive/default.scss */
+  .wrapper, .section {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 600px) {
+  /* line 16, ../../../sass/wrappers/responsive/default.scss */
+  .columns {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  /* line 22, ../../../sass/wrappers/responsive/default.scss */
+  .col-1 {
+    padding: 16px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  /* line 28, ../../../sass/wrappers/responsive/default.scss */
+  .col-2, .col-3 {
+    width: 100% !important;
+    display: block;
+  }
+}
+
+/* line 35, ../../../sass/wrappers/responsive/default.scss */
+table {
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt;
+}
+
+@media (max-width: 600px) {
+  /* line 42, ../../../sass/wrappers/responsive/default.scss */
+  .icon-left .icon, .icon-left .text {
+    display: block !important;
+    width: 100% !important;
+  }
+  /* line 46, ../../../sass/wrappers/responsive/default.scss */
+  /* line 49, ../../../sass/wrappers/responsive/default.scss */
+  .icon-left .heading {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  /* line 57, ../../../sass/wrappers/responsive/default.scss */
+  .icon-right .icon, .icon-right .text {
+    float: none !important;
+    width: 100% !important;
+  }
+  /* line 61, ../../../sass/wrappers/responsive/default.scss */
+  .icon-right .icon td {
+    padding: 0 0 32px !important;
+    text-align: center;
+  }
+  /* line 65, ../../../sass/wrappers/responsive/default.scss */
+  .icon-right .heading {
+    text-align: center;
+  }
+  .m-ta-c {
+    text-align: center !important;
+  }
+  .m-m-a {
+    margin: auto !important;
+  }
+  .m-p-tb {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+}
+
+/*# sourceMappingURL=default.css.map */
+
+</style>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+</head>
+<body style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; width: 100%; height: 100%; line-height: 1;">
+  <div style="display: none; font-size: 1px; line-height: 1px; height: 0px; width: 0px;" class="preheader">Qantas: Fly with the Spirit of Australia</div>
+  <table class="body" style="border-collapse: collapse; font-family: Helvetica, Arial, sans-serif; border-spacing: 0; background: #F4F5F6; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; height: 100%; -moz-font-feature-settings: 'liga' on; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; width: 100%; -moz-osx-font-smoothing: grayscale;">
+    <tr>
+      <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif;">
+        <table align="center" class="wrapper" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 620px; margin: auto;">
+          <tr>
+            <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif; padding: 16px 0; width: 10px;"> </td>
+            <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif;">
+              <table class="preheader" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%; color: #323232;">
+                <tr>
+                  <td style="margin: 0; border: 0; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif; padding: 16px; font-size: 10px;">
+                  </td>
+                </tr>
+              </table>
+              <table align="center" class="main" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%; color: #323232; background: #fff;">
+                <tr>
+                  <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif;">
+                  <!-- Remove the text below this comment and insert header/content sections -->
+                  
+                  <style type="text/css">
+                  @media (max-width: 600px) {
+                    /* line 9, ../../../sass/headers/responsive/img.scss */
+                    .header img {
+                      width: auto !important;
+                      max-width: 100%;
+                    }
+                  }
+
+                  /*# sourceMappingURL=img.css.map */
+
+                  </style>
+                  <table class="header" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%; text-align: center;">
+                    <tr>
+                      <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif;">
+                        <img width="600" src="https://travel.insurance.qantas.com/content/dam/tg-documents/qantas/au/en/images/emails/qantas-logo.png" style="border: 0; outline: none; display: block; margin: auto; width: 600px; border-radius: 2px 2px 0 0;">
+                      </td>
+                    </tr>
+                  </table>
+
+
+                  <table class="section" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; background: #FCEBCD; color: #323232; width: 100%;">
+                    <tr>
+                      <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif; padding: 0;">
+                        <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                        
+
+                        <table class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif;">
+                          <tr>
+                            <td class="col-1" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif; padding: 10px 14px; width: 600px;">
+                              <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                              
+
+                              <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%; margin: 0 auto; line-height: 1.3;">
+                                <tr>
+                                  <td class="spacer" style="margin: 0; border: 0; font-size: 10px; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif; padding: 0;">IMPORTANT INFORMATION: Our policies do not provide cover for travel to destinations that are designated as “Do Not Travel” by the New Zealand government and sanctions. Check the latest <a href="https://www.safetravel.govt.nz/travel-advice-levels" style="color: #E40000;">government advice</a> and our <a href="https://travel.insurance.qantas.com/nz/travel-alerts?cmpid=emc-qantas-nz-predeparture" style="color: #E40000;">travel insurance alerts</a>.</td>
+                                </tr>
+                              </table>
+
+                              <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                            </td>
+                          </tr>
+                        </table>
+
+                        <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                      </td>
+                    </tr>
+                  </table>
+
+                  <table class="header" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%; text-align: center;">
+                    <tr>
+                      <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif;">
+                        <img width="600" src="https://travel.insurance.qantas.com/content/dam/tg-documents/qantas/au/en/images/emails/quote-summary-hero.jpg" style="border: 0; outline: none; display: block; margin: auto; width: 600px; border-radius: 2px 2px 0 0;">
+                      </td>
+                    </tr>
+                  </table>
+
+
+
+                  <table class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif;">
+                    <tr>
+                      <td class="col-1" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif; padding: 32px; width: 600px;">
+                        <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                        
+
+                        <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%; margin: 0 auto; line-height: 1.3;">
+                          <tr>
+                            <td class="spacer" style="margin: 0; border: 0; font-size: 14px; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif; padding-bottom: 28px;">
+                              Hi {{policyDetail-primaryInsured-firstName}}, <br>
+                              <br>
+                              Thanks for choosing Qantas Travel Insurance, underwritten by AIG Insurance New Zealand Limited for your upcoming trip. <br>
+                              <br>
+                              There’s not long to go until your trip begins, which is why we wanted to share a few things with you that’ll help your travel go smoothly.
+                            </td>
+                          </tr>
+                        </table>
+
+
+
+                        <table class="section" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; border: 1px solid #A0E0DF; width: 100%; border-radius: 4px;">
+                          <tr>
+                            <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif; padding: 0;">
+                              <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                              <table class="section" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%; background: #E9F9F9;">
+                                <tr>
+                                  <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif; padding: 0;">
+                                    <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                                    <table class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif;">
+                                      <tr>
+                                        <td class="col-2" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: middle; font-family: Helvetica, Arial, sans-serif; width: 268px;">
+                                          <table style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%;">
+                                            <tr>
+                                              <td class="spacer m-p-lr" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif; padding: 20px 25px;">
+                                                <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                                                
+
+                                                
+
+                                                <table align="center" class="icon-left" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%; margin: 0 auto;">
+                                                  <tr>
+                                                    <td class="spacer" style="margin: 0; border: 0; font-size: 16px; font-family: Helvetica, Arial, sans-serif; padding: 0; vertical-align: top;">
+                                                      <table class="m-m-a" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif;">
+                                                        <tr>
+                                                          <td class="icon" style="margin: 0; padding: 0; border: 0; font-size: 16px; font-family: Helvetica, Arial, sans-serif; vertical-align: top; text-align: center; padding-right: 10px;"><img width="30" src="https://travel.insurance.qantas.com/content/dam/tg-documents/qantas/au/en/images/emails/protection.png" style="border: 0; outline: none;"></td>
+                                                          <td class="text" style="margin: 0; padding: 0; border: 0; font-size: 16px; font-family: Helvetica, Arial, sans-serif; vertical-align: middle;">
+                                                            <table style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif;">
+                                                              <tr>
+                                                                <td class="heading" style="margin: 0; padding: 0; border: 0; font-family: Helvetica, Arial, sans-serif; vertical-align: middle; font-size: 18px; color: #323232; font-weight: bold;">
+                                                                  Your Policy Details
+                                                                </td>
+                                                              </tr>
+                                                            </table>
+                                                          </td>
+                                                        </tr>
+                                                      </table>
+                                                    </td>
+                                                  </tr>
+                                                </table>
+
+
+                                                <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                    <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                                  </td>
+                                </tr>
+                              </table>
+
+
+                              <table class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%;">
+                                <tbody><tr>
+                                  <td class="col-1" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif; padding: 0 25px; width: 100%; padding-top: 20px; padding-bottom: 20px;">
+                                    <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+
+
+                                    <table style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%;">
+                                      <tbody>
+                                      <tr>
+                                        <td style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 50%; margin: 0 auto; line-height: 1.3; font-size: 12px; font-weight: bold; padding-top: 5px;">Issuer</td>
+                                        <td style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 50%; margin: 0 auto; line-height: 1.3;font-size: 12px; text-align: right; padding-top: 5px;">AIG Insurance New Zealand Limited</td>
+                                      </tr>
+                                      <tr>
+                                        <td style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 50%; margin: 0 auto; line-height: 1.3; font-size: 12px; font-weight: bold; padding-top: 5px;">Product Name</td>
+                                        <td style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 50%; margin: 0 auto; line-height: 1.3;font-size: 12px; text-align: right; padding-top: 5px;">{{policyDetail-productName}}</td>
+                                      </tr>
+                                      <tr>
+                                        <td style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 50%; margin: 0 auto; line-height: 1.3; font-size: 12px; font-weight: bold; padding-top: 5px;">Policy Number</td>
+                                        <td style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 50%; margin: 0 auto; line-height: 1.3;font-size: 12px; text-align: right; padding-top: 5px;">{{policyDetail-policyNumber}}</td>
+                                      </tr>
+                                      <tr>
+                                        <td style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 50%; margin: 0 auto; line-height: 1.3; font-size: 12px; font-weight: bold; padding-top: 5px;">Departure Date</td>
+                                        <td style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 50%; margin: 0 auto; line-height: 1.3;font-size: 12px; text-align: right; padding-top: 5px;">{{policyDetail-effective::date::dd MMM yyyy}}</td>
+                                      </tr>
+                                      <tr>
+                                        <td style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 50%; margin: 0 auto; line-height: 1.3; font-size: 12px; font-weight: bold; padding-top: 5px;">Return Date</td>
+                                        <td style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 50%; margin: 0 auto; line-height: 1.3;font-size: 12px; text-align: right; padding-top: 5px;">{{policyDetail-expiration::date::dd MMM yyyy}}</td>
+                                      </tr>
+                                      
+                                    </tbody></table>
+
+
+
+                                    
+                                    <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                                  </td>
+                                </tr>
+                              </tbody></table>
+
+
+
+
+                              
+
+
+                              <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                            </td>
+                          </tr>
+                        </table>
+
+
+
+
+
+                        <table align="center" class="icon-top" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%; margin: 0 auto;">
+                          <tbody><tr>
+                            <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif; padding: 16px 0;">
+                              <table class="icon-container" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%;">
+                                <tbody><tr class="icon" style="text-align: center;">
+                                  <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif; padding-bottom: 10px;"><img width="37" src="https://travel.insurance.qantas.com/content/dam/tg-documents/qantas/au/en/images/emails/info.png" style="border: 0; outline: none;"></td>
+                                </tr>
+                                <tr>
+                                  <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif;">
+                                    <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%;">
+                                      <tbody><tr>
+                                        <td class="heading" style="margin: 0; padding: 0; border: 0; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif; font-size: 18px; color: #323232; text-align: center; font-weight: bold;">
+                                          Before you travel, don’t forget to:
+                                        </td>
+                                      </tr>
+                                    </tbody></table>
+                                  </td>
+                                </tr>
+                              </tbody></table>
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                        <table align="center" class="ul" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif;">
+                          <tbody><tr>
+                            <td class="spacer" style="margin: 0; border: 0; font-size: 14px; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif; padding: 0; padding-bottom: 16px;">
+                              <ul style="padding: 0; margin: 0;">
+                                <li style="margin-bottom: 8px; margin-left: 24px; line-height: 1.3;">Read your <a href="https://www.qantas.com/nz/en/book-a-trip/travel-insurance/policy-wordings.html?cmpid=emc-qantas-nz-predeparture-body " style="color: #E40000;">Policy Wording</a> to be clear on what is and isn’t covered to avoid any surprises. </li>
+                                <li style="margin-bottom: 8px; margin-left: 24px; line-height: 1.3;">Research the area(s) you are travelling to and read the latest travel alerts, government advice and entry requirements at your destination. </li>
+                                <li style="margin-bottom: 8px; margin-left: 24px; line-height: 1.3;">Save or print your Certificate of Insurance for easy access to your policy details and our emergency numbers in case you need help during your trip.</li>
+                              </ul>
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+
+
+
+
+
+
+                        
+                        <table class="section" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; border: 1px solid #A0E0DF; width: 100%; border-radius: 4px;">
+                          <tbody><tr>
+                            <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif; padding: 0;">
+                              <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                              <table class="section" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%; background: #E9F9F9;">
+                                <tbody><tr>
+                                  <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif; padding: 0;">
+                                    <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                                    <table class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif;">
+                                      <tbody><tr>
+                                        <td class="col-2" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: middle; font-family: Helvetica, Arial, sans-serif;">
+                                          <table style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%;">
+                                            <tbody><tr>
+                                              <td class="spacer m-p-lr" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif; padding: 20px 25px;">
+                                                <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                                                
+
+                                                
+
+                                                <table align="center" class="icon-left" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%; margin: 0 auto;">
+                                                  <tbody><tr>
+                                                    <td class="spacer" style="margin: 0; border: 0; font-size: 16px; font-family: Helvetica, Arial, sans-serif; padding: 0; vertical-align: top;">
+                                                      <table class="m-m-a" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif;">
+                                                        <tbody><tr>
+                                                          <td class="icon" style="margin: 0; padding: 0; border: 0; font-size: 16px; font-family: Helvetica, Arial, sans-serif; vertical-align: top; text-align: center; padding-right: 10px;"><img width="30" src="https://travel.insurance.qantas.com/content/dam/tg-documents/qantas/au/en/images/emails/support.png" style="border: 0; outline: none;"></td>
+                                                          <td class="text" style="margin: 0; padding: 0; border: 0; font-size: 16px; font-family: Helvetica, Arial, sans-serif; vertical-align: middle;">
+                                                            <table style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif;">
+                                                              <tbody><tr>
+                                                                <td class="heading" style="margin: 0; padding: 0; border: 0; font-family: Helvetica, Arial, sans-serif; vertical-align: middle; font-size: 18px; color: #323232; font-weight: bold;">
+                                                                  We’re here to help
+                                                                </td>
+                                                              </tr>
+                                                            </tbody></table>
+                                                          </td>
+                                                        </tr>
+                                                      </tbody></table>
+                                                    </td>
+                                                  </tr>
+                                                </tbody></table>
+
+
+                                                <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                                              </td>
+                                            </tr>
+                                          </tbody></table>
+                                        </td>
+                                      </tr>
+                                    </tbody></table>
+                                    <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                                  </td>
+                                </tr>
+                              </tbody></table>
+
+
+                              <table class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%;">
+                                <tbody><tr>
+                                  <td class="col-1" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif; padding: 20px 25px; width: 100%;">
+                                    <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+
+
+
+                                    <table style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif;">
+                                      <tbody><tr>
+                                        <td class="heading" style="margin: 0; padding: 0; border: 0; font-family: Helvetica, Arial, sans-serif; vertical-align: middle; font-size: 14px; color: #323232; font-weight: bold; padding-bottom: 10px;">
+                                          Help with your policy
+                                        </td>
+                                      </tr>
+                                    </tbody></table>
+
+                                    <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%; margin: 0 auto; line-height: 1.3;">
+                                      <tr>
+                                        <td class="spacer" style="margin: 0; border: 0; font-size: 12px; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif; padding-bottom: 28px;">
+                                          If you have any questions, or need help to change or cancel your policy:
+                                        </td>
+                                      </tr>
+                                    </table>
+
+
+
+                                    <table align="center" class="icon-left" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%; margin: 0 auto;">
+                                      <tr>
+                                        <td class="spacer" style="margin: 0; border: 0; font-size: 16px; font-family: Helvetica, Arial, sans-serif; padding: 8px 0; vertical-align: top;">
+                                          <table class="m-m-a" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif;">
+                                            <tr>
+                                              <td class="icon" style="margin: 0; padding: 0; border: 0; font-size: 16px; font-family: Helvetica, Arial, sans-serif; vertical-align: top; text-align: center; padding-right: 32px;"><img width="22" src="https://travel.insurance.qantas.com/content/dam/tg-documents/qantas/au/en/images/emails/laptop.png" style="border: 0; outline: none;"></td>
+                                              <td class="text" style="margin: 0; padding: 0; border: 0; font-size: 16px; font-family: Helvetica, Arial, sans-serif; vertical-align: top;">
+                                                <table style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif;">
+                                                  <tr>
+                                                    <td class="heading" style="margin: 0; padding: 0; border: 0; font-family: Helvetica, Arial, sans-serif; vertical-align: top; font-size: 12px; padding-bottom: 5px; font-weight: bold;">
+                                                      Online:
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="content m-ta-c" style="margin: 0; padding: 0; border: 0; font-size: 12px; font-family: Helvetica, Arial, sans-serif; vertical-align: top; line-height: 1.3;">
+                                                      Log in to our <a style="color: #E40000" href="https://travel.insurance.qantas.com/nz/login?cmpid=emc-qantas-nz-predeparture">policy portal</a>
+                                                    </td>
+                                                  </tr>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </table>
+
+                                    <table align="center" class="icon-left" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%; margin: 0 auto;">
+                                      <tr>
+                                        <td class="spacer" style="margin: 0; border: 0; font-size: 16px; font-family: Helvetica, Arial, sans-serif; padding: 8px 0; vertical-align: top;">
+                                          <table class="m-m-a" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif;">
+                                            <tr>
+                                              <td class="icon" style="margin: 0; padding: 0; border: 0; font-size: 16px; font-family: Helvetica, Arial, sans-serif; vertical-align: top; text-align: center; padding-right: 32px;"><img width="22" src="https://travel.insurance.qantas.com/content/dam/tg-documents/qantas/au/en/images/emails/call.png" style="border: 0; outline: none;"></td>
+                                              <td class="text" style="margin: 0; padding: 0; border: 0; font-size: 16px; font-family: Helvetica, Arial, sans-serif; vertical-align: top;">
+                                                <table style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif;">
+                                                  <tr>
+                                                    <td class="heading" style="margin: 0; padding: 0; border: 0; font-family: Helvetica, Arial, sans-serif; vertical-align: top; font-size: 12px; padding-bottom: 5px; font-weight: bold;">
+                                                      Phone:
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="content m-ta-c" style="margin: 0; padding: 0; border: 0; font-size: 12px; font-family: Helvetica, Arial, sans-serif; vertical-align: top; line-height: 1.3;">
+                                                      <span style="color: #E40000;">0800 446 273</span> (within New Zealand) or <span style="color: #E40000;">+64 9 355 3366</span> (from overseas), Monday to Friday, 10 am to 9 pm and Saturday and Sunday, 11 am to 6 pm.
+                                                    </td>
+                                                  </tr>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </table>
+
+                                    <table align="center" class="icon-left" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%; margin: 0 auto;">
+                                      <tr>
+                                        <td class="spacer" style="margin: 0; border: 0; font-size: 16px; font-family: Helvetica, Arial, sans-serif; padding: 8px 0; vertical-align: top;">
+                                          <table class="m-m-a" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif;">
+                                            <tr>
+                                              <td class="icon" style="margin: 0; padding: 0; border: 0; font-size: 16px; font-family: Helvetica, Arial, sans-serif; vertical-align: top; text-align: center; padding-right: 32px;"><img width="22" src="https://travel.insurance.qantas.com/content/dam/tg-documents/qantas/au/en/images/emails/email.png" style="border: 0; outline: none;"></td>
+                                              <td class="text" style="margin: 0; padding: 0; border: 0; font-size: 16px; font-family: Helvetica, Arial, sans-serif; vertical-align: top;">
+                                                <table style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif;">
+                                                  <tr>
+                                                    <td class="heading" style="margin: 0; padding: 0; border: 0; font-family: Helvetica, Arial, sans-serif; vertical-align: top; font-size: 12px; padding-bottom: 5px; font-weight: bold;">
+                                                      Email:
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="content m-ta-c" style="margin: 0; padding: 0; border: 0; font-size: 12px; font-family: Helvetica, Arial, sans-serif; vertical-align: top; line-height: 1.3;">
+                                                      <a style="color: #E40000" href="mailto:qantascustomerservice@aig.com">qantascustomerservice@aig.com</a>
+                                                    </td>
+                                                  </tr>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </table>
+
+
+                                    <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                                  </td>
+                                </tr>
+                              </tbody></table>
+
+
+
+                              <table class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%;">
+                                <tbody><tr>
+                                  <td class="col-1" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif; padding: 0 25px; width: 100%;">
+                                    <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+
+
+                                    <hr style="width: 100%; height: 2px; border-width:0;color:#A0E0DF;background-color:#A0E0DF">
+                                    <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                                  </td>
+                                </tr>
+                              </tbody></table>
+
+
+                              <table class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%;">
+                                <tbody><tr>
+                                  <td class="col-1" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif; padding: 20px 25px; width: 100%;">
+                                    <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+
+
+
+                                    <table style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif;">
+                                      <tbody><tr>
+                                        <td class="heading" style="margin: 0; padding: 0; border: 0; font-family: Helvetica, Arial, sans-serif; vertical-align: middle; font-size: 14px; color: #323232; font-weight: bold; padding-bottom: 10px;">
+                                          Help while travelling
+                                        </td>
+                                      </tr>
+                                    </tbody></table>
+
+                                    <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%; margin: 0 auto; line-height: 1.3;">
+                                      <tr>
+                                        <td class="spacer" style="margin: 0; border: 0; font-size: 12px; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif; padding-bottom: 28px;">
+                                          If you need urgent help while travelling, call our partner, AIG Travel’s worldwide emergency assistance team are available 24/7:
+                                        </td>
+                                      </tr>
+                                    </table>
+
+
+
+                                    <table align="center" class="icon-left" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%; margin: 0 auto;">
+                                      <tr>
+                                        <td class="spacer" style="margin: 0; border: 0; font-size: 16px; font-family: Helvetica, Arial, sans-serif; padding: 8px 0; vertical-align: top;">
+                                          <table class="m-m-a" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif;">
+                                            <tr>
+                                              <td class="icon" style="margin: 0; padding: 0; border: 0; font-size: 16px; font-family: Helvetica, Arial, sans-serif; vertical-align: top; text-align: center; padding-right: 32px;"><img width="22" src="https://travel.insurance.qantas.com/content/dam/tg-documents/qantas/au/en/images/emails/call.png" style="border: 0; outline: none;"></td>
+                                              <td class="text" style="margin: 0; padding: 0; border: 0; font-size: 16px; font-family: Helvetica, Arial, sans-serif; vertical-align: top;">
+                                                <table style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif;">
+                                                  <tr>
+                                                    <td class="heading" style="margin: 0; padding: 0; border: 0; font-family: Helvetica, Arial, sans-serif; vertical-align: top; font-size: 12px; padding-bottom: 5px; font-weight: bold;">
+                                                      Phone:
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="content m-ta-c" style="margin: 0; padding: 0; border: 0; font-size: 12px; font-family: Helvetica, Arial, sans-serif; vertical-align: top; line-height: 1.3;">
+                                                      <span style="color: #E40000;">0800 446 196</span> (within New Zealand) or <span style="color: #E40000;">+64 9 355 3187</span> (from overseas)
+                                                    </td>
+                                                  </tr>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </table>
+
+                                    <table align="center" class="icon-left" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%; margin: 0 auto;">
+                                      <tr>
+                                        <td class="spacer" style="margin: 0; border: 0; font-size: 16px; font-family: Helvetica, Arial, sans-serif; padding: 8px 0; vertical-align: top;">
+                                          <table class="m-m-a" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif;">
+                                            <tr>
+                                              <td class="icon" style="margin: 0; padding: 0; border: 0; font-size: 16px; font-family: Helvetica, Arial, sans-serif; vertical-align: top; text-align: center; padding-right: 32px;"><img width="22" src="https://travel.insurance.qantas.com/content/dam/tg-documents/qantas/au/en/images/emails/email.png" style="border: 0; outline: none;"></td>
+                                              <td class="text" style="margin: 0; padding: 0; border: 0; font-size: 16px; font-family: Helvetica, Arial, sans-serif; vertical-align: top;">
+                                                <table style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif;">
+                                                  <tr>
+                                                    <td class="heading" style="margin: 0; padding: 0; border: 0; font-family: Helvetica, Arial, sans-serif; vertical-align: top; font-size: 12px; padding-bottom: 5px; font-weight: bold;">
+                                                      Email:
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="content m-ta-c" style="margin: 0; padding: 0; border: 0; font-size: 12px; font-family: Helvetica, Arial, sans-serif; vertical-align: top; line-height: 1.3;">
+                                                      <a style="color: #E40000" href="mailto:qantasinsuranceassistance@aig.com">qantasinsuranceassistance@aig.com</a>
+                                                    </td>
+                                                  </tr>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </table>
+
+
+                                    <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                                  </td>
+                                </tr>
+                              </tbody></table>
+
+                              <table class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%;">
+                                <tbody><tr>
+                                  <td class="col-1" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif; padding: 0 25px; width: 100%;">
+                                    <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+
+
+                                    <hr style="width: 100%; height: 2px; border-width:0;color:#A0E0DF;background-color:#A0E0DF">
+                                    <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                                  </td>
+                                </tr>
+                              </tbody></table>
+
+
+                              <table class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%;">
+                                <tbody><tr>
+                                  <td class="col-1" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif; padding: 20px 25px; width: 100%;">
+                                    <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+
+
+
+                                    <table style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif;">
+                                      <tbody><tr>
+                                        <td class="heading" style="margin: 0; padding: 0; border: 0; font-family: Helvetica, Arial, sans-serif; vertical-align: middle; font-size: 14px; color: #323232; font-weight: bold; padding-bottom: 10px;">
+                                          Make a claim
+                                        </td>
+                                      </tr>
+                                    </tbody></table>
+
+                                    <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%; margin: 0 auto; line-height: 1.3;">
+                                      <tr>
+                                        <td class="spacer" style="margin: 0; border: 0; font-size: 12px; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif; padding-bottom: 28px;">
+                                          If things haven’t gone to plan and you need to make a claim:
+                                        </td>
+                                      </tr>
+                                    </table>
+
+
+
+                                    <table align="center" class="icon-left" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%; margin: 0 auto;">
+                                      <tr>
+                                        <td class="spacer" style="margin: 0; border: 0; font-size: 16px; font-family: Helvetica, Arial, sans-serif; padding: 8px 0; vertical-align: top;">
+                                          <table class="m-m-a" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif;">
+                                            <tr>
+                                              <td class="icon" style="margin: 0; padding: 0; border: 0; font-size: 16px; font-family: Helvetica, Arial, sans-serif; vertical-align: top; text-align: center; padding-right: 32px;"><img width="22" src="https://travel.insurance.qantas.com/content/dam/tg-documents/qantas/au/en/images/emails/laptop.png" style="border: 0; outline: none;"></td>
+                                              <td class="text" style="margin: 0; padding: 0; border: 0; font-size: 16px; font-family: Helvetica, Arial, sans-serif; vertical-align: top;">
+                                                <table style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif;">
+                                                  <tr>
+                                                    <td class="heading" style="margin: 0; padding: 0; border: 0; font-family: Helvetica, Arial, sans-serif; vertical-align: top; font-size: 12px; padding-bottom: 5px; font-weight: bold;">
+                                                      Online:
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="content m-ta-c" style="margin: 0; padding: 0; border: 0; font-size: 12px; font-family: Helvetica, Arial, sans-serif; vertical-align: top; line-height: 1.3;">
+                                                      Log in to our <a style="color: #E40000" href="https://travel.insurance.qantas.com/nz/claims?cmpid=emc-qantas-nz-predeparture">claims portal</a>
+                                                    </td>
+                                                  </tr>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </table>
+
+                                    <table align="center" class="icon-left" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%; margin: 0 auto;">
+                                      <tr>
+                                        <td class="spacer" style="margin: 0; border: 0; font-size: 16px; font-family: Helvetica, Arial, sans-serif; padding: 8px 0; vertical-align: top;">
+                                          <table class="m-m-a" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif;">
+                                            <tr>
+                                              <td class="icon" style="margin: 0; padding: 0; border: 0; font-size: 16px; font-family: Helvetica, Arial, sans-serif; vertical-align: top; text-align: center; padding-right: 32px;"><img width="22" src="https://travel.insurance.qantas.com/content/dam/tg-documents/qantas/au/en/images/emails/call.png" style="border: 0; outline: none;"></td>
+                                              <td class="text" style="margin: 0; padding: 0; border: 0; font-size: 16px; font-family: Helvetica, Arial, sans-serif; vertical-align: top;">
+                                                <table style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif;">
+                                                  <tr>
+                                                    <td class="heading" style="margin: 0; padding: 0; border: 0; font-family: Helvetica, Arial, sans-serif; vertical-align: top; font-size: 12px; padding-bottom: 5px; font-weight: bold;">
+                                                      Phone:
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="content m-ta-c" style="margin: 0; padding: 0; border: 0; font-size: 12px; font-family: Helvetica, Arial, sans-serif; vertical-align: top; line-height: 1.3;">
+                                                      <span style="color: #E40000;">0800 446 266</span> (within New Zealand) or <span style="color: #E40000;">+64 9 355 3078</span> (from overseas), Monday to Friday, 10 am to 9 pm and Saturday and Sunday, 11 am to 6 pm.
+                                                    </td>
+                                                  </tr>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </table>
+
+                                    <table align="center" class="icon-left" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%; margin: 0 auto;">
+                                      <tr>
+                                        <td class="spacer" style="margin: 0; border: 0; font-size: 16px; font-family: Helvetica, Arial, sans-serif; padding: 8px 0; vertical-align: top;">
+                                          <table class="m-m-a" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif;">
+                                            <tr>
+                                              <td class="icon" style="margin: 0; padding: 0; border: 0; font-size: 16px; font-family: Helvetica, Arial, sans-serif; vertical-align: top; text-align: center; padding-right: 32px;"><img width="22" src="https://travel.insurance.qantas.com/content/dam/tg-documents/qantas/au/en/images/emails/email.png" style="border: 0; outline: none;"></td>
+                                              <td class="text" style="margin: 0; padding: 0; border: 0; font-size: 16px; font-family: Helvetica, Arial, sans-serif; vertical-align: top;">
+                                                <table style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif;">
+                                                  <tr>
+                                                    <td class="heading" style="margin: 0; padding: 0; border: 0; font-family: Helvetica, Arial, sans-serif; vertical-align: top; font-size: 12px; padding-bottom: 5px; font-weight: bold;">
+                                                      Email:
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td class="content m-ta-c" style="margin: 0; padding: 0; border: 0; font-size: 12px; font-family: Helvetica, Arial, sans-serif; vertical-align: top; line-height: 1.3;">
+                                                      <a style="color: #E40000" href="mailto:qantasinsuranceclaims@aig.com">qantasinsuranceclaims@aig.com</a>
+                                                    </td>
+                                                  </tr>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </table>
+
+                                    <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%; margin: 0 auto; line-height: 1.3;">
+                                      <tr>
+                                        <td class="spacer" style="margin: 0; border: 0; font-size: 12px; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif; padding: 25px; font-style: italic; text-align: center;">
+                                          Remember: keep receipts and other supporting documentation in case you need to make a claim.
+                                        </td>
+                                      </tr>
+                                    </table>
+
+
+                                    <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                                  </td>
+                                </tr>
+                              </tbody></table>
+
+
+
+
+
+                              <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                        <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
+                          <tr>
+                            <td class="spacer" style="margin: 0; border: 0; font-size: 10px; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif; padding-bottom: 0; text-align: center; padding-top: 20px;"><em>This is an auto generated email, please do not reply.</em></td>
+                          </tr>
+                        </table>
+
+
+
+
+                        <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                      </td>
+                    </tr>
+                  </table>
+
+
+
+
+
+                  <!-- Remove the text above this comment and insert header/content sections -->
+                  </td>
+                </tr>
+              </table>
+              <table class="footer" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%; color: #343741;">
+                <tr>
+                  <td style="margin: 0; border: 0; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif; padding: 16px 0; font-size: 10px;">Qantas Travel Insurance is underwritten by AIG Insurance New Zealand Limited (“AIG”). Qantas Airways Limited (“Qantas”) is a distributor of AIG and does not provide any financial advice, but may provide information relating to your Qantas booking to AIG. Consider the <a href="https://www.qantas.com/nz/en/book-a-trip/travel-insurance/policy-wordings.html?cmpid=emc-qantas-nz-predeparture-footer" style="color: #E40000;">Policy Wording</a> and your personal circumstances before you buy. <br>
+                    <br>
+                    Sent by AIG Insurance New Zealand Limited, 7/21 Queen Street, Auckland CBD, Auckland 1010, New Zealand on behalf of Qantas Airways Limited (ABN 16 009 661 901), Australian headquarters: 10 Bourke Road, Mascot, NSW 2020.
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif; padding: 16px 0; width: 10px;"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
