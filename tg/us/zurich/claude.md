@@ -111,3 +111,49 @@ Use components from: `/responsive-modular-email-templates/build/html/`
 - [ ] All links functional
 - [ ] All images have alt text
 - [ ] Preheader text displays correctly
+
+---
+
+## Completed Work
+
+### Customer Journey Emails (Jan 2026)
+All 6 customer journey emails have been built from Figma designs:
+
+| Email | Status | Notes |
+|-------|--------|-------|
+| six-month-bag.html | Complete | Baggage claims stats (7,529 total with breakdown), testimonial section |
+| six-month-med.html | Complete | Medical expense stats (16,050 claims, $2,575.36 avg), Consumer Reports citation |
+| six-month-trip-can.html | Complete | Two-column stats (120,159 trip can + 53,840 trip inconvenience) |
+| twelve-month.html | Complete | Split header design (purple/pink gradient), assistance services + packing tips blocks |
+| eighteen-month.html | Complete | Plan picker illustration, "Compare Plans" CTA |
+| two-year.html | Complete | Shield icon header, numbered benefits list, dual testimonials |
+
+### Image Assets
+All images stored in `img/` folder:
+- **Logos**: `logo-travel-guard-color.png`, `logo-travel-guard-white.png` (converted from SVG with CSS variables replaced)
+- **Hero images**: `hero-baggage.jpg`, `hero-medical.jpg`, `hero-trip-can.jpg`, `hero-12month.jpg`, `hero-18month.jpg`, `hero-2year.jpg`
+- **Icons**: `icon-phone.png`, `icon-quote.png`, `icon-review.png`, `icon-facebook.png`, `icon-instagram.png`, `icon-youtube.png`, `icon-tiktok.png`
+- **Content images**: `img-assistance.jpg`, `img-packing.jpg`, `img-picking-plan.png`
+
+### Known Issues & Solutions
+1. **Figma SVG exports with CSS variables**: When exporting logos from Figma, they may contain `fill="var(--fill-0, #color)"`. Convert to PNG using:
+   ```bash
+   sed -i '' 's/var(--fill-0, #003D6E)/#003D6E/g' logo.svg
+   sips -s format png -Z 476 logo.svg --out logo.png
+   ```
+
+2. **Campaign tracking**: All CTAs use `cmpid` parameter format: `emc-tgdirect-us-en-fulfillment-{emailname}`
+
+### Color Reference
+- Navy (TG Navy): `#003d6e`
+- Zurich Blue Dark: `#005b94`
+- Zurich Blue: `#0076be`
+- Nightsky Purple: `#302261`
+- Seafoam/Teal: `#64c5b9`
+- Cyan accent: `#66cbe1`
+- Snowmelt border: `#9cc7e6`
+- Pink (gradient): `#db5989`
+- Body text: `#1c252e` or `#343741`
+
+### Font Stack
+Primary: `'Noto Sans', 'Source Sans Pro', Arial, sans-serif`
