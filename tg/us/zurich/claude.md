@@ -132,7 +132,7 @@ All 6 customer journey emails have been built from Figma designs:
 All images stored in `img/` folder:
 - **Logos**: `logo-travel-guard-color.png`, `logo-travel-guard-white.png` (converted from SVG with CSS variables replaced)
 - **Hero images**: `hero-baggage.jpg`, `hero-medical.jpg`, `hero-trip-can.jpg`, `hero-12month.jpg`, `hero-18month.jpg`, `hero-2year.jpg`
-- **Icons**: `icon-phone.png`, `icon-quote.png`, `icon-review.png`, `icon-facebook.png`, `icon-instagram.png`, `icon-youtube.png`, `icon-tiktok.png`
+- **Icons**: `icon-phone.png`, `icon-quote.png`, `icon-review.png`, `icon-shield.png`, `icon-facebook.png`, `icon-instagram.png`, `icon-youtube.png`, `icon-tiktok.png`
 - **Content images**: `img-assistance.jpg`, `img-packing.jpg`, `img-picking-plan.png`
 
 ### Known Issues & Solutions
@@ -144,6 +144,65 @@ All images stored in `img/` folder:
 
 2. **Campaign tracking**: All CTAs use `cmpid` parameter format: `emc-tgdirect-us-en-fulfillment-{emailname}`
 
+3. **Mobile centering in HTML emails**: Using `text-align: center` on nested table elements is unreliable. Instead, add a class to the container table (e.g., `centeronmobile`) and apply:
+   ```css
+   @media screen and (max-width: 600px) {
+     table.centeronmobile { width: 75% !important; margin: 0 auto !important; }
+   }
+   ```
+   This constrains the table width and uses `margin: auto` to center it horizontally.
+
+### Follow-up Items
+- [ ] **six-month-bag.html**: Request hero background image from UX designer. The Figma design has a background image in the hero area that isn't surfacing as an exportable image asset.
+- [ ] **twelve-month.html**: Request full header image from UX designer. The Figma design has a diagonal/angled edge where the purple section overlays the beach photo. For Outlook compatibility, this needs to be exported as a single composed image with the diagonal edge baked in (purple gradient + logo + text + angled photo as one image).
+- [ ] **eighteen-month.html**: Request full header image from UX designer. The Figma design has a curved edge where the navy section meets the hero photo. For Outlook compatibility, this needs to be exported as a single composed image with the curve baked in (navy + logo + text + curved photo as one image).
+- [ ] **two-year.html**: Request CTA box image from UX designer. The "Get My Quote" callout has a woman-on-plane image with a curved left edge (mask effect). For Outlook compatibility, this needs to be exported with the curved edge baked into the image.
+
+### Recent Fixes (Jan 2026)
+
+**cruise-season-2026.html:**
+- Fixed logo: Changed to `logo-travel-guard-white.png` for navy background
+- Fixed dotted border: Changed from `1px dashed` to `2px dotted` under logo
+- Fixed quote icon aspect ratio: Removed fixed height, use `height: auto`
+- Fixed Coverages/Services layout:
+  - Desktop: Two-column layout (heading left, list right) with `padding-left: 40px` on list cells
+  - Mobile: Stacked and centered using CSS:
+    ```css
+    .features-cell { padding-left: 80px !important; padding-right: 80px !important; }
+    .features-heading { padding-left: 0 !important; padding-right: 0 !important; }
+    .features-heading table { margin-left: auto !important; margin-right: auto !important; }
+    ```
+
+**six-month-bag.html:**
+- Fixed dotted border: Changed from `1px dashed` to `2px dotted` under logo
+- Fixed quote icon: Re-exported from Figma, fixed `preserveAspectRatio` and CSS variables, removed fixed height
+- Fixed stats breakdown centering: Added `margin: 30px auto 0 auto` to center table
+- Fixed mobile stats layout: Updated CSS for centered stacking of numbers above descriptions
+
+**six-month-med.html:**
+- Fixed dotted border: Changed from `1px dashed` to `2px dotted`
+- Fixed dollar amount color: Changed from green (`#007a3d`) to red (`#af0827`) to match Figma
+
+**six-month-trip-can.html:**
+- Fixed dotted border: Changed from `1px dashed` to `2px dotted`
+
+**twelve-month.html:**
+- Fixed dotted border: Changed from `1px dashed` to `2px dotted`
+- Fixed circular images: Cropped `img-assistance.jpg` and `img-packing.jpg` to squares, added explicit `width` and `height` attributes
+- Fixed social media icons: Made dimensions square (26×26 for Facebook, 24×24 for others)
+
+**eighteen-month.html:**
+- Fixed dotted border: Changed from `1px dashed` to `2px dotted`
+- Fixed phone icon: Re-exported from Figma SVG, fixed CSS variables and `preserveAspectRatio`, converted to PNG
+
+**two-year.html:**
+- Fixed dotted border: Changed from `1px dashed` to `2px dotted`
+- Fixed quote icons (2 instances): Same fix as other emails
+- Fixed header shield icon: Replaced CSS table approximation with proper shield PNG (31×55px)
+- Fixed header layout: Moved dotted border from between shield/text to between text/logo
+- Fixed social media icons: Made dimensions square (26×26 for Facebook, 24×24 for others)
+- Fixed mobile header: Added `centeronmobile` class with responsive CSS for proper centering on mobile (logo above, shield and text stacked below)
+
 ### Color Reference
 - Navy (TG Navy): `#003d6e`
 - Zurich Blue Dark: `#005b94`
@@ -153,6 +212,7 @@ All images stored in `img/` folder:
 - Cyan accent: `#66cbe1`
 - Snowmelt border: `#9cc7e6`
 - Pink (gradient): `#db5989`
+- Red (highlight): `#af0827`
 - Body text: `#1c252e` or `#343741`
 
 ### Font Stack
