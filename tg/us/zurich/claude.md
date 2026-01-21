@@ -24,17 +24,31 @@ Create responsive HTML emails for Zurich Travel Insurance customer journey campa
   - Gmail dark mode (`[data-ogsc]`)
   - Outlook.com dark mode (`[data-ogsb]`)
 
+## Folder Structure
+```
+zurich/
+├── img/                    # Shared image assets
+├── fulfillment/            # Customer journey emails
+├── holiday/                # Holiday-themed emails
+├── seasonal-update/        # Seasonal BAU emails
+└── travel-tips/            # Travel tips emails
+```
+
+Note: All HTML files reference images using `../img/` relative paths.
+
 ## Design to HTML Mapping
 
 | HTML File | Figma Design | Category |
 |-----------|--------------|----------|
-| cruise-season-2026.html | [Seasonal Update](https://www.figma.com/design/DAZ409npFBAoynGcoJ7GpY/BAU-Emails?node-id=2002-1917&m=dev) | BAU |
-| six-month-bag.html | [6-mo Follow up Baggage](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=782-2922&m=dev) | Customer Journey |
-| six-month-trip-can.html | [6-mo Follow up Trip Can](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=781-91&m=dev) | Customer Journey |
-| six-month-med.html | [6-mo Follow up Medical](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=782-2690&m=dev) | Customer Journey |
-| twelve-month.html | [12-mo Follow up](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=610-853&m=dev) | Customer Journey |
-| eighteen-month.html | [18-mo Follow up](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=610-3731&m=dev) | Customer Journey |
-| two-year.html | [2-yr Follow up](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=610-3894&m=dev) | Customer Journey |
+| seasonal-update/cruise-season-2026.html | [Seasonal Update](https://www.figma.com/design/DAZ409npFBAoynGcoJ7GpY/BAU-Emails?node-id=2002-1917&m=dev) | BAU |
+| holiday/cruise-day.html | [Take a Cruise Day](https://www.figma.com/design/DAZ409npFBAoynGcoJ7GpY/BAU-Emails?node-id=2001-318&focus-id=2002-2037&m=dev) | Holiday |
+| travel-tips/travel-tips-02-26.html | [Travel Safety Tips](https://www.figma.com/design/DAZ409npFBAoynGcoJ7GpY/BAU-Emails?node-id=2001-318&focus-id=2002-1709&m=dev) | Travel Tips |
+| fulfillment/six-month-bag.html | [6-mo Follow up Baggage](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=782-2922&m=dev) | Customer Journey |
+| fulfillment/six-month-trip-can.html | [6-mo Follow up Trip Can](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=781-91&m=dev) | Customer Journey |
+| fulfillment/six-month-med.html | [6-mo Follow up Medical](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=782-2690&m=dev) | Customer Journey |
+| fulfillment/twelve-month.html | [12-mo Follow up](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=610-853&m=dev) | Customer Journey |
+| fulfillment/eighteen-month.html | [18-mo Follow up](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=610-3731&m=dev) | Customer Journey |
+| fulfillment/two-year.html | [2-yr Follow up](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=610-3894&m=dev) | Customer Journey |
 
 ## Template Framework Reference
 Use components from: `/responsive-modular-email-templates/build/html/`
@@ -99,6 +113,43 @@ Use components from: `/responsive-modular-email-templates/build/html/`
 - Use MSO conditional tables to enforce widths
 - Google Fonts may not load - always provide fallbacks
 
+### Hero Image Pattern (Split Background)
+Most templates use a hero image that overlaps the navy header and white body - the navy background extends 50% down the hero image. Use this pattern:
+
+```html
+<!-- Title on Navy Background -->
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #003d6e;">
+  <tr>
+    <td align="center" style="padding: 15px 30px 20px 30px;">
+      <h1 style="...color: #ffffff;">Title Here</h1>
+    </td>
+  </tr>
+</table>
+
+<!-- Hero Image - Overlapping navy and white -->
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+  <tr>
+    <td align="center" style="background: linear-gradient(to bottom, #003d6e 50%, #ffffff 50%); padding: 0 30px 30px 30px;">
+      <!--[if mso]>
+      <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:540px;height:150px;">
+        <v:fill type="solid" color="#003d6e"/>
+        <v:textbox inset="0,0,0,0">
+      <![endif]-->
+      <img src="../img/hero-image.jpg" alt="..." width="540" class="hero-img" style="display: block; max-width: 540px; width: 100%; height: auto;">
+      <!--[if mso]>
+        </v:textbox>
+      </v:rect>
+      <![endif]-->
+    </td>
+  </tr>
+</table>
+```
+
+Key points:
+- Use `linear-gradient(to bottom, #003d6e 50%, #ffffff 50%)` on the td containing the hero image
+- Include MSO conditional VML for Outlook compatibility
+- The hero image sits on top of this gradient, creating the split-background effect
+
 ## Testing Checklist
 - [ ] iPhone Mail (light mode)
 - [ ] iPhone Mail (dark mode)
@@ -116,6 +167,13 @@ Use components from: `/responsive-modular-email-templates/build/html/`
 
 ## Completed Work
 
+### BAU Emails (Jan 2026)
+
+| Email | Status | Notes |
+|-------|--------|-------|
+| holiday/cruise-day.html | Complete | "Take a Cruise Day" holiday email, pink accent (#db5989/#edacc4), assistance services section, social hashtag #TakeACruiseDaywithTG |
+| travel-tips/travel-tips-02-26.html | Complete | "Money Saving Travel Tips", green accent (#a5d069), numbered tips list, video library section, testimonial. Uses green icon variants: `icon-send-green.png`, `icon-quote-green.png` |
+
 ### Customer Journey Emails (Jan 2026)
 All 6 customer journey emails have been built from Figma designs:
 
@@ -131,9 +189,14 @@ All 6 customer journey emails have been built from Figma designs:
 ### Image Assets
 All images stored in `img/` folder:
 - **Logos**: `logo-travel-guard-color.png`, `logo-travel-guard-white.png` (converted from SVG with CSS variables replaced)
-- **Hero images**: `hero-baggage.jpg`, `hero-medical.jpg`, `hero-trip-can.jpg`, `hero-12month.jpg`, `hero-18month.jpg`, `hero-2year.jpg`
-- **Icons**: `icon-phone.png`, `icon-quote.png`, `icon-review.png`, `icon-shield.png`, `icon-facebook.png`, `icon-instagram.png`, `icon-youtube.png`, `icon-tiktok.png`
-- **Content images**: `img-assistance.jpg`, `img-packing.jpg`, `img-picking-plan.png`
+- **Hero images**: `hero-baggage.jpg`, `hero-medical.jpg`, `hero-trip-can.jpg`, `hero-12month.jpg`, `hero-18month.jpg`, `hero-2year.jpg`, `hero-cruise.jpg`, `hero-cruise-day.png`, `hero-travel-tips.png`
+- **Icons**: `icon-phone.png`, `icon-phone-24.png`, `icon-quote.png`, `icon-quote-green.png`, `icon-review.png`, `icon-shield.png`, `icon-star.png`, `icon-send.png`, `icon-send-green.png`, `icon-education.png`, `icon-play.png`, `icon-facebook.png`, `icon-instagram.png`, `icon-youtube.png`, `icon-tiktok.png`
+- **Content images**: `img-assistance.jpg`, `img-packing.jpg`, `img-picking-plan.png`, `video-thumbnail.jpg`, `video-thumbnail-tips.png`
+
+### Color-Specific Icon Variants
+Some emails require icons in specific accent colors:
+- **Green (#a5d069)**: `icon-send-green.png`, `icon-quote-green.png` - used in travel-tips emails
+- **Pink (#edacc4)**: `icon-star.png` - used in holiday emails (e.g., cruise-day.html)
 
 ### Known Issues & Solutions
 1. **Figma SVG exports with CSS variables**: When exporting logos from Figma, they may contain `fill="var(--fill-0, #color)"`. Convert to PNG using:
@@ -142,15 +205,18 @@ All images stored in `img/` folder:
    sips -s format png -Z 476 logo.svg --out logo.png
    ```
 
-2. **Campaign tracking**: All CTAs use `cmpid` parameter format: `emc-tgdirect-us-en-fulfillment-{emailname}`
-
-3. **Mobile centering in HTML emails**: Using `text-align: center` on nested table elements is unreliable. Instead, add a class to the container table (e.g., `centeronmobile`) and apply:
+2. **Mobile centering in HTML emails**: Using `text-align: center` on nested table elements is unreliable. Instead, add a class to the container table (e.g., `centeronmobile`) and apply:
    ```css
    @media screen and (max-width: 600px) {
      table.centeronmobile { width: 75% !important; margin: 0 auto !important; }
    }
    ```
    This constrains the table width and uses `margin: auto` to center it horizontally.
+
+3. **Figma icon exports**: The Figma MCP tool exports icons as SVG files, but converting these to PNG using macOS tools (`qlmanage`, `sips`) often results in broken or poorly rendered images, especially for icons with light colors or transparency. **Workaround**: Have the user manually export icons directly from Figma as PNG files:
+   - In Figma, select the icon node
+   - In the right panel under "Export", add PNG export at 2x scale
+   - Download and save to the `img/` folder
 
 ### Follow-up Items
 - [ ] **six-month-bag.html**: Request hero background image from UX designer. The Figma design has a background image in the hero area that isn't surfacing as an exportable image asset.
@@ -211,9 +277,19 @@ All images stored in `img/` folder:
 - Seafoam/Teal: `#64c5b9`
 - Cyan accent: `#66cbe1`
 - Snowmelt border: `#9cc7e6`
-- Pink (gradient): `#db5989`
+- Pink (watermelon): `#db5989`
+- Pink light (watermelon50): `#edacc4`
+- Green (jungle): `#a5d069`
+- Glacier blue: `#e4edf8`
 - Red (highlight): `#af0827`
 - Body text: `#1c252e` or `#343741`
+
+### Campaign Tracking
+All CTAs use `cmpid` parameter with format: `emc-tgdirect-us-en-{category}-{emailname}`
+- Holiday emails: `emc-tgdirect-us-en-holiday-takeacruiseday`
+- Travel Tips emails: `emc-tgdirect-us-en-traveltips-feb`
+- BAU emails: `emc-tgdirect-us-en-bau-cruiseseason`
+- Fulfillment emails: `emc-tgdirect-us-en-fulfillment-{emailname}`
 
 ### Font Stack
 Primary: `'Noto Sans', 'Source Sans Pro', Arial, sans-serif`
