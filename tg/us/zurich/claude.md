@@ -218,6 +218,13 @@ Some emails require icons in specific accent colors:
    - In the right panel under "Export", add PNG export at 2x scale
    - Download and save to the `img/` folder
 
+4. **Right-aligning images in table cells**: When an image is narrower than its containing `<td>`, add `align="right"` to the td to push the image flush to the right edge. This is commonly needed for header hero images that should sit against the right side of the email.
+   ```html
+   <td width="320" valign="top" align="right" class="header-img">
+     <img src="../img/hero.png" alt="" width="289" style="display: block;">
+   </td>
+   ```
+
 ### Follow-up Items
 - [ ] **six-month-bag.html**: Request hero background image from UX designer. The Figma design has a background image in the hero area that isn't surfacing as an exportable image asset.
 - [x] **twelve-month.html**: Composed header image added (`email-hero_12month-followup.png`)
