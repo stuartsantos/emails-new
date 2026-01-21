@@ -189,7 +189,7 @@ All 6 customer journey emails have been built from Figma designs:
 ### Image Assets
 All images stored in `img/` folder:
 - **Logos**: `logo-travel-guard-color.png`, `logo-travel-guard-white.png` (converted from SVG with CSS variables replaced)
-- **Hero images**: `hero-baggage.jpg`, `hero-medical.jpg`, `hero-trip-can.jpg`, `hero-12month.jpg`, `hero-18month.jpg`, `hero-2year.jpg`, `hero-cruise.jpg`, `hero-cruise-day.png`, `hero-travel-tips.png`
+- **Hero images**: `hero-baggage.jpg`, `hero-medical.jpg`, `hero-trip-can.jpg`, `hero-12month.jpg`, `hero-18month.jpg`, `hero-2year.jpg`, `hero-cruise.jpg`, `hero-cruise-day.png`, `hero-travel-tips.png`, `email-hero_12month-followup.png`, `email-hero_18month-followup.png`, `email-hero_24month-followup.png`
 - **Icons**: `icon-phone.png`, `icon-phone-24.png`, `icon-quote.png`, `icon-quote-green.png`, `icon-review.png`, `icon-shield.png`, `icon-star.png`, `icon-send.png`, `icon-send-green.png`, `icon-education.png`, `icon-play.png`, `icon-facebook.png`, `icon-instagram.png`, `icon-youtube.png`, `icon-tiktok.png`
 - **Content images**: `img-assistance.jpg`, `img-packing.jpg`, `img-picking-plan.png`, `video-thumbnail.jpg`, `video-thumbnail-tips.png`
 
@@ -220,9 +220,9 @@ Some emails require icons in specific accent colors:
 
 ### Follow-up Items
 - [ ] **six-month-bag.html**: Request hero background image from UX designer. The Figma design has a background image in the hero area that isn't surfacing as an exportable image asset.
-- [ ] **twelve-month.html**: Request full header image from UX designer. The Figma design has a diagonal/angled edge where the purple section overlays the beach photo. For Outlook compatibility, this needs to be exported as a single composed image with the diagonal edge baked in (purple gradient + logo + text + angled photo as one image).
-- [ ] **eighteen-month.html**: Request full header image from UX designer. The Figma design has a curved edge where the navy section meets the hero photo. For Outlook compatibility, this needs to be exported as a single composed image with the curve baked in (navy + logo + text + curved photo as one image).
-- [ ] **two-year.html**: Request CTA box image from UX designer. The "Get My Quote" callout has a woman-on-plane image with a curved left edge (mask effect). For Outlook compatibility, this needs to be exported with the curved edge baked into the image.
+- [x] **twelve-month.html**: Composed header image added (`email-hero_12month-followup.png`)
+- [x] **eighteen-month.html**: Composed header image added (`email-hero_18month-followup.png`)
+- [x] **two-year.html**: Composed CTA box image added (`email-hero_24month-followup.png`)
 
 ### Recent Fixes (Jan 2026)
 
