@@ -198,6 +198,45 @@ Some emails require icons in specific accent colors:
 - **Green (#a5d069)**: `icon-send-green.png`, `icon-quote-green.png` - used in travel-tips emails
 - **Pink (#edacc4)**: `icon-star.png` - used in holiday emails (e.g., cruise-day.html)
 
+### Hosted Reusable Assets (travelguard.com CDN)
+These assets are hosted on the Travel Guard website and should be used across all emails where applicable. Use these URLs instead of local `../img/` paths for production emails.
+
+**Logo:**
+- White logo: `https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/logo-travel-guard-white.png`
+
+**Social Media Icons** (use in all emails):
+- Facebook: `https://www.travelguard.com/content/dam/travelguard/us/images/email/shared/icon-fb.png` (30×30)
+- Instagram: `https://www.travelguard.com/content/dam/travelguard/us/images/email/shared/icon-ig.png` (28×28)
+- YouTube: `https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/youtube_social_circle_red@2x.png` (28×28)
+- TikTok: `https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/tiktok@2x.png` (28×28)
+
+**Icons - Navy (#003d6e):**
+- Phone 24/7: `https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/icon-phone-24.png` (52×54)
+- Send/paper airplane: `https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/Send@2x.png` (20px)
+- Education: `https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/education@2x.png` (28px)
+- Play: `https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/Play@2x.png` (12px)
+- Review/chat: `https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/Outlined-03-Communication-Chat@2x.png` (19-21px)
+
+**Icons - Green (#a5d069)** (for travel-tips emails):
+- Send/paper airplane: `https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/icon-send-green.png` (14×14)
+- Quote: `https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/icon-quote-green.png` (48px)
+
+**Video Thumbnail:**
+- What is travel insurance: `https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/video-thumbnail-tips.png` (500px wide)
+
+**Emails using hosted URLs:**
+- `holiday/cruise-day.html` ✓
+- `travel-tips/travel-tips-02-26.html` ✓
+
+**Emails still using local `../img/` paths** (update to hosted URLs when ready for production):
+- `fulfillment/six-month-bag.html`
+- `fulfillment/six-month-med.html`
+- `fulfillment/six-month-trip-can.html`
+- `fulfillment/twelve-month.html`
+- `fulfillment/eighteen-month.html`
+- `fulfillment/two-year.html`
+- `seasonal-update/cruise-season-2026.html`
+
 ### Known Issues & Solutions
 1. **Figma SVG exports with CSS variables**: When exporting logos from Figma, they may contain `fill="var(--fill-0, #color)"`. Convert to PNG using:
    ```bash
