@@ -227,15 +227,22 @@ These assets are hosted on the Travel Guard website and should be used across al
 **Emails using hosted URLs:**
 - `holiday/cruise-day.html` ✓
 - `travel-tips/travel-tips-02-26.html` ✓
+- `fulfillment/six-month-bag.html` ✓
+- `fulfillment/six-month-med.html` ✓
+- `fulfillment/six-month-trip-can.html` ✓
+- `fulfillment/twelve-month.html` ✓
+- `fulfillment/eighteen-month.html` ✓
+- `fulfillment/two-year.html` ✓
+- `seasonal-update/cruise-season-2026.html` ✓
 
-**Emails still using local `../img/` paths** (update to hosted URLs when ready for production):
-- `fulfillment/six-month-bag.html`
-- `fulfillment/six-month-med.html`
-- `fulfillment/six-month-trip-can.html`
-- `fulfillment/twelve-month.html`
-- `fulfillment/eighteen-month.html`
-- `fulfillment/two-year.html`
-- `seasonal-update/cruise-season-2026.html`
+**Assets still using local paths** (no hosted equivalent available):
+- Hero images (email-specific)
+- `logo-travel-guard-color.png`
+- `icon-phone.png` (small phone icon)
+- `icon-quote.png` (navy quote icon)
+- `icon-shield.png`
+- `icon-ship-cyan.png`, `icon-ship-navy.png`
+- Content images (`img-assistance.jpg`, `img-packing.jpg`, `img-picking-plan.png`)
 
 ### Known Issues & Solutions
 1. **Figma SVG exports with CSS variables**: When exporting logos from Figma, they may contain `fill="var(--fill-0, #color)"`. Convert to PNG using:
