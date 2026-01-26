@@ -214,9 +214,10 @@ table {
                               <br>
                               <b style="color: #001871;">Questa polizza assicurativa copre solo i residenti in Italia.</b><br>
                               <br>
-                              Grazie per aver aggiunto il <b>{{policyDetail-planDescription}}</b> con la vostra prenotazione. Il Suo numero di Polizza è <b>{{policyDetail-policyNumber}}.</b><br>
+                              Grazie per aver scelto la polizza assicurativa Travel Guard®! <br>
+                              Il Suo numero di Polizza è <b>{{policyDetail-policyNumber}}.</b><br>
                               <br>
-                              <b><a style="color: #1352DE;" href="https://policy.qa.travelguard.com/lhgroup/it/it">Fare clic qui</a></b>, per visualizzare il <b>Certificato di Assicurazione (CDA)</b> ed il <b>Set Informativo</b>.<br>
+                              {{ViewPolicyURL}} per visualizzare e scaricare il <b style="color: #001871;">Certificato di Assicurazione</b> ed il {{PlaceHolderField1}}.<br>
                               Per accedere è necessario il Numero di Polizza e il Cognome.
                             </td>
                           </tr>
@@ -224,107 +225,86 @@ table {
 
                         <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left; margin-bottom: 16px;">
                           <tr>
-                            <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; padding-top: 16px; color: #003D6E; border-bottom: 1px solid #9CC7E6;">Per cosa sono coperto?</td>
+                            <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; padding-top: 16px; color: #003D6E; border-bottom: 1px solid #9CC7E6;">Che cosa è assicurato?</td>
                           </tr>
                         </table>
 
                         <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
                           <tr>
                             <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 25px;">
-                              Hai acquistato il <b>{{policyDetail-planDescription}}</b>. L'elenco delle garanzie incluse in copertura sono indicate nel certificato di assicurazione e nelle condizioni generali di polizza.
-                            </td>
-                          </tr>
-                        </table>
-
-                        <table class="section" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; background: #FBE7EB; width: 100%; margin-bottom: 20px; border: 1px solid #E81944;">
-                          <tbody><tr>
-                            <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 20px;">
-
-                              <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left;">
-                                <tr>
-                                  <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 0 0 10px 0; font-size: 16px; font-weight: bold; color: #E81944;">PROMEMORIA IMPORTANTI DI IDONEITÀ:</td>
-                                </tr>
-                              </table>
-
-                              <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
-                                <tr>
-                                  <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
-                                    <b>Promemoria generali per tutti i prodotti:</b>
-                                    <ul style="margin: 10px 0; padding-left: 20px;">
-                                      <li>La polizza fornisce copertura solo a Contraenti/Assicurati residenti in {{policyDetail-address-country}}.</li>
-                                      <li>Si prega di leggere attentamente il set informativo per ogni ulteriore dettaglio.</li>
-                                    </ul>
-                                    <br>
-                                    <b style="color: #003D6E;">Le informazioni specifiche del prodotto acquistato sono fornite di seguito (si prega di notare il nome del prodotto all'inizio di questa e-mail):</b>
-                                    <br><br>
-                                    <b style="color: #003D6E;">Assicurazione di viaggio</b>
-                                    <ul style="margin: 10px 0; padding-left: 20px;">
-                                      <li>Tutte le persone assicurate devono avere un'età inferiore a 76 anni alla data di partenza, per il <b>Piano di Cancellazione, Assicurazione di viaggio base, Assicurazione di viaggio Plus</b> e un'età inferiore a 66 anni alla data di partenza per il <b>Piano di Protezione e Assicurazione di viaggio Premium</b>.</li>
-                                      <li><b>Piano di Protezione e Assicurazione di viaggio Premium</b> forniscono una copertura fino a <b>€ 175.000</b> in totale sia per <b>B1-Spese mediche di emergenza che B2 - Evacuazione medica di emergenza e rimpatrio</b> se a una persona assicurata viene diagnosticato COVID-19 durante il viaggio.</li>
-                                    </ul>
-                                    <br>
-                                    <b style="color: #003D6E;">Protezione 'Plus' - noleggio auto</b>
-                                    <ul style="margin: 10px 0; padding-left: 20px;">
-                                      <li>Tutte le persone assicurate devono avere almeno 18 anni e possedere una patente di guida valida che autorizzi a guidare nel paese in questione. Ciò include eventuali conducenti aggiuntivi aggiunti al contratto di noleggio.</li>
-                                      <li>Questa polizza non sostituisce la tua polizza di assicurazione auto, né è una polizza di danni primari che copre il veicolo a noleggio stesso. Questa polizza copre solo l'importo di cui sei responsabile in base ai termini del contratto di noleggio auto fino all'importo indicato nel <b>CDA</b> e non l'intero valore del veicolo a noleggio stesso.</li>
-                                      <li>Abbiamo un elenco di <b><a style="color: #003D6E;" href="https://policy.uat.travelguard.com/mypolicy/it/key-tips">Suggerimenti chiave</a></b> quando ritiri il tuo veicolo a noleggio; si prega di esaminarlo prima di ritirare il veicolo a noleggio.</li>
-                                    </ul>
-                                  </td>
-                                </tr>
-                              </table>
-
-                            </td>
-                          </tr>
-                        </tbody></table>
-
-                        <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
-                          <tr>
-                            <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 25px;">
-                              Si consiglia di leggere il i documenti di cui sopra per assicurarsi che soddisfi le proprie specifiche esigenze prima del viaggio. Questa polizza copre situazioni ed eventi specifici che possono accadere durante il viaggio. La polizza prevede delle esclusioni e/o limitazioni di cui la preghiamo prendere nota, leggendo attentamente il Set Informativo.
-                            </td>
-                          </tr>
-                        </table>
-
-                        <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left; margin-bottom: 16px;">
-                          <tr>
-                            <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; padding-top: 16px; color: #003D6E; border-bottom: 1px solid #9CC7E6;">Cosa succede se ho una domanda sulla polizza?</td>
-                          </tr>
-                        </table>
-
-                        <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
-                          <tr>
-                            <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 25px;">
-                              Se ha domande, la preghiamo di chiamarci al seguente numero <b>+39 02 3605 8479</b> dalle <b>Aperto dal lunedì al venerdì dalle 9.00 alle 17.00</b> o di inviarci una e-mail al seguente indirizzo <b><a style="color: #1352DE;" href="mailto:IT.expcustsvc@aig.com">IT.expcustsvc@aig.com</a></b> e citare il numero di polizza.<br>
+                              Ha acquistato l’assicurazione {{policyDetail-planDescription}}. L’elenco delle garanzie incluse in copertura sono indicate nel certificato di assicurazione e nelle condizioni generali di polizza. <br>
                               <br>
-                              Ha il diritto di ricevere la documentazione della polizza per posta, senza costi aggiuntivi; chiamandoci al numero di cui sopra o trasmettendoci una mail all'indirizzo sopra citato.
+                              Questa polizza copre situazioni ed eventi specifici che possono accadere durante il viaggio. La polizza prevede delle esclusioni e/o limitazioni di cui la preghiamo di prendere nota, leggendo attentamente il Set Informativo.
                             </td>
                           </tr>
                         </table>
 
                         <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left; margin-bottom: 16px;">
                           <tr>
-                            <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; padding-top: 16px; color: #003D6E; border-bottom: 1px solid #9CC7E6;">Cosa succede se ho un emergenza all'Estero?</td>
+                            <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; padding-top: 16px; color: #003D6E; border-bottom: 1px solid #9CC7E6;">Requisiti di idoneità della polizza:</td>
                           </tr>
                         </table>
 
                         <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
                           <tr>
                             <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 25px;">
-                              Nel caso di emergenza deve chiamare Travel Guard in qualsiasi momento al <b>+39 02 36 00 0314</b>. I nostri centri di assistenza sono aperti 24/7.
+                              <ul>
+                                <li>La polizza fornisce copertura solo a Contraenti/Assicurati residenti in {{policyDetail-address-country}}.</li>
+                                <li>Si prega di leggere attentamente il set informativo per ogni ulteriore dettaglio.</li>
+                              </ul>
                             </td>
                           </tr>
                         </table>
 
                         <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left; margin-bottom: 16px;">
                           <tr>
-                            <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; padding-top: 16px; color: #003D6E; border-bottom: 1px solid #9CC7E6;">Come denunciare un sinistro</td>
+                            <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; padding-top: 16px; color: #003D6E; border-bottom: 1px solid #9CC7E6;">Informazioni importanti</td>
+                          </tr>
+                        </table>
+
+                        <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left; margin-bottom: 16px;">
+                          <tr>
+                            <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; padding-top: 16px; color: #003D6E;">Chi devo contattare se ho una domanda sulla mia polizza?</td>
                           </tr>
                         </table>
 
                         <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
                           <tr>
                             <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 25px;">
-                              Inoltra il tuo sinistro a <b><a style="color: #1352DE;" href="https://claims.travelguard.com/myclaim/it">https://claims.travelguard.com/myclaim/it</a></b>
+                              In caso di domande e /o informazioni sulla sua polizza, la preghiamo di contattare il numero {{CustomerServicesContactNumber}}, {{CustomerServiceOperatingHours}} o di inviare una e-mail al seguente indirizzo {{CustomerServicesEmailAddress}} indicando il numero di polizza {{PolicyNumber}}. <br>
+                              <br>
+                              Ha il diritto di ricevere copia in formato cartaceo della documentazione di polizza a mezzo posta, senza costi aggiuntivi, chiamando il numero di cui sopra o inoltrando una e-mail all’indirizzo sopra citato.
+                            </td>
+                          </tr>
+                        </table>
+
+                        <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left; margin-bottom: 16px;">
+                          <tr>
+                            <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; padding-top: 16px; color: #003D6E;">Chi devo contattare in caso di emergenza medica?</td>
+                          </tr>
+                        </table>
+
+                        <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
+                          <tr>
+                            <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 25px;">
+                              In caso di emergenza medica può chiamare Travel Guard in qualsiasi momento al numero {{AssistanceServicesContactNumber}} o inviare una e-mail a {{AssistanceServicesEmailAddress}} <br>
+                              I nostri centri di assistenza sono operativi 24/24 H e 7 giorni su 7.
+                            </td>
+                          </tr>
+                        </table>
+
+                        <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left; margin-bottom: 16px;">
+                          <tr>
+                            <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; padding-top: 16px; color: #003D6E;">Come denunciare un sinistro?</td>
+                          </tr>
+                        </table>
+
+                        <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
+                          <tr>
+                            <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 25px;">
+                              Può contattare il nostro ufficio sinistri telefonicamente al numero {{ClaimsContactNumber}}, {{ClaimsOperatingHours}} o inviare una e-mail a {{ClaimsEmailAddress}}<br>
+                              <br>
+                              {{AltViewPolicyLinks}}
                             </td>
                           </tr>
                         </table>
