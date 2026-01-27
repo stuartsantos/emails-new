@@ -42,6 +42,7 @@ Note: All HTML files reference images using `../img/` relative paths.
 |-----------|--------------|----------|
 | seasonal-update/cruise-season-2026.html | [Seasonal Update](https://www.figma.com/design/DAZ409npFBAoynGcoJ7GpY/BAU-Emails?node-id=2002-1917&m=dev) | BAU |
 | holiday/cruise-day.html | [Take a Cruise Day](https://www.figma.com/design/DAZ409npFBAoynGcoJ7GpY/BAU-Emails?node-id=2001-318&focus-id=2002-2037&m=dev) | Holiday |
+| holiday/zurich-classic.html | [Zurich Classic Sweepstakes](https://www.figma.com/design/q9c6YIC6aFzxIqr6ailozB/Zurich-Classic?node-id=1-1291&m=dev) | Holiday |
 | travel-tips/travel-tips-02-26.html | [Travel Safety Tips](https://www.figma.com/design/DAZ409npFBAoynGcoJ7GpY/BAU-Emails?node-id=2001-318&focus-id=2002-1709&m=dev) | Travel Tips |
 | fulfillment/six-month-bag.html | [6-mo Follow up Baggage](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=782-2922&m=dev) | Customer Journey |
 | fulfillment/six-month-trip-can.html | [6-mo Follow up Trip Can](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=781-91&m=dev) | Customer Journey |
@@ -172,6 +173,7 @@ Key points:
 | Email | Status | Notes |
 |-------|--------|-------|
 | holiday/cruise-day.html | Complete | "Take a Cruise Day" holiday email, pink accent (#db5989/#edacc4), assistance services section, social hashtag #TakeACruiseDaywithTG |
+| holiday/zurich-classic.html | Complete | "Zurich Classic Sweepstakes" golf-themed email, cyan accent (#9cc7e6), three prize tiers (Grand Prize, First Place, Second Place), golf trip promo section with circular image, sweepstakes dates Feb 9 - Mar 22, 2026 |
 | travel-tips/travel-tips-02-26.html | Complete | "Money Saving Travel Tips", green accent (#a5d069), numbered tips list, video library section, testimonial. Uses green icon variants: `icon-send-green.png`, `icon-quote-green.png` |
 
 ### Customer Journey Emails (Jan 2026)
@@ -189,9 +191,9 @@ All 6 customer journey emails have been built from Figma designs:
 ### Image Assets
 All images stored in `img/` folder:
 - **Logos**: `logo-travel-guard-color.png`, `logo-travel-guard-white.png` (converted from SVG with CSS variables replaced)
-- **Hero images**: `hero-baggage.jpg`, `hero-medical.jpg`, `hero-trip-can.jpg`, `hero-12month.jpg`, `hero-18month.jpg`, `hero-2year.jpg`, `hero-cruise.jpg`, `hero-cruise-day.png`, `hero-travel-tips.png`, `email-hero_12month-followup.png`, `email-hero_18month-followup.png`, `email-hero_24month-followup.png`
+- **Hero images**: `hero-baggage.jpg`, `hero-medical.jpg`, `hero-trip-can.jpg`, `hero-12month.jpg`, `hero-18month.jpg`, `hero-2year.jpg`, `hero-cruise.jpg`, `hero-cruise-day.png`, `hero-travel-tips.png`, `hero-zurich-classic.jpg`, `email-hero_12month-followup.png`, `email-hero_18month-followup.png`, `email-hero_24month-followup.png`
 - **Icons**: `icon-phone.png`, `icon-phone-24.png`, `icon-quote.png`, `icon-quote-green.png`, `icon-review.png`, `icon-shield.png`, `icon-star.png`, `icon-send.png`, `icon-send-green.png`, `icon-education.png`, `icon-play.png`, `icon-facebook.png`, `icon-instagram.png`, `icon-youtube.png`, `icon-tiktok.png`
-- **Content images**: `img-assistance.jpg`, `img-packing.jpg`, `img-picking-plan.png`, `video-thumbnail.jpg`, `video-thumbnail-tips.png`
+- **Content images**: `img-assistance.jpg`, `img-packing.jpg`, `img-picking-plan.png`, `img-golf-trip.jpg`, `video-thumbnail.jpg`, `video-thumbnail-tips.png`
 
 ### Color-Specific Icon Variants
 Some emails require icons in specific accent colors:
