@@ -4,40 +4,33 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This directory contains HTML email templates for Zurich Travel Guard "Rest of World" (ROW) travel insurance markets. Templates are organized by country and language, primarily handling policy confirmation emails.
+This directory contains HTML email templates for **Expedia Travel Insurance** across multiple international markets. Templates are policy confirmation emails organized by country and language.
 
 ## Directory Structure
 
 ```
-row/
-├── {country}/
-│   └── {language}/
-│       └── policy-confirmation.html
-├── README.md          # Handlebars variable mapping reference
+expedia/
+├── us/en/              # United States (English)
+├── ca/en/, ca/fr/      # Canada (English, French)
+├── mx/es/              # Mexico (Spanish)
+├── nz/en/              # New Zealand
+├── it/en/              # Italy
+├── hk/en/              # Hong Kong
+└── sg/en/              # Singapore
 ```
-
-**Markets:** be (Belgium), ca (Canada), ch (Switzerland), cz (Czech Republic), de (Germany), fr (France), it (Italy), nz (New Zealand), pt (Portugal), uk (United Kingdom)
-
-**Multi-language countries:** Belgium (en/fr/nl), Canada (en/fr), Switzerland (de/en/fr)
 
 ## Handlebars Templating
 
-Templates use Handlebars-style variables for dynamic content. See README.md for the mapping from legacy format to new format.
+Templates use Handlebars-style variables for dynamic content:
 
-**Common variables:**
 ```
 {{policyDetail-policyNumber}}              # Policy number
 {{policyDetail-primaryInsured-firstName}}  # Customer first name
 {{policyDetail-primaryInsured-lastName}}   # Customer last name
-{{policyDetail-address-country}}           # Residency country
 {{policyDetail-productName}}               # Product name
-{{CustomerServicesContactNumber}}          # Support phone
-{{CustomerServicesEmailAddress}}           # Support email
-{{ClaimsContactNumber}}                    # Claims phone
-{{ClaimsEmailAddress}}                     # Claims email
-{{AssistanceServicesContactNumber}}        # Emergency assistance phone
-{{AssistanceServicesEmailAddress}}         # Emergency assistance email
 {{ViewPolicyURL}}                          # Policy portal link
+{{CustomerServicesContactNumber}}          # Support phone
+{{ClaimsEmailAddress}}                     # Claims email
 ```
 
 ## HTML Email Template Structure
@@ -108,7 +101,6 @@ Templates include:
 - `.col-1`, `.col-2`, `.col-3` - Column layouts
 - `.mobile-none` - Hide on mobile
 - `.mobile-ta-c` - Center text on mobile
-- `.icon-left`, `.icon-right` - Icon placement patterns
 - `.body-bg` - Body background (dark mode aware)
 - `.content-bg` - Content background (dark mode aware)
 
@@ -152,17 +144,10 @@ font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif;
 
 ## Logo Usage
 
+- **Zurich logo:** `https://www.travelguard.com/content/dam/tg-documents/jetstar/au/en/images/emails/zurich-logo.png` (200px width)
 - **Travel Guard header:** `https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/tg_logo_header.png` (600px width)
 
-## Component Library Reference
-
-Templates can use components from `/responsive-modular-email-templates/build/html/`. The library provides:
-
-- **Wrappers:** default, full-width, outlook
-- **Columns:** 1col, 2col, 3col layouts
-- **Components:** button, heading, text, image, lists (ul, ul-checked, ol), quote, social, icon-left/right/top, video
-
-See `/responsive-modular-email-templates/claude.md` for full architecture and build instructions.
+For logo tables, use empty class `class=""` to prevent mobile scaling from `.header img` rule.
 
 ## Development Workflow
 
@@ -176,15 +161,22 @@ When updating templates:
 
 **Email client targets:** iPhone Mail, Android Mail, Gmail (web/mobile), Apple Mail, Outlook 2016
 
-## Build Process (Component Library)
+## Technical Constraints
 
-The responsive-modular-email-templates project uses Grunt for compilation:
+**DO NOT modify:**
+- HTML table structure or nesting
+- CSS styles (inline or in `<style>` blocks)
+- Handlebars templating syntax `{{...}}`
+- Image dimensions or spacing
 
-```bash
-cd /responsive-modular-email-templates
-npm install
-grunt          # Development server with live reload
-grunt inline   # Build only (SCSS compile + CSS inline)
-```
+**ONLY update:**
+- Text content within HTML tags
+- Email addresses and phone numbers
+- URLs/links
+- Legal disclaimers and footer content
 
-Output goes to `build/html/` with all CSS inlined.
+## Related Documentation
+
+- `/row/CLAUDE.md` - Zurich Travel Guard "Rest of World" templates
+- `/tg/us/zurich/claude.md` - Travel Guard US market templates (detailed Figma workflow)
+- `/qantas/claude.md` - Qantas Travel Insurance templates
