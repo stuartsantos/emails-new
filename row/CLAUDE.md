@@ -152,7 +152,7 @@ font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif;
 
 ## Logo Usage
 
-- **Travel Guard header:** `https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/tg_logo_header.png` (600px width)
+- **Travel Guard + Zurich logo:** `https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/CM_Travel_Guard_v_RGB.png` (200px width, max-width: 200px)
 
 ## Component Library Reference
 
