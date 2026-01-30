@@ -18,7 +18,7 @@ Old | New
 *LHGROUP*
 AT
 BE
-CZ
+CH
 DE
 FR
 IT
@@ -67,3 +67,14 @@ SZ
 UE
 UK
 ZA
+
+**Qatar**
+
+**Languages**
+EN: https://documents.travelguard.com/content/templates/row/gb/en/policy-confirmation.html
+IT: https://documents.travelguard.com/content/templates/row/it/it/policy-confirmation.html
+FR: https://documents.travelguard.com/content/templates/row/fr/fr/policy-confirmation.html
+PT: https://documents.travelguard.com/content/templates/row/pt/pt/policy-confirmation.html
+DE: https://documents.travelguard.com/content/templates/row/de/de/policy-confirmation.html
+NL: https://documents.travelguard.com/content/templates/row/nl/nl/policy-confirmation.html
+CS: https://documents.travelguard.com/content/templates/row/cz/cs/policy-confirmation.html
