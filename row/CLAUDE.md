@@ -16,7 +16,7 @@ row/
 ├── README.md          # Handlebars variable mapping reference
 ```
 
-**Markets:** be (Belgium), ca (Canada), ch (Switzerland), cz (Czech Republic), de (Germany), fr (France), it (Italy), nz (New Zealand), pt (Portugal), uk (United Kingdom)
+**Markets:** be (Belgium), ca (Canada), ch (Switzerland), cz (Czech Republic), de (Germany), es (Spain), fr (France), it (Italy), nz (New Zealand), pt (Portugal), uk (United Kingdom)
 
 **Multi-language countries:** Belgium (en/fr/nl), Canada (en/fr), Switzerland (de/en/fr)
 
@@ -190,6 +190,7 @@ All ROW policy confirmation templates have been updated to the modern responsive
 | ch (Switzerland) | de, en, fr | ch/fr includes cancellation policy section |
 | cz (Czech Republic) | cz, en | cz/cz had modern format, only needed rebrand |
 | de (Germany) | de, en | |
+| es (Spain) | en, es | es/es includes Spain residency disclaimer |
 | fr (France) | en, fr | fr/fr includes France residency disclaimer |
 | nl (Netherlands) | en, nl | |
 | pt (Portugal) | en, pt | Fixed typo "fposso" → "posso" in pt/pt |
