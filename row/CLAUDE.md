@@ -154,6 +154,57 @@ font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif;
 
 - **Travel Guard + Zurich logo:** `https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/CM_Travel_Guard_v_RGB.png` (200px width, max-width: 200px)
 
+## Rebranding Rules (AIG Travel → Travel Guard)
+
+When converting legacy templates to the modern format, apply these branding changes:
+
+1. **Logo** → Replace any AIG logo with the new Travel Guard + Zurich logo (see above)
+
+2. **Opening thank you line** → Remove "from AIG Travel" entirely
+   - Before: `Thank you for choosing a Travel Guard® Insurance Policy from AIG Travel!`
+   - After: `Thank you for choosing a Travel Guard® Insurance Policy!`
+
+3. **Emergency contact section** → Change "AIG Travel" to "Travel Guard"
+   - Before: `Call AIG Travel any time on {AssistanceServicesContactNumber}`
+   - After: `Call Travel Guard any time on {{AssistanceServicesContactNumber}}`
+
+4. **Signature/sign-off** → Change "AIG Travel" to "Travel Guard"
+   - Before: `AIG Travel`
+   - After: `Travel Guard`
+
+**Additional modernization steps:**
+- Convert placeholder format: `{Variable}` → `{{policyDetail-variable}}`
+- Remove `&zwnj;&nbsp;` entities from preheaders
+- Update HTML structure to modern responsive template with dark mode support
+
+## Template Modernization Status
+
+All ROW policy confirmation templates have been updated to the modern responsive format with Travel Guard branding.
+
+**Modernized templates (January 2026):**
+
+| Country | Languages | Notes |
+|---------|-----------|-------|
+| at (Austria) | de, en | |
+| be (Belgium) | en, fr, nl | be/nl was created from scratch (file was empty) |
+| ch (Switzerland) | de, en, fr | ch/fr includes cancellation policy section |
+| cz (Czech Republic) | cz, en | cz/cz had modern format, only needed rebrand |
+| de (Germany) | de, en | |
+| fr (France) | en, fr | fr/fr includes France residency disclaimer |
+| nl (Netherlands) | en, nl | |
+| pt (Portugal) | en, pt | Fixed typo "fposso" → "posso" in pt/pt |
+
+**Already modern (not modified in this update):**
+- ca (Canada): en, fr
+- it (Italy): en, it
+- nz (New Zealand): en
+- uk (United Kingdom): en
+
+**Content variations by language:**
+- **Belgian French (be/fr)** uses different terminology than France French (fr/fr): "Attestation d'Assurance" vs "Certificat d'assurance", "Termes de Votre Police" vs "Conditions Générales"
+- **Swiss French (ch/fr)** includes additional "policy cancellation" section not in other templates
+- **Czech (cz/cz)** eligibility section focuses on purchase date requirements rather than residency
+
 ## Component Library Reference
 
 Templates can use components from `/responsive-modular-email-templates/build/html/`. The library provides:
