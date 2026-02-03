@@ -18,7 +18,13 @@ Create responsive HTML emails for Zurich Travel Insurance customer journey campa
 
 ## Dark Mode Requirements
 - Ensure text legibility when dark mode is enabled on mobile
-- Use dark mode CSS classes: `.body-bg`, `.content-bg`, `.dark-text`, `.dark-text-secondary`
+- **Outer body area** (dark background in dark mode):
+  - Use `.body-bg` on the body and outer container table
+  - Use `.dark-text` on preheader text row (above main content) so text becomes white in dark mode
+  - Use `.dark-link` on preheader links so they become white in dark mode (blue links lack contrast on dark background)
+- **White content areas** (should stay white in dark mode):
+  - **Do NOT use** `.content-bg` on white background tables - this causes them to turn dark gray (#2d2d2d)
+  - **Do NOT use** `.dark-text` on text inside white content areas - this would make text white on white
 - Framework includes support for:
   - `@media (prefers-color-scheme: dark)`
   - Gmail dark mode (`[data-ogsc]`)
@@ -272,6 +278,8 @@ These assets are hosted on the Travel Guard website and should be used across al
      <img src="../img/hero.png" alt="" width="289" style="display: block;">
    </td>
    ```
+
+5. **Dark mode breaks white content areas (Feb 2026)**: The dark mode classes `.content-bg` and `.dark-text` were causing white content areas to turn dark gray (#2d2d2d) in dark mode, making text illegible. **Solution**: Remove `class="content-bg"` from all white background tables and `class="dark-text"` / `class="dark-text-secondary"` from text elements within white content areas. Only use `.body-bg` on the outer email container. This fix was applied to all 12 templates in the zurich folder.
 
 ### Follow-up Items
 - [ ] **six-month-bag.html**: Request hero background image from UX designer. The Figma design has a background image in the hero area that isn't surfacing as an exportable image asset.
