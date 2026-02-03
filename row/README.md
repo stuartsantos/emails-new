@@ -69,6 +69,22 @@ UK
 ZA
 
 **Qatar**
+AT
+BE
+CZ
+DE
+ES
+FR
+IT
+KT
+LB
+NL
+NO
+OM
+QT
+SE
+UE
+UK
 
 **Languages**
 EN: https://documents.travelguard.com/content/templates/row/gb/en/policy-confirmation.html
