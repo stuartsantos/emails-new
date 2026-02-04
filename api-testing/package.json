@@ -1,0 +1,6 @@
+{
+  "name": "api-testing",
+  "scripts": {
+    "watch": "node script/watch-response.js"
+  }
+}
