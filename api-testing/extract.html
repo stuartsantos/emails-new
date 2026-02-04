@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Email Extractor</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; max-width: 800px; margin: auto; }
+    textarea { width: 100%; height: 200px; font-family: monospace; font-size: 12px; }
+    button { padding: 10px 20px; margin: 10px 0; cursor: pointer; }
+    #output { margin-top: 20px; padding: 10px; background: #f0f0f0; display: none; }
+  </style>
+</head>
+<body>
+  <h1>Email HTML Extractor</h1>
+  <p>Paste the full JSON response below:</p>
+  <textarea id="jsonInput" placeholder='{"to":[],"body":"<!DOCTYPE html>..."}'></textarea>
+  <br>
+  <button onclick="extract()">Extract & Preview</button>
+  <button onclick="copyHtml()">Copy HTML</button>
+  <div id="output">
+    <strong>Extracted HTML:</strong>
+    <pre id="preview" style="max-height: 200px; overflow: auto;"></pre>
+  </div>
+
+  <script>
+    let extractedHtml = '';
+
+    function extract() {
+      try {
+        const json = JSON.parse(document.getElementById('jsonInput').value);
+        extractedHtml = json.body;
+        document.getElementById('preview').textContent = extractedHtml.substring(0, 500) + '...';
+        document.getElementById('output').style.display = 'block';
+        // Open in new tab
+        const win = window.open('', '_blank');
+        win.document.write(extractedHtml);
+        win.document.close();
+      } catch (e) {
+        alert('Error parsing JSON: ' + e.message);
+      }
+    }
+
+    function copyHtml() {
+      if (extractedHtml) {
+        navigator.clipboard.writeText(extractedHtml);
+        alert('HTML copied to clipboard!');
+      } else {
+        alert('Extract first!');
+      }
+    }
+  </script>
+</body>
+</html>
