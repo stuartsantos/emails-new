@@ -56,6 +56,7 @@ Note: All HTML files reference images using `../img/` relative paths.
 | fulfillment/twelve-month.html | [12-mo Follow up](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=610-853&m=dev) | Customer Journey |
 | fulfillment/eighteen-month.html | [18-mo Follow up](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=610-3731&m=dev) | Customer Journey |
 | fulfillment/two-year.html | [2-yr Follow up](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=610-3894&m=dev) | Customer Journey |
+| fulfillment/save-quote-followup.html | [Save Quote](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=4-179&m=dev) | Customer Journey |
 
 ## Template Framework Reference
 Use components from: `/responsive-modular-email-templates/build/html/`
@@ -283,6 +284,7 @@ These assets are hosted on the Travel Guard website and should be used across al
 
 ### Follow-up Items
 - [ ] **six-month-bag.html**: Request hero background image from UX designer. The Figma design has a background image in the hero area that isn't surfacing as an exportable image asset.
+- [ ] **save-quote-followup.html**: Need hero beach image (`hero-save-quote.jpg`) and person icon (`icon-person.png`) - export from Figma or request from designer
 - [x] **twelve-month.html**: Composed header image added (`email-hero_12month-followup.png`)
 - [x] **eighteen-month.html**: Composed header image added (`email-hero_18month-followup.png`)
 - [x] **two-year.html**: Composed CTA box image added (`email-hero_24month-followup.png`)
