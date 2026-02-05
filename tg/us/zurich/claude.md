@@ -284,7 +284,7 @@ These assets are hosted on the Travel Guard website and should be used across al
 
 ### Follow-up Items
 - [ ] **six-month-bag.html**: Request hero background image from UX designer. The Figma design has a background image in the hero area that isn't surfacing as an exportable image asset.
-- [ ] **save-quote-followup.html**: Need hero beach image (`hero-save-quote.jpg`) and person icon (`icon-person.png`) - export from Figma or request from designer
+- [x] **save-quote-followup.html**: Hero beach image (`hero-save-quote.jpg`) and person icon (`icon-person.png`) exported from Figma
 - [x] **twelve-month.html**: Composed header image added (`email-hero_12month-followup.png`)
 - [x] **eighteen-month.html**: Composed header image added (`email-hero_18month-followup.png`)
 - [x] **two-year.html**: Composed CTA box image added (`email-hero_24month-followup.png`)
