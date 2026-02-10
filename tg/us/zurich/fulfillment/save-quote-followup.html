@@ -59,9 +59,9 @@
       .mobile-hide { display: none !important; }
       .mobile-stack { display: block !important; width: 100% !important; }
       .mobile-img { width: 100% !important; height: auto !important; }
-      .hero-cell { display: block !important; width: 100% !important; }
-      .hero-img-cell { height: 180px !important; background-size: cover !important; }
-      .hero-text-cell { padding: 20px !important; }
+      .hero-table { width: 100% !important; }
+      .hero-img-cell { display: none !important; width: 0 !important; max-height: 0 !important; overflow: hidden !important; mso-hide: all !important; font-size: 0 !important; }
+      .hero-text-cell { display: block !important; width: 100% !important; padding: 25px 20px !important; text-align: center !important; box-sizing: border-box !important; }
       .quote-label { width: 120px !important; }
     }
   </style>
@@ -94,21 +94,12 @@
               </table>
 
               <!-- Hero Section - Beach Image + Navy Text -->
-              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" class="hero-table" style="background-color: #003d6e;">
                 <tr>
-                  <td valign="top" width="280" style="background-image: url('../img/hero-save-quote.jpg'); background-size: cover; background-position: center;" class="hero-cell hero-img-cell">
-                    <!--[if mso]>
-                    <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:280px;height:140px;">
-                      <v:fill type="frame" src="../img/hero-save-quote.jpg"/>
-                      <v:textbox inset="0,0,0,0">
-                    <![endif]-->
-                    <div style="height: 140px;"></div>
-                    <!--[if mso]>
-                      </v:textbox>
-                    </v:rect>
-                    <![endif]-->
+                  <td width="280" valign="middle" class="hero-img-cell">
+                    <img src="../img/saved-quote-followup-hero.jpg" alt="" width="280" style="display: block; max-width: 280px; height: auto;">
                   </td>
-                  <td valign="middle" width="320" style="background-color: #003d6e; padding: 25px 30px;" class="hero-cell hero-text-cell">
+                  <td valign="middle" width="320" style="background-color: #003d6e; padding: 25px 30px;" class="hero-text-cell">
                     <h1 style="margin: 0 0 8px 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 20px; font-weight: 700; line-height: 26px; color: #ffffff;">
                       Don't leave for your next trip without Travel Guard!
                     </h1>
@@ -127,12 +118,8 @@
                     <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #f1f6fb;">
                       <!-- Progress Arrow -->
                       <tr>
-                        <td style="padding: 0;">
-                          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
-                            <tr>
-                              <td style="background-color: #64c5b9; height: 8px;"></td>
-                            </tr>
-                          </table>
+                        <td style="padding: 0; font-size: 0; line-height: 0;">
+                          <img src="../img/plane-border.png" alt="" width="540" style="display: block; width: 100%; height: auto;">
                         </td>
                       </tr>
                       <!-- Quote Content -->

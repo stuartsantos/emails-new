@@ -198,8 +198,9 @@ All 6 customer journey emails have been built from Figma designs:
 ### Image Assets
 All images stored in `img/` folder:
 - **Logos**: `logo-travel-guard-color.png`, `logo-travel-guard-white.png` (converted from SVG with CSS variables replaced)
-- **Hero images**: `hero-baggage.jpg`, `hero-medical.jpg`, `hero-trip-can.jpg`, `hero-12month.jpg`, `hero-18month.jpg`, `hero-2year.jpg`, `hero-cruise.jpg`, `hero-cruise-day.png`, `hero-travel-tips.png`, `hero-zurich-classic.jpg`, `email-hero_12month-followup.png`, `email-hero_18month-followup.png`, `email-hero_24month-followup.png`
-- **Icons**: `icon-phone.png`, `icon-phone-24.png`, `icon-quote.png`, `icon-quote-green.png`, `icon-review.png`, `icon-shield.png`, `icon-star.png`, `icon-send.png`, `icon-send-green.png`, `icon-education.png`, `icon-play.png`, `icon-facebook.png`, `icon-instagram.png`, `icon-youtube.png`, `icon-tiktok.png`
+- **Hero images**: `hero-baggage.jpg`, `hero-medical.jpg`, `hero-trip-can.jpg`, `hero-12month.jpg`, `hero-18month.jpg`, `hero-2year.jpg`, `hero-cruise.jpg`, `hero-cruise-day.png`, `hero-travel-tips.png`, `hero-zurich-classic.jpg`, `email-hero_12month-followup.png`, `email-hero_18month-followup.png`, `email-hero_24month-followup.png`, `saved-quote-followup-hero.jpg`
+- **Icons**: `icon-phone.png`, `icon-phone-24.png`, `icon-quote.png`, `icon-quote-green.png`, `icon-review.png`, `icon-shield.png`, `icon-star.png`, `icon-send.png`, `icon-send-green.png`, `icon-education.png`, `icon-play.png`, `icon-facebook.png`, `icon-instagram.png`, `icon-youtube.png`, `icon-tiktok.png`, `icon-person.png`
+- **Decorative**: `plane-border.png` (teal arrow progress bar for save-quote-followup)
 - **Content images**: `img-assistance.jpg`, `img-packing.jpg`, `img-picking-plan.png`, `img-golf-trip.jpg`, `video-thumbnail.jpg`, `video-thumbnail-tips.png`
 
 ### Color-Specific Icon Variants
@@ -280,14 +281,25 @@ These assets are hosted on the Travel Guard website and should be used across al
    </td>
    ```
 
-5. **Dark mode breaks white content areas (Feb 2026)**: The dark mode classes `.content-bg` and `.dark-text` were causing white content areas to turn dark gray (#2d2d2d) in dark mode, making text illegible. **Solution**: Remove `class="content-bg"` from all white background tables and `class="dark-text"` / `class="dark-text-secondary"` from text elements within white content areas. Only use `.body-bg` on the outer email container. This fix was applied to all 12 templates in the zurich folder.
+6. **Mobile overflow on `display: block` table cells with padding**: When a `<td>` is converted to `display: block; width: 100%` on mobile, any padding is added ON TOP of the 100% width (default `content-box` model), causing horizontal overflow. **Solution**: Always add `box-sizing: border-box !important` when using `display: block !important; width: 100% !important` on table cells in responsive CSS.
+
+7. **Dark mode breaks white content areas (Feb 2026)**: The dark mode classes `.content-bg` and `.dark-text` were causing white content areas to turn dark gray (#2d2d2d) in dark mode, making text illegible. **Solution**: Remove `class="content-bg"` from all white background tables and `class="dark-text"` / `class="dark-text-secondary"` from text elements within white content areas. Only use `.body-bg` on the outer email container. This fix was applied to all 12 templates in the zurich folder.
 
 ### Follow-up Items
 - [ ] **six-month-bag.html**: Request hero background image from UX designer. The Figma design has a background image in the hero area that isn't surfacing as an exportable image asset.
 - [x] **save-quote-followup.html**: Hero beach image (`hero-save-quote.jpg`) and person icon (`icon-person.png`) exported from Figma
+- [ ] **save-quote-followup.html**: Progress arrow (`plane-border.png`) needs refinement — current image doesn't perfectly match Figma design. Follow up with UX designer for a polished version.
 - [x] **twelve-month.html**: Composed header image added (`email-hero_12month-followup.png`)
 - [x] **eighteen-month.html**: Composed header image added (`email-hero_18month-followup.png`)
 - [x] **two-year.html**: Composed CTA box image added (`email-hero_24month-followup.png`)
+
+### Recent Fixes (Feb 2026)
+
+**save-quote-followup.html:**
+- Replaced CSS background-image hero with composed `<img>` tag using `saved-quote-followup-hero.jpg` for reliable rendering across email clients
+- Added responsive mobile styles: hero image hidden on mobile, text cell becomes full-width centered with `box-sizing: border-box` to prevent overflow
+- Replaced flat teal progress bar with `plane-border.png` arrow image
+- Re-exported `icon-person.png` with transparent background (was white)
 
 ### Recent Fixes (Jan 2026)
 
