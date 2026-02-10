@@ -22,6 +22,10 @@ Zurich Classic: https://www.figma.com/design/q9c6YIC6aFzxIqr6ailozB/Zurich-Class
 
 USA Today: https://www.figma.com/design/q9c6YIC6aFzxIqr6ailozB/Zurich-Classic?node-id=74-19&m=dev
 
+Save Quote: https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=4-179&p=f&m=dev
+
 ****NEW****
 
-Save Quote: https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=4-179&p=f&m=dev
+2-wk post trip: https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=498-1830&p=f&m=dev
+
+2-mo followup: https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=491-1252&m=dev
