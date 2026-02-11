@@ -57,6 +57,8 @@ Note: All HTML files reference images using `../img/` relative paths.
 | fulfillment/eighteen-month.html | [18-mo Follow up](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=610-3731&m=dev) | Customer Journey |
 | fulfillment/two-year.html | [2-yr Follow up](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=610-3894&m=dev) | Customer Journey |
 | fulfillment/save-quote-followup.html | [Save Quote](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=4-179&m=dev) | Customer Journey |
+| fulfillment/two-week-post-trip.html | [2-wk Post Trip](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=498-1830&m=dev) | Customer Journey |
+| fulfillment/two-month-followup.html | [2-mo Follow up](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=491-1252&m=dev) | Customer Journey |
 
 ## Template Framework Reference
 Use components from: `/responsive-modular-email-templates/build/html/`
@@ -195,13 +197,20 @@ All 6 customer journey emails have been built from Figma designs:
 | eighteen-month.html | Complete | Plan picker illustration, "Compare Plans" CTA |
 | two-year.html | Complete | Shield icon header, numbered benefits list, dual testimonials |
 
+### Customer Journey Emails (Feb 2026)
+
+| Email | Status | Notes |
+|-------|--------|-------|
+| two-week-post-trip.html | Complete | "Welcome back!" post-trip email, two-column hero (beach image left, navy text right), 3 action cards (review trip with blue #005b94 border, claim status + next trip with teal #64c5b9 border), destination hub block, campaign: `twoweekposttrip` |
+| two-month-followup.html | Complete | "Your next destination awaits..." follow-up email, two-column hero, destination section (Italy/Thailand/Turks & Caicos with circular images, CDN-hosted), identity theft section on navy bg, "Did you know?" callout, teal "Help Protect My Trip" CTA, campaign: `twomonthfollowup` |
+
 ### Image Assets
 All images stored in `img/` folder:
 - **Logos**: `logo-travel-guard-color.png`, `logo-travel-guard-white.png` (converted from SVG with CSS variables replaced)
-- **Hero images**: `hero-baggage.jpg`, `hero-medical.jpg`, `hero-trip-can.jpg`, `hero-12month.jpg`, `hero-18month.jpg`, `hero-2year.jpg`, `hero-cruise.jpg`, `hero-cruise-day.png`, `hero-travel-tips.png`, `hero-zurich-classic.jpg`, `email-hero_12month-followup.png`, `email-hero_18month-followup.png`, `email-hero_24month-followup.png`, `saved-quote-followup-hero.jpg`
-- **Icons**: `icon-phone.png`, `icon-phone-24.png`, `icon-quote.png`, `icon-quote-green.png`, `icon-review.png`, `icon-shield.png`, `icon-star.png`, `icon-send.png`, `icon-send-green.png`, `icon-education.png`, `icon-play.png`, `icon-facebook.png`, `icon-instagram.png`, `icon-youtube.png`, `icon-tiktok.png`, `icon-person.png`
+- **Hero images**: `hero-baggage.jpg`, `hero-medical.jpg`, `hero-trip-can.jpg`, `hero-12month.jpg`, `hero-18month.jpg`, `hero-2year.jpg`, `hero-cruise.jpg`, `hero-cruise-day.png`, `hero-travel-tips.png`, `hero-zurich-classic.jpg`, `email-hero_12month-followup.png`, `email-hero_18month-followup.png`, `email-hero_24month-followup.png`, `saved-quote-followup-hero.jpg`, `hero-two-week-post-trip.jpg`, `hero-two-month-followup.jpg`
+- **Icons**: `icon-phone.png`, `icon-phone-24.png`, `icon-quote.png`, `icon-quote-green.png`, `icon-review.png`, `icon-shield.png`, `icon-star.png`, `icon-send.png`, `icon-send-green.png`, `icon-education.png`, `icon-play.png`, `icon-facebook.png`, `icon-instagram.png`, `icon-youtube.png`, `icon-tiktok.png`, `icon-person.png`, `icon-review-trip.png`, `icon-claim-status.png`, `icon-next-trip.png`
 - **Decorative**: `plane-border.png` (teal arrow progress bar for save-quote-followup)
-- **Content images**: `img-assistance.jpg`, `img-packing.jpg`, `img-picking-plan.png`, `img-golf-trip.jpg`, `video-thumbnail.jpg`, `video-thumbnail-tips.png`
+- **Content images**: `img-assistance.jpg`, `img-packing.jpg`, `img-picking-plan.png`, `img-golf-trip.jpg`, `video-thumbnail.jpg`, `video-thumbnail-tips.png`, `img-destination-hub.jpg`
 
 ### Color-Specific Icon Variants
 Some emails require icons in specific accent colors:
@@ -244,6 +253,7 @@ These assets are hosted on the Travel Guard website and should be used across al
 - `fulfillment/eighteen-month.html` ✓
 - `fulfillment/two-year.html` ✓
 - `seasonal-update/cruise-season-2026.html` ✓
+- `fulfillment/two-month-followup.html` ✓ (destination images + identity theft image from CDN, hero uses local path)
 
 **Assets still using local paths** (no hosted equivalent available):
 - Hero images (email-specific)
@@ -292,6 +302,8 @@ These assets are hosted on the Travel Guard website and should be used across al
 - [x] **twelve-month.html**: Composed header image added (`email-hero_12month-followup.png`)
 - [x] **eighteen-month.html**: Composed header image added (`email-hero_18month-followup.png`)
 - [x] **two-year.html**: Composed CTA box image added (`email-hero_24month-followup.png`)
+- [ ] **two-week-post-trip.html**: Export 5 images from Figma: `hero-two-week-post-trip.jpg`, `icon-review-trip.png`, `icon-claim-status.png`, `icon-next-trip.png`, `img-destination-hub.jpg`
+- [ ] **two-month-followup.html**: Export hero image from Figma: `hero-two-month-followup.jpg`
 
 ### Recent Fixes (Feb 2026)
 
