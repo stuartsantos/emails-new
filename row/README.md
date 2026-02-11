@@ -20,6 +20,7 @@ AT
 BE
 CH
 DE
+ES
 FR
 IT
 NL
