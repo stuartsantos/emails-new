@@ -159,6 +159,7 @@ Key points:
 - Use `linear-gradient(to bottom, #003d6e 50%, #ffffff 50%)` on the td containing the hero image
 - Include MSO conditional VML for Outlook compatibility
 - The hero image sits on top of this gradient, creating the split-background effect
+- After edits, check if any local image paths can be replaced with published absolute URLs cross-referencing other templates
 
 ## Testing Checklist
 - [ ] iPhone Mail (light mode)
