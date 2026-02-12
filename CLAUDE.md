@@ -35,8 +35,12 @@ All email templates across brands share these conventions:
 - **MSO conditionals** (`<!--[if mso]>...<![endif]-->`) for Outlook-specific rendering
 - **VML namespaces** in `<html>` tag for Outlook vector graphics support
 - **`role="presentation"`** on all layout tables for accessibility
-- **Preheader** text via hidden `<div>` with `&zwnj;&nbsp;` padding
+- **Preheader** text via hidden `<div>` with `&zwnj;&nbsp;` padding (see Preheader Padding below)
 - **Dark mode** support via `@media (prefers-color-scheme: dark)` and Gmail's `[data-ogsc]` selectors
+
+### Preheader Padding Hack
+
+The `&zwnj;&nbsp;` (zero-width joiner + non-breaking space) entities are repeated 20 times after the preheader text inside a hidden `<div>`. This fills the email client's preview snippet area with invisible characters, preventing it from pulling in body content (like table headers or Handlebars variable names) after the preheader message. Always include this padding in preheader divs.
 
 ### Dark Mode Gotcha
 

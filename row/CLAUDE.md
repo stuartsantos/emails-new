@@ -121,9 +121,11 @@ All layout tables use `role="presentation"` for screen reader compatibility.
 ```html
 <div style="display: none; max-height: 0; overflow: hidden; mso-hide: all;">
   Preheader text here
-  &zwnj;&nbsp;&zwnj;&nbsp;... <!-- Zero-width joiners for padding -->
+  &zwnj;&nbsp;&zwnj;&nbsp;... <!-- Zero-width joiners for padding (repeat 20x) -->
 </div>
 ```
+
+The `&zwnj;&nbsp;` (zero-width joiner + non-breaking space) entities are repeated 20 times after the preheader text. This fills the email client's preview snippet area with invisible characters, preventing it from pulling in body content (like table headers or Handlebars variable names) after the preheader message.
 
 ## Font Stack
 

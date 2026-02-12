@@ -112,7 +112,16 @@ All templates follow a consistent structure:
    - Supplementary styles in `<style>` block for modern clients
    - Mobile responsive media queries
 
-4. **Section Structure:**
+4. **Preheader Padding Hack**
+   The `&zwnj;&nbsp;` (zero-width joiner + non-breaking space) entities are repeated 20 times after the preheader text inside a hidden `<div>`. This fills the email client's preview snippet area with invisible characters, preventing it from pulling in body content (like table headers or Handlebars variable names) after the preheader message.
+   ```html
+   <div style="display: none; max-height: 0; overflow: hidden; mso-hide: all;">
+     Preheader text here
+     &zwnj;&nbsp;&zwnj;&nbsp;... <!-- repeat 20x -->
+   </div>
+   ```
+
+5. **Section Structure:**
    - Header (Qantas logo)
    - Hero/Title section
    - Important information banner (where applicable)

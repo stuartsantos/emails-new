@@ -103,7 +103,7 @@ Use components from: `/responsive-modular-email-templates/build/html/`
 2. Use table-based layouts for Outlook compatibility
 3. Inline all styles (Gmail strips `<style>` from body)
 4. Use MSO conditionals for Outlook-specific fixes: `<!--[if mso]>...<![endif]-->`
-5. Include hidden preheader text using the div technique
+5. Include hidden preheader text using the div technique with `&zwnj;&nbsp;` padding (repeat 20x after preheader text — fills the email client's preview snippet with invisible characters so it doesn't pull in body content like table headers or variable names)
 6. Add `role="presentation"` to layout tables for accessibility
 7. Use font stack: `'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif`
 
