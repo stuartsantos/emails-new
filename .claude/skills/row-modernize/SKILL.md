@@ -13,7 +13,7 @@ Accept a file path argument (e.g., `/row-modernize row/xx/en/policy-confirmation
 If no argument is provided, find the most recently modified `policy-confirmation.html` under `row/`:
 
 ```bash
-find row/ -name "policy-confirmation.html" -not -path "row/template/*" | head -20
+find row/ -name "policy-confirmation.html" -not -path "row/_template/*" | head -20
 ```
 
 Then pick the one with the newest modification time. Confirm the target file with the user before proceeding.
@@ -24,7 +24,7 @@ Read these files to understand the target structure and rules:
 
 | File | Purpose |
 |------|---------|
-| `row/template/row-reference.html` | Canonical HTML skeleton — use as the structural base |
+| `row/_template/row-reference.html` | Canonical HTML skeleton — use as the structural base |
 | `row/CLAUDE.md` | Rebranding rules, market variations, color reference |
 | `row/README.md` | Legacy → modern variable mapping table |
 
@@ -56,7 +56,7 @@ Pull out all translatable/market-specific content:
 
 ## 5. Build the modernized template
 
-Start from the `row/template/row-reference.html` skeleton and populate it:
+Start from the `row/_template/row-reference.html` skeleton and populate it:
 
 ### HTML setup
 - Set `<html lang="XX">` to the correct language code (en, fr, de, nl, es, pt, cs, it)
