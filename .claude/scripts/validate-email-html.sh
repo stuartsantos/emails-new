@@ -29,12 +29,26 @@ if [[ ! -f "$FILE_PATH" ]]; then
   exit 0
 fi
 
-# Skip files in node_modules, build artifacts, component library
+# Skip files in node_modules, build artifacts, component library, legacy AIG templates
 case "$FILE_PATH" in
-  */node_modules/*|*/build/*|*/dist/*|*responsive-modular-email-templates*|*/api-testing/build/*)
+  */node_modules/*|*/build/*|*/dist/*|*responsive-modular-email-templates*|*/api-testing/build/*|*/tg/*/aig/*)
     exit 0
     ;;
 esac
+
+# Skip files listed in qa-exclude.txt
+EXCLUDE_FILE="${CLAUDE_PROJECT_DIR:-.}/.claude/qa-exclude.txt"
+if [[ -f "$EXCLUDE_FILE" ]]; then
+  # Get path relative to project dir for matching
+  REL_PATH="${FILE_PATH#${CLAUDE_PROJECT_DIR:-.}/}"
+  while IFS= read -r line; do
+    trimmed=$(echo "$line" | sed 's/^[[:space:]]*//')
+    [[ -z "$trimmed" || "$trimmed" == \#* ]] && continue
+    if [[ "$REL_PATH" == "$trimmed" ]]; then
+      exit 0
+    fi
+  done < "$EXCLUDE_FILE"
+fi
 
 CONTENT=$(cat "$FILE_PATH")
 FILENAME=$(basename "$FILE_PATH")
@@ -57,7 +71,8 @@ AIG_REFS=$(echo "$CONTENT" | grep -Pion '\bAIG\b(?!\s*Travel\s*Guard)' | head -5
 # Also check for old AIG email domains
 AIG_EMAILS=$(echo "$CONTENT" | grep -Pon '@aig\.com' | head -5 || true)
 # Check for old AIG variable format {Variable} vs {{handlebars}}
-OLD_VARS=$(echo "$CONTENT" | grep -Pon '\{[A-Z][a-zA-Z_-]+\}' | grep -v '{{' | head -5 || true)
+# Strip {{handlebars}} first, then match remaining {SingleBrace} vars
+OLD_VARS=$(echo "$CONTENT" | sed 's/{{[^}]*}}//g' | grep -Pon '\{[A-Z][a-zA-Z_-]+\}' | head -5 || true)
 
 if [[ -n "$AIG_REFS" ]]; then
   LINES=$(echo "$AIG_REFS" | cut -d: -f1 | tr '\n' ', ' | sed 's/,$//')
@@ -86,7 +101,18 @@ if [[ "$HAS_DARK_MQ" -gt 0 ]]; then
     ISSUES+=("MISSING DARK MODE CLASS — template has dark mode media query but no .body-bg class. Add .body-bg to the outer email container for dark mode background support.")
   fi
   # Warn if .content-bg or .dark-text on content areas (the gotcha from CLAUDE.md)
-  BAD_DARK=$(echo "$CONTENT" | grep -Pon 'class="[^"]*\b(content-bg|dark-text)\b[^"]*"' | head -3 || true)
+  # Exclude preheader <p> elements (font-size: 10px) — dark-text is correct there since
+  # preheader sits on the outer #f1f6fb body background, not white content areas.
+  BAD_DARK=$(echo "$CONTENT" | grep -Pon 'class="[^"]*\b(content-bg|dark-text)\b[^"]*"' | {
+    while IFS=: read -r linenum rest; do
+      LINE_CONTENT=$(echo "$CONTENT" | sed -n "${linenum}p")
+      # Skip preheader rows: small font-size <p> on the body background is valid dark-text usage
+      if echo "$LINE_CONTENT" | grep -qP 'font-size:\s*(8|9|10|11)px.*class="dark-text"'; then
+        continue
+      fi
+      echo "${linenum}:${rest}"
+    done || true
+  } | head -3 || true)
   if [[ -n "$BAD_DARK" ]]; then
     LINES=$(echo "$BAD_DARK" | cut -d: -f1 | tr '\n' ', ' | sed 's/,$//')
     ISSUES+=("DARK MODE GOTCHA on line(s) $LINES — .content-bg/.dark-text should NOT be on white content areas (turns them dark gray). Only use on outer body area elements.")
@@ -128,16 +154,27 @@ fi
 
 # ---------------------------------------------------------------------------
 # 7. Mismatched MSO conditional comments
-#    Count opening <!--[if mso]> and closing <![endif]--> pairs
+#    Count ALL conditional comment opens and closes:
+#    Opens:  <!--[if mso]>, <!--[if !mso]><!-->, <!--[if !mso]-->, <!--[if gte mso X]>
+#    Closes: <![endif]-->, <!--<![endif]-->, <!--[endif]-->
 # ---------------------------------------------------------------------------
-MSO_OPEN=$(echo "$CONTENT" | grep -Poc '<!--\[if\s+(gte\s+)?mso' || true)
-MSO_CLOSE=$(echo "$CONTENT" | grep -Poc '<!\[endif\]-->' || true)
+MSO_OPEN=$(echo "$CONTENT" | grep -Poc '<!--\[if\s+(!|gte\s+)?mso' || true)
+MSO_CLOSE=$(echo "$CONTENT" | grep -Poc '(<!|<!--)\[endif\]-->' || true)
 if [[ "$MSO_OPEN" -ne "$MSO_CLOSE" ]]; then
-  ISSUES+=("MISMATCHED MSO CONDITIONALS — found $MSO_OPEN opening <!--[if mso]> but $MSO_CLOSE closing <![endif]--> comments. Check for unclosed or extra MSO conditional blocks.")
+  ISSUES+=("MISMATCHED MSO CONDITIONALS — found $MSO_OPEN opening <!--[if (!)mso]> but $MSO_CLOSE closing <![endif]--> comments. Check for unclosed or extra MSO conditional blocks.")
 fi
 
 # ---------------------------------------------------------------------------
-# 8. Bonus: missing box-sizing on mobile responsive blocks
+# 8. UAT/QA environment URLs (should be production URLs)
+# ---------------------------------------------------------------------------
+ENV_URLS=$(echo "$CONTENT" | grep -Pon 'https?://[a-zA-Z0-9._-]*\.(uat|qa)\.[a-zA-Z0-9._-]+' | head -5 || true)
+if [[ -n "$ENV_URLS" ]]; then
+  LINES=$(echo "$ENV_URLS" | cut -d: -f1 | tr '\n' ', ' | sed 's/,$//')
+  ISSUES+=("UAT/QA ENVIRONMENT URL on line(s) $LINES — template contains non-production URLs. Replace with production URLs before shipping.")
+fi
+
+# ---------------------------------------------------------------------------
+# 9. Bonus: missing box-sizing on mobile responsive blocks
 # ---------------------------------------------------------------------------
 HAS_DISPLAY_BLOCK=$(echo "$CONTENT" | grep -c 'display:\s*block' || true)
 HAS_BOX_SIZING=$(echo "$CONTENT" | grep -c 'box-sizing:\s*border-box' || true)

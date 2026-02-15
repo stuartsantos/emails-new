@@ -1,0 +1,140 @@
+# =============================================================================
+# QA Exclude List
+# =============================================================================
+# Files listed below (uncommented) will be skipped by batch-qa.sh and
+# validate-email-html.sh. One path per line, relative to project root.
+#
+# HOW TO USE:
+#   - Lines starting with # are comments (ignored)
+#   - Delete or comment out any files you DO want included in QA scans
+#   - Leave uncommented any files you want EXCLUDED from future audits
+#   - When you're done editing, tell Claude to update the scripts
+# =============================================================================
+
+# --- expedia/ (15 files) ---
+ expedia/ca/en/expedia-ca-en-august-2023.html
+ expedia/ca/en/expedia-ca-en-june-2022.html
+ expedia/ca/en/expedia-ca-en.html
+# expedia/ca/en/policy-confirmation.html
+ expedia/ca/fr/expedia-ca-fr-august-2023.html
+ expedia/ca/fr/expedia-ca-fr-june-2022.html
+ expedia/ca/fr/expedia-ca-fr.html
+# expedia/ca/fr/policy-confirmation.html
+# expedia/hk/en/policy-confirmation.html
+# expedia/it/en/policy-confirmation.html
+# expedia/mx/es/policy-confirmation.html
+# expedia/nz/en/policy-confirmation.html
+# expedia/sg/en/policy-confirmation.html
+ expedia/us/en/policy-confirmation-old.html
+# expedia/us/en/policy-confirmation.html
+
+# --- jetstar/ (10 files) ---
+# jetstar/au/en/cancel.html
+# jetstar/au/en/policy-confirmation.html
+# jetstar/au/en/post-trip.html
+# jetstar/au/en/pre-trip.html
+# jetstar/nz/en/cancel.html
+# jetstar/nz/en/policy-confirmation.html
+# jetstar/nz/en/post-trip.html
+# jetstar/nz/en/pre-trip.html
+# jetstar/sg/en/policy-confirmation-redesign.html
+# jetstar/sg/en/policy-confirmation.html
+
+# --- qantas/ (24 files) ---
+# qantas/au/en/amt-expiry.html
+# qantas/au/en/au-revisions/amt-expiry.html
+# qantas/au/en/au-revisions/cancel.html
+# qantas/au/en/au-revisions/medical.html
+# qantas/au/en/au-revisions/policy-confirmation.html
+# qantas/au/en/au-revisions/pre-trip.html
+# qantas/au/en/au-revisions/save-quote.html
+# qantas/au/en/au-revisions/void.html
+ qantas/au/en/cancel.html
+ qantas/au/en/medical.html
+ qantas/au/en/policy-confirmation.html
+ qantas/au/en/pre-trip.html
+ qantas/au/en/save-quote.html
+ qantas/au/en/void.html
+ qantas/nz/en/amt-expiry.html
+ qantas/nz/en/cancel.html
+# qantas/nz/en/nz-revisions/amt-expiry.html
+# qantas/nz/en/nz-revisions/cancel.html
+# qantas/nz/en/nz-revisions/policy-confirmation.html
+# qantas/nz/en/nz-revisions/pre-trip.html
+# qantas/nz/en/nz-revisions/void.html
+ qantas/nz/en/policy-confirmation.html
+ qantas/nz/en/pre-trip.html
+ qantas/nz/en/void.html
+
+# --- row/ (28 files) ---
+# row/_template/row-reference.html
+# row/at/de/policy-confirmation.html
+# row/at/en/policy-confirmation.html
+# row/be/en/policy-confirmation.html
+# row/be/fr/policy-confirmation.html
+# row/be/nl/policy-confirmation.html
+# row/ca/en/policy-confirmation.html
+# row/ca/fr/policy-confirmation.html
+# row/ch/de/policy-confirmation.html
+# row/ch/en/policy-confirmation.html
+# row/ch/fr/policy-confirmation.html
+# row/cz/cs/policy-confirmation.html
+# row/cz/en/policy-confirmation.html
+# row/de/de/policy-confirmation.html
+# row/de/en/policy-confirmation.html
+# row/es/en/policy-confirmation.html
+# row/es/es/policy-confirmation.html
+# row/fr/en/policy-confirmation.html
+# row/fr/fr/policy-confirmation.html
+# row/it/en/policy-confirmation.html
+# row/it/it/policy-confirmation.html
+# row/nl/en/policy-confirmation.html
+# row/nl/nl/policy-confirmation.html
+# row/nz/en/policy-confirmation.html
+# row/pt/en/policy-confirmation.html
+# row/pt/pt/policy-confirmation.html
+# row/sg/en/policy-confirmation.html
+# row/uk/en/policy-confirmation.html
+
+# --- tg/ (57 files) ---
+# tg/admin/us/en/policy-confirmation.html
+# tg/admin/us/en/save-quote.html
+ tg/admin/us/en/xxx-admin-save-quote-new.html
+ tg/admin/us/en/xxx-admin-save-quote.html
+# tg/agents/us/en/policy-confirmation.html
+# tg/agents/us/en/save-quote.html
+# tg/ca/en/annual-followup.html
+# tg/ca/en/policy-confirmation.html
+# tg/ca/en/post-trip.html
+# tg/ca/en/save-quote.html
+# tg/it/it/policy-confirmation.html
+# tg/my/en/cancel.html
+# tg/my/en/policy-confirmation.html
+# tg/sg/en/cancel.html
+# tg/sg/en/policy-confirmation-new.html
+# tg/sg/en/policy-confirmation.html
+# tg/us/zurich/fulfillment/eighteen-month.html
+# tg/us/zurich/fulfillment/save-quote-followup.html
+# tg/us/zurich/fulfillment/six-month-bag.html
+# tg/us/zurich/fulfillment/six-month-med.html
+# tg/us/zurich/fulfillment/six-month-trip-can.html
+# tg/us/zurich/fulfillment/twelve-month.html
+# tg/us/zurich/fulfillment/two-month-followup.html
+# tg/us/zurich/fulfillment/two-week-post-trip.html
+# tg/us/zurich/fulfillment/two-year.html
+# tg/us/zurich/holiday/cruise-day.html
+# tg/us/zurich/holiday/solo-vacation.html
+# tg/us/zurich/seasonal-update/cruise-season-2026.html
+# tg/us/zurich/sponsor/zurich-classic-usatoday1.html
+# tg/us/zurich/sponsor/zurich-classic-usatoday2.html
+# tg/us/zurich/sponsor/zurich-classic.html
+# tg/us/zurich/travel-tips/travel-tips-02-26.html
+# tg/us/zurich/travel-tips/travel-tips-03-26.html
+
+# --- united/ (7 files) ---
+ united/be/fr/policy-confirmation.html
+ united/be/nl/policy-confirmation.html
+# united/new-policy-confirmation.html
+ united/old-policy-confirmation.html
+# united/us/en/post-trip.html
+# united/us/en/pre-trip.html
