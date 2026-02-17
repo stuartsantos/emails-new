@@ -67,7 +67,7 @@ Start from the `row/_template/row-reference.html` skeleton and populate it:
 
 Insert extracted content into each of the 12 sections documented in the reference template:
 
-1. **Preheader** — translated preview text (no `&zwnj;&nbsp;` padding)
+1. **Preheader** — translated preview text + `&zwnj;&nbsp;` padding (20 repetitions after text)
 2. **Logo** — Travel Guard logo (same for all markets, already in reference)
 3. **Split header** — translated thank-you text on navy background
 4. **Greeting** — customer name + thank-you + policy number + view policy link
@@ -163,7 +163,7 @@ Before finishing, verify:
 - [ ] Responsive breakpoint CSS at 600px is present
 - [ ] Font stack is `'Noto Sans', 'Source Sans Pro', Arial, sans-serif`
 - [ ] Link color is `#1352DE` for email links (or `#0076be` for Singapore)
-- [ ] No `&zwnj;&nbsp;` padding in preheader div
+- [ ] Preheader div includes `&zwnj;&nbsp;` padding (20 repetitions after text)
 - [ ] `{{ViewPolicyURL}}` is present in the greeting section
 - [ ] `{{AltViewPolicyLinks}}` is present in Section 10
 - [ ] Sign-off uses bold navy `#003D6E` for "Travel Guard"

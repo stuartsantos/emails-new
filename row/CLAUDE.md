@@ -176,7 +176,7 @@ When converting legacy templates to the modern format, apply these branding chan
 
 **Additional modernization steps:**
 - Convert placeholder format: `{Variable}` → `{{policyDetail-variable}}`
-- Remove `&zwnj;&nbsp;` entities from preheaders
+- Include `&zwnj;&nbsp;` padding in preheaders (20 repetitions after text)
 - Update HTML structure to modern responsive template with dark mode support
 
 ## Template Modernization Status
@@ -196,6 +196,7 @@ All ROW policy confirmation templates have been updated to the modern responsive
 | fr (France) | en, fr | fr/fr includes France residency disclaimer |
 | nl (Netherlands) | en, nl | |
 | pt (Portugal) | en, pt | Fixed typo "fposso" → "posso" in pt/pt |
+| us (United States) | en | US-specific content (World Service Center, claims online link, self-service page) |
 
 **Already modern (not modified in this update):**
 - ca (Canada): en, fr
