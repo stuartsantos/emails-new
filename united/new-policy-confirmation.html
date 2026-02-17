@@ -14,7 +14,7 @@ You can use these comments to help you change any of the text or background colo
 To use these colors, you can copy the hash value such as #001871 for aig fore blue and change either the text color or background color of elements. In order to change the color, you can go to the style tag within the relevant table (<table>) or table cell (<td>) and replace an existing "color" or "background" property with the desired color. If neither of those properties exist in the style tag, you can add them.
 
 The final product would look like this for a table or table cell
-<table style="color: #001871; background: #C7DBF4;">
+<table role="presentation" style="color: #001871; background: #C7DBF4;">
 or
 <td style="color: #001871; background: #C7DBF4;">
 
@@ -64,6 +64,7 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
   .col-2, .col-3 {
     width: 100% !important;
     display: block;
+    box-sizing: border-box !important;
   }
   .mobile-none {
     display: none;
@@ -90,6 +91,7 @@ table {
   /* line 42, ../../../sass/wrappers/responsive/default.scss */
   .icon-left .icon, .icon-left .text {
     display: block !important;
+    box-sizing: border-box !important;
     width: 250px !important;
     text-align: center;
     margin: auto !important;
@@ -143,20 +145,20 @@ table {
 </head>
 <body style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; width: 100%; height: 100%; line-height: 1;">
     <div style="display: none; font-size: 1px; line-height: 1px; height: 0px; width: 0px;" class="preheader">Thank you for purchasing a Travel Guard® travel insurance plan! </div>
-  <table class="body" style="border-collapse: collapse; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; border-spacing: 0; background: #F7F9FB; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; height: 100%; -moz-font-feature-settings: 'liga' on; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; width: 100%; -moz-osx-font-smoothing: grayscale;">
+  <table role="presentation" class="body" style="border-collapse: collapse; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; border-spacing: 0; background: #F7F9FB; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; height: 100%; -moz-font-feature-settings: 'liga' on; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; width: 100%; -moz-osx-font-smoothing: grayscale;">
     <tr>
       <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
-        <table align="center" class="wrapper" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 620px; margin: auto;">
+        <table role="presentation" align="center" class="wrapper" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 620px; margin: auto;">
           <tr>
             <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px 0; width: 10px;"> </td>
             <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
-              <table class="preheader" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; color: #343741;">
+              <table role="presentation" class="preheader" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; color: #343741;">
                 <tr>
                   <td style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px; font-size: 10px;">
                   </td>
                 </tr>
               </table>
-              <table align="center" class="main" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; color: #343741; background: #fff; border-radius: 2px;">
+              <table role="presentation" align="center" class="main" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; color: #343741; background: #fff; border-radius: 2px;">
                 <tr>
                   <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
                   <!-- Remove the text below this comment and insert header/content sections -->
@@ -176,15 +178,15 @@ table {
                   </style>
 
 
-                  <table class="header" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center; background: #001CA3;">
+                  <table role="presentation" class="header" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center; background: #001CA3;">
                     <tbody><tr>
                       <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;padding-bottom: 30px; padding-top: 30px;">
-                        <img width="600" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/aig-tg-logo-blue.png" style="border: 0; outline: none; display: block; margin: auto; width: 600px; border-radius: 2px 2px 0 0; background: #001CA3;">
+                        <img alt="Travel Guard" width="600" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/aig-tg-logo-blue.png" style="border: 0; outline: none; display: block; margin: auto; width: 600px; border-radius: 2px 2px 0 0; background: #001CA3;">
                       </td>
                     </tr>
                   </tbody></table>
 
-                  <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.2; background: #001CA3;">
+                  <table role="presentation" class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.2; background: #001CA3;">
                     <tr>
                       <td class="spacer" style="margin: 0; border: 0; font-size: 24px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; color: #fff; padding: 0 40px; font-weight: bold;">
                         Thank you for purchasing a Travel Guard&reg; travel insurance plan!
@@ -192,17 +194,17 @@ table {
                     </tr>
                   </table>
 
-                  <table class="header" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center;">
+                  <table role="presentation" class="header" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center;">
                     <tr>
                       <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
-                        <img width="600" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/gettyimages-155391689-cropped2@2x.jpg" style="border: 0; outline: none; display: block; margin: auto; width: 600px; border-radius: 2px 2px 0 0;">
+                        <img alt="" width="600" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/gettyimages-155391689-cropped2@2x.jpg" style="border: 0; outline: none; display: block; margin: auto; width: 600px; border-radius: 2px 2px 0 0;">
                       </td>
                     </tr>
                   </table>
 
 
 
-                  <table class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
+                  <table role="presentation" class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
                     <tr>
                       <td class="col-1" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 40px; width: 600px;">
                         <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
@@ -210,7 +212,7 @@ table {
 
                         
 
-                        <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
+                        <table role="presentation" class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
                           <tr>
                             <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 25px;">
                               Hello {{policyDetail-primaryInsured-firstName}}, <br>
@@ -226,13 +228,13 @@ table {
                           </tr>
                         </table>
 
-                        <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left; margin-bottom: 16px;">
+                        <table role="presentation" class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left; margin-bottom: 16px;">
                           <tr>
                             <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; padding-top: 16px; color: #001871; border-bottom: 1px solid #CADBF2;">What am I covered for?</td>
                           </tr>
                         </table>
 
-                        <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
+                        <table role="presentation" class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
                           <tr>
                             <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 25px;">
                               You have purchased the <b>{{policyDetail-productName}}</b>. The Benefits included in your policy are stated in your COI and Policy Wording. <br>
@@ -243,13 +245,13 @@ table {
                         </table>
 
 
-                        <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left; margin-bottom: 16px;">
+                        <table role="presentation" class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left; margin-bottom: 16px;">
                           <tr>
                             <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; padding-top: 16px; color: #001871; border-bottom: 1px solid #CADBF2;">IMPORTANT Contact Information</td>
                           </tr>
                         </table>
 
-                        <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
+                        <table role="presentation" class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
                           <tr>
                             <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 25px;">
                               <b>What if I have a policy question?</b> <br>
@@ -279,10 +281,10 @@ table {
                     </tr>
                   </table>
 
-                  <table class="header" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center;">
+                  <table role="presentation" class="header" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center;">
                     <tbody><tr>
                       <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
-                        <img width="600" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/progress.png" style="border: 0; outline: none; display: block; margin: auto; width: 600px; border-radius: 2px 2px 0 0;">
+                        <img alt="" width="600" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/progress.png" style="border: 0; outline: none; display: block; margin: auto; width: 600px; border-radius: 2px 2px 0 0;">
                       </td>
                     </tr>
                   </tbody></table>
@@ -291,7 +293,7 @@ table {
                   </td>
                 </tr>
               </table>
-              <table class="footer" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; color: #343741;">
+              <table role="presentation" class="footer" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; color: #343741;">
                 <tr>
                   <td style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px; font-size: 10px;">
                     

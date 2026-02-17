@@ -14,7 +14,7 @@ You can use these comments to help you change any of the text or background colo
 To use these colors, you can copy the hash value such as #001871 for aig fore blue and change either the text color or background color of elements. In order to change the color, you can go to the style tag within the relevant table (<table>) or table cell (<td>) and replace an existing "color" or "background" property with the desired color. If neither of those properties exist in the style tag, you can add them.
 
 The final product would look like this for a table or table cell
-<table style="color: #001871; background: #C7DBF4;">
+<table role="presentation" style="color: #001871; background: #C7DBF4;">
 or
 <td style="color: #001871; background: #C7DBF4;">
 
@@ -64,6 +64,7 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
   .col-2, .col-3 {
     width: 100% !important;
     display: block;
+    box-sizing: border-box !important;
   }
   .mobile-none {
     display: none;
@@ -94,6 +95,7 @@ a {
   /* line 42, ../../../sass/wrappers/responsive/default.scss */
   .icon-left .icon, .icon-left .text {
     display: block !important;
+    box-sizing: border-box !important;
     width: 250px !important;
     text-align: center;
     margin: auto !important;
@@ -146,20 +148,20 @@ a {
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
 </head>
 <body style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; width: 100%; height: 100%; line-height: 1;">
-    <table class="body" style="border-collapse: collapse; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; border-spacing: 0; background: #F7F9FB; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; height: 100%; -moz-font-feature-settings: 'liga' on; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; width: 100%; -moz-osx-font-smoothing: grayscale;">
+    <table role="presentation" class="body" style="border-collapse: collapse; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; border-spacing: 0; background: #F7F9FB; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; height: 100%; -moz-font-feature-settings: 'liga' on; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; width: 100%; -moz-osx-font-smoothing: grayscale;">
     <tr>
       <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
-        <table align="center" class="wrapper" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 620px; margin: auto;">
+        <table role="presentation" align="center" class="wrapper" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 620px; margin: auto;">
           <tr>
             <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px 0; width: 10px;"> </td>
             <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
-              <table class="preheader" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; color: #343741;">
+              <table role="presentation" class="preheader" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; color: #343741;">
                 <tr>
                   <td style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px; font-size: 10px;">
                   </td>
                 </tr>
               </table>
-              <table align="center" class="main" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; color: #343741; background: #fff; border-radius: 2px;">
+              <table role="presentation" align="center" class="main" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; color: #343741; background: #fff; border-radius: 2px;">
                 <tr>
                   <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
                   <!-- Remove the text below this comment and insert header/content sections -->
@@ -182,30 +184,30 @@ a {
                   </style>
 
 
-                  <table class="header" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center; background: white;">
+                  <table role="presentation" class="header" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center; background: white;">
                     <tbody><tr>
                       <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;padding-bottom: 30px; padding-top: 30px;">
-                        <img class="logo" width="120" src="https://www.travelguard.com/content/dam/tg-documents/jetstar/au/en/images/emails/zurich-logo.png" style="border: 0; outline: none; display: block; margin: auto; width: 120px; border-radius: 2px 2px 0 0;  background:white; margin-left: 22px;">
+                        <img alt="Zurich" class="logo" width="120" src="https://www.travelguard.com/content/dam/tg-documents/jetstar/au/en/images/emails/zurich-logo.png" style="border: 0; outline: none; display: block; margin: auto; width: 120px; border-radius: 2px 2px 0 0;  background:white; margin-left: 22px;">
                       </td>
                       <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: middle; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;padding-bottom: 30px; padding-top: 30px;">
-                        <img class="logo" width="120" src="https://www.travelguard.com/content/dam/tg-direct/jetstar/au/en/images/logos/jetstar-logo-black.png" style="border: 0; outline: none; display: block; margin: auto; width: 120px; border-radius: 2px 2px 0 0;  background:white; margin-right: 32px;">
+                        <img alt="Jetstar" class="logo" width="120" src="https://www.travelguard.com/content/dam/tg-direct/jetstar/au/en/images/logos/jetstar-logo-black.png" style="border: 0; outline: none; display: block; margin: auto; width: 120px; border-radius: 2px 2px 0 0;  background:white; margin-right: 32px;">
                       </td>
                     </tr>
                   </tbody></table>
 
-                  <table class="section" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; background: #FCEBCD; color: #323232; width: 100%;">
+                  <table role="presentation" class="section" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; background: #FCEBCD; color: #323232; width: 100%;">
                     <tr>
                       <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif; padding: 0;">
                         <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
                         
 
-                        <table class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif;">
+                        <table role="presentation" class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif;">
                           <tr>
                             <td class="col-1" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif; padding: 10px 14px; width: 600px;">
                               <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
                               
 
-                              <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%; margin: 0 auto; line-height: 1.3;">
+                              <table role="presentation" class="text" style="border-collapse: collapse; border-spacing: 0; font-family: Helvetica, Arial, sans-serif; width: 100%; margin: 0 auto; line-height: 1.3;">
                                 <tr>
                                   <td class="spacer" style="margin: 0; border: 0; font-size: 10px; vertical-align: baseline; font-family: Helvetica, Arial, sans-serif; padding: 0;"><b>IMPORTANT INFORMATION: </b>Our policies do not provide cover for travel to destinations that are designated as (1) "Do not travel" by the New Zealand government; and/or (2) sanctioned. Check the latest <a href="https://www.safetravel.govt.nz/" style="color: #1352DE;">government advice</a> and our <a href="https://www.jetstartravelinsurance.co.nz/" style="color: #1352DE;">travel alerts</a>.</td>
                                 </tr>
@@ -221,16 +223,16 @@ a {
                     </tr>
                   </table>
 
-                  <table class="header" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center;">
+                  <table role="presentation" class="header" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center;">
                     <tr>
                       <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
-                        <img width="600" src="https://www.travelguard.com/content/dam/tg-documents/jetstar/au/en/images/emails/Policy-PreTrip-banner.png" style="border: 0; outline: none; display: block; margin: auto; width: 600px; border-radius: 2px 2px 0 0;">
+                        <img alt="" width="600" src="https://www.travelguard.com/content/dam/tg-documents/jetstar/au/en/images/emails/Policy-PreTrip-banner.png" style="border: 0; outline: none; display: block; margin: auto; width: 600px; border-radius: 2px 2px 0 0;">
                       </td>
                     </tr>
                   </table>
 
 
-                  <table class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
+                  <table role="presentation" class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
                     <tr>
                       <td class="col-1" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 40px; width: 600px; padding-top: 16px;">
                         <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
@@ -238,7 +240,7 @@ a {
 
                         
 
-                        <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
+                        <table role="presentation" class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
                           <tr>
                             <td class="spacer" style="margin: 0; border: 0; font-size: 24px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 25px; color:#001871; text-align:center; font-weight:bold;">       
                               Have a safe trip!
@@ -246,13 +248,13 @@ a {
                           </tr>
                           <tr>
                             <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 25px;">
-                              <table class="section" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; background: #F7F9FB; color: #001871; width: 100%; margin-bottom: 0px;">
+                              <table role="presentation" class="section" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; background: #F7F9FB; color: #001871; width: 100%; margin-bottom: 0px;">
                                 <tbody><tr>
                                   <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 0;">
                                     <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
                                     
                             
-                                    <table class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
+                                    <table role="presentation" class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
                                       <tr>
                                         <td class="col-1" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 30px; width: 600px;">
                                           <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
@@ -261,7 +263,7 @@ a {
 
                             
                             
-                                    <table style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; border-top: 0; color: #343741;">
+                                    <table role="presentation" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; border-top: 0; color: #343741;">
                                             <tbody>
                                               <tr>
                                                 <td style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 40%; margin: 0 auto; line-height: 1.3; font-size: 16px;font-weight: bold; padding-top: 10px; font-weight:bold; color: #001871; ">Policy Number</td>
@@ -270,7 +272,7 @@ a {
                                                                
                                           </tbody></table>
                             
-                                          <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left;">
+                                          <table role="presentation" class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left;">
                             
                                     </table>
                             
@@ -303,13 +305,13 @@ a {
                           </tr>
                         </table>
 
-                        <table class="section" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; background: #001871; color: #fff; width: 100%;">
+                        <table role="presentation" class="section" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; background: #001871; color: #fff; width: 100%;">
                           <tr>
                             <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 0; color: #fff;">
                               <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
                               
 
-                              <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center; color: #fff;">
+                              <table role="presentation" class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center; color: #fff;">
                                 <tr>
                                   <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px 0; font-size: 18px;  padding-left:40px; padding-right:40px; color: #fff;">We're here to help.</td>
                                 </tr>
@@ -320,26 +322,26 @@ a {
                           </tr>
                         </table>
 
-                        <table class="section" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; background: #F7F9FB; color: #001871; width: 100%; margin-bottom: 20px;">
+                        <table role="presentation" class="section" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; background: #F7F9FB; color: #001871; width: 100%; margin-bottom: 20px;">
                           <tbody><tr>
                             <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 0;">
                               <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
                               
 
-                              <table class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
+                              <table role="presentation" class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
                                 <tr>
                                   <td class="col-1" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 30px; width: 600px;">
                                     <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
 
 
 
-                                    <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left;">
+                                    <table role="presentation" class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left;">
                                       <tr>
                                         <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 6px 0; font-size: 18px; font-weight: bold; padding-top: 0; color:#001871; text-align: center;border-bottom: 1px solid #CADBF2;">Help while travelling</td>
                                       </tr>
                                     </table>
 
-                                    <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
+                                    <table role="presentation" class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
                                       <tr>
                                         <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 8px; text-align: center; color: #343741;">
                                           For 24/7 worldwide emergency assistance:
@@ -349,10 +351,10 @@ a {
 
 
 
-                                    <table class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; color: #343741;">
+                                    <table role="presentation" class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; color: #343741;">
                                       <tr>
                                         <td class="col-2" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 300px;">
-                                          <table style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%;">
+                                          <table role="presentation" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%;">
                                             <tr>
                                               <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 5px; font-weight: bold; text-align: center; line-height: 1.5;">
                                                 <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
@@ -364,7 +366,7 @@ a {
                                           </table>
                                         </td>
                                         <td class="col-2" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: top; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 300px;">
-                                          <table style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%;">
+                                          <table role="presentation" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%;">
                                             <tr>
                                               <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: top; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 5px; font-weight: bold; text-align: center; line-height: 1.5;">
                                                 <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
@@ -380,13 +382,13 @@ a {
 
 
 
-                                    <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left;">
+                                    <table role="presentation" class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left;">
                                       <tr>
                                         <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 5px 0; font-size: 18px; font-weight: bold; padding-top: 0; text-align: center;border-bottom: 1px solid #CADBF2; padding-top: 32px; color: #001871;">Help with your policy</td>
                                       </tr>
                                     </table>
 
-                                    <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
+                                    <table role="presentation" class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
                                       <tr>
                                         <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 8px; text-align: center; color: #343741;">
                                           If you have any questions, or need help to change or cancel your policy:
@@ -396,10 +398,10 @@ a {
 
 
 
-                                    <table class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; color: #343741;">
+                                    <table role="presentation" class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; color: #343741;">
                                       <tr>
                                         <td class="col-2" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 300px;">
-                                          <table style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%;">
+                                          <table role="presentation" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%;">
                                             <tr>
                                               <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 5px; font-weight: bold; text-align: center; line-height: 1.5;">
                                                 <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
@@ -415,7 +417,7 @@ a {
                                           </table>
                                         </td>
                                         <td class="col-2" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: top; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 300px;">
-                                          <table style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%;">
+                                          <table role="presentation" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%;">
                                             <tr>
                                               <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: top; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 5px; font-weight: bold; text-align: center; line-height: 1.5;">
                                                 <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
@@ -430,13 +432,13 @@ a {
                                     </table>
 
 
-                                    <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left;">
+                                    <table role="presentation" class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left;">
                                       <tr>
                                         <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 5px 0; font-size: 18px; font-weight: bold; padding-top: 32px; text-align: center;border-bottom: 1px solid #CADBF2; color: #001871;">Make a claim</td>
                                       </tr>
                                     </table>
 
-                                    <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
+                                    <table role="presentation" class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
                                       <tr>
                                         <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 25px; text-align: center; color: #343741;">
                                           If things haven’t gone to plan and you need to make a claim:
@@ -456,10 +458,10 @@ a {
 
 
 
-                                    <table class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; color: #343741;">
+                                    <table role="presentation" class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; color: #343741;">
                                       <tr>
                                         <td class="col-2" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 300px;">
-                                          <table style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%;">
+                                          <table role="presentation" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%;">
                                             <tr>
                                               <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 5px; font-weight: bold; text-align: center; line-height: 1.5;">
                                                 <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
@@ -474,7 +476,7 @@ a {
                                           </table>
                                         </td>
                                         <td class="col-2" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: top; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 300px;">
-                                          <table style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%;">
+                                          <table role="presentation" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%;">
                                             <tr>
                                               <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: top; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 5px; font-weight: bold; text-align: center; line-height: 1.5;">
                                                 <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
@@ -497,7 +499,7 @@ a {
 
 
 
-                              <table align="center" class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 67%; margin: 0 auto; line-height: 1.5;">
+                              <table role="presentation" align="center" class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 67%; margin: 0 auto; line-height: 1.5;">
                                 <tr>
                                   <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 32px; text-align: center;font-style: italic;color: #343741;">
                                       <b>Remember:</b> keep receipts and other supporting documentation in case you need to make a claim.
@@ -510,7 +512,7 @@ a {
                           </tr>
                         </tbody></table>
 
-                        <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center;">
+                        <table role="presentation" class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center;">
                           <tr>
                             <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 6px 0; font-size: 14px; font-style: italic; "><a style="color: #343741;">This is an auto generated email, please do not reply.</a></td>
                           </tr>
@@ -528,7 +530,7 @@ a {
                   </td>
                 </tr>
               </table>
-              <table class="footer" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; color: #343741;">
+              <table role="presentation" class="footer" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; color: #343741;">
                 <tr>
                   <td style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 1px; padding-top: 20px; font-size: 10px;">
                     <a href="https://www.jetstartravelinsurance.co.nz/privacy" style="color: #1352DE;">Privacy Policy</a><br>

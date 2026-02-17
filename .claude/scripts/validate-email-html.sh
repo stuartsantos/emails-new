@@ -146,7 +146,9 @@ fi
 #    Skip tables that look like data tables (have <th> elements)
 # ---------------------------------------------------------------------------
 # Count tables without role="presentation" — but only layout tables
-TABLES_NO_ROLE=$(echo "$CONTENT" | grep -Pon '<table\b(?![^>]*role="presentation")[^>]*>' | head -5 || true)
+# Strip CSS comments (/* ... */) and HTML comments (<!-- ... -->) first to avoid false positives
+STRIPPED_CONTENT=$(echo "$CONTENT" | sed '/\/\*/,/\*\//d' | sed '/<!--/,/-->/{ /<!--.*-->/!d; }')
+TABLES_NO_ROLE=$(echo "$STRIPPED_CONTENT" | grep -Pon '<table\b(?![^>]*role="presentation")[^>]*>' | head -5 || true)
 if [[ -n "$TABLES_NO_ROLE" ]]; then
   LINES=$(echo "$TABLES_NO_ROLE" | cut -d: -f1 | tr '\n' ', ' | sed 's/,$//')
   ISSUES+=("MISSING role=\"presentation\" on <table> at line(s) $LINES — all layout tables need role=\"presentation\" for accessibility.")

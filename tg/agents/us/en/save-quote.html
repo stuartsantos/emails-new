@@ -14,7 +14,7 @@ You can use these comments to help you change any of the text or background colo
 To use these colors, you can copy the hash value such as #001871 for aig fore blue and change either the text color or background color of elements. In order to change the color, you can go to the style tag within the relevant table (<table>) or table cell (<td>) and replace an existing "color" or "background" property with the desired color. If neither of those properties exist in the style tag, you can add them.
 
 The final product would look like this for a table or table cell
-<table style="color: #001871; background: #C7DBF4;">
+<table role="presentation" style="color: #001871; background: #C7DBF4;">
 or
 <td style="color: #001871; background: #C7DBF4;">
 
@@ -64,6 +64,7 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
   .col-2, .col-3 {
     width: 100% !important;
     display: block;
+    box-sizing: border-box !important;
   }
   .mobile-none {
     display: none;
@@ -90,6 +91,7 @@ table {
   /* line 42, ../../../sass/wrappers/responsive/default.scss */
   .icon-left .icon, .icon-left .text {
     display: block !important;
+    box-sizing: border-box !important;
     width: 250px !important;
     text-align: center;
     margin: auto !important;
@@ -143,20 +145,20 @@ table {
 </head>
 <body style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; width: 100%; height: 100%; line-height: 1;">
       <div style="display: none; font-size: 1px; line-height: 1px; height: 0px; width: 0px;" class="preheader">Your quote details from Travel Guard®</div>
-  <table class="body" style="border-collapse: collapse; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; border-spacing: 0; background: #F7F9FB; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; height: 100%; -moz-font-feature-settings: 'liga' on; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; width: 100%; -moz-osx-font-smoothing: grayscale;">
+  <table role="presentation" class="body" style="border-collapse: collapse; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; border-spacing: 0; background: #F7F9FB; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; height: 100%; -moz-font-feature-settings: 'liga' on; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; width: 100%; -moz-osx-font-smoothing: grayscale;">
     <tr>
       <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
-        <table align="center" class="wrapper" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 620px; margin: auto;">
+        <table role="presentation" align="center" class="wrapper" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 620px; margin: auto;">
           <tr>
             <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px 0; width: 10px;"> </td>
             <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
-              <table class="preheader" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; color: #343741;">
+              <table role="presentation" class="preheader" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; color: #343741;">
                 <tr>
                   <td style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 20px; font-size: 10px;">
                   </td>
                 </tr>
               </table>
-              <table align="center" class="main" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; color: #343741; background: #fff; border-radius: 2px;">
+              <table role="presentation" align="center" class="main" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; color: #343741; background: #fff; border-radius: 2px;">
                 <tr>
                   <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
                   <!-- Remove the text below this comment and insert header/content sections -->
@@ -176,34 +178,34 @@ table {
                   </style>
 
 
-                  <table class="header" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: right; background: #F7F9FB;">
+                  <table role="presentation" class="header" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: right; background: #F7F9FB;">
                     <tbody><tr>
                       <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom:38px; padding-right: 8px;">
-                        <img width = "172" src="https://www.travelguard.com/content/dam/travelguard/us/images/logos/TG-r-250w-c_blue.png" style="width: 172px; height:auto;">
+                        <img alt="Travel Guard" width = "172" src="https://www.travelguard.com/content/dam/travelguard/us/images/logos/TG-r-250w-c_blue.png" style="width: 172px; height:auto;">
                       </td>
                     </tr>
                   </tbody></table>
 
-                  <table class="header" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center;">
+                  <table role="presentation" class="header" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center;">
                     <tr>
                       <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
-                        <img width="600" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/progress.png" style="border: 0; outline: none; display: block; margin: auto; width: 600px; border-radius: 2px 2px 0 0;">
+                        <img alt="" width="600" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/progress.png" style="border: 0; outline: none; display: block; margin: auto; width: 600px; border-radius: 2px 2px 0 0;">
                       </td>
                     </tr>
                   </table>
 
 
-                  <table class="header" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center;">
+                  <table role="presentation" class="header" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center;">
                     <tr>
                       <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
-                        <img width="600" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/gettyimages-1389938773-170667a@2x.jpg" style="border: 0; outline: none; display: block; margin: auto; width: 600px; border-radius: 2px 2px 0 0; background: #F7F9FB;">
+                        <img alt="" width="600" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/gettyimages-1389938773-170667a@2x.jpg" style="border: 0; outline: none; display: block; margin: auto; width: 600px; border-radius: 2px 2px 0 0; background: #F7F9FB;">
                       </td>
                     </tr>
                   </table>
 
 
 
-                  <table class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
+                  <table role="presentation" class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
                     <tr>
                       <td class="col-1" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 40px; width: 600px;">
                         <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
@@ -211,7 +213,7 @@ table {
 
                         
 
-                        <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
+                        <table role="presentation" class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
                           <tr>
                             <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 25px;">
                               Thank you for considering Travel Guard for your upcoming trip! Please review your quote details below. For your convenience, your quote progress will be saved until {{policyDetail-quoteExpiryDate::date::MM/dd/yyyy}}. <br><br>
@@ -220,33 +222,33 @@ table {
                           </tr>
                         </table>
 
-                        <table class="section" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; background: #F7F9FB; color: #001871; width: 100%; margin-bottom: 20px;">
+                        <table role="presentation" class="section" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; background: #F7F9FB; color: #001871; width: 100%; margin-bottom: 20px;">
                           <tbody><tr>
                             <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 0;">
                               <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
                               
 
-                              <table class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
+                              <table role="presentation" class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
                                 <tr>
                                   <td class="col-1" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 30px; width: 600px;">
                                     <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
 
-                                    <table class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
+                                    <table role="presentation" class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
                                 <tbody><tr>
                                   <td class="col-2" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: middle; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 268px;">
-                                    <table style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%;">
+                                    <table role="presentation" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%;">
                                       <tbody><tr>
                                         <td class="spacer m-p-tb" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 0;">
                                           <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
                                           
 
-                                          <table align="center" class="icon-left" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto;">
+                                          <table role="presentation" align="center" class="icon-left" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto;">
                                             <tbody><tr>
                                               <td class="spacer" style="margin: 0; border: 0; font-size: 16px; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 0; vertical-align: top;">
-                                                <table class="m-m-a" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
+                                                <table role="presentation" class="m-m-a" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
                                                   <tbody><tr>
                                                     <td class="text" style="margin: 0; padding: 0; border: 0; font-size: 16px; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; vertical-align: top;">
-                                                      <table class="m-m-a" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
+                                                      <table role="presentation" class="m-m-a" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
                                                         <tbody><tr>
                                                           <td class="content m-ta-c" style="margin: 0; padding: 0; border: 0; font-size: 12px; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; vertical-align: top; line-height: 1.3;">
                                                             <strong style="font-size: 20px;">QUOTE NUMBER: {{policyDetail-quoteId}}</strong> <br>
@@ -268,7 +270,7 @@ table {
                                     </tbody></table>
                                   </td>
                                   <td class="col-2" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: middle; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 268px;">
-                                    <table style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%;">
+                                    <table role="presentation" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%;">
                                       <tbody><tr>
                                         <td class="spacer m-p-tb" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 0;">
                                           <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
@@ -290,6 +292,7 @@ table {
                                           /* line 15, ../../../sass/components/mso/button.scss */
                                           .button a {
                                             display: block;
+    box-sizing: border-box !important;
                                             padding: 18px 30px;
                                           }
 
@@ -298,10 +301,10 @@ table {
                                           </style>
                                           <!--[endif]-->
 
-                                          <table class="button m-m-a" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; text-align: center; margin-right:0; margin-left: auto;">
+                                          <table role="presentation" class="button m-m-a" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; text-align: center; margin-right:0; margin-left: auto;">
                                             <tbody><tr>
                                               <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 0;">
-                                                <table style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
+                                                <table role="presentation" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
                                                   <tbody><tr>
                                                     <td class="fallback" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 18px 30px; background: #1352DE; border-radius: 25px;">
                                                       <a href="{{link-view-quote}}&amp;cmpid=emc-tgdirect-us-en-fulfillment-savequote" style="font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; color: #fff; text-decoration: none; background: #1352DE; border-radius: 25px;">Buy Now</a>
@@ -321,7 +324,7 @@ table {
                               </tbody></table>
 
 
-                              <table class="subhead" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center;">
+                              <table role="presentation" class="subhead" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center;">
                                 <tr>
                                   <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px 0; font-size: 12px; font-style: italic; padding-top: 30px; text-align: center; color: #343741;">Quoted price for plan includes both insurance premium and fee for travel assistance services</td>
                                 </tr>
@@ -329,14 +332,14 @@ table {
 
 
 
-                              <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left;">
+                              <table role="presentation" class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left;">
                                 <tr>
                                   <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; padding-top: 30px;">Quote Breakdown</td>
                                 </tr>
                               </table>
 
 
-                              <table style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; border-top: 1px solid #DCDCDC; color: #343741;">
+                              <table role="presentation" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; border-top: 1px solid #DCDCDC; color: #343741;">
                                       <tbody>
                                       <tr>
                                         <td style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 50%; margin: 0 auto; line-height: 1.3; font-size: 16px;font-weight: bold; padding-top: 10px;">Base Plan Cost</td>
@@ -367,12 +370,12 @@ table {
 
                                     </tbody></table>
                                 
-								<table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left;"
+								<table role="presentation" class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left;"
                                 <tr>
                                   <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; padding-top: 30px;">Early Purchase Reminder</td>
                                 </tr>
                               </table>
-                              <table style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; border-top: 1px solid #DCDCDC; color: #343741;">
+                              <table role="presentation" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; border-top: 1px solid #DCDCDC; color: #343741;">
                                       <tbody>
                                                                           {{has-any-optional-and-promotional-packages::visible::start}}
                                                                           
@@ -390,14 +393,14 @@ table {
                                                                           
                                                                           </tbody></table>
 								
-                                    <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left;">
+                                    <table role="presentation" class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left;">
                                 <tr>
                                   <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; padding-top: 30px;">Trip Details</td>
                                 </tr>
                               </table>
 
 
-                              <table style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; border-top: 1px solid #DCDCDC; color: #343741;">
+                              <table role="presentation" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; border-top: 1px solid #DCDCDC; color: #343741;">
                                       <tbody>
                                       <tr>
                                         <td style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 50%; margin: 0 auto; line-height: 1.3; font-size: 16px;font-weight: bold; padding-top: 10px;">Destination:</td>
@@ -437,14 +440,14 @@ table {
 
 
 
-                        <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center;">
+                        <table role="presentation" class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center;">
                           <tr>
                             <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px 0; font-size: 24px; font-weight: bold; color: #001871;">Questions about your quote?</td>
                           </tr>
                         </table>
 
 
-                        <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
+                        <table role="presentation" class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
                           <tr>
                             <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 0; text-align: center;">
                               If you have any questions contact our World Service Center at:
@@ -452,7 +455,7 @@ table {
                           </tr>
                         </table>
 
-                        <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center;">
+                        <table role="presentation" class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center;">
                           <tr>
                             <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px 0; font-size: 20px; font-weight: bold; color: #1352DE;"><img style="width: 14px; height: 14px; padding-right: 5px;" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/Phone@2x.png" alt="phone icon">1-800-826-4919</td>
                           </tr>
@@ -466,25 +469,25 @@ table {
                     </tr>
                   </table>
 
-                  <table class="section" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; background: #001871; color: #fff; width: 100%;">
+                  <table role="presentation" class="section" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; background: #001871; color: #fff; width: 100%;">
                     <tbody><tr>
                       <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 0;">
                         <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
-                        <table class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
+                        <table role="presentation" class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
                           <tbody><tr>
                             <td class="col-2" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: middle; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 200px;">
-                              <table style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%;">
+                              <table role="presentation" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%;">
                                 <tbody><tr>
                                   <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 20px 50px;">
                                     <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
                                     
 
-                                    <table class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left;">
+                                    <table role="presentation" class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: left;">
                                       <tbody><tr>
                                         <td class="spacer m-ta-c" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; line-height: 1.3; color: #fff;">Follow us!<br>
-                                        <a href="https://www.facebook.com/travelguard"><img width="19" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/fb-logo-white.png" style="border: 0; outline: none; display: inline-block; margin: auto; width: 25px; padding-right: 5px; padding-top: 5px;"></a>
-                                        <a href="https://www.instagram.com/travelguard/"><img width="19" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/instagram-white@2x.png" style="border: 0; outline: none; display: inline-block; margin: auto; width: 25px; padding-right: 5px; padding-top: 5px;"></a>
-                                        <a href="https://www.youtube.com/c/travelguard"><img width="19" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/youtube@2x.png" style="border: 0; outline: none; display: inline-block; margin: auto; width: 25px; padding-right: 0; padding-top: 5px;"></a>
+                                        <a href="https://www.facebook.com/travelguard"><img alt="Facebook" width="19" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/fb-logo-white.png" style="border: 0; outline: none; display: inline-block; margin: auto; width: 25px; padding-right: 5px; padding-top: 5px;"></a>
+                                        <a href="https://www.instagram.com/travelguard/"><img alt="Instagram" width="19" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/instagram-white@2x.png" style="border: 0; outline: none; display: inline-block; margin: auto; width: 25px; padding-right: 5px; padding-top: 5px;"></a>
+                                        <a href="https://www.youtube.com/c/travelguard"><img alt="YouTube" width="19" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/youtube@2x.png" style="border: 0; outline: none; display: inline-block; margin: auto; width: 25px; padding-right: 0; padding-top: 5px;"></a>
                                       </td>
                                       </tr>
                                     </tbody></table>
@@ -497,16 +500,16 @@ table {
                         </tbody></table>
                       </td>
                       <td class="col-2 mobile-none" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 400px;">
-                        <table style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%;">
+                        <table role="presentation" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%;">
                           <tbody><tr>
                             <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 0;">
                               <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
                               
 
-                              <table class="img-2col" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center;">
+                              <table role="presentation" class="img-2col" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; text-align: center;">
                                 <tbody><tr>
                                   <td class="spacer" style="margin: 0; border: 0; font-size: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 0;">
-                                    <img width="400" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/straight-progress-teal-faded@2x.png" style="border: 0; outline: none; display: block; margin: auto; width: 400px;">
+                                    <img alt="" width="400" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/straight-progress-teal-faded@2x.png" style="border: 0; outline: none; display: block; margin: auto; width: 400px;">
                                   </td>
                                 </tr>
                               </tbody></table>
@@ -519,20 +522,20 @@ table {
                     </tr>
                   </tbody></table>
 
-                  <table class="section" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; background: #00114F; color: #fff; width: 100%;">
+                  <table role="presentation" class="section" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; background: #00114F; color: #fff; width: 100%;">
                     <tbody><tr>
                       <td style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 0;">
                         <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
 
-                        <table class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
+                        <table role="presentation" class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif;">
                           <tr>
                             <td class="col-1" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 30px; width: 600px;">
                               <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
 
-                              <table class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
+                              <table role="presentation" class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
                                 <tr>
                                   <td class="spacer m-ta-c" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding-bottom: 0;">
-                                    <img width="19" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/Outlined-03-Communication-Chat@2x.png" style="border: 0; outline: none; display: inline-block; margin: auto; width: 19px; padding-right: 10px; ">How did we do? <a style="color: #fff; text-decoration: underline;" href="https://www.travelguard.com/o/write-a-review?cmpid=emc-tgdirect-us-en-fulfillment-savequote">Leave us a review!</a>
+                                    <img alt="Chat icon" width="19" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/Outlined-03-Communication-Chat@2x.png" style="border: 0; outline: none; display: inline-block; margin: auto; width: 19px; padding-right: 10px; ">How did we do? <a style="color: #fff; text-decoration: underline;" href="https://www.travelguard.com/o/write-a-review?cmpid=emc-tgdirect-us-en-fulfillment-savequote">Leave us a review!</a>
                                   </td>
                                 </tr>
                               </table>
@@ -572,7 +575,7 @@ table {
                   </td>
                 </tr>
               </table>
-              <table class="footer" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; color: #343741;">
+              <table role="presentation" class="footer" style="border-collapse: collapse; border-spacing: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; width: 100%; color: #343741;">
                 <tr>
                   <td style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; padding: 16px; font-size: 10px;">
                     <sup>1</sup> Policy information is only accessible via the above link for one year past your travel return date. <br>

@@ -38,7 +38,7 @@
 # jetstar/nz/en/post-trip.html
 # jetstar/nz/en/pre-trip.html
 # jetstar/sg/en/policy-confirmation-redesign.html
-# jetstar/sg/en/policy-confirmation.html
+jetstar/sg/en/policy-confirmation.html
 
 # --- qantas/ (24 files) ---
 # qantas/au/en/amt-expiry.html

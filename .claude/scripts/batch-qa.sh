@@ -210,7 +210,9 @@ while IFS= read -r FILE_PATH; do
   fi
 
   # --- 10. Tables missing role="presentation" ---
-  TABLES_NO_ROLE=$(echo "$CONTENT" | grep -Pon '<table\b(?![^>]*role="presentation")[^>]*>' | head -5 || true)
+  # Strip CSS comments (/* ... */) and HTML comments to avoid false positives from comment text
+  STRIPPED_CONTENT=$(echo "$CONTENT" | sed '/\/\*/,/\*\//d' | sed '/<!--/,/-->/{ /<!--.*-->/!d; }')
+  TABLES_NO_ROLE=$(echo "$STRIPPED_CONTENT" | grep -Pon '<table\b(?![^>]*role="presentation")[^>]*>' | head -5 || true)
   if [[ -n "$TABLES_NO_ROLE" ]]; then
     COUNT=$(echo "$TABLES_NO_ROLE" | wc -l)
     FILE_ISSUES+=("Missing role=presentation ($COUNT tables)")
