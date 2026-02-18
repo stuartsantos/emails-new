@@ -185,6 +185,20 @@ if [[ "$HAS_DISPLAY_BLOCK" -gt 0 && "$HAS_BOX_SIZING" -eq 0 ]]; then
 fi
 
 # ---------------------------------------------------------------------------
+# 10. Preheader missing &zwnj;&nbsp; padding
+#     The hidden preheader div should contain &zwnj;&nbsp; repeated ~20 times
+#     to prevent email clients from pulling body content into preview snippet.
+# ---------------------------------------------------------------------------
+# Find preheader divs (display:none with max-height:0 — standard preheader pattern)
+PREHEADER_DIV=$(echo "$CONTENT" | grep -Pzon '(?s)<div[^>]*display:\s*none[^>]*max-height:\s*0[^>]*>.*?</div>' 2>/dev/null | tr -d '\0' || true)
+if [[ -n "$PREHEADER_DIV" ]]; then
+  HAS_ZWNJ=$(echo "$PREHEADER_DIV" | grep -c 'zwnj' || true)
+  if [[ "$HAS_ZWNJ" -eq 0 ]]; then
+    ISSUES+=("MISSING PREHEADER PADDING — preheader div should include &zwnj;&nbsp; padding (20 repetitions) after text to prevent email clients from pulling body content into preview snippet.")
+  fi
+fi
+
+# ---------------------------------------------------------------------------
 # Report results
 # ---------------------------------------------------------------------------
 if [[ ${#ISSUES[@]} -eq 0 ]]; then

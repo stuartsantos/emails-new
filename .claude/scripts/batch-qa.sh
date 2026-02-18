@@ -110,6 +110,7 @@ CATEGORY_COUNTS=(
   [mso_mismatch]=0
   [env_urls]=0
   [mobile_boxsizing]=0
+  [missing_preheader_padding]=0
 )
 
 # Temp file for per-file results
@@ -246,6 +247,16 @@ while IFS= read -r FILE_PATH; do
     CATEGORY_COUNTS[mobile_boxsizing]=$(( ${CATEGORY_COUNTS[mobile_boxsizing]} + 1 ))
   fi
 
+  # --- 14. Preheader missing &zwnj;&nbsp; padding ---
+  PREHEADER_DIV=$(echo "$CONTENT" | grep -Pzon '(?s)<div[^>]*display:\s*none[^>]*max-height:\s*0[^>]*>.*?</div>' 2>/dev/null | tr -d '\0' || true)
+  if [[ -n "$PREHEADER_DIV" ]]; then
+    HAS_ZWNJ=$(echo "$PREHEADER_DIV" | grep -c 'zwnj' || true)
+    if [[ "$HAS_ZWNJ" -eq 0 ]]; then
+      FILE_ISSUES+=("Missing preheader &zwnj;&nbsp; padding")
+      CATEGORY_COUNTS[missing_preheader_padding]=$(( ${CATEGORY_COUNTS[missing_preheader_padding]} + 1 ))
+    fi
+  fi
+
   # --- Tally ---
   NUM_ISSUES=${#FILE_ISSUES[@]}
   TOTAL_ISSUES=$(( TOTAL_ISSUES + NUM_ISSUES ))
@@ -305,6 +316,7 @@ PRIORITY_MAP=(
   [mso_mismatch]="HIGH"
   [env_urls]="HIGH"
   [mobile_boxsizing]="LOW"
+  [missing_preheader_padding]="LOW"
 )
 
 declare -A LABEL_MAP
@@ -322,6 +334,7 @@ LABEL_MAP=(
   [mso_mismatch]="Mismatched MSO conditionals"
   [env_urls]="UAT/QA environment URLs"
   [mobile_boxsizing]="Missing box-sizing for mobile"
+  [missing_preheader_padding]="Missing preheader &zwnj;&nbsp; padding"
 )
 
 # Sort by count

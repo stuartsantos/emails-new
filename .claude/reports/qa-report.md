@@ -1,7 +1,7 @@
 # Email Template QA Report
 
 **Scanned:** all brands (95 templates)
-**Date:** 2026-02-17 19:24 UTC
+**Date:** 2026-02-17 21:37 UTC
 **Pass:** 42 | **Warn:** 52 | **Fail:** 1 | **Total issues:** 59
 
 ## Summary by Issue Type
