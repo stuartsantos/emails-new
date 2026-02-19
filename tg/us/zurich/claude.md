@@ -235,7 +235,9 @@ These assets are hosted on the Travel Guard website and should be used across al
 - TikTok: `https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/tiktok@2x.png` (28×28)
 
 **Icons - Navy (#003d6e):**
+- Phone (small, 18×18): `https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/icon-phone.png`
 - Phone 24/7: `https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/icon-phone-24.png` (52×54)
+- Quote: `https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/icon-quote.png` (48px)
 - Send/paper airplane: `https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/Send@2x.png` (20px)
 - Education: `https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/education@2x.png` (28px)
 - Play: `https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/Play@2x.png` (12px)
@@ -263,8 +265,6 @@ These assets are hosted on the Travel Guard website and should be used across al
 **Assets still using local paths** (no hosted equivalent available):
 - Hero images (email-specific)
 - `logo-travel-guard-color.png`
-- `icon-phone.png` (small phone icon)
-- `icon-quote.png` (navy quote icon)
 - `icon-shield.png`
 - `icon-ship-cyan.png`, `icon-ship-navy.png`
 - Content images (`img-assistance.jpg`, `img-packing.jpg`, `img-picking-plan.png`)
