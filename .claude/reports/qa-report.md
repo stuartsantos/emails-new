@@ -1,8 +1,8 @@
 # Email Template QA Report
 
 **Scanned:** all brands (95 templates)
-**Date:** 2026-02-19 18:14 UTC
-**Pass:** 47 | **Warn:** 47 | **Fail:** 1 | **Total issues:** 54
+**Date:** 2026-02-19 20:40 UTC
+**Pass:** 50 | **Warn:** 44 | **Fail:** 1 | **Total issues:** 51
 
 ## Summary by Issue Type
 
@@ -11,7 +11,7 @@
 | AIG branding references | 40 | HIGH |
 | UAT/QA environment URLs | 5 | HIGH |
 | @aig.com email domains | 5 | HIGH |
-| Relative image paths | 4 | MED |
+| Relative image paths | 1 | MED |
 
 ## Results by Brand
 
@@ -54,7 +54,7 @@
 ### row/ (29 files: 29 pass, 0 warn, 0 fail)
 
 
-### tg/ (32 files: 14 pass, 18 warn, 0 fail)
+### tg/ (32 files: 17 pass, 15 warn, 0 fail)
 
 - ⚠️ `tg/admin/us/en/policy-confirmation.html` — AIG branding (L14,22,23,24,184)
 - ⚠️ `tg/admin/us/en/save-quote.html` — AIG branding (L14,22,23,24)
@@ -70,10 +70,7 @@
 - ⚠️ `tg/sg/en/cancel.html` — AIG branding (L14,22,23,24)
 - ⚠️ `tg/sg/en/policy-confirmation-new.html` — AIG branding (L14,22,23,24)
 - ⚠️ `tg/sg/en/policy-confirmation.html` — AIG branding (L14,22,23,24)
-- ⚠️ `tg/us/zurich/fulfillment/two-month-followup.html` — Relative img path (1)
-- ⚠️ `tg/us/zurich/fulfillment/two-week-post-trip.html` — Relative img path (5)
-- ⚠️ `tg/us/zurich/fulfillment/two-year.html` — Relative img path (5)
-- ⚠️ `tg/us/zurich/seasonal-update/cruise-season-2026.html` — Relative img path (5)
+- ⚠️ `tg/us/zurich/fulfillment/two-week-post-trip.html` — Relative img path (1)
 
 ### united/ (4 files: 1 pass, 2 warn, 1 fail)
 
