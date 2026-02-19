@@ -207,11 +207,14 @@ All 6 customer journey emails have been built from Figma designs:
 
 ### Image Assets
 All images stored in `img/` folder:
-- **Logos**: `logo-travel-guard-color.png`, `logo-travel-guard-white.png` (converted from SVG with CSS variables replaced)
-- **Hero images**: `hero-baggage.jpg`, `hero-medical.jpg`, `hero-trip-can.jpg`, `hero-12month.jpg`, `hero-18month.jpg`, `hero-2year.jpg`, `hero-cruise.jpg`, `hero-cruise-day.png`, `hero-travel-tips.png`, `hero-zurich-classic.jpg`, `email-hero_12month-followup.png`, `email-hero_18month-followup.png`, `email-hero_24month-followup.png`, `saved-quote-followup-hero.jpg`, `hero-two-week-post-trip.jpg`, `hero-two-month-followup.jpg`
-- **Icons**: `icon-phone.png`, `icon-phone-24.png`, `icon-quote.png`, `icon-quote-green.png`, `icon-review.png`, `icon-shield.png`, `icon-star.png`, `icon-send.png`, `icon-send-green.png`, `icon-education.png`, `icon-play.png`, `icon-facebook.png`, `icon-instagram.png`, `icon-youtube.png`, `icon-tiktok.png`, `icon-person.png`, `icon-review-trip.png`, `icon-claim-status.png`, `icon-next-trip.png`
+- **Logos**: `logo-travel-guard-color.png`, `logo-travel-guard-color-new.png`, `logo-travel-guard-white.png` (converted from SVG with CSS variables replaced)
+- **Hero images**: `hero-baggage.jpg`, `hero-medical.jpg`, `hero-trip-can.jpg`, `hero-cruise.jpg`, `hero-cruise-day-02-26.jpg`, `hero-cruise-day-02-26.png`, `hero-travel-tips-02-26.png`, `hero-zurich-classic.jpg`, `email-hero_12month-followup.png`, `email-hero_18month-followup.png`, `email-hero_24month-followup.png`, `saved-quote-followup-hero.jpg`, `March-2026-Travel-Tips.png`
+- **Hero images (missing — need Figma export)**: `hero-two-week-post-trip.jpg`, `hero-two-month-followup.jpg`
+- **Icons**: `icon-phone.png`, `icon-phone-24.png`, `icon-quote.png`, `icon-quote-green.png`, `icon-review.png`, `icon-shield.png`, `icon-star.png`, `icon-send.png`, `icon-send-green.png`, `icon-education.png`, `icon-play.png`, `icon-facebook.png`, `icon-instagram.png`, `icon-youtube.png`, `icon-tiktok.png`, `icon-person.png`, `icon-chat-1.png`, `icon-chat-2.png`
+- **Icons (missing — need Figma export)**: `icon-review-trip.png`, `icon-claim-status.png`, `icon-next-trip.png`
 - **Decorative**: `plane-border.png` (teal arrow progress bar for save-quote-followup)
-- **Content images**: `img-assistance.jpg`, `img-packing.jpg`, `img-picking-plan.png`, `img-golf-trip.jpg`, `video-thumbnail.jpg`, `video-thumbnail-tips.png`, `img-destination-hub.jpg`
+- **Content images**: `img-assistance.jpg`, `img-packing.jpg`, `img-picking-plan.png`, `img-golf-trip.jpg`, `golf-travel-insurance.jpg`, `video-thumbnail-tips.png`, `what-is-travel-ins-vid.jpg`
+- **Content images (missing — need Figma export)**: `img-destination-hub.jpg`
 
 ### Color-Specific Icon Variants
 Some emails require icons in specific accent colors:
@@ -221,8 +224,9 @@ Some emails require icons in specific accent colors:
 ### Hosted Reusable Assets (travelguard.com CDN)
 These assets are hosted on the Travel Guard website and should be used across all emails where applicable. Use these URLs instead of local `../img/` paths for production emails.
 
-**Logo:**
+**Logos:**
 - White logo: `https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/logo-travel-guard-white.png`
+- Color logo (blue): `https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/travel-guard-logo-blue.png` (238px wide — used in newer fulfillment templates; older 6-mo templates mistakenly use `documents.travelguard.com` subdomain)
 
 **Social Media Icons** (use in all emails):
 - Facebook: `https://www.travelguard.com/content/dam/travelguard/us/images/email/shared/icon-fb.png` (30×30)
@@ -300,11 +304,13 @@ These assets are hosted on the Travel Guard website and should be used across al
 - [ ] **six-month-bag.html**: Request hero background image from UX designer. The Figma design has a background image in the hero area that isn't surfacing as an exportable image asset.
 - [x] **save-quote-followup.html**: Hero beach image (`hero-save-quote.jpg`) and person icon (`icon-person.png`) exported from Figma
 - [ ] **save-quote-followup.html**: Progress arrow (`plane-border.png`) needs refinement — current image doesn't perfectly match Figma design. Follow up with UX designer for a polished version.
+- [x] **save-quote-followup.html**: Fix Instagram social link — was pointing to `tikitheturtle`, corrected to `travelguard`
 - [x] **twelve-month.html**: Composed header image added (`email-hero_12month-followup.png`)
 - [x] **eighteen-month.html**: Composed header image added (`email-hero_18month-followup.png`)
 - [x] **two-year.html**: Composed CTA box image added (`email-hero_24month-followup.png`)
-- [ ] **two-week-post-trip.html**: Export 5 images from Figma: `hero-two-week-post-trip.jpg`, `icon-review-trip.png`, `icon-claim-status.png`, `icon-next-trip.png`, `img-destination-hub.jpg`
-- [ ] **two-month-followup.html**: Export hero image from Figma: `hero-two-month-followup.jpg`
+- [ ] **two-week-post-trip.html**: 5 images still missing from `img/` folder — need to export from Figma: `hero-two-week-post-trip.jpg`, `icon-review-trip.png`, `icon-claim-status.png`, `icon-next-trip.png`, `img-destination-hub.jpg`
+- [ ] **two-month-followup.html**: Hero image still missing from `img/` folder — need to export from Figma: `hero-two-month-followup.jpg`
+- [x] **six-month-bag.html, six-month-med.html, six-month-trip-can.html**: Updated image URLs from old `documents.travelguard.com` subdomain to `www.travelguard.com`. Affected assets: logo, hero images, and `icon-quote.png` in six-month-bag.
 
 ### Recent Fixes (Feb 2026)
 
