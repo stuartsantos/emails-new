@@ -202,19 +202,19 @@ All 6 customer journey emails have been built from Figma designs:
 
 | Email | Status | Notes |
 |-------|--------|-------|
-| two-week-post-trip.html | Complete | "Welcome back!" post-trip email, two-column hero (beach image left, navy text right), 3 action cards (review trip with blue #005b94 border, claim status + next trip with teal #64c5b9 border), destination hub block, campaign: `twoweekposttrip` |
+| two-week-post-trip.html | Complete | "Welcome back!" post-trip email, two-column hero (beach image left, navy text right), 3 action cards (review trip #2167ae border, claim status #66cbe1 border, next trip #a5d069 border), destination hub inside Card 3 with #e4edf8 bg, all images CDN-hosted, campaign: `twoweekposttrip` |
 | two-month-followup.html | Complete | "Your next destination awaits..." follow-up email, #005f62 deep sea green hero (wider image 380px), teal→green gradient accent bar, #a5d069 jungle green CTAs, destination section (Italy/Thailand/Turks & Caicos with circular images, CDN-hosted), identity theft section with #9cc7e6 border + #a5d069 green accent, #e4edf8 glacier blue "Did you know?" callout, #005f62 solid footer tagline, no social section, campaign: `twomonthfollowup` |
 
 ### Image Assets
 All images stored in `img/` folder:
 - **Logos**: `logo-travel-guard-color.png`, `logo-travel-guard-color-new.png`, `logo-travel-guard-white.png` (converted from SVG with CSS variables replaced)
 - **Hero images**: `hero-baggage.jpg`, `hero-medical.jpg`, `hero-trip-can.jpg`, `hero-cruise.jpg`, `hero-cruise-day-02-26.jpg`, `hero-cruise-day-02-26.png`, `hero-travel-tips-02-26.png`, `hero-zurich-classic.jpg`, `email-hero_12month-followup.png`, `email-hero_18month-followup.png`, `email-hero_24month-followup.png`, `saved-quote-followup-hero.jpg`, `March-2026-Travel-Tips.png`
-- **Hero images (missing — need Figma export)**: `hero-two-week-post-trip.jpg`
+- **Hero images (CDN-hosted)**: `hero-two-week-post-trip.jpg`
 - **Icons**: `icon-phone.png`, `icon-phone-24.png`, `icon-quote.png`, `icon-quote-green.png`, `icon-review.png`, `icon-shield.png`, `icon-star.png`, `icon-send.png`, `icon-send-green.png`, `icon-education.png`, `icon-play.png`, `icon-facebook.png`, `icon-instagram.png`, `icon-youtube.png`, `icon-tiktok.png`, `icon-person.png`, `icon-chat-1.png`, `icon-chat-2.png`
-- **Icons (missing — need Figma export)**: `icon-review-trip.png`, `icon-claim-status.png`, `icon-next-trip.png`
+- **Icons (CDN-hosted)**: `icon-review-trip.png`, `icon-claim-status.png`, `icon-next-trip.png`
 - **Decorative**: `plane-border.png` (teal arrow progress bar for save-quote-followup)
 - **Content images**: `img-assistance.jpg`, `img-packing.jpg`, `img-picking-plan.png`, `img-golf-trip.jpg`, `golf-travel-insurance.jpg`, `video-thumbnail-tips.png`, `what-is-travel-ins-vid.jpg`
-- **Content images (missing — need Figma export)**: `img-destination-hub.jpg`
+- **Content images (CDN-hosted)**: `img-destination-hub.jpg`
 
 ### Color-Specific Icon Variants
 Some emails require icons in specific accent colors:
@@ -261,6 +261,7 @@ These assets are hosted on the Travel Guard website and should be used across al
 - `fulfillment/two-year.html` ✓
 - `seasonal-update/cruise-season-2026.html` ✓
 - `fulfillment/two-month-followup.html` ✓ (all images CDN-hosted including hero)
+- `fulfillment/two-week-post-trip.html` ✓ (all images CDN-hosted)
 
 **Assets still using local paths** (no hosted equivalent available):
 - Hero images (email-specific)
@@ -308,7 +309,7 @@ These assets are hosted on the Travel Guard website and should be used across al
 - [x] **twelve-month.html**: Composed header image added (`email-hero_12month-followup.png`)
 - [x] **eighteen-month.html**: Composed header image added (`email-hero_18month-followup.png`)
 - [x] **two-year.html**: Composed CTA box image added (`email-hero_24month-followup.png`)
-- [ ] **two-week-post-trip.html**: 5 images still missing from `img/` folder — need to export from Figma: `hero-two-week-post-trip.jpg`, `icon-review-trip.png`, `icon-claim-status.png`, `icon-next-trip.png`, `img-destination-hub.jpg`
+- [x] **two-week-post-trip.html**: All images now CDN-hosted (hero, icons, destination hub). Template updated to match Figma design (border colors, font sizes, card structure, gradient).
 - [x] **two-month-followup.html**: Hero image updated on CDN; template aligned to Figma design (colors, fonts, layout, removed social section)
 - [x] **six-month-bag.html, six-month-med.html, six-month-trip-can.html**: Updated image URLs from old `documents.travelguard.com` subdomain to `www.travelguard.com`. Affected assets: logo, hero images, and `icon-quote.png` in six-month-bag.
 
