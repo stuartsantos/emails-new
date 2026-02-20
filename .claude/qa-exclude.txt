@@ -107,9 +107,9 @@ jetstar/sg/en/policy-confirmation.html
 # tg/ca/en/policy-confirmation.html
 # tg/ca/en/post-trip.html
 # tg/ca/en/save-quote.html
-# tg/it/it/policy-confirmation.html
-# tg/my/en/cancel.html
-# tg/my/en/policy-confirmation.html
+tg/it/it/policy-confirmation.html
+tg/my/en/cancel.html
+tg/my/en/policy-confirmation.html
 # tg/sg/en/cancel.html
 # tg/sg/en/policy-confirmation-new.html
 # tg/sg/en/policy-confirmation.html

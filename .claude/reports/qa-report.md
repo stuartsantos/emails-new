@@ -1,17 +1,16 @@
 # Email Template QA Report
 
-**Scanned:** all brands (95 templates)
-**Date:** 2026-02-19 20:40 UTC
-**Pass:** 50 | **Warn:** 44 | **Fail:** 1 | **Total issues:** 51
+**Scanned:** all brands (92 templates)
+**Date:** 2026-02-20 01:58 UTC
+**Pass:** 51 | **Warn:** 40 | **Fail:** 1 | **Total issues:** 44
 
 ## Summary by Issue Type
 
 | Issue | Files Affected | Priority |
 |-------|---------------|----------|
-| AIG branding references | 40 | HIGH |
+| AIG branding references | 37 | HIGH |
 | UAT/QA environment URLs | 5 | HIGH |
-| @aig.com email domains | 5 | HIGH |
-| Relative image paths | 1 | MED |
+| @aig.com email domains | 2 | HIGH |
 
 ## Results by Brand
 
@@ -54,7 +53,7 @@
 ### row/ (29 files: 29 pass, 0 warn, 0 fail)
 
 
-### tg/ (32 files: 17 pass, 15 warn, 0 fail)
+### tg/ (29 files: 18 pass, 11 warn, 0 fail)
 
 - ⚠️ `tg/admin/us/en/policy-confirmation.html` — AIG branding (L14,22,23,24,184)
 - ⚠️ `tg/admin/us/en/save-quote.html` — AIG branding (L14,22,23,24)
@@ -64,13 +63,9 @@
 - ⚠️ `tg/ca/en/policy-confirmation.html` — AIG branding (L457,457,476,476)
 - ⚠️ `tg/ca/en/post-trip.html` — AIG branding (L14,22,23,24,632)
 - ⚠️ `tg/ca/en/save-quote.html` — AIG branding (L14,22,23,24)
-- ⚠️ `tg/it/it/policy-confirmation.html` — AIG branding (L14,22,23,24,147);@aig.com email (L278,278,282,282,288)
-- ⚠️ `tg/my/en/cancel.html` — AIG branding (L14,22,23,24,210);@aig.com email (L214,214)
-- ⚠️ `tg/my/en/policy-confirmation.html` — AIG branding (L14,22,23,24,184);@aig.com email (L278,278,283,283,287)
 - ⚠️ `tg/sg/en/cancel.html` — AIG branding (L14,22,23,24)
 - ⚠️ `tg/sg/en/policy-confirmation-new.html` — AIG branding (L14,22,23,24)
 - ⚠️ `tg/sg/en/policy-confirmation.html` — AIG branding (L14,22,23,24)
-- ⚠️ `tg/us/zurich/fulfillment/two-week-post-trip.html` — Relative img path (1)
 
 ### united/ (4 files: 1 pass, 2 warn, 1 fail)
 
