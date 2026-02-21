@@ -1,15 +1,15 @@
 # Email Template QA Report
 
 **Scanned:** all brands (92 templates)
-**Date:** 2026-02-20 01:58 UTC
-**Pass:** 51 | **Warn:** 40 | **Fail:** 1 | **Total issues:** 44
+**Date:** 2026-02-21 05:43 UTC
+**Pass:** 51 | **Warn:** 40 | **Fail:** 1 | **Total issues:** 45
 
 ## Summary by Issue Type
 
 | Issue | Files Affected | Priority |
 |-------|---------------|----------|
 | AIG branding references | 37 | HIGH |
-| UAT/QA environment URLs | 5 | HIGH |
+| UAT/QA environment URLs | 6 | HIGH |
 | @aig.com email domains | 2 | HIGH |
 
 ## Results by Brand
@@ -18,7 +18,7 @@
 
 - ⚠️ `expedia/ca/en/policy-confirmation.html` — UAT/QA env URL (L254)
 - ⚠️ `expedia/ca/fr/policy-confirmation.html` — UAT/QA env URL (L254)
-- ⚠️ `expedia/mx/es/policy-confirmation.html` — AIG branding (L326)
+- ⚠️ `expedia/mx/es/policy-confirmation.html` — AIG branding (L326);UAT/QA env URL (L257)
 - ⚠️ `expedia/nz/en/policy-confirmation.html` — UAT/QA env URL (L258,332)
 - ⚠️ `expedia/sg/en/policy-confirmation.html` — UAT/QA env URL (L258,276,308)
 
@@ -32,7 +32,7 @@
 - ⚠️ `jetstar/nz/en/policy-confirmation.html` — AIG branding (L5,14,22,23,24)
 - ⚠️ `jetstar/nz/en/post-trip.html` — AIG branding (L5,14,22,23,24)
 - ⚠️ `jetstar/nz/en/pre-trip.html` — AIG branding (L5,14,22,23,24)
-- ⚠️ `jetstar/sg/en/policy-confirmation-redesign.html` — AIG branding (L14,22,23,24,226);@aig.com email (L351,351)
+- ⚠️ `jetstar/sg/en/policy-confirmation-redesign.html` — AIG branding (L14,22,23,24,226);@aig.com email (L351)
 
 ### qantas/ (13 files: 0 pass, 13 warn, 0 fail)
 
@@ -60,7 +60,7 @@
 - ⚠️ `tg/agents/us/en/policy-confirmation.html` — AIG branding (L14,22,23,24,184)
 - ⚠️ `tg/agents/us/en/save-quote.html` — AIG branding (L14,22,23,24)
 - ⚠️ `tg/ca/en/annual-followup.html` — AIG branding (L14,22,23,24,830)
-- ⚠️ `tg/ca/en/policy-confirmation.html` — AIG branding (L457,457,476,476)
+- ⚠️ `tg/ca/en/policy-confirmation.html` — AIG branding (L457,476)
 - ⚠️ `tg/ca/en/post-trip.html` — AIG branding (L14,22,23,24,632)
 - ⚠️ `tg/ca/en/save-quote.html` — AIG branding (L14,22,23,24)
 - ⚠️ `tg/sg/en/cancel.html` — AIG branding (L14,22,23,24)
@@ -69,7 +69,7 @@
 
 ### united/ (4 files: 1 pass, 2 warn, 1 fail)
 
-- ❌ `united/new-policy-confirmation.html` — AIG branding (L14,22,23,24,184);@aig.com email (L258,258,263,263);UAT/QA env URL (L224,269,270)
+- ❌ `united/new-policy-confirmation.html` — AIG branding (L14,22,23,24,184);@aig.com email (L258,263);UAT/QA env URL (L224,269,270)
 - ⚠️ `united/us/en/post-trip.html` — AIG branding (L14,22,23,24,223)
 - ⚠️ `united/us/en/pre-trip.html` — AIG branding (L14,22,23,24)
 

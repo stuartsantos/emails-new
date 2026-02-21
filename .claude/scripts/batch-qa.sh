@@ -5,11 +5,13 @@
 # Scans all HTML email templates across brands and runs validation checks.
 # Produces a Markdown report with per-file results and a summary.
 #
+# Compatible with macOS bash 3.2 + BSD grep (no GNU grep -P required).
+# Uses perl for PCRE patterns instead of grep -P.
+#
 # Usage:
 #   ./batch-qa.sh                    # Scan all brands
 #   ./batch-qa.sh row                # Scan only row/
 #   ./batch-qa.sh tg/us/zurich       # Scan a specific subdirectory
-#   ./batch-qa.sh --fix-report       # Regenerate from last scan
 #
 # Output: .claude/reports/qa-report.md
 # =============================================================================
@@ -42,7 +44,6 @@ EXCLUDE_FILE="$PROJECT_DIR/.claude/qa-exclude.txt"
 EXCLUDE_LIST=()
 if [[ -f "$EXCLUDE_FILE" ]]; then
   while IFS= read -r line; do
-    # Skip comments and blank lines, trim leading whitespace
     trimmed=$(echo "$line" | sed 's/^[[:space:]]*//')
     [[ -z "$trimmed" || "$trimmed" == \#* ]] && continue
     EXCLUDE_LIST+=("$trimmed")
@@ -56,7 +57,7 @@ FILES=$(find "$SCAN_DIR" -name "*.html" \
   -not -path "*/dist/*" \
   -not -path "*responsive-modular*" \
   -not -path "*/api-testing/*" \
-  -not -path "*/.claude/*" \
+  -not -path "$SCAN_DIR/.claude/*" \
   -not -path "*/tg/*/aig/*" \
   | sort)
 
@@ -95,29 +96,48 @@ FAIL=0
 TOTAL_ISSUES=0
 
 # Issue category counters
-declare -A CATEGORY_COUNTS
-CATEGORY_COUNTS=(
-  [duplicate_class]=0
-  [aig_branding]=0
-  [aig_email]=0
-  [legacy_vars]=0
-  [missing_dark_gmail]=0
-  [dark_mode_gotcha]=0
-  [missing_body_bg]=0
-  [missing_alt]=0
-  [relative_img]=0
-  [missing_role]=0
-  [mso_mismatch]=0
-  [env_urls]=0
-  [mobile_boxsizing]=0
-  [missing_preheader_padding]=0
-)
+CAT_duplicate_class=0
+CAT_aig_branding=0
+CAT_aig_email=0
+CAT_legacy_vars=0
+CAT_missing_dark_gmail=0
+CAT_dark_mode_gotcha=0
+CAT_missing_body_bg=0
+CAT_missing_alt=0
+CAT_relative_img=0
+CAT_missing_role=0
+CAT_mso_mismatch=0
+CAT_env_urls=0
+CAT_mobile_boxsizing=0
+CAT_missing_preheader_padding=0
 
 # Temp file for per-file results
 RESULTS_TMP=$(mktemp)
 trap "rm -f $RESULTS_TMP" EXIT
 
 echo "Scanning $TOTAL templates in $SCAN_LABEL..."
+
+# ---------------------------------------------------------------------------
+# Helper: perl-based line-number grep (replaces grep -Pon)
+# Usage: pgrep_lines PATTERN "$CONTENT"
+# Output: linenum:match (like grep -Pon)
+# ---------------------------------------------------------------------------
+pgrep_lines() {
+  local pattern="$1"
+  echo "$2" | perl -sne 'if (/$pat/) { print "$.:$&\n" }' -- -pat="$pattern" 2>/dev/null | head -5
+}
+
+# Helper: perl-based count (replaces grep -Poc)
+pgrep_count() {
+  local pattern="$1"
+  echo "$2" | perl -sne '$c++ while /$pat/g; END { print $c+0 }' -- -pat="$pattern" 2>/dev/null
+}
+
+# Helper: perl-based case-insensitive line grep (replaces grep -Pion)
+pgrep_lines_i() {
+  local pattern="$1"
+  echo "$2" | perl -sne 'if (/$pat/i) { print "$.:$&\n" }' -- -pat="$pattern" 2>/dev/null | head -5
+}
 
 # ---------------------------------------------------------------------------
 # Validate each file
@@ -130,130 +150,131 @@ while IFS= read -r FILE_PATH; do
   FILE_ISSUES=()
 
   # --- 1. Duplicate class attributes ---
-  DUPES=$(echo "$CONTENT" | grep -Pon '<[^>]*\bclass="[^"]*"[^>]*\bclass="[^"]*"' | head -5 || true)
+  DUPES=$(pgrep_lines '<[^>]*\bclass="[^"]*"[^>]*\bclass="[^"]*"' "$CONTENT")
   if [[ -n "$DUPES" ]]; then
     LINES=$(echo "$DUPES" | cut -d: -f1 | tr '\n' ', ' | sed 's/,$//')
     FILE_ISSUES+=("Duplicate class attrs (L$LINES)")
-    CATEGORY_COUNTS[duplicate_class]=$(( ${CATEGORY_COUNTS[duplicate_class]} + 1 ))
+    CAT_duplicate_class=$(( CAT_duplicate_class + 1 ))
   fi
 
   # --- 2. AIG branding ---
-  AIG_REFS=$(echo "$CONTENT" | grep -Pion '\bAIG\b(?!\s*Travel\s*Guard)' | head -5 || true)
+  AIG_REFS=$(pgrep_lines_i '\bAIG\b(?!\s*Travel\s*Guard)' "$CONTENT")
   if [[ -n "$AIG_REFS" ]]; then
     LINES=$(echo "$AIG_REFS" | cut -d: -f1 | tr '\n' ', ' | sed 's/,$//')
     FILE_ISSUES+=("AIG branding (L$LINES)")
-    CATEGORY_COUNTS[aig_branding]=$(( ${CATEGORY_COUNTS[aig_branding]} + 1 ))
+    CAT_aig_branding=$(( CAT_aig_branding + 1 ))
   fi
 
   # --- 3. AIG email domains ---
-  AIG_EMAILS=$(echo "$CONTENT" | grep -Pon '@aig\.com' | head -5 || true)
+  AIG_EMAILS=$(pgrep_lines '@aig\.com' "$CONTENT")
   if [[ -n "$AIG_EMAILS" ]]; then
     LINES=$(echo "$AIG_EMAILS" | cut -d: -f1 | tr '\n' ', ' | sed 's/,$//')
     FILE_ISSUES+=("@aig.com email (L$LINES)")
-    CATEGORY_COUNTS[aig_email]=$(( ${CATEGORY_COUNTS[aig_email]} + 1 ))
+    CAT_aig_email=$(( CAT_aig_email + 1 ))
   fi
 
-  # --- 4. Legacy {Variable} format (strip {{handlebars}} first, then match {SingleBrace}) ---
-  OLD_VARS=$(echo "$CONTENT" | sed 's/{{[^}]*}}//g' | grep -Pon '\{[A-Z][a-zA-Z_-]+\}' | head -5 || true)
+  # --- 4. Legacy {Variable} format ---
+  CONTENT_NO_HBS=$(echo "$CONTENT" | sed 's/{{[^}]*}}//g')
+  OLD_VARS=$(pgrep_lines '\{[A-Z][a-zA-Z_-]+\}' "$CONTENT_NO_HBS")
   if [[ -n "$OLD_VARS" ]]; then
     LINES=$(echo "$OLD_VARS" | cut -d: -f1 | tr '\n' ', ' | sed 's/,$//')
     FILE_ISSUES+=("Legacy {vars} (L$LINES)")
-    CATEGORY_COUNTS[legacy_vars]=$(( ${CATEGORY_COUNTS[legacy_vars]} + 1 ))
+    CAT_legacy_vars=$(( CAT_legacy_vars + 1 ))
   fi
 
   # --- 5/6/7. Dark mode checks ---
-  HAS_DARK_MQ=$(echo "$CONTENT" | grep -c 'prefers-color-scheme:\s*dark' || true)
+  HAS_DARK_MQ=$(echo "$CONTENT" | grep -c 'prefers-color-scheme' || true)
   HAS_OGSC=$(echo "$CONTENT" | grep -c '\[data-ogsc\]' || true)
 
   if [[ "$HAS_DARK_MQ" -gt 0 ]]; then
     HAS_BODY_BG=$(echo "$CONTENT" | grep -c '\.body-bg' || true)
     if [[ "$HAS_BODY_BG" -eq 0 ]]; then
       FILE_ISSUES+=("Missing .body-bg class")
-      CATEGORY_COUNTS[missing_body_bg]=$(( ${CATEGORY_COUNTS[missing_body_bg]} + 1 ))
+      CAT_missing_body_bg=$(( CAT_missing_body_bg + 1 ))
     fi
 
-    # Exclude preheader <p> elements (small font-size) — dark-text is correct there
-    BAD_DARK=$(echo "$CONTENT" | grep -Pon 'class="[^"]*\b(content-bg|dark-text)\b[^"]*"' | {
-      while IFS=: read -r linenum rest; do
-        LINE_CONTENT=$(echo "$CONTENT" | sed -n "${linenum}p")
-        if echo "$LINE_CONTENT" | grep -qP 'font-size:\s*(8|9|10|11)px.*class="dark-text"'; then
-          continue
-        fi
-        echo "${linenum}:${rest}"
-      done || true
-    } | head -3 || true)
+    # Check for .content-bg or .dark-text on content areas (not preheader small text)
+    BAD_DARK=$(echo "$CONTENT" | perl -ne '
+      if (/class="[^"]*\b(content-bg|dark-text)\b[^"]*"/) {
+        # Skip preheader small text lines
+        next if /font-size:\s*(8|9|10|11)px.*class="dark-text"/;
+        print "$.:$&\n";
+      }
+    ' 2>/dev/null | head -3 || true)
     if [[ -n "$BAD_DARK" ]]; then
       LINES=$(echo "$BAD_DARK" | cut -d: -f1 | tr '\n' ', ' | sed 's/,$//')
       FILE_ISSUES+=("Dark mode gotcha: .content-bg/.dark-text on content area (L$LINES)")
-      CATEGORY_COUNTS[dark_mode_gotcha]=$(( ${CATEGORY_COUNTS[dark_mode_gotcha]} + 1 ))
+      CAT_dark_mode_gotcha=$(( CAT_dark_mode_gotcha + 1 ))
     fi
 
     if [[ "$HAS_OGSC" -eq 0 ]]; then
       FILE_ISSUES+=("Missing Gmail dark mode [data-ogsc] selectors")
-      CATEGORY_COUNTS[missing_dark_gmail]=$(( ${CATEGORY_COUNTS[missing_dark_gmail]} + 1 ))
+      CAT_missing_dark_gmail=$(( CAT_missing_dark_gmail + 1 ))
     fi
   fi
 
   # --- 8. Missing alt attributes ---
-  MISSING_ALT=$(echo "$CONTENT" | grep -Pon '<img\b(?![^>]*\balt\s*=)[^>]*>' | head -5 || true)
+  MISSING_ALT=$(echo "$CONTENT" | perl -ne 'if (/<img\b(?![^>]*\balt\s*=)[^>]*>/) { print "$.:$&\n" }' 2>/dev/null | head -5 || true)
   if [[ -n "$MISSING_ALT" ]]; then
-    COUNT=$(echo "$MISSING_ALT" | wc -l)
+    COUNT=$(echo "$MISSING_ALT" | wc -l | tr -d ' ')
     FILE_ISSUES+=("Missing alt on $COUNT img(s)")
-    CATEGORY_COUNTS[missing_alt]=$(( ${CATEGORY_COUNTS[missing_alt]} + 1 ))
+    CAT_missing_alt=$(( CAT_missing_alt + 1 ))
   fi
 
   # --- 9. Relative image paths ---
-  REL_IMGS=$(echo "$CONTENT" | grep -Pon '<img\b[^>]*\bsrc="(?!https?://|cid:|data:)[^"]*"' | head -5 || true)
+  REL_IMGS=$(echo "$CONTENT" | perl -ne 'if (/<img\b[^>]*\bsrc="(?!https?:\/\/|cid:|data:)[^"]*"/) { print "$.:$&\n" }' 2>/dev/null | head -5 || true)
   if [[ -n "$REL_IMGS" ]]; then
-    COUNT=$(echo "$REL_IMGS" | wc -l)
+    COUNT=$(echo "$REL_IMGS" | wc -l | tr -d ' ')
     FILE_ISSUES+=("Relative img path ($COUNT)")
-    CATEGORY_COUNTS[relative_img]=$(( ${CATEGORY_COUNTS[relative_img]} + 1 ))
+    CAT_relative_img=$(( CAT_relative_img + 1 ))
   fi
 
   # --- 10. Tables missing role="presentation" ---
-  # Strip CSS comments (/* ... */) and HTML comments to avoid false positives from comment text
-  STRIPPED_CONTENT=$(echo "$CONTENT" | sed '/\/\*/,/\*\//d' | sed '/<!--/,/-->/{ /<!--.*-->/!d; }')
-  TABLES_NO_ROLE=$(echo "$STRIPPED_CONTENT" | grep -Pon '<table\b(?![^>]*role="presentation")[^>]*>' | head -5 || true)
+  # Track multi-line CSS comment blocks (/* ... */) and HTML comments (<!-- ... -->)
+  TABLES_NO_ROLE=$(echo "$CONTENT" | perl -ne '
+    if ($in_css) { $in_css = 0 if m{\*/}; next }
+    if (m{/\*} && !m{\*/}) { $in_css = 1; next }
+    if ($in_html) { $in_html = 0 if /-->/; next }
+    if (/<!--/ && !/-->/) { $in_html = 1; next }
+    if (/<table\b(?![^>]*role="presentation")[^>]*>/) { print "$.:$&\n" }
+  ' 2>/dev/null | head -5 || true)
   if [[ -n "$TABLES_NO_ROLE" ]]; then
-    COUNT=$(echo "$TABLES_NO_ROLE" | wc -l)
+    COUNT=$(echo "$TABLES_NO_ROLE" | wc -l | tr -d ' ')
     FILE_ISSUES+=("Missing role=presentation ($COUNT tables)")
-    CATEGORY_COUNTS[missing_role]=$(( ${CATEGORY_COUNTS[missing_role]} + 1 ))
+    CAT_missing_role=$(( CAT_missing_role + 1 ))
   fi
 
   # --- 11. Mismatched MSO conditionals ---
-  # Count ALL conditional opens and closes (3 variants each):
-  # Opens:  <!--[if mso]>, <!--[if !mso]><!-->, <!--[if !mso]-->
-  # Closes: <![endif]-->, <!--<![endif]-->, <!--[endif]-->
-  MSO_OPEN=$(echo "$CONTENT" | grep -Poc '<!--\[if\s+(!|gte\s+)?mso' || true)
-  MSO_CLOSE=$(echo "$CONTENT" | grep -Poc '(<!|<!--)\[endif\]-->' || true)
+  MSO_OPEN=$(pgrep_count '<!--\[if\s+(!|gte\s+)?mso' "$CONTENT")
+  MSO_CLOSE=$(pgrep_count '(<!|<!--)\[endif\]-->' "$CONTENT")
   if [[ "$MSO_OPEN" -ne "$MSO_CLOSE" ]]; then
     FILE_ISSUES+=("MSO mismatch: $MSO_OPEN opens vs $MSO_CLOSE closes")
-    CATEGORY_COUNTS[mso_mismatch]=$(( ${CATEGORY_COUNTS[mso_mismatch]} + 1 ))
+    CAT_mso_mismatch=$(( CAT_mso_mismatch + 1 ))
   fi
 
   # --- 12. UAT/QA environment URLs ---
-  ENV_URLS=$(echo "$CONTENT" | grep -Pon 'https?://[a-zA-Z0-9._-]*\.(uat|qa)\.[a-zA-Z0-9._-]+' | head -5 || true)
+  ENV_URLS=$(pgrep_lines 'https?:\/\/[a-zA-Z0-9._-]*\.(uat|qa)\.[a-zA-Z0-9._-]+' "$CONTENT")
   if [[ -n "$ENV_URLS" ]]; then
     LINES=$(echo "$ENV_URLS" | cut -d: -f1 | tr '\n' ', ' | sed 's/,$//')
     FILE_ISSUES+=("UAT/QA env URL (L$LINES)")
-    CATEGORY_COUNTS[env_urls]=$(( ${CATEGORY_COUNTS[env_urls]} + 1 ))
+    CAT_env_urls=$(( CAT_env_urls + 1 ))
   fi
 
   # --- 13. Mobile box-sizing ---
-  HAS_DISPLAY_BLOCK=$(echo "$CONTENT" | grep -c 'display:\s*block' || true)
-  HAS_BOX_SIZING=$(echo "$CONTENT" | grep -c 'box-sizing:\s*border-box' || true)
+  HAS_DISPLAY_BLOCK=$(echo "$CONTENT" | grep -c 'display:.*block' || true)
+  HAS_BOX_SIZING=$(echo "$CONTENT" | grep -c 'box-sizing:.*border-box' || true)
   if [[ "$HAS_DISPLAY_BLOCK" -gt 0 && "$HAS_BOX_SIZING" -eq 0 ]]; then
     FILE_ISSUES+=("Missing box-sizing:border-box for mobile")
-    CATEGORY_COUNTS[mobile_boxsizing]=$(( ${CATEGORY_COUNTS[mobile_boxsizing]} + 1 ))
+    CAT_mobile_boxsizing=$(( CAT_mobile_boxsizing + 1 ))
   fi
 
   # --- 14. Preheader missing &zwnj;&nbsp; padding ---
-  PREHEADER_DIV=$(echo "$CONTENT" | grep -Pzon '(?s)<div[^>]*display:\s*none[^>]*max-height:\s*0[^>]*>.*?</div>' 2>/dev/null | tr -d '\0' || true)
-  if [[ -n "$PREHEADER_DIV" ]]; then
-    HAS_ZWNJ=$(echo "$PREHEADER_DIV" | grep -c 'zwnj' || true)
-    if [[ "$HAS_ZWNJ" -eq 0 ]]; then
+  HAS_PREHEADER=$(echo "$CONTENT" | perl -0777 -ne 'print "1" if /<div[^>]*display:\s*none[^>]*max-height:\s*0[^>]*>.*?<\/div>/s' 2>/dev/null || true)
+  if [[ -n "$HAS_PREHEADER" ]]; then
+    HAS_ZWNJ=$(echo "$CONTENT" | perl -0777 -ne 'if (/<div[^>]*display:\s*none[^>]*max-height:\s*0[^>]*>(.*?)<\/div>/s) { print "1" if $1 =~ /zwnj/ }' 2>/dev/null || true)
+    if [[ -z "$HAS_ZWNJ" ]]; then
       FILE_ISSUES+=("Missing preheader &zwnj;&nbsp; padding")
-      CATEGORY_COUNTS[missing_preheader_padding]=$(( ${CATEGORY_COUNTS[missing_preheader_padding]} + 1 ))
+      CAT_missing_preheader_padding=$(( CAT_missing_preheader_padding + 1 ))
     fi
   fi
 
@@ -300,49 +321,32 @@ cat > "$REPORT_FILE" << HEADER
 |-------|---------------|----------|
 HEADER
 
-# Sort categories by count descending and write to report
-declare -A PRIORITY_MAP
-PRIORITY_MAP=(
-  [duplicate_class]="HIGH"
-  [aig_branding]="HIGH"
-  [aig_email]="HIGH"
-  [legacy_vars]="MED"
-  [missing_dark_gmail]="MED"
-  [dark_mode_gotcha]="HIGH"
-  [missing_body_bg]="MED"
-  [missing_alt]="MED"
-  [relative_img]="MED"
-  [missing_role]="LOW"
-  [mso_mismatch]="HIGH"
-  [env_urls]="HIGH"
-  [mobile_boxsizing]="LOW"
-  [missing_preheader_padding]="LOW"
-)
-
-declare -A LABEL_MAP
-LABEL_MAP=(
-  [duplicate_class]="Duplicate class attributes"
-  [aig_branding]="AIG branding references"
-  [aig_email]="@aig.com email domains"
-  [legacy_vars]="Legacy {Variable} format"
-  [missing_dark_gmail]="Missing Gmail dark mode"
-  [dark_mode_gotcha]="Dark mode .content-bg/.dark-text gotcha"
-  [missing_body_bg]="Missing .body-bg class"
-  [missing_alt]="Missing img alt attributes"
-  [relative_img]="Relative image paths"
-  [missing_role]="Missing role=presentation"
-  [mso_mismatch]="Mismatched MSO conditionals"
-  [env_urls]="UAT/QA environment URLs"
-  [mobile_boxsizing]="Missing box-sizing for mobile"
-  [missing_preheader_padding]="Missing preheader &zwnj;&nbsp; padding"
-)
-
-# Sort by count
-for key in $(for k in "${!CATEGORY_COUNTS[@]}"; do echo "${CATEGORY_COUNTS[$k]} $k"; done | sort -rn | awk '{print $2}'); do
-  COUNT=${CATEGORY_COUNTS[$key]}
-  if [[ "$COUNT" -gt 0 ]]; then
-    echo "| ${LABEL_MAP[$key]} | $COUNT | ${PRIORITY_MAP[$key]} |" >> "$REPORT_FILE"
+# Build issue summary rows: count|key|label|priority
+ISSUE_ROWS=""
+for entry in \
+  "${CAT_duplicate_class}|duplicate_class|Duplicate class attributes|HIGH" \
+  "${CAT_aig_branding}|aig_branding|AIG branding references|HIGH" \
+  "${CAT_aig_email}|aig_email|@aig.com email domains|HIGH" \
+  "${CAT_legacy_vars}|legacy_vars|Legacy {Variable} format|MED" \
+  "${CAT_missing_dark_gmail}|missing_dark_gmail|Missing Gmail dark mode|MED" \
+  "${CAT_dark_mode_gotcha}|dark_mode_gotcha|Dark mode .content-bg/.dark-text gotcha|HIGH" \
+  "${CAT_missing_body_bg}|missing_body_bg|Missing .body-bg class|MED" \
+  "${CAT_missing_alt}|missing_alt|Missing img alt attributes|MED" \
+  "${CAT_relative_img}|relative_img|Relative image paths|MED" \
+  "${CAT_missing_role}|missing_role|Missing role=presentation|LOW" \
+  "${CAT_mso_mismatch}|mso_mismatch|Mismatched MSO conditionals|HIGH" \
+  "${CAT_env_urls}|env_urls|UAT/QA environment URLs|HIGH" \
+  "${CAT_mobile_boxsizing}|mobile_boxsizing|Missing box-sizing for mobile|LOW" \
+  "${CAT_missing_preheader_padding}|missing_preheader_padding|Missing preheader zwnj padding|LOW"; do
+  CNT=$(echo "$entry" | cut -d'|' -f1)
+  if [[ "$CNT" -gt 0 ]]; then
+    ISSUE_ROWS+="${entry}"$'\n'
   fi
+done
+
+# Sort by count descending and write to report
+echo "$ISSUE_ROWS" | sed '/^$/d' | sort -t'|' -k1 -rn | while IFS='|' read -r CNT KEY LABEL PRIORITY; do
+  echo "| $LABEL | $CNT | $PRIORITY |" >> "$REPORT_FILE"
 done
 
 # Per-brand breakdown
@@ -371,7 +375,7 @@ while IFS='|' read -r STATUS REL_PATH NUM_ISSUES ISSUES; do
   fi
 
   if [[ "$STATUS" == "PASS" ]]; then
-    continue  # Only show files with issues
+    continue
   fi
 
   ICON="⚠️"
@@ -381,7 +385,6 @@ while IFS='|' read -r STATUS REL_PATH NUM_ISSUES ISSUES; do
 
 done < "$RESULTS_TMP"
 
-# Files that passed — just list the count
 cat >> "$REPORT_FILE" << FOOTER
 
 ---
@@ -404,13 +407,9 @@ echo "  Issues:   $TOTAL_ISSUES total"
 echo "========================================="
 echo ""
 
-# Top issues
 echo "Top issues:"
-for key in $(for k in "${!CATEGORY_COUNTS[@]}"; do echo "${CATEGORY_COUNTS[$k]} $k"; done | sort -rn | awk '{print $2}'); do
-  COUNT=${CATEGORY_COUNTS[$key]}
-  if [[ "$COUNT" -gt 0 ]]; then
-    printf "  %-40s %d files\n" "${LABEL_MAP[$key]}" "$COUNT"
-  fi
+echo "$ISSUE_ROWS" | sed '/^$/d' | sort -t'|' -k1 -rn | while IFS='|' read -r CNT KEY LABEL PRIORITY; do
+  printf "  %-40s %d files\n" "$LABEL" "$CNT"
 done
 
 echo ""
