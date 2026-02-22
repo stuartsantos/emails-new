@@ -94,10 +94,21 @@ If the rebase hits conflicts:
 2. Tell the user to resolve conflicts manually
 3. Stop — do not force push
 
-## 7. Summary
+## 7. Clean up merged branches
+
+Delete any local branches that have already been merged into main:
+
+```bash
+git branch --merged main --format='%(refname:short)' | grep -v '^main$' | xargs git branch -d 2>/dev/null
+```
+
+If any branches were deleted, note them in the summary. If none were found, skip silently.
+
+## 8. Summary
 
 Report back with:
 - Commit hash (short)
 - Number of files changed
 - Which docs were updated (if any)
+- Branches cleaned up (if any)
 - Push confirmation or error details
