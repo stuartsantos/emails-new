@@ -24,10 +24,24 @@
   <script>
     let extractedHtml = '';
 
+    function extractBody(raw) {
+      // Try standard JSON.parse first (Thunder Client responses)
+      try { return JSON.parse(raw).body; } catch (_) {}
+      // Fallback: extract body field directly (Postman responses with
+      // embedded JS escapes like \x22 that break JSON.parse)
+      const start = raw.indexOf('"body": "');
+      if (start === -1) return null;
+      const bodyStart = start + 9;
+      const bodyEnd = raw.lastIndexOf('",');
+      if (bodyEnd <= bodyStart) return null;
+      return raw.substring(bodyStart, bodyEnd).replace(/\\"/g, '"');
+    }
+
     function extract() {
       try {
-        const json = JSON.parse(document.getElementById('jsonInput').value);
-        extractedHtml = json.body;
+        const raw = document.getElementById('jsonInput').value;
+        extractedHtml = extractBody(raw);
+        if (!extractedHtml) throw new Error('Could not find "body" field in JSON');
         document.getElementById('preview').textContent = extractedHtml.substring(0, 500) + '...';
         document.getElementById('output').style.display = 'block';
         // Open in new tab
