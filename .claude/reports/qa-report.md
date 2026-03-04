@@ -1,18 +1,36 @@
 # Email Template QA Report
 
-**Scanned:** all brands (92 templates)
-**Date:** 2026-02-21 05:43 UTC
-**Pass:** 51 | **Warn:** 40 | **Fail:** 1 | **Total issues:** 45
+**Scanned:** all brands (101 templates)
+**Date:** 2026-03-04 17:01 UTC
+**Pass:** 78 | **Warn:** 23 | **Fail:** 0 | **Total issues:** 25
 
 ## Summary by Issue Type
 
 | Issue | Files Affected | Priority |
 |-------|---------------|----------|
-| AIG branding references | 37 | HIGH |
-| UAT/QA environment URLs | 6 | HIGH |
-| @aig.com email domains | 2 | HIGH |
+| AIG branding references | 16 | HIGH |
+| UAT/QA environment URLs | 9 | HIGH |
 
 ## Results by Brand
+
+### _api-testing/ (1 files: 1 pass, 0 warn, 0 fail)
+
+
+### admin/ (4 files: 2 pass, 2 warn, 0 fail)
+
+- ⚠️ `admin/us/en/policy-confirmation.html` — AIG branding (L184,317)
+- ⚠️ `admin/us/en/xxx-admin-save-quote-new.html` — AIG branding (L13)
+
+### agents/ (3 files: 2 pass, 1 warn, 0 fail)
+
+- ⚠️ `agents/us/en/policy-confirmation.html` — AIG branding (L184,317)
+
+### digdrct/ (12 files: 8 pass, 4 warn, 0 fail)
+
+- ⚠️ `digdrct/ca/en/annual-followup.html` — AIG branding (L830,832,834,836)
+- ⚠️ `digdrct/ca/en/policy-confirmation.html` — AIG branding (L457,476)
+- ⚠️ `digdrct/ca/en/post-trip.html` — AIG branding (L632,634,636,638)
+- ⚠️ `digdrct/us/en/policy-confirmation.html` — AIG branding (L113,238)
 
 ### expedia/ (8 files: 3 pass, 5 warn, 0 fail)
 
@@ -22,56 +40,31 @@
 - ⚠️ `expedia/nz/en/policy-confirmation.html` — UAT/QA env URL (L258,332)
 - ⚠️ `expedia/sg/en/policy-confirmation.html` — UAT/QA env URL (L258,276,308)
 
-### jetstar/ (9 files: 0 pass, 9 warn, 0 fail)
+### jetstar/ (8 files: 3 pass, 5 warn, 0 fail)
 
-- ⚠️ `jetstar/au/en/cancel.html` — AIG branding (L5,14,22,23,24)
-- ⚠️ `jetstar/au/en/policy-confirmation.html` — AIG branding (L5,14,22,23,24)
-- ⚠️ `jetstar/au/en/post-trip.html` — AIG branding (L5,14,22,23,24)
-- ⚠️ `jetstar/au/en/pre-trip.html` — AIG branding (L5,14,22,23,24)
-- ⚠️ `jetstar/nz/en/cancel.html` — AIG branding (L5,14,22,23,24)
-- ⚠️ `jetstar/nz/en/policy-confirmation.html` — AIG branding (L5,14,22,23,24)
-- ⚠️ `jetstar/nz/en/post-trip.html` — AIG branding (L5,14,22,23,24)
-- ⚠️ `jetstar/nz/en/pre-trip.html` — AIG branding (L5,14,22,23,24)
-- ⚠️ `jetstar/sg/en/policy-confirmation-redesign.html` — AIG branding (L14,22,23,24,226);@aig.com email (L351)
+- ⚠️ `jetstar/au/en/policy-confirmation.html` — UAT/QA env URL (L256)
+- ⚠️ `jetstar/au/en/post-trip.html` — AIG branding (L394)
+- ⚠️ `jetstar/au/en/pre-trip.html` — AIG branding (L535);UAT/QA env URL (L299)
+- ⚠️ `jetstar/nz/en/policy-confirmation.html` — UAT/QA env URL (L257)
+- ⚠️ `jetstar/nz/en/pre-trip.html` — UAT/QA env URL (L299)
 
-### qantas/ (13 files: 0 pass, 13 warn, 0 fail)
+### qantas/ (13 files: 9 pass, 4 warn, 0 fail)
 
-- ⚠️ `qantas/au/en/amt-expiry.html` — AIG branding (L14,22,23,24,178)
-- ⚠️ `qantas/au/en/au-revisions/amt-expiry.html` — AIG branding (L14,22,23,24)
-- ⚠️ `qantas/au/en/au-revisions/cancel.html` — AIG branding (L14,22,23,24)
-- ⚠️ `qantas/au/en/au-revisions/medical.html` — AIG branding (L14,22,23,24)
-- ⚠️ `qantas/au/en/au-revisions/policy-confirmation.html` — AIG branding (L14,22,23,24,581)
-- ⚠️ `qantas/au/en/au-revisions/pre-trip.html` — AIG branding (L14,22,23,24,567)
-- ⚠️ `qantas/au/en/au-revisions/save-quote.html` — AIG branding (L14,22,23,24,1009)
-- ⚠️ `qantas/au/en/au-revisions/void.html` — AIG branding (L14,22,23,24)
-- ⚠️ `qantas/nz/en/nz-revisions/amt-expiry.html` — AIG branding (L14,22,23,24)
-- ⚠️ `qantas/nz/en/nz-revisions/cancel.html` — AIG branding (L14,22,23,24)
-- ⚠️ `qantas/nz/en/nz-revisions/policy-confirmation.html` — AIG branding (L14,22,23,24)
-- ⚠️ `qantas/nz/en/nz-revisions/pre-trip.html` — AIG branding (L14,22,23,24)
-- ⚠️ `qantas/nz/en/nz-revisions/void.html` — AIG branding (L14,22,23,24)
+- ⚠️ `qantas/au/en/amt-expiry.html` — AIG branding (L178,207,238,354,358)
+- ⚠️ `qantas/au/en/au-revisions/policy-confirmation.html` — AIG branding (L581)
+- ⚠️ `qantas/au/en/au-revisions/pre-trip.html` — AIG branding (L567)
+- ⚠️ `qantas/au/en/au-revisions/save-quote.html` — AIG branding (L1009)
 
 ### row/ (29 files: 29 pass, 0 warn, 0 fail)
 
 
-### tg/ (29 files: 18 pass, 11 warn, 0 fail)
+### tg/ (19 files: 19 pass, 0 warn, 0 fail)
 
-- ⚠️ `tg/admin/us/en/policy-confirmation.html` — AIG branding (L14,22,23,24,184)
-- ⚠️ `tg/admin/us/en/save-quote.html` — AIG branding (L14,22,23,24)
-- ⚠️ `tg/agents/us/en/policy-confirmation.html` — AIG branding (L14,22,23,24,184)
-- ⚠️ `tg/agents/us/en/save-quote.html` — AIG branding (L14,22,23,24)
-- ⚠️ `tg/ca/en/annual-followup.html` — AIG branding (L14,22,23,24,830)
-- ⚠️ `tg/ca/en/policy-confirmation.html` — AIG branding (L457,476)
-- ⚠️ `tg/ca/en/post-trip.html` — AIG branding (L14,22,23,24,632)
-- ⚠️ `tg/ca/en/save-quote.html` — AIG branding (L14,22,23,24)
-- ⚠️ `tg/sg/en/cancel.html` — AIG branding (L14,22,23,24)
-- ⚠️ `tg/sg/en/policy-confirmation-new.html` — AIG branding (L14,22,23,24)
-- ⚠️ `tg/sg/en/policy-confirmation.html` — AIG branding (L14,22,23,24)
 
-### united/ (4 files: 1 pass, 2 warn, 1 fail)
+### united/ (4 files: 2 pass, 2 warn, 0 fail)
 
-- ❌ `united/new-policy-confirmation.html` — AIG branding (L14,22,23,24,184);@aig.com email (L258,263);UAT/QA env URL (L224,269,270)
-- ⚠️ `united/us/en/post-trip.html` — AIG branding (L14,22,23,24,223)
-- ⚠️ `united/us/en/pre-trip.html` — AIG branding (L14,22,23,24)
+- ⚠️ `united/us/en/policy-confirmation.html` — AIG branding (L18,21)
+- ⚠️ `united/us/en/post-trip.html` — AIG branding (L223)
 
 ---
 

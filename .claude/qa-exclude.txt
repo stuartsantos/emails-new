@@ -28,6 +28,11 @@
  expedia/us/en/policy-confirmation-old.html
 # expedia/us/en/policy-confirmation.html
 
+# --- digdrct/ ---
+digdrct/it/it/policy-confirmation.html
+digdrct/my/en/cancel.html
+digdrct/my/en/policy-confirmation.html
+
 # --- jetstar/ (10 files) ---
 # jetstar/au/en/cancel.html
 # jetstar/au/en/policy-confirmation.html
@@ -37,7 +42,7 @@
 # jetstar/nz/en/policy-confirmation.html
 # jetstar/nz/en/post-trip.html
 # jetstar/nz/en/pre-trip.html
-# jetstar/sg/en/policy-confirmation-redesign.html
+jetstar/sg/en/policy-confirmation-redesign.html
 jetstar/sg/en/policy-confirmation.html
 
 # --- qantas/ (24 files) ---

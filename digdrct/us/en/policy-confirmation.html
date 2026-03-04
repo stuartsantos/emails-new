@@ -26,12 +26,12 @@
 /*
 ########COLORS#######
 
-To use these colors, you can copy the hash value such as #001871 for aig fore blue and change either the text or background color of elements.
+To use these colors, you can copy the hash value such as #001871 for tg navy blue and change either the text or background color of elements.
 
 primary colors              secondary colors          orange: #FF8200;            green: #00BF6F;
-aig-core-blue: #001871;     cyan: #00A4E4;            lightest-orange: #FFE5C5;   lightest-green: #BDF0DF;
-pale-aig-blue: #C7DBF4;     lightest-cyan: #E0F3FB;   light-orange: #FECB8B;      light-green: #7AE1BF;
-cobalt-aig-blue: #1352DE;   light-cyan: #C0E7F7;      medium-orange: #FFB466;     medium-green: #4DD29A;
+tg-core-blue: #001871;     cyan: #00A4E4;            lightest-orange: #FFE5C5;   lightest-green: #BDF0DF;
+pale-tg-blue: #C7DBF4;     lightest-cyan: #E0F3FB;   light-orange: #FECB8B;      light-green: #7AE1BF;
+cobalt-tg-blue: #1352DE;   light-cyan: #C0E7F7;      medium-orange: #FFB466;     medium-green: #4DD29A;
                             medium-cyan: #80D2F2;     dark-orange: #A9431E;       dark-green: #047E4B;
                             dark-cyan: #00719E;
 
@@ -63,7 +63,7 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
       .section { width: 100% !important; }
       .columns { width: 100% !important; }
       .col-1 { padding: 16px !important; }
-      .col-2, .col-3 { width: 100% !important; display: block !important; }
+      .col-2, .col-3 { width: 100% !important; display: block !important; box-sizing: border-box !important; }
       .col-2 table { width: 100% !important; }
       .mobile-none { display: none !important; }
       .mobile-ta-c { text-align: center !important; }
@@ -71,7 +71,7 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
       .mobile-prl-none { padding-left: 0 !important; padding-right: 0 !important; }
       .mobile-img { width: 100% !important; height: auto !important; }
       .mobile-padding { padding-left: 20px !important; padding-right: 20px !important; }
-      .icon-left .icon, .icon-left .text { display: block !important; width: 250px !important; text-align: center; margin: auto !important; }
+      .icon-left .icon, .icon-left .text { display: block !important; width: 250px !important; text-align: center; margin: auto !important; box-sizing: border-box !important; }
       .icon-left .icon.winter { padding: 0 0 32px !important; }
       .icon-left .heading { text-align: center; }
       .icon-right .icon, .icon-right .text { float: none !important; width: 100% !important; text-align: center; }
@@ -85,13 +85,16 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
 
     .button { text-align: center; margin: 16px 0; background: transparent !important; box-shadow: none !important; }
     .button td.fallback { padding: 0 !important; }
-    .button a { display: block; padding: 9px 30px; }
+    .button a { display: block; padding: 9px 30px; box-sizing: border-box !important; }
   </style>
 </head>
 <body style="margin: 0; padding: 0; background-color: #F7F9FB; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; line-height: 1;">
 
   <!-- Preheader -->
-  <div style="display: none; max-height: 0; overflow: hidden; mso-hide: all;">Thank you for purchasing a Travel Guard® travel insurance plan!</div>
+  <div style="display: none; max-height: 0; overflow: hidden; mso-hide: all;">
+    Thank you for purchasing a Travel Guard® travel insurance plan!
+    &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+  </div>
 
   <!-- Email Container -->
   <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #F7F9FB; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -moz-osx-font-smoothing: grayscale;">
