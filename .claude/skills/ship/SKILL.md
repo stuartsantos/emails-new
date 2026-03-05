@@ -44,7 +44,6 @@ Analyze the staged diff and write a commit message following this project's styl
 
 - **Subject line:** imperative mood, under 72 characters, references brand/market when applicable (e.g., "Add Expedia CA French policy confirmation template")
 - **Body:** organized by brand/market with specific bullet points describing what changed and why
-- **Trailer:** always end with `Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>`
 
 Use a heredoc to pass the message:
 
@@ -54,8 +53,6 @@ Subject line here
 
 - bullet point details
 - organized by brand/market
-
-Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>
 EOF
 )"
 ```
