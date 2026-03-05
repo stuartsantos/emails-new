@@ -1,11 +1,14 @@
 # Pipeline
 
 ## Due ASAP
-Travel Tips - March - Renew Passport - https://travelguard.monday.com/boards/18290651562/pulses/18374443038
 
+| Email | Monday Link |
+|-------|-------------|
+| Travel Tips - March - Renew Passport | [View task](https://travelguard.monday.com/boards/18290651562/pulses/18374443038) |
 
 ## Due 2/26
-Travel Tips - April - Sustainability - https://travelguard.monday.com/boards/18290651562/pulses/18374443144
 
-Holiday - April - National Park - https://travelguard.monday.com/boards/18290651562/pulses/18374444762
-
+| Email | Monday Link |
+|-------|-------------|
+| Travel Tips - April - Sustainability | [View task](https://travelguard.monday.com/boards/18290651562/pulses/18374443144) |
+| Holiday - April - National Park | [View task](https://travelguard.monday.com/boards/18290651562/pulses/18374444762) |
