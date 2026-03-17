@@ -207,12 +207,12 @@ table {
                         <table role="presentation" class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
                           <tr>
                             <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding-bottom: 25px;">
-                              Wenn Sie Fragen zu Ihrer Versicherung haben, können Sie uns kontaktieren unter:<br>
-                              <br>
-                              - Webseite: {{CustomerServicesURL}}<br>
-                              - E-Mail: {{CustomerServicesEmailAddress}}<br>
-                              - Telefon: {{CustomerServicesContactNumber}}<br>
-                              <br>
+                              Wenn Sie Fragen zu Ihrer Versicherung haben, können Sie uns kontaktieren unter:
+                              <ul style="margin: 10px 0; padding-left: 20px;">
+                                <li>Webseite: {{CustomerServicesURL}}</li>
+                                <li>E-Mail: <a style="color: #1352DE;" href="mailto:{{CustomerServicesEmailAddress}}">{{CustomerServicesEmailAddress}}</a></li>
+                                <li>Telefon: {{CustomerServicesContactNumber}}</li>
+                              </ul>
                               Öffnungszeiten: {{CustomerServicesOperatingHoursLocal}}<br>
                               <br>
                               Wünschen Sie den Versand Ihrer Versicherungsunterlagen per Post, so können Sie uns mit dieser Bitte anrufen oder uns eine entsprechende E-Mail schreiben (Telefonnummer und E-Mail-Adresse siehe oben).
