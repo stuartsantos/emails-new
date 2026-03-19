@@ -1,0 +1,16 @@
+{{policyDetail-primaryInsured-firstName}},
+Thank you for purchasing a travel insurance plan from Travel Guard.
+
+*******************************************************
+*Your policy number is: {{policyDetail-policyNumber}}
+*******************************************************
+
+* Please review your Policy of Insurance by clicking on the "Policy of Insurance" link at the top of your policy summary page which can be accessed 1here.
+
+* If you have any questions, please contact our World Service Centre at 1-866-878-0191 or for travel emergencies contact us at International Collect 1-416-646-3723
+
+Enjoy your travel and thank you for choosing Travel Guard for your upcoming trip!
+
+1 Policy information is only accessible via the above link for one year past your travel return date.
+
+Insurance is underwritten by Zurich Insurance Company Ltd (Canadian Branch) ("Zurich"), which has its principal place of business at 100 King Street West, Suite 5500, Toronto, ON M5X 1C9. All policies are administered on behalf of Zurich by Travel Guard Group Canada, Inc. ("Travel Guard"). The description herein is a brief summary only. It does not include all terms, conditions, limitations, exclusions, and termination provisions of the policies described. Please refer to the actual policy for complete details.
