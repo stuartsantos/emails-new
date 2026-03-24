@@ -18,7 +18,7 @@ Als u vragen heeft over uw verzekering, kunt u contact met ons opnemen via:
 - E-mail: {{CustomerServicesEmailAddress}}
 - Telefoon: {{CustomerServicesContactNumber}}
 
-Openingstijden: {{CustomerServiceOperatingHoursLocal}}
+Openingstijden: {{CustomerServiceOperatingHours}}
 ```
 Keep existing post sentence ("Wilt u uw verzekeringsdocumenten per post ontvangen...") unchanged.
 
@@ -42,6 +42,6 @@ Se ha delle domande sulla sua assicurazione, può contattarci a:
 - E-mail: {{CustomerServicesEmailAddress}}
 - Telefono: {{CustomerServicesContactNumber}}
 
-Orari di apertura: {{CustomerServiceOperatingHoursLocal}}
+Orari di apertura: {{CustomerServiceOperatingHours}}
 ```
 Keep existing post sentence ("Ha il diritto di ricevere copia in formato cartaceo...") unchanged.
