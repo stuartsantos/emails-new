@@ -61,11 +61,16 @@
       .mobile-hide { display: none !important; }
       .mobile-stack { display: block !important; width: 100% !important; box-sizing: border-box !important; }
       .mobile-img { width: 100% !important; height: auto !important; }
-      .header-col { display: block !important; width: 100% !important; box-sizing: border-box !important; }
+      table.centeronmobile { width: 75% !important; margin: 0 auto !important; }
+      .header-col { display: block !important; width: 100% !important; text-align: center !important; box-sizing: border-box !important; }
+      .header-col img { margin: 0 auto !important; }
+      .header-col table { width: 100% !important; }
+      .header-col p { text-align: center !important; }
       .header-img { display: none !important; }
       .list-col { display: block !important; width: 100% !important; padding-bottom: 10px !important; box-sizing: border-box !important; }
       .content-block-img { display: block !important; width: 100% !important; text-align: center !important; padding-bottom: 15px !important; box-sizing: border-box !important; }
-      .content-block-text { display: block !important; width: 100% !important; box-sizing: border-box !important; }
+      .content-block-img img { margin: 0 auto !important; }
+      .content-block-text { display: block !important; width: 100% !important; text-align: center !important; box-sizing: border-box !important; }
     }
   </style>
 </head>
@@ -149,7 +154,7 @@
                     </table>
 
                     <!-- Two Column List -->
-                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="padding: 0 10px 20px 10px;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="padding: 0 10px 20px 10px;" class="centeronmobile">
                       <tr>
                         <td width="50%" valign="top" class="list-col">
                           <ul style="margin: 0; padding: 0 0 0 21px; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 14px; line-height: 24px; color: #1c252e;">
