@@ -7,7 +7,7 @@ This directory contains HTML email templates for Qantas Travel Insurance across 
 ### Current Status
 
 **New Zealand Market (NZ)**: Completed underwriter transition revisions (AIG → Zurich)
-**Australia Market (AU)**: Revisions planned - will follow the same process as NZ
+**Australia Market (AU)**: Completed underwriter transition revisions (AIG → Zurich)
 
 ## Market Structure
 
@@ -22,7 +22,23 @@ qantas/
 │           ├── void.html
 │           ├── amt-expiry.html
 │           └── docs/          # Source Word documents
-└── au/                        # AU market (revisions coming soon)
+└── au/
+    └── en/
+        ├── policy-confirmation.html  # Original templates
+        ├── pre-trip.html
+        ├── cancel.html
+        ├── void.html
+        ├── amt-expiry.html
+        ├── medical.html
+        ├── save-quote.html
+        └── au-revisions/     # Completed Zurich transition updates
+            ├── policy-confirmation.html
+            ├── pre-trip.html
+            ├── cancel.html
+            ├── void.html
+            ├── amt-expiry.html
+            ├── medical.html
+            └── save-quote.html
 ```
 
 ## Email Template Types
@@ -34,6 +50,8 @@ qantas/
 | **Cancel** | Policy cancellation confirmation | Cancellation details, refund information (if applicable) |
 | **Void** | Transaction processing failure | Notifies customer of payment/processing issues |
 | **AMT Expiry** | Annual Multi-Trip policy renewal reminder | Expiry date, renewal call-to-action |
+| **Medical** | Medical claim notification (AU only) | Medical expense details |
+| **Save Quote** | Saved quote follow-up (AU only) | Quote details, purchase CTA |
 
 ## Recent NZ Revisions Context
 
@@ -62,8 +80,8 @@ The New Zealand market underwent a complete transition from **AIG Insurance New 
    - New address: Level 9, 29 Customs Street West, Auckland
    - Updated legal disclaimers and underwriter details
 
-### AU Market - Coming Soon
-The same comprehensive revision process will be applied to the Australia market templates, transitioning to Zurich as the underwriter with corresponding contact and legal information updates.
+### AU Market — Completed
+The same comprehensive revision process was applied to the Australia market templates, transitioning to Zurich as the underwriter. AU includes two additional templates: `medical.html` and `save-quote.html`.
 
 ## Code/Design Patterns
 
@@ -216,18 +234,10 @@ All templates are tracked in git. When committing changes:
 - Include reference to source documents if applicable
 - Tag major transitions (e.g., "AIG to Zurich transition - NZ complete")
 
-## Upcoming Work
+## Completed Work
 
-### Australia Market Revisions (Planned)
-Following the successful completion of NZ market updates, the same comprehensive revision process will be applied to the Australia (AU) market:
-
-- Underwriter transition updates
-- Contact information migration
-- Content improvements and clarifications
-- Legal footer updates
-- Consistent improvements from NZ learnings
-
-The AU revisions will follow the same technical constraints, design patterns, and quality standards established for the NZ market.
+### Australia Market Revisions
+The AU market has undergone the same comprehensive revision process as NZ, with all 7 templates updated in `au/en/au-revisions/`. AU includes two additional templates not present in NZ: `medical.html` and `save-quote.html`.
 
 ## Contact & Support
 
@@ -239,4 +249,4 @@ For questions about:
 
 ---
 
-**Last Updated**: NZ revisions completed January 2026 | AU revisions planned
+**Last Updated**: NZ revisions completed January 2026 | AU revisions completed

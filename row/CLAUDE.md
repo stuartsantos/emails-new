@@ -16,9 +16,9 @@ row/
 ├── README.md          # Handlebars variable mapping reference
 ```
 
-**Markets:** be (Belgium), ca (Canada), ch (Switzerland), cz (Czech Republic), de (Germany), es (Spain), fr (France), it (Italy), nz (New Zealand), pt (Portugal), uk (United Kingdom)
+**Markets:** at (Austria), be (Belgium), ca (Canada), ch (Switzerland), cz (Czech Republic), de (Germany), es (Spain), fr (France), ie (Ireland), it (Italy), nl (Netherlands), nz (New Zealand), pt (Portugal), sg (Singapore), uk (United Kingdom), us (United States)
 
-**Multi-language countries:** Belgium (en/fr/nl), Canada (en/fr), Switzerland (de/en/fr)
+**Multi-language countries:** Austria (de/en), Belgium (en/fr/nl), Canada (en/fr), Switzerland (de/en/fr)
 
 ## Handlebars Templating
 
@@ -200,8 +200,10 @@ All ROW policy confirmation templates have been updated to the modern responsive
 
 **Already modern (not modified in this update):**
 - ca (Canada): en, fr
+- ie (Ireland): en
 - it (Italy): en, it
 - nz (New Zealand): en
+- sg (Singapore): en
 - uk (United Kingdom): en
 
 **Content variations by language:**

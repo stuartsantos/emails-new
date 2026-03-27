@@ -10,13 +10,17 @@ This repository contains HTML email templates for travel insurance products acro
 
 | Directory | Brand | Description |
 |-----------|-------|-------------|
-| `tg/` | Travel Guard / Zurich | US market (customer journey, BAU, travel tips, holiday emails) + international (CA, IT, MY, SG), agent templates, certificates |
-| `row/` | Zurich Travel Guard | "Rest of World" policy confirmations (13 European/Commonwealth countries, multi-language) |
+| `tg/` | Travel Guard / Zurich | US market (customer journey, BAU, travel tips, holiday, sponsor emails) + international (CA, IT, MY, SG), agent templates, certificates |
+| `row/` | Zurich Travel Guard | "Rest of World" policy confirmations (16 countries, multi-language) |
 | `expedia/` | Expedia Travel Insurance | Policy confirmations across 7 countries (US, CA, MX, NZ, IT, HK, SG) |
-| `qantas/` | Qantas Travel Insurance | NZ and AU lifecycle emails (confirmation, pre-trip, cancel, void, AMT expiry) |
+| `qantas/` | Qantas Travel Insurance | NZ and AU lifecycle emails (confirmation, pre-trip, cancel, void, AMT expiry, medical, save-quote) |
 | `jetstar/` | Jetstar Travel Insurance | AU, NZ, SG markets |
 | `united/` | United Airlines | US, BE, CA markets |
-| `api-testing/` | — | Email HTML extractor utility for Thunder Client API responses |
+| `admin/` | Travel Guard | US admin/internal templates |
+| `agents/` | Travel Guard | Agent-facing templates (US, CA) |
+| `digdrct/` | Travel Guard | Digital direct templates (US, CA, IT, MY, SG) |
+| `_api-testing/` | — | Email HTML extractor utility for Thunder Client API responses |
+| `_work-items/` | — | Work item tracking and reference documents |
 
 Each brand directory has its own `CLAUDE.md` or `claude.md` with brand-specific details (colors, variables, templates, status). Always read the relevant subdirectory docs before working on templates.
 
@@ -73,10 +77,10 @@ The component library uses Grunt: `npm install && grunt` (dev server) or `grunt 
 ## API Testing / Email Preview
 
 ```bash
-cd api-testing && npm run watch
+cd _api-testing && npm run watch
 ```
 
-Or use the `/watch-email` skill in Claude Code. Saves Thunder Client JSON responses to `api-testing/response/`, extracts the `body` field to `api-testing/build/email.html`, and auto-opens in browser.
+Or use the `/watch-email` skill in Claude Code. Saves Thunder Client JSON responses to `_api-testing/response/`, extracts the `body` field to `_api-testing/build/email.html`, and auto-opens in browser.
 
 ## Figma Workflow (TG Zurich US only)
 

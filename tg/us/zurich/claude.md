@@ -34,31 +34,77 @@ Create responsive HTML emails for Zurich Travel Insurance customer journey campa
 ```
 zurich/
 ├── img/                    # Shared image assets
+├── docs/                   # Source Word documents for content
 ├── fulfillment/            # Customer journey emails
 ├── holiday/                # Holiday-themed emails
 ├── seasonal-update/        # Seasonal BAU emails
-└── travel-tips/            # Travel tips emails
+├── sponsor/                # Sponsorship emails (Zurich Classic)
+└── travel-tips/            # Travel tips emails (monthly series)
 ```
 
 Note: All HTML files reference images using `../img/` relative paths.
 
 ## Design to HTML Mapping
 
-| HTML File | Figma Design | Category |
-|-----------|--------------|----------|
-| seasonal-update/cruise-season-2026.html | [Seasonal Update](https://www.figma.com/design/DAZ409npFBAoynGcoJ7GpY/BAU-Emails?node-id=2002-1917&m=dev) | BAU |
-| holiday/cruise-day.html | [Take a Cruise Day](https://www.figma.com/design/DAZ409npFBAoynGcoJ7GpY/BAU-Emails?node-id=2001-318&focus-id=2002-2037&m=dev) | Holiday |
-| holiday/zurich-classic.html | [Zurich Classic Sweepstakes](https://www.figma.com/design/q9c6YIC6aFzxIqr6ailozB/Zurich-Classic?node-id=1-1291&m=dev) | Holiday |
-| travel-tips/travel-tips-02-26.html | [Travel Safety Tips](https://www.figma.com/design/DAZ409npFBAoynGcoJ7GpY/BAU-Emails?node-id=2001-318&focus-id=2002-1709&m=dev) | Travel Tips |
-| fulfillment/six-month-bag.html | [6-mo Follow up Baggage](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=782-2922&m=dev) | Customer Journey |
-| fulfillment/six-month-trip-can.html | [6-mo Follow up Trip Can](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=781-91&m=dev) | Customer Journey |
-| fulfillment/six-month-med.html | [6-mo Follow up Medical](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=782-2690&m=dev) | Customer Journey |
-| fulfillment/twelve-month.html | [12-mo Follow up](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=610-853&m=dev) | Customer Journey |
-| fulfillment/eighteen-month.html | [18-mo Follow up](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=610-3731&m=dev) | Customer Journey |
-| fulfillment/two-year.html | [2-yr Follow up](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=610-3894&m=dev) | Customer Journey |
-| fulfillment/save-quote-followup.html | [Save Quote](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=4-179&m=dev) | Customer Journey |
-| fulfillment/two-week-post-trip.html | [2-wk Post Trip](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=498-1830&m=dev) | Customer Journey |
-| fulfillment/two-month-followup.html | [2-mo Follow up](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=491-1252&m=dev) | Customer Journey |
+### Customer Journey (Fulfillment)
+
+| HTML File | Figma Design |
+|-----------|--------------|
+| fulfillment/save-quote-followup.html | [Save Quote](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=4-179&m=dev) |
+| fulfillment/two-week-post-trip.html | [2-wk Post Trip](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=498-1830&m=dev) |
+| fulfillment/two-month-followup.html | [2-mo Follow up](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=491-1252&m=dev) |
+| fulfillment/six-month-bag.html | [6-mo Follow up Baggage](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=782-2922&m=dev) |
+| fulfillment/six-month-trip-can.html | [6-mo Follow up Trip Can](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=781-91&m=dev) |
+| fulfillment/six-month-med.html | [6-mo Follow up Medical](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=782-2690&m=dev) |
+| fulfillment/twelve-month.html | [12-mo Follow up](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=610-853&m=dev) |
+| fulfillment/eighteen-month.html | [18-mo Follow up](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=610-3731&m=dev) |
+| fulfillment/two-year.html | [2-yr Follow up](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=610-3894&m=dev) |
+
+### BAU / Seasonal
+
+| HTML File | Figma Design |
+|-----------|--------------|
+| seasonal-update/cruise-season-2026.html | [Seasonal Update](https://www.figma.com/design/DAZ409npFBAoynGcoJ7GpY/BAU-Emails?node-id=2002-1917&m=dev) |
+
+### Holiday Emails
+
+| HTML File | Notes |
+|-----------|-------|
+| holiday/cruise-day.html | Take a Cruise Day ([Figma](https://www.figma.com/design/DAZ409npFBAoynGcoJ7GpY/BAU-Emails?node-id=2001-318&focus-id=2002-2037&m=dev)) |
+| holiday/national-park-week.html | National Park Week — base template for holiday series |
+| holiday/solo-vacation.html | Solo Vacation Day |
+| holiday/national-tourism-day-2026.html | National Tourism Day (May 7) |
+| holiday/national-road-trip-day-2026.html | National Road Trip Day (May 22) |
+| holiday/cheap-flight-day-2026.html | Cheap Flight Day (Aug 23) |
+| holiday/labor-day-2026.html | Labor Day |
+| holiday/thanksgiving-2026.html | Thanksgiving |
+| holiday/travel-tuesday-2026.html | Travel Tuesday (Dec 1) |
+| holiday/holiday-2026.html | Holiday/Christmas |
+| holiday/new-years-2027.html | New Year's 2027 |
+
+### Sponsor Emails
+
+| HTML File | Figma Design |
+|-----------|--------------|
+| sponsor/zurich-classic.html | [Zurich Classic Sweepstakes](https://www.figma.com/design/q9c6YIC6aFzxIqr6ailozB/Zurich-Classic?node-id=1-1291&m=dev) |
+| sponsor/zurich-classic-usatoday1.html | Zurich Classic USA Today ad #1 |
+| sponsor/zurich-classic-usatoday2.html | Zurich Classic USA Today ad #2 |
+
+### Travel Tips (Monthly Series)
+
+| HTML File | Topic |
+|-----------|-------|
+| travel-tips/travel-tips-02-26.html | Money Saving Travel Tips ([Figma](https://www.figma.com/design/DAZ409npFBAoynGcoJ7GpY/BAU-Emails?node-id=2001-318&focus-id=2002-1709&m=dev)) |
+| travel-tips/travel-tips-03-26.html | March 2026 tips |
+| travel-tips/travel-tips-04-26.html | April 2026 tips — canonical reference template |
+| travel-tips/travel-tips-05-26.html | Family Road Trip & Game Tips |
+| travel-tips/travel-tips-06-26.html | Tips to Help Avoid Pickpockets in Europe |
+| travel-tips/travel-tips-07-26.html | Top Tips for Family Summer Travel |
+| travel-tips/travel-tips-08-26.html | Tips if You Have a Medical Emergency Abroad |
+| travel-tips/travel-tips-09-26.html | Tips for Natural Disaster Safety |
+| travel-tips/travel-tips-10-26.html | Tips for Managing Medication on the Go |
+| travel-tips/travel-tips-11-26.html | Tips to Help Get Through TSA Quickly |
+| travel-tips/travel-tips-12-26.html | Safety Tips for Frequent Flyers |
 
 ## Template Framework Reference
 Use components from: `/responsive-modular-email-templates/build/html/`
@@ -178,48 +224,26 @@ Key points:
 
 ## Completed Work
 
-### BAU Emails (Jan 2026)
+All templates listed in the Design-to-HTML Mapping above are complete. Key milestones:
 
-| Email | Status | Notes |
-|-------|--------|-------|
-| holiday/cruise-day.html | Complete | "Take a Cruise Day" holiday email, pink accent (#db5989/#edacc4), assistance services section, social hashtag #TakeACruiseDaywithTG |
-| holiday/zurich-classic.html | Complete | "Zurich Classic Sweepstakes" golf-themed email, cyan accent (#9cc7e6), three prize tiers (Grand Prize, First Place, Second Place), golf trip promo section with circular image, sweepstakes dates Feb 9 - Mar 22, 2026 |
-| travel-tips/travel-tips-02-26.html | Complete | "Money Saving Travel Tips", green accent (#a5d069), numbered tips list, video library section, testimonial. Uses green icon variants: `icon-send-green.png`, `icon-quote-green.png` |
+- **Jan 2026**: Initial 6 customer journey fulfillment emails + cruise-day, zurich-classic, travel-tips-02-26
+- **Feb 2026**: save-quote-followup, two-week-post-trip, two-month-followup; dark mode fix applied across all 12 templates
+- **Mar 2026**: Travel tips 03-26, 04-26 (established as canonical reference template); holiday series base templates (national-park-week, solo-vacation); sponsor emails (zurich-classic-usatoday1/2)
+- **Mar–ongoing 2026**: Monthly travel tips (05-26 through 12-26), holiday email series (8 emails from national-tourism-day through new-years-2027)
 
-### Customer Journey Emails (Jan 2026)
-All 6 customer journey emails have been built from Figma designs:
-
-| Email | Status | Notes |
-|-------|--------|-------|
-| six-month-bag.html | Complete | Baggage claims stats (7,529 total with breakdown), testimonial section |
-| six-month-med.html | Complete | Medical expense stats (16,050 claims, $2,575.36 avg), Consumer Reports citation |
-| six-month-trip-can.html | Complete | Two-column stats (120,159 trip can + 53,840 trip inconvenience) |
-| twelve-month.html | Complete | Split header design (purple/pink gradient), assistance services + packing tips blocks |
-| eighteen-month.html | Complete | Plan picker illustration, "Compare Plans" CTA |
-| two-year.html | Complete | Shield icon header, numbered benefits list, dual testimonials |
-
-### Customer Journey Emails (Feb 2026)
-
-| Email | Status | Notes |
-|-------|--------|-------|
-| two-week-post-trip.html | Complete | "Welcome back!" post-trip email, two-column hero (beach image left, navy text right), 3 action cards (review trip #2167ae border, claim status #66cbe1 border, next trip #a5d069 border), destination hub inside Card 3 with #e4edf8 bg, all images CDN-hosted, campaign: `twoweekposttrip` |
-| two-month-followup.html | Complete | "Your next destination awaits..." follow-up email, #005f62 deep sea green hero (wider image 380px), teal→green gradient accent bar, #a5d069 jungle green CTAs, destination section (Italy/Thailand/Turks & Caicos with circular images, CDN-hosted), identity theft section with #9cc7e6 border + #a5d069 green accent, #e4edf8 glacier blue "Did you know?" callout, #005f62 solid footer tagline, no social section, campaign: `twomonthfollowup` |
+See `holiday/handoff.md` and `travel-tips/handoff.md` for detailed build specs and content references.
 
 ### Image Assets
-All images stored in `img/` folder:
-- **Logos**: `logo-travel-guard-color.png`, `logo-travel-guard-color-new.png`, `logo-travel-guard-white.png` (converted from SVG with CSS variables replaced)
-- **Hero images**: `hero-baggage.jpg`, `hero-medical.jpg`, `hero-trip-can.jpg`, `hero-cruise.jpg`, `hero-cruise-day-02-26.jpg`, `hero-cruise-day-02-26.png`, `hero-travel-tips-02-26.png`, `hero-zurich-classic.jpg`, `email-hero_12month-followup.png`, `email-hero_18month-followup.png`, `email-hero_24month-followup.png`, `saved-quote-followup-hero.jpg`, `March-2026-Travel-Tips.png`
-- **Hero images (CDN-hosted)**: `hero-two-week-post-trip.jpg`
-- **Icons**: `icon-phone.png`, `icon-phone-24.png`, `icon-quote.png`, `icon-quote-green.png`, `icon-review.png`, `icon-shield.png`, `icon-star.png`, `icon-send.png`, `icon-send-green.png`, `icon-education.png`, `icon-play.png`, `icon-facebook.png`, `icon-instagram.png`, `icon-youtube.png`, `icon-tiktok.png`, `icon-person.png`, `icon-chat-1.png`, `icon-chat-2.png`
-- **Icons (CDN-hosted)**: `icon-review-trip.png`, `icon-claim-status.png`, `icon-next-trip.png`
-- **Decorative**: `plane-border.png` (teal arrow progress bar for save-quote-followup)
-- **Content images**: `img-assistance.jpg`, `img-packing.jpg`, `img-picking-plan.png`, `img-golf-trip.jpg`, `golf-travel-insurance.jpg`, `video-thumbnail-tips.png`, `what-is-travel-ins-vid.jpg`
-- **Content images (CDN-hosted)**: `img-destination-hub.jpg`
+All images stored in `img/` folder (47 assets). Key categories:
+- **Logos**: `logo-travel-guard-color.png`, `logo-travel-guard-color-new.png`, `logo-travel-guard-white.png`
+- **Hero images**: Per-email hero images (e.g., `hero-baggage.jpg`, `hero-cruise.jpg`, `email-hero_12month-followup.png`, etc.)
+- **Icons**: Navy (`icon-phone.png`, `icon-quote.png`, `icon-send.png`, etc.) and green variants (`icon-send-green.png`, `icon-quote-green.png`) for travel-tips emails
+- **Decorative**: `plane-border.png`, `top_plane-teal.png`, `bottom_plane-teal.png`
+- **Content images**: `img-assistance.jpg`, `img-packing.jpg`, `img-picking-plan.png`, `img-golf-trip.jpg`, etc.
 
 ### Color-Specific Icon Variants
-Some emails require icons in specific accent colors:
-- **Green (#a5d069)**: `icon-send-green.png`, `icon-quote-green.png` - used in travel-tips emails
-- **Pink (#edacc4)**: `icon-star.png` - used in holiday emails (e.g., cruise-day.html)
+- **Green (#a5d069)**: `icon-send-green.png`, `icon-quote-green.png` — used in travel-tips emails
+- **Pink (#edacc4)**: `icon-star.png` — used in holiday emails (e.g., cruise-day.html)
 
 ### Hosted Reusable Assets (travelguard.com CDN)
 These assets are hosted on the Travel Guard website and should be used across all emails where applicable. Use these URLs instead of local `../img/` paths for production emails.
@@ -250,25 +274,9 @@ These assets are hosted on the Travel Guard website and should be used across al
 **Video Thumbnail:**
 - What is travel insurance: `https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/video-thumbnail-tips.png` (500px wide)
 
-**Emails using hosted URLs:**
-- `holiday/cruise-day.html` ✓
-- `travel-tips/travel-tips-02-26.html` ✓
-- `fulfillment/six-month-bag.html` ✓
-- `fulfillment/six-month-med.html` ✓
-- `fulfillment/six-month-trip-can.html` ✓
-- `fulfillment/twelve-month.html` ✓
-- `fulfillment/eighteen-month.html` ✓
-- `fulfillment/two-year.html` ✓
-- `seasonal-update/cruise-season-2026.html` ✓
-- `fulfillment/two-month-followup.html` ✓ (all images CDN-hosted including hero)
-- `fulfillment/two-week-post-trip.html` ✓ (all images CDN-hosted)
+**Emails using hosted URLs:** All fulfillment emails, cruise-day, cruise-season-2026, and travel-tips series use CDN-hosted assets for logos, social icons, and shared icons. The two-week-post-trip and two-month-followup templates are fully CDN-hosted (including hero images).
 
-**Assets still using local paths** (no hosted equivalent available):
-- Hero images (email-specific)
-- `logo-travel-guard-color.png`
-- `icon-shield.png`
-- `icon-ship-cyan.png`, `icon-ship-navy.png`
-- Content images (`img-assistance.jpg`, `img-packing.jpg`, `img-picking-plan.png`)
+**Assets still using local `../img/` paths:** Email-specific hero images, `logo-travel-guard-color.png`, `icon-shield.png`, `icon-ship-cyan.png`, `icon-ship-navy.png`, and some content images (`img-assistance.jpg`, `img-packing.jpg`, `img-picking-plan.png`). Holiday email hero images are TBD from design team.
 
 ### Known Issues & Solutions
 1. **Figma SVG exports with CSS variables**: When exporting logos from Figma, they may contain `fill="var(--fill-0, #color)"`. Convert to PNG using:
@@ -301,70 +309,10 @@ These assets are hosted on the Travel Guard website and should be used across al
 
 7. **Dark mode breaks white content areas (Feb 2026)**: The dark mode classes `.content-bg` and `.dark-text` were causing white content areas to turn dark gray (#2d2d2d) in dark mode, making text illegible. **Solution**: Remove `class="content-bg"` from all white background tables and `class="dark-text"` / `class="dark-text-secondary"` from text elements within white content areas. Only use `.body-bg` on the outer email container. This fix was applied to all 12 templates in the zurich folder.
 
-### Follow-up Items
-- [ ] **six-month-bag.html**: Request hero background image from UX designer. The Figma design has a background image in the hero area that isn't surfacing as an exportable image asset.
-- [x] **save-quote-followup.html**: Hero beach image (`hero-save-quote.jpg`) and person icon (`icon-person.png`) exported from Figma
-- [ ] **save-quote-followup.html**: Progress arrow (`plane-border.png`) needs refinement — current image doesn't perfectly match Figma design. Follow up with UX designer for a polished version.
-- [x] **save-quote-followup.html**: Fix Instagram social link — was pointing to `tikitheturtle`, corrected to `travelguard`
-- [x] **twelve-month.html**: Composed header image added (`email-hero_12month-followup.png`)
-- [x] **eighteen-month.html**: Composed header image added (`email-hero_18month-followup.png`)
-- [x] **two-year.html**: Composed CTA box image added (`email-hero_24month-followup.png`)
-- [x] **two-week-post-trip.html**: All images now CDN-hosted (hero, icons, destination hub). Template updated to match Figma design (border colors, font sizes, card structure, gradient).
-- [x] **two-month-followup.html**: Hero image updated on CDN; template aligned to Figma design (colors, fonts, layout, removed social section)
-- [x] **six-month-bag.html, six-month-med.html, six-month-trip-can.html**: Updated image URLs from old `documents.travelguard.com` subdomain to `www.travelguard.com`. Affected assets: logo, hero images, and `icon-quote.png` in six-month-bag.
-
-### Recent Fixes (Feb 2026)
-
-**save-quote-followup.html:**
-- Replaced CSS background-image hero with composed `<img>` tag using `saved-quote-followup-hero.jpg` for reliable rendering across email clients
-- Added responsive mobile styles: hero image hidden on mobile, text cell becomes full-width centered with `box-sizing: border-box` to prevent overflow
-- Replaced flat teal progress bar with `plane-border.png` arrow image
-- Re-exported `icon-person.png` with transparent background (was white)
-
-### Recent Fixes (Jan 2026)
-
-**cruise-season-2026.html:**
-- Fixed logo: Changed to `logo-travel-guard-white.png` for navy background
-- Fixed dotted border: Changed from `1px dashed` to `2px dotted` under logo
-- Fixed quote icon aspect ratio: Removed fixed height, use `height: auto`
-- Fixed Coverages/Services layout:
-  - Desktop: Two-column layout (heading left, list right) with `padding-left: 40px` on list cells
-  - Mobile: Stacked and centered using CSS:
-    ```css
-    .features-cell { padding-left: 80px !important; padding-right: 80px !important; }
-    .features-heading { padding-left: 0 !important; padding-right: 0 !important; }
-    .features-heading table { margin-left: auto !important; margin-right: auto !important; }
-    ```
-
-**six-month-bag.html:**
-- Fixed dotted border: Changed from `1px dashed` to `2px dotted` under logo
-- Fixed quote icon: Re-exported from Figma, fixed `preserveAspectRatio` and CSS variables, removed fixed height
-- Fixed stats breakdown centering: Added `margin: 30px auto 0 auto` to center table
-- Fixed mobile stats layout: Updated CSS for centered stacking of numbers above descriptions
-
-**six-month-med.html:**
-- Fixed dotted border: Changed from `1px dashed` to `2px dotted`
-- Fixed dollar amount color: Changed from green (`#007a3d`) to red (`#af0827`) to match Figma
-
-**six-month-trip-can.html:**
-- Fixed dotted border: Changed from `1px dashed` to `2px dotted`
-
-**twelve-month.html:**
-- Fixed dotted border: Changed from `1px dashed` to `2px dotted`
-- Fixed circular images: Cropped `img-assistance.jpg` and `img-packing.jpg` to squares, added explicit `width` and `height` attributes
-- Fixed social media icons: Made dimensions square (26×26 for Facebook, 24×24 for others)
-
-**eighteen-month.html:**
-- Fixed dotted border: Changed from `1px dashed` to `2px dotted`
-- Fixed phone icon: Re-exported from Figma SVG, fixed CSS variables and `preserveAspectRatio`, converted to PNG
-
-**two-year.html:**
-- Fixed dotted border: Changed from `1px dashed` to `2px dotted`
-- Fixed quote icons (2 instances): Same fix as other emails
-- Fixed header shield icon: Replaced CSS table approximation with proper shield PNG (31×55px)
-- Fixed header layout: Moved dotted border from between shield/text to between text/logo
-- Fixed social media icons: Made dimensions square (26×26 for Facebook, 24×24 for others)
-- Fixed mobile header: Added `centeronmobile` class with responsive CSS for proper centering on mobile (logo above, shield and text stacked below)
+### Open Follow-up Items
+- [ ] **six-month-bag.html**: Request hero background image from UX designer
+- [ ] **save-quote-followup.html**: Progress arrow (`plane-border.png`) needs refinement from UX designer
+- [ ] **Holiday email hero images**: All 2026 holiday emails use placeholder hero image paths — awaiting assets from design team
 
 ### Color Reference
 - Navy (TG Navy): `#003d6e`
@@ -382,11 +330,12 @@ These assets are hosted on the Travel Guard website and should be used across al
 - Body text: `#1c252e` or `#343741`
 
 ### Campaign Tracking
-All CTAs use `cmpid` parameter with format: `emc-tgdirect-us-en-{category}-{emailname}`
-- Holiday emails: `emc-tgdirect-us-en-holiday-takeacruiseday`
-- Travel Tips emails: `emc-tgdirect-us-en-traveltips-feb`
+All links (not just CTAs) use `cmpid` parameter with format: `emc-tgdirect-us-en-{category}-{emailname}`
+- Holiday emails: `emc-tgdirect-us-en-holiday-{emailname}` (e.g., `takeacruiseday`, `roadtripdaymay26`, `thanksgiving26`)
+- Travel Tips emails: `emc-tgdirect-us-en-traveltips-{mon}26` (e.g., `feb`, `jun26`, `dec26`)
 - BAU emails: `emc-tgdirect-us-en-bau-cruiseseason`
 - Fulfillment emails: `emc-tgdirect-us-en-fulfillment-{emailname}`
+- Sponsor emails: `emc-tgdirect-us-en-sponsor-{emailname}`
 
 ### Font Stack
 Primary: `'Noto Sans', 'Source Sans Pro', Arial, sans-serif`
