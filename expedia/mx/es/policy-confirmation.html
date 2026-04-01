@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+  xmlns:o="urn:schemas-microsoft-com:office:office">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,36 +22,87 @@
   </noscript>
   <![endif]-->
   <!--[if !mso]><!-->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
   <!--<![endif]-->
 
   <style type="text/css">
     /* CSS Reset */
-    body, table, td, p, a, li { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
-    img { -ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; }
-    body { margin: 0; padding: 0; width: 100% !important; height: 100% !important; }
+    body,
+    table,
+    td,
+    p,
+    a,
+    li {
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+
+    table,
+    td {
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
+
+    img {
+      -ms-interpolation-mode: bicubic;
+      border: 0;
+      outline: none;
+      text-decoration: none;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100% !important;
+      height: 100% !important;
+    }
 
     /* Google Fonts fallback */
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
     /* Dark Mode */
-    :root { color-scheme: light dark; supported-color-schemes: light dark; }
+    :root {
+      color-scheme: light dark;
+      supported-color-schemes: light dark;
+    }
 
     @media (prefers-color-scheme: dark) {
-      .body-bg { background-color: #1a1a1a !important; }
-      .content-bg { background-color: #2d2d2d !important; }
-      .dark-text { color: #ffffff !important; }
-      .dark-text-secondary { color: #cccccc !important; }
+      .body-bg {
+        background-color: #1a1a1a !important;
+      }
+
+      .content-bg {
+        background-color: #2d2d2d !important;
+      }
+
+      .dark-text {
+        color: #ffffff !important;
+      }
+
+      .dark-text-secondary {
+        color: #cccccc !important;
+      }
     }
 
     /* Gmail dark mode */
-    [data-ogsc] .body-bg { background-color: #1a1a1a !important; }
-    [data-ogsc] .content-bg { background-color: #2d2d2d !important; }
-    [data-ogsc] .dark-text { color: #ffffff !important; }
-    [data-ogsc] .dark-text-secondary { color: #cccccc !important; }
+    [data-ogsc] .body-bg {
+      background-color: #1a1a1a !important;
+    }
 
-/*
+    [data-ogsc] .content-bg {
+      background-color: #2d2d2d !important;
+    }
+
+    [data-ogsc] .dark-text {
+      color: #ffffff !important;
+    }
+
+    [data-ogsc] .dark-text-secondary {
+      color: #cccccc !important;
+    }
+
+    /*
 
 ########COLORS#######
 
@@ -70,303 +123,397 @@ Color Reference (Zurich / Travel Guard):
 - Background: #f1f6fb
 
 */
-@media (max-width: 600px) {
-  /* line 10, ../../../sass/wrappers/responsive/default.scss */
-  .wrapper, .section {
-    width: 100% !important;
-  }
-}
+    @media (max-width: 600px) {
 
-@media (max-width: 600px) {
-  /* line 16, ../../../sass/wrappers/responsive/default.scss */
-  .columns {
-    width: 100% !important;
-  }
-}
+      /* line 10, ../../../sass/wrappers/responsive/default.scss */
+      .wrapper,
+      .section {
+        width: 100% !important;
+      }
+    }
 
-@media (max-width: 600px) {
-  /* line 22, ../../../sass/wrappers/responsive/default.scss */
-  .col-1 {
-    padding: 16px !important;
-  }
-}
+    @media (max-width: 600px) {
 
-@media (max-width: 600px) {
-  /* line 28, ../../../sass/wrappers/responsive/default.scss */
-  .col-2, .col-3 {
-    width: 100% !important;
-    display: block;
-    box-sizing: border-box !important;
-  }
-  .mobile-none {
-    display: none;
-  }
-  .mobile-ta-c {
-    text-align: center !important;
-  }
-  .mobile-pr {
-    padding-right: 16px !important;
-  }
-  .mobile-prl-none {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-}
+      /* line 16, ../../../sass/wrappers/responsive/default.scss */
+      .columns {
+        width: 100% !important;
+      }
+    }
 
-/* line 35, ../../../sass/wrappers/responsive/default.scss */
-table {
-  mso-table-lspace: 0pt;
-  mso-table-rspace: 0pt;
-}
+    @media (max-width: 600px) {
 
-@media (max-width: 600px) {
-  /* line 42, ../../../sass/wrappers/responsive/default.scss */
-  .icon-left .icon, .icon-left .text {
-    display: block !important;
-    box-sizing: border-box !important;
-    width: 250px !important;
-    text-align: center;
-    margin: auto !important;
-  }
-  /* line 46, ../../../sass/wrappers/responsive/default.scss */
-  .icon-left .icon.winter {
-    padding: 0 0 32px !important;
-  }
-  /* line 49, ../../../sass/wrappers/responsive/default.scss */
-  .icon-left .heading {
-    text-align: center;
-  }
-}
+      /* line 22, ../../../sass/wrappers/responsive/default.scss */
+      .col-1 {
+        padding: 16px !important;
+      }
+    }
 
-@media (max-width: 600px) {
-  /* line 57, ../../../sass/wrappers/responsive/default.scss */
-  .icon-right .icon, .icon-right .text {
-    float: none !important;
-    width: 100% !important;
-    text-align: center;
-  }
-  /* line 61, ../../../sass/wrappers/responsive/default.scss */
-  .icon-right .icon td {
-    padding: 0 0 32px !important;
-    text-align: center;
-  }
-  /* line 65, ../../../sass/wrappers/responsive/default.scss */
-  .icon-right .heading {
-    text-align: center;
-  }
-  .m-ta-c {
-    text-align: center !important;
-  }
-  .m-m-a {
-    margin: auto !important;
-  }
-  .m-p-tb {
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
-  }
-  .m-p-lr {
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-  }
-}
+    @media (max-width: 600px) {
 
-/*# sourceMappingURL=default.css.map */
+      /* line 28, ../../../sass/wrappers/responsive/default.scss */
+      .col-2,
+      .col-3 {
+        width: 100% !important;
+        display: block;
+        box-sizing: border-box !important;
+      }
 
-</style>
+      .mobile-none {
+        display: none;
+      }
+
+      .mobile-ta-c {
+        text-align: center !important;
+      }
+
+      .mobile-pr {
+        padding-right: 16px !important;
+      }
+
+      .mobile-prl-none {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+    }
+
+    /* line 35, ../../../sass/wrappers/responsive/default.scss */
+    table {
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
+
+    @media (max-width: 600px) {
+
+      /* line 42, ../../../sass/wrappers/responsive/default.scss */
+      .icon-left .icon,
+      .icon-left .text {
+        display: block !important;
+        box-sizing: border-box !important;
+        width: 250px !important;
+        text-align: center;
+        margin: auto !important;
+      }
+
+      /* line 46, ../../../sass/wrappers/responsive/default.scss */
+      .icon-left .icon.winter {
+        padding: 0 0 32px !important;
+      }
+
+      /* line 49, ../../../sass/wrappers/responsive/default.scss */
+      .icon-left .heading {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      /* line 57, ../../../sass/wrappers/responsive/default.scss */
+      .icon-right .icon,
+      .icon-right .text {
+        float: none !important;
+        width: 100% !important;
+        text-align: center;
+      }
+
+      /* line 61, ../../../sass/wrappers/responsive/default.scss */
+      .icon-right .icon td {
+        padding: 0 0 32px !important;
+        text-align: center;
+      }
+
+      /* line 65, ../../../sass/wrappers/responsive/default.scss */
+      .icon-right .heading {
+        text-align: center;
+      }
+
+      .m-ta-c {
+        text-align: center !important;
+      }
+
+      .m-m-a {
+        margin: auto !important;
+      }
+
+      .m-p-tb {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+      }
+
+      .m-p-lr {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+      }
+    }
+
+    /*# sourceMappingURL=default.css.map */
+  </style>
 </head>
-<body style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; width: 100%; height: 100%; line-height: 1;" class="body-bg">
-    <!-- Preheader -->
+
+<body
+  style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; width: 100%; height: 100%; line-height: 1;"
+  class="body-bg">
+  <!-- Preheader -->
   <div style="display: none; max-height: 0; overflow: hidden; mso-hide: all;">
     ¡Gracias por escoger los servicios de asistencia en viaje de Travel Guard®!
     &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
   </div>
-  <table role="presentation" class="body" style="border-collapse: collapse; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; border-spacing: 0; background: #F1F6FB; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; height: 100%; -moz-font-feature-settings: 'liga' on; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; width: 100%; -moz-osx-font-smoothing: grayscale;">
+  <table role="presentation" class="body"
+    style="border-collapse: collapse; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; border-spacing: 0; background: #F1F6FB; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; height: 100%; -moz-font-feature-settings: 'liga' on; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; width: 100%; -moz-osx-font-smoothing: grayscale;">
     <tr>
-      <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif;">
-        <table role="presentation" align="center" class="wrapper" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 620px; margin: auto;">
+      <td
+        style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif;">
+        <table role="presentation" align="center" class="wrapper"
+          style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 620px; margin: auto;">
           <tr>
-            <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding: 16px 0; width: 10px;"> </td>
-            <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif;">
-              <table role="presentation" class="preheader" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; color: #1C252E;">
+            <td class="spacer"
+              style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding: 16px 0; width: 10px;">
+            </td>
+            <td
+              style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif;">
+              <table role="presentation" class="preheader"
+                style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; color: #1C252E;">
                 <tr>
-                  <td style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding: 16px; font-size: 10px;">
+                  <td
+                    style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding: 16px; font-size: 10px;">
                   </td>
                 </tr>
               </table>
-              <table role="presentation" align="center" class="main" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; color: #1C252E; background: #fff; border-radius: 2px;">
+              <table role="presentation" align="center" class="main"
+                style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; color: #1C252E; background: #fff; border-radius: 2px;">
                 <tr>
-                  <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif;">
-                  <!-- Remove the text below this comment and insert header/content sections -->
+                  <td
+                    style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif;">
+                    <!-- Remove the text below this comment and insert header/content sections -->
 
 
-                  <style type="text/css">
-                  @media (max-width: 600px) {
-                    /* line 9, ../../../sass/headers/responsive/img.scss */
-                    .header img {
-                      width: auto !important;
-                      max-width: 100%;
-                    }
-                  }
+                    <style type="text/css">
+                      @media (max-width: 600px) {
 
-                  /*# sourceMappingURL=img.css.map */
+                        /* line 9, ../../../sass/headers/responsive/img.scss */
+                        .header img {
+                          width: auto !important;
+                          max-width: 100%;
+                        }
+                      }
 
-                  </style>
-
-
-                  <table role="presentation" class="header" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; text-align: center; background: #F1F6FB;">
-                    <tbody><tr>
-                      <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif;padding-bottom: 30px; padding-top: 30px;">
-                        <img alt="Travel Guard" width="600" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/tg_logo_header.png" style="border: 0; outline: none; display: block; margin: auto; width: 600px; border-radius: 2px 2px 0 0; background: transparent;">
-                      </td>
-                    </tr>
-                  </tbody></table>
+                      /*# sourceMappingURL=img.css.map */
+                    </style>
 
 
-
-                  <table role="presentation" class="header" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; text-align: center;">
-                    <tr>
-                      <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif;">
-                        <img alt="" width="235" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/FulfillmentEmail_HeaderImage.jpg" style="border: 0; outline: none; display: block; margin: auto; width: 235px; border-radius: 2px 2px 0 0;">
-                      </td>
-                      <td class="spacer" style="margin: 0; border: 0; font-size: 18px; vertical-align: middle; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; color: #fff; padding: 0 40px; font-weight: bold; background-color: #003D6E; text-align: left;">
-                        ¡Gracias por escoger los servicios de asistencia en viaje de Travel Guard®!
-                      </td>
-                    </tr>
-                  </table>
+                    <table role="presentation" class="header"
+                      style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; text-align: center; background: #F1F6FB;">
+                      <tbody>
+                        <tr>
+                          <td
+                            style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif;padding-bottom: 30px; padding-top: 30px;">
+                            <img alt="Travel Guard" width="600"
+                              src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/tg_logo_header.png"
+                              style="border: 0; outline: none; display: block; margin: auto; width: 600px; border-radius: 2px 2px 0 0; background: transparent;">
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
 
 
 
-                  <table role="presentation" class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif;">
-                    <tr>
-                      <td class="col-1" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding: 40px; width: 600px;">
-                        <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                    <table role="presentation" class="header"
+                      style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; text-align: center;">
+                      <tr>
+                        <td
+                          style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif;">
+                          <img alt="" width="235"
+                            src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/FulfillmentEmail_HeaderImage.jpg"
+                            style="border: 0; outline: none; display: block; margin: auto; width: 235px; border-radius: 2px 2px 0 0;">
+                        </td>
+                        <td class="spacer"
+                          style="margin: 0; border: 0; font-size: 18px; vertical-align: middle; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; color: #fff; padding: 0 40px; font-weight: bold; background-color: #003D6E; text-align: left;">
+                          ¡Gracias por escoger los servicios de asistencia en viaje de Travel Guard®!
+                        </td>
+                      </tr>
+                    </table>
+
+
+
+                    <table role="presentation" class="columns"
+                      style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif;">
+                      <tr>
+                        <td class="col-1"
+                          style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding: 40px; width: 600px;">
+                          <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
 
 
 
 
-                        <table role="presentation" class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
-                          <tr>
-                            <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding-bottom: 25px;">
-                              Estimado {{policyDetail-primaryInsured-firstName}} {{policyDetail-primaryInsured-lastName}}: <br>
-                              <br>
-                              <b style="color: #003D6E;">Todos los clientes deben ser residentes en México</b> <br>
-                              <br>
-                              ¡Gracias por escoger los servicios de asistencia en viaje de Travel Guard®! <br>
-                              Su número de certificado de asistencia en viaje es <b>{{policyDetail-policyNumber}}</b>. <br>
-                              <br>
-                              Por favor <b><a href="https://policy.uat.travelguard.com/mypolicy/mx/es" style="color: #0E4E88;">presione aquí</a></b> para ver su <b>Certificado de Asistencia en Viaje (TAC)</b> y los <b>Términos &amp; Condiciones</b> de su <b>Contrato de Servicios de Asistencia en Viaje</b>. <br>
-                              <br>
-                              <i>Para iniciar sesión, usted necesitará su número de certificado, y su apellido.</i>
-                            </td>
-                          </tr>
-                        </table>
+                          <table role="presentation" class="text"
+                            style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
+                            <tr>
+                              <td class="spacer"
+                                style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding-bottom: 25px;">
+                                Estimado {{policyDetail-primaryInsured-firstName}}
+                                {{policyDetail-primaryInsured-lastName}}: <br>
+                                <br>
+                                <b style="color: #003D6E;">Todos los clientes deben ser residentes en México</b> <br>
+                                <br>
+                                ¡Gracias por escoger los servicios de asistencia en viaje de Travel Guard®! <br>
+                                Su número de certificado de asistencia en viaje es <b>{{policyDetail-policyNumber}}</b>.
+                                <br>
+                                <br>
+                                Por favor <b><a href="https://policy.uat.travelguard.com/mypolicy/mx/es"
+                                    style="color: #0E4E88;">presione aquí</a></b> para ver su <b>Certificado de
+                                  Asistencia en Viaje (TAC)</b> y los <b>Términos &amp; Condiciones</b> de su
+                                <b>Contrato de Servicios de Asistencia en Viaje</b>. <br>
+                                <br>
+                                <i>Para iniciar sesión, usted necesitará su número de certificado, y su apellido.</i>
+                              </td>
+                            </tr>
+                          </table>
 
-                        <table role="presentation" class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; text-align: left; margin-bottom: 16px;">
-                          <tr>
-                            <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; padding-top: 16px; color: #003D6E; border-bottom: 1px solid #9CC7E6;">¿Qué cubre su contrato de servicios?</td>
-                          </tr>
-                        </table>
+                          <table role="presentation" class="head"
+                            style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; text-align: left; margin-bottom: 16px;">
+                            <tr>
+                              <td class="spacer"
+                                style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; padding-top: 16px; color: #003D6E; border-bottom: 1px solid #9CC7E6;">
+                                ¿Qué cubre su contrato de servicios?</td>
+                            </tr>
+                          </table>
 
-                        <table role="presentation" class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
-                          <tr>
-                            <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding-bottom: 25px;">
-                              Los servicios incluidos en su contrato están expresados en su <b>TAC</b> y en los <b>Términos &amp; Condiciones</b>. <br>
-                              <br>
-                              Por favor lea los <b>Términos &amp; Condiciones</b> para asegurarse que cumple con sus requerimientos específicos antes de que viaje. Este contrato de servicios de asistencia en viaje proporciona servicios para situaciones y eventos específicos durante su viaje. Hay excepciones que pueden aplicar para circunstancias específicas, así que es mejor revisar los <b>Términos &amp; Condiciones</b> tan pronto como pueda.
-                            </td>
-                          </tr>
-                        </table>
+                          <table role="presentation" class="text"
+                            style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
+                            <tr>
+                              <td class="spacer"
+                                style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding-bottom: 25px;">
+                                Los servicios incluidos en su contrato están expresados en su <b>TAC</b> y en los
+                                <b>Términos &amp; Condiciones</b>. <br>
+                                <br>
+                                Por favor lea los <b>Términos &amp; Condiciones</b> para asegurarse que cumple con sus
+                                requerimientos específicos antes de que viaje. Este contrato de servicios de asistencia
+                                en viaje proporciona servicios para situaciones y eventos específicos durante su viaje.
+                                Hay excepciones que pueden aplicar para circunstancias específicas, así que es mejor
+                                revisar los <b>Términos &amp; Condiciones</b> tan pronto como pueda.
+                              </td>
+                            </tr>
+                          </table>
 
-                        <table role="presentation" class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; text-align: left; margin-bottom: 16px;">
-                          <tr>
-                            <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; padding-top: 16px; color: #CB0029; border-bottom: 1px solid #9CC7E6;">RECORDATORIOS IMPORTANTES:</td>
-                          </tr>
-                        </table>
+                          <table role="presentation" class="head"
+                            style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; text-align: left; margin-bottom: 16px;">
+                            <tr>
+                              <td class="spacer"
+                                style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; padding-top: 16px; color: #CB0029; border-bottom: 1px solid #9CC7E6;">
+                                RECORDATORIOS IMPORTANTES:</td>
+                            </tr>
+                          </table>
 
-                        <table role="presentation" class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
-                          <tr>
-                            <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding-bottom: 25px;">
-                              <ul>
-                                <li>Todos los clientes deben ser <b>residentes en México</b>.</li>
-                                <li>Tenga en cuenta los límites de edad máximos de elegibilidad para la cobertura por producto:
-                                  <ol>
-                                    <li>Todos los clientes deben ser menores de 76 años en la fecha de salida del viaje para ser elegibles para el <b>Plan de Cancelacion</b>.</li>
-                                    <li>Todos los clientes deben ser menores de 66 años en la fecha de salida del viaje para ser elegibles para el <b>Plan de Protección</b>.</li>
-                                  </ol>
-                                </li>
+                          <table role="presentation" class="text"
+                            style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
+                            <tr>
+                              <td class="spacer"
+                                style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding-bottom: 25px;">
+                                <ul>
+                                  <li>Todos los clientes deben ser <b>residentes en México</b>.</li>
+                                  <li>Tenga en cuenta los límites de edad máximos de elegibilidad para la cobertura por
+                                    producto:
+                                    <ol>
+                                      <li>Todos los clientes deben ser menores de 76 años en la fecha de salida del
+                                        viaje para ser elegibles para el <b>Plan de Cancelación</b>.</li>
+                                      <li>Todos los clientes deben ser menores de 66 años en la fecha de salida del
+                                        viaje para ser elegibles para el <b>Plan de Protección</b>.</li>
+                                    </ol>
+                                  </li>
 
-                              </ul>
-                            </td>
-                          </tr>
-                        </table>
-
-
-                        <table role="presentation" class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; text-align: left; margin-bottom: 16px;">
-                          <tr>
-                            <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; padding-top: 16px; color: #003D6E; border-bottom: 1px solid #9CC7E6;">Información de contacto IMPORTANTE</td>
-                          </tr>
-                        </table>
-
-                        <table role="presentation" class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
-                          <tr>
-                            <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding-bottom: 25px;">
-                              <b style="color: #003D6E;">Solo cancelaciones</b> <br>
-                              Por favor llamar a <b>Expedia</b> para cancelar el Contrato <b>dentro de los primeros 15 días a partir de la fecha de compra</b>. <br>
-                              Su contrato de servicio será reembolsado sólo si su viaje aún no ha comenzado y usted no ha realizado una solicitud de servicio. <br>
-                              <br>
-                              <b style="color: #003D6E;">Solo consulta de contrato de servicio</b> <br>
-                              Si tiene alguna pregunta acerca de este contrato de servicio, por favor llame a los siguientes números: <br>
-                              <ul style="margin-top: 5px; margin-bottom: 5px;">
-                                <li>Desde cualquier parte del mundo llamada por cobrar: +1 817 826 7280 o</li>
-                                <li>Mexico (interior de país): 800 062 5197</li>
-                              </ul>
-                              De lunes a jueves de 8am-5pm; viernes de 8am-2pm excepto días festivos o nuestro correo <a href="mailto:MX.expassist@travelguard.com" style="color: #0E4E88;"><b>MX.expassist@travelguard.com</b></a> donde puede hacer preguntas relacionadas a su certificado. <br>
-                              <br>
-                              <b style="color: #003D6E;">¿Qué pasa si tengo una emergencia en el extranjero?</b> <br>
-                              Llamar a Travel Guard en cualquier momento: <br>
-                              <ul style="margin-top: 5px; margin-bottom: 5px;">
-                                <li>Desde cualquier parte del mundo llamada por cobrar: +1 817 826 7280 o</li>
-                                <li>Mexico (interior de país): 800 062 5197</li>
-                                <li>También puede enviar un correo al <a href="mailto:MX.expassist@travelguard.com" style="color: #0E4E88;"><b>MX.expassist@travelguard.com</b></a> solicitando asistencia. Asegúrese de detallar muy bien la situación y proveer datos de contacto.</li>
-                              </ul>
-                              Nuestro centro de servicio está abierto 24/7. <br>
-                              <br>
-                              Nota: favor de tomar en cuenta que cuando llame del extranjero debe hacerlo a través de la operadora como cobro revertido, de otra forma será cobro de larga distancia. <br>
-                              <br>
-                              <b style="color: #003D6E;">¿Cómo presento una solicitud de reembolso?</b> <br>
-                              Presente su solicitud en nuestro portal de servicios: <a href="https://claims.travelguard.com/myclaim/mx" style="color: #0E4E88;"><b>https://claims.travelguard.com/myclaim/mx</b></a> <br>
-                              <br>
-                              Viaje seguro! <br>
-                              <b style="color: #003D6E;">Travel Guard Americas</b>
-
-                            </td>
-                          </tr>
-                        </table>
+                                </ul>
+                              </td>
+                            </tr>
+                          </table>
 
 
-                        <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
-                      </td>
-                    </tr>
-                  </table>
+                          <table role="presentation" class="head"
+                            style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; text-align: left; margin-bottom: 16px;">
+                            <tr>
+                              <td class="spacer"
+                                style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; padding-top: 16px; color: #003D6E; border-bottom: 1px solid #9CC7E6;">
+                                Información de contacto IMPORTANTE</td>
+                            </tr>
+                          </table>
+
+                          <table role="presentation" class="text"
+                            style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
+                            <tr>
+                              <td class="spacer"
+                                style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding-bottom: 25px;">
+                                <b style="color: #003D6E;">Solo cancelaciones</b> <br>
+                                Por favor llamar a <b>Expedia</b> para cancelar el Contrato <b>dentro de los primeros 15
+                                  días a partir de la fecha de compra</b>. <br>
+                                Su contrato de servicio será reembolsado sólo si su viaje aún no ha comenzado y usted no
+                                ha realizado una solicitud de servicio. <br>
+                                <br>
+                                <b style="color: #003D6E;">Solo consulta de contrato de servicio</b> <br>
+                                Si tiene alguna pregunta acerca de este contrato de servicio, por favor llame a los
+                                siguientes números: <br>
+                                <ul style="margin-top: 5px; margin-bottom: 5px;">
+                                  <li>Desde cualquier parte del mundo llamada por cobrar: +1 817 826 7280 o</li>
+                                  <li>Mexico (interior de país): 800 062 5197</li>
+                                </ul>
+                                De lunes a jueves de 8am-5pm; viernes de 8am-2pm excepto días festivos o nuestro correo
+                                <a href="mailto:MX.expassist@travelguard.com"
+                                  style="color: #0E4E88;"><b>MX.expassist@travelguard.com</b></a> donde puede hacer
+                                preguntas relacionadas a su certificado. <br>
+                                <br>
+                                <b style="color: #003D6E;">¿Qué pasa si tengo una emergencia en el extranjero?</b> <br>
+                                Llamar a Travel Guard en cualquier momento: <br>
+                                <ul style="margin-top: 5px; margin-bottom: 5px;">
+                                  <li>Desde cualquier parte del mundo llamada por cobrar: +1 817 826 7280 o</li>
+                                  <li>Mexico (interior de país): 800 062 5197</li>
+                                  <li>También puede enviar un correo al <a href="mailto:MX.expassist@travelguard.com"
+                                      style="color: #0E4E88;"><b>MX.expassist@travelguard.com</b></a> solicitando
+                                    asistencia. Asegúrese de detallar muy bien la situación y proveer datos de contacto.
+                                  </li>
+                                </ul>
+                                Nuestro centro de servicio está abierto 24/7. <br>
+                                <br>
+                                Nota: favor de tomar en cuenta que cuando llame del extranjero debe hacerlo a través de
+                                la operadora como cobro revertido, de otra forma será cobro de larga distancia. <br>
+                                <br>
+                                <b style="color: #003D6E;">¿Cómo presento una solicitud de reembolso?</b> <br>
+                                Presente su solicitud en nuestro portal de servicios: <a
+                                  href="https://claims.travelguard.com/myclaim/mx"
+                                  style="color: #0E4E88;"><b>https://claims.travelguard.com/myclaim/mx</b></a> <br>
+                                <br>
+                                Viaje seguro! <br>
+                                <b style="color: #003D6E;">Travel Guard Americas</b>
+
+                              </td>
+                            </tr>
+                          </table>
 
 
-                  <!-- Remove the text above this comment and insert header/content sections -->
+                          <!-- Remove the text between this comment and the comment closest to it and insert content sections -->
+                        </td>
+                      </tr>
+                    </table>
+
+
+                    <!-- Remove the text above this comment and insert header/content sections -->
                   </td>
                 </tr>
               </table>
-              <table role="presentation" class="footer" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; color: #1C252E;">
+              <table role="presentation" class="footer"
+                style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; color: #1C252E;">
                 <tr>
-                  <td style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding: 16px; font-size: 10px;">
+                  <td
+                    style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding: 16px; font-size: 10px;">
 
                   </td>
                 </tr>
               </table>
             </td>
-            <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding: 16px 0; width: 10px;"></td>
+            <td class="spacer"
+              style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding: 16px 0; width: 10px;">
+            </td>
           </tr>
         </table>
       </td>
     </tr>
   </table>
 </body>
+
 </html>
