@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+  xmlns:o="urn:schemas-microsoft-com:office:office">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,55 +23,175 @@
   <![endif]-->
 
   <!--[if !mso]><!-->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
   <!--<![endif]-->
 
   <style type="text/css">
     /* Reset */
-    body, table, td, p, a, li { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
-    img { -ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; }
-    body { margin: 0; padding: 0; width: 100% !important; height: 100% !important; }
+    body,
+    table,
+    td,
+    p,
+    a,
+    li {
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+
+    table,
+    td {
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
+
+    img {
+      -ms-interpolation-mode: bicubic;
+      border: 0;
+      outline: none;
+      text-decoration: none;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100% !important;
+      height: 100% !important;
+    }
 
     /* Google Fonts fallback for clients that support @import */
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
     /* Dark Mode */
-    :root { color-scheme: light dark; supported-color-schemes: light dark; }
+    :root {
+      color-scheme: light dark;
+      supported-color-schemes: light dark;
+    }
 
     @media (prefers-color-scheme: dark) {
-      .body-bg { background-color: #1a1a1a !important; }
-      .content-bg { background-color: #2d2d2d !important; }
-      .dark-text { color: #ffffff !important; }
-      .dark-text-secondary { color: #cccccc !important; }
-      .dark-link { color: #ffffff !important; }
+      .body-bg {
+        background-color: #1a1a1a !important;
+      }
+
+      .content-bg {
+        background-color: #2d2d2d !important;
+      }
+
+      .dark-text {
+        color: #ffffff !important;
+      }
+
+      .dark-text-secondary {
+        color: #cccccc !important;
+      }
+
+      .dark-link {
+        color: #ffffff !important;
+      }
     }
 
     /* Gmail dark mode */
-    [data-ogsc] .body-bg { background-color: #1a1a1a !important; }
-    [data-ogsc] .content-bg { background-color: #2d2d2d !important; }
-    [data-ogsc] .dark-text { color: #ffffff !important; }
-    [data-ogsc] .dark-text-secondary { color: #cccccc !important; }
-    [data-ogsc] .dark-link { color: #ffffff !important; }
+    [data-ogsc] .body-bg {
+      background-color: #1a1a1a !important;
+    }
+
+    [data-ogsc] .content-bg {
+      background-color: #2d2d2d !important;
+    }
+
+    [data-ogsc] .dark-text {
+      color: #ffffff !important;
+    }
+
+    [data-ogsc] .dark-text-secondary {
+      color: #cccccc !important;
+    }
+
+    [data-ogsc] .dark-link {
+      color: #ffffff !important;
+    }
 
     /* Responsive */
     @media screen and (max-width: 600px) {
-      .wrapper { width: 100% !important; }
-      .mobile-full { width: 100% !important; display: block !important; box-sizing: border-box !important; }
-      .mobile-padding { padding-left: 20px !important; padding-right: 20px !important; }
-      .mobile-center { text-align: center !important; }
-      .mobile-hide { display: none !important; }
-      .mobile-stack { display: block !important; width: 100% !important; box-sizing: border-box !important; }
-      .mobile-img { width: 100% !important; height: auto !important; }
-      .features-table, .features-table tbody, .features-table tr { display: block !important; width: 100% !important; box-sizing: border-box !important; }
-      .features-cell { display: block !important; max-width: 75% !important; margin: 0 auto !important; padding-left: 0 !important; padding-right: 0 !important; padding-bottom: 20px !important; text-align: center !important; box-sizing: border-box !important; }
-      .features-heading { display: block !important; width: 100% !important; padding-left: 0 !important; padding-right: 0 !important; box-sizing: border-box !important; }
-      .features-heading table { margin-left: auto !important; margin-right: auto !important; }
-      .features-list { text-align: left !important; padding-left: 10px !important; }
-      .hero-img { width: 100% !important; height: auto !important; }
+      .wrapper {
+        width: 100% !important;
+      }
+
+      .mobile-full {
+        width: 100% !important;
+        display: block !important;
+        box-sizing: border-box !important;
+      }
+
+      .mobile-padding {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+
+      .mobile-center {
+        text-align: center !important;
+      }
+
+      .mobile-hide {
+        display: none !important;
+      }
+
+      .mobile-stack {
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+
+      .mobile-img {
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      .features-table,
+      .features-table tbody,
+      .features-table tr {
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+
+      .features-cell {
+        display: block !important;
+        max-width: 75% !important;
+        margin: 0 auto !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-bottom: 20px !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+      }
+
+      .features-heading {
+        display: block !important;
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        box-sizing: border-box !important;
+      }
+
+      .features-heading table {
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+      .features-list {
+        text-align: left !important;
+        padding-left: 10px !important;
+      }
+
+      .hero-img {
+        width: 100% !important;
+        height: auto !important;
+      }
     }
   </style>
 </head>
+
 <body style="margin: 0; padding: 0; background-color: #f1f6fb;" class="body-bg">
 
   <!-- Preheader -->
@@ -79,44 +201,60 @@
   </div>
 
   <!-- Email Container -->
-  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #f1f6fb;" class="body-bg">
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #f1f6fb;"
+    class="body-bg">
     <tr>
       <td align="center" style="padding: 20px 10px;">
 
         <!-- Preheader Text Row -->
-        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" class="wrapper" style="max-width: 600px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" class="wrapper"
+          style="max-width: 600px;">
           <tr>
             <td align="center" style="padding-bottom: 14px;">
-              <p style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 10px; line-height: 24px; color: #1c252e;" class="dark-text">
+              <p style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 10px; line-height: 24px; color: #1c252e;"
+                class="dark-text">
                 Don't forget to pack Travel Guard<sup style="font-size: 6px;">®</sup>!
-                <a href="https://www.travelguard.com?cmpid=emc-tgdirect-us-en-bau-hurricaneseason" style="color: #005b94; text-decoration: underline;" class="dark-link">Get My Quote ›</a>
+                <a href="https://www.travelguard.com?cmpid=emc-tgdirect-us-en-bau-hurricaneseason"
+                  style="color: #005b94; text-decoration: underline;" class="dark-link">Get My Quote ›</a>
               </p>
             </td>
           </tr>
         </table>
 
         <!-- Main Content -->
-        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" class="wrapper" style="max-width: 600px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" class="wrapper"
+          style="max-width: 600px;">
           <tr>
             <td>
 
               <!-- Header with Logo and Hero -->
-              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #ffffff;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+                style="background-color: #ffffff;">
                 <tr>
                   <td>
                     <!-- Navy Header Section -->
-                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #003d6e; border-top: 10px solid #66cbe1;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+                      style="background-color: #003d6e; border-top: 10px solid #66cbe1;">
                       <tr>
                         <td align="center" style="padding: 30px 20px 20px 20px;">
-                          <img src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/logo-travel-guard-white.png" alt="Travel Guard" width="238" style="display: block; max-width: 238px; height: auto;">
+                          <img
+                            src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/logo-travel-guard-white.png"
+                            alt="Travel Guard" width="238" style="display: block; max-width: 238px; height: auto;">
                         </td>
                       </tr>
                       <tr>
                         <td align="center" style="padding-bottom: 15px;">
                           <table role="presentation" cellpadding="0" cellspacing="0" border="0">
                             <tr>
+                              <td style="padding-right: 8px;">
+                                <img
+                                  src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/palm-tree.png"
+                                  alt="" width="24" height="24" style="display: block;">
+                              </td>
                               <td>
-                                <p style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; font-weight: 600; color: #66cbe1; text-transform: uppercase; letter-spacing: 1px;">Seasonal Update</p>
+                                <p
+                                  style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; font-weight: 600; color: #66cbe1; text-transform: uppercase; letter-spacing: 1px;">
+                                  Seasonal Update</p>
                               </td>
                             </tr>
                           </table>
@@ -133,7 +271,9 @@
                       </tr>
                       <tr>
                         <td align="center" style="padding: 20px 30px 30px 30px;">
-                          <h1 style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 32px; font-weight: 600; line-height: 38px; color: #ffffff;">Hurricane Season</h1>
+                          <h1
+                            style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 32px; font-weight: 600; line-height: 38px; color: #ffffff;">
+                            Hurricane Season</h1>
                         </td>
                       </tr>
                     </table>
@@ -141,13 +281,17 @@
                     <!-- Hero Image - Overlapping navy and white -->
                     <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                       <tr>
-                        <td align="center" style="background: linear-gradient(to bottom, #003d6e 50%, #ffffff 50%); padding: 0 30px;">
+                        <td align="center"
+                          style="background: linear-gradient(to bottom, #003d6e 50%, #ffffff 50%); padding: 0 30px;">
                           <!--[if mso]>
                           <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:540px;height:150px;">
                             <v:fill type="solid" color="#003d6e"/>
                             <v:textbox inset="0,0,0,0">
                           <![endif]-->
-                          <img src="../img/hero-hurricane-season.jpg" alt="Hurricane season preparation" width="540" class="hero-img" style="display: block; max-width: 540px; width: 100%; height: auto;">
+                          <img
+                            src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/Hurricne-Season-Travel-Tips.png"
+                            alt="Hurricane season preparation" width="540" class="hero-img"
+                            style="display: block; max-width: 540px; width: 100%; height: auto;">
                           <!--[if mso]>
                             </v:textbox>
                           </v:rect>
@@ -160,19 +304,39 @@
               </table>
 
               <!-- Body Content -->
-              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #ffffff;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+                style="background-color: #ffffff;">
                 <tr>
                   <td style="padding: 30px 30px 20px 30px;" class="mobile-padding">
-                    <p style="margin: 0 0 20px 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 24px; color: #1c252e;">
-                      This year, Tropical Storm Risk is predicting that more than 21 storms are expected to hit the Atlantic with at least seven being named as hurricanes<sup>1</sup>. The time of year known as hurricane season is considered to be from June to November. Depending on your location, your travel plans could be affected.
+                    <p
+                      style="margin: 0 0 20px 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 24px; color: #1c252e;">
+                      This year, Tropical Storm Risk is predicting that more than 21 storms are expected to hit the
+                      Atlantic with at least seven being named as hurricanes<sup>1</sup>. The time of year known as
+                      hurricane season is considered to be from June to November. Depending on your location, your
+                      travel plans could be affected.
                     </p>
-                    <p style="margin: 0 0 20px 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 24px; color: #1c252e;">
-                      If you have travel plans during this time, consider getting coverage to help protect your travel investment. Some coverages, like <a href="https://www.travelguard.com/travel-insurance/benefits/trip-cancellation-insurance?cmpid=emc-tgdirect-us-en-bau-hurricaneseason" style="color: #005b94; text-decoration: underline;">Trip Cancellation</a>, <a href="https://www.travelguard.com/travel-insurance/benefits/trip-exchange?cmpid=emc-tgdirect-us-en-bau-hurricaneseason" style="color: #005b94; text-decoration: underline;">Trip Exchange</a> and <a href="https://www.travelguard.com/travel-insurance/benefits/trip-saver?cmpid=emc-tgdirect-us-en-bau-hurricaneseason" style="color: #005b94; text-decoration: underline;">Trip Saver</a>, go into effect the day after you purchase your travel insurance plan. These coverages can help with certain non-refundable costs and change fees and give you access to <a href="https://www.travelguard.com/info/assistance-services?cmpid=emc-tgdirect-us-en-bau-hurricaneseason" style="color: #005b94; text-decoration: underline;">our 24/7 assistance services team</a>.
+                    <p
+                      style="margin: 0 0 20px 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 24px; color: #1c252e;">
+                      If you have travel plans during this time, consider getting coverage to help protect your travel
+                      investment. Some coverages, like <a
+                        href="https://www.travelguard.com/travel-insurance/benefits/trip-cancellation-insurance?cmpid=emc-tgdirect-us-en-bau-hurricaneseason"
+                        style="color: #005b94; text-decoration: underline;">Trip Cancellation</a>, <a
+                        href="https://www.travelguard.com/travel-insurance/benefits/trip-exchange?cmpid=emc-tgdirect-us-en-bau-hurricaneseason"
+                        style="color: #005b94; text-decoration: underline;">Trip Exchange</a> and <a
+                        href="https://www.travelguard.com/travel-insurance/benefits/trip-saver?cmpid=emc-tgdirect-us-en-bau-hurricaneseason"
+                        style="color: #005b94; text-decoration: underline;">Trip Saver</a>, go into effect the day after
+                      you purchase your travel insurance plan. These coverages can help with certain non-refundable
+                      costs and change fees and give you access to <a
+                        href="https://www.travelguard.com/info/assistance-services?cmpid=emc-tgdirect-us-en-bau-hurricaneseason"
+                        style="color: #005b94; text-decoration: underline;">our 24/7 assistance services team</a>.
                     </p>
-                    <p style="margin: 0 0 20px 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 24px; color: #1c252e;">
-                      When severe weather conditions pose a threat to your travel plans, make sure you pack coverage before your departure.
+                    <p
+                      style="margin: 0 0 20px 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 24px; color: #1c252e;">
+                      When severe weather conditions pose a threat to your travel plans, make sure you pack coverage
+                      before your departure.
                     </p>
-                    <p style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 12px; font-style: italic; line-height: 16px; color: #1c252e;">
+                    <p
+                      style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 12px; font-style: italic; line-height: 16px; color: #1c252e;">
                       <sup>1</sup>https://www.tropicalstormrisk.com/forecasts.html
                     </p>
                   </td>
@@ -181,31 +345,40 @@
                 <!-- Popular Plan Features -->
                 <tr>
                   <td style="padding: 10px 30px 30px 30px;" class="mobile-padding">
-                    <h2 style="margin: 0 0 15px 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 18px; font-weight: 600; line-height: 25px; color: #003d6e; text-align: center;">
+                    <h2
+                      style="margin: 0 0 15px 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 18px; font-weight: 600; line-height: 25px; color: #003d6e; text-align: center;">
                       POPULAR PLAN FEATURES FOR YOUR NEXT VACATION:
                     </h2>
 
                     <!-- Features Box -->
-                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="border-top: 1px solid #b2e5f0;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+                      style="border-top: 1px solid #b2e5f0;">
                       <tr>
                         <td style="padding-top: 20px;">
                           <!-- Coverages Row - Two column on desktop -->
-                          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" class="features-table" style="margin: 0 auto;">
+                          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+                            class="features-table" style="margin: 0 auto;">
                             <tr>
-                              <td width="150" valign="top" style="padding-left: 30px; padding-bottom: 20px;" class="features-cell features-heading">
+                              <td width="150" valign="top" style="padding-left: 30px; padding-bottom: 20px;"
+                                class="features-cell features-heading">
                                 <table role="presentation" cellpadding="0" cellspacing="0" border="0">
                                   <tr>
                                     <td style="padding-right: 5px;">
-                                      <img src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/icon-shield.png" alt="" width="24" height="25" style="display: block;">
+                                      <img
+                                        src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/icon-shield.png"
+                                        alt="" width="24" height="25" style="display: block;">
                                     </td>
                                     <td>
-                                      <p style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 18px; font-weight: 600; line-height: 25px; color: #003d6e;">Coverages</p>
+                                      <p
+                                        style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 18px; font-weight: 600; line-height: 25px; color: #003d6e;">
+                                        Coverages</p>
                                     </td>
                                   </tr>
                                 </table>
                               </td>
                               <td valign="top" style="padding-bottom: 20px; padding-left: 40px;" class="features-cell">
-                                <ul class="features-list" style="margin: 0; padding: 0 0 0 20px; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 24px; color: #1c252e;">
+                                <ul class="features-list"
+                                  style="margin: 0; padding: 0 0 0 20px; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 24px; color: #1c252e;">
                                   <li>Travel Medical Expense</li>
                                   <li>Trip Cancellation / Interruption</li>
                                   <li>Cancel for Any Reason<sup>*</sup></li>
@@ -218,22 +391,29 @@
                           </table>
 
                           <!-- Services Row - Two column on desktop -->
-                          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="border-top: 1px solid #b2e5f0;" class="features-table">
+                          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+                            style="border-top: 1px solid #b2e5f0;" class="features-table">
                             <tr>
-                              <td width="150" valign="top" style="padding-left: 30px; padding-top: 20px;" class="features-cell features-heading">
+                              <td width="150" valign="top" style="padding-left: 30px; padding-top: 20px;"
+                                class="features-cell features-heading">
                                 <table role="presentation" cellpadding="0" cellspacing="0" border="0">
                                   <tr>
                                     <td style="padding-right: 9px;">
-                                      <img src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/icon-chat-1.png" alt="" width="24" height="25" style="display: block;">
+                                      <img
+                                        src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/icon-chat-1.png"
+                                        alt="" width="24" height="25" style="display: block;">
                                     </td>
                                     <td>
-                                      <p style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 18px; font-weight: 600; line-height: 25px; color: #003d6e;">Services</p>
+                                      <p
+                                        style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 18px; font-weight: 600; line-height: 25px; color: #003d6e;">
+                                        Services</p>
                                     </td>
                                   </tr>
                                 </table>
                               </td>
                               <td valign="top" style="padding-top: 20px; padding-left: 40px;" class="features-cell">
-                                <ul class="features-list" style="margin: 0; padding: 0 0 0 20px; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 24px; color: #1c252e;">
+                                <ul class="features-list"
+                                  style="margin: 0; padding: 0 0 0 20px; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 24px; color: #1c252e;">
                                   <li>Emergency travel assistance</li>
                                   <li>Roadside assistance<sup>**</sup></li>
                                   <li>Medical Assistance</li>
@@ -247,10 +427,12 @@
                     </table>
 
                     <!-- Footnotes -->
-                    <p style="margin: 20px 0 0 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 8px; font-style: italic; line-height: 10px; color: #1c252e; text-align: center;">
+                    <p
+                      style="margin: 20px 0 0 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 8px; font-style: italic; line-height: 10px; color: #1c252e; text-align: center;">
                       <sup>*</sup>optional coverage available with certain plans<br>
                       <sup>**</sup>with certain plans<br>
-                      Expenses incurred from third-party vendors for assistance services not part of a filed insurance plan are the responsibility of the traveler.
+                      Expenses incurred from third-party vendors for assistance services not part of a filed insurance
+                      plan are the responsibility of the traveler.
                     </p>
                   </td>
                 </tr>
@@ -258,10 +440,12 @@
                 <!-- CTA Box -->
                 <tr>
                   <td style="padding: 0 30px;" class="mobile-padding">
-                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #003d6e; border-top: 10px solid #66cbe1;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+                      style="background-color: #003d6e; border-top: 10px solid #66cbe1;">
                       <tr>
                         <td align="center" style="padding: 30px 20px;">
-                          <h3 style="margin: 0 0 20px 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 21px; font-weight: 600; line-height: 28px; color: #ffffff; text-align: center;">
+                          <h3
+                            style="margin: 0 0 20px 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 21px; font-weight: 600; line-height: 28px; color: #ffffff; text-align: center;">
                             Be more prepared with a travel insurance plan.
                           </h3>
 
@@ -269,13 +453,17 @@
                           <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center">
                             <tr>
                               <td align="center" style="background-color: #66cbe1; border-radius: 40px;">
-                                <a href="https://www.travelguard.com?cmpid=emc-tgdirect-us-en-bau-hurricaneseason" style="display: inline-block; padding: 15px 30px; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 18px; font-weight: 600; line-height: 25px; color: #003d6e; text-decoration: none;">Get My Quote</a>
+                                <a href="https://www.travelguard.com?cmpid=emc-tgdirect-us-en-bau-hurricaneseason"
+                                  style="display: inline-block; padding: 15px 30px; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 18px; font-weight: 600; line-height: 25px; color: #003d6e; text-decoration: none;">Get
+                                  My Quote</a>
                               </td>
                             </tr>
                           </table>
 
-                          <p style="margin: 20px 0 0 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 24px; color: #ffffff; text-align: center;">
-                            or give us a call at <a href="tel:18008264919" style="color: #ffffff; text-decoration: underline;">1-800-826-4919</a>
+                          <p
+                            style="margin: 20px 0 0 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 24px; color: #ffffff; text-align: center;">
+                            or give us a call at <a href="tel:18008264919"
+                              style="color: #ffffff; text-decoration: underline;">1-800-826-4919</a>
                           </p>
                         </td>
                       </tr>
@@ -286,20 +474,29 @@
                 <!-- Hurricane Season Info Box -->
                 <tr>
                   <td style="padding: 0 30px;" class="mobile-padding">
-                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #f0fafc; border: 1px solid #b2e5f0;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+                      style="background-color: #f0fafc; border: 1px solid #b2e5f0;">
                       <tr>
                         <td style="padding: 30px 20px;">
                           <!-- Header -->
-                          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="border-bottom: 1px solid #66cbe1;">
+                          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+                            style="border-bottom: 1px solid #66cbe1;">
                             <tr>
                               <td align="center" style="padding-bottom: 10px;">
-                                <h4 style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 21px; font-weight: 600; line-height: 28px; color: #003d6e;">Hurricane Season Travel and Travel Insurance Plans</h4>
+                                <h4
+                                  style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 21px; font-weight: 600; line-height: 28px; color: #003d6e;">
+                                  Hurricane Season Travel and Travel Insurance Plans</h4>
                               </td>
                             </tr>
                           </table>
 
-                          <p style="margin: 20px 0 0 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 24px; color: #1c252e; text-align: center;">
-                            We've got answers to some of the most common questions about traveling during hurricane season and how your Travel Guard<sup style="font-size: 10px;">®</sup> insurance plan may help. <a href="https://www.travelguard.com/travel-insurance/weather-faq/hurricane-questions?cmpid=emc-tgdirect-us-en-bau-hurricaneseason" style="color: #005b94; text-decoration: underline;">Read the full article</a>
+                          <p
+                            style="margin: 20px 0 0 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 24px; color: #1c252e; text-align: center;">
+                            We've got answers to some of the most common questions about traveling during hurricane
+                            season and how your Travel Guard<sup style="font-size: 10px;">®</sup> insurance plan may
+                            help. <a
+                              href="https://www.travelguard.com/travel-insurance/weather-faq/hurricane-questions?cmpid=emc-tgdirect-us-en-bau-hurricaneseason"
+                              style="color: #005b94; text-decoration: underline;">Read the full article</a>
                           </p>
                         </td>
                       </tr>
@@ -313,10 +510,12 @@
                     <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                       <tr>
                         <td align="center">
-                          <p style="margin: 0 0 6px 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; font-weight: 600; line-height: 24px; color: #003d6e; text-align: center;">
+                          <p
+                            style="margin: 0 0 6px 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; font-weight: 600; line-height: 24px; color: #003d6e; text-align: center;">
                             Stay up to date on the latest travel news from Travel Guard.
                           </p>
-                          <p style="margin: 0 0 10px 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 24px; color: #1c252e; text-align: center;">
+                          <p
+                            style="margin: 0 0 10px 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 24px; color: #1c252e; text-align: center;">
                             Follow us on social!
                           </p>
 
@@ -325,22 +524,30 @@
                             <tr>
                               <td style="padding: 0 8px;">
                                 <a href="https://www.facebook.com/travelguard">
-                                  <img src="https://www.travelguard.com/content/dam/travelguard/us/images/email/shared/icon-fb.png" alt="Facebook" width="30" height="30" style="display: block;">
+                                  <img
+                                    src="https://www.travelguard.com/content/dam/travelguard/us/images/email/shared/icon-fb.png"
+                                    alt="Facebook" width="30" height="30" style="display: block;">
                                 </a>
                               </td>
                               <td style="padding: 0 8px;">
                                 <a href="https://www.instagram.com/travelguard/">
-                                  <img src="https://www.travelguard.com/content/dam/travelguard/us/images/email/shared/icon-ig.png" alt="Instagram" width="28" height="28" style="display: block;">
+                                  <img
+                                    src="https://www.travelguard.com/content/dam/travelguard/us/images/email/shared/icon-ig.png"
+                                    alt="Instagram" width="28" height="28" style="display: block;">
                                 </a>
                               </td>
                               <td style="padding: 0 8px;">
                                 <a href="https://www.youtube.com/travelguard">
-                                  <img src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/youtube_social_circle_red@2x.png" alt="YouTube" width="28" height="28" style="display: block;">
+                                  <img
+                                    src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/youtube_social_circle_red@2x.png"
+                                    alt="YouTube" width="28" height="28" style="display: block;">
                                 </a>
                               </td>
                               <td style="padding: 0 8px;">
                                 <a href="https://www.tiktok.com/@travelguard">
-                                  <img src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/tiktok@2x.png" alt="TikTok" width="28" height="28" style="display: block;">
+                                  <img
+                                    src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/tiktok@2x.png"
+                                    alt="TikTok" width="28" height="28" style="display: block;">
                                 </a>
                               </td>
                             </tr>
@@ -354,29 +561,43 @@
                 <!-- More Travel Tips Section -->
                 <tr>
                   <td style="padding: 0 30px 20px 30px;" class="mobile-padding">
-                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="border-top: 1px solid #9cc7e6;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+                      style="border-top: 1px solid #9cc7e6;">
                       <tr>
                         <td style="padding: 20px;">
                           <table role="presentation" cellpadding="0" cellspacing="0" border="0">
                             <tr>
                               <td style="padding-right: 10px;">
-                                <img src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/Send@2x.png" alt="" width="20" height="20" style="display: block;">
+                                <img
+                                  src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/Send@2x.png"
+                                  alt="" width="20" height="20" style="display: block;">
                               </td>
                               <td>
-                                <p style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 12px; font-weight: 600; color: #003d6e; text-transform: uppercase;">More Travel Tips</p>
+                                <p
+                                  style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 12px; font-weight: 600; color: #003d6e; text-transform: uppercase;">
+                                  More Travel Tips</p>
                               </td>
                             </tr>
                           </table>
 
-                          <p style="margin: 10px 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 18px; font-weight: 600; line-height: 25px;">
-                            <a href="https://www.travelguard.com/travel-resources/travel-tips/travel-securely-while-abroad?cmpid=emc-tgdirect-us-en-bau-hurricaneseason" style="color: #005b94; text-decoration: none;">How to travel securely while abroad</a>
+                          <p
+                            style="margin: 10px 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 18px; font-weight: 600; line-height: 25px;">
+                            <a href="https://www.travelguard.com/travel-resources/travel-tips/natural-disaster-safety-tips?cmpid=emc-tgdirect-us-en-bau-hurricaneseason"
+                              style="color: #005b94; text-decoration: none;">How to Stay Safe if a Natural Disaster
+                              Strikes During Your Trip</a>
                           </p>
 
-                          <p style="margin: 0 0 10px 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 24px; color: #1c252e;">
-                            Overseas travel can be exhilarating but sometimes a trip to an unfamiliar place requires a moxie that even the savviest travelers can't muster
+                          <p
+                            style="margin: 0 0 10px 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 24px; color: #1c252e;">
+                            There are several ways to prepare if a natural disaster threatens to disrupt your travel
+                            plans, and we’ve gathered
+                            helpful tips for you to keep in mind if severe weather or natural disaster strikes your
+                            vacation.
                           </p>
 
-                          <a href="https://www.travelguard.com/travel-resources/travel-tips?cmpid=emc-tgdirect-us-en-bau-hurricaneseason" style="font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 14px; line-height: 24px; color: #005b94; text-decoration: underline;">See More Travel Tips</a>
+                          <a href="https://www.travelguard.com/travel-resources/travel-tips?cmpid=emc-tgdirect-us-en-bau-hurricaneseason"
+                            style="font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 14px; line-height: 24px; color: #005b94; text-decoration: underline;">See
+                            More Travel Tips</a>
                         </td>
                       </tr>
                     </table>
@@ -386,29 +607,40 @@
                 <!-- Education Center Section -->
                 <tr>
                   <td style="padding: 0 30px 20px 30px;" class="mobile-padding">
-                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="border-top: 1px solid #9cc7e6; border-bottom: 1px solid #9cc7e6;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+                      style="border-top: 1px solid #9cc7e6; border-bottom: 1px solid #9cc7e6;">
                       <tr>
                         <td style="padding: 20px;">
                           <table role="presentation" cellpadding="0" cellspacing="0" border="0">
                             <tr>
                               <td style="padding-right: 10px;">
-                                <img src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/education@2x.png" alt="" width="20" height="19" style="display: block;">
+                                <img
+                                  src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/education@2x.png"
+                                  alt="" width="20" height="19" style="display: block;">
                               </td>
                               <td>
-                                <p style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 12px; font-weight: 600; color: #003d6e; text-transform: uppercase;">Education Center</p>
+                                <p
+                                  style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 12px; font-weight: 600; color: #003d6e; text-transform: uppercase;">
+                                  Education Center</p>
                               </td>
                             </tr>
                           </table>
 
-                          <p style="margin: 10px 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 18px; font-weight: 600; line-height: 25px;">
-                            <a href="https://www.travelguard.com/travel-insurance/benefits/compare-travel-insurance?cmpid=emc-tgdirect-us-en-bau-hurricaneseason" style="color: #005b94; text-decoration: none;">Which plan is right for me?</a>
+                          <p
+                            style="margin: 10px 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 18px; font-weight: 600; line-height: 25px;">
+                            <a href="https://www.travelguard.com/travel-insurance/benefits/compare-travel-insurance?cmpid=emc-tgdirect-us-en-bau-hurricaneseason"
+                              style="color: #005b94; text-decoration: none;">Which plan is right for me?</a>
                           </p>
 
-                          <p style="margin: 0 0 10px 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 24px; color: #1c252e;">
-                            Take a look at our helpful table to compare some of the benefits in our most popular plans and see which travel insurance plan meets your needs.
+                          <p
+                            style="margin: 0 0 10px 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 24px; color: #1c252e;">
+                            Take a look at our helpful table to compare some of the benefits in our most popular plans
+                            and see which travel insurance plan meets your needs.
                           </p>
 
-                          <a href="https://www.travelguard.com/info?cmpid=emc-tgdirect-us-en-bau-hurricaneseason" style="font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 14px; line-height: 24px; color: #005b94; text-decoration: underline;">Visit Education Center</a>
+                          <a href="https://www.travelguard.com/info?cmpid=emc-tgdirect-us-en-bau-hurricaneseason"
+                            style="font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 14px; line-height: 24px; color: #005b94; text-decoration: underline;">Visit
+                            Education Center</a>
                         </td>
                       </tr>
                     </table>
@@ -427,23 +659,33 @@
                                 <table role="presentation" cellpadding="0" cellspacing="0" border="0">
                                   <tr>
                                     <td style="padding-right: 10px;">
-                                      <img src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/Play@2x.png" alt="" width="20" height="19" style="display: block;">
+                                      <img
+                                        src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/Play@2x.png"
+                                        alt="" width="20" height="19" style="display: block;">
                                     </td>
                                     <td>
-                                      <p style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 12px; font-weight: 600; color: #003d6e; text-transform: uppercase;">Video Library</p>
+                                      <p
+                                        style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 12px; font-weight: 600; color: #003d6e; text-transform: uppercase;">
+                                        Video Library</p>
                                     </td>
                                   </tr>
                                 </table>
                               </td>
                               <td align="right" valign="middle">
-                                <a href="https://www.travelguard.com/info?cmpid=emc-tgdirect-us-en-bau-hurricaneseason" style="font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 14px; line-height: 24px; color: #005b94; text-decoration: underline;">Visit Education Center</a>
+                                <a href="https://www.travelguard.com/info?cmpid=emc-tgdirect-us-en-bau-hurricaneseason"
+                                  style="font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 14px; line-height: 24px; color: #005b94; text-decoration: underline;">Visit
+                                  Education Center</a>
                               </td>
                             </tr>
                           </table>
 
                           <!-- Video Thumbnail with Play Button -->
-                          <a href="https://www.youtube.com/watch?v=VIDEO_ID" target="_blank" style="display: block; margin-top: 15px;">
-                            <img src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/video-thumbnail-tips.png" alt="What is travel insurance? - Click to play video" width="540" style="display: block; max-width: 100%; height: auto;">
+                          <a href="https://www.youtube.com/watch?v=VIDEO_ID" target="_blank"
+                            style="display: block; margin-top: 15px;">
+                            <img
+                              src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/video-thumbnail-tips.png"
+                              alt="What is travel insurance? - Click to play video" width="540"
+                              style="display: block; max-width: 100%; height: auto;">
                           </a>
                         </td>
                       </tr>
@@ -454,10 +696,12 @@
                 <!-- Testimonials Section -->
                 <tr>
                   <td style="padding: 0 30px 30px 30px;" class="mobile-padding">
-                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="border: 1px solid #9cc7e6;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+                      style="border: 1px solid #9cc7e6;">
                       <tr>
                         <td style="padding-top: 20px; border-bottom: 1px solid #9cc7e6;">
-                          <p style="margin: 0; padding-bottom: 20px; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 12px; font-style: italic; line-height: 18px; color: #1c252e; text-align: center;">
+                          <p
+                            style="margin: 0; padding-bottom: 20px; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 12px; font-style: italic; line-height: 18px; color: #1c252e; text-align: center;">
                             What Are Travel Guard Customers Saying?
                           </p>
                         </td>
@@ -468,21 +712,30 @@
                           <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center">
                             <tr>
                               <td align="center" style="padding-bottom: 5px;">
-                                <img src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/icon-quote.png" alt="" width="48" style="display: block; height: auto;">
+                                <img
+                                  src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/icon-quote.png"
+                                  alt="" width="48" style="display: block; height: auto;">
                               </td>
                             </tr>
                           </table>
 
-                          <h4 style="margin: 0 0 5px 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 18px; font-weight: 600; line-height: 25px; color: #003d6e; text-align: center;">
-                            I will always use a Travel Guard travel insurance plan.
+                          <h4
+                            style="margin: 0 0 5px 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 18px; font-weight: 600; line-height: 25px; color: #003d6e; text-align: center;">
+                            Travel Guard is the only insurance we use when traveling.
                           </h4>
 
-                          <p style="margin: 0 0 15px 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 12px; line-height: 18px; color: #1c252e; text-align: center;">
-                            "I have used Travel Guard for many years on many trips. Recently I had to cancel a rather large trip. Travel Guard handled my claim, quickly, professionally, and expediently. I will always use a Travel Guard travel insurance plan."
+                          <p
+                            style="margin: 0 0 15px 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 12px; line-height: 18px; color: #1c252e; text-align: center;">
+                            "Travel Guard is the only insurance we use when traveling for when flights are canceled or
+                            disaster happens. They have
+                            been very helpful. We have had to use Travel Guard when we couldn’t reschedule our flight
+                            and needed to book an
+                            overnight stay. I highly recommend Travel Guard for all of your traveling insurance."
                           </p>
 
-                          <p style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 12px; font-weight: 700; line-height: 18px; color: #1c252e; text-align: center;">
-                            – Carl M.
+                          <p
+                            style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 12px; font-weight: 700; line-height: 18px; color: #1c252e; text-align: center;">
+                            – Betty L.
                           </p>
                         </td>
                       </tr>
@@ -495,8 +748,10 @@
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                 <!-- Tagline -->
                 <tr>
-                  <td style="background-color: #005b94; border-top: 10px solid #66cbe1; padding: 30px 20px 20px 20px;" align="center">
-                    <p style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 18px; font-weight: 600; line-height: 25px; color: #ffffff;">
+                  <td style="background-color: #005b94; border-top: 10px solid #66cbe1; padding: 30px 20px 20px 20px;"
+                    align="center">
+                    <p
+                      style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 18px; font-weight: 600; line-height: 25px; color: #ffffff;">
                       Travel safe. Travel smart. Travel Guard.
                     </p>
                   </td>
@@ -508,11 +763,15 @@
                     <table role="presentation" cellpadding="0" cellspacing="0" border="0">
                       <tr>
                         <td style="padding-right: 10px;">
-                          <img src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/Outlined-03-Communication-Chat@2x.png" alt="" width="21" height="22" style="display: block;">
+                          <img
+                            src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/Outlined-03-Communication-Chat@2x.png"
+                            alt="" width="21" height="22" style="display: block;">
                         </td>
                         <td>
-                          <p style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 12px; line-height: 18px; color: #ffffff;">
-                            How did we do? <a href="https://www.trustpilot.com/review/travelguard.com" style="color: #ffffff; text-decoration: underline;">Leave us a review!</a>
+                          <p
+                            style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 12px; line-height: 18px; color: #ffffff;">
+                            How did we do? <a href="https://www.trustpilot.com/review/travelguard.com"
+                              style="color: #ffffff; text-decoration: underline;">Leave us a review!</a>
                           </p>
                         </td>
                       </tr>
@@ -523,8 +782,17 @@
                 <!-- Legal Disclaimer -->
                 <tr>
                   <td style="padding: 10px 20px; background-color: #f1f6fb;">
-                    <p style="margin: 0; font-family: 'Source Sans Pro', Arial, sans-serif; font-size: 8px; line-height: 12px; color: #343741; text-align: center;">
-                      Coverage is offered by Travel Guard Group, Inc. (Travel Guard). California lic. No.0B93606. The Policy will contain reductions, limitations, exclusions and termination provisions. Insurance may be underwritten by American Zurich Insurance Company, a New York company (NAIC No. 40142), Zurich American Insurance Company, an Illinois company (NAIC No. 16535), each having its principal place of business at 1299 Zurich Way, Schaumburg, IL 60196, or National Union Fire Insurance Company of Pittsburgh, Pa. (NAIC No. 19445), a Pennsylvania insurance company, having its principal place of business at 1271 Avenue of the Americas, 37th FL, New York, NY 10020-1304. Please review the Plan offered to or purchased by you to confirm the underwriting insurer for your specific policy of insurance. Coverage may not be available in all states.
+                    <p
+                      style="margin: 0; font-family: 'Source Sans Pro', Arial, sans-serif; font-size: 8px; line-height: 12px; color: #343741; text-align: center;">
+                      Coverage is offered by Travel Guard Group, Inc. (Travel Guard). California lic. No.0B93606. The
+                      Policy will contain reductions, limitations, exclusions and termination provisions. Insurance may
+                      be underwritten by American Zurich Insurance Company, a New York company (NAIC No. 40142), Zurich
+                      American Insurance Company, an Illinois company (NAIC No. 16535), each having its principal place
+                      of business at 1299 Zurich Way, Schaumburg, IL 60196, or National Union Fire Insurance Company of
+                      Pittsburgh, Pa. (NAIC No. 19445), a Pennsylvania insurance company, having its principal place of
+                      business at 1271 Avenue of the Americas, 37th FL, New York, NY 10020-1304. Please review the Plan
+                      offered to or purchased by you to confirm the underwriting insurer for your specific policy of
+                      insurance. Coverage may not be available in all states.
                     </p>
                   </td>
                 </tr>
@@ -539,4 +807,5 @@
   </table>
 
 </body>
+
 </html>
