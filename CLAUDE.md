@@ -25,8 +25,21 @@ This repository contains HTML email templates for travel insurance products acro
 Each brand directory has its own `CLAUDE.md` or `claude.md` with brand-specific details (colors, variables, templates, status). Always read the relevant subdirectory docs before working on templates.
 
 ## MCP Servers
-- Figma MCP (`mcp__figma__get_design_context`) is actively used — if connection fails, suggest user run `claude mcp list` to verify status before proceeding
-- GitHub MCP is configured but may need token refresh — guide user to re-authenticate if connection drops
+
+| Server | Type | Status notes |
+|--------|------|--------------|
+| claude.ai Figma (`mcp__claude_ai_Figma__*`) | Remote | Primary Figma integration — use for design context, screenshots, Code Connect |
+| figma (`mcp__figma__*`) | Local SSE (port 3845) | Secondary/legacy Figma — often fails to connect; prefer claude.ai Figma |
+| github (`mcp__github__*`) | HTTP | GitHub Copilot MCP — may need token refresh if connection drops |
+| chrome-devtools (`mcp__chrome-devtools__*`) | npx | Chrome DevTools automation |
+| claude-in-chrome (`mcp__claude-in-chrome__*`) | Browser extension | DOM-aware browser automation; load tools via ToolSearch before use |
+| postman / claude.ai Postman Full | npx + Remote | Dual Postman servers; read instructions resource before use |
+| claude.ai Gmail (`mcp__claude_ai_Gmail__*`) | Remote | Gmail read/draft |
+| claude.ai Google Calendar (`mcp__claude_ai_Google_Calendar__*`) | Remote | Calendar read/write |
+| claude.ai Intuit TurboTax | Remote | Tax assistant tools |
+| claude.ai Microsoft 365 | Remote | Needs authentication before use |
+
+If any server fails, run `claude mcp list` to check current health before troubleshooting.
 
 ## Shared Technical Patterns
 
