@@ -2,7 +2,7 @@
 
 ## Status
 
-**First pass complete.** All 12 templates have been built. Next session will focus on edits, followup items, and bug fixes — see `expedia/followup.md` for the full list of items pending client review.
+**First pass complete.** All 13 templates have been built. Next session will focus on edits, followup items, and bug fixes — see `expedia/followup.md` for the full list of items pending client review.
 
 ## Overview
 
@@ -24,6 +24,7 @@ Building 12 new European market policy confirmation emails for Expedia Travel In
 | 10 | CH/fr | B (car rental + cancel) | DONE |
 | 11 | CH/it | B (car rental + cancel) | DONE |
 | 12 | FR/fr | B (car rental + cancel + regulatory) | DONE |
+| 13 | IT/it | C (car rental) | DONE |
 
 ## Template Groups
 
@@ -233,6 +234,7 @@ When cross-referencing stubs:
 - `expedia/ch/fr/policy-confirmation.html` — rebuilt
 - `expedia/ch/it/policy-confirmation.html` — rebuilt
 - `expedia/fr/fr/policy-confirmation.html` — rebuilt
+- `expedia/it/it/policy-confirmation.html` — rebuilt
 - `expedia/followup.md` — created and updated
 - `expedia/handoff.md` — created and updated
 
@@ -249,4 +251,5 @@ All 12 templates are built. Remaining work is likely edits, followups, and bug f
 
 - See `expedia/followup.md` for 13 items pending client review (typos, formatting decisions, verbatim quirks across multiple templates)
 - Notable items: NL/nl email missing `cs.` subdomain (item 1), CHGF typo in CH/it (item 2), CH/de numbered list converted to bullets (item 10), CH/fr missing `.com` fixed (item 12), CH/it claims paragraph break merged (item 13)
+- IT/it inferences to confirm with client: hero banner text ("Assicurazione Viaggio"), preheader, "Fare clic qui" rendered as link to policy portal (no `<w:hyperlink>` in docx XML)
 - If any template needs a content correction after client review, use the docx + this handoff as the source of truth and re-apply the fix verbatim
