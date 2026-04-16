@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+  xmlns:o="urn:schemas-microsoft-com:office:office">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,11 +21,12 @@
   <![endif]-->
 
   <!--[if !mso]><!-->
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap"
+    rel="stylesheet">
   <!--<![endif]-->
 
   <style type="text/css">
-/*
+    /*
 ########COLORS#######
 
 To use these colors, you can copy the hash value such as #001871 for tg navy blue and change either the text or background color of elements.
@@ -49,46 +52,168 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
 */
 
     /* Reset */
-    body, table, td, p, a, li { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
-    img { -ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; }
-    body { margin: 0; padding: 0; width: 100% !important; height: 100% !important; }
+    body,
+    table,
+    td,
+    p,
+    a,
+    li {
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+
+    table,
+    td {
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
+
+    img {
+      -ms-interpolation-mode: bicubic;
+      border: 0;
+      outline: none;
+      text-decoration: none;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100% !important;
+      height: 100% !important;
+    }
 
     /* Google Fonts fallback for clients that support @import */
     @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap');
 
     /* Responsive */
     @media screen and (max-width: 600px) {
-      .wrapper { width: 100% !important; }
-      .section { width: 100% !important; }
-      .columns { width: 100% !important; }
-      .col-1 { padding: 16px !important; }
-      .col-2, .col-3 { width: 100% !important; display: block !important; box-sizing: border-box !important; }
-      .col-2 table { width: 100% !important; }
-      .mobile-none { display: none !important; }
-      .mobile-ta-c { text-align: center !important; }
-      .mobile-pr { padding-right: 16px !important; }
-      .mobile-prl-none { padding-left: 0 !important; padding-right: 0 !important; }
-      .mobile-img { width: 100% !important; height: auto !important; }
-      .mobile-padding { padding-left: 20px !important; padding-right: 20px !important; }
-      .icon-left .icon, .icon-left .text { display: block !important; width: 250px !important; text-align: center; margin: auto !important; box-sizing: border-box !important; }
-      .icon-left .icon.winter { padding: 0 0 32px !important; }
-      .icon-left .heading { text-align: center; }
-      .icon-right .icon, .icon-right .text { float: none !important; width: 100% !important; text-align: center; }
-      .icon-right .icon td { padding: 0 0 32px !important; text-align: center; }
-      .icon-right .heading { text-align: center; }
-      .m-ta-c { text-align: center !important; }
-      .m-m-a { margin: auto !important; }
-      .m-p-tb { padding-top: 10px !important; padding-bottom: 10px !important; }
-      .m-p-lr { padding-left: 10px !important; padding-right: 10px !important; }
+      .wrapper {
+        width: 100% !important;
+      }
+
+      .section {
+        width: 100% !important;
+      }
+
+      .columns {
+        width: 100% !important;
+      }
+
+      .col-1 {
+        padding: 16px !important;
+      }
+
+      .col-2,
+      .col-3 {
+        width: 100% !important;
+        display: block !important;
+        box-sizing: border-box !important;
+      }
+
+      .col-2 table {
+        width: 100% !important;
+      }
+
+      .mobile-none {
+        display: none !important;
+      }
+
+      .mobile-ta-c {
+        text-align: center !important;
+      }
+
+      .mobile-pr {
+        padding-right: 16px !important;
+      }
+
+      .mobile-prl-none {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+
+      .mobile-img {
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      .mobile-padding {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+
+      .icon-left .icon,
+      .icon-left .text {
+        display: block !important;
+        width: 250px !important;
+        text-align: center;
+        margin: auto !important;
+        box-sizing: border-box !important;
+      }
+
+      .icon-left .icon.winter {
+        padding: 0 0 32px !important;
+      }
+
+      .icon-left .heading {
+        text-align: center;
+      }
+
+      .icon-right .icon,
+      .icon-right .text {
+        float: none !important;
+        width: 100% !important;
+        text-align: center;
+      }
+
+      .icon-right .icon td {
+        padding: 0 0 32px !important;
+        text-align: center;
+      }
+
+      .icon-right .heading {
+        text-align: center;
+      }
+
+      .m-ta-c {
+        text-align: center !important;
+      }
+
+      .m-m-a {
+        margin: auto !important;
+      }
+
+      .m-p-tb {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+      }
+
+      .m-p-lr {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+      }
     }
 
-    .button { text-align: center; margin: 16px 0; background: transparent !important; box-shadow: none !important; }
-    .button td.fallback { padding: 0 !important; }
-    .button a { display: block; padding: 9px 30px; box-sizing: border-box !important; }
+    .button {
+      text-align: center;
+      margin: 16px 0;
+      background: transparent !important;
+      box-shadow: none !important;
+    }
+
+    .button td.fallback {
+      padding: 0 !important;
+    }
+
+    .button a {
+      display: block;
+      padding: 9px 30px;
+      box-sizing: border-box !important;
+    }
   </style>
 </head>
-<body style="margin: 0; padding: 0; background-color: #f1f6fb; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; line-height: 1;">
+
+<body
+  style="margin: 0; padding: 0; background-color: #f1f6fb; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; line-height: 1;">
 
   <!-- Preheader -->
   <div style="display: none; max-height: 0; overflow: hidden; mso-hide: all;">
@@ -97,32 +222,41 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
   </div>
 
   <!-- Email Container -->
-  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #f1f6fb; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -moz-osx-font-smoothing: grayscale;">
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+    style="background-color: #f1f6fb; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -moz-osx-font-smoothing: grayscale;">
     <tr>
       <td align="center" style="padding: 20px 10px;">
 
         <!-- Main Content Wrapper -->
-        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" class="wrapper" style="max-width: 600px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" class="wrapper"
+          style="max-width: 600px;">
           <tr>
             <td>
 
               <!-- Header Section with Logo -->
-              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #f1f6fb;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+                style="background-color: #f1f6fb;">
                 <tr>
                   <td style="padding: 20px 0;" align="center">
-                    <img width="600" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/tg_logo_header.png" alt="Travel Guard" style="display: block; width: 600px; max-width: 600px; height: auto;">
+                    <img width="600"
+                      src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/tg_logo_header.png"
+                      alt="Travel Guard" style="display: block; width: 600px; max-width: 600px; height: auto;">
                   </td>
                 </tr>
               </table>
 
               <!-- Hero Section: Image Left + Headline Right -->
-              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #003d6e;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+                style="background-color: #003d6e;">
                 <tr>
                   <td width="235" valign="middle" class="col-2" style="width: 235px; font-size: 0; line-height: 0;">
-                    <img width="235" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/gettyimages-155391689-cropped2@2x.jpg" alt="" style="display: block; width: 235px; max-width: 235px; height: auto;">
+                    <img width="235"
+                      src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/policy-conf-new-hero.jpg"
+                      alt="" style="display: block; width: 235px; max-width: 235px; height: auto;">
                   </td>
                   <td valign="middle" class="col-2" style="padding: 30px 40px;">
-                    <p style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 18px; font-weight: 600; line-height: 1.4; color: #fff; text-align: left;">
+                    <p
+                      style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 18px; font-weight: 600; line-height: 1.4; color: #fff; text-align: left;">
                       Thank you for purchasing a Travel Guard&reg; travel insurance plan!
                     </p>
                   </td>
@@ -130,7 +264,8 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
               </table>
 
               <!-- Body Content -->
-              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #ffffff;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+                style="background-color: #ffffff;">
                 <tr>
                   <td style="padding: 40px;" class="mobile-padding">
 
@@ -138,17 +273,20 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                     <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                       <tr>
                         <td style="padding-bottom: 25px;">
-                          <p style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 18px; line-height: 1.4; color: #343741;">
+                          <p
+                            style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 18px; line-height: 1.4; color: #343741;">
                             Hello {{policyDetail-primaryInsured-firstName}}, <br>
                             <br>
-                            Thank you for choosing Travel Guard for your upcoming trip! Please review your plan details below.
+                            Thank you for choosing Travel Guard for your upcoming trip! Please review your plan details
+                            below.
                           </p>
                         </td>
                       </tr>
                     </table>
 
                     <!-- Policy Details Box -->
-                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #f1f6fb; border-top: 5px solid #ffc709; margin-bottom: 20px;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+                      style="background-color: #f1f6fb; border-top: 5px solid #ffc709; margin-bottom: 20px;">
                       <tr>
                         <td style="padding: 30px;">
 
@@ -156,32 +294,55 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                           <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                             <tr>
                               <td style="padding-bottom: 16px;">
-                                <p style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 18px; font-weight: 600; line-height: 1.2; color: #003d6e;">Policy Details</p>
+                                <p
+                                  style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 18px; font-weight: 600; line-height: 1.2; color: #003d6e;">
+                                  Policy Details</p>
                               </td>
                             </tr>
                           </table>
 
                           <!-- Policy Details Table -->
-                          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="border-top: 1px solid #9cc7e6; color: #343741;">
+                          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+                            style="border-top: 1px solid #9cc7e6; color: #343741;">
                             <tr>
-                              <td style="width: 50%; padding-top: 10px; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; font-weight: bold;">Plan:</td>
-                              <td style="width: 50%; padding-top: 10px; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; text-align: right;">{{policyDetail-productName}}</td>
+                              <td
+                                style="width: 50%; padding-top: 10px; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; font-weight: bold;">
+                                Plan:</td>
+                              <td
+                                style="width: 50%; padding-top: 10px; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; text-align: right;">
+                                {{policyDetail-productName}}</td>
                             </tr>
                             <tr>
-                              <td style="width: 50%; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; font-weight: bold;">Policy Number:</td>
-                              <td style="width: 50%; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; text-align: right;">{{policyDetail-policyNumber}}</td>
+                              <td
+                                style="width: 50%; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; font-weight: bold;">
+                                Policy Number:</td>
+                              <td
+                                style="width: 50%; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; text-align: right;">
+                                {{policyDetail-policyNumber}}</td>
                             </tr>
                             <tr>
-                              <td style="width: 50%; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; font-weight: bold;">Trip Departure Date:</td>
-                              <td style="width: 50%; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; text-align: right;">{{policyDetail-departure::date::MM/dd/yyyy}}</td>
+                              <td
+                                style="width: 50%; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; font-weight: bold;">
+                                Trip Departure Date:</td>
+                              <td
+                                style="width: 50%; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; text-align: right;">
+                                {{policyDetail-departure::date::MM/dd/yyyy}}</td>
                             </tr>
                             <tr>
-                              <td style="width: 50%; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; font-weight: bold;">Number of Travelers:</td>
-                              <td style="width: 50%; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; text-align: right;">{{traveler-count}}</td>
+                              <td
+                                style="width: 50%; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; font-weight: bold;">
+                                Number of Travelers:</td>
+                              <td
+                                style="width: 50%; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; text-align: right;">
+                                {{traveler-count}}</td>
                             </tr>
                             <tr>
-                              <td style="width: 50%; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; font-weight: bold;">Destination:</td>
-                              <td style="width: 50%; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; text-align: right;">{{destinations-csv}}</td>
+                              <td
+                                style="width: 50%; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; font-weight: bold;">
+                                Destination:</td>
+                              <td
+                                style="width: 50%; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; text-align: right;">
+                                {{destinations-csv}}</td>
                             </tr>
                           </table>
 
@@ -189,26 +350,41 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                           <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                             <tr>
                               <td style="padding-top: 30px; padding-bottom: 16px;">
-                                <p style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 18px; font-weight: 600; line-height: 1.2; color: #003d6e;">Payment Details</p>
+                                <p
+                                  style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 18px; font-weight: 600; line-height: 1.2; color: #003d6e;">
+                                  Payment Details</p>
                               </td>
                             </tr>
                           </table>
 
                           <!-- Payment Details Table -->
-                          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="border-top: 1px solid #9cc7e6; color: #343741;">
+                          <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+                            style="border-top: 1px solid #9cc7e6; color: #343741;">
                             {{is-missouri-state-of-residence::visible::start}}
                             <tr>
-                              <td style="width: 50%; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; font-weight: bold;">Base Premium:</td>
-                              <td style="width: 50%; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; text-align: right;">{{productDetail-amounts-BasePremium::currency}}</td>
+                              <td
+                                style="width: 50%; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; font-weight: bold;">
+                                Base Premium:</td>
+                              <td
+                                style="width: 50%; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; text-align: right;">
+                                {{productDetail-amounts-BasePremium::currency}}</td>
                             </tr>
                             <tr>
-                              <td style="width: 50%; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; font-weight: bold;">Assistance Fee:</td>
-                              <td style="width: 50%; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; text-align: right;">{{productDetail-amounts-PremiumFees::currency}}</td>
+                              <td
+                                style="width: 50%; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; font-weight: bold;">
+                                Assistance Fee:</td>
+                              <td
+                                style="width: 50%; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; text-align: right;">
+                                {{productDetail-amounts-PremiumFees::currency}}</td>
                             </tr>
                             {{is-missouri-state-of-residence::visible::end}}
                             <tr>
-                              <td style="width: 50%; padding-top: 10px; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; font-weight: bold;">TOTAL:</td>
-                              <td style="width: 50%; padding-top: 10px; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; text-align: right; font-weight: bold;">{{productDetail-amounts-TotalPremium::currency}}</td>
+                              <td
+                                style="width: 50%; padding-top: 10px; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; font-weight: bold;">
+                                TOTAL:</td>
+                              <td
+                                style="width: 50%; padding-top: 10px; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; text-align: right; font-weight: bold;">
+                                {{productDetail-amounts-TotalPremium::currency}}</td>
                             </tr>
                           </table>
 
@@ -220,7 +396,9 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                     <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                       <tr>
                         <td style="padding-bottom: 5px;">
-                          <p style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 18px; font-weight: 600; line-height: 1.2; color: #003d6e;">Access Your Full Policy Online</p>
+                          <p
+                            style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 18px; font-weight: 600; line-height: 1.2; color: #003d6e;">
+                            Access Your Full Policy Online</p>
                         </td>
                       </tr>
                     </table>
@@ -228,18 +406,22 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                     <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                       <tr>
                         <td style="padding-bottom: 25px; border-top: 1px solid #9cc7e6; padding-top: 20px;">
-                          <p style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.5; color: #343741;">
+                          <p
+                            style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.5; color: #343741;">
                             Access your full policy online to see plan details, including:
                           </p>
-                          <ul style="margin: 0; padding-left: 20px; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.5; color: #343741;">
+                          <ul
+                            style="margin: 0; padding-left: 20px; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.5; color: #343741;">
                             <li>Detailed policy and assistance services information</li>
                             <li>Policy ID cards</li>
                             <li>Covered reasons</li>
                             <li>Terms and conditions</li>
                             <li>...and more</li>
                           </ul>
-                          <p style="margin: 10px 0 0 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.5; color: #343741;">
-                            You will need to enter the policy holder's last name and policy number to access your travel insurance plan online.
+                          <p
+                            style="margin: 10px 0 0 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.5; color: #343741;">
+                            You will need to enter the policy holder's last name and policy number to access your travel
+                            insurance plan online.
                           </p>
                         </td>
                       </tr>
@@ -249,7 +431,9 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                     <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                       <tr>
                         <td style="padding-bottom: 5px;">
-                          <p style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 18px; font-weight: 600; line-height: 1.2; color: #003d6e;">Added to your travel plans?</p>
+                          <p
+                            style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 18px; font-weight: 600; line-height: 1.2; color: #003d6e;">
+                            Added to your travel plans?</p>
                         </td>
                       </tr>
                     </table>
@@ -257,22 +441,31 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                     <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                       <tr>
                         <td style="padding-bottom: 25px; border-top: 1px solid #9cc7e6; padding-top: 20px;">
-                          <p style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.5; color: #343741;">
-                            If you've added any additional costs to your travels (flights, rental cars, excursions, etc.), be sure they're covered by your Travel Guard travel insurance plan. <a style="color: #005b94;" href="https://buy.travelguard.com/tgi2/policytools/modifypolicy.aspx?br=tgdirect&cmpid=emc-tgdirect-us-en-fulfillment-policyconfirmation">Make changes to your policy online</a> as you finalize your trip to make sure you're fully covered.
+                          <p
+                            style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.5; color: #343741;">
+                            If you've added any additional costs to your travels (flights, rental cars, excursions,
+                            etc.), be sure they're covered by your Travel Guard travel insurance plan. <a
+                              style="color: #005b94;"
+                              href="https://buy.travelguard.com/tgi2/policytools/modifypolicy.aspx?br=tgdirect&cmpid=emc-tgdirect-us-en-fulfillment-policyconfirmation">Make
+                              changes to your policy online</a> as you finalize your trip to make sure you're fully
+                            covered.
                           </p>
                         </td>
                       </tr>
                     </table>
 
                     <!-- Need assistance while traveling Section -->
-                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="background-color: #f1f6fb; border-top: 5px solid #db5989; margin-bottom: 20px;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+                      style="background-color: #f1f6fb; border-top: 5px solid #db5989; margin-bottom: 20px;">
                       <tr>
                         <td style="padding: 30px;">
 
                           <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                             <tr>
                               <td style="padding-bottom: 25px; text-align: center;">
-                                <p style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 24px; font-weight: 600; line-height: 1.2; color: #003d6e;">Need assistance while traveling?</p>
+                                <p
+                                  style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 24px; font-weight: 600; line-height: 1.2; color: #003d6e;">
+                                  Need assistance while traveling?</p>
                               </td>
                             </tr>
                           </table>
@@ -280,8 +473,10 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                           <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                             <tr>
                               <td style="padding-bottom: 25px; text-align: center;">
-                                <p style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.5; color: #343741;">
-                                  Use our toll-free or collect numbers below to contact our World Service Center if you need travel assistance or have a travel emergency.
+                                <p
+                                  style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.5; color: #343741;">
+                                  Use our toll-free or collect numbers below to contact our World Service Center if you
+                                  need travel assistance or have a travel emergency.
                                 </p>
                               </td>
                             </tr>
@@ -294,9 +489,11 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                                 <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                                   <tr>
                                     <td style="text-align: center; padding: 16px;">
-                                      <p style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; font-weight: 600; line-height: 1.5; color: #343741;">
+                                      <p
+                                        style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; font-weight: 600; line-height: 1.5; color: #343741;">
                                         U.S. toll-free: <br>
-                                        <a style="font-size: 18px; color: #005b94; text-decoration: underline;" href="tel:18008261300">1-800-826-1300</a>
+                                        <a style="font-size: 18px; color: #005b94; text-decoration: underline;"
+                                          href="tel:18008261300">1-800-826-1300</a>
                                       </p>
                                     </td>
                                   </tr>
@@ -306,9 +503,11 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                                 <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                                   <tr>
                                     <td style="text-align: center; padding: 16px;">
-                                      <p style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; font-weight: 600; line-height: 1.5; color: #343741;">
+                                      <p
+                                        style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; font-weight: 600; line-height: 1.5; color: #343741;">
                                         U.S. &amp; International collect:<br>
-                                        <a style="font-size: 18px; color: #005b94; text-decoration: underline;" href="tel:17153450505">1-715-345-0505</a>
+                                        <a style="font-size: 18px; color: #005b94; text-decoration: underline;"
+                                          href="tel:17153450505">1-715-345-0505</a>
                                       </p>
                                     </td>
                                   </tr>
@@ -328,17 +527,27 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                           <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                             <tr>
                               <td style="padding: 16px;">
-                                <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-bottom: 10px;">
+                                <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+                                  style="margin-bottom: 10px;">
                                   <tr>
                                     <td style="padding: 10px 0;">
-                                      <p style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 18px; font-weight: 600; line-height: 1.2; color: #003d6e;">Visit Our Help Center</p>
+                                      <p
+                                        style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 18px; font-weight: 600; line-height: 1.2; color: #003d6e;">
+                                        Visit Our Help Center</p>
                                     </td>
                                   </tr>
                                 </table>
-                                <p style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.5; color: #343741; border-top: 1px solid #9cc7e6; padding-top: 20px;">
-                                  <a style="color: #005b94;" href="https://www.travelguard.com/o/coronavirus-resource-center/voucher-and-refund-form?cmpid=emc-tgdirect-us-en-fulfillment-policyconfirmation">Request Refund or Voucher</a> <br>
-                                  <a style="color: #005b94;" href="https://www.travelguard.com/help-center/faqs?cmpid=emc-tgdirect-us-en-fulfillment-policyconfirmation">Coverage FAQs</a> <br>
-                                  <a style="color: #005b94;" href="https://www.travelguard.com/travel-resources/travel-tips?cmpid=emc-tgdirect-us-en-fulfillment-policyconfirmation">Travel Tips and News</a>
+                                <p
+                                  style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.5; color: #343741; border-top: 1px solid #9cc7e6; padding-top: 20px;">
+                                  <a style="color: #005b94;"
+                                    href="https://www.travelguard.com/o/coronavirus-resource-center/voucher-and-refund-form?cmpid=emc-tgdirect-us-en-fulfillment-policyconfirmation">Request
+                                    Refund or Voucher</a> <br>
+                                  <a style="color: #005b94;"
+                                    href="https://www.travelguard.com/help-center/faqs?cmpid=emc-tgdirect-us-en-fulfillment-policyconfirmation">Coverage
+                                    FAQs</a> <br>
+                                  <a style="color: #005b94;"
+                                    href="https://www.travelguard.com/travel-resources/travel-tips?cmpid=emc-tgdirect-us-en-fulfillment-policyconfirmation">Travel
+                                    Tips and News</a>
                                 </p>
                               </td>
                             </tr>
@@ -348,16 +557,24 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                           <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                             <tr>
                               <td style="padding: 16px;">
-                                <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-bottom: 10px;">
+                                <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
+                                  style="margin-bottom: 10px;">
                                   <tr>
                                     <td style="padding: 10px 0;">
-                                      <p style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 18px; font-weight: 600; line-height: 1.2; color: #003d6e;">Claims</p>
+                                      <p
+                                        style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 18px; font-weight: 600; line-height: 1.2; color: #003d6e;">
+                                        Claims</p>
                                     </td>
                                   </tr>
                                 </table>
-                                <p style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.5; color: #343741; border-top: 1px solid #9cc7e6; padding-top: 20px;">
-                                  <a style="color: #005b94;" href="https://claims.travelguard.com/claims?cmpid=emc-tgdirect-us-en-fulfillment-policyconfirmation">File a claim online</a> <br>
-                                  <a style="color: #005b94;" href="https://claims.travelguard.com/status?cmpid=emc-tgdirect-us-en-fulfillment-policyconfirmation">Check the status of a claim</a>
+                                <p
+                                  style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.5; color: #343741; border-top: 1px solid #9cc7e6; padding-top: 20px;">
+                                  <a style="color: #005b94;"
+                                    href="https://claims.travelguard.com/claims?cmpid=emc-tgdirect-us-en-fulfillment-policyconfirmation">File
+                                    a claim online</a> <br>
+                                  <a style="color: #005b94;"
+                                    href="https://claims.travelguard.com/status?cmpid=emc-tgdirect-us-en-fulfillment-policyconfirmation">Check
+                                    the status of a claim</a>
                                 </p>
                               </td>
                             </tr>
@@ -370,7 +587,8 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                     <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                       <tr>
                         <td style="padding: 16px 0; text-align: center;">
-                          <p style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; font-weight: 600; line-height: 1.5; color: #003d6e;">
+                          <p
+                            style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; font-weight: 600; line-height: 1.5; color: #003d6e;">
                             If you have any questions, please contact our World Service Center at:
                           </p>
                         </td>
@@ -380,32 +598,47 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                     <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                       <tr>
                         <td style="padding: 16px 0; text-align: center;">
-                          <p style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 21px; font-weight: 600; line-height: 1.5; color: #005b94;">
-                            <img style="width: 21px; height: 22px; padding-right: 5px; vertical-align: middle;" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/Phone@2x.png" alt="phone icon"><a href="tel:18008261300" style="color: #005b94; text-decoration: underline;">1-800-826-1300</a>
+                          <p
+                            style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 21px; font-weight: 600; line-height: 1.5; color: #005b94;">
+                            <img style="width: 21px; height: 22px; padding-right: 5px; vertical-align: middle;"
+                              src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/Phone@2x.png"
+                              alt="phone icon"><a href="tel:18008261300"
+                              style="color: #005b94; text-decoration: underline;">1-800-826-1300</a>
                           </p>
                         </td>
                       </tr>
                     </table>
 
                     <!-- Education Center: Assistance Services -->
-                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" class="icon-left" style="padding-bottom: 30px;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" class="icon-left"
+                      style="padding-bottom: 30px;">
                       <tr>
                         <td>
                           <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                             <tr>
-                              <td width="250" valign="top" class="icon" style="text-align: center; padding-right: 15px;">
-                                <img width="250" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/gettyimages-650855441-170667a@2x.jpg" alt="" style="display: block; max-width: 250px; width: 100%; height: auto;">
+                              <td width="250" valign="top" class="icon"
+                                style="text-align: center; padding-right: 15px;">
+                                <img width="250"
+                                  src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/policy-conf-new-assistance-services.jpg"
+                                  alt="" style="display: block; max-width: 250px; width: 100%; height: auto;">
                               </td>
                               <td valign="middle" class="text mobile-prl-none" style="padding: 15px;">
-                                <p style="margin: 0 0 16px 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; color: #343741;">
-                                  <span style="color: #005b94; text-decoration: underline;">Education Center</span> <br>
-                                  <span style="color: #003d6e; font-size: 24px; font-weight: 600;">Assistance Services</span><br>
-                                  One of the best parts about your travel insurance plan is having access to our assistance services.
+                                <p
+                                  style="margin: 0 0 16px 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; color: #343741;">
+                                  <a href="https://www.travelguard.com/info?cmpid=emc-tgdirect-us-en-fulfillment-policyconfirmation"
+                                    style="color: #005b94; text-decoration: underline;">Education Center</a> <br>
+                                  <span style="color: #003d6e; font-size: 24px; font-weight: 600;">Assistance
+                                    Services</span><br>
+                                  One of the best parts about your travel insurance plan is having access to our
+                                  assistance services.
                                 </p>
-                                <table role="presentation" cellpadding="0" cellspacing="0" border="0" class="button m-m-a">
+                                <table role="presentation" cellpadding="0" cellspacing="0" border="0"
+                                  class="button m-m-a">
                                   <tr>
                                     <td align="center" style="background-color: #003d6e; border-radius: 40px;">
-                                      <a href="https://www.travelguard.com/info/assistance-services?cmpid=emc-tgdirect-us-en-fulfillment-policyconfirmation" style="display: inline-block; padding: 10px 20px; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; font-weight: 600; color: #fff; text-decoration: none;">Read Full Article</a>
+                                      <a href="https://www.travelguard.com/info/assistance-services?cmpid=emc-tgdirect-us-en-fulfillment-policyconfirmation"
+                                        style="display: inline-block; padding: 10px 20px; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; font-weight: 600; color: #fff; text-decoration: none;">Read
+                                        Full Article</a>
                                     </td>
                                   </tr>
                                 </table>
@@ -417,24 +650,35 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                     </table>
 
                     <!-- Travel Tips: Packing Tips -->
-                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" class="icon-left" style="padding-bottom: 30px;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" class="icon-left"
+                      style="padding-bottom: 30px;">
                       <tr>
                         <td>
                           <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                             <tr>
-                              <td width="250" valign="top" class="icon" style="text-align: center; padding-right: 15px;">
-                                <img width="250" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/GettyImages-1469671468@2x.jpg" alt="" style="display: block; max-width: 250px; width: 100%; height: auto;">
+                              <td width="250" valign="top" class="icon"
+                                style="text-align: center; padding-right: 15px;">
+                                <img width="250"
+                                  src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/policy-conf-new-packing-tips.jpg"
+                                  alt="" style="display: block; max-width: 250px; width: 100%; height: auto;">
                               </td>
                               <td valign="middle" class="text mobile-prl-none" style="padding: 15px;">
-                                <p style="margin: 0 0 16px 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; color: #343741;">
-                                  <span style="color: #005b94; text-decoration: underline;">Travel Tips</span> <br>
-                                  <span style="color: #003d6e; font-size: 24px; font-weight: 600;">Packing Tips</span><br>
-                                  Visit our Travel Tips page for helpful information on preparing for and planning your trip.
+                                <p
+                                  style="margin: 0 0 16px 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; color: #343741;">
+                                  <a href="https://www.travelguard.com/travel-resources/travel-tips?cmpid=emc-tgdirect-us-en-fulfillment-policyconfirmation"
+                                    style="color: #005b94; text-decoration: underline;">Travel Tips</a> <br>
+                                  <span style="color: #003d6e; font-size: 24px; font-weight: 600;">Packing
+                                    Tips</span><br>
+                                  Visit our Travel Tips page for helpful information on preparing for and planning your
+                                  trip.
                                 </p>
-                                <table role="presentation" cellpadding="0" cellspacing="0" border="0" class="button m-m-a">
+                                <table role="presentation" cellpadding="0" cellspacing="0" border="0"
+                                  class="button m-m-a">
                                   <tr>
                                     <td align="center" style="background-color: #003d6e; border-radius: 40px;">
-                                      <a href="https://www.travelguard.com/travel-resources/travel-tips/tips-for-packing?cmpid=emc-tgdirect-us-en-fulfillment-policyconfirmation" style="display: inline-block; padding: 10px 20px; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; font-weight: 600; color: #fff; text-decoration: none;">Read Full Article</a>
+                                      <a href="https://www.travelguard.com/travel-resources/travel-tips/tips-for-packing?cmpid=emc-tgdirect-us-en-fulfillment-policyconfirmation"
+                                        style="display: inline-block; padding: 10px 20px; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; font-weight: 600; color: #fff; text-decoration: none;">Read
+                                        Full Article</a>
                                     </td>
                                   </tr>
                                 </table>
@@ -453,18 +697,28 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                 <!-- Follow Us Section -->
                 <tr>
-                  <td style="background: linear-gradient(99deg, #003d6e 0.59%, #0076be 100%); border-top: 1px solid #9cc7e6;">
+                  <td
+                    style="background: linear-gradient(99deg, #003d6e 0.59%, #0076be 100%); border-top: 1px solid #9cc7e6;">
                     <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                       <tr>
                         <td style="padding: 20px; text-align: center;">
-                          <p style="margin: 0 0 10px 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 18px; font-weight: 600; line-height: 1.3; color: #fff; text-align: center;">
+                          <p
+                            style="margin: 0 0 10px 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 18px; font-weight: 600; line-height: 1.3; color: #fff; text-align: center;">
                             Follow us!
                           </p>
                           <p style="margin: 0; text-align: center;">
-                            <a href="https://www.facebook.com/travelguard"><img width="24" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/fb-logo-white.png" alt="Facebook" style="display: inline-block; width: 24px; padding: 0 5px;"></a>
-                            <a href="https://www.youtube.com/c/travelguard"><img width="24" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/youtube@2x.png" alt="YouTube" style="display: inline-block; width: 24px; padding: 0 5px;"></a>
-                            <a href="https://www.instagram.com/travelguard/"><img width="24" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/instagram-white@2x.png" alt="Instagram" style="display: inline-block; width: 24px; padding: 0 5px;"></a>
-                            <a href="https://www.tiktok.com/@travelguard"><img width="24" src="tiktok-white.png" alt="TikTok" style="display: inline-block; width: 24px; padding: 0 5px;"></a>
+                            <a href="https://www.facebook.com/travelguard"><img width="24"
+                                src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/fb-logo-white.png"
+                                alt="Facebook" style="display: inline-block; width: 24px; padding: 0 5px;"></a>
+                            <a href="https://www.youtube.com/c/travelguard"><img width="24"
+                                src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/youtube@2x.png"
+                                alt="YouTube" style="display: inline-block; width: 24px; padding: 0 5px;"></a>
+                            <a href="https://www.instagram.com/travelguard/"><img width="24"
+                                src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/instagram-white@2x.png"
+                                alt="Instagram" style="display: inline-block; width: 24px; padding: 0 5px;"></a>
+                            <a href="https://www.tiktok.com/@travelguard"><img width="24"
+                                src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/tiktok-white.png"
+                                alt="TikTok" style="display: inline-block; width: 24px; padding: 0 5px;"></a>
                           </p>
                         </td>
                       </tr>
@@ -475,8 +729,15 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                 <!-- Review CTA -->
                 <tr>
                   <td style="background-color: #003d6e; padding: 10px 20px;" align="center">
-                    <p style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 12px; line-height: 1.5; color: #fff; text-align: center;" class="m-ta-c">
-                      <img width="19" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/Outlined-03-Communication-Chat@2x.png" alt="" style="display: inline-block; width: 19px; padding-right: 10px; vertical-align: middle;">How did we do? <a style="color: #fff; text-decoration: underline;" href="https://www.travelguard.com/o/write-a-review?cmpid=emc-tgdirect-us-en-fulfillment-policyconfirmation">Leave us a review!</a>
+                    <p style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 12px; line-height: 1.5; color: #fff; text-align: center;"
+                      class="m-ta-c">
+                      <img width="19"
+                        src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/Outlined-03-Communication-Chat@2x.png"
+                        alt=""
+                        style="display: inline-block; width: 19px; padding-right: 10px; vertical-align: middle;">How did
+                      we do? <a style="color: #fff; text-decoration: underline;"
+                        href="https://www.travelguard.com/o/write-a-review?cmpid=emc-tgdirect-us-en-fulfillment-policyconfirmation">Leave
+                        us a review!</a>
                     </p>
                   </td>
                 </tr>
@@ -487,10 +748,20 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
         </table>
 
         <!-- Legal Footer -->
-        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" class="wrapper" style="max-width: 600px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" class="wrapper"
+          style="max-width: 600px;">
           <tr>
-            <td style="padding: 16px; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 8px; line-height: 1.5; color: #343741; text-align: center;">
-              <p style="margin: 0;">Coverage is offered by Travel Guard Group, Inc. (Travel Guard). California lic. No.0B93606. The Policy will contain reductions, limitations, exclusions and termination provisions. Insurance may be underwritten by American Zurich Insurance Company, a New York company (NAIC No. 40142), Zurich American Insurance Company, an Illinois company (NAIC No. 16535), each having its principal place of business at 1299 Zurich Way, Schaumburg, IL 60196, or National Union Fire Insurance Company of Pittsburgh, Pa. (NAIC No. 19445), a Pennsylvania insurance company, having its principal place of business at 1271 Avenue of the Americas, 37th FL, New York, NY 10020-1304. Please review the Plan offered to or purchased by you to confirm the underwriting insurer for your specific policy of insurance. Coverage may not be available in all states.</p>
+            <td
+              style="padding: 16px; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 8px; line-height: 1.5; color: #343741; text-align: center;">
+              <p style="margin: 0;">Coverage is offered by Travel Guard Group, Inc. (Travel Guard). California lic.
+                No.0B93606. The Policy will contain reductions, limitations, exclusions and termination provisions.
+                Insurance may be underwritten by American Zurich Insurance Company, a New York company (NAIC No. 40142),
+                Zurich American Insurance Company, an Illinois company (NAIC No. 16535), each having its principal place
+                of business at 1299 Zurich Way, Schaumburg, IL 60196, or National Union Fire Insurance Company of
+                Pittsburgh, Pa. (NAIC No. 19445), a Pennsylvania insurance company, having its principal place of
+                business at 1271 Avenue of the Americas, 37th FL, New York, NY 10020-1304. Please review the Plan
+                offered to or purchased by you to confirm the underwriting insurer for your specific policy of
+                insurance. Coverage may not be available in all states.</p>
             </td>
           </tr>
         </table>
@@ -500,4 +771,5 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
   </table>
 
 </body>
+
 </html>
