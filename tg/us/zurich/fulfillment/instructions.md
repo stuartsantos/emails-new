@@ -1,10 +1,7 @@
-link to figma design:
-https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=1060-133&m=dev
+braze abandon cart: https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=966-27&m=dev
 
-links in rvdc.docx
+braze abandon cart png: https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=966-183&m=dev
 
-html email to update: rvdc-braze-ip-warming.html
+braze abandon cart followup: https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=1060-33&m=dev
 
-Use the content in the figma design and the links in the rvdc.docx to update the rvdc-braze-ip-warming.html file with the correct content. Do not make edits to content or infer content. If you feel you must, please ask me beforehand.
-
-I will export the necessary header jpg, so keep the placeholder hosted .jpg that is already in the HTML. Where hosted icons already exist, use those. Point out any that aren't currently hosted so I can get those uploaded.
+based upon the file names in this folder associate the figma's with each of the above figma links and edit the html to match the content. do not change any content without asking first. if you would like to infer content, let me know. use the same hero image that's already being used in the base html
