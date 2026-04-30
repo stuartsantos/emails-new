@@ -229,7 +229,7 @@ table {
                             <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding-bottom: 25px;">
                               Hello {{policyDetail-primaryInsured-firstName}} {{policyDetail-primaryInsured-lastName}},<br>
                               <br>
-                              Thank you for choosing a Travel Guard® Insurance Policy!<br>
+                              Thank you for choosing travel insurance underwritten by Zurich Australian Insurance Limited.<br>
                               Your Policy Number is {{policyDetail-policyNumber}}.<br>
                               <br>
                               Please {{ViewPolicyURL}} to view your <b>Certificate of Insurance (COI)</b> and your <b>Policy Wording</b>.<br>
@@ -247,9 +247,7 @@ table {
                         <table role="presentation" class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
                           <tr>
                             <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding-bottom: 25px;">
-                              You have purchased the {{ProductNamePlaceHolder}}. The Benefits included in your policy are stated in your COI and Policy Wording.<br>
-                              <br>
-                              You should take the time to read your Policy Wording to ensure that it meets your specific requirements before you travel. This policy provides cover for specified situations and events during your trip. There are certain exclusions that may apply to specific circumstances, so it is best to review the Policy Wording as soon as you can.
+                              You have purchased the {{ProductNamePlaceHolder}} travel insurance. Your policy benefits are described in full in your policy wording.
                             </td>
                           </tr>
                         </table>
@@ -264,9 +262,23 @@ table {
                           <tr>
                             <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding-bottom: 25px;">
                               <ul style="margin: 10px 0; padding-left: 20px;">
-                                <li>All Insured Persons must be residents of the {{policyDetail-address-country}}.</li>
-                                <li>Please check your policy for the full list of eligibility requirements.</li>
+                                <li>All Insured Persons must be residents of {{policyDetail-address-country}}.</li>
+                                <li>Please check your policy for more information on the eligibility requirements.</li>
                               </ul>
+                            </td>
+                          </tr>
+                        </table>
+
+                        <table role="presentation" class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; text-align: left; margin-bottom: 16px;">
+                          <tr>
+                            <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; padding-top: 16px; color: #003D6E; border-bottom: 1px solid #9CC7E6;">IMPORTANT Contact Information</td>
+                          </tr>
+                        </table>
+
+                        <table role="presentation" class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
+                          <tr>
+                            <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding-bottom: 25px;">
+                              Travel Guard, part of the Zurich Insurance Group, is here to help. If you require assistance in support of your insurance policy, please use the contact information below.
                             </td>
                           </tr>
                         </table>
@@ -280,9 +292,9 @@ table {
                         <table role="presentation" class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
                           <tr>
                             <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding-bottom: 25px;">
-                              Please call {{CustomerServicesContactNumber}}, {{CustomerServiceOperatingHours}} OR email us at <a style="color: #1352DE;" href="mailto:{{CustomerServicesEmailAddress}}">{{CustomerServicesEmailAddress}}</a> and quote your policy number.<br>
+                              Please call {{CustomerServicesContactNumber}}, {{CustomerServiceOperatingHours}} OR email <a style="color: #1352DE;" href="mailto:{{CustomerServicesEmailAddress}}">{{CustomerServicesEmailAddress}}</a> and quote your policy number.<br>
                               <br>
-                              If you would like to receive your policy documentation by post, you can call us or email us using the information provided above to make a request.
+                              If you would like to receive your policy documentation by post, you can call or email using the information provided above to make a request.
                             </td>
                           </tr>
                         </table>
@@ -296,7 +308,7 @@ table {
                         <table role="presentation" class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
                           <tr>
                             <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding-bottom: 25px;">
-                              Call Travel Guard any time on {{AssistanceServicesContactNumber}}.<br>
+                              Call {{AssistanceServicesContactNumber}} anytime or email <a style="color: #1352DE;" href="mailto:{{AssistanceServicesEmailAddress}}">{{AssistanceServicesEmailAddress}}</a><br>
                               Our service centres are open 24/7.
                             </td>
                           </tr>
@@ -311,15 +323,9 @@ table {
                         <table role="presentation" class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
                           <tr>
                             <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding-bottom: 25px;">
-                              Telephone our Claims team on {{ClaimsContactNumber}}, {{ClaimsOperatingHours}} or email <a style="color: #1352DE;" href="mailto:{{ClaimsEmailAddress}}">{{ClaimsEmailAddress}}</a>
-                            </td>
-                          </tr>
-                        </table>
-
-                        <table role="presentation" class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
-                          <tr>
-                            <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding-bottom: 25px;">
-                              {{AltViewPolicyLinks}}
+                              You can download a claim form <a style="color: #1352DE;" href="{{ClaimsURL}}">here</a>.<br>
+                              <br>
+                              Alternatively, please call the Claims team on {{ClaimsContactNumber}}, or email <a style="color: #1352DE;" href="mailto:{{ClaimsEmailAddress}}">{{ClaimsEmailAddress}}</a>
                             </td>
                           </tr>
                         </table>
@@ -328,7 +334,9 @@ table {
                           <tr>
                             <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding-top: 25px; padding-bottom: 0;">
                               Safe travels!<br>
-                              <b style="color: #003D6E;">Travel Guard</b>
+                              <b style="color: #003D6E;">Travel Guard</b><br>
+                              <br>
+                              {{EmailFooter}}
                             </td>
                           </tr>
                         </table>
