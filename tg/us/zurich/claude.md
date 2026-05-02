@@ -231,8 +231,6 @@ All templates listed in the Design-to-HTML Mapping above are complete. Key miles
 - **Mar 2026**: Travel tips 03-26, 04-26 (established as canonical reference template); holiday series base templates (national-park-week, solo-vacation); sponsor emails (zurich-classic-usatoday1/2)
 - **Mar–ongoing 2026**: Monthly travel tips (05-26 through 12-26), holiday email series (8 emails from national-tourism-day through new-years-2027)
 
-See `holiday/handoff.md` and `travel-tips/handoff.md` for detailed build specs and content references.
-
 ### Image Assets
 All images stored in `img/` folder (47 assets). Key categories:
 - **Logos**: `logo-travel-guard-color.png`, `logo-travel-guard-color-new.png`, `logo-travel-guard-white.png`
