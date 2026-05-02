@@ -68,7 +68,6 @@ Read the relevant CLAUDE.md files and determine if any need updating based on th
 | `row/CLAUDE.md` | New countries, rebranding progress, status changes |
 | `qantas/claude.md` | Template status updates |
 | `tg/us/zurich/claude.md` | New emails, images, completed follow-ups |
-| `api-testing/CLAUDE.md` | Workflow or tooling changes |
 
 If updates are needed:
 1. Make the edits

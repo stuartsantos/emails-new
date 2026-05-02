@@ -45,6 +45,6 @@ Based on the results, offer to:
 ## Notes
 
 - The script skips legacy AIG templates under `tg/*/aig/` — only Zurich templates are scanned
-- The script also skips `node_modules/`, `build/`, `api-testing/`, and the component library
+- The script also skips `node_modules/`, `build/`, and the component library
 - LOW priority issues (missing role=presentation, box-sizing) are informational — don't push fixes unless asked
 - HIGH priority issues (AIG branding, duplicate classes, MSO mismatches, dark mode gotchas) should be flagged prominently

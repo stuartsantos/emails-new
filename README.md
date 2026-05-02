@@ -66,26 +66,11 @@ iPhone Mail, Android Mail, Gmail (web + mobile), Apple Mail, Outlook 2016
 │   ├── au/                  # Australia
 │   ├── nz/                  # New Zealand
 │   └── sg/                  # Singapore
-├── united/
-│   ├── us/en/               # United States
-│   ├── ca/en/               # Canada
-│   └── be/{fr,nl}/          # Belgium
-└── api-testing/             # Email preview utility
+└── united/
+    ├── us/en/               # United States
+    ├── ca/en/               # Canada
+    └── be/{fr,nl}/          # Belgium
 ```
-
-## API Testing / Email Preview
-
-Extract email HTML from Thunder Client API responses for browser preview:
-
-```bash
-cd api-testing && npm run watch
-```
-
-1. Make an API call in Thunder Client
-2. Save the response JSON to `api-testing/response/`
-3. The watcher extracts the `body` field and opens the email in your browser
-
-A browser-based fallback (`api-testing/extract.html`) is available for environments without Node.js.
 
 ## Component Library
 
@@ -134,4 +119,3 @@ Each brand directory has its own docs with brand-specific colors, variables, and
 - [`row/CLAUDE.md`](row/CLAUDE.md) — ROW markets, rebranding rules, modernization status
 - [`expedia/CLAUDE.md`](expedia/CLAUDE.md) — Expedia template structure, Handlebars variables
 - [`qantas/claude.md`](qantas/claude.md) — Lifecycle emails, underwriter transition context
-- [`api-testing/CLAUDE.md`](api-testing/CLAUDE.md) — Thunder Client integration workflow

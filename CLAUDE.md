@@ -19,7 +19,6 @@ This repository contains HTML email templates for travel insurance products acro
 | `admin/` | Travel Guard | US admin/internal templates |
 | `agents/` | Travel Guard | Agent-facing templates (US, CA) |
 | `digdrct/` | Travel Guard | Digital direct templates (US, CA, IT, MY, SG) |
-| `_api-testing/` | — | Email HTML extractor utility for Thunder Client API responses |
 | `_work-items/` | — | Work item tracking and reference documents |
 
 Each brand directory has its own `CLAUDE.md` or `claude.md` with brand-specific details (colors, variables, templates, status). Always read the relevant subdirectory docs before working on templates.
@@ -86,14 +85,6 @@ Templates can be built from components in the external project at `/responsive-m
 - **Components:** `button`, `text`, `heading`, `img-1col`, `img-full-width`, `icon-left/right/top`, `ul`, `ul-checked`, `ol`, `quote`, `social`, `video`
 
 The component library uses Grunt: `npm install && grunt` (dev server) or `grunt inline` (build only).
-
-## API Testing / Email Preview
-
-```bash
-cd _api-testing && npm run watch
-```
-
-Or use the `/watch-email` skill in Claude Code. Saves Thunder Client JSON responses to `_api-testing/response/`, extracts the `body` field to `_api-testing/build/email.html`, and auto-opens in browser.
 
 ## Figma Workflow (TG Zurich US only)
 

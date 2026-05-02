@@ -31,7 +31,7 @@ fi
 
 # Skip files in node_modules, build artifacts, component library, legacy AIG templates
 case "$FILE_PATH" in
-  */node_modules/*|*/build/*|*/dist/*|*responsive-modular-email-templates*|*/api-testing/build/*|*/tg/*/aig/*)
+  */node_modules/*|*/build/*|*/dist/*|*responsive-modular-email-templates*|*/tg/*/aig/*)
     exit 0
     ;;
 esac

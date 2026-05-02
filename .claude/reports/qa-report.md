@@ -13,9 +13,6 @@
 
 ## Results by Brand
 
-### _api-testing/ (1 files: 1 pass, 0 warn, 0 fail)
-
-
 ### admin/ (4 files: 2 pass, 2 warn, 0 fail)
 
 - ⚠️ `admin/us/en/policy-confirmation.html` — AIG branding (L184,317)

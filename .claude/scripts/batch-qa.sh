@@ -56,7 +56,6 @@ FILES=$(find "$SCAN_DIR" -name "*.html" \
   -not -path "*/build/*" \
   -not -path "*/dist/*" \
   -not -path "*responsive-modular*" \
-  -not -path "*/api-testing/*" \
   -not -path "$SCAN_DIR/.claude/*" \
   -not -path "*/tg/*/aig/*" \
   | sort)
