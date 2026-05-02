@@ -103,16 +103,18 @@ if [[ "$HAS_DARK_MQ" -gt 0 ]]; then
   # Warn if .content-bg or .dark-text on content areas (the gotcha from CLAUDE.md)
   # Exclude preheader <p> elements (font-size: 10px) — dark-text is correct there since
   # preheader sits on the outer #f1f6fb body background, not white content areas.
-  BAD_DARK=$(echo "$CONTENT" | grep -Pon 'class="[^"]*\b(content-bg|dark-text)\b[^"]*"' | {
-    while IFS=: read -r linenum rest; do
-      LINE_CONTENT=$(echo "$CONTENT" | sed -n "${linenum}p")
-      # Skip preheader rows: small font-size <p> on the body background is valid dark-text usage
-      if echo "$LINE_CONTENT" | grep -qP 'font-size:\s*(8|9|10|11)px.*class="dark-text"'; then
-        continue
-      fi
-      echo "${linenum}:${rest}"
-    done || true
-  } | head -3 || true)
+  BAD_DARK=$(echo "$CONTENT" | perl -ne '
+    push @win, $_;
+    shift @win if @win > 5;
+    if (/class="[^"]*\b(content-bg|dark-text)\b[^"]*"/) {
+      # Skip if font-size 8-11px appears nearby (same element, multi-line tag)
+      $ctx = join("", @win);
+      next if $ctx =~ /font-size:\s*(8|9|10|11)px/;
+      # Also skip preheader div area (display:none + max-height:0)
+      next if $ctx =~ /display:\s*none.*max-height:\s*0/s;
+      print "$.:$&\n";
+    }
+  ' 2>/dev/null | head -3 || true)
   if [[ -n "$BAD_DARK" ]]; then
     LINES=$(echo "$BAD_DARK" | cut -d: -f1 | tr '\n' ', ' | sed 's/,$//')
     ISSUES+=("DARK MODE GOTCHA on line(s) $LINES — .content-bg/.dark-text should NOT be on white content areas (turns them dark gray). Only use on outer body area elements.")

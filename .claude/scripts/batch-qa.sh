@@ -193,10 +193,17 @@ while IFS= read -r FILE_PATH; do
     fi
 
     # Check for .content-bg or .dark-text on content areas (not preheader small text)
+    # Uses a 5-line sliding window to catch multi-line tags where font-size and
+    # class="dark-text" are on separate lines of the same element.
     BAD_DARK=$(echo "$CONTENT" | perl -ne '
+      push @win, $_;
+      shift @win if @win > 5;
       if (/class="[^"]*\b(content-bg|dark-text)\b[^"]*"/) {
-        # Skip preheader small text lines
-        next if /font-size:\s*(8|9|10|11)px.*class="dark-text"/;
+        # Skip if font-size 8-11px appears nearby (same element, multi-line tag)
+        $ctx = join("", @win);
+        next if $ctx =~ /font-size:\s*(8|9|10|11)px/;
+        # Also skip preheader div area (display:none + max-height:0)
+        next if $ctx =~ /display:\s*none.*max-height:\s*0/s;
         print "$.:$&\n";
       }
     ' 2>/dev/null | head -3 || true)

@@ -32,8 +32,8 @@ Each brand directory has its own `CLAUDE.md` with brand-specific details (Handle
 | claude.ai Figma (`mcp__claude_ai_Figma__*`) | Remote | Primary Figma integration — use for design context, screenshots, Code Connect |
 | figma (`mcp__figma__*`) | Local SSE (port 3845) | Secondary/legacy Figma — often fails to connect; prefer claude.ai Figma |
 | github (`mcp__github__*`) | HTTP | GitHub Copilot MCP — may need token refresh if connection drops |
-| chrome-devtools (`mcp__chrome-devtools__*`) | npx | Chrome DevTools automation |
-| claude-in-chrome (`mcp__claude-in-chrome__*`) | Browser extension | DOM-aware browser automation; load tools via ToolSearch before use |
+| chrome-devtools (`mcp__chrome-devtools__*`) | npx | **Preferred for browser automation** — Chrome DevTools automation |
+| claude-in-chrome (`mcp__claude-in-chrome__*`) | Browser extension | DOM-aware browser automation; load tools via ToolSearch before use. Use only when chrome-devtools can't do the job (e.g., needs persistent extension session) |
 | postman / claude.ai Postman Full | npx + Remote | Dual Postman servers; read instructions resource before use |
 | claude.ai Gmail (`mcp__claude_ai_Gmail__*`) | Remote | Gmail read/draft |
 | claude.ai Google Calendar (`mcp__claude_ai_Google_Calendar__*`) | Remote | Calendar read/write |
