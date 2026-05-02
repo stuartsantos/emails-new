@@ -23,6 +23,8 @@ This repository contains HTML email templates for travel insurance products acro
 
 Each brand directory has its own `CLAUDE.md` with brand-specific details (Handlebars variables, logo URLs, market lists, brand-only colors, status). Always read the relevant subdirectory docs before working on templates.
 
+**Documentation conventions:** Root `CLAUDE.md` holds shared patterns; brand `CLAUDE.md` files hold only what's unique per brand. Don't duplicate. Filename is uppercase `CLAUDE.md` everywhere.
+
 ## MCP Servers
 
 | Server | Type | Status notes |
@@ -174,6 +176,21 @@ Any `linear-gradient` td/div needs a `bgcolor` attribute + leading `background-c
 
 ### Anchor color pinning
 Pin every `<a href>` with inline `style="color: #0076be;"` (brand blue). Email clients auto-adjust unstyled anchors to off-brand colors in dark mode. Without inline pinning, dark-mode rendering can break brand consistency (April 2026 sweep — see commit `9773f12`).
+
+## QA Tooling
+
+Two existing scripts cover the same checks I keep manually grepping for during sweeps. Use them before reinventing one-off greps.
+
+| Script | When it runs | What it checks |
+|--------|--------------|----------------|
+| `.claude/scripts/validate-email-html.sh` | PostToolUse hook on every Edit/Write to `*.html` | Per-file validation: blocks the operation and returns issues to Claude |
+| `.claude/scripts/batch-qa.sh` | Manual sweep — `./batch-qa.sh [scope]` | Batch validation across all templates → writes `.claude/reports/qa-report.md` |
+
+**14 categories of checks:** duplicate class attrs, AIG branding, `@aig.com` emails, legacy `{Variable}` placeholders, missing Gmail dark mode `[data-ogsc]`, dark-mode gotcha (`.content-bg`/`.dark-text` on white areas), missing `.body-bg` class, missing `<img alt>`, relative image paths, tables missing `role="presentation"`, mismatched MSO conditionals, UAT/QA URLs, missing `box-sizing` for mobile blocks, missing preheader `&zwnj;&nbsp;` padding.
+
+Scope examples: `./batch-qa.sh row`, `./batch-qa.sh expedia`, `./batch-qa.sh tg/us/zurich`. Files can be excluded via `.claude/qa-exclude.txt`.
+
+Use the `/batch-qa` skill in Claude Code as a convenience wrapper.
 
 ### Keep in mind
 - Compare dark mode styles across ALL template variants when updating any one
