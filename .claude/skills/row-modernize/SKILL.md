@@ -25,8 +25,7 @@ Read these files to understand the target structure and rules:
 | File | Purpose |
 |------|---------|
 | `row/_template/row-reference.html` | Canonical HTML skeleton — use as the structural base |
-| `row/CLAUDE.md` | Rebranding rules, market variations, color reference |
-| `row/README.md` | Legacy → modern variable mapping table |
+| `row/CLAUDE.md` | Rebranding rules, market variations, color reference, partner→market lists |
 
 ## 3. Read and analyze the input file
 
@@ -88,7 +87,7 @@ Insert extracted content into each of the 12 sections documented in the referenc
 
 ### Convert legacy variables
 
-Apply these mappings from `row/README.md`:
+Apply these mappings:
 
 | Legacy `{Variable}` | Modern `{{handlebars}}` |
 |---------------------|------------------------|

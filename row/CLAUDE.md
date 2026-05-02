@@ -211,6 +211,29 @@ All ROW policy confirmation templates have been updated to the modern responsive
 - **Swiss French (ch/fr)** includes additional "policy cancellation" section not in other templates
 - **Czech (cz/cz)** eligibility section focuses on purchase date requirements rather than residency
 
+## Partner Reference
+
+Markets covered per partner:
+
+| Partner | Markets |
+|---------|---------|
+| LHGROUP | AT, BE, CH, DE, ES, FR, IT, NL, PT, UK |
+| United | BE, CH, DE, ES, FR, IE, IT, PT |
+| Emirates | AT, BA, BE, CA, CZ, DE, DK, ES, FR, GR, HG, IE, IT, KT, LB, MT, NL, NO, NZ, OM, PL, PT, QT, SA, SE, SG, SZ, UE, UK, ZA |
+| Qatar | AT, BE, CZ, DE, ES, FR, IT, KT, LB, NL, NO, OM, QT, SE, UE, UK |
+
+Live deployed template URLs (per language):
+
+| Lang | URL |
+|------|-----|
+| EN | https://documents.travelguard.com/content/templates/row/gb/en/policy-confirmation.html |
+| IT | https://documents.travelguard.com/content/templates/row/it/it/policy-confirmation.html |
+| FR | https://documents.travelguard.com/content/templates/row/fr/fr/policy-confirmation.html |
+| PT | https://documents.travelguard.com/content/templates/row/pt/pt/policy-confirmation.html |
+| DE | https://documents.travelguard.com/content/templates/row/de/de/policy-confirmation.html |
+| NL | https://documents.travelguard.com/content/templates/row/nl/nl/policy-confirmation.html |
+| CS | https://documents.travelguard.com/content/templates/row/cz/cs/policy-confirmation.html |
+
 ## Component Library Reference
 
 Templates can use components from `/responsive-modular-email-templates/build/html/`. The library provides:
