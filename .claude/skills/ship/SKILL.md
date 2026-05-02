@@ -66,8 +66,8 @@ Read the relevant CLAUDE.md files and determine if any need updating based on th
 | `CLAUDE.md` (root) | New shared patterns, repo structure changes |
 | `expedia/CLAUDE.md` | New markets, templates, or status changes |
 | `row/CLAUDE.md` | New countries, rebranding progress, status changes |
-| `qantas/claude.md` | Template status updates |
-| `tg/us/zurich/claude.md` | New emails, images, completed follow-ups |
+| `qantas/CLAUDE.md` | Template status updates |
+| `tg/us/zurich/CLAUDE.md` | New emails, images, completed follow-ups |
 
 If updates are needed:
 1. Make the edits

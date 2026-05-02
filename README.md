@@ -115,7 +115,7 @@ The project is transitioning from **AIG Travel** to **Travel Guard / Zurich** br
 
 Each brand directory has its own docs with brand-specific colors, variables, and template status:
 
-- [`tg/us/zurich/claude.md`](tg/us/zurich/claude.md) — Figma workflow, dark mode, hero image patterns
+- [`tg/us/zurich/CLAUDE.md`](tg/us/zurich/CLAUDE.md) — Figma workflow, dark mode, hero image patterns
 - [`row/CLAUDE.md`](row/CLAUDE.md) — ROW markets, rebranding rules, modernization status
 - [`expedia/CLAUDE.md`](expedia/CLAUDE.md) — Expedia template structure, Handlebars variables
-- [`qantas/claude.md`](qantas/claude.md) — Lifecycle emails, underwriter transition context
+- [`qantas/CLAUDE.md`](qantas/CLAUDE.md) — Lifecycle emails, underwriter transition context
