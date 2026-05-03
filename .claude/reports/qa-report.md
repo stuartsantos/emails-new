@@ -1,77 +1,18 @@
 # Email Template QA Report
 
-**Scanned:** all brands (139 templates)
-**Date:** 2026-05-02 15:23 UTC
-**Pass:** 107 | **Warn:** 32 | **Fail:** 0 | **Total issues:** 32
+**Scanned:** row/_template (1 templates)
+**Date:** 2026-05-03 23:56 UTC
+**Pass:** 1 | **Warn:** 0 | **Fail:** 0 | **Total issues:** 0
 
 ## Summary by Issue Type
 
 | Issue | Files Affected | Priority |
 |-------|---------------|----------|
-| UAT/QA environment URLs | 17 | HIGH |
-| AIG branding references | 14 | HIGH |
-| Relative image paths | 1 | MED |
 
 ## Results by Brand
 
-### admin/ (4 files: 2 pass, 2 warn, 0 fail)
+### row/ (1 files: 1 pass, 0 warn, 0 fail)
 
-- ⚠️ `admin/us/en/policy-confirmation.html` — AIG branding (L184,317)
-- ⚠️ `admin/us/en/xxx-admin-save-quote-new.html` — AIG branding (L13)
-
-### agents/ (3 files: 1 pass, 2 warn, 0 fail)
-
-- ⚠️ `agents/ca/en/policy-confirmation.html` — AIG branding (L21)
-- ⚠️ `agents/us/en/policy-confirmation.html` — AIG branding (L184,317)
-
-### digdrct/ (13 files: 9 pass, 4 warn, 0 fail)
-
-- ⚠️ `digdrct/ca/en/annual-followup.html` — AIG branding (L830,832,834,836)
-- ⚠️ `digdrct/ca/en/policy-confirmation.html` — AIG branding (L210)
-- ⚠️ `digdrct/ca/en/post-trip.html` — AIG branding (L632,634,636,638)
-- ⚠️ `digdrct/us/en/policy-confirmation.html` — AIG branding (L113,238)
-
-### expedia/ (23 files: 7 pass, 16 warn, 0 fail)
-
-- ⚠️ `expedia/ca/en/policy-confirmation.html` — UAT/QA env URL (L254)
-- ⚠️ `expedia/ca/fr/policy-confirmation.html` — UAT/QA env URL (L254)
-- ⚠️ `expedia/ch/de/policy-confirmation.html` — UAT/QA env URL (L213)
-- ⚠️ `expedia/ch/fr/policy-confirmation.html` — UAT/QA env URL (L213)
-- ⚠️ `expedia/ch/it/policy-confirmation.html` — UAT/QA env URL (L213)
-- ⚠️ `expedia/de/de/policy-confirmation.html` — UAT/QA env URL (L213)
-- ⚠️ `expedia/dk/da/policy-confirmation.html` — UAT/QA env URL (L210)
-- ⚠️ `expedia/es/es/policy-confirmation.html` — UAT/QA env URL (L213)
-- ⚠️ `expedia/fi/fi/policy-confirmation.html` — UAT/QA env URL (L210)
-- ⚠️ `expedia/fr/fr/policy-confirmation.html` — UAT/QA env URL (L213)
-- ⚠️ `expedia/hk/en/policy-confirmation.html` — UAT/QA env URL (L358,502)
-- ⚠️ `expedia/ie/en/policy-confirmation.html` — UAT/QA env URL (L213)
-- ⚠️ `expedia/it/it/policy-confirmation.html` — UAT/QA env URL (L211)
-- ⚠️ `expedia/nl/nl/policy-confirmation.html` — UAT/QA env URL (L211)
-- ⚠️ `expedia/no/nb/policy-confirmation.html` — UAT/QA env URL (L211)
-- ⚠️ `expedia/se/sv/policy-confirmation.html` — UAT/QA env URL (L211)
-
-### jetstar/ (8 files: 8 pass, 0 warn, 0 fail)
-
-
-### qantas/ (13 files: 10 pass, 3 warn, 0 fail)
-
-- ⚠️ `qantas/au/en/amt-expiry.html` — AIG branding (L178,207,238,354,358)
-- ⚠️ `qantas/au/en/au-revisions/save-quote.html` — AIG branding (L1082)
-- ⚠️ `qantas/au/en/au-revisions/void.html` — AIG branding (L16,24,25,26)
-
-### row/ (30 files: 29 pass, 1 warn, 0 fail)
-
-- ⚠️ `row/ca/en/policy-confirmation.html` — UAT/QA env URL (L15)
-
-### tg/ (40 files: 39 pass, 1 warn, 0 fail)
-
-- ⚠️ `tg/us/zurich/fulfillment/save-quote-followup.html` — Relative img path (2)
-
-### united/ (5 files: 2 pass, 3 warn, 0 fail)
-
-- ⚠️ `united/tmp/policy-confirmation.html` — AIG branding (L220)
-- ⚠️ `united/us/en/policy-confirmation.html` — AIG branding (L18,21)
-- ⚠️ `united/us/en/post-trip.html` — AIG branding (L223)
 
 ---
 
