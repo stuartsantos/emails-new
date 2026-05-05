@@ -1,0 +1,290 @@
+/* ============================================================
+   Travel Guard Design System — Colors & Type
+   Source: Travel Guard Styles 2025.fig (CoverMore branding 2025)
+   ============================================================ */
+
+/* ----- Webfonts ---------------------------------------------- */
+/* Travel Guard's primary face is Noto Sans (Regular/SemiBold/Bold/Light Italic).
+   Body copy occasionally uses Source Sans Pro / 3 (sourcing the Adobe variant).
+   Both are loaded from Google Fonts. */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,600&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap");
+
+:root {
+  /* ----- Brand primary palette (starred = base brand colors) ----- */
+  --tg-navy:           #003D6E;  /* Blue 4 — primary brand */
+  --tg-navy-90:        rgba(0, 61, 110, 0.9);  /* hero overlay */
+  --zurich-blue:       #2167AE;  /* Blue 3 — heading + accent */
+  --zurich-blue-dark:  #0E4E88;  /* Blue 7 — hover */
+  --snowmelt-blue:     #9CC7E6;  /* Blue 2 — pale accent */
+  --glacier-blue:      #E4EDF8;  /* Blue 6 — section bg */
+  --glacier-blue-50:   #F1F6FB;  /* Blue 1 — softest tint */
+  --night-sky:         #302261;  /* Blue 5 — deep accent */
+
+  /* ----- Brand secondary palette (warm/cool accents) ----- */
+  --jungle:            #A5D069;
+  --jungle-25:         #E8F3D9;
+  --jungle-50:         #D2E7B4;
+  --lagoon:            #66CBE1;
+  --lagoon-50:         #B2E5F0;
+  --lagoon-10:         #F0FAFC;
+  --lagoon-dark-20:    #387A89;
+  --lagoon-dark-50:    #1C4A54;
+  --sun-flare:         #F3E862;
+  --amber:             #FFC709;
+  --watermelon:        #DB5989;
+  --lavender-mist:     #D6C4E0;
+  --soft-lavender:     #EAE1EE;
+
+  /* ----- Brand secondary complementary tones ----- */
+  --deep-sea-green:    #005F62;  /* Cyan/Teal 5 alt — secondary CTA */
+  --morning-yellow:    #F5F1BB;
+  --terra-cotta:       #F15F40;
+  --seafoam:           #64C5B9;
+  --seafoam-dark-50:   #32928E;
+  --morning-dew:       #D6E6E2;
+  --jungle-mid:        #E8F3D9;
+
+  /* ----- Neutral palette ----- */
+  --stone:             #B6A99B;
+  --sand:              #EDE8DE;
+  --midnight:          #1C252E;       /* gray-7 — primary text */
+  --midnight-50:       #555B62;       /* gray-6 — secondary text */
+  --midnight-30:       #8D9296;       /* gray-5 — placeholder */
+  --midnight-15:       #C6C8CB;       /* gray-3 — borders, disabled */
+  --midnight-10:       #E6E7E8;       /* gray-2 — divider */
+  --gray-1:            #F6F6F6;       /* gray-1 — subtle bg */
+  --white:             #FFFFFF;
+  --black:             #000000;
+
+  /* ----- Semantic UX colors ----- */
+  --info-50:           #E4EDF8;
+  --info-500:          #2167AE;
+  --info-900:          #0E4E88;
+
+  --success-50:        #ECFDF3;
+  --success-200:       #A6F4C5;
+  --success-400:       #32D583;
+  --success-600:       #039855;
+  --success-900:       #054F31;
+
+  --warning-50:        #FFFAEB;
+  --warning-200:       #FEDF89;
+  --warning-500:       #F79009;
+  --warning-600:       #DC6803;
+  --warning-900:       #7A2E0E;
+
+  --error-50:          #FEF3F2;
+  --error-200:         #FECDCA;
+  --error-500:         #F04438;
+  --error-600:         #D92D20;
+  --error-900:         #7A271A;
+
+  /* ----- Semantic surface colors (web defaults) ----- */
+  --bg-default:        #FFFFFF;
+  --bg-subtle:         #F6F6F6;       /* gray-1-midnight10 */
+  --bg-snowmelt:       #E4EDF8;       /* blue-2-snowmelt */
+  --bg-tgnavy:         #003D6E;       /* blue-4-tgnavy */
+  --bg-midnight:       #1C252E;       /* gray-7-midnight */
+
+  /* ----- Foreground tokens ----- */
+  --fg-1:              #1C252E;       /* primary text on light */
+  --fg-2:              #555B62;       /* secondary text */
+  --fg-3:              #8D9296;       /* tertiary / placeholder */
+  --fg-on-dark:        #FFFFFF;
+  --fg-on-dark-2:      rgba(255, 255, 255, 0.8);
+  --fg-link:           #0076BE;       /* Advisor Connect / link blue */
+  --fg-link-alt:       #1352DE;       /* small inline links */
+
+  /* ----- Brand gradients ----- */
+  --grad-tropics:      linear-gradient(135deg, #64C5B9 0%, #66CBE1 100%);
+  --grad-golden-hour:  linear-gradient(135deg, #FFC709 0%, #F15F40 100%);
+  --grad-dusk:         linear-gradient(135deg, #DB5989 0%, #302261 100%);
+  --grad-woodland:     linear-gradient(135deg, #A5D069 0%, #005F62 100%);
+  --grad-hero-overlay: linear-gradient(180deg, rgba(0,61,110,0) 0%, rgba(0,61,110,0.9) 100%);
+
+  /* ----- Typography — base ----- */
+  --font-sans:         "Noto Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body-alt:     "Source Sans 3", "Source Sans Pro", "Noto Sans", system-ui, sans-serif;
+
+  /* ----- Type scale (px) ----- */
+  --fs-xxs:    11px;
+  --fs-xs:     12px;
+  --fs-sm:     14px;
+  --fs-base:   16px;
+  --fs-md:     18px;
+  --fs-lg:     20px;
+  --fs-xl:     24px;
+  --fs-2xl:    30px;
+  --fs-3xl:    38px;     /* hero h1 */
+  --fs-4xl:    48px;     /* page intro */
+  --fs-5xl:    64px;     /* file template hero */
+
+  /* ----- Spacing scale (4-pt base, with brand 8/12/16/20/24/32/50/60/80/100/150) --- */
+  --sp-1:   4px;
+  --sp-2:   8px;
+  --sp-3:   12px;
+  --sp-4:   16px;
+  --sp-5:   20px;
+  --sp-6:   24px;
+  --sp-8:   32px;
+  --sp-10:  40px;
+  --sp-12:  50px;
+  --sp-15:  60px;
+  --sp-20:  80px;
+  --sp-25:  100px;
+  --sp-37:  150px;
+
+  /* ----- Radii ----- */
+  --r-sm:    4px;
+  --r-md:    8px;
+  --r-lg:    16px;
+  --r-pill:  40px;       /* button pill */
+  --r-card:  4px;        /* default card corner from figma */
+
+  /* ----- Borders ----- */
+  --bd-thin:   1px solid var(--midnight-15);
+  --bd-snow:   1px solid var(--snowmelt-blue);
+  --bd-zurich: 1px solid var(--zurich-blue);
+
+  /* ----- Shadows (per Shadows page in Figma) ----- */
+  --sh-1: 0 1px 2px rgba(28, 37, 46, 0.06), 0 1px 3px rgba(28, 37, 46, 0.10);
+  --sh-2: 0 2px 4px rgba(28, 37, 46, 0.06), 0 4px 8px rgba(28, 37, 46, 0.08);
+  --sh-3: 0 4px 8px rgba(28, 37, 46, 0.06), 0 8px 16px rgba(28, 37, 46, 0.10);
+  --sh-card-hover: 0 12px 24px rgba(0, 61, 110, 0.12);
+}
+
+/* ----- Semantic type roles ------------------------------------ */
+html, body {
+  font-family: var(--font-sans);
+  color: var(--fg-1);
+  font-size: var(--fs-base);
+  line-height: 1.5;
+  background: var(--bg-default);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.tg-eyebrow {
+  /* "main headers" / category labels — uppercased small caps */
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--fs-xl);
+  line-height: 1.25;
+  letter-spacing: 0.1em;
+  color: var(--zurich-blue);
+  text-transform: uppercase;
+}
+
+.tg-h1 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--fs-3xl);          /* 38px */
+  line-height: 1.15;
+  color: var(--white);                /* default on hero overlay */
+  letter-spacing: -0.005em;
+}
+
+.tg-h1--ondark { color: var(--white); }
+.tg-h1--onlight { color: var(--tg-navy); }
+
+.tg-h2 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.2;
+  color: var(--tg-navy);
+}
+
+.tg-h3 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--fs-xl);            /* 24px */
+  line-height: 1.25;
+  color: var(--tg-navy);
+}
+
+.tg-h4 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--fs-md);            /* 18px */
+  line-height: 1.4;
+  color: var(--tg-navy);
+}
+
+.tg-h5 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--fs-base);
+  line-height: 1.5;
+  color: var(--midnight);
+}
+
+.tg-h6 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--fs-sm);
+  line-height: 1.4;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--zurich-blue);
+}
+
+/* Tagline / kicker — italic light, used at 24px on hero subhead */
+.tg-tagline {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-style: italic;
+  font-size: var(--fs-xl);
+  line-height: 1.25;
+  color: var(--midnight);
+}
+
+.tg-body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--fs-base);
+  line-height: 24px;
+  color: var(--midnight);
+}
+
+.tg-body--lg {
+  font-size: var(--fs-md);
+  line-height: 25px;
+}
+
+.tg-body--sm {
+  font-size: var(--fs-sm);
+  line-height: 20px;
+}
+
+.tg-caption {
+  font-size: var(--fs-xs);
+  line-height: 16px;
+  color: var(--midnight-50);
+}
+
+.tg-microcopy {
+  font-size: var(--fs-xxs);
+  line-height: 14px;
+  color: var(--midnight-50);
+}
+
+.tg-link {
+  color: var(--fg-link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.tg-link:hover { color: var(--zurich-blue-dark); }
+
+/* ----- Native-element defaults -------------------------------- */
+h1 { font: 700 var(--fs-3xl)/1.15 var(--font-sans); color: var(--tg-navy); margin: 0; }
+h2 { font: 700 30px/1.2 var(--font-sans); color: var(--tg-navy); margin: 0; }
+h3 { font: 600 var(--fs-xl)/1.25 var(--font-sans); color: var(--tg-navy); margin: 0; }
+h4 { font: 600 var(--fs-md)/1.4 var(--font-sans); color: var(--tg-navy); margin: 0; }
+h5 { font: 600 var(--fs-base)/1.5 var(--font-sans); color: var(--midnight); margin: 0; }
+h6 { font: 700 var(--fs-sm)/1.4 var(--font-sans); color: var(--zurich-blue); text-transform: uppercase; letter-spacing: 0.05em; margin: 0; }
+p  { font: 400 var(--fs-base)/24px var(--font-sans); color: var(--midnight); margin: 0; }
+a  { color: var(--fg-link); text-decoration: underline; text-underline-offset: 2px; }
+small { font-size: var(--fs-xs); color: var(--midnight-50); }
+
+::selection { background: var(--snowmelt-blue); color: var(--tg-navy); }

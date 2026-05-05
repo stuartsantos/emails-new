@@ -4,6 +4,8 @@ Responsive HTML emails for Zurich Travel Insurance customer journey, BAU, holida
 
 For shared technical patterns (DOCTYPE, meta tags, MSO conditional, Google Fonts, dark mode CSS, layout, preheader, font stack, brand color palette, gotchas), see the **root `/CLAUDE.md`**. This file covers TG-Zurich-specific content: Figma-to-HTML mapping, hosted CDN assets, hero-image pattern, and known-issue workarounds.
 
+**Brand source of truth:** `_work-items/tg-design-system/` is the bundled CoverMore-2025 Travel Guard design system (tokens, voice & tone, brand assets, do/don'ts). Skim `project/SKILL.md` before designing a new template — it spells out the rules that aren't obvious from the tokens alone. Root `/CLAUDE.md` has the asset inventory and token cross-reference.
+
 ## Folder Structure
 
 ```
@@ -182,6 +184,27 @@ Use these URLs instead of local `../img/` paths for production emails.
      <img src="../img/hero.png" alt="" width="289" style="display: block;">
    </td>
    ```
+
+## Voice & Tone (from design system)
+
+Paraphrased from `_work-items/tg-design-system/README.md` and `project/SKILL.md`. Read those for full detail.
+
+- **Reassuring, not alarmist.** Lead with what's possible ("Travel covered. Trips earned."), not what could go wrong.
+- **Clear, never breezy.** Insurance language has to be precise — *Trip Cancellation*, *Pre-Existing Medical Conditions*, *Cancel For Any Reason* are proper-noun product features, not casualisms.
+- **Action-verb CTAs:** *Get a Quote*, *File a Claim*, *Manage Your Plan*, *Compare Plans*.
+- **Italic taglines** are a signature voice device — a one-line italic kicker under a bold heading. Use sparingly: once per hero/section, never stacked.
+- **Audience:** adults 25–65, US 50 states + DC, detail-readers — don't hide the fine print.
+
+## Don'ts (from design system)
+
+- No emoji — anywhere. Use SVG icons or text.
+- No drop shadows on text.
+- No gradient text fills.
+- No left-border accent cards (the AI-slop info-card trope).
+- No three-color CTA gradients — CTAs are flat fills.
+- No filler stats ("98% of travelers say…", "2 minute quote", "24/7") unless real and source-able.
+- No "Trusted by" logo bars — Travel Guard is a B2C insurance brand, not a SaaS product.
+- No "fun" insurance jokes, cartoon mascots, or stock-photo collages of people in airports laughing at phones.
 
 ## Open Follow-up Items
 

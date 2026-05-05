@@ -1,0 +1,39 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Page Hero</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin:0; padding:0; background:#fff; font-family: var(--font-sans); }
+  .hero { position: relative; height: 360px; overflow: hidden; }
+  .hero-bg { position: absolute; inset: 0;
+    background: linear-gradient(135deg,#0E4E88 0%, #2167AE 50%, #66CBE1 100%);
+  }
+  .hero-bg::before {
+    content: ""; position: absolute; inset:0;
+    background-image:
+      radial-gradient(circle at 20% 80%, rgba(255,255,255,0.15) 0%, transparent 40%),
+      radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%);
+  }
+  .overlay-card { position: absolute; left: 60px; top: 60px; width: 540px;
+    background: rgba(0,61,110,0.9); padding: 36px 40px; border-radius: 4px; color:#fff; }
+  .crumbs { font: 400 13px/1 var(--font-sans); color: rgba(255,255,255,0.7); margin: 0 0 18px;}
+  .crumbs a { color: rgba(255,255,255,0.7); text-decoration: none; }
+  .crumbs span { margin: 0 6px; }
+  .crumbs strong { color: #fff; font-weight: 400; }
+  h1.title { font: 700 38px/42px var(--font-sans); color:#fff; margin: 0 0 14px;}
+  .sub { font: 300 italic 24px/30px var(--font-sans); color: rgba(255,255,255,0.95); margin: 0 0 24px;}
+  .cta { display:inline-block; background:#FFC709; color:#1C252E; padding: 12px 28px; border-radius: 40px; font: 600 16px/1 var(--font-sans); text-decoration: none; }
+  .label { padding: 16px 24px 0; font: 700 11px/1 var(--font-sans); color: #2167AE; letter-spacing: 0.1em; text-transform: uppercase; margin: 0 0 14px; }
+</style>
+</head>
+<body>
+  <p class="label">Page hero · full-bleed photo + 90% navy overlay card</p>
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="overlay-card">
+      <p class="crumbs"><a href="#">Home</a><span>›</span><a href="#">Plans</a><span>›</span><strong>Preferred</strong></p>
+      <h1 class="title">Travel covered. Trips earned.</h1>
+      <p class="sub">Get a quote in under two minutes — no medical exam, no hassle.</p>
+      <a href="#" class="cta">Get a Quote</a>
+    </div>
+  </section>
+</body></html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Buttons</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin:0; padding:24px; background:#fff; font-family: var(--font-sans); }
+  .row { display:flex; flex-wrap: wrap; gap: 12px; align-items:center; margin-bottom: 18px; }
+  .label { font: 700 11px/1 var(--font-sans); color: var(--zurich-blue); letter-spacing: 0.1em; text-transform: uppercase; margin: 0 0 10px; }
+  .lbl-sub { font: 600 11px/1 var(--font-sans); color: var(--midnight-50); margin: 18px 0 8px; }
+
+  .btn { display:inline-flex; align-items:center; gap: 8px; padding: 10px 22px; border-radius: 40px;
+         font-family: var(--font-sans); font-weight: 600; font-size: 16px; line-height: 24px;
+         border: 1.5px solid transparent; cursor: pointer; transition: all .15s ease; }
+  .btn:focus-visible { outline: 3px solid #9CC7E6; outline-offset: 2px; }
+  .btn--primary { background: #2167AE; color:#fff; border-color: #2167AE; }
+  .btn--primary:hover { background: #0E4E88; border-color: #0E4E88; }
+  .btn--secondary { background: #fff; color: #2167AE; border-color: #2167AE; }
+  .btn--secondary:hover { background: #E4EDF8; }
+  .btn--tertiary { background: transparent; color: #2167AE; border-color: transparent; padding-left: 4px; padding-right: 4px; text-decoration: underline; text-underline-offset: 3px; }
+  .btn--accent { background: #005F62; color:#fff; border-color:#005F62; }
+  .btn--accent:hover { background:#1C4A54; border-color:#1C4A54; }
+  .btn--lg { padding: 14px 32px; font-size: 18px; }
+  .btn--sm { padding: 6px 16px; font-size: 14px; }
+  .btn--disabled { background:#E6E7E8; color:#8D9296; border-color:#E6E7E8; cursor: not-allowed; }
+
+  .ondark { padding: 16px; background:#003D6E; border-radius:6px; display:flex; gap: 12px; align-items:center; flex-wrap:wrap; }
+  .btn--white { background:#fff; color:#003D6E; border-color:#fff; }
+  .btn--white:hover { background:#E4EDF8; }
+  .btn--ghost { background: transparent; color:#fff; border-color:#fff; }
+  .btn--ghost:hover { background: rgba(255,255,255,0.12); }
+</style>
+</head>
+<body>
+  <p class="label">Buttons · pill, 1.5px stroke, 6px gap to icon</p>
+  <p class="lbl-sub">On light · default size</p>
+  <div class="row">
+    <button class="btn btn--primary">Get a Quote</button>
+    <button class="btn btn--secondary">Learn More</button>
+    <button class="btn btn--accent">File a Claim</button>
+    <button class="btn btn--tertiary">Manage your plan →</button>
+    <button class="btn btn--primary btn--disabled" disabled>Disabled</button>
+  </div>
+  <p class="lbl-sub">Sizes</p>
+  <div class="row">
+    <button class="btn btn--primary btn--lg">Large · 18px</button>
+    <button class="btn btn--primary">Default · 16px</button>
+    <button class="btn btn--primary btn--sm">Small · 14px</button>
+  </div>
+  <p class="lbl-sub">On dark backgrounds</p>
+  <div class="ondark">
+    <button class="btn btn--white">Get a Quote</button>
+    <button class="btn btn--ghost">Learn More</button>
+  </div>
+</body></html>

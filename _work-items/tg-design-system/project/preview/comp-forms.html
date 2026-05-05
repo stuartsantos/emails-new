@@ -1,0 +1,49 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Form Elements</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin:0; padding:24px; background:#fff; font-family: var(--font-sans); }
+  .label { font: 700 11px/1 var(--font-sans); color: var(--zurich-blue); letter-spacing: 0.1em; text-transform: uppercase; margin: 0 0 14px; }
+  .grid { display:grid; grid-template-columns: 1fr 1fr; gap: 18px 24px; }
+  .field { display:flex; flex-direction:column; gap: 6px; }
+  .flbl { font: 600 14px/1.4 var(--font-sans); color: var(--midnight); }
+  .flbl .req { color: #D92D20; }
+  .input { height: 44px; padding: 0 14px; border: 1px solid #C6C8CB; border-radius: 4px;
+           font-family: var(--font-sans); font-size: 16px; color: var(--midnight); background:#fff; }
+  .input::placeholder { color: #8D9296; }
+  .input:focus { outline: none; border-color:#2167AE; box-shadow: 0 0 0 3px #E4EDF8; }
+  .input--error { border-color: #D92D20; }
+  .helper { font: 400 12px/16px var(--font-sans); color: var(--midnight-50); }
+  .helper--error { color: #D92D20; }
+  .select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, #555B62 50%), linear-gradient(135deg, #555B62 50%, transparent 50%); background-position: calc(100% - 18px) 50%, calc(100% - 13px) 50%; background-size: 5px 5px, 5px 5px; background-repeat: no-repeat; padding-right: 36px; }
+  .check { display:flex; align-items:flex-start; gap: 10px; font: 400 14px/20px var(--font-sans); color: var(--midnight); }
+  .check input { margin-top: 2px; accent-color: #2167AE; width: 18px; height: 18px; }
+</style>
+</head>
+<body>
+  <p class="label">Form fields · 44px height · 4px radius · zurich focus ring</p>
+  <div class="grid">
+    <div class="field">
+      <label class="flbl">First Name <span class="req">*</span></label>
+      <input class="input" placeholder="e.g. Jamie" value="Jamie">
+    </div>
+    <div class="field">
+      <label class="flbl">Email Address <span class="req">*</span></label>
+      <input class="input input--error" value="not-an-email">
+      <span class="helper helper--error">Please enter a valid email.</span>
+    </div>
+    <div class="field">
+      <label class="flbl">Trip Destination</label>
+      <select class="input select">
+        <option>United Kingdom</option><option>Italy</option><option>Japan</option>
+      </select>
+    </div>
+    <div class="field">
+      <label class="flbl">Departure Date</label>
+      <input class="input" placeholder="MM / DD / YYYY">
+      <span class="helper">Plans must be purchased before departure.</span>
+    </div>
+    <label class="check"><input type="checkbox" checked> Yes, send me trip-prep emails and offers from Travel Guard.</label>
+    <label class="check"><input type="checkbox"> I have read and agree to the Plan Document and Privacy Notice.</label>
+  </div>
+</body></html>

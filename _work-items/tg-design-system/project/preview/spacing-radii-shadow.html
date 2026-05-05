@@ -1,0 +1,35 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Radii & Shadows</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin:0; padding:24px; background:#fff; font-family: var(--font-sans); }
+  .grid { display:grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .label { font: 700 11px/1 var(--font-sans); color: var(--zurich-blue); letter-spacing: 0.1em; text-transform: uppercase; margin: 0 0 14px; }
+  .group { }
+  .swatches { display:flex; gap:14px; align-items:flex-end; }
+  .box { width: 70px; height: 60px; background: #fff; border: 1px solid #E6E7E8; display:flex; align-items:center; justify-content:center; font: 600 12px/1 var(--font-sans); color: var(--midnight-50); }
+  .small { font:400 10px/1.2 var(--font-sans); color: var(--midnight-50); margin-top:8px; }
+</style>
+</head>
+<body>
+<div class="grid">
+  <div class="group">
+    <p class="label">Corner radii</p>
+    <div class="swatches">
+      <div><div class="box" style="border-radius:4px">4</div><div class="small">--r-sm · cards</div></div>
+      <div><div class="box" style="border-radius:8px">8</div><div class="small">--r-md</div></div>
+      <div><div class="box" style="border-radius:16px">16</div><div class="small">--r-lg</div></div>
+      <div><div class="box" style="border-radius:40px; padding: 0 20px; width:auto;">Pill</div><div class="small">--r-pill · buttons</div></div>
+    </div>
+  </div>
+  <div class="group">
+    <p class="label">Elevation</p>
+    <div class="swatches">
+      <div><div class="box" style="box-shadow: 0 1px 2px rgba(28,37,46,0.06), 0 1px 3px rgba(28,37,46,0.10); border:0; border-radius:4px;">sh-1</div><div class="small">cards</div></div>
+      <div><div class="box" style="box-shadow: 0 2px 4px rgba(28,37,46,0.06), 0 4px 8px rgba(28,37,46,0.08); border:0; border-radius:4px;">sh-2</div><div class="small">menus</div></div>
+      <div><div class="box" style="box-shadow: 0 4px 8px rgba(28,37,46,0.06), 0 8px 16px rgba(28,37,46,0.10); border:0; border-radius:4px;">sh-3</div><div class="small">popovers</div></div>
+      <div><div class="box" style="box-shadow: 0 12px 24px rgba(0,61,110,0.12); border:0; border-radius:4px;">hover</div><div class="small">card hover</div></div>
+    </div>
+  </div>
+</div>
+</body></html>

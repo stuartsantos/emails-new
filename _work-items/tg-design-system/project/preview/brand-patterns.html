@@ -1,0 +1,46 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Patterns</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin:0; padding:24px; background:#fff; font-family: var(--font-sans); }
+  .label { font: 700 11px/1 var(--font-sans); color: var(--zurich-blue); letter-spacing: 0.1em; text-transform: uppercase; margin: 0 0 14px; }
+  .lbl-sub { font: 600 11px/1 var(--font-sans); color: var(--midnight-50); margin: 22px 0 10px; }
+
+  .row { display:grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+  .tile { border-radius: 6px; overflow: hidden; aspect-ratio: 1 / 1; position: relative; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06); }
+
+  /* Topographic — uses pattern-topographic.svg silhouette + colored ground */
+  .topo { background-color: var(--ground); background-image: url("../brand/pattern-topographic.svg");
+          background-size: 600px 600px; background-position: center; }
+  .topo--sand   { --ground: #EDE8DE; filter: hue-rotate(0); }
+  .topo--snow   { --ground: #E4EDF8; }
+  .topo--navy   { --ground: #003D6E; }
+  .topo--navy { background-blend-mode: screen; }
+
+  /* Waves — same approach */
+  .waves { background-color: var(--ground); background-image: url("../brand/pattern-waves.svg");
+           background-size: 600px 600px; background-position: center; }
+  .waves--white { --ground: #FFFFFF; box-shadow: inset 0 0 0 1px #E6E7E8; }
+  .waves--snow  { --ground: #F1F6FB; }
+  .waves--navy  { --ground: #003D6E; background-blend-mode: screen; }
+
+  .name { margin-top: 10px; font: 700 13px/1.2 var(--font-sans); color: var(--midnight); }
+  .meta { margin-top: 2px; font: 400 11px/1.3 var(--font-sans); color: var(--midnight-50); }
+</style>
+</head>
+<body>
+  <p class="label">Brand patterns · island topographic</p>
+  <p class="lbl-sub">Organic contour blobs · Zurich Blue line on tinted ground</p>
+  <div class="row">
+    <div><div class="tile topo topo--sand"></div><div class="name">Topographic · Sand</div><div class="meta">#EDE8DE ground</div></div>
+    <div><div class="tile topo topo--snow"></div><div class="name">Topographic · Snowmelt</div><div class="meta">#E4EDF8 ground</div></div>
+    <div><div class="tile topo topo--navy"></div><div class="name">Topographic · Navy</div><div class="meta">#003D6E ground</div></div>
+  </div>
+
+  <p class="lbl-sub">Waves · uniform horizontal sine rows</p>
+  <div class="row">
+    <div><div class="tile waves waves--white"></div><div class="name">Waves · White</div><div class="meta">#FFFFFF ground</div></div>
+    <div><div class="tile waves waves--snow"></div><div class="name">Waves · Glacier</div><div class="meta">#F1F6FB ground</div></div>
+    <div><div class="tile waves waves--navy"></div><div class="name">Waves · Navy</div><div class="meta">#003D6E ground</div></div>
+  </div>
+</body></html>

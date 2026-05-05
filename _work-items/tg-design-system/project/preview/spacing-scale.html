@@ -1,0 +1,26 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Spacing</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin:0; padding:24px; background:#fff; font-family: var(--font-sans); }
+  .row { display:flex; align-items:center; gap:14px; padding: 6px 0; }
+  .name { width: 84px; flex: 0 0 84px; font: 700 12px/1 var(--font-sans); color: var(--midnight); }
+  .px { width: 56px; flex: 0 0 56px; font: 400 11px/1 var(--font-sans); color: var(--midnight-50); font-feature-settings: "tnum"; }
+  .bar { height: 12px; background: linear-gradient(90deg, #2167AE 0%, #66CBE1 100%); border-radius: 2px; }
+  .label { font: 700 11px/1 var(--font-sans); color: var(--zurich-blue); letter-spacing: 0.1em; text-transform: uppercase; margin: 0 0 14px; }
+</style>
+</head>
+<body>
+  <p class="label">Spacing scale · 4-pt base + brand 8/12/16/20/24/32 etc.</p>
+  <div class="row"><span class="name">sp-1</span><span class="px">4 px</span><div class="bar" style="width:4px"></div></div>
+  <div class="row"><span class="name">sp-2</span><span class="px">8 px</span><div class="bar" style="width:8px"></div></div>
+  <div class="row"><span class="name">sp-3</span><span class="px">12 px</span><div class="bar" style="width:12px"></div></div>
+  <div class="row"><span class="name">sp-4</span><span class="px">16 px</span><div class="bar" style="width:16px"></div></div>
+  <div class="row"><span class="name">sp-5</span><span class="px">20 px</span><div class="bar" style="width:20px"></div></div>
+  <div class="row"><span class="name">sp-6</span><span class="px">24 px</span><div class="bar" style="width:24px"></div></div>
+  <div class="row"><span class="name">sp-8</span><span class="px">32 px</span><div class="bar" style="width:32px"></div></div>
+  <div class="row"><span class="name">sp-10</span><span class="px">40 px</span><div class="bar" style="width:40px"></div></div>
+  <div class="row"><span class="name">sp-12</span><span class="px">50 px</span><div class="bar" style="width:50px"></div></div>
+  <div class="row"><span class="name">sp-15</span><span class="px">60 px</span><div class="bar" style="width:60px"></div></div>
+  <div class="row"><span class="name">sp-20</span><span class="px">80 px</span><div class="bar" style="width:80px"></div></div>
+</body></html>

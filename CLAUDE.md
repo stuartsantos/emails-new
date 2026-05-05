@@ -163,6 +163,80 @@ Used across `tg/`, `row/`, `expedia/`. Qantas has its own palette in `qantas/CLA
 | Background | `#f1f6fb` | Email body background |
 | Body text | `#1c252e` or `#343741` | Paragraph text |
 
+## Design System Reference (TG)
+
+Authoritative TG brand source (CoverMore 2025): **`_work-items/tg-design-system/`** — generated from `Travel Guard Styles 2025.fig` via Claude Design.
+
+- `_work-items/tg-design-system/README.md` — content fundamentals, voice & tone, visual foundations
+- `_work-items/tg-design-system/project/SKILL.md` — hard rules and don'ts when designing in the system
+- `_work-items/tg-design-system/project/colors_and_type.css` — canonical token file (colors, type, spacing, radii, shadows)
+- `_work-items/tg-design-system/project/preview/` — atomic specimen HTMLs (buttons, hero, plan tiles, accordion, alerts, type, color, spacing)
+
+This is a **web** design system (1280px page width, 96px section padding, hover states, full-pill buttons). Tokens, voice/tone, and the don'ts list translate directly to email work; web-only layout rules do not.
+
+### Brand asset inventory
+
+Primary brand SVGs (use these as the canonical source — convert to PNG for emails per Figma export workflow):
+
+| Asset | Path | Purpose |
+|---|---|---|
+| TG wordmark navy | `_work-items/tg-design-system/project/brand/logo-tg-navy.svg` | Primary on light bg |
+| TG wordmark white | `_work-items/tg-design-system/project/brand/logo-tg-white.svg` | Reverse on TG Navy / dark hero |
+| Map-pin navy | `_work-items/tg-design-system/project/brand/icon-mappin-navy.svg` | Brand mark; `filter: invert` for white/sand |
+| Speech-bubbles | `_work-items/tg-design-system/project/brand/icon-speech-bubbles.svg` | Help / Advisor Connect |
+| Pattern — topographic | `_work-items/tg-design-system/project/brand/pattern-topographic.svg` | Hero accent on TG Navy |
+| Pattern — waves | `_work-items/tg-design-system/project/brand/pattern-waves.svg` | Section dividers on Glacier |
+
+Secondary asset set (line icons + extra logo variants + product screenshot):
+
+| Asset | Path |
+|---|---|
+| Brand icons (headset, map, map-pin, palm, plane, shield, speech) | `_work-items/tg-design-system/project/assets/brand-icons/` |
+| Logo variants (color, black, white, wordmark, wordmark-white) | `_work-items/tg-design-system/project/assets/logo/` |
+| Patterns (topographic-island, topographic-sand) | `_work-items/tg-design-system/project/assets/patterns/` |
+| Product screenshot | `_work-items/tg-design-system/project/assets/imagery/product-screenshot.png` |
+
+Hosted CDN equivalents (already baked into emails) live in `tg/us/zurich/CLAUDE.md`.
+
+### Token → email-hex cross-reference
+
+Every key design-system CSS token mapped to the literal hex value used in email HTML. Where the design system differs from the existing email-template value, both are shown — see the migration note below.
+
+| Token | Design system | Email templates today | Notes |
+|---|---|---|---|
+| `--tg-navy` | `#003D6E` | `#003d6e` | Headers, primary bg ✓ |
+| `--zurich-blue` | **`#2167AE`** | **`#0076be`** | Heading + CTA accent — **mismatch, see below** |
+| `--zurich-blue-dark` | **`#0E4E88`** | **`#005b94`** | Hover / secondary blue — **mismatch, see below** |
+| `--snowmelt-blue` | `#9CC7E6` | `#9cc7e6` | Pale accent, focus ring ✓ |
+| `--glacier-blue` | `#E4EDF8` | `#e4edf8` | Section bg ✓ |
+| `--glacier-blue-50` | `#F1F6FB` | `#f1f6fb` | Email body bg ✓ |
+| `--night-sky` | `#302261` | `#302261` | Deep accent ✓ |
+| `--midnight` | `#1C252E` | `#1c252e` | Primary body text ✓ |
+| `--midnight-50` | `#555B62` | (not yet used) | Secondary text — bring in for future copy |
+| `--midnight-30` | `#8D9296` | (not yet used) | Placeholder / disabled |
+| `--midnight-15` | `#C6C8CB` | (not yet used) | Borders / disabled UI |
+| `--midnight-10` | `#E6E7E8` | (not yet used) | Divider |
+| `--jungle` | `#A5D069` | `#a5d069` | Travel-tips accents ✓ |
+| `--lagoon` | `#66CBE1` | `#66cbe1` | Cyan accent ✓ |
+| `--seafoam` | `#64C5B9` | `#64c5b9` | CTA / accent borders ✓ |
+| `--watermelon` | `#DB5989` | `#db5989` | Pink ✓ |
+| `--amber` | `#FFC709` | (not yet used) | Featured-plan top border (NEW) |
+| `--terra-cotta` | `#F15F40` | (not yet used) | Warm accent (NEW) |
+| `--deep-sea-green` | `#005F62` | (not yet used) | Secondary CTA — File a Claim (NEW) |
+| `--fg-link` | `#0076BE` | `#0076be` | Anchor link blue ✓ — preserved by design system |
+| `--grad-tropics` | `linear-gradient(135deg, #64C5B9 → #66CBE1)` | — | Beach / warm |
+| `--grad-golden-hour` | `linear-gradient(135deg, #FFC709 → #F15F40)` | — | Adventure / sunset |
+| `--grad-dusk` | `linear-gradient(135deg, #DB5989 → #302261)` | — | Cities / nightlife |
+| `--grad-woodland` | `linear-gradient(135deg, #A5D069 → #005F62)` | — | Outdoors / nature |
+
+✓ = design system and email-template values agree.
+
+### Color migration note
+
+The design system promotes **`#2167AE`** as the canonical Zurich Blue (headings + primary CTA accent), and reserves the old **`#0076BE`** as a separate `--fg-link` token for anchors. Existing email templates use `#0076be` for both roles in 66 HTML files, including the existing **Anchor color pinning** rule below.
+
+**Status:** awaiting decision — see `_work-items/tg-color-migration.md` for the proposed audit. Until that runs, the existing `#0076be` rule in this file remains in force for anchors and accents alike.
+
 ## Common gotchas
 
 ### Dark mode gotcha
