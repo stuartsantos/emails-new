@@ -1,40 +1,10 @@
 {
-  "hooks": {
-    "PreToolUse": [
-      {
-        "matcher": "mcp__",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/scripts/mcp-preflight.sh",
-            "timeout": 15,
-            "statusMessage": "Running MCP pre-flight check..."
-          }
-        ]
-      }
-    ],
-    "PostToolUse": [
-      {
-        "matcher": "Edit|Write",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/scripts/validate-email-html.sh",
-            "timeout": 30,
-            "statusMessage": "Validating email template..."
-          }
-        ]
-      }
-    ]
-  },
   "permissions": {
     "allow": [
       "WebFetch(domain:help.figma.com)",
       "WebFetch(domain:www.figma.com)",
       "WebSearch",
-
       "Read(//Users/stuartsantos/**)",
-
       "Bash(awk:*)",
       "Bash(brew:*)",
       "Bash(cat:*)",
@@ -70,13 +40,11 @@
       "Bash(wc:*)",
       "Bash(xargs:*)",
       "Bash(xxd:*)",
-
       "Skill(content-check)",
       "Skill(handoff)",
       "Skill(row-modernize)",
       "Skill(ship)",
       "Skill(update-config)",
-
       "mcp__chrome-devtools__*",
       "mcp__claude-in-chrome__tabs_context_mcp",
       "mcp__claude-in-chrome__read_page",
@@ -86,5 +54,36 @@
       "mcp__github__search_repositories",
       "mcp__postman__*"
     ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "mcp__",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/scripts/mcp-preflight.sh",
+            "timeout": 15,
+            "statusMessage": "Running MCP pre-flight check..."
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/scripts/validate-email-html.sh",
+            "timeout": 30,
+            "statusMessage": "Validating email template..."
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {
+    "chrome-devtools-mcp@claude-plugins-official": true
   }
 }
