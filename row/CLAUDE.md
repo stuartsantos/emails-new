@@ -15,7 +15,7 @@ row/
         └── policy-confirmation.html
 ```
 
-**Markets:** at (Austria), be (Belgium), ca (Canada), ch (Switzerland), cz (Czech Republic), de (Germany), es (Spain), fr (France), ie (Ireland), it (Italy), nl (Netherlands), nz (New Zealand), pt (Portugal), sg (Singapore), uk (United Kingdom), us (United States)
+**Markets:** at (Austria), be (Belgium), ca (Canada), ch (Switzerland), cz (Czech Republic), de (Germany), es (Spain), fr (France), gb (United Kingdom), ie (Ireland), it (Italy), nl (Netherlands), nz (New Zealand), pt (Portugal), sg (Singapore), us (United States)
 
 **Multi-language countries:** Austria (de/en), Belgium (en/fr/nl), Canada (en/fr), Switzerland (de/en/fr)
 
@@ -82,7 +82,9 @@ All ROW policy confirmation templates have been updated to the modern responsive
 | pt (Portugal) | en, pt | Fixed typo "fposso" → "posso" in pt/pt |
 | us (United States) | en | US-specific content (World Service Center, claims online link, self-service page) |
 
-**Already modern (not modified):** ca (en, fr) — note ca/en is a deliberate plain-HTML stub; ie (en), it (en, it), nz (en), sg (en), uk (en)
+**Already modern (not modified):** ca (en, fr) — note ca/en is a deliberate plain-HTML stub; it (en, it), nz (en), sg (en)
+
+**Modernized subsequently:** ie (en) — expanded CSS formatting, dark mode, full responsive layout; gb (en) — renamed from uk/ (ISO 3166-1 alpha-2)
 
 ## Content variations by language
 
