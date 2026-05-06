@@ -53,6 +53,7 @@ All HTML files reference local images using `../img/` relative paths. Production
 | holiday/national-tourism-day-2026.html | National Tourism Day (May 7) |
 | holiday/national-road-trip-day-2026.html | National Road Trip Day (May 22) |
 | holiday/cheap-flight-day-2026.html | Cheap Flight Day (Aug 23) |
+| holiday/world-tourism-day-2026.html | World Tourism Day (Sep 27) |
 | holiday/labor-day-2026.html | Labor Day |
 | holiday/thanksgiving-2026.html | Thanksgiving |
 | holiday/travel-tuesday-2026.html | Travel Tuesday (Dec 1) |
@@ -210,7 +211,7 @@ Paraphrased from `_work-items/tg-design-system/README.md` and `project/SKILL.md`
 
 - [ ] **six-month-bag.html**: request hero background image from UX
 - [ ] **save-quote-followup.html**: progress arrow (`plane-border.png`) needs refinement from UX
-- [ ] **Holiday email hero images**: all 2026 holiday emails use placeholder hero image paths — awaiting assets from design team
+- [ ] **Holiday email hero images**: all 2026 holiday emails use placeholder hero image paths — awaiting assets from design team. `World Tourism Day.jpg` now available in `docs/` — needs wiring into `holiday/world-tourism-day-2026.html`
 
 ## Campaign Tracking
 
