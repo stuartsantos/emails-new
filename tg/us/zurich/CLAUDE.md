@@ -42,6 +42,7 @@ All HTML files reference local images using `../img/` relative paths. Production
 | HTML File | Figma Design |
 |-----------|--------------|
 | seasonal-update/cruise-season-2026.html | [Seasonal Update](https://www.figma.com/design/DAZ409npFBAoynGcoJ7GpY/BAU-Emails?node-id=2002-1917&m=dev) |
+| seasonal-update/winter-season-2026.html | [BAU Emails](https://www.figma.com/design/DAZ409npFBAoynGcoJ7GpY/BAU-Emails?node-id=2001-318&m=dev) |
 
 ### Holiday Emails
 
