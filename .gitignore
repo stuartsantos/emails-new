@@ -1,4 +1,5 @@
 .DS_Store
 .fuse_hidden*
 .claude/settings.local.json
+.claude/qa-renders/
 *.stackdump
