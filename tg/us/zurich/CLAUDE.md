@@ -212,7 +212,7 @@ Paraphrased from `_work-items/tg-design-system/README.md` and `project/SKILL.md`
 
 - [ ] **six-month-bag.html**: request hero background image from UX
 - [ ] **save-quote-followup.html**: progress arrow (`plane-border.png`) needs refinement from UX
-- [ ] **Holiday email hero images**: all 2026 holiday emails use placeholder hero image paths — awaiting assets from design team. `World Tourism Day.jpg` now available in `docs/` — needs wiring into `holiday/world-tourism-day-2026.html`
+- [ ] **Holiday email hero images**: all 2026 holiday emails use placeholder hero image paths — awaiting assets from design team. `world-tourism-day.html` hero wired to CDN (`world-tourism-day.jpg`); remaining holidays TBD.
 
 ## Campaign Tracking
 
