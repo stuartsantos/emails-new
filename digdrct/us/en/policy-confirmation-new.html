@@ -8,6 +8,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="x-apple-disable-message-reformatting">
   <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
   <title>Policy Confirmation TG US</title>
 
   <!--[if mso]>
@@ -21,11 +23,14 @@
   <![endif]-->
 
   <!--[if !mso]><!-->
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
     rel="stylesheet">
   <!--<![endif]-->
 
   <style type="text/css">
+    /* Google Fonts fallback for clients that support @import */
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
     /*
 ########COLORS#######
 
@@ -82,8 +87,23 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
       height: 100% !important;
     }
 
-    /* Google Fonts fallback for clients that support @import */
-    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+    /* Dark Mode */
+    :root { color-scheme: light dark; supported-color-schemes: light dark; }
+
+    @media (prefers-color-scheme: dark) {
+      .body-bg { background-color: #1a1a1a !important; }
+      .content-bg { background-color: #2d2d2d !important; }
+      .dark-text { color: #ffffff !important; }
+      .dark-text-secondary { color: #cccccc !important; }
+      .dark-link { color: #ffffff !important; }
+    }
+
+    /* Gmail dark mode */
+    [data-ogsc] .body-bg { background-color: #1a1a1a !important; }
+    [data-ogsc] .content-bg { background-color: #2d2d2d !important; }
+    [data-ogsc] .dark-text { color: #ffffff !important; }
+    [data-ogsc] .dark-text-secondary { color: #cccccc !important; }
+    [data-ogsc] .dark-link { color: #ffffff !important; }
 
     /* Responsive */
     @media screen and (max-width: 600px) {
@@ -232,7 +252,7 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
 </head>
 
 <body
-  style="margin: 0; padding: 0; background-color: #f1f6fb; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; line-height: 1;">
+  style="margin: 0; padding: 0; background-color: #f1f6fb; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; line-height: 1;">
 
   <!-- Preheader -->
   <div style="display: none; max-height: 0; overflow: hidden; mso-hide: all;">
@@ -256,10 +276,9 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
                 style="background-color: #f1f6fb;">
                 <tr>
-                  <td style="padding: 20px 0;" align="center">
-                    <img width="600"
-                      src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/tg_logo_header.png"
-                      alt="Travel Guard" style="display: block; width: 100%; max-width: 600px; height: auto;">
+                  <td style="padding: 20px 0 36px;" align="center">
+                    <img src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/travel-guard-logo-blue.png"
+                      alt="Travel Guard" width="238" style="display: block; max-width: 238px; height: auto; margin: 0 auto;">
                   </td>
                 </tr>
               </table>
@@ -275,7 +294,7 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                   </td>
                   <td valign="middle" class="col-2" style="padding: 30px 40px;">
                     <p
-                      style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 18px; font-weight: 600; line-height: 1.4; color: #fff; text-align: left;">
+                      style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 18px; font-weight: 600; line-height: 1.4; color: #fff; text-align: left;">
                       Thank you for purchasing a Travel Guard&reg; travel insurance plan!
                     </p>
                   </td>
@@ -293,7 +312,7 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                       <tr>
                         <td style="padding-bottom: 25px;">
                           <p
-                            style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 18px; line-height: 1.4; color: #343741;">
+                            style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 18px; line-height: 1.4; color: #343741;">
                             Hello {{policyDetail-primaryInsured-firstName}}, <br>
                             <br>
                             Thank you for choosing Travel Guard for your upcoming trip! Please review your plan details
@@ -314,7 +333,7 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                             <tr>
                               <td style="padding-bottom: 16px;">
                                 <p
-                                  style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 18px; font-weight: 600; line-height: 1.2; color: #003d6e;">
+                                  style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 18px; font-weight: 600; line-height: 1.2; color: #003d6e;">
                                   Policy Details</p>
                               </td>
                             </tr>
@@ -325,42 +344,42 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                             style="border-top: 1px solid #9cc7e6; color: #343741; table-layout: fixed;">
                             <tr>
                               <td
-                                style="width: 50%; padding-top: 10px; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; font-weight: bold;">
+                                style="width: 50%; padding-top: 10px; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 1.3; font-weight: bold;">
                                 Plan:</td>
                               <td
-                                style="width: 50%; padding-top: 10px; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; text-align: right;">
+                                style="width: 50%; padding-top: 10px; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 1.3; text-align: right;">
                                 {{policyDetail-productName}}</td>
                             </tr>
                             <tr>
                               <td
-                                style="width: 50%; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; font-weight: bold;">
+                                style="width: 50%; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 1.3; font-weight: bold;">
                                 Policy Number:</td>
                               <td
-                                style="width: 50%; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; text-align: right;">
+                                style="width: 50%; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 1.3; text-align: right;">
                                 {{policyDetail-policyNumber}}</td>
                             </tr>
                             <tr>
                               <td
-                                style="width: 50%; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; font-weight: bold;">
+                                style="width: 50%; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 1.3; font-weight: bold;">
                                 Trip Departure Date:</td>
                               <td
-                                style="width: 50%; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; text-align: right;">
+                                style="width: 50%; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 1.3; text-align: right;">
                                 {{policyDetail-departure::date::MM/dd/yyyy}}</td>
                             </tr>
                             <tr>
                               <td
-                                style="width: 50%; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; font-weight: bold;">
+                                style="width: 50%; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 1.3; font-weight: bold;">
                                 Number of Travelers:</td>
                               <td
-                                style="width: 50%; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; text-align: right;">
+                                style="width: 50%; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 1.3; text-align: right;">
                                 {{traveler-count}}</td>
                             </tr>
                             <tr>
                               <td
-                                style="width: 50%; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; font-weight: bold;">
+                                style="width: 50%; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 1.3; font-weight: bold;">
                                 Destination:</td>
                               <td
-                                style="width: 50%; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; text-align: right;">
+                                style="width: 50%; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 1.3; text-align: right;">
                                 {{destinations-csv}}</td>
                             </tr>
                           </table>
@@ -370,7 +389,7 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                             <tr>
                               <td style="padding-top: 30px; padding-bottom: 16px;">
                                 <p
-                                  style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 18px; font-weight: 600; line-height: 1.2; color: #003d6e;">
+                                  style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 18px; font-weight: 600; line-height: 1.2; color: #003d6e;">
                                   Payment Details</p>
                               </td>
                             </tr>
@@ -382,27 +401,27 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                             {{is-missouri-state-of-residence::visible::start}}
                             <tr>
                               <td
-                                style="width: 50%; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; font-weight: bold;">
+                                style="width: 50%; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 1.3; font-weight: bold;">
                                 Base Premium:</td>
                               <td
-                                style="width: 50%; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; text-align: right;">
+                                style="width: 50%; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 1.3; text-align: right;">
                                 {{productDetail-amounts-BasePremium::currency}}</td>
                             </tr>
                             <tr>
                               <td
-                                style="width: 50%; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; font-weight: bold;">
+                                style="width: 50%; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 1.3; font-weight: bold;">
                                 Assistance Fee:</td>
                               <td
-                                style="width: 50%; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; text-align: right;">
+                                style="width: 50%; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 1.3; text-align: right;">
                                 {{productDetail-amounts-PremiumFees::currency}}</td>
                             </tr>
                             {{is-missouri-state-of-residence::visible::end}}
                             <tr>
                               <td
-                                style="width: 50%; padding-top: 10px; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; font-weight: bold;">
+                                style="width: 50%; padding-top: 10px; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 1.3; font-weight: bold;">
                                 TOTAL:</td>
                               <td
-                                style="width: 50%; padding-top: 10px; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; text-align: right; font-weight: bold;">
+                                style="width: 50%; padding-top: 10px; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 1.3; text-align: right; font-weight: bold;">
                                 {{productDetail-amounts-TotalPremium::currency}}</td>
                             </tr>
                           </table>
@@ -416,7 +435,7 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                       <tr>
                         <td style="padding-bottom: 5px;">
                           <p
-                            style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 18px; font-weight: 600; line-height: 1.2; color: #003d6e;">
+                            style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 18px; font-weight: 600; line-height: 1.2; color: #003d6e;">
                             Access Your Full Policy Online</p>
                         </td>
                       </tr>
@@ -426,11 +445,11 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                       <tr>
                         <td style="padding-bottom: 25px; border-top: 1px solid #9cc7e6; padding-top: 20px;">
                           <p
-                            style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.5; color: #343741;">
+                            style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 1.5; color: #343741;">
                             Access your full policy online to see plan details, including:
                           </p>
                           <ul
-                            style="margin: 0; padding-left: 20px; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.5; color: #343741;">
+                            style="margin: 0; padding-left: 20px; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 1.5; color: #343741;">
                             <li>Detailed policy and assistance services information</li>
                             <li>Policy ID cards</li>
                             <li>Covered reasons</li>
@@ -438,7 +457,7 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                             <li>...and more</li>
                           </ul>
                           <p
-                            style="margin: 10px 0 0 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.5; color: #343741;">
+                            style="margin: 10px 0 0 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 1.5; color: #343741;">
                             You will need to enter the policy holder's last name and policy number to access your travel
                             insurance plan online.
                           </p>
@@ -451,7 +470,7 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                       <tr>
                         <td style="padding-bottom: 5px;">
                           <p
-                            style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 18px; font-weight: 600; line-height: 1.2; color: #003d6e;">
+                            style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 18px; font-weight: 600; line-height: 1.2; color: #003d6e;">
                             Added to your travel plans?</p>
                         </td>
                       </tr>
@@ -461,7 +480,7 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                       <tr>
                         <td style="padding-bottom: 25px; border-top: 1px solid #9cc7e6; padding-top: 20px;">
                           <p
-                            style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.5; color: #343741;">
+                            style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 1.5; color: #343741;">
                             If you've added any additional costs to your travels (flights, rental cars, excursions,
                             etc.), be sure they're covered by your Travel Guard travel insurance plan. <a
                               style="color: #005b94;"
@@ -483,7 +502,7 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                             <tr>
                               <td style="padding-bottom: 25px; text-align: center;">
                                 <p
-                                  style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 24px; font-weight: 600; line-height: 1.2; color: #003d6e;">
+                                  style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 24px; font-weight: 600; line-height: 1.2; color: #003d6e;">
                                   Need assistance while traveling?</p>
                               </td>
                             </tr>
@@ -493,7 +512,7 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                             <tr>
                               <td style="padding-bottom: 25px; text-align: center;">
                                 <p
-                                  style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.5; color: #343741;">
+                                  style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 1.5; color: #343741;">
                                   Use our toll-free or collect numbers below to contact our World Service Center if you
                                   need travel assistance or have a travel emergency.
                                 </p>
@@ -509,9 +528,9 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                                   <tr>
                                     <td style="text-align: center; padding: 16px;">
                                       <p
-                                        style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; font-weight: 600; line-height: 1.5; color: #343741;">
+                                        style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 14px; font-weight: 600; line-height: 1.5; color: #343741;">
                                         U.S. toll-free: <br>
-                                        <a style="font-size: 18px; color: #005b94; text-decoration: underline;"
+                                        <a style="font-size: 16px; color: #005b94; text-decoration: underline;"
                                           href="tel:18008261300">1-800-826-1300</a>
                                       </p>
                                     </td>
@@ -523,9 +542,9 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                                   <tr>
                                     <td style="text-align: center; padding: 16px;">
                                       <p
-                                        style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; font-weight: 600; line-height: 1.5; color: #343741;">
+                                        style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 14px; font-weight: 600; line-height: 1.5; color: #343741;">
                                         U.S. &amp; International collect:<br>
-                                        <a style="font-size: 18px; color: #005b94; text-decoration: underline;"
+                                        <a style="font-size: 16px; color: #005b94; text-decoration: underline;"
                                           href="tel:17153450505">1-715-345-0505</a>
                                       </p>
                                     </td>
@@ -551,13 +570,13 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                                   <tr>
                                     <td style="padding: 10px 0;" class="m-ta-c">
                                       <p
-                                        style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 18px; font-weight: 600; line-height: 1.2; color: #003d6e;">
+                                        style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 18px; font-weight: 600; line-height: 1.2; color: #003d6e;">
                                         Visit Our Help Center</p>
                                     </td>
                                   </tr>
                                 </table>
                                 <p class="m-ta-c"
-                                  style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.5; color: #343741; border-top: 1px solid #9cc7e6; padding-top: 20px;">
+                                  style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 1.5; color: #343741; border-top: 1px solid #9cc7e6; padding-top: 20px;">
                                   <a style="color: #005b94;"
                                     href="https://www.travelguard.com/o/coronavirus-resource-center/voucher-and-refund-form?cmpid=emc-tgdirect-us-en-fulfillment-policyconfirmation">Request
                                     Refund or Voucher</a> <br>
@@ -581,13 +600,13 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                                   <tr>
                                     <td style="padding: 10px 0;" class="m-ta-c">
                                       <p
-                                        style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 18px; font-weight: 600; line-height: 1.2; color: #003d6e;">
+                                        style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 18px; font-weight: 600; line-height: 1.2; color: #003d6e;">
                                         Claims</p>
                                     </td>
                                   </tr>
                                 </table>
                                 <p class="m-ta-c"
-                                  style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.5; color: #343741; border-top: 1px solid #9cc7e6; padding-top: 20px;">
+                                  style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 1.5; color: #343741; border-top: 1px solid #9cc7e6; padding-top: 20px;">
                                   <a style="color: #005b94;"
                                     href="https://claims.travelguard.com/claims?cmpid=emc-tgdirect-us-en-fulfillment-policyconfirmation">File
                                     a claim online</a> <br>
@@ -605,9 +624,9 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                     <!-- Contact Info -->
                     <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                       <tr>
-                        <td style="padding: 16px 0; text-align: center;">
+                        <td style="padding: 8px 0; text-align: center;">
                           <p
-                            style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; font-weight: 600; line-height: 1.5; color: #003d6e;">
+                            style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 18px; font-weight: 600; line-height: 1.5; color: #003d6e;">
                             If you have any questions, please contact our World Service Center at:
                           </p>
                         </td>
@@ -616,9 +635,9 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
 
                     <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
                       <tr>
-                        <td style="padding: 16px 0; text-align: center;">
+                        <td style="padding: 8px 0 32px; text-align: center;">
                           <p
-                            style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 21px; font-weight: 600; line-height: 1.5; color: #005b94;">
+                            style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 21px; font-weight: 600; line-height: 1.5; color: #005b94;">
                             <img style="width: 21px; height: 22px; padding-right: 5px; vertical-align: middle;"
                               src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/Phone@2x.png"
                               alt="phone icon"><a href="tel:18008261300"
@@ -643,7 +662,7 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                               </td>
                               <td valign="middle" class="text mobile-prl-none" style="padding: 15px;">
                                 <p
-                                  style="margin: 0 0 16px 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; color: #343741;">
+                                  style="margin: 0 0 16px 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 1.3; color: #343741;">
                                   <a href="https://www.travelguard.com/info?cmpid=emc-tgdirect-us-en-fulfillment-policyconfirmation"
                                     style="color: #005b94; text-decoration: underline;">Education Center</a> <br>
                                   <span style="color: #003d6e; font-size: 24px; font-weight: 600;">Assistance
@@ -656,7 +675,7 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                                   <tr>
                                     <td align="center" style="background-color: #003d6e; border-radius: 40px;">
                                       <a href="https://www.travelguard.com/info/assistance-services?cmpid=emc-tgdirect-us-en-fulfillment-policyconfirmation"
-                                        style="display: inline-block; padding: 10px 20px; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; font-weight: 600; color: #fff; text-decoration: none;">Read
+                                        style="display: inline-block; padding: 10px 20px; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; font-weight: 600; color: #fff; text-decoration: none;">Read
                                         Full Article</a>
                                     </td>
                                   </tr>
@@ -683,7 +702,7 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                               </td>
                               <td valign="middle" class="text mobile-prl-none" style="padding: 15px;">
                                 <p
-                                  style="margin: 0 0 16px 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; line-height: 1.3; color: #343741;">
+                                  style="margin: 0 0 16px 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; line-height: 1.3; color: #343741;">
                                   <a href="https://www.travelguard.com/travel-resources/travel-tips?cmpid=emc-tgdirect-us-en-fulfillment-policyconfirmation"
                                     style="color: #005b94; text-decoration: underline;">Travel Tips</a> <br>
                                   <span style="color: #003d6e; font-size: 24px; font-weight: 600;">Packing
@@ -696,7 +715,7 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                                   <tr>
                                     <td align="center" style="background-color: #003d6e; border-radius: 40px;">
                                       <a href="https://www.travelguard.com/travel-resources/travel-tips/tips-for-packing?cmpid=emc-tgdirect-us-en-fulfillment-policyconfirmation"
-                                        style="display: inline-block; padding: 10px 20px; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 16px; font-weight: 600; color: #fff; text-decoration: none;">Read
+                                        style="display: inline-block; padding: 10px 20px; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 16px; font-weight: 600; color: #fff; text-decoration: none;">Read
                                         Full Article</a>
                                     </td>
                                   </tr>
@@ -727,7 +746,7 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                       <tr>
                         <td style="padding: 20px; text-align: center;">
                           <p
-                            style="margin: 0 0 10px 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 18px; font-weight: 600; line-height: 1.3; color: #fff; text-align: center;">
+                            style="margin: 0 0 10px 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 18px; font-weight: 600; line-height: 1.3; color: #fff; text-align: center;">
                             Follow us!
                           </p>
                           <p style="margin: 0; text-align: center;">
@@ -757,7 +776,7 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
                 <!-- Review CTA -->
                 <tr>
                   <td style="background-color: #003d6e; padding: 10px 20px;" align="center">
-                    <p style="margin: 0; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 12px; line-height: 1.5; color: #fff; text-align: center;"
+                    <p style="margin: 0; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 12px; line-height: 1.5; color: #fff; text-align: center;"
                       class="m-ta-c">
                       <img width="19"
                         src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/Outlined-03-Communication-Chat@2x.png"
@@ -780,7 +799,7 @@ dark-steel: #5D738D;        medium-red: #F68CA2;      medium-warm-gray: #C8C2BC;
           style="width: 100%; max-width: 600px;">
           <tr>
             <td
-              style="padding: 16px; font-family: 'Source Sans Pro', 'Avenir Next', 'Calibri', sans-serif; font-size: 8px; line-height: 1.5; color: #343741; text-align: center;">
+              style="padding: 16px; font-family: 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; font-size: 8px; line-height: 1.5; color: #343741; text-align: center;">
               <p style="margin: 0;">Coverage is offered by Travel Guard Group, Inc. (Travel Guard). California lic.
                 No.0B93606. The Policy will contain reductions, limitations, exclusions and termination provisions.
                 Insurance may be underwritten by American Zurich Insurance Company, a New York company (NAIC No. 40142),

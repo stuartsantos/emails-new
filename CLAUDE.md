@@ -242,6 +242,9 @@ The design system promotes **`#2167AE`** as the canonical Zurich Blue (headings 
 ### Dark mode gotcha
 Only use `.body-bg` on the outer email container. Do **NOT** apply `.content-bg` or `.dark-text` to white content areas — this turns them dark gray (#2d2d2d) and makes text invisible. These classes are only for elements in the outer body area (preheader row, body background).
 
+### Dark mode contrast ratio gotcha
+When any element switches to a dark background (e.g., `.body-bg` → `#1a1a1a`), check the contrast ratio of all text within that area. Text colors that work fine on the light `#f1f6fb` body background — such as `#343741` (body text gray) — can fail WCAG AA (4.5:1 minimum) on dark backgrounds. Example: `#343741` on `#1a1a1a` is ~2.9:1, which is unreadable. Audit any element you apply `.body-bg` to and either add `.dark-text` / `.dark-text-secondary` to its text children, or reconsider whether the dark background is appropriate at all (e.g., keeping the outer wrapper at `#f1f6fb` rather than `#1a1a1a` avoids the problem entirely when a blue logo or light-colored footer text sits in that area).
+
 ### Mobile responsive gotcha
 When converting `<td>` to `display: block; width: 100%` on mobile, always add `box-sizing: border-box !important` — otherwise padding causes horizontal overflow.
 
