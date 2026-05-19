@@ -1,0 +1,110 @@
+{
+  "@context": "https://schema.org",
+  "@type": "InsuranceAgency",
+  "@id": "https://www.travelguard.com/#organization",
+  "name": "Travel Guard",
+  "legalName": "Travel Guard Group, Inc.",
+  "alternateName": ["Travel Guard Insurance", "AIG Travel Guard"],
+  "url": "https://www.travelguard.com/",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.travelguard.com/content/dam/common-logos/travelguard/TravelGuard_RGB.svg",
+    "width": 600,
+    "height": 60
+  },
+  "image": "https://www.travelguard.com/content/dam/common-logos/travelguard/TravelGuard_RGB.svg",
+  "description": "Travel Guard provides travel insurance plans that may cover trip cancellation, emergency medical expenses, baggage loss, and 24/7 emergency travel assistance for U.S. travelers.",
+  "foundingDate": "1982",
+  "telephone": "+1-800-826-5248",
+  "email": "customerservice@travelguard.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "3300 Business Park Drive",
+    "addressLocality": "Stevens Point",
+    "addressRegion": "WI",
+    "postalCode": "54482",
+    "addressCountry": "US"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "United States"
+  },
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "Zurich Insurance Group",
+    "url": "https://www.zurich.com/"
+  },
+  "knowsAbout": [
+    "Travel Insurance",
+    "Trip Cancellation Insurance",
+    "Trip Interruption Insurance",
+    "Emergency Medical Coverage",
+    "Medical Evacuation",
+    "Baggage Insurance",
+    "Cruise Insurance",
+    "International Travel Insurance",
+    "Rental Vehicle Damage Coverage",
+    "Annual Travel Insurance"
+  ],
+  "slogan": "Travel insurance for life's adventures.",
+  "sameAs": [
+    "https://www.facebook.com/travelguard",
+    "https://www.linkedin.com/company/travel-guard",
+    "https://www.youtube.com/travelguard",
+    "https://www.instagram.com/travelguard/",
+    "https://twitter.com/TravelGuard",
+    "https://www.trustpilot.com/review/travelguard.com",
+    "https://en.wikipedia.org/wiki/Travel_Guard"
+  ],
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+1-800-826-5248",
+      "contactType": "customer service",
+      "areaServed": "US",
+      "availableLanguage": ["English", "Spanish"],
+      "hoursAvailable": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "00:00",
+        "closes": "23:59",
+        "description": "24/7 Emergency Travel Assistance"
+      }
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+1-866-375-2546",
+      "contactType": "sanctioned countries hotline",
+      "areaServed": "US",
+      "availableLanguage": "English"
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+1-866-729-5215",
+      "contactType": "technical support",
+      "areaServed": "US",
+      "availableLanguage": "English"
+    }
+  ],
+  "memberOf": [
+    {
+      "@type": "Organization",
+      "name": "US Travel Insurance Association (UStiA)",
+      "url": "https://www.ustia.org/"
+    },
+    {
+      "@type": "Organization",
+      "name": "International LGBTQ+ Travel Association (IGLTA)",
+      "url": "https://www.iglta.org/"
+    }
+  ],
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "credentialCategory": "Better Business Bureau Accreditation",
+    "recognizedBy": {
+      "@type": "Organization",
+      "name": "Better Business Bureau",
+      "url": "http://www.bbb.org/"
+    }
+  }
+}

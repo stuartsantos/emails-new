@@ -1,0 +1,33 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://www.travelguard.com/travel-resources/travel-tips/how-to-beat-jet-lag-fast#article",
+  "headline": "Jet Lag: Symptoms, Remedies and How Best to Avoid",
+  "alternativeHeadline": "How to beat jet lag fast",
+  "description": "Learn the symptoms of jet lag, proven remedies, and how to minimize its impact on your travel.",
+  "url": "https://www.travelguard.com/travel-resources/travel-tips/how-to-beat-jet-lag-fast",
+  "image": "https://www.travelguard.com/home/_jcr_content/root/container/container_copy/container_304146364/image.coreimg.jpeg/1750400977258/jet-lag-tips-hero.jpeg",
+  "author": {
+    "@type": "Organization",
+    "name": "Travel Guard Editorial Team",
+    "@id": "https://www.travelguard.com/#organization"
+  },
+  "publisher": { "@id": "https://www.travelguard.com/#organization" },
+  "datePublished": "2024-01-15",
+  "dateModified": "2025-08-12",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.travelguard.com/travel-resources/travel-tips/how-to-beat-jet-lag-fast"
+  },
+  "articleSection": "Travel Tips",
+  "inLanguage": "en-US",
+  "about": [
+    { "@type": "Thing", "name": "Jet Lag" },
+    { "@type": "Thing", "name": "Travel Health" },
+    { "@type": "Thing", "name": "International Travel" }
+  ],
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": ["h1", "h2", ".article-summary"]
+  }
+}

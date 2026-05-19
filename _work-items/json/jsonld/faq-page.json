@@ -1,0 +1,77 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.travelguard.com/help-center/faqs#faqpage",
+  "url": "https://www.travelguard.com/help-center/faqs",
+  "name": "Travel Insurance Plan Questions | Help Center | Travel Guard",
+  "description": "Answers to frequently asked questions about Travel Guard travel insurance plans, coverage, purchasing, and claims.",
+  "isPartOf": { "@id": "https://www.travelguard.com/#website" },
+  "publisher": { "@id": "https://www.travelguard.com/#organization" },
+  "inLanguage": "en-US",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is travel insurance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Travel insurance is a type of insurance that protects you against financial loss before and during your trip. Plans may cover trip cancellation, trip interruption, emergency medical expenses, medical evacuation, baggage loss and delay, and 24/7 travel assistance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does travel insurance work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "After purchasing a plan, you receive a policy document detailing your coverages. If a covered event occurs, you file a claim with documentation and Travel Guard reimburses eligible expenses up to your benefit limits. Many plans also include 24/7 emergency assistance services during your trip."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a travel insurance plan cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The cost of travel insurance is based, in most cases, on the value of the trip and the age of the traveler. Typically, the cost is five to seven percent of the trip cost. Get a free quote at travelguard.com or call 800-826-5248."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When is it too late to buy travel insurance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Travel insurance can be purchased up to 24 hours prior to your trip departure date. However, purchasing within 15 days of your initial trip deposit may qualify you for early purchase benefits such as the pre-existing medical conditions exclusion waiver."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Travel Guard cover pre-existing medical conditions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Travel Guard offers a Pre-Existing Medical Conditions Exclusion Waiver as an early purchase benefit on certain plans. To qualify, you typically need to purchase the plan within 15 days of your initial trip deposit and meet other plan requirements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I file a travel insurance claim with Travel Guard?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can file a claim online at claims.travelguard.com or call 800-826-5248. You will need your policy number, documentation of the covered event (receipts, medical reports, etc.), and proof of any expenses you are seeking reimbursement for."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I cancel my travel insurance policy for a refund?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Travel Guard offers a 15-day look period. You can cancel your policy within 15 days of the effective date and receive a refund, provided you have not started your trip or filed a claim."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Travel Guard's 24/7 emergency travel assistance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Travel Guard's 24/7 emergency travel assistance provides round-the-clock help while you travel — coordinating medical care, arranging emergency evacuations, re-booking flights and hotels, and providing other travel support services."
+      }
+    }
+  ]
+}

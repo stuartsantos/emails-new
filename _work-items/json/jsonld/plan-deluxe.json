@@ -1,0 +1,72 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "@id": "https://www.travelguard.com/travel-insurance/plans/deluxe#product",
+      "name": "Travel Guard Deluxe Travel Insurance Plan",
+      "alternateName": "Deluxe Plan",
+      "description": "Travel Guard's top-of-the-line, comprehensive travel insurance plan with the highest benefit limits across most coverage categories. Includes robust emergency medical coverage, trip cancellation for covered reasons, missed connection and baggage delay protections, security evacuation, Flight Guard, and 24/7 emergency travel assistance with Concierge Services.",
+      "url": "https://www.travelguard.com/travel-insurance/plans/deluxe",
+      "image": "https://www.travelguard.com/content/dam/tg-direct/travelguard/us/images/hero/without-form-2000-736/travel-insurance/deluxe-plan.jpg",
+      "brand": { "@id": "https://www.travelguard.com/#organization" },
+      "category": "Comprehensive Travel Insurance",
+      "audience": {
+        "@type": "PeopleAudience",
+        "suggestedMinAge": 18,
+        "audienceType": "International travelers, senior travelers, high-end vacationers"
+      },
+      "isRelatedTo": [
+        {
+          "@type": "Product",
+          "name": "Preferred Plan",
+          "url": "https://www.travelguard.com/travel-insurance/plans/preferred"
+        },
+        {
+          "@type": "Product",
+          "name": "Essential Plan",
+          "url": "https://www.travelguard.com/travel-insurance/plans/essential"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.travelguard.com/purchase/start-your-quote",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "description": "Cost is typically 5-7% of the total trip cost and varies by trip value, traveler age, and state of residence. Get a free personalized quote."
+        },
+        "availability": "https://schema.org/InStock",
+        "areaServed": {
+          "@type": "Country",
+          "name": "United States"
+        },
+        "seller": { "@id": "https://www.travelguard.com/#organization" }
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Deluxe Plan Coverage Benefits",
+        "itemListElement": [
+          { "@type": "Offer", "name": "Trip Cancellation Coverage" },
+          { "@type": "Offer", "name": "Trip Interruption Coverage" },
+          { "@type": "Offer", "name": "Emergency Medical Expense Coverage" },
+          { "@type": "Offer", "name": "Emergency Medical Evacuation" },
+          { "@type": "Offer", "name": "Security Evacuation" },
+          { "@type": "Offer", "name": "Baggage Loss & Delay" },
+          { "@type": "Offer", "name": "Missed Connection Coverage" },
+          { "@type": "Offer", "name": "Flight Guard" },
+          { "@type": "Offer", "name": "24/7 Emergency Travel Assistance" },
+          { "@type": "Offer", "name": "Concierge Services" }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.4",
+        "reviewCount": "12500",
+        "bestRating": "5",
+        "worstRating": "1",
+        "description": "Aggregate rating sourced from Trustpilot reviews of Travel Guard. Replace with actual current values from your Trustpilot widget at publish time."
+      }
+    }
+  ]
+}

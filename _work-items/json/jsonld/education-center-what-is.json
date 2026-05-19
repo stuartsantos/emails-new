@@ -1,0 +1,38 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://www.travelguard.com/info/what-is-travel-insurance#article",
+      "headline": "What is Travel Insurance?",
+      "description": "A plain-language guide to what travel insurance covers, when you need it, and how it works.",
+      "url": "https://www.travelguard.com/info/what-is-travel-insurance",
+      "author": { "@id": "https://www.travelguard.com/#organization" },
+      "publisher": { "@id": "https://www.travelguard.com/#organization" },
+      "datePublished": "2023-06-01",
+      "dateModified": "2025-09-10",
+      "mainEntityOfPage": "https://www.travelguard.com/info/what-is-travel-insurance",
+      "inLanguage": "en-US",
+      "articleSection": "Education Center",
+      "about": [
+        { "@type": "Thing", "name": "Travel Insurance" },
+        { "@type": "Thing", "name": "Trip Protection" }
+      ],
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", "h2", ".article-body"]
+      }
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://www.travelguard.com/info/what-is-travel-insurance#term-travel-insurance",
+      "name": "Travel Insurance",
+      "description": "A type of insurance that protects travelers against financial losses before and during a trip. Common coverages include trip cancellation, trip interruption, emergency medical expenses, medical evacuation, baggage loss, and 24/7 travel assistance.",
+      "inDefinedTermSet": {
+        "@type": "DefinedTermSet",
+        "name": "Travel Guard Glossary",
+        "url": "https://www.travelguard.com/info"
+      }
+    }
+  ]
+}

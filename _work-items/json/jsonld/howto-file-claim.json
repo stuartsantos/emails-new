@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "@id": "https://www.travelguard.com/help-center/claims#howto",
+  "name": "How to File a Travel Insurance Claim with Travel Guard",
+  "description": "Step-by-step instructions to file a claim under your Travel Guard travel insurance policy.",
+  "url": "https://www.travelguard.com/help-center/claims",
+  "image": "https://www.travelguard.com/content/dam/travelguard/us/images/claims/file-claim.jpg",
+  "totalTime": "PT15M",
+  "estimatedCost": {
+    "@type": "MonetaryAmount",
+    "currency": "USD",
+    "value": "0"
+  },
+  "tool": [
+    { "@type": "HowToTool", "name": "Your Travel Guard policy number" },
+    { "@type": "HowToTool", "name": "Receipts and proof of expenses" },
+    { "@type": "HowToTool", "name": "Documentation of the covered event (medical reports, cancellation notice, etc.)" }
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Gather documentation",
+      "text": "Collect all receipts, medical records, cancellation notices, and other proof related to your covered event.",
+      "url": "https://www.travelguard.com/help-center/claims#step1"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Start your claim online",
+      "text": "Visit claims.travelguard.com to begin a new claim. Have your policy number ready.",
+      "url": "https://claims.travelguard.com/claims"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Upload your documentation",
+      "text": "Upload all required supporting documents through the claims portal.",
+      "url": "https://www.travelguard.com/help-center/claims#step3"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Track your claim status",
+      "text": "Use claims.travelguard.com/status to check the status of your claim at any time.",
+      "url": "https://claims.travelguard.com/status"
+    }
+  ],
+  "publisher": { "@id": "https://www.travelguard.com/#organization" },
+  "inLanguage": "en-US"
+}
