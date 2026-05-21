@@ -13,7 +13,8 @@
         "@type": "SpeakableSpecification",
         "cssSelector": ["h1", ".trip-summary", ".faq-section"]
       },
-      "mainEntity": { "@id": "https://www.travelguard.com/travel-insurance/trip-types/cruise-insurance#service" }
+      "mainEntity": { "@id": "https://www.travelguard.com/travel-insurance/trip-types/cruise-insurance#service" },
+      "breadcrumb": { "@id": "https://www.travelguard.com/travel-insurance/trip-types/cruise-insurance#breadcrumb" }
     },
     {
       "@type": "Service",
@@ -43,6 +44,30 @@
           }
         ]
       }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/travel-insurance/trip-types/cruise-insurance#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Trip Types",
+          "item": "https://www.travelguard.com/travel-insurance/trip-types"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Cruise Insurance",
+          "item": "https://www.travelguard.com/travel-insurance/trip-types/cruise-insurance"
+        }
+      ]
     }
   ]
 }

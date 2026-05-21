@@ -33,6 +33,30 @@
         "name": "Travel Guard Glossary",
         "url": "https://www.travelguard.com/info"
       }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/info/what-is-travel-insurance#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Education Center",
+          "item": "https://www.travelguard.com/info"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "What is Travel Insurance?",
+          "item": "https://www.travelguard.com/info/what-is-travel-insurance"
+        }
+      ]
     }
   ]
 }

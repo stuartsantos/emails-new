@@ -1,64 +1,86 @@
 {
   "@context": "https://schema.org",
-  "@type": "ItemList",
-  "@id": "https://www.travelguard.com/travel-insurance/plans#itemlist",
-  "url": "https://www.travelguard.com/travel-insurance/plans",
-  "name": "Travel Guard Travel Insurance Plans",
-  "description": "Compare Travel Guard's travel insurance plans: Deluxe, Preferred, Essential, and Rental Vehicle Damage Coverage.",
-  "numberOfItems": 4,
-  "itemListOrder": "https://schema.org/ItemListOrderAscending",
-  "itemListElement": [
+  "@graph": [
     {
-      "@type": "ListItem",
-      "position": 1,
-      "url": "https://www.travelguard.com/travel-insurance/plans/deluxe",
-      "name": "Deluxe Plan",
-      "item": {
-        "@type": "Product",
-        "name": "Deluxe Travel Insurance Plan",
-        "description": "Top-of-the-line, comprehensive travel insurance with the highest benefit limits.",
-        "url": "https://www.travelguard.com/travel-insurance/plans/deluxe",
-        "brand": { "@id": "https://www.travelguard.com/#organization" }
-      }
+      "@type": "ItemList",
+      "@id": "https://www.travelguard.com/travel-insurance/plans#itemlist",
+      "url": "https://www.travelguard.com/travel-insurance/plans",
+      "name": "Travel Guard Travel Insurance Plans",
+      "description": "Compare Travel Guard's travel insurance plans: Deluxe, Preferred, Essential, and Rental Vehicle Damage Coverage.",
+      "numberOfItems": 4,
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://www.travelguard.com/travel-insurance/plans/deluxe",
+          "name": "Deluxe Plan",
+          "item": {
+            "@type": "Product",
+            "name": "Deluxe Travel Insurance Plan",
+            "description": "Top-of-the-line, comprehensive travel insurance with the highest benefit limits.",
+            "url": "https://www.travelguard.com/travel-insurance/plans/deluxe",
+            "brand": { "@id": "https://www.travelguard.com/#organization" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "url": "https://www.travelguard.com/travel-insurance/plans/preferred",
+          "name": "Preferred Plan",
+          "item": {
+            "@type": "Product",
+            "name": "Preferred Travel Insurance Plan",
+            "description": "Comprehensive plan with superb coverage for most vacations, cruising, and family travel.",
+            "url": "https://www.travelguard.com/travel-insurance/plans/preferred",
+            "brand": { "@id": "https://www.travelguard.com/#organization" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "url": "https://www.travelguard.com/travel-insurance/plans/essential",
+          "name": "Essential Plan",
+          "item": {
+            "@type": "Product",
+            "name": "Essential Travel Insurance Plan",
+            "description": "Savvy coverage for the budget-minded traveler.",
+            "url": "https://www.travelguard.com/travel-insurance/plans/essential",
+            "brand": { "@id": "https://www.travelguard.com/#organization" }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "url": "https://www.travelguard.com/travel-insurance/plans/rental-vehicle-damage-plan",
+          "name": "Rental Vehicle Damage Coverage",
+          "item": {
+            "@type": "Product",
+            "name": "Rental Vehicle Damage Coverage",
+            "description": "An alternative to the insurance offered by rental car companies.",
+            "url": "https://www.travelguard.com/travel-insurance/plans/rental-vehicle-damage-plan",
+            "brand": { "@id": "https://www.travelguard.com/#organization" }
+          }
+        }
+      ]
     },
     {
-      "@type": "ListItem",
-      "position": 2,
-      "url": "https://www.travelguard.com/travel-insurance/plans/preferred",
-      "name": "Preferred Plan",
-      "item": {
-        "@type": "Product",
-        "name": "Preferred Travel Insurance Plan",
-        "description": "Comprehensive plan with superb coverage for most vacations, cruising, and family travel.",
-        "url": "https://www.travelguard.com/travel-insurance/plans/preferred",
-        "brand": { "@id": "https://www.travelguard.com/#organization" }
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "url": "https://www.travelguard.com/travel-insurance/plans/essential",
-      "name": "Essential Plan",
-      "item": {
-        "@type": "Product",
-        "name": "Essential Travel Insurance Plan",
-        "description": "Savvy coverage for the budget-minded traveler.",
-        "url": "https://www.travelguard.com/travel-insurance/plans/essential",
-        "brand": { "@id": "https://www.travelguard.com/#organization" }
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "url": "https://www.travelguard.com/travel-insurance/plans/rental-vehicle-damage-plan",
-      "name": "Rental Vehicle Damage Coverage",
-      "item": {
-        "@type": "Product",
-        "name": "Rental Vehicle Damage Coverage",
-        "description": "An alternative to the insurance offered by rental car companies.",
-        "url": "https://www.travelguard.com/travel-insurance/plans/rental-vehicle-damage-plan",
-        "brand": { "@id": "https://www.travelguard.com/#organization" }
-      }
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/travel-insurance/plans#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Travel Insurance Plans",
+          "item": "https://www.travelguard.com/travel-insurance/plans"
+        }
+      ]
     }
   ]
 }

@@ -67,6 +67,30 @@
         "worstRating": "1",
         "description": "Aggregate rating sourced from Trustpilot reviews of Travel Guard. Replace with actual current values from your Trustpilot widget at publish time."
       }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/travel-insurance/plans/deluxe#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Travel Insurance Plans",
+          "item": "https://www.travelguard.com/travel-insurance/plans"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Deluxe Plan",
+          "item": "https://www.travelguard.com/travel-insurance/plans/deluxe"
+        }
+      ]
     }
   ]
 }

@@ -47,19 +47,19 @@ The Organization entity is the spine that every other schema on the site should 
 - `hasCredential`: BBB accreditation.
 - `knowsAbout`: list of insurance topics — explicit topical authority signal.
 
-→ See `jsonld/sitewide-organization.json` for the full payload.
+→ See `jsonld/sitewide.json` (the `@graph` bundle) for the full payload.
 
 ### 3.2 WebSite
 
 Adds a sitelinks search box eligibility and explicitly ties pages back to the org. Include a `potentialAction` of type `SearchAction` if you have a `/search?q=` endpoint (or update the URL template to match).
 
-→ See `jsonld/sitewide-website.json`.
+→ See `jsonld/sitewide.json` (bundled with the Organization node in one `@graph`).
 
 ### 3.3 BreadcrumbList
 
 Every non-home page should carry a per-page `BreadcrumbList`. This is one of the schemas LLMs actually use to understand a page's place in the site hierarchy, which improves their ability to recommend related pages and properly attribute claims.
 
-→ See `jsonld/sitewide-breadcrumb-template.json` (template — populate per page).
+Unlike `Organization` and `WebSite`, a `BreadcrumbList` is not a single reusable payload — each page has its own trail. It is therefore embedded directly in each page's `@graph` rather than kept as a separate file. The per-page JSON-LD files in `jsonld/` (e.g. `plan-deluxe.json`, `faq-page.json`, `howto-file-claim.json`) each include their own `BreadcrumbList` node with an `@id` of `{page-url}#breadcrumb`. When adding a new template, copy the breadcrumb pattern from the closest existing page.
 
 ### 3.4 Speakable (optional but recommended for editorial pages)
 
@@ -205,7 +205,7 @@ Use stable, absolute-URL `@id`s for every node and *reference* them from other s
 
 In addition to the schema work, three sitewide updates will help LLMs catch up to the rebrand:
 
-1. **Organization.parentOrganization** in JSON-LD names Zurich Insurance Group — included in `sitewide-organization.json`.
+1. **Organization.parentOrganization** in JSON-LD names Zurich Insurance Group — included in `sitewide.json`.
 2. **Add an underwriter disclosure page** (`/legal/our-underwriter` already exists per the footer) with its own JSON-LD `WebPage` and a clear text declaration. LLMs index legal pages disproportionately.
 3. **Update Wikipedia/Wikidata** if you have a marketing team that can edit it. LLMs treat Wikidata as a high-trust ground truth — making sure the Travel Guard / Zurich relationship is reflected there will propagate through future model training.
 
@@ -242,9 +242,7 @@ After 4-6 weeks of indexing, monitor LLM citations using a tool like Profound, O
 ```
 TravelGuard-Schema-Audit.md              ← this document
 jsonld/
-  sitewide-organization.json             ← P0, every page
-  sitewide-website.json                  ← P0, every page
-  sitewide-breadcrumb-template.json      ← P0, per-page template
+  sitewide.json                          ← P0, every page (Organization + WebSite @graph bundle)
   homepage.json                          ← P0, homepage
   plan-deluxe.json                       ← P0, Deluxe plan (template for others)
   plans-listing.json                     ← P1, /travel-insurance/plans
