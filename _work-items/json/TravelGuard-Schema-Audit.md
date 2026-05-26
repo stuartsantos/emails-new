@@ -10,7 +10,7 @@
 
 Travel Guard's homepage and most key templates render the kinds of content that LLMs love to cite — product comparisons, FAQs, pricing rules of thumb, contact info, a clear brand identity, and an editorial library — but the page response I pulled showed no JSON-LD `<script>` blocks in the visible markup. That means LLM crawlers and Google's structured-data parsers are doing all the work themselves from the HTML, which leaves a lot of citation potential on the table.
 
-The single highest-leverage move is a **site-wide JSON-LD bundle** (`Organization` + `WebSite` + `BreadcrumbList`) injected in `<head>` on every template. After that, the homepage, plan pages, FAQ, claims, articles, and reviews are the next priority because they're the pages LLMs are most likely to cite when answering "what is travel insurance," "does Travel Guard cover X," or "Travel Guard reviews."
+The single highest-leverage move is a **site-wide JSON-LD bundle** (`Organization` + `WebSite`) injected in `<head>` on every template, paired with a **per-page `BreadcrumbList`** embedded in each non-home page's own JSON-LD `@graph`. After that, the homepage, plan pages, FAQ, claims, articles, and reviews are the next priority because they're the pages LLMs are most likely to cite when answering "what is travel insurance," "does Travel Guard cover X," or "Travel Guard reviews."
 
 This audit is also relevant to the AIG → Zurich rebrand: the homepage footer already names Zurich entities as underwriters. Codifying that relationship in `Organization.parentOrganization` and updating `alternateName`/`sameAs` is one of the cleanest ways to signal the brand transition to LLMs that have stale "AIG Travel Guard" associations in their training data.
 
@@ -170,7 +170,8 @@ Pages are ordered by LLM-citation value, highest first.
 
 | Priority | Page / Template | Schema types | Effort | LLM impact |
 |---|---|---|---|---|
-| P0 | All pages | Organization, WebSite, BreadcrumbList | Low (one-time + per-page breadcrumbs) | Very high — foundational entity |
+| P0 | All pages (sitewide bundle) | Organization, WebSite | Low — one-time include | Very high — foundational entity |
+| P0 | Every non-home page | BreadcrumbList (per-page, embedded in page `@graph`) | Low per page | Very high — site-hierarchy signal |
 | P0 | Homepage | WebPage + OfferCatalog + FAQPage | Medium | Very high — first-touch citations |
 | P0 | FAQ (`/help-center/faqs`) | FAQPage | Low | Very high — verbatim answer extraction |
 | P0 | Plan pages (4) | Product + Offer + FAQPage | Medium | Very high — product comparison queries |
@@ -227,7 +228,7 @@ Before pushing, validate each JSON-LD block at:
 
 ## 7. Suggested rollout order
 
-1. **Week 1:** Site-wide bundle (Organization + WebSite + BreadcrumbList). Validate. Submit updated sitemap to Google Search Console.
+1. **Week 1:** Site-wide bundle (Organization + WebSite). Validate. Submit updated sitemap to Google Search Console. Per-page `BreadcrumbList` ships embedded in each page's own `@graph` as those pages are tackled in the weeks below.
 2. **Week 2:** Homepage, FAQ page, all four plan pages.
 3. **Week 3:** About Us, Contact Us, Claims (HowTo), Plans listing (ItemList).
 4. **Week 4-5:** Trip-type and traveler-type pages (Service schema).
@@ -294,8 +295,9 @@ Validate every new JSON-LD against https://validator.schema.org/ before merging.
 ```
 feat(seo): add LLM-first JSON-LD schema markup site-wide and per-template
 
-- Add site-wide Organization (InsuranceAgency), WebSite, and BreadcrumbList
-  schemas to <head> on every template
+- Add site-wide Organization (InsuranceAgency) + WebSite bundle to <head>
+  on every template, and a per-page BreadcrumbList embedded in each
+  non-home page's own JSON-LD @graph
 - Add Organization.parentOrganization referencing Zurich Insurance Group
   to reflect the AIG → Zurich underwriter relationship
 - Add page-specific schemas:
