@@ -6,6 +6,20 @@ allowed-tools: Read, Edit, Write, Bash(open:*)
 
 Modernize a ROW (Rest of World) policy confirmation email template. Takes a legacy AIG-format template or raw translated text and outputs a fully modernized Travel Guard template using the canonical reference skeleton.
 
+## Workflow & content-fidelity rules (read first)
+
+These govern every ROW edit and override convenience:
+
+1. **Itemize before editing.** Build an itemized table of every non-Handlebars
+   content change (text, links, phones, emails, sections added/removed) and
+   present it via AskUserQuestion before touching the file. Never silently fix
+   or infer content.
+2. **Source wording is verbatim.** Use the source's existing translated copy
+   exactly. Never substitute the reference skeleton's English/skeleton phrasing
+   for content that already exists in the target language.
+3. **Edit workflow:** plan → itemized table → AskUserQuestion → plan file →
+   sequential Edits → parallel QA (git diff + browser open + `/content-check`).
+
 ## 1. Locate the target file
 
 Accept a file path argument (e.g., `/row-modernize row/xx/en/policy-confirmation.html`).
@@ -75,12 +89,12 @@ Insert extracted content into each of the 12 sections documented in the referenc
 7. **Customer service** — phone, hours, email
 8. **Emergency overseas** — 24/7 assistance phone (+ email if source has it)
 9. **Claims** — claims phone, hours, email
-10. **Alternative policy links** — `{{AltViewPolicyLinks}}`
+10. **Alternative policy links** — `{{AltViewPolicyLinks}}` (market-dependent — include unless the market omits it, e.g. Italy it/en + it/it removed it entirely)
 11. **Sign-off** — translated farewell + "Travel Guard" in bold navy
 12. **Footer** — empty for most markets; legal text for Singapore
 
 ### Activate optional sections when the source content warrants it:
-- **Cancellation policy** (ch/fr) — uncomment the cancellation section
+- **Cancellation policy** (ch/de and ch/fr) — uncomment the cancellation section
 - **Residency disclaimer** (es/es, fr/fr, it/it) — uncomment in greeting section
 - **MFA eRegister notice** (sg/en) — uncomment the MFA section
 - **Legal footer** (sg/en) — uncomment footer content
@@ -129,11 +143,18 @@ Also convert any contact-related legacy variables:
 
 Write the modernized template back to the same file path, overwriting the input.
 
-## 7. Open in browser for verification
+## 7. Verify (run in parallel)
+
+Run these together:
 
 ```bash
 open row/{country}/{lang}/policy-confirmation.html
 ```
+
+- **Browser** — visually diff light + dark mode against a sibling ROW template.
+- **git diff** — confirm only intended content changed.
+- **`/content-check`** — verify every itemized change from the source was
+  applied correctly and nothing was inferred or dropped.
 
 ## 8. Report results
 
@@ -164,5 +185,5 @@ Before finishing, verify:
 - [ ] Link color is `#1352DE` for email links (or `#0076be` for Singapore)
 - [ ] Preheader div includes `&zwnj;&nbsp;` padding (20 repetitions after text)
 - [ ] `{{ViewPolicyURL}}` is present in the greeting section
-- [ ] `{{AltViewPolicyLinks}}` is present in Section 10
+- [ ] `{{AltViewPolicyLinks}}` is present in Section 10 *unless* the market omits it (e.g. Italy)
 - [ ] Sign-off uses bold navy `#003D6E` for "Travel Guard"
