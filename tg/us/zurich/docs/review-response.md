@@ -18,7 +18,7 @@ Of the ~20 findings raised across the three templates, **one is a real source-co
 
 | # | Issue | Status | Response |
 |---|-------|--------|----------|
-| 1 | No click tracking | Out-of-scope | Not in source HTML. ESP (SocketLabs) wraps links at send time. If click tracking is missing in production, that's an ESP / send-config issue, not template code. |
+| 1 | No click tracking | Reject — already present (partial false positive) | Reviewer's claim "zero click tracking data for this campaign" is incorrect. Every URL in the template carries a `cmpid` parameter (e.g., `?cmpid=emc-tgdirect-us-en-traveltips-jun26`) which the destination site's analytics consumes as the campaign attribution key. Campaign-level click tracking is in place and has been the standard for this email program for years — see the Campaign Tracking table in `tg/us/zurich/CLAUDE.md`. If the reviewer specifically meant *ESP-level per-recipient* click tracking (i.e., wrapping every link through a SocketLabs redirect so individual recipient clicks are logged at the ESP), that's a different mechanism and not in the template source — it's an ESP / send-config concern. But framing the email as having "no click tracking" is factually wrong. |
 | 2 | No open-tracking pixel | Out-of-scope | Same as above — pixel is injected by the ESP. Reviewer's own note acknowledges "if intentionally omitted for privacy reasons, this can be disregarded." |
 | 3 | Missing mobile stacking for two-column sections (Video Library / Education Center) | Reject — unnecessary | The "two columns" the reviewer wants to stack are: (left) a 12px play icon + a short uppercase label ("VIDEO LIBRARY"), and (right) a short link ("Visit Education Center"). The total content is roughly 200px wide and fits comfortably side-by-side even at 320px viewport. Stacking a 12px icon onto its own row would create awkward vertical whitespace and break the visual relationship between the icon, its label, and the section's CTA. `.mobile-stack` is defined for cases where it's actually needed (e.g., side-by-side image+text blocks); applying it here would be a worse layout, not a better one. |
 | 4 | Video thumbnail width on mobile | Subjective | Image is `max-width: 100%; height: auto` inside a 540px container with 20px side padding — it scales correctly. The reviewer's concern about "available width already reduced" is how responsive containers are supposed to work. |
@@ -47,7 +47,7 @@ Of the ~20 findings raised across the three templates, **one is a real source-co
 
 | # | Issue | Status | Response |
 |---|-------|--------|----------|
-| 20 | No click tracking | Out-of-scope | See #1. |
+| 20 | No click tracking | Reject — already present (partial false positive) | See #1. |
 | 21 | No open-tracking pixel | Out-of-scope | See #2. |
 | 22 | **Inconsistent link color (`#005b94` vs `#0076be`)** | **Accept — fix** | **Confirmed.** `winter-season-2026.html` mixes both blues: preheader "Get My Quote" uses `#0076be` (line 218), "Read the full article" uses `#005b94` (line 506), Video Library / Education Center links mix both. Will standardize. Note: brand guidance currently in flux — design system token is `#2167AE`, existing email convention is `#0076be` (root `CLAUDE.md` anchor-color rule). See `_work-items/tg-color-migration.md` for the canonical decision. Pending that, we'll standardize on `#0076be` for consistency with the rest of the email suite. |
 | 23 | Mobile stacking for Video Library / Education Center | Reject — unnecessary | See #3. |

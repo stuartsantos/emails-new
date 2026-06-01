@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Response to HTML Review — Travel Tips, Holiday &amp; Seasonal</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #1c252e;
+    background: #f1f6fb;
+    padding: 32px 16px;
+  }
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.10);
+    padding: 40px 48px;
+  }
+
+  h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #003d6e;
+    margin-bottom: 6px;
+  }
+
+  .ref {
+    font-size: 12px;
+    color: #555b62;
+    margin-bottom: 28px;
+  }
+
+  h2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #003d6e;
+    margin: 32px 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #e4edf8;
+  }
+
+  h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1c252e;
+    margin: 24px 0 10px;
+  }
+
+  p {
+    margin-bottom: 12px;
+    color: #1c252e;
+  }
+
+  ul {
+    margin: 0 0 14px 22px;
+  }
+
+  li {
+    margin-bottom: 6px;
+  }
+
+  code {
+    font-family: 'Menlo', 'Consolas', monospace;
+    font-size: 12px;
+    background: #e4edf8;
+    color: #0e4e88;
+    padding: 1px 5px;
+    border-radius: 3px;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid #e4edf8;
+    margin: 32px 0;
+  }
+
+  /* Summary buckets */
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+    margin: 16px 0 24px;
+  }
+
+  .bucket {
+    border-radius: 6px;
+    padding: 14px 16px;
+    font-size: 13px;
+  }
+
+  .bucket-title {
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 4px;
+  }
+
+  .bucket-esp   { background: #fff8e1; border-left: 3px solid #ffc709; }
+  .bucket-esp   .bucket-title { color: #8a6800; }
+  .bucket-ok    { background: #e8f5e9; border-left: 3px solid #64c5b9; }
+  .bucket-ok    .bucket-title { color: #1b5e40; }
+  .bucket-subj  { background: #f3e5f5; border-left: 3px solid #302261; }
+  .bucket-subj  .bucket-title { color: #302261; }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 24px;
+    font-size: 13px;
+  }
+
+  thead th {
+    background: #003d6e;
+    color: #ffffff;
+    text-align: left;
+    padding: 8px 10px;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  thead th:first-child { border-radius: 4px 0 0 0; width: 36px; text-align: center; }
+  thead th:last-child  { border-radius: 0 4px 0 0; }
+
+  tbody tr:nth-child(even) { background: #f8fbff; }
+  tbody tr:hover           { background: #e4edf8; }
+
+  tbody td {
+    padding: 8px 10px;
+    border-bottom: 1px solid #e4edf8;
+    vertical-align: top;
+  }
+
+  tbody td:first-child { text-align: center; font-weight: 700; color: #555b62; }
+
+  /* Status badges */
+  .badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 10px;
+    white-space: nowrap;
+  }
+
+  .badge-accept  { background: #d4edda; color: #155724; }
+  .badge-reject  { background: #f8d7da; color: #721c24; }
+  .badge-oos     { background: #fff3cd; color: #856404; }
+  .badge-subj    { background: #e8def8; color: #302261; }
+
+  /* Action items */
+  .action-list {
+    list-style: none;
+    margin: 0 0 14px;
+    padding: 0;
+  }
+
+  .action-list li {
+    display: flex;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    font-size: 13px;
+    align-items: flex-start;
+  }
+
+  .action-list li.fix    { background: #d4edda; border-left: 3px solid #28a745; }
+  .action-list li.follow { background: #fff3cd; border-left: 3px solid #ffc709; }
+  .action-list li.none   { background: #e4edf8; border-left: 3px solid #9cc7e6; }
+
+  .action-num {
+    font-weight: 700;
+    flex-shrink: 0;
+    min-width: 18px;
+  }
+
+  /* Framing callout */
+  .callout {
+    background: #e4edf8;
+    border-left: 4px solid #0076be;
+    border-radius: 0 6px 6px 0;
+    padding: 14px 18px;
+    font-size: 13px;
+    color: #003d6e;
+    margin: 0;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <h1>Response to HTML Review — Travel Tips, Holiday &amp; Seasonal</h1>
+  <div class="ref">Reference: <code>HTML for Travel Tips, Holiday &amp; Seasonal.docx</code></div>
+
+  <h2>Summary</h2>
+  <p>Of the ~20 findings raised across the three templates, <strong>one is a real source-code bug</strong>: inconsistent link colors in <code>winter-season-2026.html</code>. The rest fall into three buckets:</p>
+
+  <div class="summary-grid">
+    <div class="bucket bucket-esp">
+      <div class="bucket-title">ESP-layer (not in our HTML)</div>
+      Tracking pixel, click-tracking redirect, unsubscribe domain, mTLS client-cert error, fonts loaded via tracking domain. None of these strings exist in our source files — they're injected by SocketLabs / RuF at send time. The reviewer appears to be auditing a <em>sent</em> message, not our codebase.
+    </div>
+    <div class="bucket bucket-ok">
+      <div class="bucket-title">Already correct / not applicable</div>
+      Duplicate Google Fonts loading is a documented fallback pattern; VML/Outlook conditional is the canonical email pattern; <code>alt=""</code> is the accessibility standard for decorative images; physical mailing addresses are present in every footer; <code>rel="noopener noreferrer"</code> is unnecessary in email.
+    </div>
+    <div class="bucket bucket-subj">
+      <div class="bucket-title">Subjective</div>
+      Several mobile-formatting suggestions assume design intent we haven't agreed to (full-width buttons, padding overrides, stacking changes). Mobile classes already exist; the reviewer is asking us to apply them differently, not noting a missing capability.
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>Per-item Response</h2>
+
+  <h3>Section 1 — Travel Tips</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Issue</th>
+        <th>Status</th>
+        <th>Response</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>No click tracking</td>
+        <td><span class="badge badge-reject">Reject — false positive</span></td>
+        <td>Reviewer's claim "zero click tracking data for this campaign" is incorrect. Every URL carries a <code>cmpid</code> parameter (e.g., <code>?cmpid=emc-tgdirect-us-en-traveltips-jun26</code>) which the destination site's analytics consumes as the campaign attribution key. Campaign-level click tracking is in place and has been standard for years. If the reviewer specifically meant <em>ESP-level per-recipient</em> click tracking (wrapping every link through a SocketLabs redirect), that's an ESP / send-config concern — not a template fix. Framing this as "no click tracking" is factually wrong.</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>No open-tracking pixel</td>
+        <td><span class="badge badge-oos">Out-of-scope</span></td>
+        <td>Same as above — pixel is injected by the ESP. Reviewer's own note acknowledges "if intentionally omitted for privacy reasons, this can be disregarded."</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Missing mobile stacking for two-column sections (Video Library / Education Center)</td>
+        <td><span class="badge badge-reject">Reject — unnecessary</span></td>
+        <td>The "two columns" are: (left) a 12px play icon + short uppercase label, and (right) a short link. Total content is ~200px wide and fits side-by-side even at 320px. Stacking a 12px icon onto its own row breaks the visual relationship between icon, label, and CTA. <code>.mobile-stack</code> is defined for actual side-by-side image+text blocks; applying it here would be a worse layout.</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Video thumbnail width on mobile</td>
+        <td><span class="badge badge-subj">Subjective</span></td>
+        <td>Image is <code>max-width: 100%; height: auto</code> inside a 540px container with 20px side padding — it scales correctly. "Available width already reduced" is how responsive containers are supposed to work.</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Testimonial section side padding too large on mobile</td>
+        <td><span class="badge badge-subj">Subjective</span></td>
+        <td>30px side padding is the deliberate design spec, consistent with sibling testimonial blocks across the suite. No reported user feedback indicating cramping.</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>CTA button not full-width on mobile</td>
+        <td><span class="badge badge-subj">Subjective</span></td>
+        <td>Pill-style buttons with intrinsic padding are the design system standard (<code>_work-items/tg-design-system/</code>). Full-width CTAs are not the brand pattern.</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>Duplicate Google Fonts loading (<code>&lt;link&gt;</code> + <code>@import</code>)</td>
+        <td><span class="badge badge-reject">Reject — intentional</span></td>
+        <td>Comment in source labels this explicitly: <em>"Google Fonts fallback for clients that support @import"</em>. Belt-and-suspenders pattern — some clients strip <code>&lt;link&gt;</code> from <code>&lt;head&gt;</code>; the <code>@import</code> survives. Standard email practice.</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>Missing physical mailing address (CAN-SPAM)</td>
+        <td><span class="badge badge-reject">Reject — already present</span></td>
+        <td>Footer contains physical addresses for the underwriting insurance entities (1299 Zurich Way, Schaumburg IL 60196 and 1271 Avenue of the Americas, NY 10020). These satisfy the CAN-SPAM requirement. If the reviewer's position is that the Travel Guard corporate address (Stevens Point, WI) should also appear, that's a separate legal/brand question — gray area we can discuss.</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>VML fallback for Outlook</td>
+        <td><span class="badge badge-reject">Reject — already correct</span></td>
+        <td>Code uses the canonical <code>&lt;v:rect&gt;&lt;v:fill&gt;&lt;v:textbox&gt;</code> pattern documented in root <code>CLAUDE.md</code> and used across every TG/Zurich template. Pattern is well-tested in Outlook 2016/2019/365.</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>Missing <code>rel="noopener noreferrer"</code> on video link</td>
+        <td><span class="badge badge-reject">Reject — not applicable</span></td>
+        <td><strong>(a)</strong> Per the HTML spec change adopted 2020–2021, all current browsers implicitly treat <code>target="_blank"</code> as <code>rel="noopener"</code> by default (Firefox 79, Chrome/Edge 88, Safari). The attribute is now redundant. <strong>(b)</strong> Reverse tabnabbing requires a <code>window</code> object; email clients launch links via the OS as a fresh process — no <code>window.opener</code> is ever created. <strong>(c)</strong> Email HTML doesn't execute JavaScript anyway. The reviewer is applying a web-app rule to a context where the attack surface doesn't exist.</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>Inconsistent link behavior (<code>target="_blank"</code> on video only)</td>
+        <td><span class="badge badge-reject">Reject — no functional difference</span></td>
+        <td>In an email context, <code>target="_blank"</code> is effectively a no-op. Native clients hand the URL to the OS, which launches the browser in a new window regardless. Webmail clients open external links in a new tab by default. The "inconsistency" has no observable effect — it's a stylistic discrepancy, not a UX issue. Could be cleaned up for tidiness but isn't a bug.</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>Missing <code>role="presentation"</code> on decorative images</td>
+        <td><span class="badge badge-reject">Reject — already correct</span></td>
+        <td><code>alt=""</code> is the WCAG-recommended pattern for decorative images. <code>role="presentation"</code> is redundant when <code>alt=""</code> is present (per W3C image decision tree). Email accessibility validators that flag this are wrong.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Section 2 — Holiday</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Issue</th>
+        <th>Status</th>
+        <th>Response</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>13</td>
+        <td>mTLS client-cert error on <code>links.tg.navigatormail.com</code></td>
+        <td><span class="badge badge-oos">Out-of-scope</span></td>
+        <td>This domain does <strong>not</strong> appear in our source HTML. It's the SocketLabs click-tracking redirect injected at send time. Server config (mTLS removal) is an ESP / ops task.</td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td>Unsubscribe domain mismatch (<code>navigatormail</code> vs <code>travelguard.ruf</code>)</td>
+        <td><span class="badge badge-oos">Out-of-scope</span></td>
+        <td>Neither domain exists in our HTML. Unsubscribe header + footer link are both ESP-injected. Not a template fix.</td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td>Google Fonts loaded via <code>travelguard.ruf.com</code> tracking redirect</td>
+        <td><span class="badge badge-oos">Out-of-scope</span></td>
+        <td>Our source loads fonts directly from <code>fonts.googleapis.com</code>. If the sent message rewrites that URL, the ESP is doing it — not us.</td>
+      </tr>
+      <tr>
+        <td>16</td>
+        <td>Broken tracking pixel pointing to <code>travelguard.ruf.com</code></td>
+        <td><span class="badge badge-oos">Out-of-scope</span></td>
+        <td>Pixel is ESP-injected. Same as above.</td>
+      </tr>
+      <tr>
+        <td>17</td>
+        <td>VML fallback for Outlook</td>
+        <td><span class="badge badge-reject">Reject — already correct</span></td>
+        <td>See #9 above.</td>
+      </tr>
+      <tr>
+        <td>18</td>
+        <td>Quoted-printable encoding</td>
+        <td><span class="badge badge-oos">Out-of-scope</span></td>
+        <td>QP encoding is set by the sending MTA / ESP, not authored in the template. Standard email transport encoding.</td>
+      </tr>
+      <tr>
+        <td>19</td>
+        <td><code>role="presentation"</code> on tracking pixel</td>
+        <td><span class="badge badge-oos">Out-of-scope</span></td>
+        <td>Pixel isn't in our source HTML.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Section 3 — Seasonal Update</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Issue</th>
+        <th>Status</th>
+        <th>Response</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>20</td>
+        <td>No click tracking</td>
+        <td><span class="badge badge-reject">Reject — false positive</span></td>
+        <td>See #1.</td>
+      </tr>
+      <tr>
+        <td>21</td>
+        <td>No open-tracking pixel</td>
+        <td><span class="badge badge-oos">Out-of-scope</span></td>
+        <td>See #2.</td>
+      </tr>
+      <tr>
+        <td style="font-weight:700; color:#155724;">22</td>
+        <td><strong>Inconsistent link color (<code>#005b94</code> vs <code>#0076be</code>)</strong></td>
+        <td><span class="badge badge-accept">Accept — fix</span></td>
+        <td><strong>Confirmed.</strong> <code>winter-season-2026.html</code> mixes both blues: preheader "Get My Quote" uses <code>#0076be</code> (line 218), "Read the full article" uses <code>#005b94</code> (line 506), Video Library / Education Center links mix both. Will standardize on <code>#0076be</code> for consistency with the rest of the suite. Note: brand guidance currently in flux — design system token is <code>#2167AE</code>. See <code>_work-items/tg-color-migration.md</code> for the canonical decision; this template will be caught in that sweep if migration is approved.</td>
+      </tr>
+      <tr>
+        <td>23</td>
+        <td>Mobile stacking for Video Library / Education Center</td>
+        <td><span class="badge badge-reject">Reject — unnecessary</span></td>
+        <td>See #3.</td>
+      </tr>
+      <tr>
+        <td>24</td>
+        <td>Video thumbnail width on mobile</td>
+        <td><span class="badge badge-subj">Subjective</span></td>
+        <td>See #4.</td>
+      </tr>
+      <tr>
+        <td>25</td>
+        <td>CTA button not full-width on mobile</td>
+        <td><span class="badge badge-subj">Subjective</span></td>
+        <td>See #6.</td>
+      </tr>
+      <tr>
+        <td>26</td>
+        <td>Winter Storms info-box header stacking on mobile</td>
+        <td><span class="badge badge-subj">Subjective</span></td>
+        <td>Icon+heading is a tight pair by design; current rendering acceptable at 320px+ viewports.</td>
+      </tr>
+      <tr>
+        <td>27</td>
+        <td>Features-table padding override on mobile</td>
+        <td><span class="badge badge-subj">Subjective</span></td>
+        <td>30–40px indentation is the design spec for the features list. If reviewer has a specific render width showing overflow, happy to look.</td>
+      </tr>
+      <tr>
+        <td>28</td>
+        <td>Duplicate Google Fonts loading</td>
+        <td><span class="badge badge-reject">Reject — intentional</span></td>
+        <td>See #7.</td>
+      </tr>
+      <tr>
+        <td>29</td>
+        <td>VML fallback for Outlook</td>
+        <td><span class="badge badge-reject">Reject — already correct</span></td>
+        <td>See #9.</td>
+      </tr>
+      <tr>
+        <td>30</td>
+        <td>Missing <code>rel="noopener noreferrer"</code> on video link</td>
+        <td><span class="badge badge-reject">Reject — not applicable</span></td>
+        <td>See #10.</td>
+      </tr>
+      <tr>
+        <td>31</td>
+        <td>Inconsistent <code>target="_blank"</code> behavior</td>
+        <td><span class="badge badge-reject">Reject — no functional difference</span></td>
+        <td>See #11.</td>
+      </tr>
+      <tr>
+        <td>32</td>
+        <td><code>role="presentation"</code> on decorative images</td>
+        <td><span class="badge badge-reject">Reject — already correct</span></td>
+        <td>See #12.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <h2>Action Items</h2>
+  <ol class="action-list">
+    <li class="fix">
+      <span class="action-num">1.</span>
+      <span><strong>Fix:</strong> Standardize link colors in <code>winter-season-2026.html</code> to <code>#0076be</code> (pending <code>_work-items/tg-color-migration.md</code> decision — if migration to <code>#2167AE</code> is approved, this template gets caught in that sweep).</span>
+    </li>
+    <li class="follow">
+      <span class="action-num">2.</span>
+      <span><strong>Follow-up (not this pass):</strong> Confirm whether the <code>_work-items/tg-color-migration.md</code> proposal lands — if yes, sweep all 14 affected templates in one go. If the reviewer wants click/open tracking to <em>actually work</em>, route that conversation to whoever owns the SocketLabs / RuF / NavigatorMail config (not a template-code question).</span>
+    </li>
+    <li class="none">
+      <span class="action-num">3.</span>
+      <span><strong>No change:</strong> Items 7, 9, 10, 12, 18 — these are documented design / accessibility / email-engineering standards and the review's framing of them is incorrect.</span>
+    </li>
+  </ol>
+
+  <hr>
+
+  <h2>Recommended Framing for the Meeting</h2>
+  <p class="callout">The high-volume "issues" in this review are not in our HTML — they're properties of how the message looks <em>after</em> the ESP has finished with it. The reviewer appears to have run a static analyzer on the rendered MIME output rather than on the template source. That's a useful thing to do, but the findings need to be routed to the team that owns the send pipeline, not the team that owns the templates. The one finding that <em>is</em> a real source-code bug (link color) is fixable in a few minutes.</p>
+
+</div>
+</body>
+</html>
