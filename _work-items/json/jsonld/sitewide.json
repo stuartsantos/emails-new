@@ -18,7 +18,7 @@
       "description": "Travel Guard provides travel insurance plans that may cover trip cancellation, emergency medical expenses, baggage loss, and 24/7 emergency travel assistance for U.S. travelers.",
       "foundingDate": "1982",
       "telephone": "+1-800-826-5248",
-      "email": "customerservice@travelguard.com",
+      "email": "inquire@travelguard.com",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "3300 Business Park Drive",
@@ -48,7 +48,7 @@
         "Rental Vehicle Damage Coverage",
         "Annual Travel Insurance"
       ],
-      "slogan": "Travel insurance for life's adventures.",
+      "slogan": "Travel Safe. Travel Smart. Travel Guard.",
       "sameAs": [
         "https://www.facebook.com/travelguard",
         "https://www.linkedin.com/company/travel-guard",
@@ -72,20 +72,6 @@
             "closes": "23:59",
             "description": "24/7 Emergency Travel Assistance"
           }
-        },
-        {
-          "@type": "ContactPoint",
-          "telephone": "+1-866-375-2546",
-          "contactType": "sanctioned countries hotline",
-          "areaServed": "US",
-          "availableLanguage": "English"
-        },
-        {
-          "@type": "ContactPoint",
-          "telephone": "+1-866-729-5215",
-          "contactType": "technical support",
-          "areaServed": "US",
-          "availableLanguage": "English"
         }
       ],
       "memberOf": [
