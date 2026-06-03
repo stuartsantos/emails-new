@@ -10,7 +10,7 @@
 
 Travel Guard's homepage and most key templates render the kinds of content that LLMs love to cite — product comparisons, FAQs, pricing rules of thumb, contact info, a clear brand identity, and an editorial library — but the page response I pulled showed no JSON-LD `<script>` blocks in the visible markup. That means LLM crawlers and Google's structured-data parsers are doing all the work themselves from the HTML, which leaves a lot of citation potential on the table.
 
-The single highest-leverage move is a **site-wide JSON-LD bundle** (`Organization` + `WebSite` + `BreadcrumbList`) injected in `<head>` on every template. After that, the homepage, plan pages, FAQ, claims, articles, and reviews are the next priority because they're the pages LLMs are most likely to cite when answering "what is travel insurance," "does Travel Guard cover X," or "Travel Guard reviews."
+The single highest-leverage move is a **site-wide JSON-LD bundle** (`Organization` + `WebSite` in one `@graph`) injected in `<head>` on every template, paired with a **per-page `BreadcrumbList`** embedded in each non-home page's own JSON-LD `@graph`. After that, the homepage, plan pages, FAQ, claims, articles, and reviews are the next priority because they're the pages LLMs are most likely to cite when answering "what is travel insurance," "does Travel Guard cover X," or "Travel Guard reviews."
 
 This audit is also relevant to the AIG → Zurich rebrand: the homepage footer already names Zurich entities as underwriters. Codifying that relationship in `Organization.parentOrganization` and updating `alternateName`/`sameAs` is one of the cleanest ways to signal the brand transition to LLMs that have stale "AIG Travel Guard" associations in their training data.
 
@@ -47,19 +47,19 @@ The Organization entity is the spine that every other schema on the site should 
 - `hasCredential`: BBB accreditation.
 - `knowsAbout`: list of insurance topics — explicit topical authority signal.
 
-→ See `jsonld/sitewide-organization.json` for the full payload.
+→ See `jsonld/sitewide.json` (the `@graph` bundle) for the full payload.
 
 ### 3.2 WebSite
 
 Adds a sitelinks search box eligibility and explicitly ties pages back to the org. Include a `potentialAction` of type `SearchAction` if you have a `/search?q=` endpoint (or update the URL template to match).
 
-→ See `jsonld/sitewide-website.json`.
+→ See `jsonld/sitewide.json` (bundled with the Organization node in one `@graph`).
 
 ### 3.3 BreadcrumbList
 
 Every non-home page should carry a per-page `BreadcrumbList`. This is one of the schemas LLMs actually use to understand a page's place in the site hierarchy, which improves their ability to recommend related pages and properly attribute claims.
 
-→ See `jsonld/sitewide-breadcrumb-template.json` (template — populate per page).
+Unlike `Organization` and `WebSite`, a `BreadcrumbList` is **not** a single reusable payload and is **not** part of the sitewide bundle — each page has its own trail. It is therefore embedded directly in each page's `@graph` rather than kept as a separate file. The per-page JSON-LD files in `jsonld/` (e.g. `plan-deluxe.json`, `faq-page.json`, `howto-file-claim.json`) each include their own `BreadcrumbList` node with an `@id` of `{page-url}#breadcrumb`. When adding a new template, copy the breadcrumb pattern from the closest existing page.
 
 ### 3.4 Speakable (optional but recommended for editorial pages)
 
@@ -170,7 +170,8 @@ Pages are ordered by LLM-citation value, highest first.
 
 | Priority | Page / Template | Schema types | Effort | LLM impact |
 |---|---|---|---|---|
-| P0 | All pages | Organization, WebSite, BreadcrumbList | Low (one-time + per-page breadcrumbs) | Very high — foundational entity |
+| P0 | All pages (sitewide bundle) | Organization, WebSite | Low — one-time include | Very high — foundational entity |
+| P0 | Every non-home page | BreadcrumbList (per-page, embedded in page `@graph`) | Low per page | Very high — site-hierarchy signal |
 | P0 | Homepage | WebPage + OfferCatalog + FAQPage | Medium | Very high — first-touch citations |
 | P0 | FAQ (`/help-center/faqs`) | FAQPage | Low | Very high — verbatim answer extraction |
 | P0 | Plan pages (4) | Product + Offer + FAQPage | Medium | Very high — product comparison queries |
@@ -205,7 +206,7 @@ Use stable, absolute-URL `@id`s for every node and *reference* them from other s
 
 In addition to the schema work, three sitewide updates will help LLMs catch up to the rebrand:
 
-1. **Organization.parentOrganization** in JSON-LD names Zurich Insurance Group — included in `sitewide-organization.json`.
+1. **Organization.parentOrganization** in JSON-LD names Zurich Insurance Group — included in `sitewide.json`.
 2. **Add an underwriter disclosure page** (`/legal/our-underwriter` already exists per the footer) with its own JSON-LD `WebPage` and a clear text declaration. LLMs index legal pages disproportionately.
 3. **Update Wikipedia/Wikidata** if you have a marketing team that can edit it. LLMs treat Wikidata as a high-trust ground truth — making sure the Travel Guard / Zurich relationship is reflected there will propagate through future model training.
 
@@ -227,7 +228,7 @@ Before pushing, validate each JSON-LD block at:
 
 ## 7. Suggested rollout order
 
-1. **Week 1:** Site-wide bundle (Organization + WebSite + BreadcrumbList). Validate. Submit updated sitemap to Google Search Console.
+1. **Week 1:** Site-wide bundle (Organization + WebSite). Validate. Submit updated sitemap to Google Search Console. Per-page `BreadcrumbList` ships embedded in each page's own `@graph` as those pages are tackled in the weeks below.
 2. **Week 2:** Homepage, FAQ page, all four plan pages.
 3. **Week 3:** About Us, Contact Us, Claims (HowTo), Plans listing (ItemList).
 4. **Week 4-5:** Trip-type and traveler-type pages (Service schema).
@@ -281,7 +282,7 @@ Allianz being in the **top 5 most-cited domains** overall (541 citations, 4% sha
 
 The new P0 list, reflecting Otterly data:
 
-1. **Site-wide bundle** — Organization, WebSite, BreadcrumbList
+1. **Site-wide bundle** — Organization + WebSite (per-page BreadcrumbList embedded in each page's `@graph`, not in the sitewide bundle)
 2. **Homepage** — WebPage + OfferCatalog + FAQPage (+ aggregateRating once Trustpilot integration is verified)
 3. **FAQ page** — full FAQPage
 4. **Four plan pages** — Product + Offer + FAQPage with explicit Baggage Loss & Delay line-items
@@ -303,9 +304,7 @@ We can't out-Squaremouth Squaremouth. The top 10 cited domains are dominated by 
 TravelGuard-Schema-Audit.md              ← this document
 TravelGuard-KPI-Tracking.md              ← before/after KPI tracking guide
 jsonld/
-  sitewide-organization.json             ← P0, every page
-  sitewide-website.json                  ← P0, every page
-  sitewide-breadcrumb-template.json      ← P0, per-page template
+  sitewide.json                          ← P0, every page (Organization + WebSite @graph bundle)
   homepage.json                          ← P0, homepage
   plan-deluxe.json                       ← P0, Deluxe plan (template for others)
   plans-listing.json                     ← P1, /travel-insurance/plans
