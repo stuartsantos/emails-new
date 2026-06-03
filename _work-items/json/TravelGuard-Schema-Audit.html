@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Guard Schema Markup Audit (LLM-First)</title>
+<style>
+  :root {
+    --tg-navy: #003d6e;
+    --zurich-blue: #0076be;
+    --zurich-blue-dark: #005b94;
+    --seafoam: #64c5b9;
+    --glacier: #e4edf8;
+    --glacier-50: #f1f6fb;
+    --snowmelt: #9cc7e6;
+    --midnight: #1c252e;
+    --midnight-50: #555b62;
+    --midnight-10: #e6e7e8;
+    --red: #af0827;
+    --jungle: #a5d069;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Noto Sans', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+    color: var(--midnight);
+    background: var(--glacier-50);
+    margin: 0;
+    line-height: 1.65;
+    font-size: 16px;
+  }
+
+  .page {
+    max-width: 920px;
+    margin: 0 auto;
+    background: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 8px 32px rgba(0,61,110,0.06);
+  }
+
+  /* Header */
+  header.masthead {
+    background: var(--tg-navy);
+    color: #fff;
+    padding: 48px 56px 40px;
+    background-image: linear-gradient(135deg, #003d6e 0%, #002a4d 100%);
+  }
+  header.masthead .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--seafoam);
+    margin: 0 0 12px;
+  }
+  header.masthead h1 {
+    margin: 0 0 20px;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+  header.masthead .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 28px;
+    font-size: 14px;
+    color: #cfe2f2;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  header.masthead .meta strong { color: #fff; font-weight: 600; }
+  header.masthead .meta a { color: var(--snowmelt); }
+
+  /* Body content */
+  main { padding: 8px 56px 56px; }
+
+  h2 {
+    color: var(--tg-navy);
+    font-size: 23px;
+    margin: 44px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--glacier);
+    scroll-margin-top: 16px;
+  }
+  h3 {
+    color: var(--zurich-blue-dark);
+    font-size: 18px;
+    margin: 28px 0 8px;
+  }
+  h4 { color: var(--midnight); font-size: 16px; margin: 20px 0 6px; }
+
+  p { margin: 12px 0; }
+
+  a { color: var(--zurich-blue); }
+
+  ul, ol { margin: 12px 0; padding-left: 24px; }
+  li { margin: 6px 0; }
+
+  strong { font-weight: 700; }
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--midnight-10);
+    margin: 40px 0;
+  }
+
+  /* Inline code */
+  code {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    background: var(--glacier);
+    color: var(--tg-navy);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 0.88em;
+  }
+
+  /* Code blocks */
+  pre {
+    background: #0d2438;
+    color: #e6eef5;
+    padding: 18px 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 13.5px;
+    line-height: 1.55;
+    border-left: 4px solid var(--seafoam);
+  }
+  pre code {
+    background: none;
+    color: inherit;
+    padding: 0;
+    font-size: inherit;
+  }
+
+  /* Tables */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 18px 0;
+    font-size: 14.5px;
+  }
+  th {
+    background: var(--tg-navy);
+    color: #fff;
+    text-align: left;
+    padding: 10px 12px;
+    font-weight: 600;
+  }
+  td {
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--midnight-10);
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: var(--glacier-50); }
+
+  /* Priority badges */
+  .badge {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 2px 9px;
+    border-radius: 12px;
+    color: #fff;
+    letter-spacing: 0.02em;
+  }
+  .p0 { background: var(--red); }
+  .p1 { background: var(--zurich-blue); }
+  .p2 { background: var(--seafoam); color: #0d2438; }
+  .p3 { background: var(--snowmelt); color: #0d2438; }
+
+  /* Callout for key recommendation */
+  .callout {
+    background: var(--glacier);
+    border-left: 4px solid var(--seafoam);
+    padding: 16px 20px;
+    border-radius: 0 8px 8px 0;
+    margin: 20px 0;
+  }
+  .callout p { margin: 0; }
+
+  /* Table of contents */
+  nav.toc {
+    background: var(--glacier-50);
+    border: 1px solid var(--glacier);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin: 28px 0 8px;
+  }
+  nav.toc h2 {
+    margin: 0 0 12px;
+    border: none;
+    padding: 0;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--midnight-50);
+  }
+  nav.toc ol {
+    margin: 0;
+    columns: 2;
+    column-gap: 36px;
+    padding-left: 20px;
+  }
+  nav.toc a { text-decoration: none; }
+  nav.toc a:hover { text-decoration: underline; }
+
+  arrow, .arrow { color: var(--seafoam); font-weight: 700; }
+
+  footer.docfoot {
+    padding: 24px 56px 40px;
+    color: var(--midnight-50);
+    font-size: 13px;
+    border-top: 1px solid var(--midnight-10);
+  }
+
+  @media (max-width: 700px) {
+    header.masthead, main, footer.docfoot { padding-left: 24px; padding-right: 24px; }
+    nav.toc ol { columns: 1; }
+    header.masthead h1 { font-size: 24px; }
+    table { font-size: 13px; }
+    th, td { padding: 8px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="masthead">
+    <p class="eyebrow">Structured Data Audit</p>
+    <h1>Travel Guard Schema Markup Audit <span style="font-weight:400; color:var(--snowmelt);">(LLM-First)</span></h1>
+    <ul class="meta">
+      <li><strong>Site reviewed:</strong> <a href="https://www.travelguard.com">www.travelguard.com</a></li>
+      <li><strong>Date:</strong> May 2026</li>
+      <li><strong>Focus:</strong> Structured data for AI-search discoverability &amp; citation</li>
+    </ul>
+  </header>
+
+  <main>
+
+    <p style="margin-top:24px;">Improve discoverability and citation by AI search (ChatGPT, Perplexity, Google AI Overviews, Gemini, Copilot) — with traditional rich results as a secondary benefit.</p>
+
+    <nav class="toc">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#s1">Executive summary</a></li>
+        <li><a href="#s2">Why structured data matters for LLM ranking</a></li>
+        <li><a href="#s3">Site-wide schema (every page)</a></li>
+        <li><a href="#s4">Per-page schema recommendations</a></li>
+        <li><a href="#s5">Page-by-page priority matrix</a></li>
+        <li><a href="#s6">Implementation notes for the dev team</a></li>
+        <li><a href="#s7">Suggested rollout order</a></li>
+        <li><a href="#s8">Files in this audit</a></li>
+        <li><a href="#s9">CLAUDE.md context</a></li>
+        <li><a href="#s10">Suggested commit message</a></li>
+      </ol>
+    </nav>
+
+    <h2 id="s1">1. Executive summary</h2>
+    <p>Travel Guard's homepage and most key templates render the kinds of content that LLMs love to cite — product comparisons, FAQs, pricing rules of thumb, contact info, a clear brand identity, and an editorial library — but the page response I pulled showed no JSON-LD <code>&lt;script&gt;</code> blocks in the visible markup. That means LLM crawlers and Google's structured-data parsers are doing all the work themselves from the HTML, which leaves a lot of citation potential on the table.</p>
+    <div class="callout">
+      <p>The single highest-leverage move is a <strong>site-wide JSON-LD bundle</strong> (<code>Organization</code> + <code>WebSite</code>) injected in <code>&lt;head&gt;</code> on every template, paired with a <strong>per-page <code>BreadcrumbList</code></strong> embedded in each non-home page's own JSON-LD <code>@graph</code>.</p>
+    </div>
+    <p>After that, the homepage, plan pages, FAQ, claims, articles, and reviews are the next priority because they're the pages LLMs are most likely to cite when answering "what is travel insurance," "does Travel Guard cover X," or "Travel Guard reviews."</p>
+    <p>This audit is also relevant to the AIG → Zurich rebrand: the homepage footer already names Zurich entities as underwriters. Codifying that relationship in <code>Organization.parentOrganization</code> and updating <code>alternateName</code>/<code>sameAs</code> is one of the cleanest ways to signal the brand transition to LLMs that have stale "AIG Travel Guard" associations in their training data.</p>
+
+    <h2 id="s2">2. Why structured data matters for LLM ranking</h2>
+    <p>LLMs and AI search products don't behave exactly like Google's crawler, but they consistently benefit from the same signals:</p>
+    <ul>
+      <li><strong>Entity disambiguation.</strong> <code>Organization</code> with <code>sameAs</code> links to Wikipedia, LinkedIn, Trustpilot, and the parent (Zurich) helps the model resolve "Travel Guard" to <em>your</em> company rather than a generic phrase. This is what makes the difference between being cited and being paraphrased away.</li>
+      <li><strong>Fact extraction.</strong> When a user asks "how much does Travel Guard cost?", a model that finds a <code>FAQPage</code> answer with a clean string ("typically 5-7% of trip cost") is much more likely to quote that verbatim with attribution than one that has to summarize prose.</li>
+      <li><strong>Service/Product modeling.</strong> Insurance is a relationship between <em>who</em>, <em>what coverage</em>, <em>for whom</em>, <em>where</em>. <code>Product</code> + <code>Offer</code> + <code>audience</code> + <code>areaServed</code> gives the model all four in one structured payload.</li>
+      <li><strong>Citation hooks.</strong> <code>speakable</code>, <code>mainEntityOfPage</code>, and stable <code>@id</code> URIs give AI surfaces something specific to point to, which raises the probability of a linked citation versus an uncited paraphrase.</li>
+      <li><strong>Recency and trust.</strong> <code>dateModified</code>, <code>aggregateRating</code>, <code>hasCredential</code> (BBB), and <code>memberOf</code> (UStiA, IGLTA) are exactly the cues LLMs use to weigh authority when there are competing sources.</li>
+    </ul>
+    <p>In practical terms: the goal isn't a Google rich snippet. It's making sure that when ChatGPT or Perplexity is composing an answer about travel insurance, your page is the one it pulls from and links to.</p>
+
+    <h2 id="s3">3. Site-wide schema (every page)</h2>
+    <p>These should appear in the <code>&lt;head&gt;</code> of <strong>every</strong> rendered template. Put each <code>@type</code> in its own <code>&lt;script type="application/ld+json"&gt;</code> block, or combine them in a single <code>@graph</code>.</p>
+
+    <h3>3.1 Organization <span class="badge p0">highest priority</span></h3>
+    <p>The Organization entity is the spine that every other schema on the site should reference via <code>@id</code>. Key properties to lock down:</p>
+    <ul>
+      <li><code>@type</code>: use <code>InsuranceAgency</code> (a subtype of <code>LocalBusiness</code> and <code>Organization</code>) — more specific is better for LLMs.</li>
+      <li><code>parentOrganization</code>: name Zurich Insurance Group. This is the cleanest way to communicate the AIG → Zurich underwriter relationship to AI systems.</li>
+      <li><code>alternateName</code>: include "AIG Travel Guard" so legacy queries still resolve to the current entity.</li>
+      <li><code>sameAs</code>: Facebook, LinkedIn, YouTube, Instagram, X/Twitter, Trustpilot, and Wikipedia if a page exists. The Trustpilot link in particular is high-value for LLM trust signals.</li>
+      <li><code>contactPoint</code>: separate entries for customer service, sanctioned-countries hotline, and Advisor Connect tech support — including <code>availableLanguage</code> and 24/7 <code>hoursAvailable</code> on the main line.</li>
+      <li><code>memberOf</code>: UStiA and IGLTA (both shown in your footer).</li>
+      <li><code>hasCredential</code>: BBB accreditation.</li>
+      <li><code>knowsAbout</code>: list of insurance topics — explicit topical authority signal.</li>
+    </ul>
+    <p><span class="arrow">→</span> See <code>jsonld/sitewide.json</code> (the <code>@graph</code> bundle) for the full payload.</p>
+
+    <h3>3.2 WebSite</h3>
+    <p>Adds a sitelinks search box eligibility and explicitly ties pages back to the org. Include a <code>potentialAction</code> of type <code>SearchAction</code> if you have a <code>/search?q=</code> endpoint (or update the URL template to match).</p>
+    <p><span class="arrow">→</span> See <code>jsonld/sitewide.json</code> (bundled with the Organization node in one <code>@graph</code>).</p>
+
+    <h3>3.3 BreadcrumbList</h3>
+    <p>Every non-home page should carry a per-page <code>BreadcrumbList</code>. This is one of the schemas LLMs actually use to understand a page's place in the site hierarchy, which improves their ability to recommend related pages and properly attribute claims.</p>
+    <p>Unlike <code>Organization</code> and <code>WebSite</code>, a <code>BreadcrumbList</code> is not a single reusable payload — each page has its own trail. It is therefore embedded directly in each page's <code>@graph</code> rather than kept as a separate file. The per-page JSON-LD files in <code>jsonld/</code> (e.g. <code>plan-deluxe.json</code>, <code>faq-page.json</code>, <code>howto-file-claim.json</code>) each include their own <code>BreadcrumbList</code> node with an <code>@id</code> of <code>{page-url}#breadcrumb</code>. When adding a new template, copy the breadcrumb pattern from the closest existing page.</p>
+
+    <h3>3.4 Speakable <span style="font-weight:400; color:var(--midnight-50);">(optional but recommended for editorial pages)</span></h3>
+    <p>Add <code>speakable</code> to homepage, articles, FAQ, and education center pages. This signals which CSS selectors contain the most concise, quotable summaries of the page — exactly what voice assistants and LLMs pull for answers.</p>
+
+    <h2 id="s4">4. Per-page schema recommendations</h2>
+    <p>Pages are ordered by LLM-citation value, highest first.</p>
+
+    <h3>4.1 Homepage (<code>/</code>)</h3>
+    <p><strong>Recommended types:</strong> <code>WebPage</code> + <code>OfferCatalog</code> (for the four plans) + <code>FAQPage</code> (for the on-page FAQs) — wrapped in a single <code>@graph</code>.</p>
+    <p><strong>Why:</strong> The homepage already exposes the four plan comparison, four canonical FAQs, trust signals (Trustpilot, BBB, UStiA), and contact info. Marking all of this up gives LLMs a self-contained "what is Travel Guard" payload they can cite without crawling further. The FAQ block in particular is high-value: ChatGPT and Perplexity routinely surface FAQPage answers verbatim.</p>
+    <p><strong>Avoid:</strong> Don't list every FAQ on the site here — keep it to the 4 that are visibly on the page. Google penalizes mismatch between visible content and JSON-LD.</p>
+    <p><span class="arrow">→</span> See <code>jsonld/homepage.json</code>.</p>
+
+    <h3>4.2 Plan pages (<code>/travel-insurance/plans/{deluxe|preferred|essential|rental-vehicle-damage-plan}</code>)</h3>
+    <p><strong>Recommended types:</strong> <code>Product</code> + <code>Offer</code> + <code>aggregateRating</code> (if available) + <code>FAQPage</code> (plan-specific FAQs).</p>
+    <p><strong>Why:</strong> These are your money pages. <code>Product</code> + <code>Offer</code> is the schema LLMs map to "what plan covers X" questions. Use <code>hasOfferCatalog</code> to enumerate the included coverages (Trip Cancellation, Emergency Medical, Baggage, etc.) as line-items — that's the structure LLMs need to answer "does the Deluxe Plan cover medical evacuation?"</p>
+    <p><strong>LLM-specific tips:</strong></p>
+    <ul>
+      <li><code>audience.audienceType</code> describes who the plan is for in plain English ("international travelers, senior travelers, high-end vacationers"). LLMs use this for "best travel insurance for seniors" type queries.</li>
+      <li><code>isRelatedTo</code> cross-links the other plans so an LLM can answer comparison questions.</li>
+      <li><code>areaServed</code> should be <code>Country: United States</code> — this prevents misattribution in Canada/UK queries.</li>
+      <li>Only include <code>aggregateRating</code> with real, verifiable data. Inflating reviews is a structured-data policy violation and a reputational risk.</li>
+    </ul>
+    <p><span class="arrow">→</span> See <code>jsonld/plan-deluxe.json</code> (template for the other three).</p>
+
+    <h3>4.3 Plans listing page (<code>/travel-insurance/plans</code>)</h3>
+    <p><strong>Recommended type:</strong> <code>ItemList</code> listing the four products in display order.</p>
+    <p><strong>Why:</strong> Tells LLMs this page is a comparison/index — improves the chance they cite it for "Travel Guard plans" rather than picking one plan page arbitrarily.</p>
+    <p><span class="arrow">→</span> See <code>jsonld/plans-listing.json</code>.</p>
+
+    <h3>4.4 FAQ page (<code>/help-center/faqs</code>)</h3>
+    <p><strong>Recommended type:</strong> <code>FAQPage</code>.</p>
+    <p><strong>Why:</strong> This is the single highest LLM-citation surface on any insurance site. AI assistants pull FAQ answers verbatim and almost always link back. Mark up <strong>every</strong> Q&amp;A on the page, not just the top ones, but only ones whose answers are visible to the user.</p>
+    <p><strong>Tips:</strong></p>
+    <ul>
+      <li>Phrase questions the way real users ask them ("How much does Travel Guard cost?" not "Pricing structure").</li>
+      <li>Keep answers under 300 words — LLMs are more likely to pull short, complete answers.</li>
+      <li>Use one <code>FAQPage</code> with many <code>Question</code> children, not one FAQPage per question.</li>
+    </ul>
+    <p><span class="arrow">→</span> See <code>jsonld/faq-page.json</code>.</p>
+
+    <h3>4.5 Claims page (<code>/help-center/claims</code>)</h3>
+    <p><strong>Recommended type:</strong> <code>HowTo</code> with <code>HowToStep</code>s for the claim filing workflow.</p>
+    <p><strong>Why:</strong> "How do I file a Travel Guard claim" is one of the most common high-intent queries. A <code>HowTo</code> with numbered steps and a <code>tool</code> list gives LLMs a complete, citable workflow.</p>
+    <p><span class="arrow">→</span> See <code>jsonld/howto-file-claim.json</code>.</p>
+
+    <h3>4.6 About Us (<code>/about-us</code>)</h3>
+    <p><strong>Recommended type:</strong> <code>AboutPage</code> whose <code>mainEntity</code> points to the <code>#organization</code> node.</p>
+    <p><strong>Why:</strong> Strengthens the entity. LLMs use the About page to confirm corporate facts (founding, parent company, jurisdiction) when they evaluate whether to trust a source. This is the page to anchor the Zurich underwriter relationship in narrative form <em>and</em> in <code>parentOrganization</code> JSON-LD.</p>
+    <p><span class="arrow">→</span> See <code>jsonld/about-us.json</code>.</p>
+
+    <h3>4.7 Contact Us (<code>/help-center/contact-us</code>)</h3>
+    <p><strong>Recommended type:</strong> <code>ContactPage</code> referencing the org's <code>contactPoint</code> array.</p>
+    <p><strong>Why:</strong> Standardizes phone, hours, and language availability for AI assistants answering "Travel Guard customer service number."</p>
+    <p><span class="arrow">→</span> See <code>jsonld/contact-us.json</code>.</p>
+
+    <h3>4.8 Trip-type and traveler-type pages (e.g. <code>/travel-insurance/trip-types/cruise-insurance</code>)</h3>
+    <p><strong>Recommended type:</strong> <code>WebPage</code> + <code>Service</code> (with <code>serviceType: "Cruise Travel Insurance"</code> etc.) + <code>OfferCatalog</code> listing the recommended plans for that trip type.</p>
+    <p><strong>Why:</strong> These pages compete for high-intent queries like "best cruise travel insurance." <code>Service</code> with <code>audience</code> is what LLMs need to answer "what plan should I buy for a cruise?"</p>
+    <p><span class="arrow">→</span> See <code>jsonld/trip-type-cruise.json</code> (template for all trip and traveler types).</p>
+
+    <h3>4.9 Education Center articles (<code>/info/*</code>, <code>/travel-resources/travel-tips/*</code>)</h3>
+    <p><strong>Recommended type:</strong> <code>Article</code> (or <code>NewsArticle</code> if dated/news-like). Add <code>DefinedTerm</code> for glossary-style content like "What is Travel Insurance?".</p>
+    <p><strong>Why:</strong> LLMs love <code>Article</code> with clean <code>author</code>, <code>datePublished</code>, <code>dateModified</code>, <code>about</code>, and <code>mainEntityOfPage</code>. The <code>dateModified</code> field is particularly important — it's a primary recency signal AI search uses to choose between competing sources.</p>
+    <p><span class="arrow">→</span> See <code>jsonld/article-template.json</code> and <code>jsonld/education-center-what-is.json</code>.</p>
+
+    <h3>4.10 Customer Reviews page (<code>/about-us/travel-insurance-reviews</code>)</h3>
+    <p><strong>Recommended types:</strong> <code>CollectionPage</code> whose <code>mainEntity</code> is the Organization with <code>aggregateRating</code> and a <code>review</code> array.</p>
+    <p><strong>Why:</strong> Reviews mapped to schema can drive star ratings in traditional search and serve as a trust signal for LLMs. <strong>Use only verifiable, first-party reviews</strong> — never invent ratings.</p>
+    <p><span class="arrow">→</span> See <code>jsonld/reviews-page.json</code>.</p>
+
+    <h2 id="s5">5. Page-by-page priority matrix</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Priority</th>
+          <th>Page / Template</th>
+          <th>Schema types</th>
+          <th>Effort</th>
+          <th>LLM impact</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="badge p0">P0</span></td><td>All pages (sitewide bundle)</td><td>Organization, WebSite</td><td>Low — one-time include</td><td>Very high — foundational entity</td></tr>
+        <tr><td><span class="badge p0">P0</span></td><td>Every non-home page</td><td>BreadcrumbList (per-page, embedded in page <code>@graph</code>)</td><td>Low per page</td><td>Very high — site-hierarchy signal</td></tr>
+        <tr><td><span class="badge p0">P0</span></td><td>Homepage</td><td>WebPage + OfferCatalog + FAQPage</td><td>Medium</td><td>Very high — first-touch citations</td></tr>
+        <tr><td><span class="badge p0">P0</span></td><td>FAQ (<code>/help-center/faqs</code>)</td><td>FAQPage</td><td>Low</td><td>Very high — verbatim answer extraction</td></tr>
+        <tr><td><span class="badge p0">P0</span></td><td>Plan pages (4)</td><td>Product + Offer + FAQPage</td><td>Medium</td><td>Very high — product comparison queries</td></tr>
+        <tr><td><span class="badge p1">P1</span></td><td>Plans listing</td><td>ItemList</td><td>Low</td><td>Medium</td></tr>
+        <tr><td><span class="badge p1">P1</span></td><td>Claims</td><td>HowTo</td><td>Medium</td><td>High — high-intent workflow queries</td></tr>
+        <tr><td><span class="badge p1">P1</span></td><td>About Us</td><td>AboutPage + Organization</td><td>Low</td><td>High — entity disambiguation, Zurich relationship</td></tr>
+        <tr><td><span class="badge p1">P1</span></td><td>Contact Us</td><td>ContactPage</td><td>Low</td><td>Medium</td></tr>
+        <tr><td><span class="badge p2">P2</span></td><td>Trip-type pages (13)</td><td>Service + OfferCatalog</td><td>Medium per page</td><td>High — long-tail "best X insurance" queries</td></tr>
+        <tr><td><span class="badge p2">P2</span></td><td>Traveler-type pages (12)</td><td>Service + OfferCatalog + PeopleAudience</td><td>Medium per page</td><td>High — same</td></tr>
+        <tr><td><span class="badge p2">P2</span></td><td>Education Center / Travel Tips</td><td>Article + DefinedTerm</td><td>Low per article</td><td>Medium-High — content authority</td></tr>
+        <tr><td><span class="badge p2">P2</span></td><td>Reviews page</td><td>CollectionPage + Review + AggregateRating</td><td>Medium</td><td>Medium</td></tr>
+        <tr><td><span class="badge p3">P3</span></td><td>Destinations pages</td><td>Place + TouristDestination + Article</td><td>Medium</td><td>Medium</td></tr>
+        <tr><td><span class="badge p3">P3</span></td><td>Video Library</td><td>VideoObject per video</td><td>Medium</td><td>Medium</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="s6">6. Implementation notes for the dev team</h2>
+
+    <h3>6.1 Where to put the JSON-LD</h3>
+    <p>Inject in <code>&lt;head&gt;</code> (or just before <code>&lt;/body&gt;</code>) as <code>&lt;script type="application/ld+json"&gt;</code>. AEM users typically add a global include for the site-wide schemas and a per-component include for page-specific schemas. Don't put JSON-LD inside <code>&lt;noscript&gt;</code> or behind JavaScript that runs after page load — many LLM crawlers don't execute JS.</p>
+
+    <h3>6.2 <code>@id</code> discipline</h3>
+    <p>Use stable, absolute-URL <code>@id</code>s for every node and <em>reference</em> them from other schemas with <code>{ "@id": "..." }</code>. This is what lets LLMs and crawlers stitch a knowledge graph across pages instead of treating each page as an isolated document. The pattern used throughout these JSON-LD files:</p>
+    <ul>
+      <li>Organization: <code>https://www.travelguard.com/#organization</code></li>
+      <li>WebSite: <code>https://www.travelguard.com/#website</code></li>
+      <li>Per-page entities: <code>{page-url}#{type}</code> — e.g. <code>https://www.travelguard.com/travel-insurance/plans/deluxe#product</code></li>
+    </ul>
+
+    <h3>6.3 The Zurich rebrand opportunity</h3>
+    <p>In addition to the schema work, three sitewide updates will help LLMs catch up to the rebrand:</p>
+    <ol>
+      <li><strong>Organization.parentOrganization</strong> in JSON-LD names Zurich Insurance Group — included in <code>sitewide.json</code>.</li>
+      <li><strong>Add an underwriter disclosure page</strong> (<code>/legal/our-underwriter</code> already exists per the footer) with its own JSON-LD <code>WebPage</code> and a clear text declaration. LLMs index legal pages disproportionately.</li>
+      <li><strong>Update Wikipedia/Wikidata</strong> if you have a marketing team that can edit it. LLMs treat Wikidata as a high-trust ground truth — making sure the Travel Guard / Zurich relationship is reflected there will propagate through future model training.</li>
+    </ol>
+
+    <h3>6.4 Validation</h3>
+    <p>Before pushing, validate each JSON-LD block at:</p>
+    <ul>
+      <li><a href="https://validator.schema.org/">validator.schema.org</a> — confirms schema.org property correctness</li>
+      <li><a href="https://search.google.com/test/rich-results">search.google.com/test/rich-results</a> — confirms Google rich-result eligibility (FAQPage, Product, HowTo, Article are all eligible types)</li>
+    </ul>
+
+    <h3>6.5 Things to avoid</h3>
+    <ul>
+      <li>Don't mark up content that isn't visible on the page — Google penalizes this and LLMs ignore the page.</li>
+      <li>Don't fabricate <code>aggregateRating</code> values — link to Trustpilot via <code>sameAs</code> instead, and only add <code>aggregateRating</code> if you can render the matching rating widget on the page.</li>
+      <li>Don't put price ranges on plan pages unless the price is actually shown — premiums depend on traveler age, trip cost, and state, so <code>priceSpecification.description</code> is the safer pattern (already in the Deluxe JSON-LD).</li>
+      <li>Don't duplicate the same Organization JSON-LD with conflicting properties on different pages. Define it once site-wide and reference it via <code>@id</code> everywhere else.</li>
+    </ul>
+
+    <h2 id="s7">7. Suggested rollout order</h2>
+    <ol>
+      <li><strong>Week 1:</strong> Site-wide bundle (Organization + WebSite). Validate. Submit updated sitemap to Google Search Console. Per-page <code>BreadcrumbList</code> ships embedded in each page's own <code>@graph</code> as those pages are tackled in the weeks below.</li>
+      <li><strong>Week 2:</strong> Homepage, FAQ page, all four plan pages.</li>
+      <li><strong>Week 3:</strong> About Us, Contact Us, Claims (HowTo), Plans listing (ItemList).</li>
+      <li><strong>Week 4-5:</strong> Trip-type and traveler-type pages (Service schema).</li>
+      <li><strong>Week 6+:</strong> Education Center and Travel Tips articles (template-driven, can be automated).</li>
+    </ol>
+    <p>After 4-6 weeks of indexing, monitor LLM citations using a tool like Profound, Otterly, or simple manual probes ("what is Travel Guard," "compare travel insurance plans," "how do I file a claim with Travel Guard").</p>
+
+    <h2 id="s8">8. Files in this audit</h2>
+    <pre><code>TravelGuard-Schema-Audit.md              ← this document
+jsonld/
+  sitewide.json                          ← P0, every page (Organization + WebSite @graph bundle)
+  homepage.json                          ← P0, homepage
+  plan-deluxe.json                       ← P0, Deluxe plan (template for others)
+  plans-listing.json                     ← P1, /travel-insurance/plans
+  faq-page.json                          ← P0, /help-center/faqs
+  about-us.json                          ← P1, /about-us
+  contact-us.json                        ← P1, /help-center/contact-us
+  howto-file-claim.json                  ← P1, /help-center/claims
+  trip-type-cruise.json                  ← P2, trip-type template
+  article-template.json                  ← P2, Travel Tips / blog
+  education-center-what-is.json          ← P2, Education Center
+  reviews-page.json                      ← P2, reviews collection</code></pre>
+
+    <h2 id="s9">9. CLAUDE.md context (for your repo)</h2>
+    <p>Per your workflow, here's a snippet you can drop into a <code>CLAUDE.md</code> at the repo root so future AI sessions have context:</p>
+    <pre><code># Travel Guard structured-data conventions
+
+We use JSON-LD (not Microdata or RDFa) for all structured data. Every page must include:
+- Site-wide Organization (@id: https://www.travelguard.com/#organization)
+- Site-wide WebSite (@id: https://www.travelguard.com/#website)
+- Per-page BreadcrumbList
+
+Page-specific schema is added based on template type. See /docs/schema/ for the
+canonical JSON-LD payloads per template. When adding a new template, copy the
+closest existing pattern and update @ids to the page URL with a #type suffix.
+
+Key entity facts:
+- Underwriter parent: Zurich Insurance Group (American Zurich Insurance Company,
+  Zurich American Insurance Company, National Union Fire Insurance Company of
+  Pittsburgh, Pa.)
+- Legal name: Travel Guard Group, Inc.
+- Primary phone: 800-826-5248
+- Mailing address: 3300 Business Park Drive, Stevens Point, WI 54482
+- Memberships to cite in Organization.memberOf: UStiA, IGLTA
+- Accreditations to cite in Organization.hasCredential: BBB
+
+Validate every new JSON-LD against https://validator.schema.org/ before merging.</code></pre>
+
+    <h2 id="s10">10. Suggested commit message</h2>
+    <pre><code>feat(seo): add LLM-first JSON-LD schema markup site-wide and per-template
+
+- Add site-wide Organization (InsuranceAgency) + WebSite bundle to &lt;head&gt;
+  on every template, and a per-page BreadcrumbList embedded in each
+  non-home page's own JSON-LD @graph
+- Add Organization.parentOrganization referencing Zurich Insurance Group
+  to reflect the AIG → Zurich underwriter relationship
+- Add page-specific schemas:
+  - Homepage: WebPage + OfferCatalog + FAQPage
+  - Plan pages: Product + Offer + FAQPage
+  - FAQ page: FAQPage (full)
+  - Claims: HowTo
+  - About Us: AboutPage
+  - Contact Us: ContactPage
+  - Trip-type / traveler-type pages: Service + OfferCatalog
+  - Education Center / Travel Tips: Article + DefinedTerm
+- All entities use stable @id URIs and cross-reference Organization
+- Optimized for LLM citation (ChatGPT, Perplexity, AI Overviews) in
+  addition to traditional rich results
+
+Refs: SEO-XXXX</code></pre>
+
+  </main>
+
+  <footer class="docfoot">
+    Travel Guard Schema Markup Audit (LLM-First) · May 2026 · Generated from <code>TravelGuard-Schema-Audit.md</code>
+  </footer>
+
+</div>
+</body>
+</html>
