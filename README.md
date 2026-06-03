@@ -6,12 +6,15 @@ HTML email templates for travel insurance products across multiple brands and in
 
 | Directory | Brand | Markets | Templates |
 |-----------|-------|---------|-----------|
-| `tg/` | Travel Guard / Zurich | US, CA, IT, MY, SG + Agents | ~134 |
-| `row/` | Zurich Travel Guard | 14 countries (AT, BE, CA, CH, CZ, DE, ES, FR, IT, NL, NZ, PT, SG, UK, US) | 29 |
-| `expedia/` | Expedia Travel Insurance | US, CA, MX, NZ, IT, HK, SG | 15 |
+| `tg/` | Travel Guard / Zurich | US (AIG archive + Zurich) | ~141 |
+| `digdrct/` | Travel Guard — digital direct | US, CA, IT, MY, SG | 16 |
+| `agents/` | Travel Guard — agent-facing | US, CA | 3 |
+| `admin/` | Travel Guard — admin/internal | US | 4 |
+| `row/` | Zurich Travel Guard | 16 countries (AT, BE, CA, CH, CZ, DE, ES, FR, GB, IE, IT, NL, NZ, PT, SG, US) | 29 |
+| `expedia/` | Expedia Travel Insurance | 19 markets (AT, BE, CA, CH, DE, DK, ES, FI, FR, HK, IE, IT, MX, NL, NO, NZ, SE, SG, US) | 30 |
 | `qantas/` | Qantas Travel Insurance | AU, NZ | 24 |
 | `jetstar/` | Jetstar Travel Insurance | AU, NZ, SG | 10 |
-| `united/` | United Airlines | US, CA, BE | 7 |
+| `united/` | United Airlines | US, CA | 5 |
 
 Multi-language support where applicable (e.g. Belgium: en/fr/nl, Switzerland: de/en/fr, Canada: en/fr).
 
@@ -19,9 +22,9 @@ Multi-language support where applicable (e.g. Belgium: en/fr/nl, Switzerland: de
 
 - **Policy confirmations** — sent after purchase (all brands)
 - **Customer journey** — welcome, follow-up, save-quote, post-trip (TG)
-- **Lifecycle** — pre-trip reminders, cancellations, void, AMT expiry (Qantas, Jetstar)
+- **Lifecycle** — pre-trip reminders, cancellations, void, AMT expiry (Qantas, Jetstar, digdrct)
 - **BAU campaigns** — seasonal updates, travel tips, holiday promos (TG)
-- **Agent communications** — agent-facing templates (TG)
+- **Agent communications** — agent-facing templates (`agents/`)
 
 ## Technical Stack
 
@@ -43,22 +46,24 @@ iPhone Mail, Android Mail, Gmail (web + mobile), Apple Mail, Outlook 2016
 
 ```
 ├── tg/
-│   ├── us/aig/              # Legacy AIG templates (archive)
-│   ├── us/zurich/           # Modern Zurich templates (Figma-designed)
-│   │   ├── fulfillment/     # Customer journey emails
-│   │   ├── holiday/         # Holiday campaign emails
-│   │   ├── seasonal-update/ # Seasonal BAU emails
-│   │   └── travel-tips/     # Travel safety tips
-│   ├── ca/en/               # Canada
-│   ├── it/it/               # Italy
-│   ├── my/en/               # Malaysia
-│   ├── sg/en/               # Singapore
-│   ├── agents/              # Agent templates
-│   └── admin/               # Admin templates
+│   └── us/
+│       ├── aig/             # Legacy AIG templates (archive)
+│       └── zurich/          # Modern Zurich templates (Figma-designed)
+│           ├── fulfillment/     # Customer journey emails
+│           ├── holiday/         # Holiday campaign emails
+│           ├── seasonal-update/ # Seasonal BAU emails
+│           ├── sponsor/         # Sponsorship emails (Zurich Classic)
+│           └── travel-tips/     # Travel safety tips
+├── digdrct/                 # Digital-direct lifecycle (US, CA, IT, MY, SG)
+│   └── {market}/{language}/
+├── agents/                  # Agent-facing templates (US, CA)
+│   └── {market}/en/
+├── admin/                   # Admin / internal templates (US)
+│   └── us/en/
 ├── row/
 │   └── {country}/{language}/policy-confirmation.html
 ├── expedia/
-│   └── {country}/{language}/policy-confirmation.html
+│   └── {market}/{language}/policy-confirmation.html
 ├── qantas/
 │   ├── au/                  # Australia
 │   └── nz/                  # New Zealand
@@ -68,8 +73,7 @@ iPhone Mail, Android Mail, Gmail (web + mobile), Apple Mail, Outlook 2016
 │   └── sg/                  # Singapore
 └── united/
     ├── us/en/               # United States
-    ├── ca/en/               # Canada
-    └── be/{fr,nl}/          # Belgium
+    └── ca/en/               # Canada
 ```
 
 ## Component Library
@@ -104,7 +108,7 @@ The project is transitioning from **AIG Travel** to **Travel Guard / Zurich** br
 | Brand | Status |
 |-------|--------|
 | TG US (Zurich) | Complete |
-| ROW (14 countries) | Complete |
+| ROW (16 countries) | Complete |
 | Expedia | Complete |
 | Qantas NZ | Complete |
 | Qantas AU | Planned |
@@ -113,9 +117,11 @@ The project is transitioning from **AIG Travel** to **Travel Guard / Zurich** br
 
 ## Documentation
 
-Each brand directory has its own docs with brand-specific colors, variables, and template status:
+Shared patterns live in the root doc; each brand directory has its own docs with brand-specific colors, variables, and template status:
 
+- [`CLAUDE.md`](CLAUDE.md) — repo-wide patterns, brand colors, design-system reference, QA tooling
 - [`tg/us/zurich/CLAUDE.md`](tg/us/zurich/CLAUDE.md) — Figma workflow, dark mode, hero image patterns
-- [`row/CLAUDE.md`](row/CLAUDE.md) — ROW markets, rebranding rules, modernization status
+- [`row/CLAUDE.md`](row/CLAUDE.md) — ROW markets, rebranding rules, modernization status (see also [`row/row-instructions.md`](row/row-instructions.md))
 - [`expedia/CLAUDE.md`](expedia/CLAUDE.md) — Expedia template structure, Handlebars variables
 - [`qantas/CLAUDE.md`](qantas/CLAUDE.md) — Lifecycle emails, underwriter transition context
+- [`digdrct/digdrct-instructions.md`](digdrct/digdrct-instructions.md) — Digital-direct templates (US, CA, IT, MY, SG)

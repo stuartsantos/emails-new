@@ -60,17 +60,20 @@ EOF
 )"
 ```
 
-## 5. Check CLAUDE.md docs
+## 5. Check CLAUDE.md and README.md docs
 
-Read the relevant CLAUDE.md files and determine if any need updating based on the changes being shipped. Only update when genuinely warranted — do not force unnecessary doc changes.
+Read the relevant CLAUDE.md files and the root `README.md`, and determine if any need updating based on the changes being shipped. Only update when genuinely warranted — do not force unnecessary doc changes.
 
 | File | Update when... |
 |------|----------------|
 | `CLAUDE.md` (root) | New shared patterns, repo structure changes |
+| `README.md` (root) | New brands/markets/directories, template counts shift materially, project structure or rebranding status changes |
 | `expedia/CLAUDE.md` | New markets, templates, or status changes |
 | `row/CLAUDE.md` | New countries, rebranding progress, status changes |
 | `qantas/CLAUDE.md` | Template status updates |
 | `tg/us/zurich/CLAUDE.md` | New emails, images, completed follow-ups |
+
+`README.md` and `CLAUDE.md` (root) overlap — the Brands & Markets table, Project Structure tree, and Rebranding Status in `README.md` mirror the directory table in root `CLAUDE.md`. When a change touches one (e.g. adding/removing a market or directory), check whether the other needs the same edit so they don't drift.
 
 If updates are needed:
 1. Make the edits
@@ -108,6 +111,6 @@ If any branches were deleted, note them in the summary. If none were found, skip
 Report back with:
 - Commit hash (short)
 - Number of files changed
-- Which docs were updated (if any)
+- Which docs were updated (if any) — note CLAUDE.md and/or README.md separately
 - Branches cleaned up (if any)
 - Push confirmation or error details
