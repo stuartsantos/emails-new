@@ -31,6 +31,7 @@ Common variables across ROW templates:
 {{policyDetail-productName}}               # Product name
 {{CustomerServicesContactNumber}}          # Support phone
 {{CustomerServicesEmailAddress}}           # Support email
+{{CustomerServicesURL}}                    # Support website URL
 {{ClaimsContactNumber}}                    # Claims phone
 {{ClaimsEmailAddress}}                     # Claims email
 {{AssistanceServicesContactNumber}}        # Emergency assistance phone
