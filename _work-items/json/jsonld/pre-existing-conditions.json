@@ -1,0 +1,104 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.travelguard.com/traveler-types/pre-existing-medical-condition-travel-insurance-plans#webpage",
+      "url": "https://www.travelguard.com/traveler-types/pre-existing-medical-condition-travel-insurance-plans",
+      "name": "Travel Insurance Plans for Pre-Existing Medical Conditions | Travel Guard",
+      "description": "Travel Guard travel insurance plans may include a Pre-Existing Medical Conditions Exclusion Waiver when purchased within 15 days of your initial trip deposit. Learn about coverage requirements and how to qualify.",
+      "isPartOf": { "@id": "https://www.travelguard.com/#website" },
+      "inLanguage": "en-US",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", ".intro", ".faq-section"]
+      },
+      "mainEntity": [
+        { "@id": "https://www.travelguard.com/traveler-types/pre-existing-medical-condition-travel-insurance-plans#service" },
+        { "@id": "https://www.travelguard.com/traveler-types/pre-existing-medical-condition-travel-insurance-plans#faqpage" }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.travelguard.com/traveler-types/pre-existing-medical-condition-travel-insurance-plans#service",
+      "serviceType": "Travel Insurance for Pre-Existing Medical Conditions",
+      "name": "Travel Insurance with Pre-Existing Medical Conditions Exclusion Waiver",
+      "description": "Travel Guard plans may waive the standard pre-existing medical conditions exclusion when the policy is purchased within a qualifying window (typically 15 days) of the initial trip deposit, the traveler is medically able to travel on the purchase date, and the full prepaid non-refundable trip cost is insured.",
+      "provider": { "@id": "https://www.travelguard.com/#organization" },
+      "areaServed": { "@type": "Country", "name": "United States" },
+      "audience": {
+        "@type": "PeopleAudience",
+        "audienceType": "Travelers with pre-existing medical conditions, including diabetes, heart conditions, high blood pressure, asthma, cancer, and other chronic conditions seeking trip cancellation and emergency medical coverage."
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.travelguard.com/purchase/start-your-quote",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "description": "Cost varies by base plan, trip cost, and traveler age. Pre-existing medical conditions waiver is available as an early purchase benefit on eligible plans at no separate fee."
+        },
+        "availability": "https://schema.org/InStock",
+        "seller": { "@id": "https://www.travelguard.com/#organization" }
+      },
+      "isRelatedTo": [
+        {
+          "@type": "Product",
+          "name": "Deluxe Plan",
+          "url": "https://www.travelguard.com/travel-insurance/plans/deluxe"
+        },
+        {
+          "@type": "Product",
+          "name": "Preferred Plan",
+          "url": "https://www.travelguard.com/travel-insurance/plans/preferred"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.travelguard.com/traveler-types/pre-existing-medical-condition-travel-insurance-plans#faqpage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does Travel Guard cover pre-existing medical conditions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Travel Guard offers a Pre-Existing Medical Conditions Exclusion Waiver as an early purchase benefit on eligible plans. To qualify, you typically need to purchase your plan within 15 days of your initial trip deposit, be medically able to travel on the purchase date, and insure the full prepaid non-refundable cost of your trip."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What counts as a pre-existing medical condition?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A pre-existing medical condition is generally any illness, injury, or condition for which you received medical treatment, advice, diagnosis, or a change in prescription medication during a defined look-back period before your plan effective date. Review your policy of insurance for the specific look-back window."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I qualify for the pre-existing conditions waiver?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To qualify for the Pre-Existing Medical Conditions Exclusion Waiver on Travel Guard plans, you must: (1) purchase within 15 days of your initial trip deposit, (2) be medically able to travel on the date you buy the plan, and (3) insure the full prepaid non-refundable cost of your trip. Specific requirements may vary by state."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which Travel Guard plans include the pre-existing conditions waiver?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Pre-Existing Medical Conditions Exclusion Waiver is available on the Deluxe and Preferred plans when purchase requirements are met. Availability and exact terms may vary by state — confirm at quote time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I'm outside the 15-day purchase window?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If you purchase a plan more than 15 days after your initial trip deposit, the pre-existing medical conditions exclusion will apply. You can still purchase coverage for new, unrelated illnesses and injuries, trip cancellation for other covered reasons, and standard travel benefits — but claims related to pre-existing conditions would generally not be covered."
+          }
+        }
+      ]
+    }
+  ]
+}

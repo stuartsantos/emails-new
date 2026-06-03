@@ -1,0 +1,113 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/cancel-for-any-reason#webpage",
+      "url": "https://www.travelguard.com/travel-insurance/optional-coverage/cancel-for-any-reason",
+      "name": "Cancel For Any Reason (CFAR) Travel Insurance | Travel Guard",
+      "description": "Travel Guard's Cancel For Any Reason (CFAR) is an optional upgrade that allows you to cancel your trip for any reason not otherwise covered by your travel insurance plan and receive partial reimbursement of prepaid, non-refundable trip costs.",
+      "isPartOf": { "@id": "https://www.travelguard.com/#website" },
+      "inLanguage": "en-US",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", ".intro", ".faq-section"]
+      },
+      "mainEntity": [
+        { "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/cancel-for-any-reason#service" },
+        { "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/cancel-for-any-reason#faqpage" }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/cancel-for-any-reason#service",
+      "serviceType": "Cancel For Any Reason Travel Insurance Upgrade",
+      "name": "Cancel For Any Reason (CFAR)",
+      "alternateName": "CFAR Upgrade",
+      "description": "An optional travel insurance upgrade from Travel Guard. CFAR lets you cancel your trip for any reason not otherwise covered by your base plan and receive reimbursement of a percentage of your prepaid, non-refundable trip costs. Must be purchased within a set window (typically 15 days) of your initial trip deposit and you must cancel at least 48 hours prior to departure.",
+      "provider": { "@id": "https://www.travelguard.com/#organization" },
+      "areaServed": { "@type": "Country", "name": "United States" },
+      "audience": {
+        "@type": "PeopleAudience",
+        "audienceType": "Travelers who want maximum cancellation flexibility, including those concerned about events not listed as covered reasons under standard travel insurance."
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.travelguard.com/purchase/start-your-quote",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "description": "CFAR is an optional upgrade added to a base Travel Guard plan. The upgrade cost varies by plan, trip cost, and traveler age. Get a personalized quote."
+        },
+        "availability": "https://schema.org/InStock",
+        "seller": { "@id": "https://www.travelguard.com/#organization" }
+      },
+      "isRelatedTo": [
+        {
+          "@type": "Product",
+          "name": "Deluxe Plan",
+          "url": "https://www.travelguard.com/travel-insurance/plans/deluxe"
+        },
+        {
+          "@type": "Product",
+          "name": "Preferred Plan",
+          "url": "https://www.travelguard.com/travel-insurance/plans/preferred"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/cancel-for-any-reason#faqpage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Cancel For Any Reason (CFAR) travel insurance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cancel For Any Reason (CFAR) is an optional upgrade to a base travel insurance plan that lets you cancel your trip for any reason not otherwise covered by the plan and receive partial reimbursement of your prepaid, non-refundable trip costs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does CFAR cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CFAR is added as a percentage upgrade to your base Travel Guard plan. The total cost depends on your base plan, total trip cost, and traveler age. Get a personalized quote at travelguard.com or call 800-826-5248."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much will CFAR reimburse if I cancel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CFAR typically reimburses a percentage of your prepaid, non-refundable trip costs (the exact percentage is shown on your Schedule of Benefits). It is not a 100% refund — review your policy documents for the specific reimbursement percentage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When must I purchase CFAR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CFAR must be purchased within a set window (typically 15 days) of your initial trip deposit. After that window, it is no longer available to add to your plan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How close to my trip can I cancel under CFAR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To use CFAR benefits, you must cancel your trip at least 48 hours before your scheduled departure. Cancellations made within 48 hours of departure are not eligible for CFAR reimbursement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is CFAR available on every Travel Guard plan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CFAR is available as an optional upgrade on eligible Travel Guard plans (typically the Deluxe and Preferred plans). Availability and terms vary by state of residence — confirm at quote time."
+          }
+        }
+      ]
+    }
+  ]
+}
