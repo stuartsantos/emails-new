@@ -9,6 +9,7 @@
       "description": "Travel Guard travel insurance plans may include a Pre-Existing Medical Conditions Exclusion Waiver when purchased within 15 days of your initial trip deposit. Learn about coverage requirements and how to qualify.",
       "isPartOf": { "@id": "https://www.travelguard.com/#website" },
       "inLanguage": "en-US",
+      "breadcrumb": { "@id": "https://www.travelguard.com/traveler-types/pre-existing-medical-condition-travel-insurance-plans#breadcrumb" },
       "speakable": {
         "@type": "SpeakableSpecification",
         "cssSelector": ["h1", ".intro", ".faq-section"]
@@ -97,6 +98,30 @@
             "@type": "Answer",
             "text": "If you purchase a plan more than 15 days after your initial trip deposit, the pre-existing medical conditions exclusion will apply. You can still purchase coverage for new, unrelated illnesses and injuries, trip cancellation for other covered reasons, and standard travel benefits — but claims related to pre-existing conditions would generally not be covered."
           }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/traveler-types/pre-existing-medical-condition-travel-insurance-plans#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Traveler Types",
+          "item": "https://www.travelguard.com/traveler-types"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Pre-Existing Medical Conditions",
+          "item": "https://www.travelguard.com/traveler-types/pre-existing-medical-condition-travel-insurance-plans"
         }
       ]
     }

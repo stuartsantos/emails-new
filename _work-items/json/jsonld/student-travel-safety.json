@@ -79,6 +79,36 @@
       ],
       "publisher": { "@id": "https://www.travelguard.com/#organization" },
       "inLanguage": "en-US"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/travel-resources/travel-safety/student-travel-safety#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Traveler Resources",
+          "item": "https://www.travelguard.com/travel-resources"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Travel Safety",
+          "item": "https://www.travelguard.com/travel-resources/travel-safety"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Student Travel Safety",
+          "item": "https://www.travelguard.com/travel-resources/travel-safety/student-travel-safety"
+        }
+      ]
     }
   ]
 }
