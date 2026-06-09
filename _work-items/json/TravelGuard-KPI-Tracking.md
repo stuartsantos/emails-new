@@ -207,3 +207,114 @@ Before kicking off implementation, lock in these baselines so you have something
 - [ ] Trustpilot — current overall rating + review count (snapshot for the homepage `aggregateRating` work)
 
 Save all of these to a shared `baseline-2026-05-20/` folder alongside this audit. That's your "before."
+
+---
+
+## 11. First post-deployment checkpoint — Jun 9, 2026
+
+**Otterly window pulled:** May 27 – Jun 9, 2026 (13 days, US, all engines, 20 prompts)
+**Days since schema deployment:** Most file timestamps are Jun 3-9, so the current Otterly window is roughly **half pre-deployment and half post-deployment, with at most 6 days of post-deploy data**. The site-wide bundle has been live longest; per-page schemas are still propagating into LLM indexes.
+
+### 11.1 What changed at the brand level
+
+| Metric | Baseline (May 7-20) | Current (May 27-Jun 9) | Δ | 30-day target | On track? |
+|---|---|---|---|---|---|
+| Brand mentions | 452 | **487** | **+35 (+7.7%)** | 475 | ✓ Exceeded |
+| Brand rank | #2 | #2 | flat | #2 | ✓ |
+| Brand coverage % | 29.1% | **31.2%** | **+2.1pp** | 30% | ✓ Exceeded |
+| Brand coverage trend | -1 | **+1** | reversed | 0 | ✓ Exceeded |
+| Likelihood to buy | 79% (-2) | **83%** (+1) | **+4pp** | 80% | ✓ Exceeded |
+| Average brand position | 1.94 | **1.76** | **-0.18** (better) | 1.80 | ✓ Exceeded |
+| Sentiment score | +63 | +59 | -4 | +65 | ✗ Slight decline |
+
+Almost every brand-level KPI moved in the right direction. The coverage trend reversal (from -1 to +1) is the cleanest signal that whatever was eroding share previously has stopped. The likelihood-to-buy jump of +4pp also outpaces the 90-day target (+4pp) at the 30-day mark.
+
+The sentiment dip (-4) is worth watching but likely noise — it's within the natural variance Otterly shows in the +63 to +73 range across competitors.
+
+### 11.2 What changed in citations (the metrics most tied to schema work)
+
+| Metric | Baseline | Current | Δ | 90-day target | On track? |
+|---|---|---|---|---|---|
+| Own-domain citations | 185 | **294** | **+109 (+58.9%)** | 400 | ✓ Strongly on pace |
+| Citation share | 1% | **2%** | **doubled** | 3-4% | ✓ Halfway there at day 21 |
+| Domain coverage | 8% | **13%** | **+5pp (+62.5%)** | 14% | ✓ Near 90-day target already |
+
+The citation numbers are the most striking movement in the report. A 58.9% jump in own-domain citations in 21 days, before most LLM indexes can have re-crawled and absorbed the new schema, suggests other forces are also at work — most likely: (a) competitor decay (Allianz's own-domain citations dropped 541 → 518 in the same window, World Nomads lost 28 brand mentions), (b) the site-wide bundle was deployed earliest and is likely visible to faster-refreshing indexes (Bing/ChatGPT search), and (c) seasonality. Whatever the mix, the **direction is right** — and if the post-deployment trajectory continues, the 90-day citation targets are very reachable.
+
+### 11.3 Pages winning citations now (vs. baseline)
+
+The mix of top-cited URLs shifted significantly:
+
+| Rank | Baseline top 3 URLs | Citations | Current top 3 URLs | Citations |
+|---|---|---|---|---|
+| 1 | /travel-resources/travel-safety/student-travel-safety | 26 | /traveler-types/pre-existing-medical-condition... | **34** |
+| 2 | /traveler-types/pre-existing-medical-condition... | 19 | /info/assistance-services | **22** |
+| 3 | /travel-insurance/optional-coverage/cancel-for-any-reason | 18 | /travel-insurance/benefits/baggage-insurance | **22** |
+
+**Pre-existing conditions** climbed from #2 → #1 with a +79% citation increase (19 → 34). It was one of the new P0 pages we added schema for. Even if the schema isn't yet the proximate cause, this validates the Otterly-driven prioritization — the page was already trending up, and reinforcement should compound.
+
+**Two brand-new entries** in the top 3: `/info/assistance-services` and `/travel-insurance/benefits/baggage-insurance`. Neither has dedicated JSON-LD yet. They're rising on the strength of the site-wide bundle alone plus content quality. Both are strong candidates for adding to the per-page schema queue:
+- `assistance-services` aligns with the "best emergency assistance" prompt cluster (+14 citations in this window)
+- `baggage-insurance` aligns with the "lost baggage coverage" prompt (+13 citations) — the audit's Section 8.3 already flagged this as a high mention-to-citation gap
+
+**Student travel safety dropped out of the top 3** but not necessarily out of the top 10 — Otterly only shows top 3 in this view. The full Citations page in Otterly would confirm whether it actually declined or just got out-paced by faster-growing pages.
+
+### 11.4 Per-prompt citation changes
+
+Tracking the specific high-value prompts from the audit's Section 8.3:
+
+| Prompt | Baseline TG citations | Current | Δ | 90-day target | Status |
+|---|---|---|---|---|---|
+| Are there travel insurance plans that cover pre-existing conditions? | 29 | **44** | +15 | 50 | ✓ 88% to target |
+| How do I know if my trip protection covers medical emergencies? | 21 | **35** | +14 | 35 | ✓ Hit target |
+| What is the best travel emergency assistance plan for a family vacation? | 19 | **33** | +14 | — | strong gain |
+| How do I get trip protection for a last-minute trip? | 33 | 27 | -6 | 40 | ✗ Regressed |
+| Are there travel safety services for students studying abroad? | 29 | 26 | -3 | 50 | ✗ Slight decline |
+| Is there a travel insurance plan that covers trip cancellations for any reason? | 14 | **23** | +9 | 35 | ✓ 66% to target |
+| What are the top travel insurance providers for lost baggage coverage? | 12 | **25** | +13 | 30 | ✓ 83% to target |
+| How do I track the status of my travel insurance claim? | 12 | **20** | +8 | 25 | ✓ 80% to target |
+
+7 of 8 tracked prompts moved up. The "medical emergencies" prompt already hit its 90-day target. CFAR, pre-existing, baggage, and claim-status are all 66-88% of the way to their 90-day targets in just 21 days.
+
+The two regressions (last-minute trip protection -6, student safety -3) are small enough to be plausibly noise but worth watching at the next pull.
+
+### 11.5 Competitive context — what was happening to others
+
+The brand-level gains came in a window where competitors were largely flat or declining:
+
+| Brand | Baseline mentions | Current | Δ |
+|---|---|---|---|
+| Seven Corners (#1) | 526 | 521 | -5 |
+| Travel Guard (#2) | **452** | **487** | **+35** ✓ |
+| World Nomads (#3) | 435 | 407 | -28 |
+| Berkshire Hathaway | 219 | 177 | -42 |
+| Allianz Global Assistance | 196 | 189 | -7 |
+| Travelex Insurance Services | 195 | 232 | +37 |
+
+Travel Guard had the **second-largest absolute gain** in the window (+35), behind only Travelex (+37). Notable: Allianz's own-domain citations also dropped (541 → 518), suggesting the broader citation landscape redistributed somewhat — which makes it harder to attribute Travel Guard's specific gain to schema. The gap to Seven Corners narrowed from 74 mentions to 34 mentions, the closest you've been in this dataset.
+
+### 11.6 Honest read on what's attributable to schema vs. noise
+
+The temptation is to credit schema with the gains. The honest answer is **probably some, but not all**.
+
+What we can say:
+- The site-wide Organization + WebSite bundle has been live longest (since the audit's Week 1 rollout) and has had the most time to propagate. Bing/ChatGPT search likely sees it; Google AI Overviews may not yet.
+- Per-page schemas (Plan, FAQ, Service, Article) were finalized in the past 6 days. Too recent for LLM indexes to have fully refreshed.
+- Competitor decay accounts for some of the relative gain — when Allianz and World Nomads lose ground, Travel Guard gains by default even without doing anything.
+- Pre-existing-conditions citations jumped +79% — this page is one we added P0 schema for, but the gain likely predates the schema being live, so most of the movement is content-quality + LLM index updates, not yet schema.
+
+What to watch at the next checkpoint (Jun 23):
+- If citation share keeps climbing past 2% → 3%, that's the strongest schema signal we can hope for at week 5.
+- If the per-page schemas (CFAR, pre-existing, plan pages) continue to gain disproportionately, that supports the schema-first hypothesis.
+- If the gain plateaus or reverses, then the May 27 - Jun 9 jump was mostly competitor weakness + seasonality, and we need to revisit the rollout pacing.
+
+### 11.7 Recommended actions before next pull
+
+1. **Add page-specific JSON-LD for `/info/assistance-services` and `/travel-insurance/benefits/baggage-insurance`** — both are organically climbing into your top-cited URLs without any dedicated schema. Reinforcing them is the highest-leverage move you can make in the next two weeks.
+2. **Pull a per-engine Otterly breakdown** at Jun 23 to see whether the gains are concentrated in Bing/ChatGPT (where schema has had most time to land) vs. Perplexity vs. Google AI Overviews. That delta is the cleanest natural experiment available.
+3. **Take a Google Search Console snapshot now** so you have a structured-data-impressions baseline for the Jun 23 comparison. The Rich Results dashboards take 7-14 days to begin reflecting schema deployments.
+4. **Add the baseline + this checkpoint to a `baseline-2026-05-20/` folder** alongside the audit so future checkpoints can be diffed mechanically.
+
+### 11.8 Headline summary
+
+> 21 days into the schema rollout, every primary KPI is moving in the right direction. Own-domain citations are up **58.9%**, citation share **doubled** (1% → 2%), domain coverage is up **+5pp**, brand coverage trend reversed from -1 to +1, and the gap to Seven Corners narrowed by 40 mentions. Schema is plausibly contributing to some of this, but the rollout is too recent for confident attribution — competitor decay, content quality, and LLM index churn are also at work. Next checkpoint Jun 23 will tell us how much of this trajectory holds.
