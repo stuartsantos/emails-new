@@ -83,15 +83,15 @@ Pages are ordered by LLM-citation value, highest first.
 
 ### 4.2 Plan pages (`/travel-insurance/plans/{deluxe|preferred|essential|rental-vehicle-damage-plan}`)
 
-**Recommended types:** `Product` + `Offer` + `aggregateRating` (if available) + `FAQPage` (plan-specific FAQs).
+**Recommended types:** `Product` + `Offer` + `additionalProperty` (for included coverages). `aggregateRating` and `FAQPage` are recommended future additions once verifiable Trustpilot data and plan-specific FAQs are in place.
 
-**Why:** These are your money pages. `Product` + `Offer` is the schema LLMs map to "what plan covers X" questions. Use `hasOfferCatalog` to enumerate the included coverages (Trip Cancellation, Emergency Medical, Baggage, etc.) as line-items — that's the structure LLMs need to answer "does the Deluxe Plan cover medical evacuation?"
+**Why:** These are your money pages. `Product` + `Offer` is the schema LLMs map to "what plan covers X" questions. Use `additionalProperty` with `PropertyValue` items to enumerate the included coverages (Trip Cancellation, Emergency Medical, Baggage, etc.) — that's the structure LLMs need to answer "does the Deluxe Plan cover medical evacuation?" `additionalProperty` is preferred over `hasOfferCatalog` here because the coverages are *features* of the plan, not separately-purchasable products.
 
 **LLM-specific tips:**
 - `audience.audienceType` describes who the plan is for in plain English ("international travelers, senior travelers, high-end vacationers"). LLMs use this for "best travel insurance for seniors" type queries.
 - `isRelatedTo` cross-links the other plans so an LLM can answer comparison questions.
 - `areaServed` should be `Country: United States` — this prevents misattribution in Canada/UK queries.
-- Only include `aggregateRating` with real, verifiable data. Inflating reviews is a structured-data policy violation and a reputational risk.
+- Only include `aggregateRating` with real, verifiable data. Inflating reviews is a structured-data policy violation and a reputational risk. The current `plan-deluxe.json` intentionally omits `aggregateRating` until a Trustpilot integration is wired in.
 
 → See `jsonld/plan-deluxe.json` (template for the other three).
 
@@ -158,9 +158,11 @@ Pages are ordered by LLM-citation value, highest first.
 
 ### 4.10 Customer Reviews page (`/about-us/travel-insurance-reviews`)
 
-**Recommended types:** `CollectionPage` whose `mainEntity` is the Organization with `aggregateRating` and a `review` array.
+**Recommended types:** `CollectionPage` whose `mainEntity` references the Organization. Layer in `aggregateRating` and a `review` array once verifiable Trustpilot data is available.
 
 **Why:** Reviews mapped to schema can drive star ratings in traditional search and serve as a trust signal for LLMs. **Use only verifiable, first-party reviews** — never invent ratings.
+
+**Current state:** `jsonld/reviews-page.json` is intentionally minimal — it declares the `CollectionPage` and references the org by `@id`, but does not yet include `aggregateRating` or `review` entries. This is to prevent placeholder/fake data from shipping. When Trustpilot data is wired in, augment the `mainEntity` block with the real `aggregateRating` (ratingValue, reviewCount, bestRating, worstRating) and a `review` array of verbatim customer reviews with real author names and dates.
 
 → See `jsonld/reviews-page.json`.
 
@@ -174,7 +176,7 @@ Pages are ordered by LLM-citation value, highest first.
 | P0 | Every non-home page | BreadcrumbList (per-page, embedded in page `@graph`) | Low per page | Very high — site-hierarchy signal |
 | P0 | Homepage | WebPage + OfferCatalog + FAQPage | Medium | Very high — first-touch citations |
 | P0 | FAQ (`/help-center/faqs`) | FAQPage | Low | Very high — verbatim answer extraction |
-| P0 | Plan pages (4) | Product + Offer + FAQPage | Medium | Very high — product comparison queries |
+| P0 | Plan pages (4) | Product + Offer + additionalProperty (+ aggregateRating, FAQPage as future additions) | Medium | Very high — product comparison queries |
 | P1 | Plans listing | ItemList | Low | Medium |
 | P1 | Claims | HowTo | Medium | High — high-intent workflow queries |
 | P1 | About Us | AboutPage + Organization | Low | High — entity disambiguation, Zurich relationship |
@@ -258,9 +260,9 @@ The Otterly report shows Travel Guard's three most-cited URLs in the period are:
 
 These pages are *already* getting cited — adding strong schema will compound the effect. All three move to **P0** and have dedicated JSON-LD files in this audit:
 
-- `jsonld/student-travel-safety.json` — Article + HowTo + EducationalAudience
+- `jsonld/student-travel-safety.json` — Article + EducationalAudience (HowTo was removed because the live page does not present its safety guidance as a discrete numbered step list — schema must match visible page content)
 - `jsonld/pre-existing-conditions.json` — Service + FAQPage + PeopleAudience
-- `jsonld/cancel-for-any-reason.json` — Service + FAQPage
+- `jsonld/cancel-for-any-reason.json` — Service + FAQPage (using real FAQ content extracted from the live CFAR page)
 
 ### 8.3 Mention-to-citation gaps — biggest unlock opportunities
 
