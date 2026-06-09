@@ -13,7 +13,7 @@
       "breadcrumb": { "@id": "https://www.travelguard.com/about-us#breadcrumb" },
       "speakable": {
         "@type": "SpeakableSpecification",
-        "cssSelector": ["h1", ".about-summary", ".company-history"]
+        "cssSelector": ["h1"]
       }
     },
     {

@@ -14,26 +14,82 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What is travel insurance?",
+          "name": "Is travel insurance a waste of money?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Travel insurance is a type of insurance that protects you against financial loss before and during your trip. Plans may cover trip cancellation, trip interruption, emergency medical expenses, medical evacuation, baggage loss and delay, and 24/7 travel assistance."
+            "text": "Just another expense, right? Wrong. A travel insurance plan can cover you for unexpected costs incurred before or during your trip so that expenses can be less likely to come out of your own pocket. A travel insurance plan from Travel Guard helps to protect your trip investment with coverages like trip cancellation and interruption, medical expense and evacuation, lost or delayed baggage and more. As a bonus - most travel insurance plans also include 24/7 emergency assistance services to re-book flights and hotels on your behalf and act as a personal travel assistant while you are away from home."
           }
         },
         {
           "@type": "Question",
-          "name": "How does travel insurance work?",
+          "name": "Can I get travel insurance if I am not on a cruise, tour, or traveling by plane?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "After purchasing a plan, you receive a policy document detailing your coverages. If a covered event occurs, you file a claim with documentation and Travel Guard reimburses eligible expenses up to your benefit limits. Many plans also include 24/7 emergency assistance services during your trip."
+            "text": "You bet! We offer an assortment of travel insurance plans for a variety of travel needs."
           }
         },
         {
           "@type": "Question",
-          "name": "How much does a travel insurance plan cost?",
+          "name": "If I use frequent flyer miles to purchase a ticket, do I include the regular cost of the ticket as part of my trip cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The cost of travel insurance is based, in most cases, on the value of the trip and the age of the traveler. Typically, the cost is five to seven percent of the trip cost. Get a free quote at travelguard.com or call 800-826-5248."
+            "text": "Please be careful when using frequent flyer miles to calculate your trip cost. Travel insurance typically covers the cash value of non-refundable travel expenses. In other words, money you can't get back from your airline or other travel provider. Frequent flyer miles are not covered as it's difficult to determine their cash value."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I put non-family members on my plan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Travelers on a single policy must reside in the same state. If your non-family traveling companion lives in the same state as you, then yes, you can include them. Otherwise please purchase a separate plan to ensure coverage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What else is offered with the purchase of a Travel Guard plan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To boost travelers' confidence when traveling, Travel Guard provides 24-hour, '911' emergency travel services to all standard retail plans, in case a traveler has to change a flight or a hotel room. Travel Guard has also added assistance with emergency cash transfers, pre-trip consultation services (travel advisories, passport requirements, inoculation information, etc.), and live messaging, which will relay any email or phone message to family, friends or business associates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What product should I choose if I only want medical expense coverage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All plans include medical expense coverage. Or, you can give one of our representatives a call at 800-826-5248 and they can tell you about our Medevac coverage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What do I need to know about pre-existing medical conditions and the coverage through Travel Guard?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pre-existing Medical Condition Exclusions would likely be applicable to a condition of a traveler, traveling companion or family member who was first diagnosed, had a change in diagnosis or required a change in medication during the 60, 90, or 180 day look back period (depending on plan purchased) immediately preceding and including the effective date of coverage. Some plans include a Pre-existing Medical Condition Exclusion Waiver when purchasing the plan within a specified time frame immediately following initial trip payment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What do I need to have to purchase an insurance plan online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Let's make this easy! Before purchasing, please have the following information handy:\n\n- Personal information for all travelers who will be on the policy\n- Trip details: dates of travel, destination, initial deposit date, final payment date, and any travel companies you will be using\n- Total trip cost and how that cost is broken down per person in your itinerary."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is initial deposit date?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Initial deposit date is the day on which you made your first payment toward the trip.\n\nDon't forget! Purchase within 15 days of your initial deposit date and early purchase benefits may apply."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is final payment date?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Final payment date is the day on which you finished (or expect to finish) paying for your trip.\n\nThe final payment date must occur before the departure date. The initial deposit date and final payment date can be the same day, as long as that day occurs before the departure date."
           }
         },
         {
@@ -41,39 +97,31 @@
           "name": "When is it too late to buy travel insurance?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Travel insurance can be purchased up to 24 hours prior to your trip departure date. However, purchasing within 15 days of your initial trip deposit may qualify you for early purchase benefits such as the pre-existing medical conditions exclusion waiver."
+            "text": "Insurance can be purchased up to 24 hours prior to your trip departure date."
           }
         },
         {
           "@type": "Question",
-          "name": "Does Travel Guard cover pre-existing medical conditions?",
+          "name": "How do I break down trip costs per person in my itinerary?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Travel Guard offers a Pre-Existing Medical Conditions Exclusion Waiver as an early purchase benefit on certain plans. To qualify, you typically need to purchase the plan within 15 days of your initial trip deposit and meet other plan requirements."
+            "text": "Claim payments under the Trip Cancellation & Trip Interruption benefits are based on the amount of Trip Cost insured per person. For multiple travelers, you should enter the Trip Cost associated with each individual as it appears on the itinerary or trip invoice."
           }
         },
         {
           "@type": "Question",
-          "name": "How do I file a travel insurance claim with Travel Guard?",
+          "name": "I think I'm ready to buy. What's the best way to purchase my travel insurance?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "You can file a claim online at claims.travelguard.com or call 800-826-5248. You will need your policy number, documentation of the covered event (receipts, medical reports, etc.), and proof of any expenses you are seeking reimbursement for."
+            "text": "You can purchase a policy either online, or through a representative at our call center. To purchase on line, click here and you will be guided through our product comparison tool. To purchase over the phone, call our representatives at 800-826-5248."
           }
         },
         {
           "@type": "Question",
-          "name": "Can I cancel my travel insurance policy for a refund?",
+          "name": "How much does travel insurance cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Travel Guard offers a 15-day look period. You can cancel your policy within 15 days of the effective date and receive a refund, provided you have not started your trip or filed a claim."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is Travel Guard's 24/7 emergency travel assistance?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Travel Guard's 24/7 emergency travel assistance provides round-the-clock help while you travel — coordinating medical care, arranging emergency evacuations, re-booking flights and hotels, and providing other travel support services."
+            "text": "The cost of travel insurance is based, in most cases, on the value of the trip and the age of the traveler. Typically, the cost is five to seven percent of the trip cost. You can get a free quote for your personalized travel insurance plan or call our representatives at 800-826-5248."
           }
         }
       ]

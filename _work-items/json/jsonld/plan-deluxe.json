@@ -43,30 +43,18 @@
         },
         "seller": { "@id": "https://www.travelguard.com/#organization" }
       },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Deluxe Plan Coverage Benefits",
-        "itemListElement": [
-          { "@type": "Offer", "name": "Trip Cancellation Coverage" },
-          { "@type": "Offer", "name": "Trip Interruption Coverage" },
-          { "@type": "Offer", "name": "Emergency Medical Expense Coverage" },
-          { "@type": "Offer", "name": "Emergency Medical Evacuation" },
-          { "@type": "Offer", "name": "Security Evacuation" },
-          { "@type": "Offer", "name": "Baggage Loss & Delay" },
-          { "@type": "Offer", "name": "Missed Connection Coverage" },
-          { "@type": "Offer", "name": "Flight Guard" },
-          { "@type": "Offer", "name": "24/7 Emergency Travel Assistance" },
-          { "@type": "Offer", "name": "Concierge Services" }
-        ]
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.4",
-        "reviewCount": "12500",
-        "bestRating": "5",
-        "worstRating": "1",
-        "description": "Aggregate rating sourced from Trustpilot reviews of Travel Guard. Replace with actual current values from your Trustpilot widget at publish time."
-      }
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Trip Cancellation Coverage", "value": "Included" },
+        { "@type": "PropertyValue", "name": "Trip Interruption Coverage", "value": "Included" },
+        { "@type": "PropertyValue", "name": "Emergency Medical Expense Coverage", "value": "Included" },
+        { "@type": "PropertyValue", "name": "Emergency Medical Evacuation", "value": "Included" },
+        { "@type": "PropertyValue", "name": "Security Evacuation", "value": "Included" },
+        { "@type": "PropertyValue", "name": "Baggage Loss & Delay", "value": "Included" },
+        { "@type": "PropertyValue", "name": "Missed Connection Coverage", "value": "Included" },
+        { "@type": "PropertyValue", "name": "Flight Guard", "value": "Included" },
+        { "@type": "PropertyValue", "name": "24/7 Emergency Travel Assistance", "value": "Included" },
+        { "@type": "PropertyValue", "name": "Concierge Services", "value": "Included" }
+      ]
     },
     {
       "@type": "BreadcrumbList",

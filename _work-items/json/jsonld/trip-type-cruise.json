@@ -11,7 +11,7 @@
       "inLanguage": "en-US",
       "speakable": {
         "@type": "SpeakableSpecification",
-        "cssSelector": ["h1", ".trip-summary", ".faq-section"]
+        "cssSelector": ["h1"]
       },
       "mainEntity": { "@id": "https://www.travelguard.com/travel-insurance/trip-types/cruise-insurance#service" },
       "breadcrumb": { "@id": "https://www.travelguard.com/travel-insurance/trip-types/cruise-insurance#breadcrumb" }
@@ -35,12 +35,14 @@
           {
             "@type": "Offer",
             "name": "Preferred Plan",
-            "url": "https://www.travelguard.com/travel-insurance/plans/preferred"
+            "url": "https://www.travelguard.com/travel-insurance/plans/preferred",
+            "itemOffered": { "@id": "https://www.travelguard.com/travel-insurance/plans/preferred#product" }
           },
           {
             "@type": "Offer",
             "name": "Deluxe Plan",
-            "url": "https://www.travelguard.com/travel-insurance/plans/deluxe"
+            "url": "https://www.travelguard.com/travel-insurance/plans/deluxe",
+            "itemOffered": { "@id": "https://www.travelguard.com/travel-insurance/plans/deluxe#product" }
           }
         ]
       }

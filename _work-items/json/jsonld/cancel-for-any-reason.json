@@ -12,7 +12,7 @@
       "breadcrumb": { "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/cancel-for-any-reason#breadcrumb" },
       "speakable": {
         "@type": "SpeakableSpecification",
-        "cssSelector": ["h1", ".intro", ".faq-section"]
+        "cssSelector": ["h1"]
       },
       "mainEntity": [
         { "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/cancel-for-any-reason#service" },
@@ -62,50 +62,26 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What is Cancel For Any Reason (CFAR) travel insurance?",
+          "name": "Can I add Cancel for Any Reason coverage to my existing Travel Guard travel insurance plan?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Cancel For Any Reason (CFAR) is an optional upgrade to a base travel insurance plan that lets you cancel your trip for any reason not otherwise covered by the plan and receive partial reimbursement of your prepaid, non-refundable trip costs."
+            "text": "Cancel for Any Reason coverage can only be purchased at the time you purchase your base plan and only within 15 days of your initial trip payment."
           }
         },
         {
           "@type": "Question",
-          "name": "How much does CFAR cost?",
+          "name": "What is the difference between Trip Cancellation and Cancel for Any Reason coverage?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "CFAR is added as a percentage upgrade to your base Travel Guard plan. The total cost depends on your base plan, total trip cost, and traveler age. Get a personalized quote at travelguard.com or call 800-826-5248."
+            "text": "With Travel Guard’s Trip Cancellation coverage there are specific reasons for cancelling a trip that provide coverage . If the reason for cancelling your trip falls outside of those covered reasons you wouldn’t have coverage. Cancel for Any Reason does not have exclusions, so you are able to cancel no matter the reason. However, with Cancel for Any Reason you’ll only get a percent of your travel investment reimbursed – but that’s better than nothing!"
           }
         },
         {
           "@type": "Question",
-          "name": "How much will CFAR reimburse if I cancel?",
+          "name": "Can I cancel my trip last minute with Cancel for Any Reason coverage?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "CFAR typically reimburses a percentage of your prepaid, non-refundable trip costs (the exact percentage is shown on your Schedule of Benefits). It is not a 100% refund — review your policy documents for the specific reimbursement percentage."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "When must I purchase CFAR?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "CFAR must be purchased within a set window (typically 15 days) of your initial trip deposit. After that window, it is no longer available to add to your plan."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How close to my trip can I cancel under CFAR?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "To use CFAR benefits, you must cancel your trip at least 48 hours before your scheduled departure. Cancellations made within 48 hours of departure are not eligible for CFAR reimbursement."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is CFAR available on every Travel Guard plan?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "CFAR is available as an optional upgrade on eligible Travel Guard plans (typically the Deluxe and Preferred plans). Availability and terms vary by state of residence — confirm at quote time."
+            "text": "Your trip must be cancelled at least two days prior to your departure date in order to use the Cancel for Any Reason coverage."
           }
         }
       ]

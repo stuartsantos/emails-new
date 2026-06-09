@@ -12,7 +12,7 @@
       "breadcrumb": { "@id": "https://www.travelguard.com/traveler-types/pre-existing-medical-condition-travel-insurance-plans#breadcrumb" },
       "speakable": {
         "@type": "SpeakableSpecification",
-        "cssSelector": ["h1", ".intro", ".faq-section"]
+        "cssSelector": ["h1"]
       },
       "mainEntity": [
         { "@id": "https://www.travelguard.com/traveler-types/pre-existing-medical-condition-travel-insurance-plans#service" },

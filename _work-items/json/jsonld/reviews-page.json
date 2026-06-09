@@ -11,32 +11,7 @@
       "about": { "@id": "https://www.travelguard.com/#organization" },
       "inLanguage": "en-US",
       "breadcrumb": { "@id": "https://www.travelguard.com/about-us/travel-insurance-reviews#breadcrumb" },
-      "mainEntity": {
-        "@type": "Organization",
-        "@id": "https://www.travelguard.com/#organization",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.4",
-          "reviewCount": "12500",
-          "bestRating": "5",
-          "worstRating": "1",
-          "description": "Replace with current values from Trustpilot. Only use real, verifiable review data."
-        },
-        "review": [
-          {
-            "@type": "Review",
-            "author": { "@type": "Person", "name": "Replace with reviewer first name + last initial" },
-            "datePublished": "YYYY-MM-DD",
-            "reviewBody": "Replace with verbatim quote from the customer review.",
-            "reviewRating": {
-              "@type": "Rating",
-              "ratingValue": "5",
-              "bestRating": "5",
-              "worstRating": "1"
-            }
-          }
-        ]
-      }
+      "mainEntity": { "@id": "https://www.travelguard.com/#organization" }
     },
     {
       "@type": "BreadcrumbList",

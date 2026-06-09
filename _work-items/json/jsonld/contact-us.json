@@ -12,7 +12,7 @@
       "inLanguage": "en-US",
       "breadcrumb": { "@id": "https://www.travelguard.com/help-center/contact-us#breadcrumb" },
       "mainEntity": {
-        "@type": "Organization",
+        "@type": "InsuranceAgency",
         "@id": "https://www.travelguard.com/#organization",
         "contactPoint": [
           {
@@ -21,12 +21,6 @@
             "contactType": "customer service",
             "areaServed": "US",
             "availableLanguage": ["English", "Spanish"]
-          },
-          {
-            "@type": "ContactPoint",
-            "telephone": "+1-866-375-2546",
-            "contactType": "sanctioned countries hotline",
-            "areaServed": "US"
           }
         ]
       }

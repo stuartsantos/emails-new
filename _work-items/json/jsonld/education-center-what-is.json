@@ -11,7 +11,10 @@
       "publisher": { "@id": "https://www.travelguard.com/#organization" },
       "datePublished": "2023-06-01",
       "dateModified": "2025-09-10",
-      "mainEntityOfPage": "https://www.travelguard.com/info/what-is-travel-insurance",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.travelguard.com/info/what-is-travel-insurance"
+      },
       "inLanguage": "en-US",
       "articleSection": "Education Center",
       "about": [
@@ -20,7 +23,7 @@
       ],
       "speakable": {
         "@type": "SpeakableSpecification",
-        "cssSelector": ["h1", "h2", ".article-body"]
+        "cssSelector": ["h1", "h2"]
       }
     },
     {

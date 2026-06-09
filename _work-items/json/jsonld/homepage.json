@@ -16,7 +16,7 @@
       },
       "speakable": {
         "@type": "SpeakableSpecification",
-        "cssSelector": ["h1", ".hero-description", ".faq-section"]
+        "cssSelector": ["h1"]
       },
       "mainEntity": [
         { "@id": "https://www.travelguard.com/#offercatalog" },
@@ -36,12 +36,7 @@
           "description": "Top-of-the-line, comprehensive travel insurance plan with the highest benefit limits across most coverage categories. Ideal for international travel, senior travelers, and high-end vacations.",
           "url": "https://www.travelguard.com/travel-insurance/plans/deluxe",
           "category": "Comprehensive Travel Insurance",
-          "itemOffered": {
-            "@type": "Service",
-            "serviceType": "Travel Insurance",
-            "name": "Deluxe Travel Insurance Plan",
-            "provider": { "@id": "https://www.travelguard.com/#organization" }
-          }
+          "itemOffered": { "@id": "https://www.travelguard.com/travel-insurance/plans/deluxe#product" }
         },
         {
           "@type": "Offer",
@@ -49,12 +44,7 @@
           "description": "Comprehensive travel insurance plan with superb coverage. A great option for most vacations, cruising, and family travel.",
           "url": "https://www.travelguard.com/travel-insurance/plans/preferred",
           "category": "Comprehensive Travel Insurance",
-          "itemOffered": {
-            "@type": "Service",
-            "serviceType": "Travel Insurance",
-            "name": "Preferred Travel Insurance Plan",
-            "provider": { "@id": "https://www.travelguard.com/#organization" }
-          }
+          "itemOffered": { "@id": "https://www.travelguard.com/travel-insurance/plans/preferred#product" }
         },
         {
           "@type": "Offer",
@@ -62,12 +52,7 @@
           "description": "Savvy coverage for the budget-minded traveler. A great option for domestic travel, road trips, and weekend vacations.",
           "url": "https://www.travelguard.com/travel-insurance/plans/essential",
           "category": "Basic Travel Insurance",
-          "itemOffered": {
-            "@type": "Service",
-            "serviceType": "Travel Insurance",
-            "name": "Essential Travel Insurance Plan",
-            "provider": { "@id": "https://www.travelguard.com/#organization" }
-          }
+          "itemOffered": { "@id": "https://www.travelguard.com/travel-insurance/plans/essential#product" }
         },
         {
           "@type": "Offer",
@@ -75,12 +60,7 @@
           "description": "An alternative to the insurance offered by rental car companies. Ideal for road trips, short-term vehicle rentals, and savvy travelers.",
           "url": "https://www.travelguard.com/travel-insurance/plans/rental-vehicle-damage-plan",
           "category": "Rental Vehicle Insurance",
-          "itemOffered": {
-            "@type": "Service",
-            "serviceType": "Rental Vehicle Damage Insurance",
-            "name": "Rental Vehicle Damage Coverage",
-            "provider": { "@id": "https://www.travelguard.com/#organization" }
-          }
+          "itemOffered": { "@id": "https://www.travelguard.com/travel-insurance/plans/rental-vehicle-damage-plan#product" }
         }
       ]
     },
