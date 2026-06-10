@@ -342,6 +342,7 @@ jsonld/
     trip-types/
       index.json                         ← P1, ItemList of the 13 trip types
       cruise-insurance.json              ← P2, trip-type template
+      {12 more trip types}.json          ← P2, all built Jun 10 (WebPage + Service + OfferCatalog + on-page FAQPage)
   traveler-types/
     index.json                           ← P1, ItemList of the 11 traveler types
     pre-existing-medical-condition-travel-insurance-plans.json  ← P0 (new)

@@ -1,0 +1,141 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.travelguard.com/travel-insurance/trip-types/international-travel-insurance#webpage",
+      "url": "https://www.travelguard.com/travel-insurance/trip-types/international-travel-insurance",
+      "name": "International Travel Insurance | Travel Guard",
+      "description": "Understand the importance of international travel insurance for your next overseas vacation and make sure you’re covered with the right Travel Guard plan.",
+      "isPartOf": {
+        "@id": "https://www.travelguard.com/#website"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://www.travelguard.com/travel-insurance/trip-types/international-travel-insurance#breadcrumb"
+      },
+      "mainEntity": [
+        {
+          "@id": "https://www.travelguard.com/travel-insurance/trip-types/international-travel-insurance#service"
+        },
+        {
+          "@id": "https://www.travelguard.com/travel-insurance/trip-types/international-travel-insurance#faqpage"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.travelguard.com/travel-insurance/trip-types/international-travel-insurance#service",
+      "serviceType": "International Travel Insurance",
+      "name": "International Travel Insurance",
+      "description": "Understand the importance of international travel insurance for your next overseas vacation and make sure you’re covered with the right Travel Guard plan.",
+      "provider": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "International Travel Insurance — Recommended Plans",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Deluxe Plan",
+            "url": "https://www.travelguard.com/travel-insurance/plans/deluxe",
+            "itemOffered": {
+              "@id": "https://www.travelguard.com/travel-insurance/plans/deluxe#product"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.travelguard.com/travel-insurance/trip-types/international-travel-insurance#faqpage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is international travel insurance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "International travel insurance provides travelers with coverage around the globe. International travel insurance plans often have higher coverage limits to account for the increased cost of international travel. Otherwise, international travel insurance works just the same as most domestic travel insurance plans – covering you in case of certain unexpected costs while traveling. Our article on  how travel insurance works  has more details on how to use your travel insurance plan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does international travel insurance cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Travel Guard offers customizable travel insurance plans for your international trip.  Look for a plan  that has the coverage and benefit limits you need. Popular plan features include:\n\n- Medical expense coverage – your U.S. health plan may not cover you while traveling internationally\n\n- Trip cancellation coverage\n\n- Baggage coverage\n\n- Car rental coverage\n\n- Cancel for any reason (optional add-on coverage available on certain plans)\n\n- Travel inconvenience coverage – a one-time payment for covered inconveniences you encounter on your trip such as a closed attraction, runway delay, or cruise diversion\n\n- Emergency travel assistance – specialized representatives are available day or night for unexpected travel issues\n\n- Adventure sports bundle – planning extreme activities on your international trip? Be sure and add this optional bundle so you’re covered!"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need international travel insurance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For any vacation it’s smart to cover your travel investment, but it’s even more important with an international trip. Often international travel is more expensive, so there’s more of your investment at risk if something goes wrong. That’s why Travel Guard’s  Deluxe Plan  with higher coverage limits is a smart option for international travel insurance. All of Travel Guard’s travel insurance plans come with access to our specially trained representatives for  24/7 emergency travel assistance . Imagine navigating the healthcare system in a foreign country all on your own – it can be overwhelming! We have experts and translators that can help you with medical and travel emergencies so you’re not alone."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which Travel Guard insurance plan is best for my international trip?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Travel Guard’s  Deluxe Plan  is a great option for international travelers because it has higher benefit limits and additional coverage options to cover your international vacation. With optional add-ons like cancel for any reason or Travel Guard’s rental vehicle damage coverage you can create the plan to fit your needs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does my U.S. health insurance cover international travel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your U.S. health insurance plan may not cover you while traveling abroad. It’s important to have travel medical expense coverage while traveling internationally for this reason (and some countries even require it). Having access to specially trained representatives who are experienced in assisting international travelers is a valuable benefit to your international travel insurance plan, so you won’t be left to navigate travel mishaps alone."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which Travel Guard insurance plan is best for seniors traveling internationally?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Travel Guard’s  Deluxe Plan  includes our highest coverage limits for both travel medical expense and emergency evacuation, which can be a huge help for traveling seniors. If you purchase your Travel Guard travel insurance plan within 15 days of your initial trip payment, you’ll also have early purchase benefits which include our  pre-existing medical condition exclusion waiver  – which makes it possible to be covered for certain medical expenses on your trip despite your pre-existing medical conditions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why purchase your international travel insurance through Travel Guard?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Travel Guard is one of the world’s leading travel insurance providers. We have a network of service centers located in Asia, Europe, and the Americas ensuring the highest quality emergency travel services and travel medical assistance while you’re traveling internationally. With early purchase benefits and optional add-on coverages, you can customize the plan and coverages you need for your international trip."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/travel-insurance/trip-types/international-travel-insurance#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Trip Types",
+          "item": "https://www.travelguard.com/travel-insurance/trip-types"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "International Travel Insurance",
+          "item": "https://www.travelguard.com/travel-insurance/trip-types/international-travel-insurance"
+        }
+      ]
+    }
+  ]
+}

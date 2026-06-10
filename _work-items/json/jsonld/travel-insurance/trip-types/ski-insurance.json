@@ -1,0 +1,149 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.travelguard.com/travel-insurance/trip-types/ski-insurance#webpage",
+      "url": "https://www.travelguard.com/travel-insurance/trip-types/ski-insurance",
+      "name": "Winter Sports Travel Insurance Plans | Travel Guard",
+      "description": "Understand the importance of ski travel insurance plans for your next vacation and come to Travel Guard to make sure you’re covered with the right plan.",
+      "isPartOf": {
+        "@id": "https://www.travelguard.com/#website"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://www.travelguard.com/travel-insurance/trip-types/ski-insurance#breadcrumb"
+      },
+      "mainEntity": [
+        {
+          "@id": "https://www.travelguard.com/travel-insurance/trip-types/ski-insurance#service"
+        },
+        {
+          "@id": "https://www.travelguard.com/travel-insurance/trip-types/ski-insurance#faqpage"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.travelguard.com/travel-insurance/trip-types/ski-insurance#service",
+      "serviceType": "Ski Travel Insurance",
+      "name": "Ski Travel Insurance Plans",
+      "description": "Understand the importance of ski travel insurance plans for your next vacation and come to Travel Guard to make sure you’re covered with the right plan.",
+      "provider": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Ski Travel Insurance Plans — Recommended Plans",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Deluxe Plan",
+            "url": "https://www.travelguard.com/travel-insurance/plans/deluxe",
+            "itemOffered": {
+              "@id": "https://www.travelguard.com/travel-insurance/plans/deluxe#product"
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Preferred Plan",
+            "url": "https://www.travelguard.com/travel-insurance/plans/preferred",
+            "itemOffered": {
+              "@id": "https://www.travelguard.com/travel-insurance/plans/preferred#product"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.travelguard.com/travel-insurance/trip-types/ski-insurance#faqpage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a ski travel insurance plan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ski travel insurance plans provide travelers with coverage for ski vacations including baggage coverage for sporting or ski equipment that you are bringing with you. Typically ski travel insurance plans offer higher benefit limits for baggage knowing that you’re likely traveling with extra gear. It’s also important to make sure there are no extreme sport exclusions on your travel insurance plan, so you’re covered if you get injured while skiing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does a ski travel insurance plan cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Travel Guard offers customizable travel insurance plans for your ski vacation.  Look for a plan  that has the coverage and benefits limits you need. Popular plan features include:\n\n- Medical expense coverage – your U.S. health plan may not cover you out of country\n\n- Travel inconvenience benefit – a one-time payment for covered inconveniences you encounter on your trip like a closed attraction due to lack of snow (included with certain plans)\n\n- Emergency travel assistance – specialized representatives are available day or night to assist with unexpected travel issues\n\n- Adventure Sports Bundle – perfect for covering activities like skiing and snowboarding (optional add-on coverage available on certain plans)\n\n- Baggage coverage\n\n- Trip cancellation\n\n- Cancel For Any Reason (optional add-on coverage available on certain plans)"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a ski travel insurance plan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It’s smart to cover your travel investment on any vacation, and that’s especially true for your ski vacation. When you’re traveling to a snowy destination, inclement weather can become a problem for your trip whether you’re traveling in the air or on the roads. Plus, you’ll want to make sure you’re covered for certain medical expenses you may encounter on your travels – especially if your vacation is outside the U.S.\n\nWith a Travel Guard travel insurance plan your travel investment can be protected, and you have access to our specially trained representatives for  24-hour travel emergency assistance . A missed flight doesn’t have to mean missing out on skiing – our representatives will work to help you through any unexpected travel mishaps."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which Travel Guard travel insurance plan is best for my ski trip?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Travel Guard has a variety of options to help protect your trip depending on the coverage you need. For ski vacations, having Travel Guard’s Adventure Sports Bundle is going to be important, and that coverage is available as an optional add-on with both our  Deluxe  and  Preferred  plans. Travel Guard’s  Deluxe plan  has the highest benefit limit for baggage coverage. If you’re bringing any ski equipment or gear with you, the higher limit might be a good idea.  \n\nNo matter which Travel Guard insurance plan you choose, you’ll have access to our specially trained representatives for  24/7 emergency travel assistance ."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much is a ski travel insurance plan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Typically, a travel insurance plan costs 5-7% of your total trip cost, meaning that your overall cost will depend on the details of your vacation, including if you add additional coverage to your insurance plan. Our article on How Much Travel Insurance Costs has more information."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the best travel insurance plan for families going on a ski vacation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Travel Guard’s  Deluxe Plan  includes our highest benefit limits for our coverages including medical expense coverage, trip cancellation, trip interruption, missed connection and more. With add-ons like our Adventure Sports Bundle , you’ll have even more coverage for the whole family on your ski vacation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why purchase your ski travel insurance plan through Travel Guard?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Travel Guard is one of the world’s leading travel insurance providers. We have a network of service centers located in Asia, Europe and the Americas ensuring the highest quality emergency travel services and travel medical assistance while you’re traveling. With early purchase benefits and optional add-on coverages you can customize the plan and coverages you need for your ski vacation."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/travel-insurance/trip-types/ski-insurance#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Trip Types",
+          "item": "https://www.travelguard.com/travel-insurance/trip-types"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Ski Travel Insurance Plans",
+          "item": "https://www.travelguard.com/travel-insurance/trip-types/ski-insurance"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.travelguard.com/travel-insurance/trip-types/rental-car-insurance#webpage",
+      "url": "https://www.travelguard.com/travel-insurance/trip-types/rental-car-insurance",
+      "name": "Rental Car Travel Insurance Plans | Travel Guard",
+      "description": "With our travel insurance plans, you can add on rental vehicle damage coverage and protect even more aspects of your trip. Visit Travel Guard to learn more.",
+      "isPartOf": {
+        "@id": "https://www.travelguard.com/#website"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://www.travelguard.com/travel-insurance/trip-types/rental-car-insurance#breadcrumb"
+      },
+      "mainEntity": [
+        {
+          "@id": "https://www.travelguard.com/travel-insurance/trip-types/rental-car-insurance#service"
+        },
+        {
+          "@id": "https://www.travelguard.com/travel-insurance/trip-types/rental-car-insurance#faqpage"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.travelguard.com/travel-insurance/trip-types/rental-car-insurance#service",
+      "serviceType": "Rental Car Travel Insurance",
+      "name": "Rental Car Insurance Plans",
+      "description": "With our travel insurance plans, you can add on rental vehicle damage coverage and protect even more aspects of your trip. Visit Travel Guard to learn more.",
+      "provider": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Rental Car Insurance Plans — Recommended Plans",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Deluxe Plan",
+            "url": "https://www.travelguard.com/travel-insurance/plans/deluxe",
+            "itemOffered": {
+              "@id": "https://www.travelguard.com/travel-insurance/plans/deluxe#product"
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Preferred Plan",
+            "url": "https://www.travelguard.com/travel-insurance/plans/preferred",
+            "itemOffered": {
+              "@id": "https://www.travelguard.com/travel-insurance/plans/preferred#product"
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Essential Plan",
+            "url": "https://www.travelguard.com/travel-insurance/plans/essential",
+            "itemOffered": {
+              "@id": "https://www.travelguard.com/travel-insurance/plans/essential#product"
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Rental Vehicle Damage Coverage",
+            "url": "https://www.travelguard.com/travel-insurance/plans/rental-vehicle-damage-plan",
+            "itemOffered": {
+              "@id": "https://www.travelguard.com/travel-insurance/plans/rental-vehicle-damage-plan#product"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.travelguard.com/travel-insurance/trip-types/rental-car-insurance#faqpage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a rental car insurance plan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Travel Guard offers rental vehicle damage coverage as an optional add-on on select plans. Rental car insurance is important for protecting your travel investment. Choose a Travel Guard travel insurance plan with the option of adding on our rental vehicle damage coverage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does a Travel Guard rental car insurance plan cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Travel Guard offers customizable travel insurance plans for your next trip.  Look for a plan  that has the coverage and benefit limits you need. Our rental vehicle damage coverage includes:\n\n- Up to $35,000/$50,000 in rental car primary physical damage coverage for covered losses ($250 deductible)\n\n- Roadside assistance\n\n- Quick and easy claims process"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a rental car insurance plan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For any vacation it’s smart to cover your travel investment, but when you’re driving it can be even more beneficial. There is so much to consider when including a road trip on your travels, make it easier on yourself by including Travel Guard’s rental vehicle damage coverage on your travel insurance plan. Not only do you have physical damage coverage but with our roadside assistance, we’re there to help when things get stressful."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which Travel Guard travel insurance plan is best for a rental car?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Travel Guard offers a standalone Rental Vehicle Damage Coverage plan as an alternative option to the protection packages that rental car companies offer at the rental desk. For more comprehensive full-trip travel insurance coverage, Travel Guard’s  Deluxe ,  Preferred  and  Essential  plans all come with the option to add-on our rental vehicle damage coverage.  Compare our plans  to see what plan works best for your specific needs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does my personal car insurance cover rental cars?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It’s going to vary depending on the personal auto insurance policy you have and why you’ve rented a car. Occasionally some coverages will extend to a rental. Be sure to check what your deductible is on your personal auto insurance policy as well. You may want to consider Travel Guard rental car insurance if that deductible is high."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need rental car insurance if I’m renting a car abroad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Personal auto insurance policies in the U.S. may not provide coverage if you’re renting a car abroad. Some countries require a minimum coverage amount or types of coverage for a vehicle rental insurance policy, so be sure to check specifics of the country you’ll be driving in."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I get Roadside Assistance with Travel Guard Rental Vehicle Damage Coverage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! You can hit the road knowing that you have access to 24/7 roadside assistance in the event that you need help. Our representatives can contact tow companies, arrange alternate transportation, and coordinate rental vehicle returns (and more) all while you focus on your trip."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much is a Travel Guard rental car insurance plan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Rental vehicle damage coverage with your Travel Guard travel insurance plan is calculated by day. You enter the dates you’ll have your rental car as you go through purchasing your travel insurance plan and you’ll see a quote for the rental car portion."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why purchase your car rental insurance plan through Travel Guard?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Travel Guard is one of the world’s leading travel insurance providers with a network of service centers located in Asia, Europe and the Americas, ensuring the highest quality emergency travel services and medical assistance while you’re traveling. With early purchase benefits and optional add-on coverages, you can customize the plan and coverages you need for your trip."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/travel-insurance/trip-types/rental-car-insurance#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Trip Types",
+          "item": "https://www.travelguard.com/travel-insurance/trip-types"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rental Car Insurance Plans",
+          "item": "https://www.travelguard.com/travel-insurance/trip-types/rental-car-insurance"
+        }
+      ]
+    }
+  ]
+}
