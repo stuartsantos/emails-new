@@ -1,0 +1,124 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/baggage-bundle#webpage",
+      "url": "https://www.travelguard.com/travel-insurance/optional-coverage/baggage-bundle",
+      "name": "Baggage Bundle | Travel Guard®",
+      "description": "Travel Guard’s Baggage Bundle provides higher benefit limits to the Baggage Delay and Baggage Coverage coverages on your travel insurance plan.",
+      "isPartOf": {
+        "@id": "https://www.travelguard.com/#website"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/baggage-bundle#breadcrumb"
+      },
+      "mainEntity": [
+        {
+          "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/baggage-bundle#service"
+        },
+        {
+          "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/baggage-bundle#faqpage"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/baggage-bundle#service",
+      "serviceType": "Baggage Travel Insurance Bundle",
+      "name": "Baggage Bundle",
+      "description": "Travel Guard’s Baggage Bundle provides higher benefit limits to the Baggage Delay and Baggage Coverage coverages on your travel insurance plan.",
+      "provider": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "isRelatedTo": [
+        {
+          "@type": "Product",
+          "name": "Preferred Plan",
+          "url": "https://www.travelguard.com/travel-insurance/plans/preferred"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/baggage-bundle#faqpage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the Baggage Bundle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Travel Guard’s Baggage Bundle increases the maximum benefit limits for Baggage Delay and Baggage Coverage on your Travel Guard travel insurance base plan. Baggage Delay provides reimbursement for covered necessary items you may have had to purchase if your luggage is delayed getting to you. Baggage Coverage may provide reimbursement for lost, damaged or stolen covered items while you’re traveling. By increasing the maximum benefit limits with the Baggage Bundle, you’re ensuring you have more protection for the covered baggage and personal items you’re taking on your trip."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I add the Baggage Bundle to my existing Travel Guard travel insurance plan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Baggage Bundle is only an optional upgrade on the Travel Guard Preferred Plan and can be added at any point before your trip. Additionally, the higher benefit limits of the Baggage Bundle are already included in the Deluxe Plan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does my baggage need to be delayed to have Baggage Delay coverage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This varies by plan, and will generally be either 12 hours or 24 hours. Please refer to your policy of insurance for complete terms and conditions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will I have coverage if I’m traveling with an expensive item if it’s lost or stolen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Certain expensive items are not excluded, but our plans do contain per-item limits."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I learn more about the Baggage Bundle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For additional information on the Baggage Bundle, review your policy of insurance or call our specially trained representatives at 800.826.5248. Be sure to thoroughly read your policy of insurance to better understand your travel insurance plan!\n\nBaggage Bundle is available on:"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/baggage-bundle#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Travel Insurance Plans",
+          "item": "https://www.travelguard.com/travel-insurance/plans"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Upgrades and Bundles",
+          "item": "https://www.travelguard.com/travel-insurance/optional-coverage"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Baggage Bundle",
+          "item": "https://www.travelguard.com/travel-insurance/optional-coverage/baggage-bundle"
+        }
+      ]
+    }
+  ]
+}

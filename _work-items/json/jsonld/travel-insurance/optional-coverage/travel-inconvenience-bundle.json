@@ -1,0 +1,129 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/travel-inconvenience-bundle#webpage",
+      "url": "https://www.travelguard.com/travel-insurance/optional-coverage/travel-inconvenience-bundle",
+      "name": "Travel Inconvenience Bundle | Travel Guard®",
+      "description": "Travel Guard’s Travel Inconvenience Bundle helps take away some of the frustration of unexpected mishaps with a flat payment for certain inconveniences.",
+      "isPartOf": {
+        "@id": "https://www.travelguard.com/#website"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/travel-inconvenience-bundle#breadcrumb"
+      },
+      "mainEntity": [
+        {
+          "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/travel-inconvenience-bundle#service"
+        },
+        {
+          "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/travel-inconvenience-bundle#faqpage"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/travel-inconvenience-bundle#service",
+      "serviceType": "Travel Inconvenience Travel Insurance Bundle",
+      "name": "Travel Inconvenience Bundle",
+      "description": "Travel Guard’s Travel Inconvenience Bundle helps take away some of the frustration of unexpected mishaps with a flat payment for certain inconveniences.",
+      "provider": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "isRelatedTo": [
+        {
+          "@type": "Product",
+          "name": "Deluxe Plan",
+          "url": "https://www.travelguard.com/travel-insurance/plans/deluxe"
+        },
+        {
+          "@type": "Product",
+          "name": "Preferred Plan",
+          "url": "https://www.travelguard.com/travel-insurance/plans/preferred"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/travel-inconvenience-bundle#faqpage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the Travel Inconvenience Bundle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Travel Inconvenience Benefit is a coverage included on certain Travel Guard travel insurance plans that may provide you with a flat payment for certain inconveniences you experience on your vacation. The Travel Inconvenience Bundle adds additional covered events, such as closed attractions, hotel construction, rental home lockout, credit or debit card cancellation and more. With the Travel Inconvenience Bundle, you still have something to look forward to even when something goes wrong."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I add the Travel Inconvenience Bundle to my existing Travel Guard travel insurance plan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, if you have a Travel Guard Preferred plan you can add the Travel Inconvenience Bundle to your travel insurance plan. Additionally, if you have the Deluxe Plan, the extra covered events on the Travel Inconvenience Bundle are already included in your plan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are reimbursements provided for costs related to the inconveniences on my trip?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Travel Inconvenience Benefit coverage provides travelers with a one-time flat payment of $250 per occurrence of a covered Unforeseen inconvenience you might run into on your trip, up to a maximum of $750. The payment is not tied to any costs that you may have, just that the covered inconvenience happened."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What additional inconveniences are covered with the Travel Inconvenience Bundle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The following events, subject to additional terms and conditions, are added to your Travel Inconvenience coverage:\n\n- Closed Attractions \n\n- Missing Work \n\n- Flight Diversion \n\n- Rental Vehicle Breakdown \n\n- Bed Rest \n\n- Hotel Infestation \n\n- Hotel Construction  \n\n- Baggage Delay (24 hours)  \n\n- Trip Delay (12 hours)\n\n- Rental Home Lockout (three hours) \n\n- Credit/Debit Card Cancelled"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I learn more about the Travel Inconvenience Bundle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For additional information on the Travel Inconvenience Bundle, review your policy of insurance or call our specially trained representatives at 800.826.5248. Remember to read your policy of insurance to better understand your travel insurance plan!\n\nTravel Inconvenience Bundle is available on:"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/travel-inconvenience-bundle#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Travel Insurance Plans",
+          "item": "https://www.travelguard.com/travel-insurance/plans"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Upgrades and Bundles",
+          "item": "https://www.travelguard.com/travel-insurance/optional-coverage"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Travel Inconvenience Bundle",
+          "item": "https://www.travelguard.com/travel-insurance/optional-coverage/travel-inconvenience-bundle"
+        }
+      ]
+    }
+  ]
+}

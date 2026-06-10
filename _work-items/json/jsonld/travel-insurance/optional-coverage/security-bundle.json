@@ -1,0 +1,134 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/security-bundle#webpage",
+      "url": "https://www.travelguard.com/travel-insurance/optional-coverage/security-bundle",
+      "name": "Security Bundle | Travel Guard®",
+      "description": "Looking for more protection on your trip? Travel Guard’s optional add-on Security Bundle provides extra coverage to give you more protection.",
+      "isPartOf": {
+        "@id": "https://www.travelguard.com/#website"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/security-bundle#breadcrumb"
+      },
+      "mainEntity": [
+        {
+          "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/security-bundle#service"
+        },
+        {
+          "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/security-bundle#faqpage"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/security-bundle#service",
+      "serviceType": "Security Travel Insurance Bundle",
+      "name": "Security Bundle",
+      "description": "Looking for more protection on your trip? Travel Guard’s optional add-on Security Bundle provides extra coverage to give you more protection.",
+      "provider": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "isRelatedTo": [
+        {
+          "@type": "Product",
+          "name": "Deluxe Plan",
+          "url": "https://www.travelguard.com/travel-insurance/plans/deluxe"
+        },
+        {
+          "@type": "Product",
+          "name": "Preferred Plan",
+          "url": "https://www.travelguard.com/travel-insurance/plans/preferred"
+        },
+        {
+          "@type": "Product",
+          "name": "Essential Plan",
+          "url": "https://www.travelguard.com/travel-insurance/plans/essential"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/security-bundle#faqpage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the Security Bundle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There are many reasons you may want added security-related coverage while you’re traveling. Travel Guard’s Security Bundle adds covered reasons related to Civil disorders and Riots on coverages such as Trip Cancellation and Trip Interruption – meaning you may be able to cancel or change your travel due to those type of events at your destination and submit a claim for reimbursement of covered expenses. The Security Bundle also adds Security Evacuation to your Travel Guard travel insurance plan. If Travel Guard determines you need to get to a safe location, Travel Guard must make all arrangements. Since the social and political climate of the world is constantly changing, it’s always a good idea to have certain protection to help address the worst-case scenarios. Lastly, the Security Bundle also adds Flight Guard coverage to your travel insurance plan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I add the Security Bundle to my existing Travel Guard travel insurance plan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can add the Security Bundle to your existing travel insurance plan at any time before departure as long as it is an available upgrade on your selected plan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the Security Bundle provide coverage for Medical Evacuation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, emergency medical evacuation is a separate coverage on your Travel Guard travel insurance plans. An emergency medical evacuation would need to be deemed necessary by a certified health professional, whereas a security evacuation is dependent on Travel Guard’s assessment of the social and political climate of the location you’re in."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who decides if a Security Evacuation should take place?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Security Evacuation may take place if an advisory is placed by a government official involving political or military events, if a Natural Disaster leaves your destination uninhabitable as determined by officials, or if authorities have verified a threat or assault on your physical being. Ultimately, the determination of whether a security evacuation is required will be made by Travel Guard."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I learn more about the Security Bundle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For additional information on the Security Bundle, review your policy of insurance or call our specially trained representatives at 800.826.5248. Be sure to read over your policy of insurance to better understand your travel insurance plan!\n\nSecurity Bundle is available on:"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/security-bundle#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Travel Insurance Plans",
+          "item": "https://www.travelguard.com/travel-insurance/plans"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Upgrades and Bundles",
+          "item": "https://www.travelguard.com/travel-insurance/optional-coverage"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Security Bundle",
+          "item": "https://www.travelguard.com/travel-insurance/optional-coverage/security-bundle"
+        }
+      ]
+    }
+  ]
+}

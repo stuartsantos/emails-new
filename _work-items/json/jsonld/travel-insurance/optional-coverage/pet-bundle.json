@@ -1,0 +1,129 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/pet-bundle#webpage",
+      "url": "https://www.travelguard.com/travel-insurance/optional-coverage/pet-bundle",
+      "name": "A travel insurance plan for pet owners| Travel Guard®",
+      "description": "Travel Guard’s Pet Bundle makes traveling as a pet owner easier knowing you have the coverage you may need for your dog or cat.",
+      "isPartOf": {
+        "@id": "https://www.travelguard.com/#website"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/pet-bundle#breadcrumb"
+      },
+      "mainEntity": [
+        {
+          "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/pet-bundle#service"
+        },
+        {
+          "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/pet-bundle#faqpage"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/pet-bundle#service",
+      "serviceType": "Pet Travel Insurance Bundle",
+      "name": "Pet Bundle",
+      "description": "Travel Guard’s Pet Bundle makes traveling as a pet owner easier knowing you have the coverage you may need for your dog or cat.",
+      "provider": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "isRelatedTo": [
+        {
+          "@type": "Product",
+          "name": "Deluxe Plan",
+          "url": "https://www.travelguard.com/travel-insurance/plans/deluxe"
+        },
+        {
+          "@type": "Product",
+          "name": "Preferred Plan",
+          "url": "https://www.travelguard.com/travel-insurance/plans/preferred"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/pet-bundle#faqpage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the Pet Bundle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pet owners who are kenneling or traveling with their pet can consider adding the Pet Bundle to their Travel Guard travel insurance plan to get certain expanded coverages that include situations concerning their cat or dog. The Pet Bundle can provide coverage for extended kenneling or pet sitting costs if you are delayed for a covered reason on your way home and need to pay for additional days. It can also provide emergency medical expense coverage for your dog or cat traveling with you.\n\nWhether your furry friend is coming along for the adventure or anxiously awaiting your return, make sure you have the coverages you may need with Travel Guard’s Pet Bundle."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I add the Pet Bundle to my existing Travel Guard travel insurance plan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! On applicable travel insurance plans, you can add it to your plan to ensure you have the coverage you need."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What animals are covered under the Pet Bundle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Pet Bundle provides coverage for domesticated cats and dogs. To see if your service animal or pet is eligible for coverage, contact one of our specially trained representatives at 800.826.5248."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Travel Guard’s Pet Bundle the same as pet insurance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not exactly. The Pet Bundle is primarily just for the duration of your trip and covers certain animal medical expenses and/or additional boarding costs from covered delays out of your control. The Pet Bundle also adds certain covered events related to your pet to Trip Cancellation and Trip Interruption coverages."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I learn more about the Pet Bundle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For additional information on the Pet Bundle, start by reviewing your policy of insurance or calling our specially trained representatives at 800.826.5248. Remember, it’s always a good idea to read over your policy of insurance when purchasing a travel insurance plan!\n\nPet Bundle is available on:"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/pet-bundle#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Travel Insurance Plans",
+          "item": "https://www.travelguard.com/travel-insurance/plans"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Upgrades and Bundles",
+          "item": "https://www.travelguard.com/travel-insurance/optional-coverage"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Pet Bundle",
+          "item": "https://www.travelguard.com/travel-insurance/optional-coverage/pet-bundle"
+        }
+      ]
+    }
+  ]
+}
