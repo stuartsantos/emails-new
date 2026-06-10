@@ -1,0 +1,145 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.travelguard.com/traveler-types/backpacking-travel-insurance#webpage",
+      "url": "https://www.travelguard.com/traveler-types/backpacking-travel-insurance",
+      "name": "Travel Insurance Plans For Backpackers | Travel Guard",
+      "description": "Understand the importance of a travel insurance plan for your next backpacking adventure and make sure you’re covered with the right Travel Guard travel insurance plan.",
+      "isPartOf": {
+        "@id": "https://www.travelguard.com/#website"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://www.travelguard.com/traveler-types/backpacking-travel-insurance#breadcrumb"
+      },
+      "mainEntity": [
+        {
+          "@id": "https://www.travelguard.com/traveler-types/backpacking-travel-insurance#service"
+        },
+        {
+          "@id": "https://www.travelguard.com/traveler-types/backpacking-travel-insurance#faqpage"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.travelguard.com/traveler-types/backpacking-travel-insurance#service",
+      "serviceType": "Travel Insurance for Backpackers",
+      "name": "Travel Insurance Plans for Backpackers",
+      "description": "Understand the importance of a travel insurance plan for your next backpacking adventure and make sure you’re covered with the right Travel Guard travel insurance plan.",
+      "provider": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "audience": {
+        "@type": "PeopleAudience",
+        "audienceType": "Backpackers"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Travel Insurance Plans for Backpackers — Recommended Plans",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Deluxe Plan",
+            "url": "https://www.travelguard.com/travel-insurance/plans/deluxe",
+            "itemOffered": {
+              "@id": "https://www.travelguard.com/travel-insurance/plans/deluxe#product"
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Preferred Plan",
+            "url": "https://www.travelguard.com/travel-insurance/plans/preferred",
+            "itemOffered": {
+              "@id": "https://www.travelguard.com/travel-insurance/plans/preferred#product"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.travelguard.com/traveler-types/backpacking-travel-insurance#faqpage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a travel insurance plan for backpackers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "While Travel Guard doesn’t have a specific backpacking travel insurance plan, it’s the coverages on your travel insurance plan that matter most. Coverage for certain medical expenses, baggage coverage, and access to emergency travel assistance can help provide the peace of mind that you want for your backpacking adventure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does a travel insurance plan cover for backpacking?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Look for a plan that has the coverage and benefit limits you need while backpacking. Popular plan features include:\n\n- Medical expense coverage\n\n- Pre-existing medical condition exclusion waiver – important if you’re concerned about coverage for existing health conditions (if purchased within 15 days of initial trip deposit)\n\n- Trip cancellation/interruption coverage\n\n- Baggage coverage\n\n- Car rental coverage (optional add-on coverage)\n\n- Cancel For Any Reason (optional add-on coverage available with certain plans)\n\n- Pet bundle – hiking with your best friend? Make sure they’re covered too (optional add-on coverage available with certain plans)\n\n- Emergency travel assistance – specialized representatives are available 24/7 to help"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a travel insurance plan when I’m backpacking?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A travel insurance plan is not typically a requirement when traveling (depending on your destination). However, it can be an essential tool when it comes to protecting your travel investment. Backpackers may face unique risks while traveling, such as theft or baggage loss – a big deal when your luggage is your means of survival. Plus, you may not realize that some backpacking trips may be considered an adventure or extreme activity – so adding Travel Guard’s Adventure Sports Bundle helps ensure you have the coverage you may need for your trip."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which Travel Guard travel insurance plan is best for my backpacking trip?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depending on the type of backpacking trip you’re taking you may want to consider our Deluxe Plan as it has the highest benefit limits for coverages such as medical expense coverage, trip delay and baggage coverage. If you’re heading out on a shorter or more manageable backpacking trip Travel Guard’s Preferred Plan may have the coverage you need. Both plans have the option to add-on our Adventure Sports Bundle and include access to our 24/7 emergency travel assistance team."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I get a travel insurance plan without a return date if I don’t know how long I’ll be backpacking?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, the cost of your travel insurance is based on the length of your trip. To get coverage, you must provide an end date to your trip. However, you may be able to extend your coverage while on your trip if more time is needed. If you’re an avid backpacker who heads out on a regular basis, you may want to consider Travel Guard’s Annual Plan . Our Annual Plan allows you to have coverage for all your travels (up to 90 days per trip)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why book your travel insurance plan through Travel Guard for your next backpacking adventure?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Travel Guard is one of the world’s leading travel insurance providers with a network of service centers located in Asia, Europe and the Americas, ensuring the highest quality emergency travel services and medical assistance while you’re traveling. With early purchase benefits and optional add-on coverages, you can customize the plan and coverages you need.\n\nGet a travel insurance plan the way you want it!\n\nGet a Quote"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/traveler-types/backpacking-travel-insurance#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Traveler Types",
+          "item": "https://www.travelguard.com/traveler-types"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Travel Insurance Plans for Backpackers",
+          "item": "https://www.travelguard.com/traveler-types/backpacking-travel-insurance"
+        }
+      ]
+    }
+  ]
+}

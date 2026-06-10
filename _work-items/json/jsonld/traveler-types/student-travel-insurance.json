@@ -1,0 +1,161 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.travelguard.com/traveler-types/student-travel-insurance#webpage",
+      "url": "https://www.travelguard.com/traveler-types/student-travel-insurance",
+      "name": "Overseas Travel Insurance Plans For Students | Travel Guard",
+      "description": "If you're a student who's traveling, we'll help you to understand the importance of travel insurance plans and making sure you have the coverage you need.",
+      "isPartOf": {
+        "@id": "https://www.travelguard.com/#website"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://www.travelguard.com/traveler-types/student-travel-insurance#breadcrumb"
+      },
+      "mainEntity": [
+        {
+          "@id": "https://www.travelguard.com/traveler-types/student-travel-insurance#service"
+        },
+        {
+          "@id": "https://www.travelguard.com/traveler-types/student-travel-insurance#faqpage"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.travelguard.com/traveler-types/student-travel-insurance#service",
+      "serviceType": "Travel Insurance for Students",
+      "name": "Travel Insurance Plans for Students",
+      "description": "If you're a student who's traveling, we'll help you to understand the importance of travel insurance plans and making sure you have the coverage you need.",
+      "provider": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "audience": {
+        "@type": "PeopleAudience",
+        "audienceType": "Student Travelers"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Travel Insurance Plans for Students — Recommended Plans",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Deluxe Plan",
+            "url": "https://www.travelguard.com/travel-insurance/plans/deluxe",
+            "itemOffered": {
+              "@id": "https://www.travelguard.com/travel-insurance/plans/deluxe#product"
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Preferred Plan",
+            "url": "https://www.travelguard.com/travel-insurance/plans/preferred",
+            "itemOffered": {
+              "@id": "https://www.travelguard.com/travel-insurance/plans/preferred#product"
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Essential Plan",
+            "url": "https://www.travelguard.com/travel-insurance/plans/essential",
+            "itemOffered": {
+              "@id": "https://www.travelguard.com/travel-insurance/plans/essential#product"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.travelguard.com/traveler-types/student-travel-insurance#faqpage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a travel insurance plan for students?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Travel insurance plans for students provide important coverages like medical expense coverage and trip interruption coverage, as well as 24/7 emergency travel assistance so you can have more peace of mind while traveling. Travel Guard’s travel insurance plans allow you to choose among benefit limits and optional add-on coverages to create just what you need in your travel insurance plan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does a travel insurance plan for students cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Travel Guard offers customizable travel insurance plans for your travels. Look for a plan that has the coverages and benefit limits you need. Popular plan features include:\n\n- Medical expense coverage \n\n- Emergency dental coverage\n\n- Trip interruption coverage\n\n- Trip cancellation coverage\n\n- Emergency evacuation coverage\n\n- Security coverage (optional add-on coverage available with certain plans)\n\n- Baggage coverage\n\n- Car rental coverage (optional add-on coverage)\n\n- Emergency travel assistance – specialized representatives are available 24/7 to help"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a travel insurance plan as a traveling student?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Taking a trip as a student can be overwhelming – for both the student and their family who is at home. Student travelers (and their families) can feel confident knowing that every Travel Guard travel insurance plan includes 24/7 emergency travel assistance . It can be a relief to know someone is there to help your student traveler anytime of the day or night. With customizable plans you can create the student travel insurance plan that fits your needs best."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which Travel Guard travel insurance plan is best for my travels as a student?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Travel Guard’s Deluxe , Preferred , and Essential plans all include our 24/7 emergency travel assistance. Take a look at the coverages and benefit limits on each plan to find the one that meets your needs best. If you’re traveling abroad for an extended period, we recommend our Deluxe Plan as it has the highest benefit limits and most coverages included for your travels."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a travel insurance plan with Travel Guard cover dental?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, most Travel Guard travel insurance plans include coverage for emergency dental up to the benefit limits on the policy. It’s important to remember this is for emergency treatment and not routine dental care. Always be sure to read the specific coverage details of the plan you are considering to ensure you understand your policy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does a travel insurance plan cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On average, a travel insurance plan costs between 5-7% of the total cost of your trip. However, several factors come into play when pricing your plan, such as the plan you select, add-ons you choose and the length of your trip. For more details on pricing, check out our article on how much travel insurance costs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why book your travel insurance plan through Travel Guard?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Travel Guard is one of the world’s leading travel insurance providers with a network of service centers located in Asia, Europe, and the Americas, ensuring the highest quality emergency travel services and medical assistance while you’re traveling. With early purchase benefits and optional add-on coverages, you can customize the plan and coverages you need for your student travel.\n\nGet travel insurance the way you want it!\n\nGet a Quote"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/traveler-types/student-travel-insurance#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Traveler Types",
+          "item": "https://www.travelguard.com/traveler-types"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Travel Insurance Plans for Students",
+          "item": "https://www.travelguard.com/traveler-types/student-travel-insurance"
+        }
+      ]
+    }
+  ]
+}

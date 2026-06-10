@@ -1,0 +1,161 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.travelguard.com/traveler-types/senior-travel-insurance-plan#webpage",
+      "url": "https://www.travelguard.com/traveler-types/senior-travel-insurance-plan",
+      "name": "Travel Insurance Plans For Seniors | Travel Guard",
+      "description": "A travel insurance plan is especially important for older adults with specific health concerns when traveling. Visit us to find the best plan for your trip.",
+      "isPartOf": {
+        "@id": "https://www.travelguard.com/#website"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://www.travelguard.com/traveler-types/senior-travel-insurance-plan#breadcrumb"
+      },
+      "mainEntity": [
+        {
+          "@id": "https://www.travelguard.com/traveler-types/senior-travel-insurance-plan#service"
+        },
+        {
+          "@id": "https://www.travelguard.com/traveler-types/senior-travel-insurance-plan#faqpage"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.travelguard.com/traveler-types/senior-travel-insurance-plan#service",
+      "serviceType": "Senior Travel Insurance",
+      "name": "Senior Travel Insurance Plans",
+      "description": "A travel insurance plan is especially important for older adults with specific health concerns when traveling. Visit us to find the best plan for your trip.",
+      "provider": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "audience": {
+        "@type": "PeopleAudience",
+        "audienceType": "Senior Travelers"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Senior Travel Insurance Plans — Recommended Plans",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Deluxe Plan",
+            "url": "https://www.travelguard.com/travel-insurance/plans/deluxe",
+            "itemOffered": {
+              "@id": "https://www.travelguard.com/travel-insurance/plans/deluxe#product"
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Preferred Plan",
+            "url": "https://www.travelguard.com/travel-insurance/plans/preferred",
+            "itemOffered": {
+              "@id": "https://www.travelguard.com/travel-insurance/plans/preferred#product"
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Essential Plan",
+            "url": "https://www.travelguard.com/travel-insurance/plans/essential",
+            "itemOffered": {
+              "@id": "https://www.travelguard.com/travel-insurance/plans/essential#product"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.travelguard.com/traveler-types/senior-travel-insurance-plan#faqpage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a senior travel insurance plan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A senior travel insurance plan has the coverage and benefit limits you need for added peace of mind while traveling. Travel Guard’s travel insurance plans allow you to choose among benefit limits and optional add-on coverages to create just what you need in your travel insurance plan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does a senior travel insurance plan cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Travel Guard offers customizable travel insurance plans for your trip. Look for a plan that has the coverages and benefit limits you need. Popular plan features include:\n\n- Medical expense coverage\n\n- Pre-existing medical condition exclusion waiver – included when you purchase your travel insurance plan the day you make your first trip deposit (or shortly thereafter, usually within 15 days)\n\n- Trip cancellation/interruption coverage\n\n- Missed flight connection assistance\n\n- Baggage coverage Car rental coverage (optional add-on coverage)\n\n- Cancel For Any Reason (optional add-on coverage available with certain plans)\n\n- Emergency travel assistance – specialized representatives are available 24/7 to help"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a senior travel insurance plan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every traveler is unique in their travel insurance need, and seniors are no exception. Whether traveling across the country to visit grandkids or taking the trip of a lifetime overseas, having the right travel insurance plan is important. In addition to customizable plans, all of Travel Guard’s travel insurance plans come with access to our specially trained representatives for 24/7 emergency travel assistance . Our representatives can help with anything from rebooking missed flights to finding quality medical care while you’re traveling – so you can focus on making the most of your vacation time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which Travel Guard travel insurance plan is best for my vacation as a senior?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Travel Guard’s Deluxe , Preferred and Essential plans all include our pre-existing medical condition exclusion waiver if you purchase your travel insurance within 15 days of making your first trip deposit. With the waiver, you can be covered for certain pre-existing medical conditions that otherwise may have been excluded. Our Deluxe Plan offers the highest benefit limits for coverages like medical expense coverage, baggage and trip interruption, which may appeal to you based on the trip you’re taking."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a senior travel insurance plan if I have Medicare?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually, Medicare does not cover health care while you’re traveling outside of the U.S., so a travel insurance plan that offers medical expense coverage can be a good idea if you’re leaving the country. In addition to medical expense coverage, Travel Guard’s travel insurance plans offer Trip Cancellation and 24/7 emergency travel assistance so you can travel with greater peace of mind. It’s always best to check the coverage details of your specific Medicare plan for complete coverage information."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does a senior travel insurance plan cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pricing for our travel insurance plans is calculated using several different individual factors, ensuring that you have the proper coverage that you need for your trip. For this reason, the price of travel insurance plans can vary. If you have a rough idea of your trip details, get a quote now to see how much a travel insurance plan could cost for your trip."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why purchase your senior travel insurance plan through Travel Guard?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Travel Guard is one of the world’s leading travel insurance providers with a network of service centers located in Asia, Europe and the Americas, ensuring the highest quality emergency travel services and medical assistance while you’re traveling. With early purchase benefits and optional add-on coverages, you can customize the plan and coverages you need for your vacation.\n\nGet travel insurance the way you want it!\n\nGet a Quote"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/traveler-types/senior-travel-insurance-plan#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Traveler Types",
+          "item": "https://www.travelguard.com/traveler-types"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Senior Travel Insurance Plans",
+          "item": "https://www.travelguard.com/traveler-types/senior-travel-insurance-plan"
+        }
+      ]
+    }
+  ]
+}

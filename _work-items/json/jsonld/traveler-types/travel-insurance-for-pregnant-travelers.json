@@ -1,0 +1,209 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.travelguard.com/traveler-types/travel-insurance-for-pregnant-travelers#webpage",
+      "url": "https://www.travelguard.com/traveler-types/travel-insurance-for-pregnant-travelers",
+      "name": "Travel Insurance Plans For Pregnant Women | Travel Guard",
+      "description": "It’s important to understand how your travel insurance plan coverages may be impacted by pregnancy. Visit Travel Guard for all the information you need.",
+      "isPartOf": {
+        "@id": "https://www.travelguard.com/#website"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://www.travelguard.com/traveler-types/travel-insurance-for-pregnant-travelers#breadcrumb"
+      },
+      "mainEntity": [
+        {
+          "@id": "https://www.travelguard.com/traveler-types/travel-insurance-for-pregnant-travelers#service"
+        },
+        {
+          "@id": "https://www.travelguard.com/traveler-types/travel-insurance-for-pregnant-travelers#faqpage"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.travelguard.com/traveler-types/travel-insurance-for-pregnant-travelers#service",
+      "serviceType": "Travel Insurance for Pregnant Travelers",
+      "name": "Travel Insurance Plans for Pregnant Travelers",
+      "description": "It’s important to understand how your travel insurance plan coverages may be impacted by pregnancy. Visit Travel Guard for all the information you need.",
+      "provider": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "audience": {
+        "@type": "PeopleAudience",
+        "audienceType": "Pregnant Travelers"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Travel Insurance Plans for Pregnant Travelers — Recommended Plans",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Deluxe Plan",
+            "url": "https://www.travelguard.com/travel-insurance/plans/deluxe",
+            "itemOffered": {
+              "@id": "https://www.travelguard.com/travel-insurance/plans/deluxe#product"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.travelguard.com/traveler-types/travel-insurance-for-pregnant-travelers#faqpage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a travel insurance plan for pregnant travelers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Travel insurance plans may help protect you from certain unexpected costs when traveling, whether in the United States or abroad. If you need to change your plans or seek emergency medical treatment, the right coverage can help ensure you’re not stuck with significant expenses.\n\nWhile Travel Guard doesn’t offer plans designed specifically for pregnancy, many of our travel insurance plan options can still help with common concerns when traveling during your pregnancy. Plan features like emergency medical expense coverage, trip cancellation coverage and 24/7 travel emergency assistance can help give you more peace of mind during your trip.\n\nIf something unexpected happens, such as early labor pains, unusual bleeding, or another sudden complication, the right travel insurance plan may help cover certain related expenses. Routine checkups and planned deliveries abroad aren’t covered, but a travel insurance plan can still help you access care and help protect your travel investment if a covered emergency arises."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does a travel insurance plan cover for pregnancy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There are no coverages that are specific to pregnant women, but there are certain coverages that might be impacted if you’re pregnant. Having the right coverage and understanding how you’re covered is important. Look for a plan that fits your pregnancy travel needs.\n\nPopular plan features include:\n\n- Emergency medical expense coverage (be sure to understand how pregnancy may impact this coverage)\n\n- Trip Cancellation\n\n- Trip Interruption\n\n- Missed Connection\n\n- Trip Exchange – coverage for difference in cost or fees associated with changing your vacation to new travel dates in certain cases \n\n- Baggage Coverage \n\n- Rental Vehicle Damage Coverage (optional add-on coverage)\n\n- Cancel For Any Reason (optional add-on coverage available with certain plans)\n\nBe sure to review your plan details carefully, so you understand exactly how pregnancy may affect your coverage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a travel insurance plan to travel while pregnant?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Travel insurance isn’t required to travel while pregnant, but it can make a big difference if plans change or complications arise. While normal pregnancy or childbirth isn’t covered under emergency medical expense coverage, losses related to unexpected complications may be. And if you purchased your plan before becoming pregnant, you may qualify for trip cancellation coverage if your pregnancy prevents you from traveling.\n\nWith a Travel Guard travel insurance plan, you’ll also have access to our 24/7 emergency travel assistance . If issues arise on your trip, our specially trained representatives can help with things like rebooking flights, finding English speaking doctors, providing translation assistance and assisting with prescription replacement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which Travel Guard travel insurance plan is best for my trip?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our Deluxe Plan is a great option for pregnant women as it offers the highest benefit limits and includes popular services and coverages such as Trip Exchange , trip delay and baggage coverage. For more coverage, consider adding on a bundle such as the Name Your Family™ bundle to include a non-relative in the definition of family as it relates to coverage on your policy.\n\nYou can view and compare each of our plans here , or give us a call at 800-826-5248 and we’ll help you to tailor your unique travel insurance plan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I purchase a travel insurance plan while I am pregnant?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can absolutely purchase a travel insurance plan if you’re traveling while pregnant. Just be sure to read the policy of insurance on your travel insurance plan to understand how pregnancy may impact your coverage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "I just found out I’m pregnant, can I be reimbursed if I cancel my trip?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, on our Preferred and Deluxe plans, you can be reimbursed for prepaid, nonrefundable expenses for covered losses due to pregnancy as long as you became pregnant after the effective date of your coverage. Be sure to confirm what is needed to submit a claim."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why book your travel insurance plan through Travel Guard as a pregnant traveler?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Travel Guard is one of the world’s leading travel insurance providers with a network of service centers located in Asia, Europe and the Americas, ensuring the highest quality emergency travel services and medical assistance while you’re traveling. With early purchase benefits and optional add-on coverages, you’ll be able to enjoy your vacation knowing your travel investment is more protected."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a travel insurance plan cover pregnancy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There isn’t coverage made just for pregnancy, but certain coverages may still apply if you’re expecting. Travel Guard plans may help with:\n\n- Emergency medical expense coverage if you experience certain unforeseen complications during your trip.\n\n- Trip cancellation or interruption coverage if a new pregnancy or related medical advice prevents travel (depending on your plan and when you purchased it).\n\n- 24/7 emergency travel assistance to connect you with help if the unexpected happens abroad."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What’s not covered by a travel insurance plan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Travel insurance plans are designed for the unexpected, so it doesn’t cover routine or planned care. That means you won’t be covered for:\n\n- Normal prenatal checkups\n\n- Routine or elective procedures abroad\n\n- Planned childbirth while traveling\n\nIt’s always best to review your plan details so you know exactly what is and isn’t covered before you purchase."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if I go into labor abroad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Normal labor and delivery aren’t covered by a travel insurance plan. However, if you experience unexpected complications like early labor, your plan may help with certain emergency medical expenses. It’s always best to understand your plan’s limits before traveling."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is pregnancy considered a pre-existing medical condition?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pregnancy on its own is generally not considered a pre-existing medical condition. However, if you’ve already been diagnosed with a pregnancy-related complication before buying your travel insurance plan, that condition could be treated as a pre-existing medical condition."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I’m pregnant and also have a pre-existing medical condition?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If you have a pre-existing medical condition before purchasing your travel insurance plan, such as asthma, high blood pressure or diabetes, in addition to being pregnant, those medical conditions may be considered a pre-existing medical condition. Some Travel Guard plans offer a Pre-Existing Medical Condition Exclusion Waiver if you buy within a certain time frame, which can expand your coverage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What documents should I bring while traveling?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Carry your travel insurance plan details, emergency contact numbers and your doctor’s information. It’s also helpful to bring a copy of your medical records, prescriptions and a note from your doctor confirming you’re cleared to travel."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How late in my pregnancy can I travel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most airlines allow travel up to approximately 36 weeks for single pregnancies (earlier for multiples), but every carrier sets its own rules. Travel Guard doesn’t set restrictions on when you can purchase a travel insurance plan, but it’s important to check both airline policies and your doctor’s advice."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I’ve become pregnant after I’ve booked my trip?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If you become pregnant after buying your travel insurance plan, and your doctor later advises against travel, you may be eligible for trip cancellation benefits under certain plans. Buying a travel insurance plan soon after booking your trip gives you the best chance to be covered if your situation changes."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/traveler-types/travel-insurance-for-pregnant-travelers#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Traveler Types",
+          "item": "https://www.travelguard.com/traveler-types"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Travel Insurance Plans for Pregnant Travelers",
+          "item": "https://www.travelguard.com/traveler-types/travel-insurance-for-pregnant-travelers"
+        }
+      ]
+    }
+  ]
+}

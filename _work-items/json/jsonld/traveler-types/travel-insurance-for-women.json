@@ -1,0 +1,153 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.travelguard.com/traveler-types/travel-insurance-for-women#webpage",
+      "url": "https://www.travelguard.com/traveler-types/travel-insurance-for-women",
+      "name": "Travel Insurance Plans for Women | Travel Guard",
+      "description": "Find more protection for your trip with Travel Guard® travel insurance plans. Discover travel insurance plans for women to help keep you covered wherever your journey takes you.",
+      "isPartOf": {
+        "@id": "https://www.travelguard.com/#website"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://www.travelguard.com/traveler-types/travel-insurance-for-women#breadcrumb"
+      },
+      "mainEntity": [
+        {
+          "@id": "https://www.travelguard.com/traveler-types/travel-insurance-for-women#service"
+        },
+        {
+          "@id": "https://www.travelguard.com/traveler-types/travel-insurance-for-women#faqpage"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.travelguard.com/traveler-types/travel-insurance-for-women#service",
+      "serviceType": "Travel Insurance for Women",
+      "name": "Travel Insurance Plans for Women",
+      "description": "Find more protection for your trip with Travel Guard® travel insurance plans. Discover travel insurance plans for women to help keep you covered wherever your journey takes you.",
+      "provider": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "audience": {
+        "@type": "PeopleAudience",
+        "audienceType": "Female Travelers"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Travel Insurance Plans for Women — Recommended Plans",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Deluxe Plan",
+            "url": "https://www.travelguard.com/travel-insurance/plans/deluxe",
+            "itemOffered": {
+              "@id": "https://www.travelguard.com/travel-insurance/plans/deluxe#product"
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Preferred Plan",
+            "url": "https://www.travelguard.com/travel-insurance/plans/preferred",
+            "itemOffered": {
+              "@id": "https://www.travelguard.com/travel-insurance/plans/preferred#product"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.travelguard.com/traveler-types/travel-insurance-for-women#faqpage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a travel insurance plan for female travelers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A travel insurance plan for women and female-presenting travelers is no different than any other travel insurance plan. Travelers can receive coverage for certain events or losses, which may include trip cancellation, lost baggage recovery, medical expense and more. When planning outings, you may find our concierge services to be beneficial in your planning, no matter who you’re traveling with. Travel Guard travel insurance plans offer customizable options to build the plan that works best for you."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does a travel insurance plan for women cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There aren’t any coverages specifically for female travelers, but there are certain coverages that may help women feel more secure when traveling, especially if taking a solo trip. Look for a plan that has the coverage and benefit limits relevant to your trip. Popular plan features include:\n\n- Medical expense coverage\n\n- Trip cancellation/interruption coverage\n\n- Missed flight connection assistance\n\n- Security evacuation assistance\n\n- Travel inconvenience benefits – flat payments in certain situations that arise that may dampen your trip, such as rental home lockout, hotel construction or cruise diversion\n\n- Baggage coverage\n\n- Car rental coverage (optional add-on coverage)\n\n- Cancel For Any Reason (optional add-on coverage available with certain plans)\n\n- Emergency travel assistance – specialized representatives are available 24/7"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a travel insurance plan as a female traveler?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Having a travel insurance plan is not usually a requirement for traveling, though it may be a requirement if you’re vacationing with a third-party touring company. Additionally, some countries have travel insurance requirements for the issuance of a visa. Either way, a travel insurance plan can be an essential tool to add more protection to your travel investment. Whether you’re handling the planning of a solo trip or need help with the moving parts of a group trip, all of Travel Guard’s travel insurance plans come with access to our specially trained representatives for 24/7 emergency travel assistance . Our staff can help with anything from rebooking missed flights to finding quality medical care while you’re traveling – so you can focus on having fun."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which Travel Guard travel insurance plan is best for my trip?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No matter the type of trip you’re planning, our Preferred Plan is a great place for female travelers to start. It includes popular coverages like medical expense coverage, trip delay and baggage coverage. If you’re traveling far away or your trip will be filled with action-packed experiences or you just want more coverage, you may want to consider our Deluxe Plan as an option. It has higher coverage limits and additional protection for your trip. Our Deluxe Plan offers concierge services that can help plan outings, make reservations and reschedule events, which can be extremely beneficial if traveling with a group."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is female solo travel safe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Solo travel among women is more popular than ever. Remember to properly research your destination as well as follow suggested safety protocols such as avoiding travel at night and not sharing your travel plans with strangers. The US Department of State’s Smart Traveler Enrollment Program (STEP) is also a helpful resource for learning more about the risks of traveling to a given place and provides updates in real time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will my travel insurance plan cover travel to multiple countries?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, so long as you are not traveling to an OFAC-sanctioned area. Visit the official Office of Foreign Assets Control website for the latest information. You should also review the terms and conditions of your travel insurance plan for any other limitations or exclusions.\n\nIf you destination is on the Sanctioned Countries list and you have questions about how this will affect your policy, please call our World Service Center at 1-800-826-1300. For the latest information on OFAC-sanctioned areas, visit the official Office of Foreign Assets Control website."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why book your travel insurance plan through Travel Guard as a female traveler?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Travel Guard is one of the world’s leading travel insurance providers with a network of service centers located in Asia, Europe and the Americas, ensuring the highest quality emergency travel services and medical assistance while you’re traveling. With early purchase benefits and optional add-on coverages, you’ll be able to enjoy your vacation knowing your travel investment is protected.\n\nGet a travel insurance plan the way you want it!\n\nGet a Quote"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/traveler-types/travel-insurance-for-women#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Traveler Types",
+          "item": "https://www.travelguard.com/traveler-types"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Travel Insurance Plans for Women",
+          "item": "https://www.travelguard.com/traveler-types/travel-insurance-for-women"
+        }
+      ]
+    }
+  ]
+}

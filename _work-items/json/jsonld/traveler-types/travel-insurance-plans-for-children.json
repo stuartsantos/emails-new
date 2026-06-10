@@ -1,0 +1,169 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.travelguard.com/traveler-types/travel-insurance-plans-for-children#webpage",
+      "url": "https://www.travelguard.com/traveler-types/travel-insurance-plans-for-children",
+      "name": "Travel Insurance Plans for Traveling with Children | Travel Guard",
+      "description": "A travel insurance plan is vitally important when traveling with kids. Visit Travel Guard now to make sure your children are covered with the right plan.",
+      "isPartOf": {
+        "@id": "https://www.travelguard.com/#website"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://www.travelguard.com/traveler-types/travel-insurance-plans-for-children#breadcrumb"
+      },
+      "mainEntity": [
+        {
+          "@id": "https://www.travelguard.com/traveler-types/travel-insurance-plans-for-children#service"
+        },
+        {
+          "@id": "https://www.travelguard.com/traveler-types/travel-insurance-plans-for-children#faqpage"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.travelguard.com/traveler-types/travel-insurance-plans-for-children#service",
+      "serviceType": "Travel Insurance for Children",
+      "name": "Travel Insurance Plans for Children",
+      "description": "A travel insurance plan is vitally important when traveling with kids. Visit Travel Guard now to make sure your children are covered with the right plan.",
+      "provider": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "audience": {
+        "@type": "PeopleAudience",
+        "audienceType": "Children"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Travel Insurance Plans for Children — Recommended Plans",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Deluxe Plan",
+            "url": "https://www.travelguard.com/travel-insurance/plans/deluxe",
+            "itemOffered": {
+              "@id": "https://www.travelguard.com/travel-insurance/plans/deluxe#product"
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Preferred Plan",
+            "url": "https://www.travelguard.com/travel-insurance/plans/preferred",
+            "itemOffered": {
+              "@id": "https://www.travelguard.com/travel-insurance/plans/preferred#product"
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Essential Plan",
+            "url": "https://www.travelguard.com/travel-insurance/plans/essential",
+            "itemOffered": {
+              "@id": "https://www.travelguard.com/travel-insurance/plans/essential#product"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.travelguard.com/traveler-types/travel-insurance-plans-for-children#faqpage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a travel insurance plan for children?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A travel insurance plan for children is no different than a travel insurance plan for adults. But we know there are certain coverages that may be more important to you if you’re traveling with children. Having a travel insurance plan that provides coverage for certain events or losses, which may include trip cancellation, lost baggage recovery, medical expense and more can help ease the stress you might have. Whether you’re traveling with your children, or they are journeying on their own, a travel insurance plan can help you enjoy your trip knowing your travel investment is more protected."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does a travel insurance plan for children cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When you purchase a travel insurance plan for your child’s trip, you can get coverage for certain unforeseen circumstances, whether your child is traveling alone, with you or even as part of a school trip. Choose a plan that has the coverage and benefit limits your child needs for travel. Popular plan features include:\n\n- Trip cancellation/interruption coverage\n\n- Missed flight connection assistance\n\n- Baggage and baggage delay coverage  \n\n- Medical expense coverage\n\n- Adventure Sports Bundle – we know kids like those adrenaline packed activities (available as an optional add-on with certain plans)\n\n- Cancel For Any Reason (optional add-on coverage available with certain plans)\n\n- Travel assistance services – specialized representatives who are available to help 24/7"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a travel insurance plan for my children?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "While it’s always a good idea to protect your travel investment, you may find it to be even more essential when it comes to traveling with children or your children traveling alone. There’s a lot of arrangements to juggle and even small interruptions can make traveling more difficult when kids are involved. All our Travel Guard travel insurance plans come with access to 24/7 emergency travel assistance, so you have extra help anytime you need it and can focus on your kids (or help them get home from afar)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to obtain a travel insurance plan for my minor children’s school trip?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "School trips may require students to have a travel insurance plan. But even if it’s not a requirement you may have more peace of mind knowing your child’s trip has the coverage they need. Take a look at the travel insurance plans from Travel Guard that might work best for a student traveler ."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which Travel Guard travel insurance plan is best for my children’s trip?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The plan that is best suited for your child’s travels depends on a few things. If your child is traveling alone or with you, you may be most concerned with coverages like lost baggage, missed connection, or trip delay – the things that can really throw a wrench in travel plans. If that’s the case for you, our Preferred Plan is a great place for any traveler to start. It includes those popular coverages as well as 24/7 emergency travel assistance.\n\nIf your child is traveling as part of a school trip and is required to have a travel insurance plan, there may be certain benefit limits that are required on their travel insurance plan. If that’s the case, our Deluxe Plan is a great option since it has the most coverages included on the base plan and the highest benefit limits. Our customer service representatives are always happy to help you figure out what plan fits any travel requirements that you have, you can reach them with questions at 800.826.5248.  More information is available on our student traveler page."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are children included on Travel Guard travel insurance plans?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Travel Guard’s Deluxe , Preferred and Essential plans all include coverage for identified family members that reside in the same state. One child who is age 17 or under and is booked to travel with (and is related to) the primary adult named on the plan, is included in the rates for each paying adult. Note that this does not apply to optional coverages, and the child’s trip cost must be equal to or less than the adult traveler(s) trip cost."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a Travel Guard travel insurance plan cover legal guardians traveling with their children?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, legal guardians can obtain coverage with the children under a travel insurance plan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why book your travel insurance plan for your children through Travel Guard?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Travel Guard is one of the world’s leading travel insurance providers with a network of service centers located in Asia, Europe, and the Americas, ensuring the highest quality emergency travel services and medical assistance while you’re traveling. With early purchase benefits and optional add-on coverages, you can customize the plan and coverages you need for your vacation."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/traveler-types/travel-insurance-plans-for-children#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Traveler Types",
+          "item": "https://www.travelguard.com/traveler-types"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Travel Insurance Plans for Children",
+          "item": "https://www.travelguard.com/traveler-types/travel-insurance-plans-for-children"
+        }
+      ]
+    }
+  ]
+}

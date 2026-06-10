@@ -71,16 +71,15 @@ Canonical-URL gotchas found so far:
 
 ## Roadmap / deferred batches (in priority order, from the audit + Otterly data)
 
-Done: sitewide bundle, homepage, FAQ, claims, contact, about, reviews, plans listing + all 4 plan pages, CFAR, pre-existing conditions, student travel safety, **all 13 trip-types**, what-is + assistance-services (info), baggage-insurance (benefits), our-underwriter, jet-lag article, 5 section landing index.json files.
+Done: sitewide bundle, homepage, FAQ, claims, contact, about, reviews, plans listing + all 4 plan pages, CFAR, student travel safety, **all 13 trip-types**, **all 11 traveler-types**, what-is + assistance-services (info), baggage-insurance (benefits), our-underwriter, jet-lag article, 5 section landing index.json files.
 
-Trip-type batch note (Jun 10): all 12 pages share one AEM template — question-formatted h2s with visible prose answers. Files are WebPage + Service + OfferCatalog (only the plans each page actually links) + FAQPage with verbatim on-page Q&As (79 total, all containment-verified). Trailing "Get a travel insurance plan the way you want it!" CTA heading must be trimmed from the last answer.
+Trip-type / traveler-type batch notes (Jun 10): these pages share one AEM template family — question-formatted h2s (or h3s nested under a "Ready to book…?" CTA heading, which must be excluded) with visible prose answers. Files are WebPage + Service + OfferCatalog (only the plans each page actually links) + FAQPage with verbatim on-page Q&As (79 + 78, all containment-verified). Trailing "Get a travel insurance plan the way you want it!" / "Get travel insurance the way you want it!" CTA headings must be trimmed from final answers. The pregnant-travelers page additionally has a real FAQ accordion (8 h3 Q&As) on top of its prose sections — both are marked up. Traveler-type `audience.audienceType` uses the site nav's own labels (Backpackers, Family Travelers, …).
 
 Next batches:
-1. 10 remaining traveler-types (`backpacking-travel-insurance`, `family-travel-insurance-plan`, `group-travel`, `lgbtq-travel-insurance-plan`, `senior-travel-insurance-plan`, `solo-travel-insurance`, `student-travel-insurance`, `travel-insurance-for-pregnant-travelers`, `travel-insurance-for-women`, `travel-insurance-plans-for-children`) — pattern: `traveler-types/pre-existing...json`
-2. ~16 remaining benefits pages (under `/travel-insurance/benefits/`) — pattern: `benefits/baggage-insurance.json`
-3. 10 optional-coverage bundle pages (see `optional-coverage/index.json` for the list)
-4. 7 remaining info articles (`5-essential-travel-insurance-plan-tips`, `how-does-travel-insurance-work`, `how-much-does-travel-insurance-cost`, `packing-checklist`, `travel-insurance-checklist`, `what-is-a-policy-of-insurance`, `when-to-buy-travel-insurance`)
-5. Video library (VideoObject — note the live student-safety page already carries 6 VideoObject blocks from the video player)
+1. ~16 remaining benefits pages (under `/travel-insurance/benefits/`) — pattern: `benefits/baggage-insurance.json`
+2. 10 optional-coverage bundle pages (see `optional-coverage/index.json` for the list)
+3. 7 remaining info articles (`5-essential-travel-insurance-plan-tips`, `how-does-travel-insurance-work`, `how-much-does-travel-insurance-cost`, `packing-checklist`, `travel-insurance-checklist`, `what-is-a-policy-of-insurance`, `when-to-buy-travel-insurance`)
+4. Video library (VideoObject — note the live student-safety page already carries 6 VideoObject blocks from the video player)
 
 **Excluded from scope:** `/travel-news/*` and newsroom (per user, first pass), `/travel-resources/destinations/*` (P3).
 
