@@ -1,0 +1,123 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.travelguard.com/travel-insurance/benefits/adventure-sports-coverage#webpage",
+      "url": "https://www.travelguard.com/travel-insurance/benefits/adventure-sports-coverage",
+      "name": "Adventure Sports Bundle Add-On | Travel Guard®",
+      "description": "When you’re ready for an action-packed vacation, pack a Travel Guard® travel insurance plan with our adventure sports add-on to protect your trip.",
+      "isPartOf": {
+        "@id": "https://www.travelguard.com/#website"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://www.travelguard.com/travel-insurance/benefits/adventure-sports-coverage#breadcrumb"
+      },
+      "mainEntity": [
+        {
+          "@id": "https://www.travelguard.com/travel-insurance/benefits/adventure-sports-coverage#service"
+        },
+        {
+          "@id": "https://www.travelguard.com/travel-insurance/benefits/adventure-sports-coverage#faqpage"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.travelguard.com/travel-insurance/benefits/adventure-sports-coverage#service",
+      "serviceType": "Adventure Sports Travel Insurance Bundle",
+      "name": "Adventure Sports Bundle",
+      "description": "When you’re ready for an action-packed vacation, pack a Travel Guard® travel insurance plan with our adventure sports add-on to protect your trip.",
+      "provider": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "isRelatedTo": [
+        {
+          "@type": "Product",
+          "name": "Deluxe Plan",
+          "url": "https://www.travelguard.com/travel-insurance/plans/deluxe"
+        },
+        {
+          "@type": "Product",
+          "name": "Preferred Plan",
+          "url": "https://www.travelguard.com/travel-insurance/plans/preferred"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.travelguard.com/travel-insurance/benefits/adventure-sports-coverage#faqpage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the Adventure Sports Bundle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Adventure Sports Bundle is a great option for travelers who are planning activities that involve a little more risk than your standard hike or tour. Your travel insurance plan will have defined activities that are excluded, meaning that a loss that happens while partaking in that activity may not be covered. For example, a broken leg sustained while mountain climbing may not be covered as it otherwise may be under the Travel Medical Expense coverage.\n\nThat’s where the Adventure Sports Bundle comes in. Purchasing this bundle removes certain exclusions for Adventure Activities and Extreme Activities. Your Policy of Insurance will have more details on what activities fall into those categories, but common ones include SCUBA diving (up to certain depths), bungee jumping, sky diving, hang gliding, and mountain climbing (up to certain elevations). There’s no need to cancel your adrenaline-pumping activities – check to see if the Adventure Sports Bundle is right for you!"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I add the Adventure Sports Bundle to my existing Travel Guard travel insurance plan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! So long as the Adventure Sports Bundle is an available add-on to the travel insurance plan you’ve purchased, you can add it to your travel insurance plan to help ensure you have the coverage you may need."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I get coverage for adventure sports while traveling internationally?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, tourists traveling abroad can receive coverage for certain adventurous and extreme activities so long as their travel insurance plan and the Adventure Sports Bundle are purchased before departure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What extreme sports are not covered on a typical travel insurance plan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On Travel Guard’s base plans the adventurous and extreme activities that aren’t covered include things like sky diving, heli-skiing, mountain climbing (up to certain elevations), SCUBA diving (at certain depths) and other activities that are deemed similar. Those activities are what the Adventure Sports Bundle adds coverage for on your policy. It’s important to know there are also activities deemed “dangerous” that won’t be covered even with the bundle – activities like bull-riding, rock climbing without equipment and free diving (to name a few). Review your policy of insurance to confirm if the activity you have planned is one that will be covered. If you’re still not sure you can always call our specially trained representatives at 800.826.5248 and they can help."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I learn more about the Adventure Sports Bundle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For additional information on the Adventure Sports Bundle you can learn more by reviewing your policy of insurance or calling our specially trained representatives at 800.826.5248. Remember, it’s always a good idea to read over your policy of insurance when purchasing a travel insurance plan!"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/travel-insurance/benefits/adventure-sports-coverage#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Standard Coverages",
+          "item": "https://www.travelguard.com/travel-insurance/benefits"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Adventure Sports Bundle",
+          "item": "https://www.travelguard.com/travel-insurance/benefits/adventure-sports-coverage"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "@id": "https://www.travelguard.com/travel-insurance/plans/medevac#product",
+      "name": "Travel Guard MedEvac Per Trip Plan",
+      "alternateName": "MedEvac Plan",
+      "description": "Travel Guard's MedEvac Per Trip Plan provides medical expense coverage and emergency evacuation coverage, including medical transportation to the nearest adequate medical facility and then home if warranted. The plan covers you while you're away from home until the time you get back, whether you purchase it for a quick weekend trip or need coverage for a year of continuous international travel.",
+      "url": "https://www.travelguard.com/travel-insurance/plans/medevac",
+      "brand": { "@id": "https://www.travelguard.com/#organization" },
+      "category": "Travel Medical and Emergency Evacuation Insurance",
+      "audience": {
+        "@type": "PeopleAudience",
+        "audienceType": "Travelers applying for a Schengen Visa, travelers needing medical expense and emergency evacuation coverage"
+      },
+      "isRelatedTo": [
+        {
+          "@type": "Product",
+          "name": "Deluxe Plan",
+          "url": "https://www.travelguard.com/travel-insurance/plans/deluxe"
+        },
+        {
+          "@type": "Product",
+          "name": "Preferred Plan",
+          "url": "https://www.travelguard.com/travel-insurance/plans/preferred"
+        },
+        {
+          "@type": "Product",
+          "name": "Essential Plan",
+          "url": "https://www.travelguard.com/travel-insurance/plans/essential"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.travelguard.com/purchase/start-your-quote",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "description": "Cost varies by trip length, traveler age, and state of residence. Get a free personalized quote."
+        },
+        "availability": "https://schema.org/InStock",
+        "areaServed": {
+          "@type": "Country",
+          "name": "United States"
+        },
+        "seller": { "@id": "https://www.travelguard.com/#organization" }
+      },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Travel Medical Expense/Dental Expense", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Security Evacuation", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Ancillary Evacuation Benefits", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Emergency Evacuation and Repatriation of Remains", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Non-Flight Accidental Death & Dismemberment", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Emergency Travel Assistance", "value": "Assistance service" },
+        { "@type": "PropertyValue", "name": "Travel Medical Assistance", "value": "Assistance service" },
+        { "@type": "PropertyValue", "name": "Worldwide Travel Assistance", "value": "Assistance service" },
+        { "@type": "PropertyValue", "name": "Concierge Services", "value": "Assistance service" },
+        { "@type": "PropertyValue", "name": "Personal Security Assistance", "value": "Assistance service" }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/travel-insurance/plans/medevac#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Travel Insurance Plans",
+          "item": "https://www.travelguard.com/travel-insurance/plans"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "MedEvac Per Trip Plan",
+          "item": "https://www.travelguard.com/travel-insurance/plans/medevac"
+        }
+      ]
+    }
+  ]
+}

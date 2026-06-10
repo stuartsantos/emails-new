@@ -1,0 +1,119 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.travelguard.com/travel-insurance/benefits/trip-saver#webpage",
+      "url": "https://www.travelguard.com/travel-insurance/benefits/trip-saver",
+      "name": "Information on Travel Guard’s Trip Saver Coverage| Travel Guard®",
+      "description": "When bad weather threatens your travel plans, Travel Guard’s Trip Saver can help cover additional costs needed to get you to your destination.",
+      "isPartOf": {
+        "@id": "https://www.travelguard.com/#website"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://www.travelguard.com/travel-insurance/benefits/trip-saver#breadcrumb"
+      },
+      "mainEntity": [
+        {
+          "@id": "https://www.travelguard.com/travel-insurance/benefits/trip-saver#service"
+        },
+        {
+          "@id": "https://www.travelguard.com/travel-insurance/benefits/trip-saver#faqpage"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.travelguard.com/travel-insurance/benefits/trip-saver#service",
+      "serviceType": "Trip Saver Travel Insurance Coverage",
+      "name": "Trip Saver",
+      "description": "When bad weather threatens your travel plans, Travel Guard’s Trip Saver can help cover additional costs needed to get you to your destination.",
+      "provider": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.travelguard.com/travel-insurance/benefits/trip-saver#faqpage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Trip Saver coverage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Trip Saver coverage provides reimbursement for extra expenses that come along with moving your departure date earlier to avoid Common Carrier cancellations. If a snowstorm is headed towards your departure location, and your airline is cancelling flights, you may have coverage to move your flight earlier to avoid the snowstorm and get to your vacation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I use Trip Saver coverage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Work directly with your travel supplier to secure your new departure date or departure location that will work best for your trip. Be sure to keep documentation of the reason for changing your departure as well as any costs associated with the change – like additional ticket costs or change fees. Once you are home, you can submit the necessary documentation to Travel Guard to request to be reimbursed for those costs. If you need help making changes to your travel arrangements, our emergency travel assistance team can help, give them a call at 800.826.5248.*\n\n*Expenses incurred from third-party vendors for assistance services not part of a filed insurance plan are the responsibility of the traveler"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What documentation do I need to file a claim for Trip Saver?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The specific documentation needed for your Trip Saver claim will depend on the reason for your travel plan changes and any additional costs spent before departure. Below is a list of documentation that may be required. \n\n- Travel Guard claim form\n\n- Documentation to support the reason for adjusting your departure date or location\n\n- Proof of travel/reservations \n\n- Receipts for any claimed expenses\n\nThere may be additional documents required based on your specific claim. You can start the process of filing a claim online with our claims portal or you can call us directly if you have specific questions.\n\nClaims FAQ\n\nFile a Claim\n\nCheck Claim Status"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use the Trip Saver benefit for my return flight?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, Trip Saver coverage is a pre-departure benefit to provide coverage for travelers heading to their destination. If you are traveling with a Travel Guard travel insurance plan and need to change your return flight, you may have coverage under Trip Interruption."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use Trip Saver for any reason?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Trip Saver coverage applies to a change due to Inclement Weather causing the Common Carrier to change either your departure date or departure location. For a complete list of coverages and exclusions, remember to review your travel insurance plan details."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Trip Saver worth it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Trip Saver can be especially beneficial when traveling in seasons prone to Inclement Weather. Travel Guard’s travel insurance plans offer a variety of coverages and benefits designed to help get you to your vacation. Nobody wants to miss their travel plans because of bad weather!"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/travel-insurance/benefits/trip-saver#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Standard Coverages",
+          "item": "https://www.travelguard.com/travel-insurance/benefits"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Trip Saver",
+          "item": "https://www.travelguard.com/travel-insurance/benefits/trip-saver"
+        }
+      ]
+    }
+  ]
+}

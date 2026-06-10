@@ -1,0 +1,114 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://www.travelguard.com/travel-insurance/benefits#webpage",
+      "url": "https://www.travelguard.com/travel-insurance/benefits",
+      "name": "Our Travel Insurance Benefits | Travel Guard",
+      "description": "From baggage cover to emergency medical evacuation, Travel Guard has a wealth of coverages to offer. Visit our website today to find out more.",
+      "isPartOf": {
+        "@id": "https://www.travelguard.com/#website"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://www.travelguard.com/travel-insurance/benefits#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.travelguard.com/travel-insurance/benefits#itemlist"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://www.travelguard.com/travel-insurance/benefits#itemlist",
+      "name": "Travel Guard Standard Coverages",
+      "numberOfItems": 11,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Baggage Coverage",
+          "url": "https://www.travelguard.com/travel-insurance/benefits/baggage-insurance"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Compare Plan Coverages",
+          "url": "https://www.travelguard.com/travel-insurance/benefits/compare-travel-insurance"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Ancillary Evacuation Benefits",
+          "url": "https://www.travelguard.com/travel-insurance/benefits/emergency-ancillary-evacuation"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Security Evacuation",
+          "url": "https://www.travelguard.com/travel-insurance/benefits/security-evacuation"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Travel Inconvenience Benefits",
+          "url": "https://www.travelguard.com/travel-insurance/benefits/travel-inconvenience"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Travel Medical Expense/Dental Expense",
+          "url": "https://www.travelguard.com/travel-insurance/benefits/travel-medical-expense"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Trip Cancellation",
+          "url": "https://www.travelguard.com/travel-insurance/benefits/trip-cancellation-insurance"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Trip Delay",
+          "url": "https://www.travelguard.com/travel-insurance/benefits/trip-delay-missed-connection"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Trip Exchange",
+          "url": "https://www.travelguard.com/travel-insurance/benefits/trip-exchange"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Trip Interruption",
+          "url": "https://www.travelguard.com/travel-insurance/benefits/trip-interruption"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Trip Saver",
+          "url": "https://www.travelguard.com/travel-insurance/benefits/trip-saver"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/travel-insurance/benefits#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Standard Coverages",
+          "item": "https://www.travelguard.com/travel-insurance/benefits"
+        }
+      ]
+    }
+  ]
+}

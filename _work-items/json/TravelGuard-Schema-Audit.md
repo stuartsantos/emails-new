@@ -329,13 +329,17 @@ jsonld/
     our-underwriter.json                 ← P1, Zurich underwriter disclosure (audit 6.3)
   travel-insurance/
     benefits/
+      index.json                         ← P1, /travel-insurance/benefits landing (ItemList)
       baggage-insurance.json             ← P0 (KPI 11.7), Service + on-page FAQPage
+      compare-travel-insurance.json      ← P2, plan-comparison page (ItemList)
+      {10 more benefit pages}.json       ← P2, all built Jun 10 (Service + on-page FAQPage; incl. the Adventure Sports and Quarantine bundle pages whose canonical URLs live under /benefits/)
     plans/
       index.json                         ← P1, /travel-insurance/plans
       deluxe.json                        ← P0, Deluxe plan
       preferred.json                     ← P0, Preferred plan
       essential.json                     ← P0, Essential plan
       rental-vehicle-damage-plan.json    ← P0, Rental Vehicle Damage Coverage
+      medevac.json                       ← P2, MedEvac Per Trip Plan (discovered via /benefits/medevac 301)
     optional-coverage/
       index.json                         ← P1, ItemList of the 11 upgrades/bundles
       cancel-for-any-reason.json         ← P0 (new), CFAR page

@@ -1,0 +1,119 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.travelguard.com/travel-insurance/benefits/travel-medical-expense#webpage",
+      "url": "https://www.travelguard.com/travel-insurance/benefits/travel-medical-expense",
+      "name": "Information on Travel Guard’s Travel Medical Expense coverage | Travel Guard®",
+      "description": "Before heading off on your vacation, learn about the medical expense coverage that comes with your travel insurance plan with Travel Guard.",
+      "isPartOf": {
+        "@id": "https://www.travelguard.com/#website"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://www.travelguard.com/travel-insurance/benefits/travel-medical-expense#breadcrumb"
+      },
+      "mainEntity": [
+        {
+          "@id": "https://www.travelguard.com/travel-insurance/benefits/travel-medical-expense#service"
+        },
+        {
+          "@id": "https://www.travelguard.com/travel-insurance/benefits/travel-medical-expense#faqpage"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.travelguard.com/travel-insurance/benefits/travel-medical-expense#service",
+      "serviceType": "Travel Medical Expense Coverage",
+      "name": "Travel Medical Expense",
+      "description": "Before heading off on your vacation, learn about the medical expense coverage that comes with your travel insurance plan with Travel Guard.",
+      "provider": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.travelguard.com/travel-insurance/benefits/travel-medical-expense#faqpage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Travel Medical Expense coverage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Travel Medical Expense is a coverage included on all Travel Guard travel insurance plans, because your health is important to us. When you’re sick or injured while traveling, especially if you’re overseas in a foreign country, the cost of care should be the least of your worries. Travel more confidently knowing you have certain coverage to see a Physician (for covered reasons) and that you can submit a claim requesting to be reimbursed for covered expenses. Be sure to understand your travel insurance plan’s complete terms and conditions prior to purchasing. \n\nIn general, sicknesses or injuries that first begin while you’re on your trip and require treatment by a Physician, as defined in your travel insurance plan, would be covered on your plan (certain exclusions apply). Your Travel Guard travel insurance plan may provide coverage for medical and dental expenses and on some plans physical therapy for covered reasons listed in your plan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I use Travel Medical Expense Coverage during my trip?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If you receive treatment while you’re traveling, keep any relevant documentation from your treatment. Travel Guard has emergency travel assistance for help locating appropriate medical care if you are unsure of where to go. We have medical personnel on staff who can regularly review the care our travelers are receiving. When your trip is complete, submit any necessary documentation for your out-of-pocket medical expenses to Travel Guard to request reimbursement of covered expenses."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What documentation do I need to file a claim for Travel Medical Expense coverage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The specific documentation needed for your medical expense claim will depend on the treatment needed from your illness or injury and the out-of-pocket expenses you incurred.\n\nBelow is a list of documentation that may be required. \n\n- Travel Guard claim form\n\n- Signed patient (or next of kin) authorization form \n\n- Discharge records of injury and treatments\n\n- Copies of bills, receipts, invoices and relevant bank statements\n\n- Incident report detailing how injury occurred\n\nThere may be additional documents required based on your specific claim. You can start the process of filing a claim online with our claims portal or you can call us directly if you have specific questions.  \n\nClaims FAQ\n\nFile a Claim\n\nCheck Claim Status"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Travel Medical Expense coverage worth it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can’t put a price on your health (although hospitals try). Travel Medical Expense coverage can help alleviate the burden of paying certain out-of-pocket costs for medical and dental treatment that is required while you’re traveling. Travel Medical Expense coverage is especially important if you’re traveling internationally, since many U.S. healthcare plans may not provide coverage overseas. Without a travel insurance plan, you may be responsible for paying the hospital admission fee, treatment costs and other medical expenses without the benefit of reimbursement later. Plus, Travel Guard’s emergency travel assistance team provides services like medical monitoring (to help ensure you’re receiving appropriate care), translation assistance, hospital and doctor referrals and assistance with prescription replacement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I get Travel Medical Expense coverage if I have a pre-existing condition?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, with your Travel Guard travel insurance plan you can get a Pre-Existing Medical Condition Exclusion Waver for coverage for pre-existing medical conditions that otherwise may be excluded. This waiver is only available within 15 days (or the period provided in the travel insurance plan) of your initial trip payment. If you book after that time frame, you still have Travel Medical Expense coverage, but any expenses incurred from treatment of your pre-existing medical condition during your trip would not be reimbursed. Just one reason it's a good idea to book your travel insurance plan early!"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I just get coverage for medical expenses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Travel Guard’s Medevac plan includes limited coverages, including Travel Medical Expense coverage and emergency evacuation coverage. However, you miss out on other coverages such as Trip Cancellation and Interruption, or Baggage Coverage. Review your travel insurance plan terms and conditions to learn more about the coverages included on your plan."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/travel-insurance/benefits/travel-medical-expense#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Standard Coverages",
+          "item": "https://www.travelguard.com/travel-insurance/benefits"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Travel Medical Expense",
+          "item": "https://www.travelguard.com/travel-insurance/benefits/travel-medical-expense"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.travelguard.com/travel-insurance/benefits/lodging-expense-benefit#webpage",
+      "url": "https://www.travelguard.com/travel-insurance/benefits/lodging-expense-benefit",
+      "name": "Quarantine Bundle | Travel Guard®",
+      "description": "The Quarantine Bundle from Travel Guard offers travelers who have been exposed to illnesses or diseases coverage if a mandatory isolation is required.",
+      "isPartOf": {
+        "@id": "https://www.travelguard.com/#website"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://www.travelguard.com/travel-insurance/benefits/lodging-expense-benefit#breadcrumb"
+      },
+      "mainEntity": [
+        {
+          "@id": "https://www.travelguard.com/travel-insurance/benefits/lodging-expense-benefit#service"
+        },
+        {
+          "@id": "https://www.travelguard.com/travel-insurance/benefits/lodging-expense-benefit#faqpage"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.travelguard.com/travel-insurance/benefits/lodging-expense-benefit#service",
+      "serviceType": "Quarantine Travel Insurance Bundle",
+      "name": "Quarantine Bundle",
+      "description": "The Quarantine Bundle from Travel Guard offers travelers who have been exposed to illnesses or diseases coverage if a mandatory isolation is required.",
+      "provider": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "isRelatedTo": [
+        {
+          "@type": "Product",
+          "name": "Deluxe Plan",
+          "url": "https://www.travelguard.com/travel-insurance/plans/deluxe"
+        },
+        {
+          "@type": "Product",
+          "name": "Preferred Plan",
+          "url": "https://www.travelguard.com/travel-insurance/plans/preferred"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.travelguard.com/travel-insurance/benefits/lodging-expense-benefit#faqpage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the Quarantine Bundle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Quarantine Bundle is an optional add-on to your Travel Guard travel insurance plan that expands the coverage under Trip Interruption to include certain mandatory health-related screening reasons, as well as a daily stipend if you experience a covered quarantine. The quarantine needs to be mandated by a Physician or government health official to receive the daily stipend benefits from the bundle. It’s important to know, if you are traveling to a destination with a mandatory quarantine upon arrival or departure, this bundle is not applicable for those quarantines."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I add the Quarantine Bundle to my existing Travel Guard travel insurance plan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, if you have a Travel Guard Preferred or Deluxe Plan, you can add the Quarantine Bundle to your travel insurance plan prior to departure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the Quarantine Bundle only provide coverage for COVID-19?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Quarantine Bundle provides coverage for many communicable disease-related quarantines that a Physician or government health official has determined is mandatory."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "If I am quarantined, can I use both the Quarantine Bundle stipend and Trip Delay stipend?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There could be situations, such as confirmed diagnosis of a communicable disease, where both coverages apply. However, Trip Delay is primarily for delayed transportation, while the Quarantine Stipend is specific to the quarantine. Please see your policy of insurance for the complete terms and conditions of each coverage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I learn more about the Quarantine Bundle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For additional information on the Quarantine Bundle, review your policy of insurance or call our specially trained representatives at 800.826.5248. Be sure to read over your policy of insurance to better understand your travel insurance plan!"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/travel-insurance/benefits/lodging-expense-benefit#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Standard Coverages",
+          "item": "https://www.travelguard.com/travel-insurance/benefits"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Quarantine Bundle",
+          "item": "https://www.travelguard.com/travel-insurance/benefits/lodging-expense-benefit"
+        }
+      ]
+    }
+  ]
+}

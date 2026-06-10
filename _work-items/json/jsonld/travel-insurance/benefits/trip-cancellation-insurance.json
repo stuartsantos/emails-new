@@ -1,0 +1,127 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.travelguard.com/travel-insurance/benefits/trip-cancellation-insurance#webpage",
+      "url": "https://www.travelguard.com/travel-insurance/benefits/trip-cancellation-insurance",
+      "name": "Trip Cancellation Coverage & Travel Insurance Plans | Our Benefits | Travel Guard",
+      "description": "Travel Guard’s Trip Cancellation travel insurance coverage can make a world of difference when you need to cancel your travel plans. Visit our site today to find out more.",
+      "isPartOf": {
+        "@id": "https://www.travelguard.com/#website"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://www.travelguard.com/travel-insurance/benefits/trip-cancellation-insurance#breadcrumb"
+      },
+      "mainEntity": [
+        {
+          "@id": "https://www.travelguard.com/travel-insurance/benefits/trip-cancellation-insurance#service"
+        },
+        {
+          "@id": "https://www.travelguard.com/travel-insurance/benefits/trip-cancellation-insurance#faqpage"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.travelguard.com/travel-insurance/benefits/trip-cancellation-insurance#service",
+      "serviceType": "Trip Cancellation Travel Insurance Coverage",
+      "name": "Trip Cancellation",
+      "description": "Travel Guard’s Trip Cancellation travel insurance coverage can make a world of difference when you need to cancel your travel plans. Visit our site today to find out more.",
+      "provider": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.travelguard.com/travel-insurance/benefits/trip-cancellation-insurance#faqpage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Definition: What is Trip Cancellation coverage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Trip Cancellation coverage is a key benefit on most Travel Guard travel insurance plans and provides coverage for certain expenses you may have pre-paid and that are nonrefundable when you need to cancel your trip (as long as it’s a covered reason). Your travel insurance plan can provide more details, but things like canceling for certain work reasons, jury duty or illness of yourself or a family member are typically reasons that would be covered with the trip cancellation benefit on your Travel Guard travel insurance plan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I use the Trip Cancellation benefit if I need to cancel my trip?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cancel your trip with your travel suppliers directly – like the airline, cruise, tour company, or travel advisor that you originally booked with. If there are any costs or fees that you are not refunded, you can submit the necessary claim documentation to Travel Guard to request reimbursement for covered costs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What documentation do I need to file a claim for Trip Cancellation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The specific documentation needed for your trip cancellation claim will depend on the reason you’re cancelling and what you originally had booked. Below is a list of documentation that may be required. \n\n- Travel Guard claim form\n\n- Documentation to support the reason for cancelling your trip\n\n- Proof of travel/reservations \n\n- Proof of payment for the trip\n\n- Cancellation terms from the travel supplier\n\nThere may be additional documents required based on your specific claim. You can start a claim online with our claims portal or you can call us directly if you have specific questions.\n\nClaims FAQ\n\nFile a Claim\n\nCheck Claim Status"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Trip Cancellation coverage cover cancelling for any reason?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, there are specific covered reasons and exclusions under Travel Guard’s Trip Cancellation benefit. Reviewing your travel insurance plan can give you more information on what’s covered. On some Travel Guard travel insurance plans there is the available option to add-on Cancel for Any Reason (CFAR) coverage – a separate benefit that gives you the ability to cancel for any reason (whether listed as a covered reason or no less than two days before your scheduled trip departure). With Travel Guard’s CFAR benefit you’ll get back up to 50% of your total trip cost."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is cancelling due to weather a covered reason?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, most Travel Guard travel insurance plans provide Trip Cancellation coverage if inclement Weather causes the cancellation or delay of the insured’s trip."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Trip Cancellation coverage worth it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We think so! Life is unpredictable. You never know when something might prevent you from taking your planned vacation. Instead of stressing about it, Trip Cancellation coverage can give you peace of mind that your travel investment is more protected."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I purchase Trip Cancellation coverage on its own?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, Trip Cancellation coverage is only available as part of Travel Guard’s comprehensive travel insurance plans. There is no standalone option to purchase Trip Cancellation coverage."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/travel-insurance/benefits/trip-cancellation-insurance#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Standard Coverages",
+          "item": "https://www.travelguard.com/travel-insurance/benefits"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Trip Cancellation",
+          "item": "https://www.travelguard.com/travel-insurance/benefits/trip-cancellation-insurance"
+        }
+      ]
+    }
+  ]
+}

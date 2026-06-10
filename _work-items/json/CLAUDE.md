@@ -71,13 +71,15 @@ Canonical-URL gotchas found so far:
 
 ## Roadmap / deferred batches (in priority order, from the audit + Otterly data)
 
-Done: sitewide bundle, homepage, FAQ, claims, contact, about, reviews, plans listing + all 4 plan pages, CFAR, student travel safety, **all 13 trip-types**, **all 11 traveler-types**, what-is + assistance-services (info), baggage-insurance (benefits), our-underwriter, jet-lag article, 5 section landing index.json files.
+Done: sitewide bundle, homepage, FAQ, claims, contact, about, reviews, plans listing + **all 6 plan pages (incl. MedEvac)**, CFAR, student travel safety, **all 13 trip-types**, **all 11 traveler-types**, **all 13 benefits pages + benefits landing**, what-is + assistance-services (info), our-underwriter, jet-lag article, 6 section landing index.json files.
+
+Benefits batch notes (Jun 10): canonical-check every /benefits/ URL first — several sitemap slugs 301 elsewhere (`travel-health-insurance` → `travel-medical-expense`, `medevac` → `/plans/medevac`, `cancel-for-any-reason`/`pre-existing-medical-waiver` → /optional-coverage/, `new-to-travel-insurance` → /info/, `coverages`/`quick-compare` → landing/compare). `adventure-sports-coverage` and `lodging-expense-benefit` are really the Adventure Sports and Quarantine **bundle** pages (canonical URLs under /benefits/). Many benefit pages have a "What is a policy of insurance?" sidebar teaser — exclude it as a question and truncate any answer at that string. **Pack N' Go Plan exists at `/travel-insurance/plans/pack-n-go` (linked from the Quarantine Bundle page) — not yet built, add to a future batch.**
 
 Trip-type / traveler-type batch notes (Jun 10): these pages share one AEM template family — question-formatted h2s (or h3s nested under a "Ready to book…?" CTA heading, which must be excluded) with visible prose answers. Files are WebPage + Service + OfferCatalog (only the plans each page actually links) + FAQPage with verbatim on-page Q&As (79 + 78, all containment-verified). Trailing "Get a travel insurance plan the way you want it!" / "Get travel insurance the way you want it!" CTA headings must be trimmed from final answers. The pregnant-travelers page additionally has a real FAQ accordion (8 h3 Q&As) on top of its prose sections — both are marked up. Traveler-type `audience.audienceType` uses the site nav's own labels (Backpackers, Family Travelers, …).
 
 Next batches:
-1. ~16 remaining benefits pages (under `/travel-insurance/benefits/`) — pattern: `benefits/baggage-insurance.json`
-2. 10 optional-coverage bundle pages (see `optional-coverage/index.json` for the list)
+1. Pack N' Go plan page (`/travel-insurance/plans/pack-n-go`) — pattern: `plans/medevac.json`
+2. Remaining optional-coverage bundle pages (see `optional-coverage/index.json`; note CFAR, Adventure Sports, and Quarantine bundles already covered — check each bundle URL's canonical before building)
 3. 7 remaining info articles (`5-essential-travel-insurance-plan-tips`, `how-does-travel-insurance-work`, `how-much-does-travel-insurance-cost`, `packing-checklist`, `travel-insurance-checklist`, `what-is-a-policy-of-insurance`, `when-to-buy-travel-insurance`)
 4. Video library (VideoObject — note the live student-safety page already carries 6 VideoObject blocks from the video player)
 
