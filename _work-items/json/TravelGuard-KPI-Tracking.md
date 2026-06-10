@@ -310,7 +310,7 @@ What to watch at the next checkpoint (Jun 23):
 
 ### 11.7 Recommended actions before next pull
 
-1. **Add page-specific JSON-LD for `/info/assistance-services` and `/travel-insurance/benefits/baggage-insurance`** — both are organically climbing into your top-cited URLs without any dedicated schema. Reinforcing them is the highest-leverage move you can make in the next two weeks.
+1. **Add page-specific JSON-LD for `/info/assistance-services` and `/travel-insurance/benefits/baggage-insurance`** — both are organically climbing into your top-cited URLs without any dedicated schema. Reinforcing them is the highest-leverage move you can make in the next two weeks. ✅ *Done Jun 10: `jsonld/info/assistance-services.json` and `jsonld/travel-insurance/benefits/baggage-insurance.json` are built from live-page content and awaiting deployment.*
 2. **Pull a per-engine Otterly breakdown** at Jun 23 to see whether the gains are concentrated in Bing/ChatGPT (where schema has had most time to land) vs. Perplexity vs. Google AI Overviews. That delta is the cleanest natural experiment available.
 3. **Take a Google Search Console snapshot now** so you have a structured-data-impressions baseline for the Jun 23 comparison. The Rich Results dashboards take 7-14 days to begin reflecting schema deployments.
 4. **Add the baseline + this checkpoint to a `baseline-2026-05-20/` folder** alongside the audit so future checkpoints can be diffed mechanically.

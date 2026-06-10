@@ -342,7 +342,7 @@ jsonld/
 
 ## 10. CLAUDE.md context (for your repo)
 
-Per your workflow, here's a snippet you can drop into a `CLAUDE.md` at the repo root so future AI sessions have context:
+**This now exists:** see `_work-items/json/CLAUDE.md` for the maintained project context, hard rules, build workflow, and decision log. The snippet below is the original suggestion, kept for the dev team's site repo:
 
 ```markdown
 # Travel Guard structured-data conventions
