@@ -1,0 +1,53 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://www.travelguard.com/travel-insurance/optional-coverage#webpage",
+      "url": "https://www.travelguard.com/travel-insurance/optional-coverage",
+      "name": "Optional Coverage Upgrades & Bundles | Travel Guard",
+      "description": "Travel Guard’s optional add-on bundles let you create a travel insurance plan that fits your unique travel needs. Visit us today to find out more.",
+      "isPartOf": { "@id": "https://www.travelguard.com/#website" },
+      "inLanguage": "en-US",
+      "breadcrumb": { "@id": "https://www.travelguard.com/travel-insurance/optional-coverage#breadcrumb" },
+      "mainEntity": { "@id": "https://www.travelguard.com/travel-insurance/optional-coverage#itemlist" }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://www.travelguard.com/travel-insurance/optional-coverage#itemlist",
+      "name": "Travel Guard Optional Coverage Upgrades and Bundles",
+      "numberOfItems": 11,
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Cancel for Any Reason", "url": "https://www.travelguard.com/travel-insurance/optional-coverage/cancel-for-any-reason" },
+        { "@type": "ListItem", "position": 2, "name": "Pre-Existing Medical Condition Exclusion Waiver", "url": "https://www.travelguard.com/travel-insurance/optional-coverage/pre-existing-medical-condition-waiver" },
+        { "@type": "ListItem", "position": 3, "name": "Rental Vehicle Damage Coverage", "url": "https://www.travelguard.com/travel-insurance/optional-coverage/rental-vehicle-damage-coverage" },
+        { "@type": "ListItem", "position": 4, "name": "Baggage Bundle", "url": "https://www.travelguard.com/travel-insurance/optional-coverage/baggage-bundle" },
+        { "@type": "ListItem", "position": 5, "name": "Wedding Bundle", "url": "https://www.travelguard.com/travel-insurance/optional-coverage/wedding-bundle" },
+        { "@type": "ListItem", "position": 6, "name": "Medical Bundle", "url": "https://www.travelguard.com/travel-insurance/optional-coverage/medical-bundle" },
+        { "@type": "ListItem", "position": 7, "name": "Name Your Family Bundle", "url": "https://www.travelguard.com/travel-insurance/optional-coverage/name-your-family-bundle" },
+        { "@type": "ListItem", "position": 8, "name": "Pet Bundle", "url": "https://www.travelguard.com/travel-insurance/optional-coverage/pet-bundle" },
+        { "@type": "ListItem", "position": 9, "name": "Quarantine Bundle", "url": "https://www.travelguard.com/travel-insurance/optional-coverage/quarantine-bundle" },
+        { "@type": "ListItem", "position": 10, "name": "Security Bundle", "url": "https://www.travelguard.com/travel-insurance/optional-coverage/security-bundle" },
+        { "@type": "ListItem", "position": 11, "name": "Travel Inconvenience Bundle", "url": "https://www.travelguard.com/travel-insurance/optional-coverage/travel-inconvenience-bundle" }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/travel-insurance/optional-coverage#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Upgrades and Bundles",
+          "item": "https://www.travelguard.com/travel-insurance/optional-coverage"
+        }
+      ]
+    }
+  ]
+}

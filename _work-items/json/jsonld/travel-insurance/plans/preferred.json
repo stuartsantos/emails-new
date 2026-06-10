@@ -1,0 +1,104 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "@id": "https://www.travelguard.com/travel-insurance/plans/preferred#product",
+      "name": "Travel Guard Preferred Travel Insurance Plan",
+      "alternateName": "Preferred Plan",
+      "description": "The Preferred Plan is Travel Guard's most popular travel insurance plan, with a comprehensive suite of coverages designed to meet your needs. It offers optional upgrades and coverage add-ons — from higher benefit limits for baggage coverage to pet coverage — and comes with access to Travel Guard's 24/7 emergency travel assistance.",
+      "url": "https://www.travelguard.com/travel-insurance/plans/preferred",
+      "brand": { "@id": "https://www.travelguard.com/#organization" },
+      "category": "Comprehensive Travel Insurance",
+      "audience": {
+        "@type": "PeopleAudience",
+        "audienceType": "Most vacations, cruising, family travel"
+      },
+      "isRelatedTo": [
+        {
+          "@type": "Product",
+          "name": "Deluxe Plan",
+          "url": "https://www.travelguard.com/travel-insurance/plans/deluxe"
+        },
+        {
+          "@type": "Product",
+          "name": "Essential Plan",
+          "url": "https://www.travelguard.com/travel-insurance/plans/essential"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.travelguard.com/purchase/start-your-quote",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "description": "Cost is typically 5-7% of the total trip cost and varies by trip value, traveler age, and state of residence. Get a free personalized quote."
+        },
+        "availability": "https://schema.org/InStock",
+        "areaServed": {
+          "@type": "Country",
+          "name": "United States"
+        },
+        "seller": { "@id": "https://www.travelguard.com/#organization" }
+      },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Trip Cancellation", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Trip Interruption", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Trip Exchange", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Trip Interruption – Return Transportation Only", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Trip Saver", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Trip Delay", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Missed Connection", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Travel Medical Expense/Dental Expense", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Baggage Coverage", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Baggage Delay", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Emergency Evacuation and Repatriation of Remains", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Family Coverage", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Non-Flight Accidental Death & Dismemberment", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Travel Inconvenience Benefits", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Ancillary Evacuation Benefits", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Pre-Existing Medical Condition Exclusion Waiver", "value": "Extra coverage / optional upgrade" },
+        { "@type": "PropertyValue", "name": "Cancel for Any Reason", "value": "Extra coverage / optional upgrade" },
+        { "@type": "PropertyValue", "name": "Adventure Sports Bundle", "value": "Extra coverage / optional upgrade" },
+        { "@type": "PropertyValue", "name": "Name Your Family® Bundle", "value": "Extra coverage / optional upgrade" },
+        { "@type": "PropertyValue", "name": "Medical Bundle", "value": "Extra coverage / optional upgrade" },
+        { "@type": "PropertyValue", "name": "Inconvenience Bundle", "value": "Extra coverage / optional upgrade" },
+        { "@type": "PropertyValue", "name": "Baggage Bundle", "value": "Extra coverage / optional upgrade" },
+        { "@type": "PropertyValue", "name": "Pet Bundle", "value": "Extra coverage / optional upgrade" },
+        { "@type": "PropertyValue", "name": "Security Bundle", "value": "Extra coverage / optional upgrade" },
+        { "@type": "PropertyValue", "name": "Rental Vehicle Damage Coverage", "value": "Extra coverage / optional upgrade" },
+        { "@type": "PropertyValue", "name": "Wedding Bundle", "value": "Extra coverage / optional upgrade" },
+        { "@type": "PropertyValue", "name": "Quarantine Bundle", "value": "Extra coverage / optional upgrade" },
+        { "@type": "PropertyValue", "name": "Emergency Travel Assistance", "value": "Assistance service" },
+        { "@type": "PropertyValue", "name": "Travel Medical Assistance", "value": "Assistance service" },
+        { "@type": "PropertyValue", "name": "Worldwide Travel Assistance", "value": "Assistance service" },
+        { "@type": "PropertyValue", "name": "Concierge Services", "value": "Assistance service" },
+        { "@type": "PropertyValue", "name": "Identity Theft Assistance", "value": "Assistance service" }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/travel-insurance/plans/preferred#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Travel Insurance Plans",
+          "item": "https://www.travelguard.com/travel-insurance/plans"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Preferred Plan",
+          "item": "https://www.travelguard.com/travel-insurance/plans/preferred"
+        }
+      ]
+    }
+  ]
+}

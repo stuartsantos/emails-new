@@ -31,7 +31,7 @@
         "@type": "SpeakableSpecification",
         "cssSelector": ["h1", "h2"]
       },
-      "isRelatedTo": {
+      "mentions": {
         "@type": "WebPage",
         "url": "https://www.travelguard.com/traveler-types/student-travel-insurance"
       }

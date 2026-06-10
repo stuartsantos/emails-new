@@ -28,7 +28,6 @@
       "@id": "https://www.travelguard.com/#offercatalog",
       "name": "Travel Guard Travel Insurance Plans",
       "url": "https://www.travelguard.com/travel-insurance/plans",
-      "provider": { "@id": "https://www.travelguard.com/#organization" },
       "itemListElement": [
         {
           "@type": "Offer",

@@ -1,0 +1,55 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://www.travelguard.com/travel-insurance/trip-types#webpage",
+      "url": "https://www.travelguard.com/travel-insurance/trip-types",
+      "name": "Travel Insurance Plans by Trip Type | Travel Guard",
+      "description": "We've outlined our travel insurance plan recommendations based on what type of trip you're taking. Visit Travel Guard to find out more.",
+      "isPartOf": { "@id": "https://www.travelguard.com/#website" },
+      "inLanguage": "en-US",
+      "breadcrumb": { "@id": "https://www.travelguard.com/travel-insurance/trip-types#breadcrumb" },
+      "mainEntity": { "@id": "https://www.travelguard.com/travel-insurance/trip-types#itemlist" }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://www.travelguard.com/travel-insurance/trip-types#itemlist",
+      "name": "Travel Guard Plans by Trip Type",
+      "numberOfItems": 13,
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Adventure Travel Insurance Plans", "url": "https://www.travelguard.com/travel-insurance/trip-types/adventure-travel-insurance" },
+        { "@type": "ListItem", "position": 2, "name": "Business Travel Insurance Plans", "url": "https://www.travelguard.com/travel-insurance/trip-types/business-travel-insurance" },
+        { "@type": "ListItem", "position": 3, "name": "Cruise Travel Insurance Plans", "url": "https://www.travelguard.com/travel-insurance/trip-types/cruise-insurance" },
+        { "@type": "ListItem", "position": 4, "name": "Entertainment Travel", "url": "https://www.travelguard.com/travel-insurance/trip-types/entertainment-travel" },
+        { "@type": "ListItem", "position": 5, "name": "Flight Insurance Plans", "url": "https://www.travelguard.com/travel-insurance/trip-types/flight-insurance" },
+        { "@type": "ListItem", "position": 6, "name": "Golf Trip Travel Insurance Plans", "url": "https://www.travelguard.com/travel-insurance/trip-types/golf" },
+        { "@type": "ListItem", "position": 7, "name": "Hunting and Fishing Travel Insurance Plans", "url": "https://www.travelguard.com/travel-insurance/trip-types/sportsmans" },
+        { "@type": "ListItem", "position": 8, "name": "International Travel Insurance Plans", "url": "https://www.travelguard.com/travel-insurance/trip-types/international-travel-insurance" },
+        { "@type": "ListItem", "position": 9, "name": "Rental Car Insurance Plans", "url": "https://www.travelguard.com/travel-insurance/trip-types/rental-car-insurance" },
+        { "@type": "ListItem", "position": 10, "name": "Single Trip Travel Insurance Plans", "url": "https://www.travelguard.com/travel-insurance/trip-types/single-trip-travel-insurance" },
+        { "@type": "ListItem", "position": 11, "name": "Ski Travel Insurance Plans", "url": "https://www.travelguard.com/travel-insurance/trip-types/ski-insurance" },
+        { "@type": "ListItem", "position": 12, "name": "Vacation Travel Insurance Plans", "url": "https://www.travelguard.com/travel-insurance/trip-types/vacation-insurance" },
+        { "@type": "ListItem", "position": 13, "name": "Vacation Rental Travel Insurance Plans", "url": "https://www.travelguard.com/travel-insurance/trip-types/vacation-rental-insurance" }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/travel-insurance/trip-types#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Trip Types",
+          "item": "https://www.travelguard.com/travel-insurance/trip-types"
+        }
+      ]
+    }
+  ]
+}

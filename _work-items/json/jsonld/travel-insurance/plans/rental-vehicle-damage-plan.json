@@ -1,0 +1,81 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "@id": "https://www.travelguard.com/travel-insurance/plans/rental-vehicle-damage-plan#product",
+      "name": "Travel Guard Rental Vehicle Damage Coverage",
+      "alternateName": "Rental Vehicle Damage Plan",
+      "description": "Rental Vehicle Damage Coverage from Travel Guard is an alternative option to the protection packages that rental car companies offer at the rental desk. It provides up to $35,000 or $50,000 in collision damage as primary coverage, with 24/7 emergency assistance, roadside assistance, and a quick and easy claims submission process.",
+      "url": "https://www.travelguard.com/travel-insurance/plans/rental-vehicle-damage-plan",
+      "brand": { "@id": "https://www.travelguard.com/#organization" },
+      "category": "Rental Vehicle Insurance",
+      "audience": {
+        "@type": "PeopleAudience",
+        "audienceType": "Road trips, car rentals, savvy travelers"
+      },
+      "isRelatedTo": [
+        {
+          "@type": "Product",
+          "name": "Deluxe Plan",
+          "url": "https://www.travelguard.com/travel-insurance/plans/deluxe"
+        },
+        {
+          "@type": "Product",
+          "name": "Preferred Plan",
+          "url": "https://www.travelguard.com/travel-insurance/plans/preferred"
+        },
+        {
+          "@type": "Product",
+          "name": "Essential Plan",
+          "url": "https://www.travelguard.com/travel-insurance/plans/essential"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.travelguard.com/purchase/start-your-quote",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "description": "Cost varies by rental period and state of residence. Get a free personalized quote."
+        },
+        "availability": "https://schema.org/InStock",
+        "areaServed": {
+          "@type": "Country",
+          "name": "United States"
+        },
+        "seller": { "@id": "https://www.travelguard.com/#organization" }
+      },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Rental Vehicle Damage Coverage (up to $35,000 or $50,000 in collision damage, primary coverage)", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Emergency Travel Assistance", "value": "Assistance service" },
+        { "@type": "PropertyValue", "name": "Worldwide Travel Assistance", "value": "Assistance service" },
+        { "@type": "PropertyValue", "name": "Roadside Assistance", "value": "Assistance service" }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/travel-insurance/plans/rental-vehicle-damage-plan#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Travel Insurance Plans",
+          "item": "https://www.travelguard.com/travel-insurance/plans"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rental Vehicle Damage Coverage",
+          "item": "https://www.travelguard.com/travel-insurance/plans/rental-vehicle-damage-plan"
+        }
+      ]
+    }
+  ]
+}
