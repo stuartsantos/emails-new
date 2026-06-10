@@ -5,8 +5,8 @@
       "@type": "WebPage",
       "@id": "https://www.travelguard.com/traveler-types/pre-existing-medical-condition-travel-insurance-plans#webpage",
       "url": "https://www.travelguard.com/traveler-types/pre-existing-medical-condition-travel-insurance-plans",
-      "name": "Travel Insurance Plans for Pre-Existing Medical Conditions | Travel Guard",
-      "description": "Travel Guard travel insurance plans may include a Pre-Existing Medical Conditions Exclusion Waiver when purchased within 15 days of your initial trip deposit. Learn about coverage requirements and how to qualify.",
+      "name": "Travel Insurance Plans for Medical Conditions | Travel Guard",
+      "description": "It's vital to have a travel insurance plan for your next vacation if you have a pre-existing medical condition. Visit us to find the right plan for you.",
       "isPartOf": { "@id": "https://www.travelguard.com/#website" },
       "inLanguage": "en-US",
       "breadcrumb": { "@id": "https://www.travelguard.com/traveler-types/pre-existing-medical-condition-travel-insurance-plans#breadcrumb" },
@@ -23,13 +23,13 @@
       "@type": "Service",
       "@id": "https://www.travelguard.com/traveler-types/pre-existing-medical-condition-travel-insurance-plans#service",
       "serviceType": "Travel Insurance for Pre-Existing Medical Conditions",
-      "name": "Travel Insurance with Pre-Existing Medical Conditions Exclusion Waiver",
-      "description": "Travel Guard plans may waive the standard pre-existing medical conditions exclusion when the policy is purchased within a qualifying window (typically 15 days) of the initial trip deposit, the traveler is medically able to travel on the purchase date, and the full prepaid non-refundable trip cost is insured.",
+      "name": "Travel Insurance with Pre-Existing Medical Condition Exclusion Waiver",
+      "description": "Travel Guard plans may waive the standard pre-existing medical condition exclusion when the policy is purchased within a qualifying window (typically 15 days) of the initial trip deposit, the traveler is medically able to travel on the purchase date, and all non-refundable trip costs are insured.",
       "provider": { "@id": "https://www.travelguard.com/#organization" },
       "areaServed": { "@type": "Country", "name": "United States" },
       "audience": {
         "@type": "PeopleAudience",
-        "audienceType": "Travelers with pre-existing medical conditions, including diabetes, heart conditions, high blood pressure, asthma, cancer, and other chronic conditions seeking trip cancellation and emergency medical coverage."
+        "audienceType": "Travelers with pre-existing medical conditions, including chronic conditions like asthma, diabetes, or high blood pressure, a history of heart disease, or those recovering from an injury or recent illness."
       },
       "offers": {
         "@type": "Offer",
@@ -37,7 +37,7 @@
         "priceCurrency": "USD",
         "priceSpecification": {
           "@type": "PriceSpecification",
-          "description": "Cost varies by base plan, trip cost, and traveler age. Pre-existing medical conditions waiver is available as an early purchase benefit on eligible plans at no separate fee."
+          "description": "Cost varies by base plan, trip cost, and traveler age. The pre-existing medical condition exclusion waiver is available as an early purchase benefit on eligible plans at no separate fee."
         },
         "availability": "https://schema.org/InStock",
         "seller": { "@id": "https://www.travelguard.com/#organization" }
@@ -61,42 +61,50 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Does Travel Guard cover pre-existing medical conditions?",
+          "name": "Can I get a travel insurance plan if I have a chronic condition?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Travel Guard offers a Pre-Existing Medical Conditions Exclusion Waiver as an early purchase benefit on eligible plans. To qualify, you typically need to purchase your plan within 15 days of your initial trip deposit, be medically able to travel on the purchase date, and insure the full prepaid non-refundable cost of your trip."
+            "text": "Yes. If you purchase your Travel Guard travel insurance plan within the required timeframe from your first trip payment, you may qualify for a pre-existing medical condition exclusion waiver. This allows your travel insurance plan to cover certain chronic medical conditions if they unexpectedly cause problems during your trip."
           }
         },
         {
           "@type": "Question",
-          "name": "What counts as a pre-existing medical condition?",
+          "name": "Do I need to declare my medical history when buying a travel insurance plan?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A pre-existing medical condition is generally any illness, injury, or condition for which you received medical treatment, advice, diagnosis, or a change in prescription medication during a defined look-back period before your plan effective date. Review your policy of insurance for the specific look-back window."
+            "text": "When you purchase a Travel Guard travel insurance plan, you do not need to complete a medical questionnaire or disclose your entire medical history. Instead, coverage for pre-existing medical conditions is determined by the plan’s definitions and eligibility requirements. However, it’s important to understand the terms of your policy and to purchase within the required timeframe from your initial trip deposit if you want the pre-existing medical condition exclusion waiver. Other requirements may also apply, such as insuring all non-refundable trip costs."
           }
         },
         {
           "@type": "Question",
-          "name": "How do I qualify for the pre-existing conditions waiver?",
+          "name": "Are there age limits for pre-existing medical condition coverage?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "To qualify for the Pre-Existing Medical Conditions Exclusion Waiver on Travel Guard plans, you must: (1) purchase within 15 days of your initial trip deposit, (2) be medically able to travel on the date you buy the plan, and (3) insure the full prepaid non-refundable cost of your trip. Specific requirements may vary by state."
+            "text": "Travel Guard plans are designed for travelers of many ages, including seniors. The price for the travel insurance plan may change based on your age, but the pre-existing medical conditions exclusion waiver is available for travelers of any age."
           }
         },
         {
           "@type": "Question",
-          "name": "Which Travel Guard plans include the pre-existing conditions waiver?",
+          "name": "What if my condition changes before my trip?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The Pre-Existing Medical Conditions Exclusion Waiver is available on the Deluxe and Preferred plans when purchase requirements are met. Availability and exact terms may vary by state — confirm at quote time."
+            "text": "If your medical condition changes after purchasing your travel insurance plan but before your trip begins, you may still be covered if you qualified for the waiver and were medically fit to travel at the time of purchase. Planned treatments or worsening conditions you already knew about before buying the travel insurance plan are not covered."
           }
         },
         {
           "@type": "Question",
-          "name": "What if I'm outside the 15-day purchase window?",
+          "name": "How soon do I need to buy a travel insurance plan?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "If you purchase a plan more than 15 days after your initial trip deposit, the pre-existing medical conditions exclusion will apply. You can still purchase coverage for new, unrelated illnesses and injuries, trip cancellation for other covered reasons, and standard travel benefits — but claims related to pre-existing conditions would generally not be covered."
+            "text": "To qualify for a pre-existing medical condition exclusion waiver with Travel Guard, you generally need to purchase your plan within 15 days of making your initial trip deposit. Purchasing early not only secures this additional benefit but also helps ensure your trip is covered for other unexpected issues, such as certain cancellations. Additional requirements may apply, such as insuring all non-refundable trip costs and being able to travel when you purchase the plan. Be sure to read your policy of insurance to learn these and other details."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a travel insurance plan cover new conditions that develop after I purchase?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. If you develop a brand-new medical condition after you purchase your Travel Guard travel insurance plan, it is generally treated as a new event, not a pre-existing one. That means it may be covered if it causes you to cancel your trip or seek emergency medical treatment for a covered reason while traveling. Pre-existing medical condition exclusions only apply to health issues you already had or that worsened in the period before you bought your travel insurance plan."
           }
         }
       ]

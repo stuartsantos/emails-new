@@ -33,7 +33,7 @@
           "name": "If I use frequent flyer miles to purchase a ticket, do I include the regular cost of the ticket as part of my trip cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Please be careful when using frequent flyer miles to calculate your trip cost. Travel insurance typically covers the cash value of non-refundable travel expenses. In other words, money you can't get back from your airline or other travel provider. Frequent flyer miles are not covered as it's difficult to determine their cash value."
+            "text": "Please be careful when using frequent flyer miles to calculate your trip cost. Travel insurance typically covers the cash value of non-refundable travel expenses. In other words, money you can’t get back from your airline or other travel provider. Frequent flyer miles are not covered as it’s difficult to determine their cash value."
           }
         },
         {
@@ -41,7 +41,7 @@
           "name": "Can I put non-family members on my plan?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Travelers on a single policy must reside in the same state. If your non-family traveling companion lives in the same state as you, then yes, you can include them. Otherwise please purchase a separate plan to ensure coverage."
+            "text": "Travelers on a single policy must reside in the same state. If your non-family member lives in the same state as you, then yes, you can include them. Otherwise please purchase a separate plan to ensure coverage."
           }
         },
         {
@@ -49,7 +49,7 @@
           "name": "What else is offered with the purchase of a Travel Guard plan?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "To boost travelers' confidence when traveling, Travel Guard provides 24-hour, '911' emergency travel services to all standard retail plans, in case a traveler has to change a flight or a hotel room. Travel Guard has also added assistance with emergency cash transfers, pre-trip consultation services (travel advisories, passport requirements, inoculation information, etc.), and live messaging, which will relay any email or phone message to family, friends or business associates."
+            "text": "To boost travelers' confidence when traveling, Travel Guard provides 24-hour, \"911\" emergency travel services to all standard retail plans, in case a traveler has to change a flight or a hotel room. Travel Guard has also added assistance with emergency cash transfers, pre-trip consultation services (travel advisories, passport requirements, inoculation information, etc.), and live messaging, which will relay any email or phone message to family, friends or business associates."
           }
         },
         {
@@ -73,7 +73,7 @@
           "name": "What do I need to have to purchase an insurance plan online?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Let's make this easy! Before purchasing, please have the following information handy:\n\n- Personal information for all travelers who will be on the policy\n- Trip details: dates of travel, destination, initial deposit date, final payment date, and any travel companies you will be using\n- Total trip cost and how that cost is broken down per person in your itinerary."
+            "text": "Let’s make this easy! Before purchasing, please have the following information handy:\n\n- Personal information for all travelers who will be on the policy\n- Trip details: dates of travel, destination, initial deposit date, final payment date, and any travel companies you will be using\n- Total trip cost and how that cost is broken down per person in your itinerary."
           }
         },
         {
@@ -81,7 +81,7 @@
           "name": "What is initial deposit date?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Initial deposit date is the day on which you made your first payment toward the trip.\n\nDon't forget! Purchase within 15 days of your initial deposit date and early purchase benefits may apply."
+            "text": "Initial deposit date is the day on which you made your first payment toward the trip.\n\nDon’t forget! Purchase within 15 days of your initial deposit date and early purchase benefits may apply."
           }
         },
         {

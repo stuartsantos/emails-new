@@ -2,55 +2,54 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "HowTo",
-      "@id": "https://www.travelguard.com/help-center/claims#howto",
-      "name": "How to File a Travel Insurance Claim with Travel Guard",
-      "description": "Step-by-step instructions to file a claim under your Travel Guard travel insurance policy.",
+      "@type": "WebPage",
+      "@id": "https://www.travelguard.com/help-center/claims#webpage",
       "url": "https://www.travelguard.com/help-center/claims",
-      "image": "https://www.travelguard.com/content/dam/travelguard/us/images/claims/file-claim.jpg",
-      "totalTime": "PT15M",
-      "estimatedCost": {
-        "@type": "MonetaryAmount",
-        "currency": "USD",
-        "value": "0"
+      "name": "Travel Insurance Claims | Travel Guard",
+      "description": "Need to make a claim on your travel insurance plan? We're here and ready to help. Visit Travel Guard now to start your claim and get the support you need.",
+      "isPartOf": { "@id": "https://www.travelguard.com/#website" },
+      "inLanguage": "en-US",
+      "breadcrumb": { "@id": "https://www.travelguard.com/help-center/claims#breadcrumb" },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1"]
       },
-      "tool": [
-        { "@type": "HowToTool", "name": "Your Travel Guard policy number" },
-        { "@type": "HowToTool", "name": "Receipts and proof of expenses" },
-        { "@type": "HowToTool", "name": "Documentation of the covered event (medical reports, cancellation notice, etc.)" }
-      ],
-      "step": [
+      "mainEntity": { "@id": "https://www.travelguard.com/help-center/claims#service" },
+      "significantLink": [
+        "https://claims.travelguard.com/claims",
+        "https://claims.travelguard.com/status"
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.travelguard.com/help-center/claims#service",
+      "serviceType": "Travel Insurance Claims Service",
+      "name": "Travel Guard Online Claims",
+      "description": "File a claim under your Travel Guard travel insurance policy or check the status of an existing claim through the online claims portal. The online tool currently supports policies purchased in the USA only; all other policyholders can call Travel Guard directly.",
+      "provider": { "@id": "https://www.travelguard.com/#organization" },
+      "areaServed": { "@type": "Country", "name": "United States" },
+      "availableChannel": [
         {
-          "@type": "HowToStep",
-          "position": 1,
-          "name": "Gather documentation",
-          "text": "Collect all receipts, medical records, cancellation notices, and other proof related to your covered event.",
-          "url": "https://www.travelguard.com/help-center/claims#step1"
+          "@type": "ServiceChannel",
+          "name": "File a Claim",
+          "serviceUrl": "https://claims.travelguard.com/claims"
         },
         {
-          "@type": "HowToStep",
-          "position": 2,
-          "name": "Start your claim online",
-          "text": "Visit claims.travelguard.com to begin a new claim. Have your policy number ready.",
-          "url": "https://claims.travelguard.com/claims"
+          "@type": "ServiceChannel",
+          "name": "Check Claim Status",
+          "serviceUrl": "https://claims.travelguard.com/status"
         },
         {
-          "@type": "HowToStep",
-          "position": 3,
-          "name": "Upload your documentation",
-          "text": "Upload all required supporting documents through the claims portal.",
-          "url": "https://www.travelguard.com/help-center/claims#step3"
-        },
-        {
-          "@type": "HowToStep",
-          "position": 4,
-          "name": "Track your claim status",
-          "text": "Use claims.travelguard.com/status to check the status of your claim at any time.",
-          "url": "https://claims.travelguard.com/status"
+          "@type": "ServiceChannel",
+          "name": "Claims Phone Support",
+          "servicePhone": {
+            "@type": "ContactPoint",
+            "telephone": "+1-866-478-8222",
+            "contactType": "claims",
+            "description": "For policies purchased outside the USA online claims tool."
+          }
         }
-      ],
-      "publisher": { "@id": "https://www.travelguard.com/#organization" },
-      "inLanguage": "en-US"
+      ]
     },
     {
       "@type": "BreadcrumbList",

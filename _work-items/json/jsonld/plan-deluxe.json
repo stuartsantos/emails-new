@@ -6,15 +6,13 @@
       "@id": "https://www.travelguard.com/travel-insurance/plans/deluxe#product",
       "name": "Travel Guard Deluxe Travel Insurance Plan",
       "alternateName": "Deluxe Plan",
-      "description": "Travel Guard's top-of-the-line, comprehensive travel insurance plan with the highest benefit limits across most coverage categories. Includes robust emergency medical coverage, trip cancellation for covered reasons, missed connection and baggage delay protections, security evacuation, Flight Guard, and 24/7 emergency travel assistance with Concierge Services.",
+      "description": "The Deluxe Plan is Travel Guard's top-of-the-line travel insurance plan with the highest benefit limits and the most coverages included on the base plan. It can be customized with optional add-ons such as the Adventure Sports Bundle or Rental Vehicle Damage Coverage, and comes with access to Travel Guard's 24/7 emergency travel assistance and Concierge Services.",
       "url": "https://www.travelguard.com/travel-insurance/plans/deluxe",
-      "image": "https://www.travelguard.com/content/dam/tg-direct/travelguard/us/images/hero/without-form-2000-736/travel-insurance/deluxe-plan.jpg",
       "brand": { "@id": "https://www.travelguard.com/#organization" },
       "category": "Comprehensive Travel Insurance",
       "audience": {
         "@type": "PeopleAudience",
-        "suggestedMinAge": 18,
-        "audienceType": "International travelers, senior travelers, high-end vacationers"
+        "audienceType": "International travel, senior travelers, high-end vacations"
       },
       "isRelatedTo": [
         {
@@ -44,16 +42,37 @@
         "seller": { "@id": "https://www.travelguard.com/#organization" }
       },
       "additionalProperty": [
-        { "@type": "PropertyValue", "name": "Trip Cancellation Coverage", "value": "Included" },
-        { "@type": "PropertyValue", "name": "Trip Interruption Coverage", "value": "Included" },
-        { "@type": "PropertyValue", "name": "Emergency Medical Expense Coverage", "value": "Included" },
-        { "@type": "PropertyValue", "name": "Emergency Medical Evacuation", "value": "Included" },
-        { "@type": "PropertyValue", "name": "Security Evacuation", "value": "Included" },
-        { "@type": "PropertyValue", "name": "Baggage Loss & Delay", "value": "Included" },
-        { "@type": "PropertyValue", "name": "Missed Connection Coverage", "value": "Included" },
-        { "@type": "PropertyValue", "name": "Flight Guard", "value": "Included" },
-        { "@type": "PropertyValue", "name": "24/7 Emergency Travel Assistance", "value": "Included" },
-        { "@type": "PropertyValue", "name": "Concierge Services", "value": "Included" }
+        { "@type": "PropertyValue", "name": "Trip Cancellation", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Trip Interruption", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Trip Exchange", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Trip Interruption – Return Transportation Only", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Trip Saver", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Trip Delay", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Missed Connection", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Travel Medical Expense/Dental Expense", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Baggage Coverage", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Baggage Delay", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Emergency Evacuation and Repatriation of Remains", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Family Coverage", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Non-Flight Accidental Death & Dismemberment", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Flight Guard®", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Security Evacuation", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Travel Inconvenience Benefits", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Ancillary Evacuation Benefits", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Pre-Existing Medical Condition Exclusion Waiver", "value": "Extra coverage / optional upgrade" },
+        { "@type": "PropertyValue", "name": "Cancel for Any Reason", "value": "Extra coverage / optional upgrade" },
+        { "@type": "PropertyValue", "name": "Adventure Sports Bundle", "value": "Extra coverage / optional upgrade" },
+        { "@type": "PropertyValue", "name": "Name Your Family® Bundle", "value": "Extra coverage / optional upgrade" },
+        { "@type": "PropertyValue", "name": "Pet Bundle", "value": "Extra coverage / optional upgrade" },
+        { "@type": "PropertyValue", "name": "Rental Vehicle Damage Coverage", "value": "Extra coverage / optional upgrade" },
+        { "@type": "PropertyValue", "name": "Wedding Bundle", "value": "Extra coverage / optional upgrade" },
+        { "@type": "PropertyValue", "name": "Quarantine Bundle", "value": "Extra coverage / optional upgrade" },
+        { "@type": "PropertyValue", "name": "Emergency Travel Assistance", "value": "Assistance service" },
+        { "@type": "PropertyValue", "name": "Travel Medical Assistance", "value": "Assistance service" },
+        { "@type": "PropertyValue", "name": "Worldwide Travel Assistance", "value": "Assistance service" },
+        { "@type": "PropertyValue", "name": "Concierge Services", "value": "Assistance service" },
+        { "@type": "PropertyValue", "name": "Identity Theft Assistance", "value": "Assistance service" },
+        { "@type": "PropertyValue", "name": "Roadside Assistance (up to $50 per car)", "value": "Assistance service" }
       ]
     },
     {

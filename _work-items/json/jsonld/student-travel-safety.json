@@ -5,13 +5,11 @@
       "@type": "Article",
       "@id": "https://www.travelguard.com/travel-resources/travel-safety/student-travel-safety#article",
       "headline": "Student Travel Safety",
-      "alternativeHeadline": "How students studying abroad can travel safely",
-      "description": "Safety guidance for students traveling abroad, including pre-departure preparation, health and medical considerations, in-country safety practices, and how travel insurance supports students.",
+      "alternativeHeadline": "Student Travel Safety Advice & Tips",
+      "description": "Whether you're taking a gap year, backpacking or volunteering, students, parents & faculty alike should check out these tips for safer travel.",
       "url": "https://www.travelguard.com/travel-resources/travel-safety/student-travel-safety",
       "author": { "@id": "https://www.travelguard.com/#organization" },
       "publisher": { "@id": "https://www.travelguard.com/#organization" },
-      "datePublished": "2023-08-15",
-      "dateModified": "2025-09-01",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://www.travelguard.com/travel-resources/travel-safety/student-travel-safety"

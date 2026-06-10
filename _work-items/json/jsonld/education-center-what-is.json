@@ -5,12 +5,10 @@
       "@type": "Article",
       "@id": "https://www.travelguard.com/info/what-is-travel-insurance#article",
       "headline": "What is Travel Insurance?",
-      "description": "A plain-language guide to what travel insurance covers, when you need it, and how it works.",
+      "description": "Understanding what travel insurance is, how it works and what to look out for is essential for both your travel plans and safety. Find out more.",
       "url": "https://www.travelguard.com/info/what-is-travel-insurance",
       "author": { "@id": "https://www.travelguard.com/#organization" },
       "publisher": { "@id": "https://www.travelguard.com/#organization" },
-      "datePublished": "2023-06-01",
-      "dateModified": "2025-09-10",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://www.travelguard.com/info/what-is-travel-insurance"

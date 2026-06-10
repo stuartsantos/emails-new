@@ -5,14 +5,13 @@
       "@type": "Article",
       "@id": "https://www.travelguard.com/travel-resources/travel-tips/how-to-beat-jet-lag-fast#article",
       "headline": "Jet Lag: Symptoms, Remedies and How Best to Avoid",
-      "alternativeHeadline": "How to beat jet lag fast",
-      "description": "Learn the symptoms of jet lag, proven remedies, and how to minimize its impact on your travel.",
+      "alternativeHeadline": "How to Beat Jet Lag Fast",
+      "description": "93 percent of all travelers experience jet lag at some point in their lives, but there are a few strategies people can try to lessen its effect.",
       "url": "https://www.travelguard.com/travel-resources/travel-tips/how-to-beat-jet-lag-fast",
       "image": "https://www.travelguard.com/home/_jcr_content/root/container/container_copy/container_304146364/image.coreimg.jpeg/1750400977258/jet-lag-tips-hero.jpeg",
       "author": { "@id": "https://www.travelguard.com/#organization" },
       "publisher": { "@id": "https://www.travelguard.com/#organization" },
-      "datePublished": "2024-01-15",
-      "dateModified": "2025-08-12",
+      "dateModified": "2025-12-22",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://www.travelguard.com/travel-resources/travel-tips/how-to-beat-jet-lag-fast"
