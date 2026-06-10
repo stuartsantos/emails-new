@@ -451,6 +451,7 @@
     <h2 id="s8">8. Files in this audit</h2>
     <pre><code>TravelGuard-Schema-Audit.md              ← this document
 TravelGuard-KPI-Tracking.md              ← before/after KPI tracking guide
+CLAUDE.md                                ← project context + decision log for AI sessions
 jsonld/                                  ← mirrors the live site URL structure
   _sitewide.json                         ← P0, every page (Organization + WebSite @graph bundle)
   _templates/
@@ -460,20 +461,33 @@ jsonld/                                  ← mirrors the live site URL structure
     index.json                           ← P1, /about-us
     travel-insurance-reviews.json        ← P0 (escalated), reviews collection
   help-center/
+    index.json                           ← P1, /help-center landing
     claims.json                          ← P1, /help-center/claims (WebPage + Service)
     contact-us.json                      ← P0 (escalated), /help-center/contact-us
     faqs.json                            ← P0, /help-center/faqs
   info/
+    index.json                           ← P1, /info Education Center landing
+    assistance-services.json             ← P0 (KPI 11.7), 7 assistance categories
     what-is-travel-insurance.json        ← P2, Education Center
+  legal/
+    our-underwriter.json                 ← P1, Zurich underwriter disclosure (audit 6.3)
   travel-insurance/
+    benefits/
+      baggage-insurance.json             ← P0 (KPI 11.7), Service + on-page FAQPage
     plans/
       index.json                         ← P1, /travel-insurance/plans
-      deluxe.json                        ← P0, Deluxe plan (template for others)
+      deluxe.json                        ← P0, Deluxe plan
+      preferred.json                     ← P0, Preferred plan
+      essential.json                     ← P0, Essential plan
+      rental-vehicle-damage-plan.json    ← P0, Rental Vehicle Damage Coverage
     optional-coverage/
+      index.json                         ← P1, ItemList of the 11 upgrades/bundles
       cancel-for-any-reason.json         ← P0 (new), CFAR page
     trip-types/
+      index.json                         ← P1, ItemList of the 13 trip types
       cruise-insurance.json              ← P2, trip-type template
   traveler-types/
+    index.json                           ← P1, ItemList of the 11 traveler types
     pre-existing-medical-condition-travel-insurance-plans.json  ← P0 (new)
   travel-resources/
     travel-safety/
