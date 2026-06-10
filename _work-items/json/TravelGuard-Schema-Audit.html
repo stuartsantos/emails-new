@@ -292,11 +292,11 @@
       <li><code>hasCredential</code>: BBB accreditation.</li>
       <li><code>knowsAbout</code>: list of insurance topics — explicit topical authority signal.</li>
     </ul>
-    <p><span class="arrow">→</span> See <code>jsonld/sitewide.json</code> (the <code>@graph</code> bundle) for the full payload.</p>
+    <p><span class="arrow">→</span> See <code>jsonld/_sitewide.json</code> (the <code>@graph</code> bundle) for the full payload.</p>
 
     <h3>3.2 WebSite</h3>
     <p>Adds a sitelinks search box eligibility and explicitly ties pages back to the org. Include a <code>potentialAction</code> of type <code>SearchAction</code> if you have a <code>/search?q=</code> endpoint (or update the URL template to match).</p>
-    <p><span class="arrow">→</span> See <code>jsonld/sitewide.json</code> (bundled with the Organization node in one <code>@graph</code>).</p>
+    <p><span class="arrow">→</span> See <code>jsonld/_sitewide.json</code> (bundled with the Organization node in one <code>@graph</code>).</p>
 
     <h3>3.3 BreadcrumbList</h3>
     <p>Every non-home page should carry a per-page <code>BreadcrumbList</code>. This is one of the schemas LLMs actually use to understand a page's place in the site hierarchy, which improves their ability to recommend related pages and properly attribute claims.</p>
@@ -312,7 +312,7 @@
     <p><strong>Recommended types:</strong> <code>WebPage</code> + <code>OfferCatalog</code> (for the four plans) + <code>FAQPage</code> (for the on-page FAQs) — wrapped in a single <code>@graph</code>.</p>
     <p><strong>Why:</strong> The homepage already exposes the four plan comparison, four canonical FAQs, trust signals (Trustpilot, BBB, UStiA), and contact info. Marking all of this up gives LLMs a self-contained "what is Travel Guard" payload they can cite without crawling further. The FAQ block in particular is high-value: ChatGPT and Perplexity routinely surface FAQPage answers verbatim.</p>
     <p><strong>Avoid:</strong> Don't list every FAQ on the site here — keep it to the 4 that are visibly on the page. Google penalizes mismatch between visible content and JSON-LD.</p>
-    <p><span class="arrow">→</span> See <code>jsonld/homepage.json</code>.</p>
+    <p><span class="arrow">→</span> See <code>jsonld/index.json</code>.</p>
 
     <h3>4.2 Plan pages (<code>/travel-insurance/plans/{deluxe|preferred|essential|rental-vehicle-damage-plan}</code>)</h3>
     <p><strong>Recommended types:</strong> <code>Product</code> + <code>Offer</code> + <code>aggregateRating</code> (if available) + <code>FAQPage</code> (plan-specific FAQs).</p>
@@ -324,12 +324,12 @@
       <li><code>areaServed</code> should be <code>Country: United States</code> — this prevents misattribution in Canada/UK queries.</li>
       <li>Only include <code>aggregateRating</code> with real, verifiable data. Inflating reviews is a structured-data policy violation and a reputational risk.</li>
     </ul>
-    <p><span class="arrow">→</span> See <code>jsonld/plan-deluxe.json</code> (template for the other three).</p>
+    <p><span class="arrow">→</span> See <code>jsonld/travel-insurance/plans/deluxe.json</code> (template for the other three).</p>
 
     <h3>4.3 Plans listing page (<code>/travel-insurance/plans</code>)</h3>
     <p><strong>Recommended type:</strong> <code>ItemList</code> listing the four products in display order.</p>
     <p><strong>Why:</strong> Tells LLMs this page is a comparison/index — improves the chance they cite it for "Travel Guard plans" rather than picking one plan page arbitrarily.</p>
-    <p><span class="arrow">→</span> See <code>jsonld/plans-listing.json</code>.</p>
+    <p><span class="arrow">→</span> See <code>jsonld/travel-insurance/plans/index.json</code>.</p>
 
     <h3>4.4 FAQ page (<code>/help-center/faqs</code>)</h3>
     <p><strong>Recommended type:</strong> <code>FAQPage</code>.</p>
@@ -340,37 +340,37 @@
       <li>Keep answers under 300 words — LLMs are more likely to pull short, complete answers.</li>
       <li>Use one <code>FAQPage</code> with many <code>Question</code> children, not one FAQPage per question.</li>
     </ul>
-    <p><span class="arrow">→</span> See <code>jsonld/faq-page.json</code>.</p>
+    <p><span class="arrow">→</span> See <code>jsonld/help-center/faqs.json</code>.</p>
 
     <h3>4.5 Claims page (<code>/help-center/claims</code>)</h3>
-    <p><strong>Recommended type:</strong> <code>HowTo</code> with <code>HowToStep</code>s for the claim filing workflow.</p>
-    <p><strong>Why:</strong> "How do I file a Travel Guard claim" is one of the most common high-intent queries. A <code>HowTo</code> with numbered steps and a <code>tool</code> list gives LLMs a complete, citable workflow.</p>
-    <p><span class="arrow">→</span> See <code>jsonld/howto-file-claim.json</code>.</p>
+    <p><strong>Recommended type:</strong> <code>WebPage</code> + <code>Service</code> referencing the claims portal.</p>
+    <p><strong>Why:</strong> "How do I file a Travel Guard claim" is one of the most common high-intent queries. The original recommendation here was a <code>HowTo</code>, but the live claims page presents no step-by-step workflow — just two portal CTAs (File a Claim, Check Claim Status) and a short intro. Schema must match visible page content, so the JSON-LD models the page as a <code>WebPage</code> whose <code>mainEntity</code> is a <code>Service</code> with <code>availableChannel</code> entries for the two portal URLs and the claims phone line (1-866-478-8222, USA-purchased policies only per the on-page note). If the web team ever adds visible numbered filing steps to the page, revisit <code>HowTo</code>.</p>
+    <p><span class="arrow">→</span> See <code>jsonld/help-center/claims.json</code>.</p>
 
     <h3>4.6 About Us (<code>/about-us</code>)</h3>
     <p><strong>Recommended type:</strong> <code>AboutPage</code> whose <code>mainEntity</code> points to the <code>#organization</code> node.</p>
     <p><strong>Why:</strong> Strengthens the entity. LLMs use the About page to confirm corporate facts (founding, parent company, jurisdiction) when they evaluate whether to trust a source. This is the page to anchor the Zurich underwriter relationship in narrative form <em>and</em> in <code>parentOrganization</code> JSON-LD.</p>
-    <p><span class="arrow">→</span> See <code>jsonld/about-us.json</code>.</p>
+    <p><span class="arrow">→</span> See <code>jsonld/about-us/index.json</code>.</p>
 
     <h3>4.7 Contact Us (<code>/help-center/contact-us</code>)</h3>
     <p><strong>Recommended type:</strong> <code>ContactPage</code> referencing the org's <code>contactPoint</code> array.</p>
     <p><strong>Why:</strong> Standardizes phone, hours, and language availability for AI assistants answering "Travel Guard customer service number."</p>
-    <p><span class="arrow">→</span> See <code>jsonld/contact-us.json</code>.</p>
+    <p><span class="arrow">→</span> See <code>jsonld/help-center/contact-us.json</code>.</p>
 
     <h3>4.8 Trip-type and traveler-type pages (e.g. <code>/travel-insurance/trip-types/cruise-insurance</code>)</h3>
     <p><strong>Recommended type:</strong> <code>WebPage</code> + <code>Service</code> (with <code>serviceType: "Cruise Travel Insurance"</code> etc.) + <code>OfferCatalog</code> listing the recommended plans for that trip type.</p>
     <p><strong>Why:</strong> These pages compete for high-intent queries like "best cruise travel insurance." <code>Service</code> with <code>audience</code> is what LLMs need to answer "what plan should I buy for a cruise?"</p>
-    <p><span class="arrow">→</span> See <code>jsonld/trip-type-cruise.json</code> (template for all trip and traveler types).</p>
+    <p><span class="arrow">→</span> See <code>jsonld/travel-insurance/trip-types/cruise-insurance.json</code> (template for all trip and traveler types).</p>
 
     <h3>4.9 Education Center articles (<code>/info/*</code>, <code>/travel-resources/travel-tips/*</code>)</h3>
     <p><strong>Recommended type:</strong> <code>Article</code> (or <code>NewsArticle</code> if dated/news-like). Add <code>DefinedTerm</code> for glossary-style content like "What is Travel Insurance?".</p>
     <p><strong>Why:</strong> LLMs love <code>Article</code> with clean <code>author</code>, <code>datePublished</code>, <code>dateModified</code>, <code>about</code>, and <code>mainEntityOfPage</code>. The <code>dateModified</code> field is particularly important — it's a primary recency signal AI search uses to choose between competing sources.</p>
-    <p><span class="arrow">→</span> See <code>jsonld/article-template.json</code> and <code>jsonld/education-center-what-is.json</code>.</p>
+    <p><span class="arrow">→</span> See <code>jsonld/_templates/article-template.json</code> and <code>jsonld/info/what-is-travel-insurance.json</code>.</p>
 
     <h3>4.10 Customer Reviews page (<code>/about-us/travel-insurance-reviews</code>)</h3>
     <p><strong>Recommended types:</strong> <code>CollectionPage</code> whose <code>mainEntity</code> is the Organization with <code>aggregateRating</code> and a <code>review</code> array.</p>
     <p><strong>Why:</strong> Reviews mapped to schema can drive star ratings in traditional search and serve as a trust signal for LLMs. <strong>Use only verifiable, first-party reviews</strong> — never invent ratings.</p>
-    <p><span class="arrow">→</span> See <code>jsonld/reviews-page.json</code>.</p>
+    <p><span class="arrow">→</span> See <code>jsonld/about-us/travel-insurance-reviews.json</code>.</p>
 
     <h2 id="s5">5. Page-by-page priority matrix</h2>
     <table>
@@ -418,7 +418,7 @@
     <h3>6.3 The Zurich rebrand opportunity</h3>
     <p>In addition to the schema work, three sitewide updates will help LLMs catch up to the rebrand:</p>
     <ol>
-      <li><strong>Organization.parentOrganization</strong> in JSON-LD names Zurich Insurance Group — included in <code>sitewide.json</code>.</li>
+      <li><strong>Organization.parentOrganization</strong> in JSON-LD names Zurich Insurance Group — included in <code>_sitewide.json</code>.</li>
       <li><strong>Add an underwriter disclosure page</strong> (<code>/legal/our-underwriter</code> already exists per the footer) with its own JSON-LD <code>WebPage</code> and a clear text declaration. LLMs index legal pages disproportionately.</li>
       <li><strong>Update Wikipedia/Wikidata</strong> if you have a marketing team that can edit it. LLMs treat Wikidata as a high-trust ground truth — making sure the Travel Guard / Zurich relationship is reflected there will propagate through future model training.</li>
     </ol>
@@ -450,19 +450,36 @@
 
     <h2 id="s8">8. Files in this audit</h2>
     <pre><code>TravelGuard-Schema-Audit.md              ← this document
-jsonld/
-  sitewide.json                          ← P0, every page (Organization + WebSite @graph bundle)
-  homepage.json                          ← P0, homepage
-  plan-deluxe.json                       ← P0, Deluxe plan (template for others)
-  plans-listing.json                     ← P1, /travel-insurance/plans
-  faq-page.json                          ← P0, /help-center/faqs
-  about-us.json                          ← P1, /about-us
-  contact-us.json                        ← P1, /help-center/contact-us
-  howto-file-claim.json                  ← P1, /help-center/claims
-  trip-type-cruise.json                  ← P2, trip-type template
-  article-template.json                  ← P2, Travel Tips / blog
-  education-center-what-is.json          ← P2, Education Center
-  reviews-page.json                      ← P2, reviews collection</code></pre>
+TravelGuard-KPI-Tracking.md              ← before/after KPI tracking guide
+jsonld/                                  ← mirrors the live site URL structure
+  _sitewide.json                         ← P0, every page (Organization + WebSite @graph bundle)
+  _templates/
+    article-template.json                ← P2 template ({{placeholders}}, do not deploy)
+  index.json                             ← P0, homepage
+  about-us/
+    index.json                           ← P1, /about-us
+    travel-insurance-reviews.json        ← P0 (escalated), reviews collection
+  help-center/
+    claims.json                          ← P1, /help-center/claims (WebPage + Service)
+    contact-us.json                      ← P0 (escalated), /help-center/contact-us
+    faqs.json                            ← P0, /help-center/faqs
+  info/
+    what-is-travel-insurance.json        ← P2, Education Center
+  travel-insurance/
+    plans/
+      index.json                         ← P1, /travel-insurance/plans
+      deluxe.json                        ← P0, Deluxe plan (template for others)
+    optional-coverage/
+      cancel-for-any-reason.json         ← P0 (new), CFAR page
+    trip-types/
+      cruise-insurance.json              ← P2, trip-type template
+  traveler-types/
+    pre-existing-medical-condition-travel-insurance-plans.json  ← P0 (new)
+  travel-resources/
+    travel-safety/
+      student-travel-safety.json         ← P0 (new), student safety article
+    travel-tips/
+      how-to-beat-jet-lag-fast.json      ← P2, real Travel Tips article (worked example)</code></pre>
 
     <h2 id="s9">9. CLAUDE.md context (for your repo)</h2>
     <p>Per your workflow, here's a snippet you can drop into a <code>CLAUDE.md</code> at the repo root so future AI sessions have context:</p>

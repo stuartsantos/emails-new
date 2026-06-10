@@ -1,0 +1,55 @@
+{
+  "_comment": "TEMPLATE — do not deploy. Replace every {{placeholder}} with verbatim values from the live page (title, h1, meta description). Remove dateModified unless the sitemap has a real lastmod for this exact URL. For a worked example, see travel-resources/travel-tips/how-to-beat-jet-lag-fast.json.",
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://www.travelguard.com/{{page-path}}#article",
+      "headline": "{{live page h1, verbatim}}",
+      "alternativeHeadline": "{{live page <title> minus ' | Travel Guard', verbatim}}",
+      "description": "{{live page meta description, verbatim}}",
+      "url": "https://www.travelguard.com/{{page-path}}",
+      "image": "{{page image URL only if present in live page source and returns 200 — otherwise remove this property}}",
+      "author": { "@id": "https://www.travelguard.com/#organization" },
+      "publisher": { "@id": "https://www.travelguard.com/#organization" },
+      "dateModified": "{{sitemap lastmod for this exact URL — remove if absent}}",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.travelguard.com/{{page-path}}"
+      },
+      "articleSection": "{{site section, e.g. Travel Tips / Travel Safety / Education Center}}",
+      "inLanguage": "en-US",
+      "about": [
+        { "@type": "Thing", "name": "{{topic from on-page content}}" }
+      ],
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", "h2"]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/{{page-path}}#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "{{section name}}",
+          "item": "https://www.travelguard.com/{{section-path}}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "{{page name}}",
+          "item": "https://www.travelguard.com/{{page-path}}"
+        }
+      ]
+    }
+  ]
+}

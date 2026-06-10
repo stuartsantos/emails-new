@@ -47,19 +47,19 @@ The Organization entity is the spine that every other schema on the site should 
 - `hasCredential`: BBB accreditation.
 - `knowsAbout`: list of insurance topics — explicit topical authority signal.
 
-→ See `jsonld/sitewide.json` (the `@graph` bundle) for the full payload.
+→ See `jsonld/_sitewide.json` (the `@graph` bundle) for the full payload.
 
 ### 3.2 WebSite
 
 Adds a sitelinks search box eligibility and explicitly ties pages back to the org. Include a `potentialAction` of type `SearchAction` if you have a `/search?q=` endpoint (or update the URL template to match).
 
-→ See `jsonld/sitewide.json` (bundled with the Organization node in one `@graph`).
+→ See `jsonld/_sitewide.json` (bundled with the Organization node in one `@graph`).
 
 ### 3.3 BreadcrumbList
 
 Every non-home page should carry a per-page `BreadcrumbList`. This is one of the schemas LLMs actually use to understand a page's place in the site hierarchy, which improves their ability to recommend related pages and properly attribute claims.
 
-Unlike `Organization` and `WebSite`, a `BreadcrumbList` is **not** a single reusable payload and is **not** part of the sitewide bundle — each page has its own trail. It is therefore embedded directly in each page's `@graph` rather than kept as a separate file. The per-page JSON-LD files in `jsonld/` (e.g. `plan-deluxe.json`, `faq-page.json`, `howto-file-claim.json`) each include their own `BreadcrumbList` node with an `@id` of `{page-url}#breadcrumb`. When adding a new template, copy the breadcrumb pattern from the closest existing page.
+Unlike `Organization` and `WebSite`, a `BreadcrumbList` is **not** a single reusable payload and is **not** part of the sitewide bundle — each page has its own trail. It is therefore embedded directly in each page's `@graph` rather than kept as a separate file. The per-page JSON-LD files in `jsonld/` (e.g. `travel-insurance/plans/deluxe.json`, `help-center/faqs.json`, `help-center/claims.json`) each include their own `BreadcrumbList` node with an `@id` of `{page-url}#breadcrumb`. When adding a new template, copy the breadcrumb pattern from the closest existing page.
 
 ### 3.4 Speakable (optional but recommended for editorial pages)
 
@@ -79,7 +79,7 @@ Pages are ordered by LLM-citation value, highest first.
 
 **Avoid:** Don't list every FAQ on the site here — keep it to the 4 that are visibly on the page. Google penalizes mismatch between visible content and JSON-LD.
 
-→ See `jsonld/homepage.json`.
+→ See `jsonld/index.json`.
 
 ### 4.2 Plan pages (`/travel-insurance/plans/{deluxe|preferred|essential|rental-vehicle-damage-plan}`)
 
@@ -91,9 +91,9 @@ Pages are ordered by LLM-citation value, highest first.
 - `audience.audienceType` describes who the plan is for in plain English ("international travelers, senior travelers, high-end vacationers"). LLMs use this for "best travel insurance for seniors" type queries.
 - `isRelatedTo` cross-links the other plans so an LLM can answer comparison questions.
 - `areaServed` should be `Country: United States` — this prevents misattribution in Canada/UK queries.
-- Only include `aggregateRating` with real, verifiable data. Inflating reviews is a structured-data policy violation and a reputational risk. The current `plan-deluxe.json` intentionally omits `aggregateRating` until a Trustpilot integration is wired in.
+- Only include `aggregateRating` with real, verifiable data. Inflating reviews is a structured-data policy violation and a reputational risk. The current `travel-insurance/plans/deluxe.json` intentionally omits `aggregateRating` until a Trustpilot integration is wired in.
 
-→ See `jsonld/plan-deluxe.json` (template for the other three).
+→ See `jsonld/travel-insurance/plans/deluxe.json` (template for the other three).
 
 ### 4.3 Plans listing page (`/travel-insurance/plans`)
 
@@ -101,7 +101,7 @@ Pages are ordered by LLM-citation value, highest first.
 
 **Why:** Tells LLMs this page is a comparison/index — improves the chance they cite it for "Travel Guard plans" rather than picking one plan page arbitrarily.
 
-→ See `jsonld/plans-listing.json`.
+→ See `jsonld/travel-insurance/plans/index.json`.
 
 ### 4.4 FAQ page (`/help-center/faqs`)
 
@@ -114,15 +114,15 @@ Pages are ordered by LLM-citation value, highest first.
 - Keep answers under 300 words — LLMs are more likely to pull short, complete answers.
 - Use one `FAQPage` with many `Question` children, not one FAQPage per question.
 
-→ See `jsonld/faq-page.json`.
+→ See `jsonld/help-center/faqs.json`.
 
 ### 4.5 Claims page (`/help-center/claims`)
 
-**Recommended type:** `HowTo` with `HowToStep`s for the claim filing workflow.
+**Recommended type:** `WebPage` + `Service` referencing the claims portal.
 
-**Why:** "How do I file a Travel Guard claim" is one of the most common high-intent queries. A `HowTo` with numbered steps and a `tool` list gives LLMs a complete, citable workflow.
+**Why:** "How do I file a Travel Guard claim" is one of the most common high-intent queries. The original recommendation here was a `HowTo`, but the live claims page presents no step-by-step workflow — just two portal CTAs (File a Claim → claims.travelguard.com/claims, Check Claim Status → claims.travelguard.com/status) and a short intro. Schema must match visible page content, so the JSON-LD models the page as a `WebPage` whose `mainEntity` is a `Service` with `availableChannel` entries for the two portal URLs and the claims phone line (1-866-478-8222, USA-purchased policies only per the on-page note). If the web team ever adds visible numbered filing steps to the page, revisit `HowTo`.
 
-→ See `jsonld/howto-file-claim.json`.
+→ See `jsonld/help-center/claims.json`.
 
 ### 4.6 About Us (`/about-us`)
 
@@ -130,7 +130,7 @@ Pages are ordered by LLM-citation value, highest first.
 
 **Why:** Strengthens the entity. LLMs use the About page to confirm corporate facts (founding, parent company, jurisdiction) when they evaluate whether to trust a source. This is the page to anchor the Zurich underwriter relationship in narrative form *and* in `parentOrganization` JSON-LD.
 
-→ See `jsonld/about-us.json`.
+→ See `jsonld/about-us/index.json`.
 
 ### 4.7 Contact Us (`/help-center/contact-us`)
 
@@ -138,7 +138,7 @@ Pages are ordered by LLM-citation value, highest first.
 
 **Why:** Standardizes phone, hours, and language availability for AI assistants answering "Travel Guard customer service number."
 
-→ See `jsonld/contact-us.json`.
+→ See `jsonld/help-center/contact-us.json`.
 
 ### 4.8 Trip-type and traveler-type pages (e.g. `/travel-insurance/trip-types/cruise-insurance`)
 
@@ -146,7 +146,7 @@ Pages are ordered by LLM-citation value, highest first.
 
 **Why:** These pages compete for high-intent queries like "best cruise travel insurance." `Service` with `audience` is what LLMs need to answer "what plan should I buy for a cruise?"
 
-→ See `jsonld/trip-type-cruise.json` (template for all trip and traveler types).
+→ See `jsonld/travel-insurance/trip-types/cruise-insurance.json` (template for all trip and traveler types).
 
 ### 4.9 Education Center articles (`/info/*`, `/travel-resources/travel-tips/*`)
 
@@ -154,7 +154,7 @@ Pages are ordered by LLM-citation value, highest first.
 
 **Why:** LLMs love `Article` with clean `author`, `datePublished`, `dateModified`, `about`, and `mainEntityOfPage`. The `dateModified` field is particularly important — it's a primary recency signal AI search uses to choose between competing sources.
 
-→ See `jsonld/article-template.json` and `jsonld/education-center-what-is.json`.
+→ See `jsonld/_templates/article-template.json` and `jsonld/info/what-is-travel-insurance.json`.
 
 ### 4.10 Customer Reviews page (`/about-us/travel-insurance-reviews`)
 
@@ -162,9 +162,9 @@ Pages are ordered by LLM-citation value, highest first.
 
 **Why:** Reviews mapped to schema can drive star ratings in traditional search and serve as a trust signal for LLMs. **Use only verifiable, first-party reviews** — never invent ratings.
 
-**Current state:** `jsonld/reviews-page.json` is intentionally minimal — it declares the `CollectionPage` and references the org by `@id`, but does not yet include `aggregateRating` or `review` entries. This is to prevent placeholder/fake data from shipping. When Trustpilot data is wired in, augment the `mainEntity` block with the real `aggregateRating` (ratingValue, reviewCount, bestRating, worstRating) and a `review` array of verbatim customer reviews with real author names and dates.
+**Current state:** `jsonld/about-us/travel-insurance-reviews.json` is intentionally minimal — it declares the `CollectionPage` and references the org by `@id`, but does not yet include `aggregateRating` or `review` entries. This is to prevent placeholder/fake data from shipping. When Trustpilot data is wired in, augment the `mainEntity` block with the real `aggregateRating` (ratingValue, reviewCount, bestRating, worstRating) and a `review` array of verbatim customer reviews with real author names and dates.
 
-→ See `jsonld/reviews-page.json`.
+→ See `jsonld/about-us/travel-insurance-reviews.json`.
 
 ---
 
@@ -178,7 +178,7 @@ Pages are ordered by LLM-citation value, highest first.
 | P0 | FAQ (`/help-center/faqs`) | FAQPage | Low | Very high — verbatim answer extraction |
 | P0 | Plan pages (4) | Product + Offer + additionalProperty (+ aggregateRating, FAQPage as future additions) | Medium | Very high — product comparison queries |
 | P1 | Plans listing | ItemList | Low | Medium |
-| P1 | Claims | HowTo | Medium | High — high-intent workflow queries |
+| P1 | Claims | WebPage + Service (HowTo only if visible steps are added to the page) | Medium | High — high-intent workflow queries |
 | P1 | About Us | AboutPage + Organization | Low | High — entity disambiguation, Zurich relationship |
 | P1 | Contact Us | ContactPage | Low | Medium |
 | P2 | Trip-type pages (13) | Service + OfferCatalog | Medium per page | High — long-tail "best X insurance" queries |
@@ -208,7 +208,7 @@ Use stable, absolute-URL `@id`s for every node and *reference* them from other s
 
 In addition to the schema work, three sitewide updates will help LLMs catch up to the rebrand:
 
-1. **Organization.parentOrganization** in JSON-LD names Zurich Insurance Group — included in `sitewide.json`.
+1. **Organization.parentOrganization** in JSON-LD names Zurich Insurance Group — included in `_sitewide.json`.
 2. **Add an underwriter disclosure page** (`/legal/our-underwriter` already exists per the footer) with its own JSON-LD `WebPage` and a clear text declaration. LLMs index legal pages disproportionately.
 3. **Update Wikipedia/Wikidata** if you have a marketing team that can edit it. LLMs treat Wikidata as a high-trust ground truth — making sure the Travel Guard / Zurich relationship is reflected there will propagate through future model training.
 
@@ -232,7 +232,7 @@ Before pushing, validate each JSON-LD block at:
 
 1. **Week 1:** Site-wide bundle (Organization + WebSite). Validate. Submit updated sitemap to Google Search Console. Per-page `BreadcrumbList` ships embedded in each page's own `@graph` as those pages are tackled in the weeks below.
 2. **Week 2:** Homepage, FAQ page, all four plan pages.
-3. **Week 3:** About Us, Contact Us, Claims (HowTo), Plans listing (ItemList).
+3. **Week 3:** About Us, Contact Us, Claims (WebPage + Service), Plans listing (ItemList).
 4. **Week 4-5:** Trip-type and traveler-type pages (Service schema).
 5. **Week 6+:** Education Center and Travel Tips articles (template-driven, can be automated).
 
@@ -260,9 +260,9 @@ The Otterly report shows Travel Guard's three most-cited URLs in the period are:
 
 These pages are *already* getting cited — adding strong schema will compound the effect. All three move to **P0** and have dedicated JSON-LD files in this audit:
 
-- `jsonld/student-travel-safety.json` — Article + EducationalAudience (HowTo was removed because the live page does not present its safety guidance as a discrete numbered step list — schema must match visible page content)
-- `jsonld/pre-existing-conditions.json` — Service + FAQPage + PeopleAudience
-- `jsonld/cancel-for-any-reason.json` — Service + FAQPage (using real FAQ content extracted from the live CFAR page)
+- `jsonld/travel-resources/travel-safety/student-travel-safety.json` — Article + EducationalAudience (HowTo was removed because the live page does not present its safety guidance as a discrete numbered step list — schema must match visible page content)
+- `jsonld/traveler-types/pre-existing-medical-condition-travel-insurance-plans.json` — Service + FAQPage + PeopleAudience
+- `jsonld/travel-insurance/optional-coverage/cancel-for-any-reason.json` — Service + FAQPage (using real FAQ content extracted from the live CFAR page)
 
 ### 8.3 Mention-to-citation gaps — biggest unlock opportunities
 
@@ -302,25 +302,40 @@ We can't out-Squaremouth Squaremouth. The top 10 cited domains are dominated by 
 
 ## 9. Files in this audit
 
+The `jsonld/` folder mirrors the live site's URL structure: the folder root is the homepage (`index.json`), each URL path segment is a subfolder, and section landing pages are `index.json` inside their folder. Files prefixed with `_` are not pages (`_sitewide.json` is the every-page bundle; `_templates/` holds placeholder-marked templates that must never be deployed as-is).
+
 ```
 TravelGuard-Schema-Audit.md              ← this document
 TravelGuard-KPI-Tracking.md              ← before/after KPI tracking guide
 jsonld/
-  sitewide.json                          ← P0, every page (Organization + WebSite @graph bundle)
-  homepage.json                          ← P0, homepage
-  plan-deluxe.json                       ← P0, Deluxe plan (template for others)
-  plans-listing.json                     ← P1, /travel-insurance/plans
-  faq-page.json                          ← P0, /help-center/faqs
-  about-us.json                          ← P1, /about-us
-  contact-us.json                        ← P0 (escalated), /help-center/contact-us
-  howto-file-claim.json                  ← P1, /help-center/claims
-  cancel-for-any-reason.json             ← P0 (new), CFAR page
-  pre-existing-conditions.json           ← P0 (new), pre-existing conditions page
-  student-travel-safety.json             ← P0 (new), student safety article
-  trip-type-cruise.json                  ← P2, trip-type template
-  article-template.json                  ← P2, Travel Tips / blog
-  education-center-what-is.json          ← P2, Education Center
-  reviews-page.json                      ← P0 (escalated), reviews collection
+  _sitewide.json                         ← P0, every page (Organization + WebSite @graph bundle)
+  _templates/
+    article-template.json                ← P2 template, Travel Tips / blog ({{placeholders}}, do not deploy)
+  index.json                             ← P0, homepage
+  about-us/
+    index.json                           ← P1, /about-us
+    travel-insurance-reviews.json        ← P0 (escalated), reviews collection
+  help-center/
+    claims.json                          ← P1, /help-center/claims (WebPage + Service)
+    contact-us.json                      ← P0 (escalated), /help-center/contact-us
+    faqs.json                            ← P0, /help-center/faqs
+  info/
+    what-is-travel-insurance.json        ← P2, Education Center
+  travel-insurance/
+    plans/
+      index.json                         ← P1, /travel-insurance/plans
+      deluxe.json                        ← P0, Deluxe plan (template for others)
+    optional-coverage/
+      cancel-for-any-reason.json         ← P0 (new), CFAR page
+    trip-types/
+      cruise-insurance.json              ← P2, trip-type template
+  traveler-types/
+    pre-existing-medical-condition-travel-insurance-plans.json  ← P0 (new)
+  travel-resources/
+    travel-safety/
+      student-travel-safety.json         ← P0 (new), student safety article
+    travel-tips/
+      how-to-beat-jet-lag-fast.json      ← P2, real Travel Tips article (worked example)
 ```
 
 ---
