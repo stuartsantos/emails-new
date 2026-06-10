@@ -7,16 +7,20 @@
       "url": "https://www.travelguard.com/traveler-types/pre-existing-medical-condition-travel-insurance-plans",
       "name": "Travel Insurance Plans for Medical Conditions | Travel Guard",
       "description": "It's vital to have a travel insurance plan for your next vacation if you have a pre-existing medical condition. Visit us to find the right plan for you.",
-      "isPartOf": { "@id": "https://www.travelguard.com/#website" },
+      "isPartOf": {
+        "@id": "https://www.travelguard.com/#website"
+      },
       "inLanguage": "en-US",
-      "breadcrumb": { "@id": "https://www.travelguard.com/traveler-types/pre-existing-medical-condition-travel-insurance-plans#breadcrumb" },
-      "speakable": {
-        "@type": "SpeakableSpecification",
-        "cssSelector": ["h1"]
+      "breadcrumb": {
+        "@id": "https://www.travelguard.com/traveler-types/pre-existing-medical-condition-travel-insurance-plans#breadcrumb"
       },
       "mainEntity": [
-        { "@id": "https://www.travelguard.com/traveler-types/pre-existing-medical-condition-travel-insurance-plans#service" },
-        { "@id": "https://www.travelguard.com/traveler-types/pre-existing-medical-condition-travel-insurance-plans#faqpage" }
+        {
+          "@id": "https://www.travelguard.com/traveler-types/pre-existing-medical-condition-travel-insurance-plans#service"
+        },
+        {
+          "@id": "https://www.travelguard.com/traveler-types/pre-existing-medical-condition-travel-insurance-plans#faqpage"
+        }
       ]
     },
     {
@@ -25,8 +29,13 @@
       "serviceType": "Travel Insurance for Pre-Existing Medical Conditions",
       "name": "Travel Insurance with Pre-Existing Medical Condition Exclusion Waiver",
       "description": "Travel Guard plans may waive the standard pre-existing medical condition exclusion when the policy is purchased within a qualifying window (typically 15 days) of the initial trip deposit, the traveler is medically able to travel on the purchase date, and all non-refundable trip costs are insured.",
-      "provider": { "@id": "https://www.travelguard.com/#organization" },
-      "areaServed": { "@type": "Country", "name": "United States" },
+      "provider": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
       "audience": {
         "@type": "PeopleAudience",
         "audienceType": "Travelers with pre-existing medical conditions, including chronic conditions like asthma, diabetes, or high blood pressure, a history of heart disease, or those recovering from an injury or recent illness."
@@ -40,7 +49,9 @@
           "description": "Cost varies by base plan, trip cost, and traveler age. The pre-existing medical condition exclusion waiver is available as an early purchase benefit on eligible plans at no separate fee."
         },
         "availability": "https://schema.org/InStock",
-        "seller": { "@id": "https://www.travelguard.com/#organization" }
+        "seller": {
+          "@id": "https://www.travelguard.com/#organization"
+        }
       },
       "isRelatedTo": [
         {

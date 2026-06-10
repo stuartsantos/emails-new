@@ -10,8 +10,12 @@
       "description": "{{live page meta description, verbatim}}",
       "url": "https://www.travelguard.com/{{page-path}}",
       "image": "{{page image URL only if present in live page source and returns 200 — otherwise remove this property}}",
-      "author": { "@id": "https://www.travelguard.com/#organization" },
-      "publisher": { "@id": "https://www.travelguard.com/#organization" },
+      "author": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
       "dateModified": "{{sitemap lastmod for this exact URL — remove if absent}}",
       "mainEntityOfPage": {
         "@type": "WebPage",
@@ -20,12 +24,11 @@
       "articleSection": "{{site section, e.g. Travel Tips / Travel Safety / Education Center}}",
       "inLanguage": "en-US",
       "about": [
-        { "@type": "Thing", "name": "{{topic from on-page content}}" }
-      ],
-      "speakable": {
-        "@type": "SpeakableSpecification",
-        "cssSelector": ["h1", "h2"]
-      }
+        {
+          "@type": "Thing",
+          "name": "{{topic from on-page content}}"
+        }
+      ]
     },
     {
       "@type": "BreadcrumbList",

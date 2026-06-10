@@ -7,20 +7,24 @@
       "url": "https://www.travelguard.com/",
       "name": "Travel Insurance Plans | International & Domestic | Travel Guard",
       "description": "Travel Guard's travel insurance plans may cover trip cancellation, emergency medical expenses and more. Compare our plans or get a quote today.",
-      "isPartOf": { "@id": "https://www.travelguard.com/#website" },
-      "about": { "@id": "https://www.travelguard.com/#organization" },
+      "isPartOf": {
+        "@id": "https://www.travelguard.com/#website"
+      },
+      "about": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
       "inLanguage": "en-US",
       "primaryImageOfPage": {
         "@type": "ImageObject",
         "url": "https://www.travelguard.com/content/dam/travelguard/us/images/hero/with-form-2000-1088/GettyImages-170001874.jpg/jcr:content/renditions/desktop.jpg"
       },
-      "speakable": {
-        "@type": "SpeakableSpecification",
-        "cssSelector": ["h1"]
-      },
       "mainEntity": [
-        { "@id": "https://www.travelguard.com/#offercatalog" },
-        { "@id": "https://www.travelguard.com/#faqpage" }
+        {
+          "@id": "https://www.travelguard.com/#offercatalog"
+        },
+        {
+          "@id": "https://www.travelguard.com/#faqpage"
+        }
       ]
     },
     {
@@ -35,7 +39,9 @@
           "description": "Our top-of-the-line, comprehensive travel insurance plan coverage that sets the standard. A great option for: International Travel, Senior Travelers, High-End Vacations.",
           "url": "https://www.travelguard.com/travel-insurance/plans/deluxe",
           "category": "Comprehensive Travel Insurance",
-          "itemOffered": { "@id": "https://www.travelguard.com/travel-insurance/plans/deluxe#product" }
+          "itemOffered": {
+            "@id": "https://www.travelguard.com/travel-insurance/plans/deluxe#product"
+          }
         },
         {
           "@type": "Offer",
@@ -43,7 +49,9 @@
           "description": "A comprehensive travel insurance plan with superb coverage and service from start to finish. A great option for: Most Vacations, Cruising, Family Travel.",
           "url": "https://www.travelguard.com/travel-insurance/plans/preferred",
           "category": "Comprehensive Travel Insurance",
-          "itemOffered": { "@id": "https://www.travelguard.com/travel-insurance/plans/preferred#product" }
+          "itemOffered": {
+            "@id": "https://www.travelguard.com/travel-insurance/plans/preferred#product"
+          }
         },
         {
           "@type": "Offer",
@@ -51,7 +59,9 @@
           "description": "Savvy coverage for the budget-minded traveler. A great option for: Domestic Travel, Road Trips, Weekend Vacations.",
           "url": "https://www.travelguard.com/travel-insurance/plans/essential",
           "category": "Basic Travel Insurance",
-          "itemOffered": { "@id": "https://www.travelguard.com/travel-insurance/plans/essential#product" }
+          "itemOffered": {
+            "@id": "https://www.travelguard.com/travel-insurance/plans/essential#product"
+          }
         },
         {
           "@type": "Offer",
@@ -59,7 +69,9 @@
           "description": "An alternative to the insurance offered by rental car companies. A great option for: Road Trips, Short-Term Vehicle Rentals, Savvy Travelers.",
           "url": "https://www.travelguard.com/travel-insurance/plans/rental-vehicle-damage-plan",
           "category": "Rental Vehicle Insurance",
-          "itemOffered": { "@id": "https://www.travelguard.com/travel-insurance/plans/rental-vehicle-damage-plan#product" }
+          "itemOffered": {
+            "@id": "https://www.travelguard.com/travel-insurance/plans/rental-vehicle-damage-plan#product"
+          }
         }
       ]
     },

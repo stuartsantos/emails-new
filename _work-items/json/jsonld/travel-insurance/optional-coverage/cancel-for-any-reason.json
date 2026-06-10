@@ -7,16 +7,20 @@
       "url": "https://www.travelguard.com/travel-insurance/optional-coverage/cancel-for-any-reason",
       "name": "Cancel for Any Reason Travel Insurance Plans | Travel Guard",
       "description": "Visit us today to learn about cancel for any reason coverage before your vacation, to understand how you’re covered if your plans get called off.",
-      "isPartOf": { "@id": "https://www.travelguard.com/#website" },
+      "isPartOf": {
+        "@id": "https://www.travelguard.com/#website"
+      },
       "inLanguage": "en-US",
-      "breadcrumb": { "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/cancel-for-any-reason#breadcrumb" },
-      "speakable": {
-        "@type": "SpeakableSpecification",
-        "cssSelector": ["h1"]
+      "breadcrumb": {
+        "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/cancel-for-any-reason#breadcrumb"
       },
       "mainEntity": [
-        { "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/cancel-for-any-reason#service" },
-        { "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/cancel-for-any-reason#faqpage" }
+        {
+          "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/cancel-for-any-reason#service"
+        },
+        {
+          "@id": "https://www.travelguard.com/travel-insurance/optional-coverage/cancel-for-any-reason#faqpage"
+        }
       ]
     },
     {
@@ -26,8 +30,13 @@
       "name": "Cancel For Any Reason (CFAR)",
       "alternateName": "CFAR Upgrade",
       "description": "An optional travel insurance upgrade from Travel Guard. CFAR lets you cancel your trip for any reason not otherwise covered by your base plan and receive reimbursement of a percentage of your prepaid, non-refundable trip costs. Must be purchased within a set window (typically 15 days) of your initial trip deposit and you must cancel at least 48 hours prior to departure.",
-      "provider": { "@id": "https://www.travelguard.com/#organization" },
-      "areaServed": { "@type": "Country", "name": "United States" },
+      "provider": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
       "audience": {
         "@type": "PeopleAudience",
         "audienceType": "Travelers who want maximum cancellation flexibility, including those concerned about events not listed as covered reasons under standard travel insurance."
@@ -41,7 +50,9 @@
           "description": "CFAR is an optional upgrade added to a base Travel Guard plan. The upgrade cost varies by plan, trip cost, and traveler age. Get a personalized quote."
         },
         "availability": "https://schema.org/InStock",
-        "seller": { "@id": "https://www.travelguard.com/#organization" }
+        "seller": {
+          "@id": "https://www.travelguard.com/#organization"
+        }
       },
       "isRelatedTo": [
         {

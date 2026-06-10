@@ -7,14 +7,16 @@
       "url": "https://www.travelguard.com/info/assistance-services",
       "name": "Assistance Services | Travel Guard",
       "description": "From gift wrapping to medical evacuation, our assistance services team is trained to help you with your travel needs.",
-      "isPartOf": { "@id": "https://www.travelguard.com/#website" },
-      "inLanguage": "en-US",
-      "breadcrumb": { "@id": "https://www.travelguard.com/info/assistance-services#breadcrumb" },
-      "speakable": {
-        "@type": "SpeakableSpecification",
-        "cssSelector": ["h1", "h2"]
+      "isPartOf": {
+        "@id": "https://www.travelguard.com/#website"
       },
-      "mainEntity": { "@id": "https://www.travelguard.com/info/assistance-services#service" }
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://www.travelguard.com/info/assistance-services#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.travelguard.com/info/assistance-services#service"
+      }
     },
     {
       "@type": "Service",
@@ -22,8 +24,13 @@
       "serviceType": "24/7 Emergency Travel Assistance",
       "name": "Travel Guard Assistance Services",
       "description": "Travel Guard's assistance services team is trained to help with travel needs ranging from flight and hotel rebooking to emergency medical evacuation, available to travelers with Travel Guard plans.",
-      "provider": { "@id": "https://www.travelguard.com/#organization" },
-      "areaServed": { "@type": "Country", "name": "United States" },
+      "provider": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Travel Guard Assistance Service Categories",

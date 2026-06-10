@@ -7,8 +7,12 @@
       "headline": "What is Travel Insurance?",
       "description": "Understanding what travel insurance is, how it works and what to look out for is essential for both your travel plans and safety. Find out more.",
       "url": "https://www.travelguard.com/info/what-is-travel-insurance",
-      "author": { "@id": "https://www.travelguard.com/#organization" },
-      "publisher": { "@id": "https://www.travelguard.com/#organization" },
+      "author": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://www.travelguard.com/info/what-is-travel-insurance"
@@ -16,13 +20,15 @@
       "inLanguage": "en-US",
       "articleSection": "Education Center",
       "about": [
-        { "@type": "Thing", "name": "Travel Insurance" },
-        { "@type": "Thing", "name": "Trip Protection" }
-      ],
-      "speakable": {
-        "@type": "SpeakableSpecification",
-        "cssSelector": ["h1", "h2"]
-      }
+        {
+          "@type": "Thing",
+          "name": "Travel Insurance"
+        },
+        {
+          "@type": "Thing",
+          "name": "Trip Protection"
+        }
+      ]
     },
     {
       "@type": "DefinedTerm",

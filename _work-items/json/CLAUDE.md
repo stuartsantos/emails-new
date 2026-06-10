@@ -67,7 +67,7 @@ Canonical-URL gotchas found so far:
 1. `python3 -m json.tool` (or a glob loop) — parse check
 2. Verbatim FAQ check: whitespace-normalized containment of every Q and A in the live page text (tolerate `-` list markers and spaces around tag-stripped link boundaries)
 3. URL liveness: every `travelguard.com` URL in the file → 200, no redirect
-4. validator.schema.org → 0 errors / 0 warnings. The POST endpoint `https://validator.schema.org/validate` (form field `html=` wrapping the JSON in a script tag) works for batching, **but Google rate-limits it after ~30 rapid requests** (reCAPTCHA wall, IP-based, also blocks the browser). Space requests ≥1s apart, batch sparingly, or use the UI via chrome-devtools. Known artifact: `speakable` cssSelectors (h1/h2) produce `NO_MATCHES_FOUND` errors when the test wrapper HTML lacks those tags — include `<h1>`/`<h2>` stubs in the wrapper body; these are not real schema errors.
+4. validator.schema.org → 0 errors / 0 warnings. The POST endpoint `https://validator.schema.org/validate` (form field `html=` wrapping the JSON in a script tag) works for batching, **but Google rate-limits it after ~30 rapid requests** (reCAPTCHA wall, IP-based, also blocks the browser; the unblock from solving the captcha is a browser cookie, so post-captcha validation must run from the browser page context — e.g. `fetch()` via chrome-devtools `evaluate_script` — not curl). Space requests ≥1s apart and batch sparingly.
 
 ## Roadmap / deferred batches (in priority order, from the audit + Otterly data)
 
@@ -98,3 +98,4 @@ Append a row whenever a non-obvious decision is made. Future sessions: read this
 | 2026-06-10 | FAQ text matches the *visible page*, not the previously deployed JSON-LD (curly apostrophes, "non-family member") | Deployed block had drifted from page copy; visible content wins |
 | 2026-06-10 | our-underwriter `name` uses h1, not `<title>` | Live title still says "AIG Travel Guard" (stale brand) — flagged for web team; h1 is on-page verbatim |
 | 2026-06-10 | Deluxe/plan `image` dropped | Asset 200s but does not appear in the live page source; hero is CSS/JS-loaded |
+| 2026-06-10 | `speakable` removed from all files; do not add to new ones | Pending vocabulary; Google's feature is news-only beta; selectors were generic h1/h2, not quotable summaries; no LLM evidence; caused validator noise (user decision) |

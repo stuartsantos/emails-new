@@ -7,14 +7,16 @@
       "url": "https://www.travelguard.com/help-center/claims",
       "name": "Travel Insurance Claims | Travel Guard",
       "description": "Need to make a claim on your travel insurance plan? We're here and ready to help. Visit Travel Guard now to start your claim and get the support you need.",
-      "isPartOf": { "@id": "https://www.travelguard.com/#website" },
-      "inLanguage": "en-US",
-      "breadcrumb": { "@id": "https://www.travelguard.com/help-center/claims#breadcrumb" },
-      "speakable": {
-        "@type": "SpeakableSpecification",
-        "cssSelector": ["h1"]
+      "isPartOf": {
+        "@id": "https://www.travelguard.com/#website"
       },
-      "mainEntity": { "@id": "https://www.travelguard.com/help-center/claims#service" },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://www.travelguard.com/help-center/claims#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.travelguard.com/help-center/claims#service"
+      },
       "significantLink": [
         "https://claims.travelguard.com/claims",
         "https://claims.travelguard.com/status"
@@ -26,8 +28,13 @@
       "serviceType": "Travel Insurance Claims Service",
       "name": "Travel Guard Online Claims",
       "description": "File a claim under your Travel Guard travel insurance policy or check the status of an existing claim through the online claims portal. The online tool currently supports policies purchased in the USA only; all other policyholders can call Travel Guard directly.",
-      "provider": { "@id": "https://www.travelguard.com/#organization" },
-      "areaServed": { "@type": "Country", "name": "United States" },
+      "provider": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
       "availableChannel": [
         {
           "@type": "ServiceChannel",

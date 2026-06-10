@@ -23,7 +23,7 @@ LLMs and AI search products don't behave exactly like Google's crawler, but they
 - **Entity disambiguation.** `Organization` with `sameAs` links to Wikipedia, LinkedIn, Trustpilot, and the parent (Zurich) helps the model resolve "Travel Guard" to *your* company rather than a generic phrase. This is what makes the difference between being cited and being paraphrased away.
 - **Fact extraction.** When a user asks "how much does Travel Guard cost?", a model that finds a `FAQPage` answer with a clean string ("typically 5-7% of trip cost") is much more likely to quote that verbatim with attribution than one that has to summarize prose.
 - **Service/Product modeling.** Insurance is a relationship between *who*, *what coverage*, *for whom*, *where*. `Product` + `Offer` + `audience` + `areaServed` gives the model all four in one structured payload.
-- **Citation hooks.** `speakable`, `mainEntityOfPage`, and stable `@id` URIs give AI surfaces something specific to point to, which raises the probability of a linked citation versus an uncited paraphrase.
+- **Citation hooks.** `mainEntityOfPage` and stable `@id` URIs give AI surfaces something specific to point to, which raises the probability of a linked citation versus an uncited paraphrase.
 - **Recency and trust.** `dateModified`, `aggregateRating`, `hasCredential` (BBB), and `memberOf` (UStiA, IGLTA) are exactly the cues LLMs use to weigh authority when there are competing sources.
 
 In practical terms: the goal isn't a Google rich snippet. It's making sure that when ChatGPT or Perplexity is composing an answer about travel insurance, your page is the one it pulls from and links to.
@@ -61,9 +61,9 @@ Every non-home page should carry a per-page `BreadcrumbList`. This is one of the
 
 Unlike `Organization` and `WebSite`, a `BreadcrumbList` is **not** a single reusable payload and is **not** part of the sitewide bundle — each page has its own trail. It is therefore embedded directly in each page's `@graph` rather than kept as a separate file. The per-page JSON-LD files in `jsonld/` (e.g. `travel-insurance/plans/deluxe.json`, `help-center/faqs.json`, `help-center/claims.json`) each include their own `BreadcrumbList` node with an `@id` of `{page-url}#breadcrumb`. When adding a new template, copy the breadcrumb pattern from the closest existing page.
 
-### 3.4 Speakable (optional but recommended for editorial pages)
+### 3.4 Speakable — removed (Jun 10, 2026)
 
-Add `speakable` to homepage, articles, FAQ, and education center pages. This signals which CSS selectors contain the most concise, quotable summaries of the page — exactly what voice assistants and LLMs pull for answers.
+Earlier drafts of this audit recommended `speakable` on editorial pages. It has since been **removed from all JSON-LD files**: the property is still "pending" at schema.org, Google's implementation is a beta limited to news content read by Google Assistant (travel-insurance pages are not eligible), and our selectors only pointed at generic `h1`/`h2` headings rather than genuinely quotable summaries. There is no evidence LLMs consume it, and it added validator noise plus a silent breakage risk if page markup changes. Don't re-add it unless Google expands the feature beyond news and the pages gain purpose-written speakable sections.
 
 ---
 

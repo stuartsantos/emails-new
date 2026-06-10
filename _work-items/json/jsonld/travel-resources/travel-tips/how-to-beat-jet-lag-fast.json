@@ -9,8 +9,12 @@
       "description": "93 percent of all travelers experience jet lag at some point in their lives, but there are a few strategies people can try to lessen its effect.",
       "url": "https://www.travelguard.com/travel-resources/travel-tips/how-to-beat-jet-lag-fast",
       "image": "https://www.travelguard.com/home/_jcr_content/root/container/container_copy/container_304146364/image.coreimg.jpeg/1750400977258/jet-lag-tips-hero.jpeg",
-      "author": { "@id": "https://www.travelguard.com/#organization" },
-      "publisher": { "@id": "https://www.travelguard.com/#organization" },
+      "author": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
       "dateModified": "2025-12-22",
       "mainEntityOfPage": {
         "@type": "WebPage",
@@ -19,14 +23,19 @@
       "articleSection": "Travel Tips",
       "inLanguage": "en-US",
       "about": [
-        { "@type": "Thing", "name": "Jet Lag" },
-        { "@type": "Thing", "name": "Travel Health" },
-        { "@type": "Thing", "name": "International Travel" }
-      ],
-      "speakable": {
-        "@type": "SpeakableSpecification",
-        "cssSelector": ["h1", "h2"]
-      }
+        {
+          "@type": "Thing",
+          "name": "Jet Lag"
+        },
+        {
+          "@type": "Thing",
+          "name": "Travel Health"
+        },
+        {
+          "@type": "Thing",
+          "name": "International Travel"
+        }
+      ]
     },
     {
       "@type": "BreadcrumbList",

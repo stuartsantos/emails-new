@@ -7,16 +7,20 @@
       "url": "https://www.travelguard.com/travel-insurance/benefits/baggage-insurance",
       "name": "Baggage Coverage & Travel Insurance Plans | Our Benefits | Travel Guard",
       "description": "Before heading off on your vacation, be sure you understand your travel insurance plan coverages or get coverage for your trip with Travel Guard.",
-      "isPartOf": { "@id": "https://www.travelguard.com/#website" },
+      "isPartOf": {
+        "@id": "https://www.travelguard.com/#website"
+      },
       "inLanguage": "en-US",
-      "breadcrumb": { "@id": "https://www.travelguard.com/travel-insurance/benefits/baggage-insurance#breadcrumb" },
-      "speakable": {
-        "@type": "SpeakableSpecification",
-        "cssSelector": ["h1", "h2"]
+      "breadcrumb": {
+        "@id": "https://www.travelguard.com/travel-insurance/benefits/baggage-insurance#breadcrumb"
       },
       "mainEntity": [
-        { "@id": "https://www.travelguard.com/travel-insurance/benefits/baggage-insurance#service" },
-        { "@id": "https://www.travelguard.com/travel-insurance/benefits/baggage-insurance#faqpage" }
+        {
+          "@id": "https://www.travelguard.com/travel-insurance/benefits/baggage-insurance#service"
+        },
+        {
+          "@id": "https://www.travelguard.com/travel-insurance/benefits/baggage-insurance#faqpage"
+        }
       ]
     },
     {
@@ -25,8 +29,13 @@
       "serviceType": "Baggage Travel Insurance Coverage",
       "name": "Baggage Coverage and Baggage Delay",
       "description": "Baggage Coverage is included on all Travel Guard travel insurance base plans and can provide reimbursement for recovering or replacing covered personal items if luggage is lost, stolen or damaged during a trip. Baggage Delay is a separate coverage that may reimburse the cost of purchasing necessary personal items when luggage is delayed or misdirected for a significant period of time.",
-      "provider": { "@id": "https://www.travelguard.com/#organization" },
-      "areaServed": { "@type": "Country", "name": "United States" },
+      "provider": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
       "isRelatedTo": [
         {
           "@type": "Product",
@@ -53,7 +62,9 @@
           "description": "Baggage Coverage is included on all Travel Guard base plans; certain plans offer higher benefit limits as part of a baggage upgrade."
         },
         "availability": "https://schema.org/InStock",
-        "seller": { "@id": "https://www.travelguard.com/#organization" }
+        "seller": {
+          "@id": "https://www.travelguard.com/#organization"
+        }
       }
     },
     {

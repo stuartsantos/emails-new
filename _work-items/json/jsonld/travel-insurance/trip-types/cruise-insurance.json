@@ -7,14 +7,16 @@
       "url": "https://www.travelguard.com/travel-insurance/trip-types/cruise-insurance",
       "name": "Cruise Insurance | Travel Guard",
       "description": "Travel Guard's cruise insurance plans help protect cruise vacations with trip cancellation, missed connection, emergency medical, and 24/7 assistance coverage.",
-      "isPartOf": { "@id": "https://www.travelguard.com/#website" },
-      "inLanguage": "en-US",
-      "speakable": {
-        "@type": "SpeakableSpecification",
-        "cssSelector": ["h1"]
+      "isPartOf": {
+        "@id": "https://www.travelguard.com/#website"
       },
-      "mainEntity": { "@id": "https://www.travelguard.com/travel-insurance/trip-types/cruise-insurance#service" },
-      "breadcrumb": { "@id": "https://www.travelguard.com/travel-insurance/trip-types/cruise-insurance#breadcrumb" }
+      "inLanguage": "en-US",
+      "mainEntity": {
+        "@id": "https://www.travelguard.com/travel-insurance/trip-types/cruise-insurance#service"
+      },
+      "breadcrumb": {
+        "@id": "https://www.travelguard.com/travel-insurance/trip-types/cruise-insurance#breadcrumb"
+      }
     },
     {
       "@type": "Service",
@@ -22,8 +24,13 @@
       "serviceType": "Cruise Travel Insurance",
       "name": "Cruise Insurance from Travel Guard",
       "description": "Cruise-specific travel insurance with coverage tailored for missed port departures, cruise-related medical emergencies, baggage delay, and itinerary changes.",
-      "provider": { "@id": "https://www.travelguard.com/#organization" },
-      "areaServed": { "@type": "Country", "name": "United States" },
+      "provider": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
       "audience": {
         "@type": "PeopleAudience",
         "audienceType": "Cruise passengers, family vacationers, first-time cruisers"
@@ -36,13 +43,17 @@
             "@type": "Offer",
             "name": "Preferred Plan",
             "url": "https://www.travelguard.com/travel-insurance/plans/preferred",
-            "itemOffered": { "@id": "https://www.travelguard.com/travel-insurance/plans/preferred#product" }
+            "itemOffered": {
+              "@id": "https://www.travelguard.com/travel-insurance/plans/preferred#product"
+            }
           },
           {
             "@type": "Offer",
             "name": "Deluxe Plan",
             "url": "https://www.travelguard.com/travel-insurance/plans/deluxe",
-            "itemOffered": { "@id": "https://www.travelguard.com/travel-insurance/plans/deluxe#product" }
+            "itemOffered": {
+              "@id": "https://www.travelguard.com/travel-insurance/plans/deluxe#product"
+            }
           }
         ]
       }

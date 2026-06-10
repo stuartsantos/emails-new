@@ -8,8 +8,12 @@
       "alternativeHeadline": "Student Travel Safety Advice & Tips",
       "description": "Whether you're taking a gap year, backpacking or volunteering, students, parents & faculty alike should check out these tips for safer travel.",
       "url": "https://www.travelguard.com/travel-resources/travel-safety/student-travel-safety",
-      "author": { "@id": "https://www.travelguard.com/#organization" },
-      "publisher": { "@id": "https://www.travelguard.com/#organization" },
+      "author": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://www.travelguard.com/travel-resources/travel-safety/student-travel-safety"
@@ -17,19 +21,27 @@
       "articleSection": "Travel Safety",
       "inLanguage": "en-US",
       "about": [
-        { "@type": "Thing", "name": "Student Travel" },
-        { "@type": "Thing", "name": "Study Abroad" },
-        { "@type": "Thing", "name": "Travel Safety" },
-        { "@type": "Thing", "name": "Travel Insurance for Students" }
+        {
+          "@type": "Thing",
+          "name": "Student Travel"
+        },
+        {
+          "@type": "Thing",
+          "name": "Study Abroad"
+        },
+        {
+          "@type": "Thing",
+          "name": "Travel Safety"
+        },
+        {
+          "@type": "Thing",
+          "name": "Travel Insurance for Students"
+        }
       ],
       "audience": {
         "@type": "EducationalAudience",
         "educationalRole": "student",
         "audienceType": "College and university students studying abroad, gap year students, exchange program participants, and their parents."
-      },
-      "speakable": {
-        "@type": "SpeakableSpecification",
-        "cssSelector": ["h1", "h2"]
       },
       "mentions": {
         "@type": "WebPage",
