@@ -71,7 +71,7 @@ Canonical-URL gotchas found so far:
 
 ## Roadmap / deferred batches (in priority order, from the audit + Otterly data)
 
-Done: sitewide bundle, homepage, FAQ, claims, contact, about, reviews, plans listing + **all 6 plan pages (incl. MedEvac)**, CFAR, student travel safety, **all 13 trip-types**, **all 11 traveler-types**, **all 13 benefits pages + benefits landing**, what-is + assistance-services (info), our-underwriter, jet-lag article, 6 section landing index.json files.
+Done: sitewide bundle, homepage, FAQ, claims, contact, about, reviews, plans listing + **all 5 plan product pages (incl. MedEvac)**, CFAR, student travel safety, **all 13 trip-types**, **all 11 traveler-types**, **all 13 benefits pages + benefits landing**, what-is + assistance-services (info), our-underwriter, jet-lag article, 6 section landing index.json files.
 
 Benefits batch notes (Jun 10): canonical-check every /benefits/ URL first — several sitemap slugs 301 elsewhere (`travel-health-insurance` → `travel-medical-expense`, `medevac` → `/plans/medevac`, `cancel-for-any-reason`/`pre-existing-medical-waiver` → /optional-coverage/, `new-to-travel-insurance` → /info/, `coverages`/`quick-compare` → landing/compare). `adventure-sports-coverage` and `lodging-expense-benefit` are really the Adventure Sports and Quarantine **bundle** pages (canonical URLs under /benefits/). Many benefit pages have a "What is a policy of insurance?" sidebar teaser — exclude it as a question and truncate any answer at that string. **Pack N' Go Plan exists at `/travel-insurance/plans/pack-n-go` (linked from the Quarantine Bundle page) — not yet built, add to a future batch.**
 
