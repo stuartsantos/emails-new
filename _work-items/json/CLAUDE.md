@@ -12,11 +12,16 @@ Structured-data (JSON-LD) build-out for travelguard.com, aimed at LLM/AI-search 
 | `TravelGuard-KPI-Report.html` | Shareable rendered KPI scorecard (one chart per metric, self-contained) — update at each checkpoint by editing the `SERIES`/`MILESTONES` blocks in its `<script>`; keep in sync with `TravelGuard-KPI-Tracking.md` |
 | `jsonld/` | The JSON-LD payloads, one file per page (see layout below) |
 
-## Deployment state (as of 2026-06-10)
+## Deployment state (as of 2026-06-11)
 
 - **Live on every page:** the `_sitewide.json` Organization + WebSite bundle (verified byte-identical to repo).
-- **Live on /help-center/faqs only:** a minimal FAQPage block (same 14 Q&As as `help-center/faqs.json`; repo version adds page props + breadcrumb and has small verbatim-text corrections not yet deployed).
-- **Everything else in `jsonld/` is pre-deployment.** Repo is the source of truth for the next deploy; editing these files has no live-site risk.
+- **Deployed 2026-06-11 (verified live, reflecting the current repo):**
+  - **Homepage** (`index.json`) — WebPage + OfferCatalog + FAQPage + the Trustpilot `aggregateRating` (confirmed live).
+  - **FAQ** (`help-center/faqs.json`) — full FAQPage now live (supersedes the old minimal block).
+  - **Plans listing** (`plans/index.json`) — the 7-card ItemList (`numberOfItems` 7, summary-format, carousel fix live).
+  - **All `/plans/*` product pages EXCEPT deluxe** — `preferred`, `essential`, `rental-vehicle-damage-plan`, `medevac`, `pack-n-go`, `annual`, all confirmed live as `FinancialProduct`.
+- **NOT deployed — `plans/deluxe.json`** is held back (pending edits); the live `/plans/deluxe` page currently has only the `_sitewide.json` block, no plan schema. Deploy after the deluxe edits land.
+- **Everything else in `jsonld/` is pre-deployment.** Repo is the source of truth for the next deploy; editing those files has no live-site risk. (The deployed pages above now DO carry live risk — coordinate a re-deploy when changing them.)
 
 ## Folder layout
 
