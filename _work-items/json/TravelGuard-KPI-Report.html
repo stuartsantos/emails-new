@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Guard Schema Rollout — KPI Scorecard</title>
+<style>
+  :root {
+    --tg-navy: #003d6e;
+    --zurich-blue: #0076be;
+    --zurich-blue-dark: #005b94;
+    --seafoam: #64c5b9;
+    --glacier: #e4edf8;
+    --glacier-50: #f1f6fb;
+    --snowmelt: #9cc7e6;
+    --midnight: #1c252e;
+    --midnight-50: #555b62;
+    --midnight-10: #e6e7e8;
+    --red: #af0827;
+    --jungle: #a5d069;
+    --green-ink: #3c6b12;
+    --green-bg: #e8f3d8;
+    --green-rule: #6fae2f;
+    --red-bg: #fbe0e6;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Noto Sans', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+    color: var(--midnight);
+    background: var(--glacier-50);
+    margin: 0;
+    line-height: 1.65;
+    font-size: 16px;
+  }
+
+  .page {
+    max-width: 920px;
+    margin: 0 auto;
+    background: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 8px 32px rgba(0,61,110,0.06);
+  }
+
+  /* Header */
+  header.masthead {
+    background: var(--tg-navy);
+    color: #fff;
+    padding: 48px 56px 40px;
+    background-image: linear-gradient(135deg, #003d6e 0%, #002a4d 100%);
+  }
+  header.masthead .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--seafoam);
+    margin: 0 0 12px;
+  }
+  header.masthead h1 {
+    margin: 0 0 20px;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+  header.masthead .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 28px;
+    font-size: 14px;
+    color: #cfe2f2;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  header.masthead .meta strong { color: #fff; font-weight: 600; }
+  header.masthead .meta a { color: var(--snowmelt); }
+
+  main { padding: 8px 56px 56px; }
+
+  h2 {
+    color: var(--tg-navy);
+    font-size: 23px;
+    margin: 44px 0 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--glacier);
+    scroll-margin-top: 16px;
+  }
+  h3 { color: var(--zurich-blue-dark); font-size: 18px; margin: 28px 0 8px; }
+  h4 { color: var(--midnight); font-size: 16px; margin: 20px 0 6px; }
+
+  p { margin: 12px 0; }
+  a { color: var(--zurich-blue); }
+  ul, ol { margin: 12px 0; padding-left: 24px; }
+  li { margin: 6px 0; }
+  strong { font-weight: 700; }
+
+  hr { border: none; border-top: 1px solid var(--midnight-10); margin: 40px 0; }
+
+  code {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    background: var(--glacier);
+    color: var(--tg-navy);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 0.88em;
+  }
+
+  /* Tables */
+  table { border-collapse: collapse; width: 100%; margin: 18px 0; font-size: 14.5px; }
+  th { background: var(--tg-navy); color: #fff; text-align: left; padding: 10px 12px; font-weight: 600; }
+  td { padding: 9px 12px; border-bottom: 1px solid var(--midnight-10); vertical-align: top; }
+  tr:nth-child(even) td { background: var(--glacier-50); }
+
+  /* Status badges */
+  .badge { display: inline-block; font-weight: 700; font-size: 12px; padding: 2px 9px; border-radius: 12px; letter-spacing: 0.02em; white-space: nowrap; }
+  .ok   { background: var(--green-bg); color: var(--green-ink); }
+  .warn { background: var(--red-bg); color: var(--red); }
+  .flat { background: var(--glacier); color: var(--midnight-50); }
+
+  /* Callout */
+  .callout { background: var(--glacier); border-left: 4px solid var(--seafoam); padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 20px 0; }
+  .callout p { margin: 0; }
+  .callout p + p { margin-top: 10px; }
+
+  /* TOC */
+  nav.toc { background: var(--glacier-50); border: 1px solid var(--glacier); border-radius: 10px; padding: 20px 24px; margin: 28px 0 8px; }
+  nav.toc h2 { margin: 0 0 12px; border: none; padding: 0; font-size: 15px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--midnight-50); }
+  nav.toc ol { margin: 0; columns: 2; column-gap: 36px; padding-left: 20px; }
+  nav.toc a { text-decoration: none; }
+  nav.toc a:hover { text-decoration: underline; }
+
+  /* KPI chart grid */
+  .msleg { display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: 12.5px; color: var(--midnight-50); margin: 14px 0 6px; align-items: center; }
+  .msleg .ms { display: inline-flex; align-items: center; gap: 7px; }
+  .msleg .num { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; color: #fff; font-size: 11px; font-weight: 700; }
+
+  .chart-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; margin: 14px 0 8px; }
+  .kpi-card { border: 1px solid var(--glacier); border-left: 4px solid var(--snowmelt); border-radius: 12px; padding: 15px 16px 12px; background: #fff; }
+  .kpi-card.up { border-left-color: var(--green-rule); }
+  .kpi-card.down { border-left-color: var(--red); }
+  .kpi-card .kname { font-size: 12px; font-weight: 700; color: var(--midnight-50); text-transform: uppercase; letter-spacing: 0.05em; }
+  .kpi-head { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; margin: 3px 0 0; }
+  .kpi-val { font-size: 27px; font-weight: 700; color: var(--tg-navy); line-height: 1.1; }
+  .pill { font-size: 12px; font-weight: 700; padding: 2px 9px; border-radius: 12px; white-space: nowrap; }
+  .pill.up { background: var(--green-bg); color: var(--green-ink); }
+  .pill.down { background: var(--red-bg); color: var(--red); }
+  .pill.flat { background: var(--glacier); color: var(--midnight-50); }
+  .kpi-card svg { width: 100%; height: auto; display: block; margin: 8px 0 2px; }
+  .kpi-meta { font-size: 12px; color: var(--midnight-50); margin: 2px 0 0; }
+  .kpi-meta .lib { color: var(--zurich-blue-dark); font-weight: 600; }
+
+  footer.docfoot { padding: 24px 56px 40px; color: var(--midnight-50); font-size: 13px; border-top: 1px solid var(--midnight-10); }
+
+  @media (max-width: 700px) {
+    header.masthead, main, footer.docfoot { padding-left: 24px; padding-right: 24px; }
+    nav.toc ol { columns: 1; }
+    header.masthead h1 { font-size: 24px; }
+    table { font-size: 13px; }
+    th, td { padding: 8px; }
+    .chart-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="masthead">
+    <p class="eyebrow">Schema Rollout · KPI Scorecard</p>
+    <h1>Travel Guard Structured-Data Rollout <span style="font-weight:400; color:var(--snowmelt);">— KPI Scorecard</span></h1>
+    <ul class="meta">
+      <li><strong>Site:</strong> <a href="https://www.travelguard.com">www.travelguard.com</a></li>
+      <li><strong>Latest checkpoint:</strong> Jun 9 2026 (Day 21)</li>
+      <li><strong>Window:</strong> May 27 – Jun 9 2026 · US · all engines · 20 prompts</li>
+      <li><strong>Baseline:</strong> May 6–19 2026</li>
+    </ul>
+  </header>
+
+  <main>
+
+    <p style="margin-top:24px;">A running scorecard for the JSON-LD schema rollout, measured in <strong>Otterly</strong> (LLM citations &amp; brand presence) against the targets in <code>TravelGuard-KPI-Tracking.md</code>. This page is updated at each checkpoint — see <a href="#update">how to update</a> at the bottom.</p>
+
+    <nav class="toc">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#headline">Headline</a></li>
+        <li><a href="#charts">KPI trend charts</a></li>
+        <li><a href="#scorecard">Scorecard tables</a></li>
+        <li><a href="#pages">Pages winning citations</a></li>
+        <li><a href="#prompts">Per-prompt movement</a></li>
+        <li><a href="#competitive">Competitive context</a></li>
+        <li><a href="#attribution">What's attributable to schema</a></li>
+        <li><a href="#actions">Recommended actions</a></li>
+        <li><a href="#tier34">Tier 3 — search (GSC baseline)</a></li>
+        <li><a href="#tier4">Tier 4 — business metrics</a></li>
+        <li><a href="#log">Checkpoint log &amp; how to update</a></li>
+      </ol>
+    </nav>
+
+    <h2 id="headline">1. Headline</h2>
+    <p>21 days into the schema rollout, <strong>every primary KPI is moving in the right direction.</strong> The citation metrics — the numbers most directly tied to schema work — led the way.</p>
+    <div class="callout">
+      <p><strong>Own-domain citations are up +58.9%</strong> (185 → 294), <strong>citation share doubled</strong> (1% → 2%), <strong>domain coverage is up +5pp</strong> (8% → 13%), the <strong>brand-coverage trend reversed</strong> from −1 to +1, and the <strong>gap to Seven Corners (#1) narrowed by 40 mentions</strong> — the closest in this dataset.</p>
+      <p>Schema is plausibly contributing, but the rollout is too recent for confident attribution — competitor decay, content quality, and LLM index churn are also at work. The Jun 23 checkpoint will tell us how much of this trajectory holds.</p>
+    </div>
+
+    <h2 id="charts">2. KPI trend charts</h2>
+    <p>One chart per metric, each on its own scale. Dashed lines mark the <strong>30-day</strong> and <strong>90-day targets</strong>; numbered vertical lines mark rollout milestones (legend below). Today each line is a single segment (baseline → first checkpoint) — it becomes a real trend after the next pull.</p>
+
+    <div class="msleg" id="msleg"></div>
+    <div class="chart-grid" id="chartGrid"></div>
+    <p class="kpi-meta" style="margin-top:10px;">Green left-rule / pill = moving toward target. Red = moving away. For <em>Average brand position</em>, lower is better, so a falling line is an improvement.</p>
+
+    <h2 id="scorecard">3. Scorecard tables</h2>
+
+    <h3>3.1 Brand-level metrics</h3>
+    <table>
+      <thead>
+        <tr><th>KPI</th><th>Baseline</th><th>Current</th><th>Δ</th><th>30-day target</th><th>90-day target</th><th>On track?</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Brand mentions</td><td>452</td><td><strong>487</strong></td><td>+35 (+7.7%)</td><td>475</td><td>525</td><td><span class="badge ok">✓ Exceeded 30d</span></td></tr>
+        <tr><td>Brand rank</td><td>#2</td><td>#2</td><td>flat</td><td>#2</td><td>#1 or #2</td><td><span class="badge flat">On track</span></td></tr>
+        <tr><td>Brand coverage %</td><td>29.1%</td><td><strong>31.2%</strong></td><td>+2.1pp</td><td>30%</td><td>32%</td><td><span class="badge ok">✓ Exceeded 30d</span></td></tr>
+        <tr><td>Brand coverage trend</td><td>−1</td><td><strong>+1</strong></td><td>reversed</td><td>0</td><td>+1</td><td><span class="badge ok">✓ Hit 90d</span></td></tr>
+        <tr><td>Average brand position <span style="color:var(--midnight-50);font-size:12px;">(lower = better)</span></td><td>1.94</td><td><strong>1.76</strong></td><td>−0.18 (better)</td><td>1.80</td><td>1.65</td><td><span class="badge ok">✓ Exceeded 30d</span></td></tr>
+        <tr><td>Likelihood to buy</td><td>79%</td><td><strong>83%</strong></td><td>+4pp</td><td>80%</td><td>83%</td><td><span class="badge ok">✓ Hit 90d</span></td></tr>
+        <tr><td>Sentiment score</td><td>+63</td><td>+59</td><td>−4</td><td>+65</td><td>+68</td><td><span class="badge warn">✗ Slight decline</span></td></tr>
+      </tbody>
+    </table>
+    <p class="kpi-meta">The sentiment dip (−4) is within Otterly's natural +63 to +73 variance across competitors — watch it, don't over-read it.</p>
+
+    <h3>3.2 Citation metrics <span style="font-weight:400;color:var(--midnight-50);font-size:14px;">(most directly tied to schema)</span></h3>
+    <table>
+      <thead>
+        <tr><th>KPI</th><th>Baseline</th><th>Current</th><th>Δ</th><th>30-day target</th><th>90-day target</th><th>On track?</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Own-domain citations</td><td>185</td><td><strong>294</strong></td><td>+109 (+58.9%)</td><td>250</td><td>400</td><td><span class="badge ok">✓ Strongly on pace</span></td></tr>
+        <tr><td>Citation share</td><td>1%</td><td><strong>2%</strong></td><td>doubled</td><td>1.5%</td><td>3–4%</td><td><span class="badge ok">✓ Halfway at day 21</span></td></tr>
+        <tr><td>Domain coverage</td><td>8%</td><td><strong>13%</strong></td><td>+5pp (+62.5%)</td><td>10%</td><td>14%</td><td><span class="badge ok">✓ Near 90d already</span></td></tr>
+        <tr><td>Top-cited TG URL (count)</td><td>26</td><td><strong>34</strong></td><td>+8</td><td>35</td><td>50</td><td><span class="badge ok">✓ Near 30d</span></td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="pages">4. Pages winning citations</h2>
+    <p>The mix of top-cited URLs shifted significantly between the baseline and Jun 9.</p>
+    <table>
+      <thead>
+        <tr><th>Rank</th><th>Baseline top 3 URLs</th><th>Citations</th><th>Current top 3 URLs</th><th>Citations</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td><code>/travel-resources/travel-safety/student-travel-safety</code></td><td>26</td><td><code>/traveler-types/pre-existing-medical-condition…</code></td><td><strong>34</strong></td></tr>
+        <tr><td>2</td><td><code>/traveler-types/pre-existing-medical-condition…</code></td><td>19</td><td><code>/info/assistance-services</code></td><td><strong>22</strong></td></tr>
+        <tr><td>3</td><td><code>/travel-insurance/optional-coverage/cancel-for-any-reason</code></td><td>18</td><td><code>/travel-insurance/benefits/baggage-insurance</code></td><td><strong>22</strong></td></tr>
+      </tbody>
+    </table>
+    <ul>
+      <li><strong>Pre-existing conditions</strong> climbed #2 → #1 (+79%, 19 → 34) — one of the P0 pages we added schema for. The gain likely predates the schema going live, but reinforcement should compound.</li>
+      <li><strong>Two brand-new top-3 entrants</strong> — <code>/info/assistance-services</code> and <code>/travel-insurance/benefits/baggage-insurance</code> — rose on the site-wide bundle + content alone (no dedicated schema yet at the time). Both now have JSON-LD built (Jun 10) and awaiting deploy.</li>
+      <li><strong>Student travel safety</strong> dropped out of the visible top 3; the full Otterly Citations page would confirm whether it actually declined or was just out-paced.</li>
+    </ul>
+
+    <h2 id="prompts">5. Per-prompt citation movement</h2>
+    <p>Travel Guard's domain-citation count on the high-value prompts from the audit (§8.3). 7 of 8 moved up.</p>
+    <table>
+      <thead>
+        <tr><th>Prompt</th><th>Baseline</th><th>Current</th><th>Δ</th><th>90-day target</th><th>Status</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Are there travel insurance plans that cover pre-existing conditions?</td><td>29</td><td><strong>44</strong></td><td>+15</td><td>50</td><td><span class="badge ok">88% to target</span></td></tr>
+        <tr><td>How do I know if my trip protection covers medical emergencies?</td><td>21</td><td><strong>35</strong></td><td>+14</td><td>35</td><td><span class="badge ok">Hit target</span></td></tr>
+        <tr><td>What is the best travel emergency assistance plan for a family vacation?</td><td>19</td><td><strong>33</strong></td><td>+14</td><td>—</td><td><span class="badge ok">Strong gain</span></td></tr>
+        <tr><td>How do I get trip protection for a last-minute trip?</td><td>33</td><td>27</td><td>−6</td><td>40</td><td><span class="badge warn">Regressed</span></td></tr>
+        <tr><td>Are there travel safety services for students studying abroad?</td><td>29</td><td>26</td><td>−3</td><td>50</td><td><span class="badge warn">Slight decline</span></td></tr>
+        <tr><td>Is there a travel insurance plan that covers trip cancellations for any reason?</td><td>14</td><td><strong>23</strong></td><td>+9</td><td>35</td><td><span class="badge ok">66% to target</span></td></tr>
+        <tr><td>What are the top travel insurance providers for lost baggage coverage?</td><td>12</td><td><strong>25</strong></td><td>+13</td><td>30</td><td><span class="badge ok">83% to target</span></td></tr>
+        <tr><td>How do I track the status of my travel insurance claim?</td><td>12</td><td><strong>20</strong></td><td>+8</td><td>25</td><td><span class="badge ok">80% to target</span></td></tr>
+      </tbody>
+    </table>
+    <p class="kpi-meta">The two regressions (last-minute trip −6, student safety −3) are small enough to be plausibly noise — worth watching at the next pull.</p>
+
+    <h2 id="competitive">6. Competitive context</h2>
+    <p>The brand-level gains came in a window where most competitors were flat or declining. Travel Guard had the second-largest absolute gain (+35), behind only Travelex.</p>
+    <table>
+      <thead>
+        <tr><th>Brand</th><th>Baseline mentions</th><th>Current</th><th>Δ</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Seven Corners (#1)</td><td>526</td><td>521</td><td>−5</td></tr>
+        <tr><td><strong>Travel Guard (#2)</strong></td><td><strong>452</strong></td><td><strong>487</strong></td><td><span class="badge ok">+35</span></td></tr>
+        <tr><td>World Nomads (#3)</td><td>435</td><td>407</td><td>−28</td></tr>
+        <tr><td>Berkshire Hathaway</td><td>219</td><td>177</td><td>−42</td></tr>
+        <tr><td>Allianz Global Assistance</td><td>196</td><td>189</td><td>−7</td></tr>
+        <tr><td>Travelex Insurance Services</td><td>195</td><td>232</td><td>+37</td></tr>
+      </tbody>
+    </table>
+    <p class="kpi-meta">The gap to Seven Corners narrowed from 74 mentions to 34. Note: Allianz's own-domain citations also fell (541 → 518), so the citation landscape redistributed somewhat — which makes pure schema attribution harder.</p>
+
+    <h2 id="attribution">7. What's attributable to schema vs. noise</h2>
+    <p>The honest read: <strong>probably some, but not all.</strong></p>
+    <ul>
+      <li><strong>Site-wide bundle</strong> (Organization + WebSite) has been live longest and has had the most time to propagate. Bing/ChatGPT search likely sees it; Google AI Overviews may not yet.</li>
+      <li><strong>Per-page schemas</strong> (Plan, FAQ, Service, Article) were finalized in the repo only in the last ~6 days before the checkpoint — too recent for LLM indexes to have refreshed against them.</li>
+      <li><strong>Competitor decay</strong> accounts for some of the relative gain — when Allianz and World Nomads lose ground, Travel Guard rises by default.</li>
+      <li><strong>Content quality + index churn</strong> — the pre-existing-conditions +79% jump likely predates the schema being live, so most of that movement is content + LLM index updates, not yet schema.</li>
+    </ul>
+    <p><strong>What to watch at Jun 23:</strong> if citation share keeps climbing 2% → 3%, that's the strongest week-5 schema signal available. If the per-page-schema'd pages (CFAR, pre-existing, plans) keep gaining disproportionately, that supports the schema-first hypothesis. A plateau would mean the jump was mostly competitor weakness + seasonality.</p>
+
+    <h2 id="actions">8. Recommended actions before next pull</h2>
+    <ol>
+      <li><strong>Add page-specific JSON-LD for <code>/info/assistance-services</code> and <code>/travel-insurance/benefits/baggage-insurance</code></strong> — both climbed into the top-cited URLs without dedicated schema. <span class="badge ok">✓ Done Jun 10</span> — built from live-page content, awaiting deploy.</li>
+      <li><strong>Pull a per-engine Otterly breakdown</strong> at Jun 23 (ChatGPT / Perplexity / Google AI Overviews / Gemini / Copilot) to see whether gains concentrate where schema has had most time to land. The cleanest natural experiment available.</li>
+      <li><strong>Take a Google Search Console snapshot now</strong> so there's a structured-data-impressions baseline for the Jun 23 comparison — the Rich Results dashboards take 7–14 days to reflect a deployment.</li>
+      <li><strong>Archive baseline + this checkpoint</strong> to a <code>baseline-2026-05-20/</code> folder so future checkpoints diff mechanically.</li>
+      <li><strong>Refresh the Trustpilot <code>aggregateRating</code></strong> (snapshot 4.1 / 1,600 reviews, added Jun 11 to homepage + reviews-page files). Re-pull the widget-data endpoint at every checkpoint; update both files if score or review count changed. Targets LLM citations on "top-rated travel insurance" prompts — no SERP-star movement expected (Google ignores self-serving org ratings).</li>
+    </ol>
+
+    <h2 id="tier34">9. Tier 3 — traditional search (GSC baseline)</h2>
+    <p>Pre-deploy baseline captured <strong>Jun 11 2026</strong> from Google Search Console. Window: <strong>last 3 months (Mar 10 – Jun 8 2026)</strong>; page-indexing figures as of May 31 2026. Because the per-page JSON-LD isn't deployed yet, schema-driven rich results read essentially zero today — that's the intended "before." Re-pull at each checkpoint to measure the deploy's lift.</p>
+    <table>
+      <thead><tr><th>Metric</th><th>Baseline (Jun 11)</th><th>90-day target</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Site-wide clicks</td><td><strong>94.8K</strong></td><td>—</td><td>last 3 months</td></tr>
+        <tr><td>Site-wide impressions</td><td><strong>25.3M</strong></td><td>—</td><td>avg CTR 0.4% · avg position 9</td></tr>
+        <tr><td>Plan-page clicks <span style="color:var(--midnight-50);font-size:12px;">(<code>/travel-insurance/plans</code>)</span></td><td><strong>6.22K</strong></td><td>+15%</td><td>avg position 11.9</td></tr>
+        <tr><td>Plan-page impressions</td><td><strong>1.61M</strong></td><td>+20%</td><td>CTR 0.4%</td></tr>
+        <tr><td>Brand-query avg position <span style="color:var(--midnight-50);font-size:12px;">("travel guard")</span></td><td><strong>4.9</strong></td><td>improve</td><td>28.1K clicks · 284K impr · 9.9% CTR</td></tr>
+        <tr><td>FAQ rich-result impressions</td><td>0</td><td>new metric</td><td>no FAQ appearance type present yet</td></tr>
+        <tr><td>Product rich-result impressions</td><td>0</td><td>new metric</td><td>no Product appearance type present yet</td></tr>
+        <tr><td>Video appearance <span style="color:var(--midnight-50);font-size:12px;">(impr / clicks)</span></td><td>73,446 / 14</td><td>track</td><td>only rich appearance type live today</td></tr>
+        <tr><td>Translated results <span style="color:var(--midnight-50);font-size:12px;">(impr / clicks)</span></td><td>39,854 / 112</td><td>track</td><td>Google feature, not schema-driven</td></tr>
+        <tr><td>Pages indexed</td><td><strong>389</strong></td><td>≥ submitted</td><td>2.51K not indexed (10 reasons)</td></tr>
+      </tbody>
+    </table>
+    <p class="kpi-meta">The Search Appearance breakdown showed only <em>Translated results</em> and <em>Videos</em> — no FAQ, Product, HowTo, Breadcrumb, or Merchant rich results. After the per-page schema deploys, watch for those rows to appear here; their first nonzero impressions are the cleanest GSC signal that the markup is recognized.</p>
+
+    <h2 id="tier4">10. Tier 4 — business metrics (Adobe Analytics)</h2>
+    <div class="callout">
+      <p><strong>Still to capture.</strong> Needs an Adobe Analytics pull (last 90 days): organic + AI-referral visits (<strong>Referring Domain</strong> = <code>chatgpt.com</code> / <code>perplexity.ai</code> / <code>gemini.google.com</code> / <code>copilot.microsoft.com</code>), quote starts segmented by organic and by AI referrals, and bounce / time-on-page for the schema'd page set. Adobe isn't reachable from here — hand me those numbers and this section gets the same table + chart treatment.</p>
+    </div>
+
+    <h2 id="log">11. Checkpoint log &amp; how to update</h2>
+    <table>
+      <thead>
+        <tr><th>Date</th><th>Checkpoint</th><th>Window</th><th>Headline</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>2026-05-20</td><td>Baseline</td><td>May 6–19</td><td>185 own-domain citations · 1% share · 8% domain coverage · #2 brand, 452 mentions</td></tr>
+        <tr><td>2026-06-09</td><td>Day 21 · Checkpoint 1</td><td>May 27 – Jun 9</td><td>Citations +58.9%, share doubled to 2%, coverage trend reversed −1 → +1</td></tr>
+        <tr><td>2026-06-23</td><td>Day 35 · Checkpoint 2</td><td>(pending)</td><td>—</td></tr>
+      </tbody>
+    </table>
+
+    <h4 id="update">How to update this report at each checkpoint</h4>
+    <ol>
+      <li><strong>Charts:</strong> in the <code>&lt;script&gt;</code> at the bottom of this file, append one object — <code>{ date:'2026-06-23', value: N, label:'Jun 23' }</code> — to each metric's <code>data</code> array in <code>SERIES</code>. The charts redraw automatically; nothing else in the markup changes.</li>
+      <li><strong>Milestones:</strong> add deploy events to the <code>MILESTONES</code> array (date + label). They appear as numbered vertical lines once inside a chart's date range.</li>
+      <li><strong>Tables:</strong> update the "Current" / "Δ" cells in the §3 scorecard tables (and §5 per-prompt) to the new pull's values, and add a row to the checkpoint log above.</li>
+      <li><strong>Narrative:</strong> refresh the §1 headline callout and §7 attribution read with the new window's story.</li>
+      <li>All numbers must come from the Otterly / GSC / Adobe Analytics pull — never estimated. Same content-fidelity rule as the JSON-LD work.</li>
+    </ol>
+
+  </main>
+
+  <footer class="docfoot">
+    Travel Guard Schema Rollout — KPI Scorecard · Latest checkpoint Jun 9 2026 (Day 21) · Data from <code>TravelGuard-KPI-Tracking.md</code> · Self-contained (no external assets)
+  </footer>
+
+</div>
+
+<script>
+/* ---- Data: edit only this block at each checkpoint ---- */
+var MILESTONES = [
+  { date: '2026-05-25', label: 'Site-wide bundle live', color: '#0076be' },
+  { date: '2026-06-06', label: 'Per-page schemas finalized (repo)', color: '#64c5b9' },
+  { date: '2026-06-11', label: 'Trustpilot rating added', color: '#db5989' }
+];
+
+var SERIES = [
+  { group:'Brand', key:'mentions', label:'Brand mentions', unit:'', prefix:'', lowerIsBetter:false, t30:475, t90:525,
+    note:'+35 (+7.7%) vs baseline', data:[ {date:'2026-05-19', value:452, label:'Baseline'}, {date:'2026-06-09', value:487, label:'Jun 9'} ] },
+  { group:'Brand', key:'brandCoverage', label:'Brand coverage', unit:'%', prefix:'', lowerIsBetter:false, t30:30, t90:32,
+    note:'+2.1pp · LLM share-of-voice', data:[ {date:'2026-05-19', value:29.1, label:'Baseline'}, {date:'2026-06-09', value:31.2, label:'Jun 9'} ] },
+  { group:'Brand', key:'avgPosition', label:'Avg brand position', unit:'', prefix:'', lowerIsBetter:true, t30:1.80, t90:1.65,
+    note:'−0.18 · lower is better', data:[ {date:'2026-05-19', value:1.94, label:'Baseline'}, {date:'2026-06-09', value:1.76, label:'Jun 9'} ] },
+  { group:'Brand', key:'likelihoodBuy', label:'Likelihood to buy', unit:'%', prefix:'', lowerIsBetter:false, t30:80, t90:83,
+    note:'+4pp · already at 90d target', data:[ {date:'2026-05-19', value:79, label:'Baseline'}, {date:'2026-06-09', value:83, label:'Jun 9'} ] },
+  { group:'Brand', key:'sentiment', label:'Sentiment score', unit:'', prefix:'+', lowerIsBetter:false, t30:65, t90:68,
+    note:'−4 · within natural variance', data:[ {date:'2026-05-19', value:63, label:'Baseline'}, {date:'2026-06-09', value:59, label:'Jun 9'} ] },
+  { group:'Citation', key:'ownCitations', label:'Own-domain citations', unit:'', prefix:'', lowerIsBetter:false, t30:250, t90:400,
+    note:'+109 (+58.9%) · the headline number', data:[ {date:'2026-05-19', value:185, label:'Baseline'}, {date:'2026-06-09', value:294, label:'Jun 9'} ] },
+  { group:'Citation', key:'citationShare', label:'Citation share', unit:'%', prefix:'', lowerIsBetter:false, t30:1.5, t90:3.5,
+    note:'doubled 1% → 2% · 90d target 3–4%', data:[ {date:'2026-05-19', value:1, label:'Baseline'}, {date:'2026-06-09', value:2, label:'Jun 9'} ] },
+  { group:'Citation', key:'domainCoverage', label:'Domain coverage', unit:'%', prefix:'', lowerIsBetter:false, t30:10, t90:14,
+    note:'+5pp (+62.5%) · near 90d target', data:[ {date:'2026-05-19', value:8, label:'Baseline'}, {date:'2026-06-09', value:13, label:'Jun 9'} ] }
+];
+
+/* ---- Renderer (no external libraries) ---- */
+var SVGNS = 'http://www.w3.org/2000/svg';
+var W = 360, H = 184, PAD = { l: 38, r: 14, t: 16, b: 28 };
+var PLOT_W = W - PAD.l - PAD.r, PLOT_H = H - PAD.t - PAD.b;
+
+function ts(d) { return new Date(d + 'T00:00:00').getTime(); }
+function el(name, attrs, text) {
+  var n = document.createElementNS(SVGNS, name);
+  for (var k in attrs) n.setAttribute(k, attrs[k]);
+  if (text != null) n.textContent = text;
+  return n;
+}
+function trim(v) {
+  // up to 2 decimals, trailing zeros stripped (1.76 -> "1.76", 31.2 -> "31.2", 35 -> "35")
+  return (Math.abs(v % 1) < 1e-9) ? String(Math.round(v)) : String(parseFloat(v.toFixed(2)));
+}
+function fmt(v, s) {
+  return (s.prefix || '') + trim(v) + (s.unit || '');
+}
+
+function isImproving(s) {
+  var d = s.data; if (d.length < 2) return null;
+  var delta = d[d.length - 1].value - d[0].value;
+  if (delta === 0) return null;
+  return s.lowerIsBetter ? delta < 0 : delta > 0;
+}
+
+function renderChart(s) {
+  var data = s.data.slice().sort(function (a, b) { return ts(a.date) - ts(b.date); });
+  var xs = data.map(function (p) { return ts(p.date); });
+  var minX = Math.min.apply(null, xs), maxX = Math.max.apply(null, xs);
+  if (minX === maxX) maxX = minX + 86400000; // avoid divide-by-zero with one point
+
+  var vals = data.map(function (p) { return p.value; }).concat([s.t30, s.t90]);
+  var minY = Math.min.apply(null, vals), maxY = Math.max.apply(null, vals);
+  var span = (maxY - minY) || 1;
+  minY -= span * 0.10; maxY += span * 0.12;
+
+  function X(t) { return PAD.l + (maxX === minX ? 0.5 : (t - minX) / (maxX - minX)) * PLOT_W; }
+  function Y(v) { return PAD.t + (1 - (v - minY) / (maxY - minY)) * PLOT_H; }
+
+  var svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H, role: 'img', 'aria-label': s.label + ' trend' });
+
+  // plot frame baseline (x and y axis lines)
+  svg.appendChild(el('line', { x1: PAD.l, y1: PAD.t, x2: PAD.l, y2: PAD.t + PLOT_H, stroke: '#e6e7e8', 'stroke-width': 1 }));
+  svg.appendChild(el('line', { x1: PAD.l, y1: PAD.t + PLOT_H, x2: PAD.l + PLOT_W, y2: PAD.t + PLOT_H, stroke: '#e6e7e8', 'stroke-width': 1 }));
+
+  // target guide lines
+  [['30d', s.t30], ['90d', s.t90]].forEach(function (g) {
+    var y = Y(g[1]);
+    svg.appendChild(el('line', { x1: PAD.l, y1: y, x2: PAD.l + PLOT_W, y2: y, stroke: '#9cc7e6', 'stroke-width': 1, 'stroke-dasharray': '4 3' }));
+    svg.appendChild(el('text', { x: PAD.l + PLOT_W, y: y - 3, 'text-anchor': 'end', 'font-size': 9, fill: '#555b62' }, g[0] + ' ' + fmt(g[1], s)));
+  });
+
+  // milestone verticals (only those within the date range)
+  MILESTONES.forEach(function (m, i) {
+    var t = ts(m.date);
+    if (t < minX || t > maxX) return;
+    var x = X(t);
+    svg.appendChild(el('line', { x1: x, y1: PAD.t + 4, x2: x, y2: PAD.t + PLOT_H, stroke: m.color, 'stroke-width': 1, 'stroke-dasharray': '2 3', opacity: 0.55 }));
+    svg.appendChild(el('circle', { cx: x, cy: PAD.t + 4, r: 6, fill: m.color }));
+    svg.appendChild(el('text', { x: x, y: PAD.t + 7, 'text-anchor': 'middle', 'font-size': 8, 'font-weight': 700, fill: '#fff' }, String(i + 1)));
+  });
+
+  // value polyline
+  var pts = data.map(function (p) { return X(ts(p.date)) + ',' + Y(p.value); }).join(' ');
+  if (data.length > 1) svg.appendChild(el('polyline', { points: pts, fill: 'none', stroke: '#0076be', 'stroke-width': 2.5, 'stroke-linejoin': 'round', 'stroke-linecap': 'round' }));
+
+  // points + labels
+  data.forEach(function (p, i) {
+    var x = X(ts(p.date)), y = Y(p.value), last = (i === data.length - 1);
+    svg.appendChild(el('circle', { cx: x, cy: y, r: last ? 4.5 : 3.5, fill: '#0076be', stroke: '#fff', 'stroke-width': 1.5 }));
+    svg.appendChild(el('text', { x: Math.min(x, PAD.l + PLOT_W - 2), y: y - 8, 'text-anchor': last ? 'end' : 'middle', 'font-size': 10, 'font-weight': last ? 700 : 400, fill: '#003d6e' }, fmt(p.value, s)));
+    svg.appendChild(el('text', { x: x, y: H - 9, 'text-anchor': 'middle', 'font-size': 9, fill: '#555b62' }, p.label));
+  });
+
+  return svg;
+}
+
+function buildCard(s) {
+  var imp = isImproving(s);
+  var cls = imp === null ? '' : (imp ? 'up' : 'down');
+  var pillCls = imp === null ? 'flat' : (imp ? 'up' : 'down');
+  var last = s.data[s.data.length - 1].value;
+  var first = s.data[0].value;
+  var raw = last - first;
+  var arrow = raw > 0 ? '▲' : (raw < 0 ? '▼' : '–');
+  var deltaTxt = arrow + ' ' + trim(Math.abs(raw)) + (s.unit === '%' ? 'pp' : '');
+
+  var card = document.createElement('div');
+  card.className = 'kpi-card ' + cls;
+  card.innerHTML =
+    '<div class="kname">' + s.label + '</div>' +
+    '<div class="kpi-head"><div class="kpi-val">' + fmt(last, s) + '</div>' +
+    '<span class="pill ' + pillCls + '">' + deltaTxt + '</span></div>';
+  card.appendChild(renderChart(s));
+  var meta = document.createElement('div');
+  meta.className = 'kpi-meta';
+  meta.innerHTML = '<span class="lib">' + s.group + '</span> · ' + s.note;
+  card.appendChild(meta);
+  return card;
+}
+
+(function init() {
+  var grid = document.getElementById('chartGrid');
+  SERIES.forEach(function (s) { grid.appendChild(buildCard(s)); });
+
+  var leg = document.getElementById('msleg');
+  leg.appendChild(Object.assign(document.createElement('span'), { textContent: 'Milestones:', style: 'font-weight:600;color:#1c252e;' }));
+  MILESTONES.forEach(function (m, i) {
+    var span = document.createElement('span');
+    span.className = 'ms';
+    span.innerHTML = '<span class="num" style="background:' + m.color + '">' + (i + 1) + '</span>' + m.label + ' (' + m.date + ')';
+    leg.appendChild(span);
+  });
+})();
+</script>
+
+</body>
+</html>

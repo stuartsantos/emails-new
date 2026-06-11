@@ -112,18 +112,24 @@ You'll likely see different rates of change. Perplexity is generally the most sc
 
 Schema work pays off in classic Google rich snippets too. Track these in Google Search Console (Search Console > Performance + Enhancements).
 
-| KPI | Baseline | 90-day target | Source |
-|---|---|---|---|
-| FAQ-rich-result impressions | (capture pre-launch) | +50% | GSC > Search Appearance > FAQ |
-| Product-rich-result impressions | (capture pre-launch) | New metric | GSC > Search Appearance > Product |
-| HowTo-rich-result impressions | (capture pre-launch) | New metric | GSC > Search Appearance > HowTo |
-| Sitelinks search box impressions | (capture pre-launch) | Track presence | GSC > Search Appearance |
-| Rich result CTR vs. non-rich | Higher | Maintain | GSC > Performance, segment by Search Appearance |
-| Total impressions on plan pages | (capture pre-launch) | +20% | GSC > Pages |
-| Total clicks on plan pages | (capture pre-launch) | +15% | GSC > Pages |
-| Pages with valid structured data | (capture pre-launch) | +50% | GSC > Enhancements |
+**Baseline captured Jun 11 2026** (GSC, last 3 months = Mar 10 – Jun 8 2026; indexing as of May 31 2026). Pre-deploy, so schema-driven rich results read zero — that's the intended "before."
 
-Capture screenshots of GSC Performance + Enhancements the day before deploying each phase. That's your before snapshot.
+| KPI | Baseline (Jun 11) | 90-day target | Source |
+|---|---|---|---|
+| FAQ-rich-result impressions | **0** (no FAQ appearance type present) | +50% | GSC > Search Appearance > FAQ |
+| Product-rich-result impressions | **0** (no Product appearance type) | New metric | GSC > Search Appearance > Product |
+| HowTo-rich-result impressions | **0** (no HowTo appearance type) | New metric | GSC > Search Appearance > HowTo |
+| Sitelinks search box impressions | **0 / not present** | Track presence | GSC > Search Appearance |
+| Video appearance (impr / clicks) | **73,446 / 14** | Track | GSC > Search Appearance > Videos |
+| Translated results (impr / clicks) | **39,854 / 112** | Track | GSC > Search Appearance (Google feature, not schema) |
+| Rich result CTR vs. non-rich | Higher | Maintain | GSC > Performance, segment by Search Appearance |
+| Total impressions on plan pages | **1.61M** (avg pos 11.9) | +20% | GSC > Pages |
+| Total clicks on plan pages | **6.22K** (CTR 0.4%) | +15% | GSC > Pages |
+| Pages indexed | **389** (2.51K not indexed) | ≥ submitted | GSC > Pages (Indexing) |
+| Site-wide clicks / impressions | **94.8K / 25.3M** (CTR 0.4%, pos 9) | — | GSC > Performance |
+| Brand-query avg position ("travel guard") | **4.9** (28.1K clicks, 284K impr, 9.9% CTR) | improve | GSC > Performance, Query filter |
+
+Only two Search Appearance types are present today (Translated results, Videos) — **no FAQ, Product, HowTo, Breadcrumb, or Merchant rich results**. After the per-page schema deploys, their first nonzero impressions are the cleanest GSC signal the markup is recognized. Re-pull at each checkpoint. Capture screenshots of GSC Performance + Search Appearance the day before each deploy phase.
 
 Note: As of 2023, Google deprecated the FAQPage rich result for most sites — but the FAQPage schema still helps LLMs and is still surfaced for some verticals and queries. Track FAQ impressions to see whether your site is among the ones still getting them.
 
@@ -135,12 +141,12 @@ These are the metrics that prove SEO investment translates to business outcomes.
 
 | KPI | Source | Notes |
 |---|---|---|
-| Organic sessions to travelguard.com | GA4 | Segment by landing page to isolate schema'd pages |
-| AI/Generative referral traffic | GA4 | Filter source/medium for `chatgpt.com`, `perplexity.ai`, `gemini.google.com`, `copilot.microsoft.com`. AI traffic is small but high-intent. |
-| Quote starts from organic traffic | GA4 + your CRM | The conversion event closest to revenue. |
-| Quote starts from AI referrals | GA4 + your CRM | The most important downstream number for justifying further schema/LLM work. |
-| Bounce rate on schema'd pages | GA4 | Should improve as page understanding improves snippet quality. |
-| Time on page, schema'd templates | GA4 | Schema doesn't directly affect this, but pages that get cited by LLMs tend to attract more engaged visitors. |
+| Organic sessions to travelguard.com | Adobe Analytics | Segment by landing page (Entry Page) to isolate schema'd pages |
+| AI/Generative referral traffic | Adobe Analytics | Filter the **Referring Domain** dimension for `chatgpt.com`, `perplexity.ai`, `gemini.google.com`, `copilot.microsoft.com` (build a segment / classification rule). AI traffic is small but high-intent. |
+| Quote starts from organic traffic | Adobe Analytics + your CRM | The conversion event closest to revenue. |
+| Quote starts from AI referrals | Adobe Analytics + your CRM | The most important downstream number for justifying further schema/LLM work. |
+| Bounce rate on schema'd pages | Adobe Analytics | Should improve as page understanding improves snippet quality. |
+| Time on page, schema'd templates | Adobe Analytics | Schema doesn't directly affect this, but pages that get cited by LLMs tend to attract more engaged visitors. |
 | Average position, brand + product terms | GSC | Should improve modestly with stronger entity signals. |
 
 ---
@@ -201,8 +207,8 @@ Before kicking off implementation, lock in these baselines so you have something
 - [ ] Otterly Citations page — export full citations data
 - [ ] GSC > Performance — last 90 days, total clicks/impressions/CTR/position
 - [ ] GSC > Enhancements — screenshot all current rich-result reports
-- [ ] GA4 > Acquisition > Traffic — last 90 days organic + AI referrers
-- [ ] GA4 > Conversions — quote start funnel, last 90 days
+- [ ] Adobe Analytics — Referring Domains / Marketing Channels report, last 90 days organic + AI referrers
+- [ ] Adobe Analytics — quote-start conversion funnel, last 90 days
 - [ ] Bing Webmaster Tools — current markup status
 - [ ] Trustpilot — current overall rating + review count (snapshot for the homepage `aggregateRating` work)
 
