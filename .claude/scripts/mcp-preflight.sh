@@ -8,6 +8,11 @@
 #   2. GitHub API reachability (https://api.github.com)
 #   3. MCP config file presence
 #
+# Reachability only — these probes are unauthenticated, so HTTP status codes
+# say nothing about auth state (api.figma.com/v1/me always returns 403 without
+# a token; api.github.com can 403 on anonymous rate limits). Do not add
+# "auth expired" warnings based on 401/403 here.
+#
 # Fires on: PreToolUse (matcher: "mcp__")
 # Runs once: uses /tmp flag file keyed to session_id
 # =============================================================================
@@ -42,8 +47,6 @@ if [[ "$TOOL_NAME" == mcp__*igma* || "$TOOL_NAME" == mcp__*Figma* ]]; then
   FIGMA_STATUS=$(curl -s -o /dev/null -w "%{http_code}" --connect-timeout 5 --max-time 10 "https://api.figma.com/v1/me" 2>/dev/null || echo "000")
   if [[ "$FIGMA_STATUS" == "000" ]]; then
     WARNINGS+=("FIGMA UNREACHABLE — cannot connect to api.figma.com. Check your network connection. Run 'claude mcp list' to verify the Figma MCP server is configured.")
-  elif [[ "$FIGMA_STATUS" == "403" || "$FIGMA_STATUS" == "401" ]]; then
-    WARNINGS+=("FIGMA AUTH EXPIRED — api.figma.com returned $FIGMA_STATUS. Your Figma token likely needs a refresh. Run 'claude mcp remove figma && claude mcp add figma' to re-authenticate, or check your token in the MCP config.")
   fi
 fi
 
@@ -54,21 +57,15 @@ if [[ "$TOOL_NAME" == mcp__*ithub* || "$TOOL_NAME" == mcp__*GitHub* ]]; then
   GH_STATUS=$(curl -s -o /dev/null -w "%{http_code}" --connect-timeout 5 --max-time 10 "https://api.github.com/zen" 2>/dev/null || echo "000")
   if [[ "$GH_STATUS" == "000" ]]; then
     WARNINGS+=("GITHUB UNREACHABLE — cannot connect to api.github.com. Check your network connection. Run 'claude mcp list' to verify the GitHub MCP server is configured.")
-  elif [[ "$GH_STATUS" == "401" || "$GH_STATUS" == "403" ]]; then
-    WARNINGS+=("GITHUB AUTH EXPIRED — api.github.com returned $GH_STATUS. Your GitHub token may need a refresh. Try running 'gh auth status' or reconfigure with 'claude mcp remove github && claude mcp add github'.")
   fi
 fi
 
 # ---------------------------------------------------------------------------
 # 3. General MCP config sanity
 # ---------------------------------------------------------------------------
-MCP_CONFIG="$HOME/.claude/mcp-config.json"
-if [[ ! -f "$MCP_CONFIG" ]]; then
-  # Try alternate location
-  MCP_CONFIG="$HOME/.claude.json"
-fi
-if [[ ! -f "$MCP_CONFIG" ]]; then
-  WARNINGS+=("NO MCP CONFIG FOUND — expected ~/.claude/mcp-config.json. MCP servers may not be configured. Run 'claude mcp list' to check.")
+# MCP servers live in ~/.claude.json (user scope) or <project>/.mcp.json (project scope)
+if [[ ! -f "$HOME/.claude.json" && ! -f "${CLAUDE_PROJECT_DIR:-.}/.mcp.json" ]]; then
+  WARNINGS+=("NO MCP CONFIG FOUND — expected ~/.claude.json or .mcp.json. MCP servers may not be configured. Run 'claude mcp list' to check.")
 fi
 
 # ---------------------------------------------------------------------------

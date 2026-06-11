@@ -1,7 +1,7 @@
 ---
 name: row-modernize
 description: Modernize a ROW policy confirmation template using the canonical reference skeleton
-allowed-tools: Read, Edit, Write, Bash(open:*)
+allowed-tools: Read, Edit, Write, Grep, AskUserQuestion, Skill, Bash(open:*), Bash(find:*), Bash(git:*)
 ---
 
 Modernize a ROW (Rest of World) policy confirmation email template. Takes a legacy AIG-format template or raw translated text and outputs a fully modernized Travel Guard template using the canonical reference skeleton.

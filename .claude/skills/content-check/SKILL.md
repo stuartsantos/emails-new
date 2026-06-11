@@ -1,7 +1,7 @@
 ---
 name: content-check
 description: Final QA check that all edits from a reference doc were correctly applied to an email HTML template
-allowed-tools: Read, Glob, Bash(find:*)
+allowed-tools: Read, Glob, Grep, Bash(find:*), Bash(pandoc:*)
 ---
 
 Compare the edited email HTML template against the reference document used in this session to verify all content changes were applied correctly.
@@ -27,7 +27,7 @@ Look back through the current conversation for the reference content the user pr
 - A file path the user mentioned
 - A previous message where the user said "use this as the reference" or "update based on this"
 
-If a file path was given, read that file now.
+If a file path was given, read that file now. If it is a `.docx`, extract it with `pandoc "<file>" -t markdown` — never `cat`, `unzip + grep`, or `textutil` (pandoc is the only tool that preserves links, bold/italic, and lists faithfully).
 
 If the reference was pasted inline in the conversation, extract it from the conversation context.
 

@@ -40,7 +40,7 @@ Based on the results, offer to:
 - **Fix a specific brand** — e.g., "Want me to fix the duplicate class attrs across all expedia/ templates?"
 - **Fix a specific issue type** — e.g., "Want me to add missing alt tags across all templates?"
 - **Deep-dive a single file** — open and review a specific template in detail
-- **Compare with previous run** — if a previous report exists, diff the two to show progress
+- **Compare with previous run** — the report is overwritten in place, so diff against the last committed version: `git diff HEAD -- .claude/reports/qa-report.md` (or `git log -p` on that path for older runs)
 
 ## Notes
 
