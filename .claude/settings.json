@@ -40,6 +40,7 @@
       "Bash(wc:*)",
       "Bash(xargs:*)",
       "Bash(xxd:*)",
+      "Skill(batch-qa)",
       "Skill(content-check)",
       "Skill(handoff)",
       "Skill(row-modernize)",
@@ -53,6 +54,11 @@
       "mcp__github__get_me",
       "mcp__github__search_repositories",
       "mcp__postman__*"
+    ],
+    "additionalDirectories": [
+      "/Users/stuartsantos/Documents/Projects/responsive-modular-email-templates/build/html/wrappers",
+      "/Users/stuartsantos/Documents/Projects/responsive-modular-email-templates/build/html/components",
+      "/Users/stuartsantos/Documents/Projects/responsive-modular-email-templates/build/html/headers"
     ]
   },
   "hooks": {
