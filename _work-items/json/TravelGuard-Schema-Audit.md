@@ -397,6 +397,20 @@ Validate every new JSON-LD against https://validator.schema.org/ before merging.
 
 ---
 
+## 11. Follow-ups for the web/site team
+
+Items found during the schema build-out (Jun 9–11, 2026) that are site-side fixes, not schema work. None block deployment of the JSON-LD files.
+
+| # | Item | Detail | Schema impact |
+|---|------|--------|---------------|
+| 1 | **Deploy the per-page JSON-LD files** | Everything in `jsonld/` except `_sitewide.json` (already live) and the minimal FAQPage on /help-center/faqs is pre-deployment. Never deploy `_templates/`. | The whole point of the project |
+| 2 | **Deployed FAQPage has drifted from page copy** | The live /help-center/faqs block has 6 small text drifts vs. the visible page (straight vs. curly apostrophes, "non-family member" wording). Repo `help-center/faqs.json` is the corrected version. | Replace live block on next deploy |
+| 3 | **sitemap.xml is badly stale** | Lists retired plans (`platinum`, `annual`, capital-P `Preferred`); missing `/travel-insurance/plans/deluxe`, `/help-center/faqs`, `/travel-insurance/benefits/baggage-insurance`, newer traveler-type pages. Several listed slugs 301 elsewhere. | We used live nav for discovery; sitemap only trusted for `lastmod` |
+| 4 | **Stale "AIG" branding in live titles** | `/legal/our-underwriter` `<title>` still says "AIG Travel Guard"; `/video-library/nepal-testimonial` `<title>` says "AIG Travel Nepal Testimonial" and its player VideoObject block says "AIG Travel's Crisis Response". | Schema files use the h1 for WebPage `name` on both pages as a workaround |
+| 5 | **Duplicate Quarantine Bundle pages** | `/travel-insurance/benefits/lodging-expense-benefit` and `/travel-insurance/optional-coverage/quarantine-bundle` are near-identical, both 200 and both self-canonical. One should canonical to the other. | Both currently carry schema (both are canonical); drop one file once the site picks a winner |
+| 6 | **`/video-library/real-life-experience` has no meta description** | Only page in the video library missing one. | Its WebPage/VideoObject `description` is omitted until the page gets one |
+| 7 | *(FYI, not a bug)* `claims.travelguard.com/status` 404s to curl | It's a JS-app route linked from the live claims page — fine for users, just fails naive URL checks. | None — kept in `help-center/claims.json` |
+
 ---
 
 *See `TravelGuard-KPI-Tracking.md` for the before/after measurement plan to validate the impact of these changes.*
