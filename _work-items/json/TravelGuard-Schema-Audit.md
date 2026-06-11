@@ -325,6 +325,7 @@ jsonld/
     index.json                           ← P1, /info Education Center landing
     assistance-services.json             ← P0 (KPI 11.7), 7 assistance categories
     what-is-travel-insurance.json        ← P2, Education Center
+    {7 more info articles}.json          ← P2, all built Jun 10 (Article + dateModified from sitemap lastmod; how-much-cost & when-to-buy add FAQPage, what-is-a-policy adds DefinedTerm, 5-tips adds ItemList)
   legal/
     our-underwriter.json                 ← P1, Zurich underwriter disclosure (audit 6.3)
   travel-insurance/

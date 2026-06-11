@@ -1,0 +1,97 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://www.travelguard.com/info/how-much-does-travel-insurance-cost#article",
+      "headline": "How Much Does a Travel Insurance Plan Cost?",
+      "description": "With our plans, multiple factors go into calculating the risk of a given trip, which informs the premium price. Discover more about what affects the cost here.",
+      "url": "https://www.travelguard.com/info/how-much-does-travel-insurance-cost",
+      "dateModified": "2026-03-25",
+      "author": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.travelguard.com/info/how-much-does-travel-insurance-cost"
+      },
+      "inLanguage": "en-US",
+      "articleSection": "Education Center",
+      "about": [
+        {
+          "@type": "Thing",
+          "name": "Travel Insurance Cost"
+        },
+        {
+          "@type": "Thing",
+          "name": "Travel Insurance Plans"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.travelguard.com/info/how-much-does-travel-insurance-cost#faqpage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is a travel insurance plan worth the cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. If you’re investing in nonrefundable flights, accommodation or excursions, a travel insurance plan can help protect you from financial loss due to certain cancellations, medical emergencies and other unexpected events."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does a cruise travel insurance plan cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cruise travel insurance plans are also on average 7% of your trip cost, depending on the length of the cruise, your age and the coverage plan you choose."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I get a low-cost travel insurance plan for a short trip?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. Travel Guard’s Essential Plan is designed for short domestic trips, offering core protection at a lower premium."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does a travel insurance plan with travel medical expense coverage cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Travel medical expense coverage  is typically included in comprehensive travel insurance plans and usually accounts for a portion of your total premium. This will give you coverage for certain emergencies, injuries or surprise medical issues that may occur on your trip. On average, the total cost of a travel insurance plan with medical expense coverage is 7% of your total trip cost. However, factors like your age, destination and the level of medical expense coverage you choose can increase the price."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/info/how-much-does-travel-insurance-cost#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Education Center",
+          "item": "https://www.travelguard.com/info"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "How Much Does a Travel Insurance Plan Cost?",
+          "item": "https://www.travelguard.com/info/how-much-does-travel-insurance-cost"
+        }
+      ]
+    }
+  ]
+}
