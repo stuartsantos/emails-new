@@ -2,7 +2,7 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Product",
+      "@type": "FinancialProduct",
       "@id": "https://www.travelguard.com/travel-insurance/plans/essential#product",
       "name": "Travel Guard Essential Travel Insurance Plan",
       "alternateName": "Essential Plan",
@@ -16,12 +16,12 @@
       },
       "isRelatedTo": [
         {
-          "@type": "Product",
+          "@type": "FinancialProduct",
           "name": "Deluxe Plan",
           "url": "https://www.travelguard.com/travel-insurance/plans/deluxe"
         },
         {
-          "@type": "Product",
+          "@type": "FinancialProduct",
           "name": "Preferred Plan",
           "url": "https://www.travelguard.com/travel-insurance/plans/preferred"
         }

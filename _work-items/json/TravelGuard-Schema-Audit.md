@@ -83,15 +83,17 @@ Pages are ordered by LLM-citation value, highest first.
 
 ### 4.2 Plan pages (`/travel-insurance/plans/{deluxe|preferred|essential|rental-vehicle-damage-plan}`)
 
-**Recommended types:** `Product` + `Offer` + `additionalProperty` (for included coverages). `FAQPage` is a recommended future addition once plan-specific FAQs are in place. (`aggregateRating` was considered and ruled out for plan pages — the Trustpilot TrustScore is a site-level company rating and no per-product reviews are collected; it lives on the Organization via the homepage and reviews-page files instead, see §4.10.)
+**Recommended types:** `FinancialProduct` + `Offer` + `additionalProperty` (for included coverages). `FAQPage` is a recommended future addition once plan-specific FAQs are in place. (`aggregateRating` was considered and ruled out for plan pages — the Trustpilot TrustScore is a site-level company rating and no per-product reviews are collected; it lives on the Organization via the homepage and reviews-page files instead, see §4.10.)
 
-**Why:** These are your money pages. `Product` + `Offer` is the schema LLMs map to "what plan covers X" questions. Use `additionalProperty` with `PropertyValue` items to enumerate the included coverages (Trip Cancellation, Emergency Medical, Baggage, etc.) — that's the structure LLMs need to answer "does the Deluxe Plan cover medical evacuation?" `additionalProperty` is preferred over `hasOfferCatalog` here because the coverages are *features* of the plan, not separately-purchasable products.
+**Type note (updated Jun 11, 2026):** these nodes were originally `Product`, but Google's Rich Results Test then flagged them invalid for **Product snippets** (missing `offers.price`) and **Merchant listings** (missing `price` + `image`) — Google validates any `Product` with `offers` as a shoppable retail good. Travel insurance is quote-priced (no fixed price, no product image/shipping/returns), and fabricating those would violate the "mark up only visible content" rule. Retyping to **`FinancialProduct`** (schema.org's insurance type, not a Google e-commerce rich-result type) clears both errors while keeping every property LLMs use — `offers`, the `additionalProperty` coverage list, `audience`, `category`, `brand`, `isRelatedTo` — all validating 0/0 at validator.schema.org. The `@id` fragment is left as `#product` (an opaque identifier referenced from ~30 OfferCatalog `itemOffered` nodes; it need not match `@type`). Applies to all 6 plan files.
+
+**Why:** These are your money pages. `FinancialProduct` + `Offer` is the schema LLMs map to "what plan covers X" questions. Use `additionalProperty` with `PropertyValue` items to enumerate the included coverages (Trip Cancellation, Emergency Medical, Baggage, etc.) — that's the structure LLMs need to answer "does the Deluxe Plan cover medical evacuation?" `additionalProperty` is preferred over `hasOfferCatalog` here because the coverages are *features* of the plan, not separately-purchasable products.
 
 **LLM-specific tips:**
 - `audience.audienceType` describes who the plan is for in plain English ("international travelers, senior travelers, high-end vacationers"). LLMs use this for "best travel insurance for seniors" type queries.
 - `isRelatedTo` cross-links the other plans so an LLM can answer comparison questions.
 - `areaServed` should be `Country: United States` — this prevents misattribution in Canada/UK queries.
-- Only include `aggregateRating` with real, verifiable data. Inflating reviews is a structured-data policy violation and a reputational risk. Plan `Product` nodes omit `aggregateRating` permanently — Travel Guard's Trustpilot rating is company-level, not per-plan (see §4.10).
+- Only include `aggregateRating` with real, verifiable data. Inflating reviews is a structured-data policy violation and a reputational risk. Plan `FinancialProduct` nodes omit `aggregateRating` permanently — Travel Guard's Trustpilot rating is company-level, not per-plan (see §4.10).
 
 → See `jsonld/travel-insurance/plans/deluxe.json` (template for the other three).
 
@@ -176,7 +178,7 @@ Pages are ordered by LLM-citation value, highest first.
 | P0 | Every non-home page | BreadcrumbList (per-page, embedded in page `@graph`) | Low per page | Very high — site-hierarchy signal |
 | P0 | Homepage | WebPage + OfferCatalog + FAQPage | Medium | Very high — first-touch citations |
 | P0 | FAQ (`/help-center/faqs`) | FAQPage | Low | Very high — verbatim answer extraction |
-| P0 | Plan pages (4) | Product + Offer + additionalProperty (+ FAQPage as future addition; aggregateRating ruled out — site-level rating only, see §4.10) | Medium | Very high — product comparison queries |
+| P0 | Plan pages (4) | FinancialProduct + Offer + additionalProperty (+ FAQPage as future addition; aggregateRating ruled out — site-level rating only, see §4.10. FinancialProduct, not Product — avoids Google e-commerce price/image validation, see §4.2) | Medium | Very high — product comparison queries |
 | P1 | Plans listing | ItemList | Low | Medium |
 | P1 | Claims | WebPage + Service (HowTo only if visible steps are added to the page) | Medium | High — high-intent workflow queries |
 | P1 | About Us | AboutPage + Organization | Low | High — entity disambiguation, Zurich relationship |
@@ -270,7 +272,7 @@ The Otterly "Top Prompts by Brand Mentions" vs. "Top Prompts by Website Citation
 
 | Prompt | Brand mentions | Own-domain citations | Schema lever |
 |---|---|---|---|
-| "What are the top travel insurance providers for lost baggage coverage?" | 62 | 12 | Plan `Product` + explicit Baggage Loss & Delay `Offer` line-items + dedicated baggage page if missing |
+| "What are the top travel insurance providers for lost baggage coverage?" | 62 | 12 | Plan `FinancialProduct` + explicit Baggage Loss & Delay `Offer` line-items + dedicated baggage page if missing |
 | "What are the top-rated travel insurance companies?" | 58 | not in top 10 | Homepage `aggregateRating` (real Trustpilot numbers) + `Review` markup on /about-us/travel-insurance-reviews — ✅ aggregateRating added to both Jun 11 2026; `review` array deliberately omitted (rotating widget content, see §4.10) |
 | "Which travel insurance company has the best customer service" | 48 | not in top 10 | `ContactPage` + `Organization.contactPoint` with 24/7 `hoursAvailable` and `availableLanguage` |
 | "Best travel insurance company for U.S. travelers" | 43 | not in top 10 | `Organization.areaServed: US` + `AboutPage` emphasizing U.S. focus + state-level `availableAtOrFrom` |
@@ -287,7 +289,7 @@ The new P0 list, reflecting Otterly data:
 1. **Site-wide bundle** — Organization + WebSite (per-page BreadcrumbList embedded in each page's `@graph`, not in the sitewide bundle)
 2. **Homepage** — WebPage + OfferCatalog + FAQPage (+ aggregateRating — ✅ added Jun 11 2026 from verified Trustpilot widget data)
 3. **FAQ page** — full FAQPage
-4. **Four plan pages** — Product + Offer + FAQPage with explicit Baggage Loss & Delay line-items
+4. **Four plan pages** — FinancialProduct + Offer + FAQPage with explicit Baggage Loss & Delay line-items (FinancialProduct, not Product — see §4.2)
 5. **CFAR page** ← new P0 (was unprioritized)
 6. **Pre-existing conditions page** ← new P0 (was P2)
 7. **Student travel safety article** ← new P0 (was P2)

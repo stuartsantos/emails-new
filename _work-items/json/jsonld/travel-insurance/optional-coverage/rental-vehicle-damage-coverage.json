@@ -38,7 +38,7 @@
       },
       "isRelatedTo": [
         {
-          "@type": "Product",
+          "@type": "FinancialProduct",
           "name": "Rental Vehicle Damage Plan",
           "url": "https://www.travelguard.com/travel-insurance/plans/rental-vehicle-damage-plan"
         }

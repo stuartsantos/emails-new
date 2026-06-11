@@ -38,7 +38,7 @@
       },
       "isRelatedTo": [
         {
-          "@type": "Product",
+          "@type": "FinancialProduct",
           "name": "Preferred Plan",
           "url": "https://www.travelguard.com/travel-insurance/plans/preferred"
         }

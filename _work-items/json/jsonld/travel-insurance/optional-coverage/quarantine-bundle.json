@@ -38,17 +38,17 @@
       },
       "isRelatedTo": [
         {
-          "@type": "Product",
+          "@type": "FinancialProduct",
           "name": "Deluxe Plan",
           "url": "https://www.travelguard.com/travel-insurance/plans/deluxe"
         },
         {
-          "@type": "Product",
+          "@type": "FinancialProduct",
           "name": "Preferred Plan",
           "url": "https://www.travelguard.com/travel-insurance/plans/preferred"
         },
         {
-          "@type": "Product",
+          "@type": "FinancialProduct",
           "name": "Pack N’ Go Plan",
           "url": "https://www.travelguard.com/travel-insurance/plans/pack-n-go"
         }
