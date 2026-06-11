@@ -6,8 +6,8 @@
       "@id": "https://www.travelguard.com/travel-insurance/plans#itemlist",
       "url": "https://www.travelguard.com/travel-insurance/plans",
       "name": "Travel Guard Travel Insurance Plans",
-      "description": "Compare Travel Guard's travel insurance plans: Deluxe, Preferred, Essential, and Rental Vehicle Damage Coverage.",
-      "numberOfItems": 4,
+      "description": "Compare Travel Guard's travel insurance plans: Deluxe, Preferred, Essential, Pack N’ Go, Annual, Medevac Per Trip, and Rental Vehicle Damage Coverage.",
+      "numberOfItems": 7,
       "itemListOrder": "https://schema.org/ItemListOrderAscending",
       "itemListElement": [
         {
@@ -31,6 +31,24 @@
         {
           "@type": "ListItem",
           "position": 4,
+          "url": "https://www.travelguard.com/travel-insurance/plans/pack-n-go",
+          "name": "Pack N’ Go Plan"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "url": "https://www.travelguard.com/travel-insurance/plans/annual",
+          "name": "Annual Plan"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "url": "https://www.travelguard.com/travel-insurance/plans/medevac",
+          "name": "Medevac Per Trip Plan"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
           "url": "https://www.travelguard.com/travel-insurance/plans/rental-vehicle-damage-plan",
           "name": "Rental Vehicle Damage Coverage"
         }

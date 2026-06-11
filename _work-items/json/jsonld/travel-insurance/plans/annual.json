@@ -1,0 +1,75 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FinancialProduct",
+      "@id": "https://www.travelguard.com/travel-insurance/plans/annual#product",
+      "name": "Travel Guard Annual Travel Insurance Plan",
+      "alternateName": "Annual Plan",
+      "description": "Travel often? Then Travel Guard’s Annual Plan might be perfect for you. Whether for business or leisure, if you find yourself taking multiple trips throughout the year, consider an Annual Plan so you don’t have to worry that you don’t have coverage whenever you go on a Trip.",
+      "url": "https://www.travelguard.com/travel-insurance/plans/annual",
+      "brand": { "@id": "https://www.travelguard.com/#organization" },
+      "category": "Annual Multi-Trip Travel Insurance",
+      "audience": {
+        "@type": "PeopleAudience",
+        "audienceType": "Business travelers, frequent travelers, multiple trips per year"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.travelguard.com/purchase/start-your-quote",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "description": "Cost varies by traveler age and state of residence. Get a free personalized quote."
+        },
+        "availability": "https://schema.org/InStock",
+        "areaServed": {
+          "@type": "Country",
+          "name": "United States"
+        },
+        "seller": { "@id": "https://www.travelguard.com/#organization" }
+      },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Trip Interruption", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Trip Delay", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Missed Connection", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Travel Medical Expense/Dental Expense", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Baggage Coverage", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Baggage Delay", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Emergency Evacuation and Repatriation of Remains", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Non-Flight Accidental Death & Dismemberment", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Security Evacuation", "value": "Standard coverage" },
+        { "@type": "PropertyValue", "name": "Emergency Travel Assistance", "value": "Assistance service" },
+        { "@type": "PropertyValue", "name": "Travel Medical Assistance", "value": "Assistance service" },
+        { "@type": "PropertyValue", "name": "Worldwide Travel Assistance", "value": "Assistance service" },
+        { "@type": "PropertyValue", "name": "Concierge Services", "value": "Assistance service" },
+        { "@type": "PropertyValue", "name": "Identity Theft Assistance", "value": "Assistance service" },
+        { "@type": "PropertyValue", "name": "Personal Security Assistance", "value": "Assistance service" }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/travel-insurance/plans/annual#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Travel Insurance Plans",
+          "item": "https://www.travelguard.com/travel-insurance/plans"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Annual Plan",
+          "item": "https://www.travelguard.com/travel-insurance/plans/annual"
+        }
+      ]
+    }
+  ]
+}
