@@ -314,6 +314,7 @@ What to watch at the next checkpoint (Jun 23):
 2. **Pull a per-engine Otterly breakdown** at Jun 23 to see whether the gains are concentrated in Bing/ChatGPT (where schema has had most time to land) vs. Perplexity vs. Google AI Overviews. That delta is the cleanest natural experiment available.
 3. **Take a Google Search Console snapshot now** so you have a structured-data-impressions baseline for the Jun 23 comparison. The Rich Results dashboards take 7-14 days to begin reflecting schema deployments.
 4. **Add the baseline + this checkpoint to a `baseline-2026-05-20/` folder** alongside the audit so future checkpoints can be diffed mechanically.
+5. **Refresh the Trustpilot `aggregateRating` values** (added Jun 11 2026 to `jsonld/index.json` + `jsonld/about-us/travel-insurance-reviews.json`; snapshot: 4.1 / 1,600 reviews). At every checkpoint, re-pull the widget-data endpoint (URL in `CLAUDE.md` hard rule #7 — same data the on-page TrustBoxes render) and update both files if `trustScore` or `numberOfReviews` changed. KPI expectation: this markup targets LLM citations on "top-rated travel insurance companies"-type prompts (§11.4) — Google ignores self-serving org ratings for rich-result stars, so don't look for SERP-star movement in GSC.
 
 ### 11.8 Headline summary
 

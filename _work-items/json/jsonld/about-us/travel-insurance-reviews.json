@@ -11,7 +11,17 @@
       "about": { "@id": "https://www.travelguard.com/#organization" },
       "inLanguage": "en-US",
       "breadcrumb": { "@id": "https://www.travelguard.com/about-us/travel-insurance-reviews#breadcrumb" },
-      "mainEntity": { "@id": "https://www.travelguard.com/#organization" }
+      "mainEntity": {
+        "@type": "InsuranceAgency",
+        "@id": "https://www.travelguard.com/#organization",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.1,
+          "bestRating": 5,
+          "worstRating": 1,
+          "reviewCount": 1600
+        }
+      }
     },
     {
       "@type": "BreadcrumbList",

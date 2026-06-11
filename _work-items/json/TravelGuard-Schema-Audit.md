@@ -83,7 +83,7 @@ Pages are ordered by LLM-citation value, highest first.
 
 ### 4.2 Plan pages (`/travel-insurance/plans/{deluxe|preferred|essential|rental-vehicle-damage-plan}`)
 
-**Recommended types:** `Product` + `Offer` + `additionalProperty` (for included coverages). `aggregateRating` and `FAQPage` are recommended future additions once verifiable Trustpilot data and plan-specific FAQs are in place.
+**Recommended types:** `Product` + `Offer` + `additionalProperty` (for included coverages). `FAQPage` is a recommended future addition once plan-specific FAQs are in place. (`aggregateRating` was considered and ruled out for plan pages — the Trustpilot TrustScore is a site-level company rating and no per-product reviews are collected; it lives on the Organization via the homepage and reviews-page files instead, see §4.10.)
 
 **Why:** These are your money pages. `Product` + `Offer` is the schema LLMs map to "what plan covers X" questions. Use `additionalProperty` with `PropertyValue` items to enumerate the included coverages (Trip Cancellation, Emergency Medical, Baggage, etc.) — that's the structure LLMs need to answer "does the Deluxe Plan cover medical evacuation?" `additionalProperty` is preferred over `hasOfferCatalog` here because the coverages are *features* of the plan, not separately-purchasable products.
 
@@ -91,7 +91,7 @@ Pages are ordered by LLM-citation value, highest first.
 - `audience.audienceType` describes who the plan is for in plain English ("international travelers, senior travelers, high-end vacationers"). LLMs use this for "best travel insurance for seniors" type queries.
 - `isRelatedTo` cross-links the other plans so an LLM can answer comparison questions.
 - `areaServed` should be `Country: United States` — this prevents misattribution in Canada/UK queries.
-- Only include `aggregateRating` with real, verifiable data. Inflating reviews is a structured-data policy violation and a reputational risk. The current `travel-insurance/plans/deluxe.json` intentionally omits `aggregateRating` until a Trustpilot integration is wired in.
+- Only include `aggregateRating` with real, verifiable data. Inflating reviews is a structured-data policy violation and a reputational risk. Plan `Product` nodes omit `aggregateRating` permanently — Travel Guard's Trustpilot rating is company-level, not per-plan (see §4.10).
 
 → See `jsonld/travel-insurance/plans/deluxe.json` (template for the other three).
 
@@ -158,11 +158,11 @@ Pages are ordered by LLM-citation value, highest first.
 
 ### 4.10 Customer Reviews page (`/about-us/travel-insurance-reviews`)
 
-**Recommended types:** `CollectionPage` whose `mainEntity` references the Organization. Layer in `aggregateRating` and a `review` array once verifiable Trustpilot data is available.
+**Recommended types:** `CollectionPage` whose `mainEntity` references the Organization, carrying the real Trustpilot `aggregateRating`. No `review` array — the Trustpilot widget injects rotating individual reviews, so any static copy would drift from visible content within days.
 
 **Why:** Reviews mapped to schema can drive star ratings in traditional search and serve as a trust signal for LLMs. **Use only verifiable, first-party reviews** — never invent ratings.
 
-**Current state:** `jsonld/about-us/travel-insurance-reviews.json` is intentionally minimal — it declares the `CollectionPage` and references the org by `@id`, but does not yet include `aggregateRating` or `review` entries. This is to prevent placeholder/fake data from shipping. When Trustpilot data is wired in, augment the `mainEntity` block with the real `aggregateRating` (ratingValue, reviewCount, bestRating, worstRating) and a `review` array of verbatim customer reviews with real author names and dates.
+**Current state (updated Jun 11, 2026):** `jsonld/about-us/travel-insurance-reviews.json` now carries the real Trustpilot `aggregateRating` (4.1 / 5, 1,600 reviews — snapshot 2026-06-11) on the `mainEntity` org `@id` reference; the homepage `jsonld/index.json` carries the same block on its `about` reference. Both pages visibly render TrustBox widgets (the full Review Page widget here; the FlexTrustScore hero + carousel on the homepage), satisfying the §6.5 visibility condition. Values come from the Trustpilot widget-data endpoint (the same data the widgets render — see hard rule #7 in CLAUDE.md for the URL) and are refreshed at each KPI checkpoint. A `review` array was deliberately rejected: the widget's injected reviews rotate continuously, so a static verbatim copy would immediately drift. Note: Google ignores self-serving org ratings for rich-result stars — this markup is an LLM trust signal, not a SERP-stars play.
 
 → See `jsonld/about-us/travel-insurance-reviews.json`.
 
@@ -176,7 +176,7 @@ Pages are ordered by LLM-citation value, highest first.
 | P0 | Every non-home page | BreadcrumbList (per-page, embedded in page `@graph`) | Low per page | Very high — site-hierarchy signal |
 | P0 | Homepage | WebPage + OfferCatalog + FAQPage | Medium | Very high — first-touch citations |
 | P0 | FAQ (`/help-center/faqs`) | FAQPage | Low | Very high — verbatim answer extraction |
-| P0 | Plan pages (4) | Product + Offer + additionalProperty (+ aggregateRating, FAQPage as future additions) | Medium | Very high — product comparison queries |
+| P0 | Plan pages (4) | Product + Offer + additionalProperty (+ FAQPage as future addition; aggregateRating ruled out — site-level rating only, see §4.10) | Medium | Very high — product comparison queries |
 | P1 | Plans listing | ItemList | Low | Medium |
 | P1 | Claims | WebPage + Service (HowTo only if visible steps are added to the page) | Medium | High — high-intent workflow queries |
 | P1 | About Us | AboutPage + Organization | Low | High — entity disambiguation, Zurich relationship |
@@ -222,7 +222,7 @@ Before pushing, validate each JSON-LD block at:
 ### 6.5 Things to avoid
 
 - Don't mark up content that isn't visible on the page — Google penalizes this and LLMs ignore the page.
-- Don't fabricate `aggregateRating` values — link to Trustpilot via `sameAs` instead, and only add `aggregateRating` if you can render the matching rating widget on the page.
+- Don't fabricate `aggregateRating` values — link to Trustpilot via `sameAs` instead, and only add `aggregateRating` if you can render the matching rating widget on the page. *(Condition met Jun 11, 2026: the homepage and reviews page render TrustBox widgets, and both now carry the real org-level rating — see §4.10. All other pages still omit it.)*
 - Don't put price ranges on plan pages unless the price is actually shown — premiums depend on traveler age, trip cost, and state, so `priceSpecification.description` is the safer pattern (already in the Deluxe JSON-LD).
 - Don't duplicate the same Organization JSON-LD with conflicting properties on different pages. Define it once site-wide and reference it via `@id` everywhere else.
 
@@ -271,7 +271,7 @@ The Otterly "Top Prompts by Brand Mentions" vs. "Top Prompts by Website Citation
 | Prompt | Brand mentions | Own-domain citations | Schema lever |
 |---|---|---|---|
 | "What are the top travel insurance providers for lost baggage coverage?" | 62 | 12 | Plan `Product` + explicit Baggage Loss & Delay `Offer` line-items + dedicated baggage page if missing |
-| "What are the top-rated travel insurance companies?" | 58 | not in top 10 | Homepage `aggregateRating` (real Trustpilot numbers) + `Review` markup on /about-us/travel-insurance-reviews |
+| "What are the top-rated travel insurance companies?" | 58 | not in top 10 | Homepage `aggregateRating` (real Trustpilot numbers) + `Review` markup on /about-us/travel-insurance-reviews — ✅ aggregateRating added to both Jun 11 2026; `review` array deliberately omitted (rotating widget content, see §4.10) |
 | "Which travel insurance company has the best customer service" | 48 | not in top 10 | `ContactPage` + `Organization.contactPoint` with 24/7 `hoursAvailable` and `availableLanguage` |
 | "Best travel insurance company for U.S. travelers" | 43 | not in top 10 | `Organization.areaServed: US` + `AboutPage` emphasizing U.S. focus + state-level `availableAtOrFrom` |
 | "What are the best travel insurance options for emergency assistance?" | 34 | 3 | `Service` with serviceType "24/7 Emergency Travel Assistance" referenced from Org + plan pages |
@@ -285,7 +285,7 @@ Allianz being in the **top 5 most-cited domains** overall (541 citations, 4% sha
 The new P0 list, reflecting Otterly data:
 
 1. **Site-wide bundle** — Organization + WebSite (per-page BreadcrumbList embedded in each page's `@graph`, not in the sitewide bundle)
-2. **Homepage** — WebPage + OfferCatalog + FAQPage (+ aggregateRating once Trustpilot integration is verified)
+2. **Homepage** — WebPage + OfferCatalog + FAQPage (+ aggregateRating — ✅ added Jun 11 2026 from verified Trustpilot widget data)
 3. **FAQ page** — full FAQPage
 4. **Four plan pages** — Product + Offer + FAQPage with explicit Baggage Loss & Delay line-items
 5. **CFAR page** ← new P0 (was unprioritized)

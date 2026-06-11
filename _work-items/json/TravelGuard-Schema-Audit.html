@@ -252,16 +252,17 @@
         <li><a href="#s5">Page-by-page priority matrix</a></li>
         <li><a href="#s6">Implementation notes for the dev team</a></li>
         <li><a href="#s7">Suggested rollout order</a></li>
-        <li><a href="#s8">Files in this audit</a></li>
-        <li><a href="#s9">CLAUDE.md context</a></li>
-        <li><a href="#s10">Suggested commit message</a></li>
+        <li><a href="#s8">Otterly-informed priority update</a></li>
+        <li><a href="#s9">Files in this audit</a></li>
+        <li><a href="#s10">CLAUDE.md context</a></li>
+        <li><a href="#s11">Follow-ups for the web/site team</a></li>
       </ol>
     </nav>
 
     <h2 id="s1">1. Executive summary</h2>
     <p>Travel Guard's homepage and most key templates render the kinds of content that LLMs love to cite — product comparisons, FAQs, pricing rules of thumb, contact info, a clear brand identity, and an editorial library — but the page response I pulled showed no JSON-LD <code>&lt;script&gt;</code> blocks in the visible markup. That means LLM crawlers and Google's structured-data parsers are doing all the work themselves from the HTML, which leaves a lot of citation potential on the table.</p>
     <div class="callout">
-      <p>The single highest-leverage move is a <strong>site-wide JSON-LD bundle</strong> (<code>Organization</code> + <code>WebSite</code>) injected in <code>&lt;head&gt;</code> on every template, paired with a <strong>per-page <code>BreadcrumbList</code></strong> embedded in each non-home page's own JSON-LD <code>@graph</code>.</p>
+      <p>The single highest-leverage move is a <strong>site-wide JSON-LD bundle</strong> (<code>Organization</code> + <code>WebSite</code> in one <code>@graph</code>) injected in <code>&lt;head&gt;</code> on every template, paired with a <strong>per-page <code>BreadcrumbList</code></strong> embedded in each non-home page's own JSON-LD <code>@graph</code>.</p>
     </div>
     <p>After that, the homepage, plan pages, FAQ, claims, articles, and reviews are the next priority because they're the pages LLMs are most likely to cite when answering "what is travel insurance," "does Travel Guard cover X," or "Travel Guard reviews."</p>
     <p>This audit is also relevant to the AIG → Zurich rebrand: the homepage footer already names Zurich entities as underwriters. Codifying that relationship in <code>Organization.parentOrganization</code> and updating <code>alternateName</code>/<code>sameAs</code> is one of the cleanest ways to signal the brand transition to LLMs that have stale "AIG Travel Guard" associations in their training data.</p>
@@ -300,10 +301,10 @@
 
     <h3>3.3 BreadcrumbList</h3>
     <p>Every non-home page should carry a per-page <code>BreadcrumbList</code>. This is one of the schemas LLMs actually use to understand a page's place in the site hierarchy, which improves their ability to recommend related pages and properly attribute claims.</p>
-    <p>Unlike <code>Organization</code> and <code>WebSite</code>, a <code>BreadcrumbList</code> is not a single reusable payload — each page has its own trail. It is therefore embedded directly in each page's <code>@graph</code> rather than kept as a separate file. The per-page JSON-LD files in <code>jsonld/</code> (e.g. <code>plan-deluxe.json</code>, <code>faq-page.json</code>, <code>howto-file-claim.json</code>) each include their own <code>BreadcrumbList</code> node with an <code>@id</code> of <code>{page-url}#breadcrumb</code>. When adding a new template, copy the breadcrumb pattern from the closest existing page.</p>
+    <p>Unlike <code>Organization</code> and <code>WebSite</code>, a <code>BreadcrumbList</code> is <strong>not</strong> a single reusable payload and is <strong>not</strong> part of the sitewide bundle — each page has its own trail. It is therefore embedded directly in each page's <code>@graph</code> rather than kept as a separate file. The per-page JSON-LD files in <code>jsonld/</code> (e.g. <code>travel-insurance/plans/deluxe.json</code>, <code>help-center/faqs.json</code>, <code>help-center/claims.json</code>) each include their own <code>BreadcrumbList</code> node with an <code>@id</code> of <code>{page-url}#breadcrumb</code>. When adding a new template, copy the breadcrumb pattern from the closest existing page.</p>
 
     <h3>3.4 Speakable <span style="font-weight:400; color:var(--midnight-50);">— removed (Jun 10, 2026)</span></h3>
-    <p>Earlier drafts recommended <code>speakable</code> on editorial pages. It has since been <strong>removed from all JSON-LD files</strong>: the property is still "pending" at schema.org, Google's implementation is a beta limited to news content read by Google Assistant, and our selectors only pointed at generic <code>h1</code>/<code>h2</code> headings rather than genuinely quotable summaries. Don't re-add it unless Google expands the feature beyond news and the pages gain purpose-written speakable sections.</p>
+    <p>Earlier drafts of this audit recommended <code>speakable</code> on editorial pages. It has since been <strong>removed from all JSON-LD files</strong>: the property is still "pending" at schema.org, Google's implementation is a beta limited to news content read by Google Assistant (travel-insurance pages are not eligible), and our selectors only pointed at generic <code>h1</code>/<code>h2</code> headings rather than genuinely quotable summaries. There is no evidence LLMs consume it, and it added validator noise plus a silent breakage risk if page markup changes. Don't re-add it unless Google expands the feature beyond news and the pages gain purpose-written speakable sections.</p>
 
     <h2 id="s4">4. Per-page schema recommendations</h2>
     <p>Pages are ordered by LLM-citation value, highest first.</p>
@@ -315,14 +316,14 @@
     <p><span class="arrow">→</span> See <code>jsonld/index.json</code>.</p>
 
     <h3>4.2 Plan pages (<code>/travel-insurance/plans/{deluxe|preferred|essential|rental-vehicle-damage-plan}</code>)</h3>
-    <p><strong>Recommended types:</strong> <code>Product</code> + <code>Offer</code> + <code>aggregateRating</code> (if available) + <code>FAQPage</code> (plan-specific FAQs).</p>
-    <p><strong>Why:</strong> These are your money pages. <code>Product</code> + <code>Offer</code> is the schema LLMs map to "what plan covers X" questions. Use <code>hasOfferCatalog</code> to enumerate the included coverages (Trip Cancellation, Emergency Medical, Baggage, etc.) as line-items — that's the structure LLMs need to answer "does the Deluxe Plan cover medical evacuation?"</p>
+    <p><strong>Recommended types:</strong> <code>Product</code> + <code>Offer</code> + <code>additionalProperty</code> (for included coverages). <code>FAQPage</code> is a recommended future addition once plan-specific FAQs are in place. (<code>aggregateRating</code> was considered and ruled out for plan pages — the Trustpilot TrustScore is a site-level company rating and no per-product reviews are collected; it lives on the Organization via the homepage and reviews-page files instead, see §4.10.)</p>
+    <p><strong>Why:</strong> These are your money pages. <code>Product</code> + <code>Offer</code> is the schema LLMs map to "what plan covers X" questions. Use <code>additionalProperty</code> with <code>PropertyValue</code> items to enumerate the included coverages (Trip Cancellation, Emergency Medical, Baggage, etc.) — that's the structure LLMs need to answer "does the Deluxe Plan cover medical evacuation?" <code>additionalProperty</code> is preferred over <code>hasOfferCatalog</code> here because the coverages are <em>features</em> of the plan, not separately-purchasable products.</p>
     <p><strong>LLM-specific tips:</strong></p>
     <ul>
       <li><code>audience.audienceType</code> describes who the plan is for in plain English ("international travelers, senior travelers, high-end vacationers"). LLMs use this for "best travel insurance for seniors" type queries.</li>
       <li><code>isRelatedTo</code> cross-links the other plans so an LLM can answer comparison questions.</li>
       <li><code>areaServed</code> should be <code>Country: United States</code> — this prevents misattribution in Canada/UK queries.</li>
-      <li>Only include <code>aggregateRating</code> with real, verifiable data. Inflating reviews is a structured-data policy violation and a reputational risk.</li>
+      <li>Only include <code>aggregateRating</code> with real, verifiable data. Inflating reviews is a structured-data policy violation and a reputational risk. Plan <code>Product</code> nodes omit <code>aggregateRating</code> permanently — Travel Guard's Trustpilot rating is company-level, not per-plan (see §4.10).</li>
     </ul>
     <p><span class="arrow">→</span> See <code>jsonld/travel-insurance/plans/deluxe.json</code> (template for the other three).</p>
 
@@ -344,7 +345,7 @@
 
     <h3>4.5 Claims page (<code>/help-center/claims</code>)</h3>
     <p><strong>Recommended type:</strong> <code>WebPage</code> + <code>Service</code> referencing the claims portal.</p>
-    <p><strong>Why:</strong> "How do I file a Travel Guard claim" is one of the most common high-intent queries. The original recommendation here was a <code>HowTo</code>, but the live claims page presents no step-by-step workflow — just two portal CTAs (File a Claim, Check Claim Status) and a short intro. Schema must match visible page content, so the JSON-LD models the page as a <code>WebPage</code> whose <code>mainEntity</code> is a <code>Service</code> with <code>availableChannel</code> entries for the two portal URLs and the claims phone line (1-866-478-8222, USA-purchased policies only per the on-page note). If the web team ever adds visible numbered filing steps to the page, revisit <code>HowTo</code>.</p>
+    <p><strong>Why:</strong> "How do I file a Travel Guard claim" is one of the most common high-intent queries. The original recommendation here was a <code>HowTo</code>, but the live claims page presents no step-by-step workflow — just two portal CTAs (File a Claim → claims.travelguard.com/claims, Check Claim Status → claims.travelguard.com/status) and a short intro. Schema must match visible page content, so the JSON-LD models the page as a <code>WebPage</code> whose <code>mainEntity</code> is a <code>Service</code> with <code>availableChannel</code> entries for the two portal URLs and the claims phone line (1-866-478-8222, USA-purchased policies only per the on-page note). If the web team ever adds visible numbered filing steps to the page, revisit <code>HowTo</code>.</p>
     <p><span class="arrow">→</span> See <code>jsonld/help-center/claims.json</code>.</p>
 
     <h3>4.6 About Us (<code>/about-us</code>)</h3>
@@ -368,8 +369,9 @@
     <p><span class="arrow">→</span> See <code>jsonld/_templates/article-template.json</code> and <code>jsonld/info/what-is-travel-insurance.json</code>.</p>
 
     <h3>4.10 Customer Reviews page (<code>/about-us/travel-insurance-reviews</code>)</h3>
-    <p><strong>Recommended types:</strong> <code>CollectionPage</code> whose <code>mainEntity</code> is the Organization with <code>aggregateRating</code> and a <code>review</code> array.</p>
+    <p><strong>Recommended types:</strong> <code>CollectionPage</code> whose <code>mainEntity</code> references the Organization, carrying the real Trustpilot <code>aggregateRating</code>. No <code>review</code> array — the Trustpilot widget injects rotating individual reviews, so any static copy would drift from visible content within days.</p>
     <p><strong>Why:</strong> Reviews mapped to schema can drive star ratings in traditional search and serve as a trust signal for LLMs. <strong>Use only verifiable, first-party reviews</strong> — never invent ratings.</p>
+    <p><strong>Current state (updated Jun 11, 2026):</strong> <code>jsonld/about-us/travel-insurance-reviews.json</code> now carries the real Trustpilot <code>aggregateRating</code> (4.1 / 5, 1,600 reviews — snapshot 2026-06-11) on the <code>mainEntity</code> org <code>@id</code> reference; the homepage <code>jsonld/index.json</code> carries the same block on its <code>about</code> reference. Both pages visibly render TrustBox widgets, satisfying the §6.5 visibility condition. Values come from the Trustpilot widget-data endpoint (see hard rule #7 in CLAUDE.md) and are refreshed at each KPI checkpoint. Google ignores self-serving org ratings for rich-result stars — this markup is an LLM trust signal, not a SERP-stars play.</p>
     <p><span class="arrow">→</span> See <code>jsonld/about-us/travel-insurance-reviews.json</code>.</p>
 
     <h2 id="s5">5. Page-by-page priority matrix</h2>
@@ -388,9 +390,9 @@
         <tr><td><span class="badge p0">P0</span></td><td>Every non-home page</td><td>BreadcrumbList (per-page, embedded in page <code>@graph</code>)</td><td>Low per page</td><td>Very high — site-hierarchy signal</td></tr>
         <tr><td><span class="badge p0">P0</span></td><td>Homepage</td><td>WebPage + OfferCatalog + FAQPage</td><td>Medium</td><td>Very high — first-touch citations</td></tr>
         <tr><td><span class="badge p0">P0</span></td><td>FAQ (<code>/help-center/faqs</code>)</td><td>FAQPage</td><td>Low</td><td>Very high — verbatim answer extraction</td></tr>
-        <tr><td><span class="badge p0">P0</span></td><td>Plan pages (4)</td><td>Product + Offer + FAQPage</td><td>Medium</td><td>Very high — product comparison queries</td></tr>
+        <tr><td><span class="badge p0">P0</span></td><td>Plan pages (4)</td><td>Product + Offer + additionalProperty (+ FAQPage as future addition; aggregateRating ruled out — site-level rating only, see §4.10)</td><td>Medium</td><td>Very high — product comparison queries</td></tr>
         <tr><td><span class="badge p1">P1</span></td><td>Plans listing</td><td>ItemList</td><td>Low</td><td>Medium</td></tr>
-        <tr><td><span class="badge p1">P1</span></td><td>Claims</td><td>HowTo</td><td>Medium</td><td>High — high-intent workflow queries</td></tr>
+        <tr><td><span class="badge p1">P1</span></td><td>Claims</td><td>WebPage + Service (HowTo only if visible steps are added to the page)</td><td>Medium</td><td>High — high-intent workflow queries</td></tr>
         <tr><td><span class="badge p1">P1</span></td><td>About Us</td><td>AboutPage + Organization</td><td>Low</td><td>High — entity disambiguation, Zurich relationship</td></tr>
         <tr><td><span class="badge p1">P1</span></td><td>Contact Us</td><td>ContactPage</td><td>Low</td><td>Medium</td></tr>
         <tr><td><span class="badge p2">P2</span></td><td>Trip-type pages (13)</td><td>Service + OfferCatalog</td><td>Medium per page</td><td>High — long-tail "best X insurance" queries</td></tr>
@@ -433,7 +435,7 @@
     <h3>6.5 Things to avoid</h3>
     <ul>
       <li>Don't mark up content that isn't visible on the page — Google penalizes this and LLMs ignore the page.</li>
-      <li>Don't fabricate <code>aggregateRating</code> values — link to Trustpilot via <code>sameAs</code> instead, and only add <code>aggregateRating</code> if you can render the matching rating widget on the page.</li>
+      <li>Don't fabricate <code>aggregateRating</code> values — link to Trustpilot via <code>sameAs</code> instead, and only add <code>aggregateRating</code> if you can render the matching rating widget on the page. <em>(Condition met Jun 11, 2026: the homepage and reviews page render TrustBox widgets, and both now carry the real org-level rating — see §4.10. All other pages still omit it.)</em></li>
       <li>Don't put price ranges on plan pages unless the price is actually shown — premiums depend on traveler age, trip cost, and state, so <code>priceSpecification.description</code> is the safer pattern (already in the Deluxe JSON-LD).</li>
       <li>Don't duplicate the same Organization JSON-LD with conflicting properties on different pages. Define it once site-wide and reference it via <code>@id</code> everywhere else.</li>
     </ul>
@@ -442,20 +444,81 @@
     <ol>
       <li><strong>Week 1:</strong> Site-wide bundle (Organization + WebSite). Validate. Submit updated sitemap to Google Search Console. Per-page <code>BreadcrumbList</code> ships embedded in each page's own <code>@graph</code> as those pages are tackled in the weeks below.</li>
       <li><strong>Week 2:</strong> Homepage, FAQ page, all four plan pages.</li>
-      <li><strong>Week 3:</strong> About Us, Contact Us, Claims (HowTo), Plans listing (ItemList).</li>
+      <li><strong>Week 3:</strong> About Us, Contact Us, Claims (WebPage + Service), Plans listing (ItemList).</li>
       <li><strong>Week 4-5:</strong> Trip-type and traveler-type pages (Service schema).</li>
       <li><strong>Week 6+:</strong> Education Center and Travel Tips articles (template-driven, can be automated).</li>
     </ol>
     <p>After 4-6 weeks of indexing, monitor LLM citations using a tool like Profound, Otterly, or simple manual probes ("what is Travel Guard," "compare travel insurance plans," "how do I file a claim with Travel Guard").</p>
 
-    <h2 id="s8">8. Files in this audit</h2>
+    <h2 id="s8">8. Otterly-informed priority update (May 2026)</h2>
+    <p>After the initial audit was drafted, we pulled the Travel Guard brand report from Otterly.ai (Last 14 days, US, all engines, 20 prompts) to ground the schema work in observed LLM behavior rather than assumptions. Key findings, plus the priority changes they trigger:</p>
+
+    <h3>8.1 The headline gap: mentions vs. citations</h3>
+    <p>Travel Guard registers <strong>452 brand mentions</strong> in the period (rank #2 behind Seven Corners at 526), but the company's own domain only receives <strong>185 citations</strong> and <strong>1% citation share</strong>. Allianz, by comparison, has <strong>541 own-domain citations</strong> — their <code>allianztravelinsurance.com</code> is one of the top 5 most-cited domains across all travel-insurance prompts. The "mentioned but not cited" gap is the single biggest schema opportunity. LLMs know Travel Guard exists; they're just not pointing users at travelguard.com when they answer questions.</p>
+
+    <h3>8.2 Pages already winning citations — escalate to P0</h3>
+    <p>The Otterly report shows Travel Guard's three most-cited URLs in the period are:</p>
+    <table>
+      <thead>
+        <tr><th>Rank</th><th>URL</th><th>Citations</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>/travel-resources/travel-safety/student-travel-safety</td><td>26</td></tr>
+        <tr><td>2</td><td>/traveler-types/pre-existing-medical-condition-travel-insurance-plans</td><td>19</td></tr>
+        <tr><td>3</td><td>/travel-insurance/optional-coverage/cancel-for-any-reason</td><td>18</td></tr>
+      </tbody>
+    </table>
+    <p>These pages are <em>already</em> getting cited — adding strong schema will compound the effect. All three move to <strong>P0</strong> and have dedicated JSON-LD files in this audit:</p>
+    <ul>
+      <li><code>jsonld/travel-resources/travel-safety/student-travel-safety.json</code> — Article + EducationalAudience (HowTo was removed because the live page does not present its safety guidance as a discrete numbered step list — schema must match visible page content)</li>
+      <li><code>jsonld/traveler-types/pre-existing-medical-condition-travel-insurance-plans.json</code> — Service + FAQPage + PeopleAudience</li>
+      <li><code>jsonld/travel-insurance/optional-coverage/cancel-for-any-reason.json</code> — Service + FAQPage (using real FAQ content extracted from the live CFAR page)</li>
+    </ul>
+
+    <h3>8.3 Mention-to-citation gaps — biggest unlock opportunities</h3>
+    <p>The Otterly "Top Prompts by Brand Mentions" vs. "Top Prompts by Website Citations" tables tell us where Travel Guard is mentioned in answers but the answer cites a competitor or aggregator. These are the prompts where structured data can swing citations our way.</p>
+    <table>
+      <thead>
+        <tr><th>Prompt</th><th>Brand mentions</th><th>Own-domain citations</th><th>Schema lever</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>"What are the top travel insurance providers for lost baggage coverage?"</td><td>62</td><td>12</td><td>Plan <code>Product</code> + explicit Baggage Loss &amp; Delay <code>Offer</code> line-items + dedicated baggage page if missing</td></tr>
+        <tr><td>"What are the top-rated travel insurance companies?"</td><td>58</td><td>not in top 10</td><td>Homepage <code>aggregateRating</code> (real Trustpilot numbers) + <code>Review</code> markup on /about-us/travel-insurance-reviews — ✅ aggregateRating added to both Jun 11 2026; <code>review</code> array deliberately omitted (rotating widget content, see §4.10)</td></tr>
+        <tr><td>"Which travel insurance company has the best customer service"</td><td>48</td><td>not in top 10</td><td><code>ContactPage</code> + <code>Organization.contactPoint</code> with 24/7 <code>hoursAvailable</code> and <code>availableLanguage</code></td></tr>
+        <tr><td>"Best travel insurance company for U.S. travelers"</td><td>43</td><td>not in top 10</td><td><code>Organization.areaServed: US</code> + <code>AboutPage</code> emphasizing U.S. focus + state-level <code>availableAtOrFrom</code></td></tr>
+        <tr><td>"What are the best travel insurance options for emergency assistance?"</td><td>34</td><td>3</td><td><code>Service</code> with serviceType "24/7 Emergency Travel Assistance" referenced from Org + plan pages</td></tr>
+      </tbody>
+    </table>
+
+    <h3>8.4 Competitive benchmark: study Allianz</h3>
+    <p>Allianz being in the <strong>top 5 most-cited domains</strong> overall (541 citations, 4% share) is the most actionable competitor signal in the report. Their site is succeeding at exactly what this audit is trying to achieve for Travel Guard. Before final implementation, a dev should view-source on <code>allianztravelinsurance.com</code>'s homepage and top product pages, catalog the JSON-LD types and properties they use, and copy whatever patterns make sense. Their content is no better than yours; their structured data discipline likely is.</p>
+
+    <h3>8.5 Revised P0 list</h3>
+    <p>The new P0 list, reflecting Otterly data:</p>
+    <ol>
+      <li><strong>Site-wide bundle</strong> — Organization + WebSite (per-page BreadcrumbList embedded in each page's <code>@graph</code>, not in the sitewide bundle)</li>
+      <li><strong>Homepage</strong> — WebPage + OfferCatalog + FAQPage (+ aggregateRating — ✅ added Jun 11 2026 from verified Trustpilot widget data)</li>
+      <li><strong>FAQ page</strong> — full FAQPage</li>
+      <li><strong>Four plan pages</strong> — Product + Offer + FAQPage with explicit Baggage Loss &amp; Delay line-items</li>
+      <li><strong>CFAR page</strong> ← new P0 (was unprioritized)</li>
+      <li><strong>Pre-existing conditions page</strong> ← new P0 (was P2)</li>
+      <li><strong>Student travel safety article</strong> ← new P0 (was P2)</li>
+      <li><strong>Contact Us</strong> ← elevated from P1 (Otterly shows "best customer service" is a high-mention/low-citation gap)</li>
+      <li><strong>Reviews page</strong> ← elevated from P2 (Otterly shows "top-rated" is a high-mention/low-citation gap)</li>
+    </ol>
+
+    <h3>8.6 The Allianz signal also tells us what NOT to do</h3>
+    <p>We can't out-Squaremouth Squaremouth. The top 10 cited domains are dominated by comparison/aggregator sites (Squaremouth 7%, Nerdwallet 5%, Forbes 5%, US News 4%) and that's a PR/relationship game, not a schema game. Structured data is the right tool for direct-citation queries (CFAR, pre-existing conditions, claims, contact, specific coverages) — not for "best travel insurance overall" listicles. Set expectations accordingly: a realistic schema-driven goal is moving own-domain citations from 1% → 3-4% over 90 days, putting Travel Guard at parity with Allianz on direct citation share.</p>
+
+    <h2 id="s9">9. Files in this audit</h2>
+    <p>The <code>jsonld/</code> folder mirrors the live site's URL structure: the folder root is the homepage (<code>index.json</code>), each URL path segment is a subfolder, and section landing pages are <code>index.json</code> inside their folder. Files prefixed with <code>_</code> are not pages (<code>_sitewide.json</code> is the every-page bundle; <code>_templates/</code> holds placeholder-marked templates that must never be deployed as-is).</p>
     <pre><code>TravelGuard-Schema-Audit.md              ← this document
 TravelGuard-KPI-Tracking.md              ← before/after KPI tracking guide
 CLAUDE.md                                ← project context + decision log for AI sessions
-jsonld/                                  ← mirrors the live site URL structure
+jsonld/
   _sitewide.json                         ← P0, every page (Organization + WebSite @graph bundle)
   _templates/
-    article-template.json                ← P2 template ({{placeholders}}, do not deploy)
+    article-template.json                ← P2 template, Travel Tips / blog ({{placeholders}}, do not deploy)
   index.json                             ← P0, homepage
   about-us/
     index.json                           ← P1, /about-us
@@ -507,8 +570,8 @@ jsonld/                                  ← mirrors the live site URL structure
     index.json                           ← P2, /video-library landing (CollectionPage + ItemList of 8)
     {8 video pages}.json                 ← P2, all built Jun 11 (WebPage + VideoObject + full on-page transcript; 6 reuse the page's own player metadata, antarctica & real-life built from h1 + iframe)</code></pre>
 
-    <h2 id="s9">9. CLAUDE.md context (for your repo)</h2>
-    <p>Per your workflow, here's a snippet you can drop into a <code>CLAUDE.md</code> at the repo root so future AI sessions have context:</p>
+    <h2 id="s10">10. CLAUDE.md context (for your repo)</h2>
+    <p><strong>This now exists:</strong> see <code>_work-items/json/CLAUDE.md</code> for the maintained project context, hard rules, build workflow, and decision log. The snippet below is the original suggestion, kept for the dev team's site repo:</p>
     <pre><code># Travel Guard structured-data conventions
 
 We use JSON-LD (not Microdata or RDFa) for all structured data. Every page must include:
@@ -531,29 +594,6 @@ Key entity facts:
 - Accreditations to cite in Organization.hasCredential: BBB
 
 Validate every new JSON-LD against https://validator.schema.org/ before merging.</code></pre>
-
-    <h2 id="s10">10. Suggested commit message</h2>
-    <pre><code>feat(seo): add LLM-first JSON-LD schema markup site-wide and per-template
-
-- Add site-wide Organization (InsuranceAgency) + WebSite bundle to &lt;head&gt;
-  on every template, and a per-page BreadcrumbList embedded in each
-  non-home page's own JSON-LD @graph
-- Add Organization.parentOrganization referencing Zurich Insurance Group
-  to reflect the AIG → Zurich underwriter relationship
-- Add page-specific schemas:
-  - Homepage: WebPage + OfferCatalog + FAQPage
-  - Plan pages: Product + Offer + FAQPage
-  - FAQ page: FAQPage (full)
-  - Claims: HowTo
-  - About Us: AboutPage
-  - Contact Us: ContactPage
-  - Trip-type / traveler-type pages: Service + OfferCatalog
-  - Education Center / Travel Tips: Article + DefinedTerm
-- All entities use stable @id URIs and cross-reference Organization
-- Optimized for LLM citation (ChatGPT, Perplexity, AI Overviews) in
-  addition to traditional rich results
-
-Refs: SEO-XXXX</code></pre>
 
     <h2 id="s11">11. Follow-ups for the web/site team</h2>
     <p>Items found during the schema build-out (Jun 9–11, 2026) that are site-side fixes, not schema work. None block deployment of the JSON-LD files.</p>
