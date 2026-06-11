@@ -1,0 +1,62 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.travelguard.com/video-library/adventure-travel-insurance#webpage",
+      "url": "https://www.travelguard.com/video-library/adventure-travel-insurance",
+      "name": "What Is Adventure Travel Insurance Coverage? | Travel Guard",
+      "isPartOf": {
+        "@id": "https://www.travelguard.com/#website"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://www.travelguard.com/video-library/adventure-travel-insurance#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.travelguard.com/video-library/adventure-travel-insurance#video"
+      },
+      "description": "Some travel insurance plans may have exclusions, meaning riskier activities aren't covered. But you can add on coverage for more adventurous activities."
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://www.travelguard.com/video-library/adventure-travel-insurance#video",
+      "name": "What is Adventure Travel Insurance Coverage and Why Do I Need It?",
+      "description": "Some regular travel insurance plans, well they may have exclusions meaning no coverage for activities that are considered risky. The good news is that you can add on coverage for activities like hot air ballooning, skydiving, ziplining, basically all our favorite things.",
+      "thumbnailUrl": "https://i.ytimg.com/vi/9P_cIzP82zo/maxresdefault.jpg",
+      "uploadDate": "2024-02-08T08:00:00+05:00",
+      "duration": "PT1M28S",
+      "embedUrl": "https://www.youtube.com/embed/9P_cIzP82zo",
+      "url": "https://www.travelguard.com/video-library/adventure-travel-insurance",
+      "publisher": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
+      "inLanguage": "en-US",
+      "transcript": "[EMILY KAUFMAN]\nI’m Emily Kaufman, The Travel Mom\n[TOMMY DIDARIO]\nAnd I’m Tommy Didario. There’s nothing like the fresh sea air, huh Emily?\n[EMILY]\nAbsolutely, being out on a boat just might be one of my favorite types of adventures.\n[TOMMY]\nWell adventures and vacations, they go hand in hand for me.\n[EMILY]\nMe too. But as the “mom” here, I’m always concerned that we’re protected when we adventure. Fortunately, Travel Guard has an Adventure Sports Bundle.\n[TOMMY]\nBecause some regular travel insurance plans, well they may have exclusions meaning no coverage for activities that are considered risky.\nThe good news is that you can add on coverage for activities like hot air ballooning, skydiving, ziplining, basically all our favorite things.\n[EMILY]\nMost of the adventures you and I do together, are considered risky.\n[TOMMY]\nI loved when we went parasailing in Mexico.\n[EMILY]\nAnd hiking in Rocky Mountain National Park was so fun too! I am most definitely an adrenaline junkie and with this bundle from Travel Guard, I feel more comfortable enjoying these types of experiences.\n[TOMMY]\nWhen it comes to vacations, I always have at least one of these adventures and I always look forward to having some fun. I'm Tommy Didario.\n[EMILY]\nAnd I’m Emily Kaufman, The Travel Mom wishing you fun and safe adventures."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/video-library/adventure-travel-insurance#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Video Library",
+          "item": "https://www.travelguard.com/video-library"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Adventure Travel and Choosing Your Travel Insurance Plan with The Travel Mom [Video]",
+          "item": "https://www.travelguard.com/video-library/adventure-travel-insurance"
+        }
+      ]
+    }
+  ]
+}

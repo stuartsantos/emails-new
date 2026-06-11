@@ -1,0 +1,62 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.travelguard.com/video-library/info-you-need-about-travel-insurance#webpage",
+      "url": "https://www.travelguard.com/video-library/info-you-need-about-travel-insurance",
+      "name": "Information You Need to Know About Travel Insurance Plans",
+      "isPartOf": {
+        "@id": "https://www.travelguard.com/#website"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://www.travelguard.com/video-library/info-you-need-about-travel-insurance#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.travelguard.com/video-library/info-you-need-about-travel-insurance#video"
+      },
+      "description": "Emily Kaufman, The Travel Mom, has some information you need to know about travel insurance plan. Visit our website to find out more today."
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://www.travelguard.com/video-library/info-you-need-about-travel-insurance#video",
+      "name": "Information You Need to Know About Travel Insurance: Featuring the Travel Mom",
+      "description": "Information You Need to Know About Travel Insurance: Featuring the Travel Mom",
+      "thumbnailUrl": "https://i.ytimg.com/vi/wpzkvwW8BrU/maxresdefault.jpg",
+      "uploadDate": "2021-07-28T08:00:00+05:00",
+      "duration": "PT2M33S",
+      "embedUrl": "https://www.youtube.com/embed/wpzkvwW8BrU",
+      "url": "https://www.travelguard.com/video-library/info-you-need-about-travel-insurance",
+      "publisher": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
+      "inLanguage": "en-US",
+      "transcript": "[EMILY KAUFMAN]\nThere’s a lot of excitement about travel right now, but also a lot of questions. And I’ve got the answer to one of the most important of them. I’m Emily Kaufman, The Travel Mom, with some information you need to know about travel insurance.\nI believe in travel insurance. We protect our other investments, like our home or cars, so it makes sense to protect our precious travel plans. There are all kinds of ways in which travel insurance can help.\n[EMILY, VOICEOVER]\nSay you’re on a relaxing vacation in the Caribbean – you’re walking along the beach, and then suddenly twist your ankle and have to get medical treatment. That could result in some pricey bills, but if you have travel insurance that provides medical expense benefits, you may get those costs reimbursed, if covered under the policy terms. The insurance provider can also help with logistics, like booking an appointment with a doctor or even finding new flights home if you need to cut your trip short.\n[EMILY, VOICEOVER]\nOr imagine you and your family have that dream theme park vacation planned, but someone in your group gets sick and the trip has to be cancelled. With travel insurance, you may have coverage for things you’ve booked like flights, hotels, and other pre-paid non-refundable costs. Even excursions!\n[EMILY]\nTravel is about letting go and having a relaxing experience. No one wants to spend their vacation worrying about things that can go wrong. Travel insurance can help bring greater peace of mind when it comes to protecting your travel investment.\nIf you’re looking for where to buy, I personally recommend Travel Guard. Not only do they have some of the best coverage out there, they’ve got award winning customer service, which makes all the difference if the unexpected happens.\n[EMILY, VOICEOVER]\nTravel Guard has a variety of coverage options. Most of the plans include coverage for trip cancellation, trip interruption, trip delay, lost luggage coverage and medical expenses. And there are all sorts of optional bundles so you can customize a plan for your specific needs, like car rental, pet coverage, enhanced medical expense coverage, adventure sports and many others.\n[EMILY]\nIf you want to find out which plans is right for you, you can get a quote online or give Travel Guard a call at 1-800-208-0745. I am Emily Kaufman, The Travel Mom wishing you all happy travels."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/video-library/info-you-need-about-travel-insurance#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Video Library",
+          "item": "https://www.travelguard.com/video-library"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Information You Need to Know About Travel Insurance [Video]",
+          "item": "https://www.travelguard.com/video-library/info-you-need-about-travel-insurance"
+        }
+      ]
+    }
+  ]
+}

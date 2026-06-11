@@ -359,6 +359,9 @@ jsonld/
       student-travel-safety.json         ← P0 (new), student safety article
     travel-tips/
       how-to-beat-jet-lag-fast.json      ← P2, real Travel Tips article (worked example)
+  video-library/
+    index.json                           ← P2, /video-library landing (CollectionPage + ItemList of 8)
+    {8 video pages}.json                 ← P2, all built Jun 11 (WebPage + VideoObject + full on-page transcript; 6 reuse the page's own player metadata, antarctica & real-life built from h1 + iframe)
 ```
 
 ---

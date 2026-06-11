@@ -1,0 +1,57 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.travelguard.com/video-library/real-life-experience#webpage",
+      "url": "https://www.travelguard.com/video-library/real-life-experience",
+      "name": "Real Life Experience Featuring the Trusted Travel Girl",
+      "isPartOf": {
+        "@id": "https://www.travelguard.com/#website"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://www.travelguard.com/video-library/real-life-experience#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.travelguard.com/video-library/real-life-experience#video"
+      }
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://www.travelguard.com/video-library/real-life-experience#video",
+      "name": "Real Life Experience Featuring the Trusted Travel Girl [Video]",
+      "embedUrl": "https://www.youtube.com/embed/m0gke5e0Hlo",
+      "url": "https://www.travelguard.com/video-library/real-life-experience",
+      "publisher": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
+      "inLanguage": "en-US",
+      "transcript": "[NARRATOR]\nI’m Valerie Joy Wilson and as a professional traveler…\n[NARRATOR]\n…I hear a lot of stories when it comes to travel insurance.\n[NARRATOR]\nBut, as a real-life user of Travel Guard for the last eight years…\n[NARRATOR]\n…it’s definitely who I recommend to use.\n[NARRATOR]\nI’ve had a lot of unfortunate travel experiences…\n[NARRATOR]\n…but fortunately…\n[NARRATOR]\n…they were all covered by Travel Guard.\n[NARRATOR]\nTravel insurance is so personally important to me.\n[NARRATOR]\nI was supposed to be on my dream trip in Switzerland skiing the Swiss Alps…\n[NARRATOR]\n…but instead, my dream trip turned into a nightmare.\n[NARRATOR]\nI was supposed to be jumping out of helicopter skiing powder that I had always dreamed of skiing my entire life…\n[NARRATOR]\n…but the universe had other plans in store for me.\n[NARRATOR]\nInstead, I had appendicitis…\n[NARRATOR]\n…and had to have my appendix taken out immediately.\n[NARRATOR]\nNow, imagine this…\n[NARRATOR]\n…I’m alone in a foreign country…\n[NARRATOR]\n…jetlagged…\n[NARRATOR]\n…I just landed…\n[NARRATOR]\n…and I was told I needed an emergency appendectomy.\n[NARRATOR]\nCheck this out…\n[NARRATOR]\n…so…\n[NARRATOR]\nI woke up…\n[NARRATOR]\n…and then I had a really bad stabbing pain in my stomach and then it stared to move down to my appendix.\n[NARRATOR]\nI started throwing up…\n[NARRATOR]\n…I couldn’t move…\n[NARRATOR]\n…I couldn’t walk…\n[NARRATOR]\n…I literally was just like completely immobile.\n[NARRATOR]\nI crawled to the phone, called the front desk at my hotel and asked them to call me an ambulance.\n[NARRATOR]\nSo, while the ambulance was on their way…\n[NARRATOR]\n…my first thought…\n[NARRATOR]\n…was actually that I was insured and I knew I didn’t have anything to worry about…\n[NARRATOR]\n…other than taking care of myself because I had Travel Guard and I knew that they had my back."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/video-library/real-life-experience#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Video Library",
+          "item": "https://www.travelguard.com/video-library"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Real Life Experience Featuring the Trusted Travel Girl [Video]",
+          "item": "https://www.travelguard.com/video-library/real-life-experience"
+        }
+      ]
+    }
+  ]
+}

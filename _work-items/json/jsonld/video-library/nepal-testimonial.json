@@ -1,0 +1,62 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.travelguard.com/video-library/nepal-testimonial#webpage",
+      "url": "https://www.travelguard.com/video-library/nepal-testimonial",
+      "name": "Travel Guard’s Crisis Response - Nepal Testimonial [Video]",
+      "isPartOf": {
+        "@id": "https://www.travelguard.com/#website"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://www.travelguard.com/video-library/nepal-testimonial#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.travelguard.com/video-library/nepal-testimonial#video"
+      },
+      "description": "Learn how AIG Travel supported travelers when a 7.9 magnitude earthquake struck Nepal, with a team of security, medical, and other operations personnel."
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://www.travelguard.com/video-library/nepal-testimonial#video",
+      "name": "AIG Travel's Crisis Response - Nepal Earthquake",
+      "description": "Find out AIG Travel's crisis response to the the Nepal earthquake.",
+      "thumbnailUrl": "https://i.ytimg.com/vi/XlFpiPwv1mI/maxresdefault.jpg",
+      "uploadDate": "2019-02-14T08:00:00+05:00",
+      "duration": "PT2M41S",
+      "embedUrl": "https://www.youtube.com/embed/XlFpiPwv1mI",
+      "url": "https://www.travelguard.com/video-library/nepal-testimonial",
+      "publisher": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
+      "inLanguage": "en-US",
+      "transcript": "[NARRATOR]\nOn April 25th, 2015, a 7.9 magnitude earthquake struck Nepal. AIG Travel was contacted by students, leisure travelers, and business travelers. Recognizing the need for on-the-ground support, AIG Travel formed a management team that was swiftly deployed to the region and included security, medical, and other operations personnel.\n[CHRISTOPHER HELMS, DIRECT OF AIG TRAVEL SECURITY]\nWe were able to secure a ballroom, a pretty sizable ballroom at the Hyatt and the initial plan was to have them all get checked out by the doctor, get some food and rest until the next day when we could get a charter flight out.\n[ADAM FITZPATRICK, REGIONAL SECURITY MANAGER]\nWe were there to support them and make sure that, for those that were staying in country that couldn’t necessarily get a connecting flight straight away to their home country. Again, we offered lodgings for those that didn’t have an immediate connection, food, again, etcetera. So, we catered them, and I think that was major support that was required.\n[JASON, AIG CUSTOMER]\nSo, when the earthquake struck my brother, and I were actually in a little tea house above Namche Bazaar. We had just sit down to a small wooden table and this little lady came up and she placed her tea on the table and as she did it started to shake a little. At first, we were a little surprised, like she doesn’t seem that big to cause this level of shaking but it didn’t stop, and my brother and I are both from California and we’ve been through earthquakes before. So, immediately we turn to each other and knew, okay, this is an earthquake.\nEventually we were able to get a hold of AIG to ask them, hey we’re trying to find a way down; would you guys be willing to compensate us if we bought an extra ticket or found a different way. AIG was actually able to commission a plane, so they were able to charter one for all of the people that were in the group. They just provided that level of security and safety, and comfort knowing that things were going to be okay, and they were going to take care of it, no matter what the obstacles were, price or logistics, that they'd be able to handle it. The advantage of having travel insurance and assistance is the fact that you can travel worry free.\n[CHRISTOPHER]\nIn all it took four days from the time we received the first client until the day the charter flight left itself. Tell you, it was a major relief standing there watching that plane take off and leave with them all on it.\n[NARRATOR]\nEvery day AIG promises leisure and business travelers around the globe that we will be there. Wherever your travels take you, AIG is never more than a phone call away."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/video-library/nepal-testimonial#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Video Library",
+          "item": "https://www.travelguard.com/video-library"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Travel Guard’s Crisis Response - Nepal Testimonial [Video]",
+          "item": "https://www.travelguard.com/video-library/nepal-testimonial"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.travelguard.com/video-library/how-important-is-travel-insurance#webpage",
+      "url": "https://www.travelguard.com/video-library/how-important-is-travel-insurance",
+      "name": "How Important is a Travel Insurance Plan? | Travel Guard",
+      "isPartOf": {
+        "@id": "https://www.travelguard.com/#website"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://www.travelguard.com/video-library/how-important-is-travel-insurance#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.travelguard.com/video-library/how-important-is-travel-insurance#video"
+      },
+      "description": "Emily Kaufman and Tommy Didario explain why it's important to have a travel insurance plan whenever you travel. Visit our website to find out more now."
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://www.travelguard.com/video-library/how-important-is-travel-insurance#video",
+      "name": "How important is travel insurance?",
+      "description": "People are out and about traveling again, and it feels good. Emily Kaufman, The Travel Mom, and Tommy DiDario discuss what travel insurance is and why it is important for every trip.",
+      "thumbnailUrl": "https://i.ytimg.com/vi/GkeHSKtB7rI/maxresdefault.jpg",
+      "uploadDate": "2022-08-25T08:00:00+05:00",
+      "duration": "PT2M24S",
+      "embedUrl": "https://www.youtube.com/embed/GkeHSKtB7rI",
+      "url": "https://www.travelguard.com/video-library/how-important-is-travel-insurance",
+      "publisher": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
+      "inLanguage": "en-US",
+      "transcript": "[TOMMY DIDARIO]\nHi, I’m Tommy DiDario!\n[EMILY KAUFMAN]\nAnd I’m Emily Kaufman, The Travel Mom. Greetings from Central Park in New York City! You know, people are out and about traveling again, and boy does it feel good.\n[TOMMY]\nOh, absolutely! And now that we are finally returning back to travel, I’ve got some questions for you – particularly about travel insurance.\n[EMILY]\nAnd I can definitely help explain why it’s important.\n[TOMMY]\nEmily, what exactly is travel insurance and why might I need it?\n[EMILY]\nTravel insurance is like any other insurance you would buy for say your home or your auto, but it’s specifically related to the risks associated with travel.\nAt Travel Guard, their policies include a wide range of coverage that includes trip delays, interruptions or cancellations. Your benefits also include being covered for lost or stolen luggage as well as medical expenses should you become ill when traveling.\nTravel Guard has a 24-hour call center so you can speak to someone no matter where you are and what time it is.\n[TOMMY]\nOkay, this is sounding really really good. Now I heard there are a lot of different travel plans that you can choose from. So, if I’m looking for a basic travel insurance coverage or something a bit more specific – Travel Guard has me covered right?\n[EMILY]\nYes! Exactly! And you know, I love to travel with my dog Diesel. There’s a bundle that allows me to add coverage in case he gets sick when we’re traveling or in case I have to leave him behind and my flight is cancelled or delayed so I can’t pick him up from the kennel on time. The additional coverage may cover these costs.\n[TOMMY]\nNow Emily, you and I both love adventure so it seems like the adventure sports bundle would be the perfect match for us. And no matter what type of trip you’re planning, there’s going to be a good fit.\n[EMILY]\nYep, definitely. And TravelGuard.com is so easy to navigate that even I can figure it out. With just a few clicks, I can compare packages and bundles and get a quote within seconds.\n[TOMMY]\nTraveling takes a lot of energy, planning and financial commitment. I’m thinking if I’m protecting my other bigger investments, I should probably be protecting my travel plans as well.\n[EMILY]\nAnd Travel Guard is the perfect companion when it comes to travel insurance and plans.\n[TOMMY]\nI’m Tommy DiDario.\n[EMILY]\nAnd I’m Emily Kaufman, The Travel Mom.\n[TOMMY]\nAnd both of us are wishing you safe travels."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/video-library/how-important-is-travel-insurance#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Video Library",
+          "item": "https://www.travelguard.com/video-library"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "How Important is a Travel Insurance Plan? [Video]",
+          "item": "https://www.travelguard.com/video-library/how-important-is-travel-insurance"
+        }
+      ]
+    }
+  ]
+}

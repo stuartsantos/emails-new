@@ -1,0 +1,96 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://www.travelguard.com/video-library#webpage",
+      "url": "https://www.travelguard.com/video-library",
+      "name": "Our Video Library | Travel Guard",
+      "description": "Find travel insurance plan information and guidance, along with travel tips and advice in our video library. Visit Travel Guard today to discover more.",
+      "isPartOf": {
+        "@id": "https://www.travelguard.com/#website"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://www.travelguard.com/video-library#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.travelguard.com/video-library#itemlist"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://www.travelguard.com/video-library#itemlist",
+      "name": "Travel Guard Video Library",
+      "numberOfItems": 8,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Real Life Experience",
+          "url": "https://www.travelguard.com/video-library/real-life-experience"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "How important is travel insurance?",
+          "url": "https://www.travelguard.com/video-library/how-important-is-travel-insurance"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "The Travel Mom talks international travel",
+          "url": "https://www.travelguard.com/video-library/international-travel-insurance"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Information You Need to Know About Travel Insurance",
+          "url": "https://www.travelguard.com/video-library/info-you-need-about-travel-insurance"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "What is Adventure Travel Insurance Coverage and Why Do I Need It?",
+          "url": "https://www.travelguard.com/video-library/adventure-travel-insurance"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Is Cruise Insurance Worth It?",
+          "url": "https://www.travelguard.com/video-library/cruise-travel-insurance"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Travel Guard Antarctica Testimonial",
+          "url": "https://www.travelguard.com/video-library/antarctica-testimonial"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Travel Guard’s Crisis Response – Nepal Earthquake",
+          "url": "https://www.travelguard.com/video-library/nepal-testimonial"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/video-library#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Video Library",
+          "item": "https://www.travelguard.com/video-library"
+        }
+      ]
+    }
+  ]
+}

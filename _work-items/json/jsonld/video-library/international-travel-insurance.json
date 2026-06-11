@@ -1,0 +1,62 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.travelguard.com/video-library/international-travel-insurance#webpage",
+      "url": "https://www.travelguard.com/video-library/international-travel-insurance",
+      "name": "The Travel Mom Talks International Travel Insurance Plans",
+      "isPartOf": {
+        "@id": "https://www.travelguard.com/#website"
+      },
+      "inLanguage": "en-US",
+      "breadcrumb": {
+        "@id": "https://www.travelguard.com/video-library/international-travel-insurance#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://www.travelguard.com/video-library/international-travel-insurance#video"
+      },
+      "description": "With the expense of international travel, it's important to protect that investment, and that's where Travel Guard can help. Visit us for more information."
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://www.travelguard.com/video-library/international-travel-insurance#video",
+      "name": "The Travel Mom talks international travel",
+      "description": "With the expense of international travel, it's important to protect that investment, and that's where Travel Guard can help.",
+      "thumbnailUrl": "https://i.ytimg.com/vi/Fym4Bj7sRY8/maxresdefault.jpg",
+      "uploadDate": "2023-11-02T08:00:00+05:00",
+      "duration": "PT2M0S",
+      "embedUrl": "https://www.youtube.com/embed/Fym4Bj7sRY8",
+      "url": "https://www.travelguard.com/video-library/international-travel-insurance",
+      "publisher": {
+        "@id": "https://www.travelguard.com/#organization"
+      },
+      "inLanguage": "en-US",
+      "transcript": "[TOMMY]\nHi, I am Tommy DiDario.\n[EMILY]\nAnd I'm Emily Kaufman, The Travel Mom. International travel is booming right now.\n[TOMMY]\nYeah. People are flocking to other countries in record numbers for bucket list vacations.\n[EMILY]\nAnd with the expense of international travel, it's important to protect that investment, and that's where Travel Guard can help.\n[TOMMY]\nMany U.S. health Insurance plans may not cover you when you are traveling internationally, and travel insurance can give you that added protection for emergency medical expenses. Travel Guard also offers 24/7 emergency assistance to help with things like finding an English speaking doctor, translation assistance abroad, and even help booking your flights home.\n[EMILY]\nTravel Guard provides a vast network of service centers located in Asia, Europe, and the Americas, ensuring emergency travel support and medical assistance while you travel internationally.\n[TOMMY]\nWe both sure do enjoy visiting other countries.\n[EMILY]\nI really loved exploring Asia. Thailand is such a beautiful country with incredibly warm people, and Hong Kong was simply electric.\n[TOMMY]\nParis is really special to me. It's where I got engaged. I found Bali to be a really spiritual experience, and soaking in the Blue Lagoon in Iceland was a memory I will cherish forever.\n[EMILY]\nIf you are planning an international getaway, visit travelguard.com,\n[TOMMY]\nor you can give the experts a call at 1-800-208-0745 to see what may be the best plan for your next international vacation.\n[EMILY]\nTravel is the greatest teacher. It's the ideal way to learn about the world, and Travel Guard is the perfect companion for your international travel.\nI'm Emily Kaufman, The Travel Mom.\n[TOMMY]\nAnd I'm Tommy DiDario, wishing you happy travels."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.travelguard.com/video-library/international-travel-insurance#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.travelguard.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Video Library",
+          "item": "https://www.travelguard.com/video-library"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Why is a Travel Guard Travel Insurance Plan So Important for International Travel? [Video]",
+          "item": "https://www.travelguard.com/video-library/international-travel-insurance"
+        }
+      ]
+    }
+  ]
+}
