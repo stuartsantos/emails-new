@@ -39,6 +39,7 @@ Each brand directory has its own `CLAUDE.md` with brand-specific details (Handle
 | claude.ai Google Calendar (`mcp__claude_ai_Google_Calendar__*`) | Remote | Calendar read/write |
 | claude.ai Intuit TurboTax | Remote | Tax assistant tools |
 | claude.ai Microsoft 365 | Remote | Needs authentication before use |
+| claude.ai Adobe Customer Journey Analytics (`mcp__claude_ai_Adobe_Customer_Journey_Analytics__*`) | Remote | CJA reporting — **read `_work-items/cja/CLAUDE.md` before use** (data view IDs, mandatory bot/internal-traffic segments, bootstrap flow) |
 
 If any server fails, run `claude mcp list` to check current health before troubleshooting.
 
