@@ -325,3 +325,54 @@ What to watch at the next checkpoint (Jun 23):
 ### 11.8 Headline summary
 
 > 21 days into the schema rollout, every primary KPI is moving in the right direction. Own-domain citations are up **58.9%**, citation share **doubled** (1% → 2%), domain coverage is up **+5pp**, brand coverage trend reversed from -1 to +1, and the gap to Seven Corners narrowed by 40 mentions. Schema is plausibly contributing to some of this, but the rollout is too recent for confident attribution — competitor decay, content quality, and LLM index churn are also at work. Next checkpoint Jun 23 will tell us how much of this trajectory holds.
+
+---
+
+## 12. Checkpoint scaffold — Jun 23, 2026 (fill in from Otterly)
+
+**Otterly window to pull:** Jun 10 – Jun 23, 2026 (last 14 days, US, all engines, 20 prompts)
+
+### 12.1 Brand-level metrics
+
+| Metric | Baseline (May 7–20) | Previous checkpoint (Jun 9) | Current | 30-day target | On track? |
+|---|---|---|---|---|---|
+| Brand mentions | 452 | 487 | _ | 475 | |
+| Brand rank | #2 | #2 | _ | #2 | |
+| Brand coverage % | 29.1% | 31.2% | _ | 30% | |
+| Brand coverage trend | -1 | +1 | _ | 0 | |
+| Likelihood to buy | 79% (-2) | 83% (+1) | _ | 80% | |
+| Average brand position | 1.94 | 1.76 | _ | 1.80 | |
+| Sentiment score | +63 | +59 | _ | +65 | |
+
+### 12.2 Citation metrics
+
+| Metric | Baseline | Previous checkpoint (Jun 9) | Current | 90-day target | On track? |
+|---|---|---|---|---|---|
+| Own-domain citations | 185 | 294 | _ | 400 | |
+| Citation share | 1% | 2% | _ | 3–4% | |
+| Domain coverage | 8% | 13% | _ | 14% | |
+| Unique travelguard.com URLs cited | (extract from full report) | — | _ | +75% vs. baseline | |
+| Top-cited TG URL citation count | 26 | 34 | _ | 50 | |
+
+### 12.3 Per-prompt citation tracking
+
+Pull from Otterly "Top Prompts by Website Citations."
+
+| Prompt | Baseline | Jun 9 | Current | 90-day target |
+|---|---|---|---|---|
+| How do I get trip protection for a last-minute trip? | 33 | 27 | _ | 40 |
+| Are there travel insurance plans that cover pre-existing conditions? | 29 | 44 | _ | 50 |
+| Are there travel safety services specifically for students studying abroad? | 29 | 26 | _ | 50 |
+| How do I know if my trip protection covers medical emergencies? | 21 | 35 | _ | 35 |
+| Is there a travel insurance plan that covers trip cancellations for any reason? | 14 | 23 | _ | 35 |
+| How do I track the status of my travel insurance claim? | 12 | 20 | _ | 25 |
+| What are the top travel insurance providers for lost baggage coverage? | 12 | 25 | _ | 30 |
+
+### 12.4 Checklist
+
+- [ ] Pull per-engine Otterly breakdown — ChatGPT / Perplexity / Google AI Overviews / Gemini / Copilot (§11.7 item 2 — compare which engines are driving gains to identify where schema has landed)
+- [ ] Take a Google Search Console Performance + Enhancements snapshot (§11.7 item 3 — rich-result impressions take 7–14 days to appear; this window should show first signals)
+- [ ] Re-check the following "what to watch" items from §11.6:
+  - "If citation share keeps climbing past 2% → 3%, that's the strongest schema signal we can hope for at week 5."
+  - "If the per-page schemas (CFAR, pre-existing, plan pages) continue to gain disproportionately, that supports the schema-first hypothesis."
+  - "If the gain plateaus or reverses, then the May 27 - Jun 9 jump was mostly competitor weakness + seasonality, and we need to revisit the rollout pacing."
