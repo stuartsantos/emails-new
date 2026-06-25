@@ -1,0 +1,372 @@
+<!--
+
+  ROW POLICY CONFIRMATION — REFERENCE TEMPLATE (RTL / ARABIC)
+  ===========================================================
+
+  Right-to-left variant of row-reference.html, for Arabic-language ROW
+  policy confirmation emails (e.g. ae/ar, kt/ar, om/ar, qa/ar).
+
+  Derived from: row/_template/row-reference.html (the LTR canonical skeleton).
+  Read that file first — this file documents ONLY the RTL-specific differences;
+  the 12-section structure, Handlebars variables and market variations are
+  identical to the LTR reference.
+
+
+  RTL-SPECIFIC RULES (what differs from the LTR reference)
+  ========================================================
+
+  1. <html lang="ar" dir="rtl">  — language + direction on the root element.
+  2. <body dir="rtl"> and direction:rtl on the outer/content containers.
+  3. Font: Noto Sans Arabic loaded first, with the Latin Noto Sans as fallback
+     for digits/Latin runs. Stack:
+       'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif
+  4. Body text cells use text-align: right.
+  5. Split header (Section 3) is MIRRORED: navy thank-you banner on the RIGHT,
+     traveller photo on the LEFT. Achieved by ordering the banner <td> first
+     (under dir=rtl the first cell renders right-most). On mobile it stacks.
+  6. Bullet lists flip padding-left -> padding-right.
+  7. BIDI ISOLATION (important): wrap left-to-right data — phone numbers,
+     email addresses, policy numbers, URLs — in <span dir="ltr"> so Arabic
+     text around them does not reorder the digits/punctuation. This mirrors
+     the pattern already used in the legacy Arabic source templates.
+  8. Anchors are still pinned to brand blue (#0076be) inline for dark mode.
+  9. Dark mode classes (.body-bg / [data-ogsc]) are unchanged — re-audit text
+     contrast after translation.
+
+  LOGO NOTE: most Arabic markets use the standard Travel Guard logo (below).
+  UAE (ae/ar) is underwritten by LIVA and uses a different logo:
+    https://policy.travelguard.com/content/dam/site-images-docs/ae/LIVA_UAE_Logo.png
+
+-->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="x-apple-disable-message-reformatting">
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
+  <title>Policy Confirmation [Country Name]</title>
+
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <![endif]-->
+  <!--[if !mso]><!-->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;700&family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <!--<![endif]-->
+
+  <style type="text/css">
+    /* CSS Reset */
+    body, table, td, p, a, li { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    img { -ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; }
+    body { margin: 0; padding: 0; width: 100% !important; height: 100% !important; }
+
+    /* Dark Mode */
+    :root { color-scheme: light dark; supported-color-schemes: light dark; }
+
+    @media (prefers-color-scheme: dark) {
+      .body-bg { background-color: #1a1a1a !important; }
+      .content-bg { background-color: #2d2d2d !important; }
+      .dark-text { color: #ffffff !important; }
+      .dark-text-secondary { color: #cccccc !important; }
+    }
+
+    /* Gmail dark mode */
+    [data-ogsc] .body-bg { background-color: #1a1a1a !important; }
+    [data-ogsc] .content-bg { background-color: #2d2d2d !important; }
+    [data-ogsc] .dark-text { color: #ffffff !important; }
+    [data-ogsc] .dark-text-secondary { color: #cccccc !important; }
+
+/*
+
+########COLORS#######
+
+Color Reference (Zurich / Travel Guard):
+- Navy (TG Navy): #003d6e
+- Zurich Blue Dark: #005b94
+- Zurich Blue: #0076be
+- Nightsky Purple: #302261
+- Seafoam/Teal: #64c5b9
+- Cyan accent: #66cbe1
+- Snowmelt border: #9cc7e6
+- Pink (watermelon): #db5989
+- Pink light (watermelon50): #edacc4
+- Green (jungle): #a5d069
+- Glacier blue: #e4edf8
+- Red (highlight): #af0827
+- Body text: #1c252e or #343741
+- Background: #f1f6fb
+
+*/
+@media (max-width: 600px) {
+  .wrapper, .section, .columns {
+    width: 100% !important;
+  }
+  .col-1 {
+    padding: 16px !important;
+    box-sizing: border-box !important;
+  }
+  .header img {
+    width: auto !important;
+    max-width: 100%;
+  }
+}
+
+</style>
+</head>
+<body dir="rtl" style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; width: 100%; height: 100%; line-height: 1;" class="body-bg">
+
+  <!-- ============================================================
+       SECTION 1: PREHEADER
+       Hidden preview text — translate to Arabic. Keep the
+       &zwnj;&nbsp; padding (20 repetitions) after the text.
+       ============================================================ -->
+  <div style="display: none; max-height: 0; overflow: hidden; mso-hide: all;">
+    شكرًا لاختيارك وثيقة تأمين ®Travel Guard
+    &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+  </div>
+
+  <!-- Outer body table — full-width background -->
+  <table role="presentation" dir="rtl" class="body" style="border-collapse: collapse; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; border-spacing: 0; background: #F1F6FB; direction: rtl; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; height: 100%; -moz-font-feature-settings: 'liga' on; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; width: 100%; -moz-osx-font-smoothing: grayscale;">
+    <tr>
+      <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif;">
+
+        <!-- Wrapper — 620px centered container (600px content + 10px spacers) -->
+        <table role="presentation" align="center" class="wrapper" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 620px; margin: auto;">
+          <tr>
+            <!-- Spacer (10px) -->
+            <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding: 16px 0; width: 10px;"> </td>
+            <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif;">
+
+              <!-- Preheader row (empty visible space above card) -->
+              <table role="presentation" class="preheader" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; color: #1C252E;">
+                <tr>
+                  <td style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding: 16px; font-size: 10px;">
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Main white card -->
+              <table role="presentation" align="center" class="main" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; color: #1C252E; background: #fff; border-radius: 2px;">
+                <tr>
+                  <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif;">
+
+                  <!-- ============================================================
+                       SECTION 2: TRAVEL GUARD LOGO
+                       Standard TG logo. UAE (ae/ar) swaps to the LIVA logo —
+                       see LOGO NOTE in the header comment.
+                       ============================================================ -->
+                  <table role="presentation" class="header" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; text-align: center; background: #F1F6FB;">
+                    <tr>
+                      <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif;padding-bottom: 30px; padding-top: 30px;">
+                        <img width="200" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/CM_Travel_Guard_v_RGB.png" alt="Travel Guard" style="border: 0; outline: none; display: block; margin: auto; width: 200px; max-width: 200px; border-radius: 2px 2px 0 0; background: transparent;">
+                      </td>
+                    </tr>
+                  </table>
+
+
+                  <!-- ============================================================
+                       SECTION 3: SPLIT HEADER (MIRRORED FOR RTL)
+                       Navy thank-you banner on the RIGHT, photo on the LEFT.
+                       The banner <td> is ordered first so it renders right-most
+                       under dir=rtl. Translate the thank-you text to Arabic.
+                       ============================================================ -->
+                  <table role="presentation" dir="rtl" class="header" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; text-align: center; direction: rtl;">
+                    <tr>
+                      <td class="spacer" style="margin: 0; border: 0; font-size: 18px; vertical-align: middle; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; color: #fff; padding: 0 40px; font-weight: bold; background-color: #003D6E; text-align: right;">
+                        شكرًا لاختيارك وثيقة تأمين ®Travel Guard
+                      </td>
+                      <td style="margin: 0; padding: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif;">
+                        <img width="235" src="https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/FulfillmentEmail_HeaderImage.jpg" alt="" style="border: 0; outline: none; display: block; margin: auto; width: 235px; border-radius: 2px 2px 0 0;">
+                      </td>
+                    </tr>
+                  </table>
+
+
+                  <!-- Content columns wrapper -->
+                  <table role="presentation" dir="rtl" class="columns" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; direction: rtl;">
+                    <tr>
+                      <td class="col-1" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding: 40px; width: 600px; text-align: right;">
+
+
+                        <!-- ============================================================
+                             SECTION 4: GREETING + POLICY NUMBER + VIEW POLICY LINK
+                             Wrap the policy number in <span dir="ltr"> so digits
+                             keep their order inside Arabic text.
+                             ============================================================ -->
+                        <table role="presentation" class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
+                          <tr>
+                            <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding-bottom: 25px; text-align: right;">
+                              مرحبًا {{policyDetail-primaryInsured-firstName}} {{policyDetail-primaryInsured-lastName}}،<br>
+                              <br>
+                              شكرًا لاختيارك وثيقة تأمين ®Travel Guard!<br>
+                              رقم وثيقتك هو <span dir="ltr">{{policyDetail-policyNumber}}</span>.<br>
+                              <br>
+                              يرجى {{ViewPolicyURL}} للاطلاع على <b>شهادة التأمين الخاصة بك (COI)</b> و<b>نص وثيقتك</b>.<br>
+                              لتسجيل الدخول، ستحتاج إلى رقم وثيقتك واسم العائلة.
+                            </td>
+                          </tr>
+                        </table>
+
+
+                        <!-- ============================================================
+                             SECTION 5: WHAT AM I COVERED FOR?
+                             ============================================================ -->
+                        <table role="presentation" class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; text-align: right; margin-bottom: 16px;">
+                          <tr>
+                            <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; padding-top: 16px; color: #003D6E; border-bottom: 1px solid #9CC7E6; text-align: right;">ما هي التغطية المتوفرة لي؟</td>
+                          </tr>
+                        </table>
+
+                        <table role="presentation" class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
+                          <tr>
+                            <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding-bottom: 25px; text-align: right;">
+                              لقد قمت بشراء {{ProductNamePlaceHolder}}. المنافع المشمولة في وثيقتك مذكورة في شهادة التأمين ونص الوثيقة.<br>
+                              <br>
+                              يجب أن تأخذ الوقت الكافي لقراءة نص وثيقتك للتأكد من أنه يلبي متطلباتك الخاصة قبل السفر. توفر هذه الوثيقة تغطية لحالات وأحداث محددة أثناء رحلتك. هناك بعض الاستثناءات التي قد تنطبق في ظروف معينة، لذا من الأفضل مراجعة نص الوثيقة في أقرب وقت ممكن.
+                            </td>
+                          </tr>
+                        </table>
+
+
+                        <!-- ============================================================
+                             SECTION 6: ELIGIBILITY REMINDERS
+                             Bullet list — note padding-right (not padding-left) for RTL.
+                             ============================================================ -->
+                        <table role="presentation" class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; text-align: right; margin-bottom: 16px;">
+                          <tr>
+                            <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; padding-top: 16px; color: #003D6E; border-bottom: 1px solid #9CC7E6; text-align: right;">تنبيه حول استحقاق التأمين:</td>
+                          </tr>
+                        </table>
+
+                        <table role="presentation" class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
+                          <tr>
+                            <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding-bottom: 25px; text-align: right;">
+                              <ul style="margin: 10px 0; padding-right: 20px; padding-left: 0;">
+                                <li>يجب أن يكون جميع الأشخاص المؤمن عليهم مقيمين في {{policyDetail-address-country}}.</li>
+                                <li>يرجى مراجعة وثيقتك للحصول على القائمة الكاملة لمتطلبات استحقاق التأمين.</li>
+                              </ul>
+                            </td>
+                          </tr>
+                        </table>
+
+
+                        <!-- ============================================================
+                             SECTION 7: POLICY QUESTIONS / CUSTOMER SERVICE
+                             LTR data (phone, email) wrapped in <span dir="ltr">.
+                             ============================================================ -->
+                        <table role="presentation" class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; text-align: right; margin-bottom: 16px;">
+                          <tr>
+                            <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; padding-top: 16px; color: #003D6E; border-bottom: 1px solid #9CC7E6; text-align: right;">ماذا لو كان لدي سؤال حول الوثيقة؟</td>
+                          </tr>
+                        </table>
+
+                        <table role="presentation" class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
+                          <tr>
+                            <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding-bottom: 25px; text-align: right;">
+                              يرجى الاتصال بالرقم <span dir="ltr"><b>{{CustomerServicesContactNumber}}</b></span>، {{CustomerServiceOperatingHours}} أو مراسلتنا عبر البريد الإلكتروني <span dir="ltr"><a style="color: #0076be;" href="mailto:{{CustomerServicesEmailAddress}}">{{CustomerServicesEmailAddress}}</a></span> مع ذكر رقم وثيقتك.<br>
+                              <br>
+                              إذا كنت ترغب في الحصول على مستندات وثيقتك عبر البريد، يمكنك الاتصال بنا أو مراسلتنا عبر البريد الإلكتروني باستخدام المعلومات الواردة أعلاه لتقديم طلب.
+                            </td>
+                          </tr>
+                        </table>
+
+
+                        <!-- ============================================================
+                             SECTION 8: EMERGENCY OVERSEAS / ASSISTANCE
+                             ============================================================ -->
+                        <table role="presentation" class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; text-align: right; margin-bottom: 16px;">
+                          <tr>
+                            <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; padding-top: 16px; color: #003D6E; border-bottom: 1px solid #9CC7E6; text-align: right;">ماذا لو تعرضت لحالة طارئة خارج بلدك؟</td>
+                          </tr>
+                        </table>
+
+                        <table role="presentation" class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
+                          <tr>
+                            <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding-bottom: 25px; text-align: right;">
+                              اتصل بخدمة مساعدة Travel Guard في أي وقت على الرقم <span dir="ltr"><b>{{AssistanceServicesContactNumber}}</b></span>.<br>
+                              مراكز الخدمة لدينا مفتوحة على مدار الساعة طوال أيام الأسبوع.
+                              <!-- اختياري: للأسواق التي تتضمن بريد المساعدة:
+                              يمكنك أيضًا مراسلتنا على <span dir="ltr"><a style="color: #0076be;" href="mailto:{{AssistanceServicesEmailAddress}}">{{AssistanceServicesEmailAddress}}</a></span>.
+                              -->
+                            </td>
+                          </tr>
+                        </table>
+
+
+                        <!-- ============================================================
+                             SECTION 9: HOW DO I FILE A CLAIM?
+                             ============================================================ -->
+                        <table role="presentation" class="head" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; text-align: right; margin-bottom: 16px;">
+                          <tr>
+                            <td class="spacer" style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding: 16px 0; font-size: 18px; font-weight: bold; padding-top: 16px; color: #003D6E; border-bottom: 1px solid #9CC7E6; text-align: right;">كيف يمكنني تقديم مطالبة؟</td>
+                          </tr>
+                        </table>
+
+                        <table role="presentation" class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
+                          <tr>
+                            <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding-bottom: 25px; text-align: right;">
+                              اتصل بفريق المطالبات لدينا على الرقم <span dir="ltr"><b>{{ClaimsContactNumber}}</b></span>، {{ClaimsOperatingHours}} أو راسلنا عبر البريد الإلكتروني <span dir="ltr"><a style="color: #0076be;" href="mailto:{{ClaimsEmailAddress}}">{{ClaimsEmailAddress}}</a></span>.
+                            </td>
+                          </tr>
+                        </table>
+
+
+                        <!-- ============================================================
+                             SECTION 10: ALTERNATIVE POLICY LINKS — {{AltViewPolicyLinks}}
+                             OMITTED for Qatar Airways markets (alt language links
+                             removed per requirements). Keep removed.
+                             ============================================================ -->
+
+
+                        <!-- ============================================================
+                             SECTION 11: SIGN-OFF
+                             ============================================================ -->
+                        <table role="presentation" class="text" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; margin: 0 auto; line-height: 1.5;">
+                          <tr>
+                            <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding-top: 25px; padding-bottom: 0; text-align: right;">
+                              نتمنى لك رحلة آمنة!<br>
+                              <b style="color: #003D6E;">Travel Guard</b>
+                            </td>
+                          </tr>
+                        </table>
+
+
+                      </td>
+                    </tr>
+                  </table>
+
+                  </td>
+                </tr>
+              </table>
+
+              <!-- ============================================================
+                   SECTION 12: FOOTER (empty placeholder)
+                   ============================================================ -->
+              <table role="presentation" class="footer" style="border-collapse: collapse; border-spacing: 0; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; width: 100%; color: #343741;">
+                <tr>
+                  <td style="margin: 0; border: 0; vertical-align: baseline; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding: 16px; font-size: 10px; text-align: right;">
+                  </td>
+                </tr>
+              </table>
+
+            </td>
+            <!-- Spacer (10px) -->
+            <td class="spacer" style="margin: 0; border: 0; font-size: 16px; vertical-align: baseline; font-family: 'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif; padding: 16px 0; width: 10px;"></td>
+          </tr>
+        </table>
+
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

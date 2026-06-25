@@ -10,7 +10,7 @@ HTML email templates for travel insurance products across multiple brands and in
 | `digdrct/` | Travel Guard — digital direct | US, CA, IT, MY, SG | 16 |
 | `agents/` | Travel Guard — agent-facing | US, CA | 3 |
 | `admin/` | Travel Guard — admin/internal | US | 4 |
-| `row/` | Zurich Travel Guard | 16 countries (AT, BE, CA, CH, CZ, DE, ES, FR, GB, IE, IT, NL, NZ, PT, SG, US) | 29 |
+| `row/` | Zurich Travel Guard | 23 countries (AE, AT, BE, CA, CH, CZ, DE, ES, FR, GB, IE, IT, KT, LB, NL, NO, NZ, OM, PT, QA, SE, SG, US) | 42 |
 | `expedia/` | Expedia Travel Insurance | 19 markets (AT, BE, CA, CH, DE, DK, ES, FI, FR, HK, IE, IT, MX, NL, NO, NZ, SE, SG, US) | 30 |
 | `qantas/` | Qantas Travel Insurance | AU, NZ | 24 |
 | `jetstar/` | Jetstar Travel Insurance | AU, NZ, SG | 10 |
@@ -108,7 +108,7 @@ The project is transitioning from **AIG Travel** to **Travel Guard / Zurich** br
 | Brand | Status |
 |-------|--------|
 | TG US (Zurich) | Complete |
-| ROW (16 countries) | Complete |
+| ROW (23 countries) | Complete |
 | Expedia | Complete |
 | Qantas NZ | Complete |
 | Qantas AU | Planned |

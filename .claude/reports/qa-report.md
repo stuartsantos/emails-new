@@ -1,18 +1,22 @@
 # Email Template QA Report
 
-**Scanned:** row/_template (1 templates)
-**Date:** 2026-05-03 23:56 UTC
-**Pass:** 1 | **Warn:** 0 | **Fail:** 0 | **Total issues:** 0
+**Scanned:** row (45 templates)
+**Date:** 2026-06-25 15:28 UTC
+**Pass:** 43 | **Warn:** 2 | **Fail:** 0 | **Total issues:** 2
 
 ## Summary by Issue Type
 
 | Issue | Files Affected | Priority |
 |-------|---------------|----------|
+| UAT/QA environment URLs | 1 | HIGH |
+| AIG branding references | 1 | HIGH |
 
 ## Results by Brand
 
-### row/ (1 files: 1 pass, 0 warn, 0 fail)
+### row/ (45 files: 43 pass, 2 warn, 0 fail)
 
+- ⚠️ `row/ca/en/policy-confirmation.html` — UAT/QA env URL (L15)
+- ⚠️ `row/us/en/lhgroup-old-policy-confirmation.html` — AIG branding (L22)
 
 ---
 
