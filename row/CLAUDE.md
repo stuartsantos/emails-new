@@ -50,9 +50,18 @@ Legacy `{Variable}` (single-brace) placeholders should be converted to the moder
 
 ## Logo
 
-- **Travel Guard + Zurich logo:** `https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/CM_Travel_Guard_v_RGB.png` (200px width)
-- Used by all ROW templates **except UAE** (different underwriter).
-- **UAE (ae/en, ae/ar)** is underwritten by **LIVA** and uses its own logo: `https://policy.travelguard.com/content/dam/site-images-docs/ae/LIVA_UAE_Logo.png` (140px width).
+- **Travel Guard + Zurich logo:** `https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/CM_Travel_Guard_v_RGB.png` (200px width) — default for ROW templates.
+- Several Qatar Airways markets use the **underwriter's own logo** instead, each hosted on the CDN and referenced by absolute URL (applied to both en and ar):
+
+| Market | Underwriter (provisional) | Hosted logo URL |
+|--------|---------------------------|-----------------|
+| ae | LIVA | `https://policy.travelguard.com/content/dam/site-images-docs/ae/LIVA_UAE_Logo.png` (140px) |
+| kt | GIG | `https://www.travelguard.com/content/dam/tg-documents/qatar/giga-logo-kt.png` |
+| lb | GIG | `https://www.travelguard.com/content/dam/tg-documents/qatar/gig-logo-lb.png` |
+| om | Sukoon | `https://www.travelguard.com/content/dam/tg-documents/qatar/sukoon-logo.png` |
+| qa | Qatar General Insurance | `https://www.travelguard.com/content/dam/tg-documents/qatar/qa-gen-logo.png` |
+
+> The KT/LB/OM/QA logos live in the CDN folder `/content/dam/tg-documents/qatar/`. The local PNG copies under `row/{country}/` are source assets only — templates reference the hosted URLs, not the local files. The underwriter names (and therefore `alt` text) are provisional and need confirmation.
 
 ## Rebranding Rules (AIG Travel → Travel Guard)
 
