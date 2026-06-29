@@ -255,6 +255,9 @@ Any `linear-gradient` td/div needs a `bgcolor` attribute + leading `background-c
 ### Anchor color pinning
 Pin every `<a href>` with inline `style="color: #0076be;"` (brand blue). Email clients auto-adjust unstyled anchors to off-brand colors in dark mode. Without inline pinning, dark-mode rendering can break brand consistency (April 2026 sweep — see commit `9773f12`).
 
+### Two-column header image gap
+In the split header (image cell + navy thank-you banner), the image cell must carry an explicit width so auto table-layout can't hand it extra space — otherwise a `margin: auto` image floats with a white gap on each side. The gap is invisible when the banner text is long but obvious when it's short (e.g. the Arabic/RTL templates). Fix: put `width="235"` + `width: 235px` on the image `<td>`, add `font-size: 0; line-height: 0` to kill inline whitespace, and give the `<img>` `width: 235px; max-width: 235px` with **no** `margin: auto`. Reference pattern: `digdrct/us/en/policy-confirmation-new.html` (the hero cell). Applied to all ROW Qatar Airways templates + both `row/_template/` skeletons (June 2026).
+
 ## QA Tooling
 
 Two existing scripts cover the same checks I keep manually grepping for during sweeps. Use them before reinventing one-off greps.
