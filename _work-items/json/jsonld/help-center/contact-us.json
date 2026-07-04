@@ -13,16 +13,7 @@
       "breadcrumb": { "@id": "https://www.travelguard.com/help-center/contact-us#breadcrumb" },
       "mainEntity": {
         "@type": "InsuranceAgency",
-        "@id": "https://www.travelguard.com/#organization",
-        "contactPoint": [
-          {
-            "@type": "ContactPoint",
-            "telephone": "+1-800-826-5248",
-            "contactType": "customer service",
-            "areaServed": "US",
-            "availableLanguage": ["English", "Spanish"]
-          }
-        ]
+        "@id": "https://www.travelguard.com/#organization"
       }
     },
     {
