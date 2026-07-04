@@ -1,1 +1,0 @@
-need the tg.com policy confo email to be mocked up to look a bit more like United-  the header feature image to be United blue with united and TG logos and an image of some sort.
