@@ -20,6 +20,7 @@ The KPI report is two checkpoints behind (Jun 23 pending; ~day 48 now). Pending,
 | `TravelGuard-Schema-Audit.html` | Shareable rendered copy of the audit — keep in sync when editing the .md |
 | `TravelGuard-KPI-Tracking.md` | Before/after measurement plan + dated checkpoints (§11 = first post-deploy checkpoint, Jun 9 2026) |
 | `TravelGuard-KPI-Report.html` | Shareable rendered KPI scorecard (one chart per metric, self-contained) — update at each checkpoint by editing the `SERIES`/`MILESTONES` blocks in its `<script>`; keep in sync with `TravelGuard-KPI-Tracking.md` |
+| `TravelGuard-KPI-Executive-Summary.html` | VP/Director-level one-pager (jargon-free, self-contained) derived from the KPI report — highlights only. Refresh its stat tiles + competitor bar when the headline numbers move at a checkpoint |
 | `jsonld/` | The JSON-LD payloads, one file per page (see layout below) |
 
 ## Deployment state (as of 2026-06-11)

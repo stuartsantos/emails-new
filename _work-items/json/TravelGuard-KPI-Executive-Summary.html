@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Guard — AI Search Performance · Executive Summary</title>
+<style>
+  :root {
+    --tg-navy: #003d6e;
+    --zurich-blue: #0076be;
+    --zurich-blue-dark: #005b94;
+    --seafoam: #64c5b9;
+    --glacier: #e4edf8;
+    --glacier-50: #f1f6fb;
+    --snowmelt: #9cc7e6;
+    --midnight: #1c252e;
+    --midnight-50: #555b62;
+    --midnight-10: #e6e7e8;
+    --green-ink: #3c6b12;
+    --green-bg: #e8f3d8;
+    --green-rule: #6fae2f;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+    color: var(--midnight);
+    background: var(--glacier-50);
+    margin: 0;
+    line-height: 1.6;
+    font-size: 16px;
+  }
+
+  .page {
+    max-width: 920px;
+    margin: 0 auto;
+    background: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 8px 32px rgba(0,61,110,0.06);
+  }
+
+  /* Masthead */
+  header.masthead {
+    background: var(--tg-navy);
+    background-image: linear-gradient(135deg, #003d6e 0%, #002a4d 100%);
+    color: #fff;
+    padding: 40px 52px 34px;
+  }
+  header.masthead .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--seafoam);
+    margin: 0 0 12px;
+  }
+  header.masthead h1 {
+    margin: 0 0 12px;
+    font-size: 32px;
+    line-height: 1.15;
+    font-weight: 700;
+  }
+  header.masthead .subtitle {
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #dbe8f4;
+    max-width: 720px;
+  }
+  header.masthead .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 24px;
+    font-size: 13px;
+    color: #a9c6de;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  header.masthead .meta strong { color: #fff; font-weight: 600; }
+
+  main { padding: 32px 52px 20px; }
+
+  .lead {
+    font-size: 17px;
+    line-height: 1.6;
+    margin: 0 0 26px;
+    color: var(--midnight);
+  }
+  .lead strong { color: var(--tg-navy); }
+
+  /* Stat tiles */
+  .tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+    margin: 0 0 30px;
+  }
+  .tile {
+    border: 1px solid var(--glacier);
+    border-left: 5px solid var(--green-rule);
+    border-radius: 12px;
+    padding: 18px 20px;
+    background: #fff;
+  }
+  .tile.accent { border-left-color: var(--seafoam); }
+  .tile .num {
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--tg-navy);
+    line-height: 1;
+    letter-spacing: -0.01em;
+  }
+  .tile .num .up { font-size: 20px; color: var(--green-rule); font-weight: 700; vertical-align: 4px; }
+  .tile .label {
+    font-size: 14.5px;
+    font-weight: 700;
+    color: var(--midnight);
+    margin: 9px 0 4px;
+  }
+  .tile .sub {
+    font-size: 13px;
+    color: var(--midnight-50);
+    line-height: 1.45;
+    margin: 0;
+  }
+  /* make the lead tile span full width on wide layouts */
+  .tile.hero { grid-column: 1 / -1; display: flex; align-items: center; gap: 22px; border-left-color: var(--seafoam); background: var(--glacier-50); }
+  .tile.hero .num { font-size: 52px; }
+  .tile.hero .txt { flex: 1; }
+
+  /* Why it matters */
+  .callout {
+    background: var(--glacier);
+    border-left: 4px solid var(--seafoam);
+    padding: 18px 22px;
+    border-radius: 0 10px 10px 0;
+    margin: 0 0 30px;
+  }
+  .callout h2 {
+    margin: 0 0 8px;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--tg-navy);
+  }
+  .callout p { margin: 0; font-size: 15px; line-height: 1.6; }
+
+  /* Competitor bar chart */
+  .chart { margin: 0 0 30px; }
+  .chart h2 {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--tg-navy);
+    margin: 0 0 4px;
+  }
+  .chart .caption { font-size: 13px; color: var(--midnight-50); margin: 0 0 16px; }
+  .bar-row { display: flex; align-items: center; gap: 12px; margin: 8px 0; }
+  .bar-name { width: 165px; flex-shrink: 0; font-size: 14px; text-align: right; color: var(--midnight); }
+  .bar-name.lead-brand { font-weight: 800; color: var(--tg-navy); }
+  .bar-track { flex: 1; background: var(--glacier-50); border-radius: 6px; overflow: hidden; }
+  .bar-fill { height: 26px; border-radius: 6px; background: var(--snowmelt); }
+  .bar-fill.lead-brand { background: linear-gradient(90deg, var(--zurich-blue), var(--tg-navy)); }
+  .bar-val { font-size: 13.5px; color: var(--midnight-50); width: 74px; flex-shrink: 0; }
+  .bar-val strong { color: var(--tg-navy); }
+
+  /* The ask */
+  .ask {
+    background: var(--tg-navy);
+    background-image: linear-gradient(135deg, #003d6e 0%, #00579c 100%);
+    color: #fff;
+    border-radius: 12px;
+    padding: 22px 26px;
+    margin: 0 0 8px;
+  }
+  .ask h2 {
+    margin: 0 0 8px;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--seafoam);
+  }
+  .ask p { margin: 0; font-size: 15.5px; line-height: 1.6; color: #eaf3fb; }
+  .ask strong { color: #fff; }
+
+  footer.docfoot {
+    padding: 20px 52px 34px;
+    color: var(--midnight-50);
+    font-size: 12.5px;
+    border-top: 1px solid var(--midnight-10);
+  }
+  footer.docfoot code {
+    font-family: 'SFMono-Regular', Consolas, Menlo, monospace;
+    background: var(--glacier);
+    color: var(--tg-navy);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+
+  @media (max-width: 700px) {
+    header.masthead, main, footer.docfoot { padding-left: 22px; padding-right: 22px; }
+    header.masthead h1 { font-size: 25px; }
+    .tiles { grid-template-columns: 1fr; }
+    .tile.hero { flex-direction: column; align-items: flex-start; gap: 6px; }
+    .tile.hero .num { font-size: 44px; }
+    .bar-name { width: 110px; font-size: 13px; }
+    .bar-val { width: 58px; font-size: 12px; }
+  }
+
+  @media print {
+    body { background: #fff; }
+    .page { box-shadow: none; max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="masthead">
+    <p class="eyebrow">AI Search Performance · Executive Summary</p>
+    <h1>Travel Guard is now #1 in AI search</h1>
+    <p class="subtitle">We reworked how AI assistants — ChatGPT, Perplexity, Google&nbsp;AI and Copilot — read travelguard.com. Seven weeks in, the brand leads its category in AI answers, and the traffic those answers send us is the highest-intent on the site.</p>
+    <ul class="meta">
+      <li><strong>As of:</strong> Jul 6 2026</li>
+      <li><strong>Elapsed:</strong> 48 days since launch</li>
+      <li><strong>Market:</strong> United States</li>
+    </ul>
+  </header>
+
+  <main>
+
+    <p class="lead">More and more travelers research insurance by asking an AI assistant instead of scrolling a search page. Our goal was simple: make Travel Guard <strong>the brand those assistants name and cite</strong>. In under seven weeks, Travel Guard moved from #2 to <strong>#1</strong> in its category, is pulled into far more AI answers than before, and — critically — the visitors who arrive from AI convert at roughly <strong>twice</strong> the site-wide rate.</p>
+
+    <div class="tiles">
+
+      <div class="tile hero">
+        <div class="num">#1</div>
+        <div class="txt">
+          <div class="label">Brand rank in AI answers &mdash; up from #2</div>
+          <p class="sub">Travel Guard is now the most-mentioned travel insurer in AI responses, edging ahead of Seven Corners for the first time. It's the clearest signal that the work is landing.</p>
+        </div>
+      </div>
+
+      <div class="tile">
+        <div class="num"><span class="up">&#9650;</span>&nbsp;55%</div>
+        <div class="label">More AI answers cite travelguard.com</div>
+        <p class="sub">The site is now pulled into about 1.5&times; as many AI responses as at launch.</p>
+      </div>
+
+      <div class="tile">
+        <div class="num">34%</div>
+        <div class="label">Share of AI answers that mention us</div>
+        <p class="sub">Up from 29% — already past the 90-day goal, at Day 48.</p>
+      </div>
+
+      <div class="tile accent">
+        <div class="num">~2&times;</div>
+        <div class="label">AI visitors start a quote at 2&times; the site rate</div>
+        <p class="sub">Low volume today, but the highest-intent traffic source on the site — and it grows as AI search grows.</p>
+      </div>
+
+      <div class="tile">
+        <div class="num">3 of 3</div>
+        <div class="label">Priority pages beat their 90-day goal</div>
+        <p class="sub">Pre-existing conditions, cancel-for-any-reason and lost-baggage — cleared in 48 days, not 90.</p>
+      </div>
+
+    </div>
+
+    <div class="callout">
+      <h2>Why it matters</h2>
+      <p>AI assistants are fast becoming the first stop when people research travel insurance. When an assistant names and links Travel Guard, we reach the buyer at the exact moment of decision — and, unlike a paid ad, that placement is earned. The payoff is already visible in the funnel: visitors who arrive from an AI answer start a quote at about twice the rate of the average visitor.</p>
+    </div>
+
+    <div class="chart">
+      <h2>Brand mentions in AI answers — vs. competitors</h2>
+      <p class="caption">How often each brand is named across a standard set of travel-insurance questions (higher is better).</p>
+
+      <div class="bar-row">
+        <div class="bar-name lead-brand">Travel Guard</div>
+        <div class="bar-track"><div class="bar-fill lead-brand" style="width:100%;"></div></div>
+        <div class="bar-val"><strong>521 · #1</strong></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-name">Seven Corners</div>
+        <div class="bar-track"><div class="bar-fill" style="width:96.7%;"></div></div>
+        <div class="bar-val">504</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-name">World Nomads</div>
+        <div class="bar-track"><div class="bar-fill" style="width:69.1%;"></div></div>
+        <div class="bar-val">360</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-name">Travel Insured Int'l</div>
+        <div class="bar-track"><div class="bar-fill" style="width:51.8%;"></div></div>
+        <div class="bar-val">270</div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-name">Berkshire Hathaway</div>
+        <div class="bar-track"><div class="bar-fill" style="width:41.3%;"></div></div>
+        <div class="bar-val">215</div>
+      </div>
+    </div>
+
+    <div class="ask">
+      <h2>What's next &amp; the ask</h2>
+      <p>Part of the #1 finish reflects a softening competitive field, so the lead isn't guaranteed. To <strong>lock it in</strong>, the remaining optimized pages need to go live on the site — the work is built and waiting on deployment. Next full readout is the <strong>90-day milestone in mid-August</strong>, when we'll see how much of this trajectory holds.</p>
+    </div>
+
+  </main>
+
+  <footer class="docfoot">
+    Travel Guard AI Search Performance · Executive Summary · Data as of Jul 6 2026 (Day 48), US market · Full technical scorecard: <code>TravelGuard-KPI-Report.html</code>
+  </footer>
+
+</div>
+</body>
+</html>
