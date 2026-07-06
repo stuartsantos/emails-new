@@ -317,8 +317,8 @@
       <li><strong>Deploy the built-but-undeployed baggage &amp; assistance JSON-LD</strong> — both are already earning top-cited-URL positions on the site-wide bundle alone; the deploy is the reinforcement. Confirm it lands so the Day 90 pull can measure the lift.</li>
       <li><strong>Prioritise the student-safety page</strong> — its prompt has declined every pull (29 → 18, now below baseline) and the page has no dedicated schema deployed. Build/deploy schema for it, or investigate what's displacing it.</li>
       <li><strong>Pull a per-engine Otterly breakdown at Day 90</strong> (ChatGPT / Perplexity / Google AI Overviews / Gemini / Copilot) — still outstanding from Jun 9. The clearest natural experiment for isolating schema effect by index refresh speed.</li>
-      <li><strong>Fill Tier 4 from the work laptop</strong> — the Adobe CJA connector (data view <em>TGUS (Prod)</em>) is reachable there; the VPN on the personal laptop blocked the report endpoint. Pull Sessions + Prequote Start segmented by AI referrers.</li>
-      <li><strong>Re-pull GSC</strong> for the first post-deploy rich-result impressions (FAQ / Product / Breadcrumb rows appearing is the cleanest GSC signal the markup is recognised).</li>
+      <li><strong>Fill Tier 4 from Adobe CJA</strong> <span class="badge ok">✓ Done</span> — backfilled across all four windows (§10). AI-referral traffic is ~0.3–0.5% of sessions but starts quotes at ~2× the site rate; ChatGPT dominates. Re-pull the referrer + <code>utm_source</code> AI figures at Day 90.</li>
+      <li><strong>Re-pull GSC</strong> <span class="badge ok">✓ Done Jul 6</span> — first post-deploy checkpoint added to §9. Still no FAQ / Product / Breadcrumb / HowTo appearance types (only Translated + Videos); site-wide flat-to-up, indexing improved. Re-check Search Appearance after the per-page schema deploys live.</li>
       <li><strong>Trustpilot <code>aggregateRating</code> refreshed Jul 6</strong> <span class="badge ok">✓ Done</span> — score held at 4.1, review count moved 1,600 → <strong>1,711</strong>; homepage + reviews-page JSON updated (awaiting deploy on those live pages). Re-pull the widget-data endpoint each checkpoint.</li>
     </ol>
 
@@ -341,15 +341,44 @@
     </table>
     <p class="kpi-meta">The Search Appearance breakdown showed only <em>Translated results</em> and <em>Videos</em> — no FAQ, Product, HowTo, Breadcrumb, or Merchant rich results. After the per-page schema deploys, watch for those rows to appear here; their first nonzero impressions are the cleanest GSC signal that the markup is recognized.</p>
 
+    <h4 style="margin:20px 0 6px;">Jul 6 re-pull (Day 48) — first post-deploy GSC checkpoint</h4>
+    <p>Captured <strong>2026-07-06</strong>, GSC last 3 months (<strong>Apr 6 – Jul 6 2026</strong>). Rolling 3-month window, shifted ~1 month forward from the baseline's Mar 10 – Jun 8, so the methodology matches but the window isn't identical.</p>
+    <table>
+      <thead><tr><th>Metric</th><th>Baseline (Jun 11)</th><th>Jul 6 (Day 48)</th><th>Read</th></tr></thead>
+      <tbody>
+        <tr><td>Site-wide clicks</td><td>94.8K</td><td>94.5K</td><td>flat</td></tr>
+        <tr><td>Site-wide impressions</td><td>25.3M</td><td><strong>26.9M</strong></td><td>+6%</td></tr>
+        <tr><td>Site-wide avg position</td><td>9</td><td><strong>8.7</strong></td><td>slightly better</td></tr>
+        <tr><td>Site-wide CTR</td><td>0.4%</td><td>0.4%</td><td>flat</td></tr>
+        <tr><td>Plan-page clicks <span style="color:var(--midnight-50);font-size:12px;">(<code>/travel-insurance/plans</code>)</span></td><td>6.22K</td><td>5.92K</td><td>−5%</td></tr>
+        <tr><td>Plan-page impressions</td><td>1.61M</td><td>1.55M</td><td>−4%</td></tr>
+        <tr><td>Plan-page avg position</td><td>11.9</td><td>12.4</td><td>slightly worse</td></tr>
+        <tr><td>FAQ / Product / HowTo / Breadcrumb impr</td><td>0</td><td><strong>0</strong></td><td>still absent — only Translated + Videos present</td></tr>
+        <tr><td>Video appearance <span style="color:var(--midnight-50);font-size:12px;">(impr / clicks)</span></td><td>73,446 / 14</td><td>123,775 / 25</td><td>+69% impr</td></tr>
+        <tr><td>Translated results <span style="color:var(--midnight-50);font-size:12px;">(impr / clicks)</span></td><td>39,854 / 112</td><td>48,730 / 135</td><td>+22% impr</td></tr>
+        <tr><td>Pages indexed</td><td>389</td><td><strong>394</strong></td><td>+5</td></tr>
+        <tr><td>Pages not indexed</td><td>2.51K</td><td><strong>1.79K</strong></td><td>−29% (10 reasons)</td></tr>
+        <tr><td>Branded query <span style="color:var(--midnight-50);font-size:12px;">(clicks / impr / CTR / pos)</span></td><td>28.1K / 284K / 9.9% / 4.9 <span style="color:var(--midnight-50);font-size:12px;">("travel guard" exact)</span></td><td>50.7K / 772K / 6.6% / 5.5 <span style="color:var(--midnight-50);font-size:12px;">(GSC "Branded" group)</span></td><td>scope differs — not 1:1</td></tr>
+      </tbody>
+    </table>
+    <p class="kpi-meta"><strong>Read:</strong> The key schema signal — new rich-result appearance types — is <strong>still zero</strong>. Search Appearance shows only <em>Translated results</em> and <em>Videos</em> (1–2 of 2), no FAQ / Product / Breadcrumb / HowTo / Merchant rows. That's expected this early: only the homepage, FAQ, plans listing and 6 plan pages are deployed live (Jun 11), and Google has deprecated the FAQ rich result for most sites, so a nonzero FAQ row may never appear. Site-wide is flat-to-up (impressions +6%, position 9 → 8.7); plan pages eased slightly on a window shifted ~1 month forward into summer. Indexing improved — indexed 389 → 394, not-indexed fell 2.51K → 1.79K (Google cleared ~720 URLs). The branded-query row isn't apples-to-apples: the baseline used the exact "travel guard" query, this pull is GSC's broader "Branded" query group — re-filter to Query = "travel guard" next time for a clean position comparison.</p>
+
     <h2 id="tier4">10. Tier 4 — business metrics (Adobe CJA)</h2>
+    <p>Backfilled <strong>Jul 6 2026</strong> from Adobe Customer Journey Analytics across all four checkpoint windows. Source: data view <strong>TGUS Dataview (Prod)</strong> (<code>dv_6887e717e9927cf644bbd0dc</code>), global segment <strong>TGUS – External US Users</strong> (bot/internal filtered). <strong>AI-referral</strong> = sessions whose <em>Referrer URL</em> (<code>variables/web.webReferrer.URL</code>) host is <code>chatgpt.com</code>, <code>gemini.google.com</code>, <code>perplexity.ai</code>, or <code>copilot.microsoft.com</code>, summed. Quote start = Prequote Start (<code>metrics/_aigtravelinc.event.purchase.prequoteStart</code>). Windows are the same 14-day (13-day for Jul 6) spans as the Otterly checkpoints.</p>
+    <table>
+      <thead><tr><th>Metric</th><th>Baseline<br><span style="font-weight:400;color:rgba(255,255,255,0.78);">May 6–19</span></th><th>Jun 9<br><span style="font-weight:400;color:rgba(255,255,255,0.78);">May 27–Jun 9</span></th><th>Jun 23<br><span style="font-weight:400;color:rgba(255,255,255,0.78);">Jun 10–23</span></th><th>Jul 6<br><span style="font-weight:400;color:rgba(255,255,255,0.78);">Jun 24–Jul 6</span></th></tr></thead>
+      <tbody>
+        <tr><td>Total sessions</td><td>111,310</td><td>111,245</td><td>91,254</td><td>78,776</td></tr>
+        <tr><td><strong>AI-referral sessions</strong></td><td><strong>396</strong></td><td><strong>558</strong></td><td><strong>461</strong></td><td><strong>265</strong></td></tr>
+        <tr><td>AI-referral share of sessions</td><td>0.36%</td><td>0.50%</td><td>0.51%</td><td>0.34%</td></tr>
+        <tr><td>Total prequote starts</td><td>34,132</td><td>32,409</td><td>29,469</td><td>28,653</td></tr>
+        <tr><td><strong>Prequote starts from AI referral</strong></td><td><strong>219</strong></td><td><strong>354</strong></td><td><strong>289</strong></td><td><strong>112</strong></td></tr>
+        <tr><td>AI quote-start rate <span style="color:var(--midnight-50);font-size:12px;">(vs site-wide)</span></td><td>55% <span style="color:var(--midnight-50);">(31%)</span></td><td>63% <span style="color:var(--midnight-50);">(29%)</span></td><td>63% <span style="color:var(--midnight-50);">(32%)</span></td><td>42% <span style="color:var(--midnight-50);">(36%)</span></td></tr>
+      </tbody>
+    </table>
+    <p class="kpi-meta"><strong>Per-engine (sessions / quote starts):</strong> ChatGPT dominates every window (346/206 · 520/344 · 417/280 · 231/105); Gemini (35/10 · 23/6 · 28/5 · 17/2), Perplexity (9/2 · 9/2 · 10/2 · 9/3) and Copilot (6/1 · 6/2 · 6/2 · 8/2) are single- to low-double-digit. Organic-vs-AI conversion split was not broken out — the Adobe referrer-type dimension is unpopulated in this data view, so no clean organic bucket exists; total sessions/prequote are used as the denominator.</p>
     <div class="callout">
-      <p><strong>Pull deferred to the work laptop (Jul 6).</strong> The Adobe Customer Journey Analytics connector is now wired up and the components are identified — but the report endpoint was blocked by the VPN on the personal laptop this session (lightweight discovery calls succeeded; report queries errored). On the work laptop this is a quick pull:</p>
-      <ul style="margin:8px 0 0;">
-        <li><strong>Data view:</strong> TGUS Dataview (Prod) · <code>dv_6887e717e9927cf644bbd0dc</code></li>
-        <li><strong>Traffic metric:</strong> Sessions · <strong>AI referrers</strong> via <em>Referrer URL</em> (<code>variables/web.webReferrer.URL</code>) filtered to <code>chatgpt.com</code> / <code>perplexity.ai</code> / <code>gemini.google.com</code> / <code>copilot.microsoft.com</code></li>
-        <li><strong>Conversion:</strong> Prequote Start (<code>metrics/_aigtravelinc.event.purchase.prequoteStart</code>), segmented by organic and by AI referral</li>
-      </ul>
-      <p style="margin:8px 0 0;">Once pulled, this section gets the same table + chart treatment as Tiers 2–3.</p>
+      <p><strong>Read:</strong> AI-referral traffic is a tiny slice of volume (~0.3–0.5% of sessions) but converts to a quote start at roughly <strong>2× the site-wide rate</strong> — high-intent, as expected. It is <em>not</em> growing on this referrer-based measure (peaked at 558 sessions in the Jun 9 window, down to 265 by Jul 6). Two caveats keep this honest: (1) the Jul 6 window is 13 days and includes the July 4 holiday dip; (2) this counts only sessions where the AI tool passed a <em>Referrer URL</em> — AI clients increasingly strip the referer header, so these are a conservative <strong>floor</strong>. The complementary UTM signal is higher: <code>utm_source=chatgpt.com</code>-tagged sessions in the Jul 6 window were <strong>525</strong> (vs 231 by referrer), which is where the truer AI-influenced volume sits. Re-pull both at Day 90.</p>
     </div>
 
     <h2 id="log">11. Checkpoint log &amp; how to update</h2>
@@ -361,7 +390,7 @@
         <tr><td>2026-05-20</td><td>Baseline</td><td>May 6–19</td><td>185 own-domain citations · 1% share · 8% domain coverage · #2 brand, 452 mentions</td></tr>
         <tr><td>2026-06-09</td><td>Day 21 · Checkpoint 1</td><td>May 27 – Jun 9</td><td>Citations +58.9%, share doubled to 2%, coverage trend reversed −1 → +1</td></tr>
         <tr><td>2026-06-23</td><td>Day 35 · Checkpoint 2</td><td>Jun 10 – Jun 23</td><td>Citations eased to 255, domain coverage 16%, still #2 (Seven Corners 537 vs 516); pre-existing page top-cited (40)</td></tr>
-        <tr><td>2026-07-06</td><td>Day 48 · Checkpoint 3</td><td>Jun 23 – Jul 6</td><td><strong>Travel Guard #1</strong> (521 vs 504); coverage 33.9% &amp; domain coverage 15% both past 90d target; citations 287; share flat at 2%; 3 schema'd-page prompts cleared 90d targets</td></tr>
+        <tr><td>2026-07-06</td><td>Day 48 · Checkpoint 3</td><td>Jun 23 – Jul 6</td><td><strong>Travel Guard #1</strong> (521 vs 504); coverage 33.9% &amp; domain coverage 15% both past 90d target; citations 287; share flat at 2%; 3 schema'd-page prompts cleared 90d targets · <strong>Tier 4 (CJA) backfilled</strong> · <strong>Tier 3 GSC re-pulled</strong> (still no new rich-result types)</td></tr>
       </tbody>
     </table>
 
@@ -377,7 +406,7 @@
   </main>
 
   <footer class="docfoot">
-    Travel Guard Schema Rollout — KPI Scorecard · Latest checkpoint Jul 6 2026 (Day 48) · Data from <code>TravelGuard-KPI-Tracking.md</code> · Self-contained (no external assets)
+    Travel Guard Schema Rollout — KPI Scorecard · Latest checkpoint Jul 6 2026 (Day 48) · Tiers 2–4 populated (Tier 4 Adobe CJA backfilled Jul 6) · Data from <code>TravelGuard-KPI-Tracking.md</code> · Self-contained (no external assets)
   </footer>
 
 </div>
@@ -407,7 +436,11 @@ var SERIES = [
   { group:'Citation', key:'citationShare', label:'Citation share', unit:'%', prefix:'', lowerIsBetter:false, t30:1.5, t90:3.5,
     note:'held at 2% · 90d target 3–4%', data:[ {date:'2026-05-19', value:1, label:'Baseline'}, {date:'2026-06-09', value:2, label:'Jun 9'}, {date:'2026-06-23', value:2, label:'Jun 23'}, {date:'2026-07-06', value:2, label:'Jul 6'} ] },
   { group:'Citation', key:'domainCoverage', label:'Domain coverage', unit:'%', prefix:'', lowerIsBetter:false, t30:10, t90:14,
-    note:'+7pp vs baseline · past 90d target', data:[ {date:'2026-05-19', value:8, label:'Baseline'}, {date:'2026-06-09', value:13, label:'Jun 9'}, {date:'2026-06-23', value:16, label:'Jun 23'}, {date:'2026-07-06', value:15, label:'Jul 6'} ] }
+    note:'+7pp vs baseline · past 90d target', data:[ {date:'2026-05-19', value:8, label:'Baseline'}, {date:'2026-06-09', value:13, label:'Jun 9'}, {date:'2026-06-23', value:16, label:'Jun 23'}, {date:'2026-07-06', value:15, label:'Jul 6'} ] },
+  { group:'Business', key:'aiSessions', label:'AI-referral sessions', unit:'', prefix:'', lowerIsBetter:false, t30:null, t90:null,
+    note:'CJA · chatgpt+gemini+perplexity+copilot referrers · ~0.3–0.5% of sessions (referrer-based floor)', data:[ {date:'2026-05-19', value:396, label:'Baseline'}, {date:'2026-06-09', value:558, label:'Jun 9'}, {date:'2026-06-23', value:461, label:'Jun 23'}, {date:'2026-07-06', value:265, label:'Jul 6'} ] },
+  { group:'Business', key:'aiPrequote', label:'AI-referral quote starts', unit:'', prefix:'', lowerIsBetter:false, t30:null, t90:null,
+    note:'CJA · prequote starts from AI-referred sessions · ~2× the site quote-start rate', data:[ {date:'2026-05-19', value:219, label:'Baseline'}, {date:'2026-06-09', value:354, label:'Jun 9'}, {date:'2026-06-23', value:289, label:'Jun 23'}, {date:'2026-07-06', value:112, label:'Jul 6'} ] }
 ];
 
 /* ---- Renderer (no external libraries) ---- */
@@ -443,7 +476,7 @@ function renderChart(s) {
   var minX = Math.min.apply(null, xs), maxX = Math.max.apply(null, xs);
   if (minX === maxX) maxX = minX + 86400000; // avoid divide-by-zero with one point
 
-  var vals = data.map(function (p) { return p.value; }).concat([s.t30, s.t90]);
+  var vals = data.map(function (p) { return p.value; }).concat([s.t30, s.t90].filter(function (t) { return t != null; }));
   var minY = Math.min.apply(null, vals), maxY = Math.max.apply(null, vals);
   var span = (maxY - minY) || 1;
   minY -= span * 0.10; maxY += span * 0.12;
@@ -457,8 +490,9 @@ function renderChart(s) {
   svg.appendChild(el('line', { x1: PAD.l, y1: PAD.t, x2: PAD.l, y2: PAD.t + PLOT_H, stroke: '#e6e7e8', 'stroke-width': 1 }));
   svg.appendChild(el('line', { x1: PAD.l, y1: PAD.t + PLOT_H, x2: PAD.l + PLOT_W, y2: PAD.t + PLOT_H, stroke: '#e6e7e8', 'stroke-width': 1 }));
 
-  // target guide lines
+  // target guide lines (Tier 4 series carry no numeric targets — skip when null)
   [['30d', s.t30], ['90d', s.t90]].forEach(function (g) {
+    if (g[1] == null) return;
     var y = Y(g[1]);
     svg.appendChild(el('line', { x1: PAD.l, y1: y, x2: PAD.l + PLOT_W, y2: y, stroke: '#9cc7e6', 'stroke-width': 1, 'stroke-dasharray': '4 3' }));
     svg.appendChild(el('text', { x: PAD.l + PLOT_W, y: y - 3, 'text-anchor': 'end', 'font-size': 9, fill: '#555b62' }, g[0] + ' ' + fmt(g[1], s)));

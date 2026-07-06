@@ -10,7 +10,7 @@ The KPI report is two checkpoints behind (Jun 23 pending; ~day 48 now). Pending,
 1. Otterly pull from Stuart (Brand Report, last 14 days, US, all engines — same view) or via Chrome extension → update §3/§5 tables, `SERIES` arrays, checkpoint log, and narrative in `TravelGuard-KPI-Report.html` + a §12 in `TravelGuard-KPI-Tracking.md`
 2. Trustpilot refresh: the rule #7 widget endpoint timed out twice from the sandbox — retry or fetch from browser context; update homepage + reviews JSON if values moved from 4.1 / 1,600
 3. `MILESTONES` array in the KPI report is missing the Jun 11 deploy (homepage, FAQ, plans listing, 6 plan pages live) — add it
-4. Optional: Adobe CJA connector is now available — can fill the report's empty §10 Tier 4 section (AI-referral visits, quote starts); Stuart deferred this, confirm before pulling
+4. ~~Optional: Adobe CJA connector — fill §10 Tier 4~~ **✅ Done 2026-07-06.** Backfilled all four windows via CLI connector (the Jun-12 segment/breakdown known-issue is resolved — `segmentIds` + breakdowns now work). Data view `dv_6887e717e9927cf644bbd0dc`, TGUS External US Users segment, Sessions + Prequote Start by AI referrer (`variables/web.webReferrer.URL` host = the 4 engines). See `TravelGuard-KPI-Tracking.md` §13. Finding: AI referral ~0.3–0.5% of sessions but ~2× site quote-start rate (ChatGPT dominates); referrer-based is a floor (AI clients strip referer — `utm_source` shows ~2× higher). Organic split N/A (referrer-type dimension unpopulated).
 
 ## Key documents
 

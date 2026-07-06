@@ -133,6 +133,32 @@ Only two Search Appearance types are present today (Translated results, Videos) 
 
 Note: As of 2023, Google deprecated the FAQPage rich result for most sites — but the FAQPage schema still helps LLMs and is still surfaced for some verticals and queries. Track FAQ impressions to see whether your site is among the ones still getting them.
 
+### 4.1 Jul 6 re-pull (Day 48) — first post-deploy GSC checkpoint
+
+Captured **2026-07-06**, GSC last 3 months (**Apr 6 – Jul 6 2026**). Rolling 3-month window, shifted ~1 month forward from the baseline's Mar 10 – Jun 8 — same methodology, not an identical window.
+
+| Metric | Baseline (Jun 11) | Jul 6 (Day 48) | Read |
+|---|---|---|---|
+| Site-wide clicks | 94.8K | 94.5K | flat |
+| Site-wide impressions | 25.3M | **26.9M** | +6% |
+| Site-wide avg position | 9 | **8.7** | slightly better |
+| Site-wide CTR | 0.4% | 0.4% | flat |
+| Plan-page clicks | 6.22K | 5.92K | −5% |
+| Plan-page impressions | 1.61M | 1.55M | −4% |
+| Plan-page avg position | 11.9 | 12.4 | slightly worse |
+| FAQ / Product / HowTo / Breadcrumb impressions | 0 | **0** | still absent |
+| Video appearance (impr / clicks) | 73,446 / 14 | 123,775 / 25 | +69% impr |
+| Translated results (impr / clicks) | 39,854 / 112 | 48,730 / 135 | +22% impr |
+| Pages indexed | 389 | **394** | +5 |
+| Pages not indexed | 2.51K | **1.79K** | −29% (10 reasons) |
+| Branded query (clicks / impr / CTR / pos) | 28.1K / 284K / 9.9% / 4.9 ("travel guard" exact) | 50.7K / 772K / 6.6% / 5.5 (GSC "Branded" group) | scope differs — not 1:1 |
+
+**Read:** The key schema signal — new rich-result appearance types — is **still zero**. Search Appearance shows only *Translated results* and *Videos* (1–2 of 2); no FAQ / Product / Breadcrumb / HowTo / Merchant rows. Expected this early: only the homepage, FAQ, plans listing and 6 plan pages are deployed live (Jun 11), and Google deprecated the FAQ rich result for most sites (a nonzero FAQ row may never appear). Site-wide is flat-to-up (impressions +6%, position 9 → 8.7); plan pages eased slightly on a window shifted ~1 month into summer. Indexing improved — indexed 389 → 394, not-indexed fell 2.51K → 1.79K (Google cleared ~720 URLs).
+
+**Caveats / next pull:**
+- The branded-query row is **not apples-to-apples** — the baseline used the exact `travel guard` query; this pull is GSC's broader "Branded" query-group filter. Re-filter to Query = "travel guard" next time for a clean brand-position comparison.
+- The real Tier 3 payoff can't register until the **per-page JSON-LD deploys live** (baggage, assistance, trip-types, traveler-types, benefits, etc. are built but undeployed). Re-pull Search Appearance ~2 weeks after that deploy — the first nonzero Product/Breadcrumb row is the cleanest "markup recognized" signal.
+
 ---
 
 ## 5. Tier 4 — Downstream business metrics
@@ -148,6 +174,8 @@ These are the metrics that prove SEO investment translates to business outcomes.
 | Bounce rate on schema'd pages | Adobe Analytics | Should improve as page understanding improves snippet quality. |
 | Time on page, schema'd templates | Adobe Analytics | Schema doesn't directly affect this, but pages that get cited by LLMs tend to attract more engaged visitors. |
 | Average position, brand + product terms | GSC | Should improve modestly with stronger entity signals. |
+
+**Captured data:** the AI-referral and quote-start figures for this tier are backfilled across all four checkpoint windows in **§13** (Adobe CJA, TGUS Prod, bot/internal filtered).
 
 ---
 
@@ -402,10 +430,55 @@ The schema-first hypothesis held up **where it's testable**: the three prompts a
 ### 12.7 Pending / carried forward
 
 1. **Per-engine Otterly breakdown** — still not pulled (outstanding since Jun 9). Do at Day 90.
-2. **Tier 4 (Adobe CJA)** — connector now wired; report endpoint was VPN-blocked on the personal laptop this session. Pull from the work laptop: data view `dv_6887e717e9927cf644bbd0dc` (TGUS Prod), Sessions metric, Prequote Start (`metrics/_aigtravelinc.event.purchase.prequoteStart`), AI referrers via `variables/web.webReferrer.URL`.
+2. **Tier 4 (Adobe CJA)** — ✅ *Backfilled Jul 6 across all four windows (see §13).* Data view `dv_6887e717e9927cf644bbd0dc` (TGUS Prod), TGUS External US Users segment, Sessions + Prequote Start by AI referrer (`variables/web.webReferrer.URL`). Headline: AI-referral traffic is ~0.3–0.5% of sessions but starts quotes at ~2× the site-wide rate (ChatGPT dominates). Per-engine organic split N/A (Adobe referrer-type dimension unpopulated in this data view).
 3. **Trustpilot refreshed Jul 6** — score held at **4.1**, review count moved **1,600 → 1,711**; `jsonld/index.json` + `jsonld/about-us/travel-insurance-reviews.json` updated (live pages — coordinate re-deploy).
 4. **Deploy the built baggage & assistance JSON-LD**, and **build/deploy student-safety schema** (its prompt is declining every pull).
 
 ### 12.8 Headline summary
 
 > 48 days in, Travel Guard is **#1** on brand mentions for the first time (521 vs 504), with brand coverage (33.9%) and domain coverage (15%) both past their 90-day targets. The schema signal is clearest at the page level — the three schema'd P0 pages/prompts (pre-existing, CFAR, baggage) all cleared their 90-day citation targets. But citation share has plateaued at 2% (90-day target 3–4%), own-domain citations are non-monotonic (294 → 255 → 287), two prompts regressed below baseline, and the brand #1 leans partly on competitor decay. Strong overall trajectory; the honest caveats are in citation share and the two sliding prompts.
+
+---
+
+## 13. Tier 4 backfill — Adobe CJA (captured 2026-07-06)
+
+The Tier-4 downstream business metrics were never captured at the earlier checkpoints (the report endpoint was VPN-blocked on the personal laptop). Backfilled here in one session from the work laptop across the **same four checkpoint windows** as Tiers 2–3, so the business layer lines up with the citation trend.
+
+**Method**
+- **Data view:** TGUS Dataview (Prod) · `dv_6887e717e9927cf644bbd0dc` (timezone US/Central)
+- **Global segment (mandatory):** TGUS – External US Users · `s593B407E5A93DFA90A495D11@AdobeOrg_68b087b96cd2840c3c32622c` (bots, internal AIG, test users, non-US excluded)
+- **Sessions:** `metrics/visits` · **Quote starts:** `metrics/_aigtravelinc.event.purchase.prequoteStart` ("1: Prequote Start")
+- **AI-referral** = sessions whose Referrer URL (`variables/web.webReferrer.URL`) host is `chatgpt.com`, `gemini.google.com`, `perplexity.ai`, or `copilot.microsoft.com` (per-engine breakdown reports, summed). Internal `travelguard.com/…?utm_source=chatgpt.com` referrer rows are **excluded** — those are UTM propagation on internal navigation, not AI referrals, and summing them would double-count.
+- **Windows** (non-overlapping; Jul 6 is 13 days to avoid double-counting Jun 23): Baseline `2026-05-06 → 05-19`, Jun 9 `05-27 → 06-09`, Jun 23 `06-10 → 06-23`, Jul 6 `06-24 → 07-06`.
+
+### 13.1 Data table
+
+| Metric | Baseline (May 6–19) | Jun 9 (May 27–Jun 9) | Jun 23 (Jun 10–23) | Jul 6 (Jun 24–Jul 6) |
+|---|---|---|---|---|
+| Total sessions | 111,310 | 111,245 | 91,254 | 78,776 |
+| **AI-referral sessions** | **396** | **558** | **461** | **265** |
+| AI-referral share of sessions | 0.36% | 0.50% | 0.51% | 0.34% |
+| Total prequote starts | 34,132 | 32,409 | 29,469 | 28,653 |
+| **Prequote starts from AI referral** | **219** | **354** | **289** | **112** |
+| AI quote-start rate | 55% | 63% | 63% | 42% |
+| Site-wide quote-start rate | 31% | 29% | 32% | 36% |
+
+**Per-engine (sessions / prequote starts):**
+
+| Engine | Baseline | Jun 9 | Jun 23 | Jul 6 |
+|---|---|---|---|---|
+| ChatGPT (`chatgpt.com`) | 346 / 206 | 520 / 344 | 417 / 280 | 231 / 105 |
+| Gemini (`gemini.google.com`) | 35 / 10 | 23 / 6 | 28 / 5 | 17 / 2 |
+| Perplexity (`www.perplexity.ai`) | 9 / 2 | 9 / 2 | 10 / 2 | 9 / 3 |
+| Copilot (`copilot.microsoft.com`) | 6 / 1 | 6 / 2 | 6 / 2 | 8 / 2 |
+
+### 13.2 Honest read
+
+- **Tiny volume, high intent.** AI referrals are ~0.3–0.5% of sessions, but they start a quote at **roughly 2× the site-wide rate** (55–63% vs 29–32% for the first three windows). This is the whole reason the tier matters despite the small numbers — it's the highest-intent traffic source on the site.
+- **Not growing on the referrer measure.** AI-referral sessions peaked in the Jun 9 window (558) and fell to 265 by Jul 6; quote starts 354 → 112, and the Jul 6 conversion rate dropped to 42%. Two caveats keep this honest: (1) the Jul 6 window is 13 days and spans the July 4 holiday dip; (2) **this is a floor** — it counts only sessions where the AI tool passed a referrer, and AI clients increasingly strip the referer header.
+- **UTM signal is higher.** `utm_source=chatgpt.com`-tagged sessions in the Jul 6 window were **525** (vs 231 by referrer) with **425** prequote starts — i.e. the referrer-based count understates true AI-influenced volume by ~2×, and the gap is widening as ChatGPT relies on the UTM tag over the referer header. Gemini, by contrast, passes a referrer but no `utm_source`, so the referrer method is the only way to see it. Track **both** at Day 90.
+- **Organic split not available.** The Adobe referrer-type dimension (`variables/web.webReferrer.type`) is unpopulated in this data view (all "No value"), so a clean organic-vs-AI conversion comparison isn't possible here — total sessions/prequote are the denominator. Building a "Marketing Channel"-style classification is a future enhancement.
+
+### 13.3 Notes for the next pull
+- Repeat the per-engine referrer breakdowns (4 engines × window) with the External US Users segment, plus the `utm_source` AI figures, at Day 90.
+- If organic isolation becomes important, ask AJ whether a referrer-type / marketing-channel classification exists in another TGUS data view, or build a saved "AI-influenced sessions" segment (Referrer host **OR** utm_source = the AI engines) to capture the union in one filtered report.
