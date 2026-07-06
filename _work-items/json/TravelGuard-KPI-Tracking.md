@@ -325,3 +325,87 @@ What to watch at the next checkpoint (Jun 23):
 ### 11.8 Headline summary
 
 > 21 days into the schema rollout, every primary KPI is moving in the right direction. Own-domain citations are up **58.9%**, citation share **doubled** (1% → 2%), domain coverage is up **+5pp**, brand coverage trend reversed from -1 to +1, and the gap to Seven Corners narrowed by 40 mentions. Schema is plausibly contributing to some of this, but the rollout is too recent for confident attribution — competitor decay, content quality, and LLM index churn are also at work. Next checkpoint Jun 23 will tell us how much of this trajectory holds.
+
+---
+
+## 12. Checkpoints 2 & 3 — Jun 23 and Jul 6, 2026 (backfilled together)
+
+Two Otterly pulls captured in one session (Jul 6) to catch the report up: the Day-35 window (Jun 10–23) that had been skipped, and the current Day-48 window (Jun 23–Jul 6). Same view each time: Brand Report, last 14 days, US, all engines, 20 prompts.
+
+### 12.1 Brand-level trajectory (all four pulls)
+
+| Metric | Baseline | Jun 9 | Jun 23 | Jul 6 | 90-day target | On track? |
+|---|---|---|---|---|---|---|
+| Brand mentions | 452 | 487 | 516 | **521** | 525 | ✓ Near (99%) |
+| Brand rank | #2 | #2 | #2 | **#1** | #1 or #2 | ✓ Hit — first #1 in dataset |
+| Brand coverage % | 29.1% | 31.2% | 31.0% | **33.9%** | 32% | ✓ Past |
+| Average brand position | 1.94 | 1.76 | 1.82 | **1.83** | 1.65 | ✗ Drifted off Jun 9 low (still > baseline) |
+| Likelihood to buy | 79% | 83% | 81% | **81%** | 83% | ~ At 30d target, shy of 90d |
+| Sentiment score | +63 | +59 | +62 | **+62** | +68 | ✗ Below target (recovered from Jun 9 dip) |
+
+Travel Guard took the **#1 brand-mention spot** in the Jun 23–Jul 6 window (521 vs Seven Corners' 504) — the first time it leads in this dataset. Note the metrics are non-monotonic: coverage dipped fractionally at Jun 23 (31.2 → 31.0) before jumping to 33.9; average position and sentiment both eased off their Jun 9 readings.
+
+### 12.2 Citation metrics
+
+| Metric | Baseline | Jun 9 | Jun 23 | Jul 6 | 90-day target | On track? |
+|---|---|---|---|---|---|---|
+| Own-domain citations | 185 | 294 | 255 | **287** | 400 | ✓ On pace (72%) |
+| Citation share | 1% | 2% | 2% | **2%** | 3–4% | ~ Plateaued at 2% |
+| Domain coverage | 8% | 13% | 16% | **15%** | 14% | ✓ Past |
+| Top-cited TG URL (count) | 26 | 34 | 40 | **49** | 50 | ✓ Near (pre-existing page) |
+
+**Own-domain citations are non-monotonic** — the Jun 9 figure (294) was the peak, eased to 255 at Jun 23, recovered to 287. The Jun 9 reading likely overstated the run-rate. **Citation share has now held flat at 2% for three straight pulls** — this is the metric most at risk of missing its 90-day target; the 3–4% goal now looks like the hardest of the citation set to reach.
+
+### 12.3 Top-cited URLs
+
+| | Baseline | Jun 23 | Jul 6 |
+|---|---|---|---|
+| 1 | student-travel-safety (26) | pre-existing-medical-condition (40) | **pre-existing-medical-condition (49)** |
+| 2 | pre-existing (19) | cancel-for-any-reason (25) | **baggage-insurance (29)** |
+| 3 | cancel-for-any-reason (18) | /travel-insurance/plans (19) | **cancel-for-any-reason (27)** |
+
+The top-cited set has consolidated around three schema'd P0 pages. The pre-existing-conditions page has grown every pull (19 → 34 → 40 → 49) and is the strongest page-level signal in the dataset.
+
+### 12.4 Per-prompt citations (audit §8.3 prompts)
+
+| Prompt | Baseline | Jun 9 | Jun 23 | Jul 6 | 90d target | Status |
+|---|---|---|---|---|---|---|
+| Pre-existing conditions | 29 | 44 | 45 | **66** | 50 | ✓ Past target |
+| Trip cancellations any reason (CFAR) | 14 | 23 | 27 | **36** | 35 | ✓ Past target |
+| Lost baggage coverage | 12 | 25 | 19 | **31** | 30 | ✓ Past target |
+| Emergency assistance (family vacation) | 19 | 33 | 22 | **40** | — | Strong gain |
+| Last-minute trip protection | 33 | 27 | 35 | **34** | 40 | 85% to target |
+| Students studying abroad | 29 | 26 | 22 | **18** | 50 | ✗ Declining every pull, now < baseline |
+| Track claim status | 12 | 20 | 23 | **12** | 25 | ✗ Gave back all gains |
+| Medical emergencies | 21 | 35 | 15 | **12** | 35 | ✗ Regressed below baseline |
+
+The split is instructive: the **three prompts mapped to schema'd P0 pages** (pre-existing, CFAR, baggage) all cleared their 90-day targets, while three unrelated prompts gave back gains — **student safety** (no deployed schema, declining every pull) and **medical emergencies** (peaked at 35, now 12) most notably.
+
+### 12.5 Competitive context (brand mentions)
+
+| Brand | Baseline | Jun 23 | Jul 6 | Δ vs base |
+|---|---|---|---|---|
+| **Travel Guard** | 452 | 516 | **521** | +69 · now #1 |
+| Seven Corners | 526 | 537 | 504 | −22 |
+| World Nomads | 435 | 426 | 360 | −75 |
+| Travel Insured International | — | 237 | 270 | n/a |
+| Berkshire Hathaway | 219 | 259 | 215 | −4 |
+| Travelex Insurance Services | 195 | 253 | 200 | +5 |
+| Allianz Global Assistance | 196 | 188 | 164 | −32 |
+
+The 74-mention baseline gap to Seven Corners is now a 17-mention lead. But the #1 leans heavily on **competitor decay** (World Nomads −75, Seven Corners −33 off its Jun 23 peak) — which makes clean schema attribution harder, not easier.
+
+### 12.6 Honest attribution read
+
+The schema-first hypothesis held up **where it's testable**: the three prompts and pages we applied P0 schema to (pre-existing, CFAR, baggage) each cleared their 90-day citation targets and dominate the top-cited-URL list — the cleanest page-to-prompt signal in the report. Against it: citation share plateaued at 2% (not the 3% hoped for by now), the Jun 9 citation peak overstated the run-rate, and the brand #1 leaned on a softening field. Net: **schema is helping the pages it's been applied to; the brand-level #1 is real but partly a gift from competitor decay.**
+
+### 12.7 Pending / carried forward
+
+1. **Per-engine Otterly breakdown** — still not pulled (outstanding since Jun 9). Do at Day 90.
+2. **Tier 4 (Adobe CJA)** — connector now wired; report endpoint was VPN-blocked on the personal laptop this session. Pull from the work laptop: data view `dv_6887e717e9927cf644bbd0dc` (TGUS Prod), Sessions metric, Prequote Start (`metrics/_aigtravelinc.event.purchase.prequoteStart`), AI referrers via `variables/web.webReferrer.URL`.
+3. **Trustpilot refreshed Jul 6** — score held at **4.1**, review count moved **1,600 → 1,711**; `jsonld/index.json` + `jsonld/about-us/travel-insurance-reviews.json` updated (live pages — coordinate re-deploy).
+4. **Deploy the built baggage & assistance JSON-LD**, and **build/deploy student-safety schema** (its prompt is declining every pull).
+
+### 12.8 Headline summary
+
+> 48 days in, Travel Guard is **#1** on brand mentions for the first time (521 vs 504), with brand coverage (33.9%) and domain coverage (15%) both past their 90-day targets. The schema signal is clearest at the page level — the three schema'd P0 pages/prompts (pre-existing, CFAR, baggage) all cleared their 90-day citation targets. But citation share has plateaued at 2% (90-day target 3–4%), own-domain citations are non-monotonic (294 → 255 → 287), two prompts regressed below baseline, and the brand #1 leans partly on competitor decay. Strong overall trajectory; the honest caveats are in citation share and the two sliding prompts.

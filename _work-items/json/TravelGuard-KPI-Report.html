@@ -171,9 +171,9 @@
     <h1>Travel Guard Structured-Data Rollout <span style="font-weight:400; color:var(--snowmelt);">— KPI Scorecard</span></h1>
     <ul class="meta">
       <li><strong>Site:</strong> <a href="https://www.travelguard.com">www.travelguard.com</a></li>
-      <li><strong>Latest checkpoint:</strong> Jun 9 2026 (Day 21)</li>
-      <li><strong>Window:</strong> May 27 – Jun 9 2026 · US · all engines · 20 prompts</li>
-      <li><strong>Baseline:</strong> May 6–19 2026</li>
+      <li><strong>Latest checkpoint:</strong> Jul 6 2026 (Day 48)</li>
+      <li><strong>Window:</strong> Jun 23 – Jul 6 2026 · US · all engines · 20 prompts</li>
+      <li><strong>Baseline:</strong> May 6–19 2026 · prior checkpoints Jun 9 &amp; Jun 23</li>
     </ul>
   </header>
 
@@ -199,14 +199,14 @@
     </nav>
 
     <h2 id="headline">1. Headline</h2>
-    <p>21 days into the schema rollout, <strong>every primary KPI is moving in the right direction.</strong> The citation metrics — the numbers most directly tied to schema work — led the way.</p>
+    <p>48 days into the schema rollout, <strong>Travel Guard has taken the #1 brand-mention spot</strong> for the first time in this dataset — overtaking Seven Corners in the Jun 23 – Jul 6 window (521 vs 504). Every brand-level KPI now sits at or above its 90-day target.</p>
     <div class="callout">
-      <p><strong>Own-domain citations are up +58.9%</strong> (185 → 294), <strong>citation share doubled</strong> (1% → 2%), <strong>domain coverage is up +5pp</strong> (8% → 13%), the <strong>brand-coverage trend reversed</strong> from −1 to +1, and the <strong>gap to Seven Corners (#1) narrowed by 40 mentions</strong> — the closest in this dataset.</p>
-      <p>Schema is plausibly contributing, but the rollout is too recent for confident attribution — competitor decay, content quality, and LLM index churn are also at work. The Jun 23 checkpoint will tell us how much of this trajectory holds.</p>
+      <p><strong>Travel Guard is #1</strong> (521 mentions vs Seven Corners' 504, having trailed by 74 at baseline). <strong>Brand coverage 33.9%</strong> is past the 32% 90-day target; <strong>own-domain citations 287</strong> hold +55% over baseline; <strong>domain coverage 15%</strong> is past the 14% 90-day target; <strong>citation share steady at 2%</strong>.</p>
+      <p>The trajectory is not a straight line: citations dipped at Jun 23 (294 → 255) before recovering to 287, and several individual prompts regressed even as the headline numbers rose. Schema is plausibly contributing, but competitor decay (Seven Corners 537 → 504, World Nomads 426 → 360 across the two windows) and LLM index churn are clearly also at work — attribution stays shared, not clean.</p>
     </div>
 
     <h2 id="charts">2. KPI trend charts</h2>
-    <p>One chart per metric, each on its own scale. Dashed lines mark the <strong>30-day</strong> and <strong>90-day targets</strong>; numbered vertical lines mark rollout milestones (legend below). Today each line is a single segment (baseline → first checkpoint) — it becomes a real trend after the next pull.</p>
+    <p>One chart per metric, each on its own scale. Dashed lines mark the <strong>30-day</strong> and <strong>90-day targets</strong>; numbered vertical lines mark rollout milestones (legend below). Each line now spans four pulls — baseline, Jun 9, Jun 23, and Jul 6 — so the trajectory (including the mid-window citation dip) is visible.</p>
 
     <div class="msleg" id="msleg"></div>
     <div class="chart-grid" id="chartGrid"></div>
@@ -215,88 +215,91 @@
     <h2 id="scorecard">3. Scorecard tables</h2>
 
     <h3>3.1 Brand-level metrics</h3>
+    <p class="kpi-meta">Four pulls shown: Baseline (May 6–19) · Jun 9 · Jun 23 · <strong>Jul 6 (latest)</strong>. "On track?" and Δ compare the latest pull to baseline.</p>
     <table>
       <thead>
-        <tr><th>KPI</th><th>Baseline</th><th>Current</th><th>Δ</th><th>30-day target</th><th>90-day target</th><th>On track?</th></tr>
+        <tr><th>KPI</th><th>Baseline</th><th>Jun 9</th><th>Jun 23</th><th>Jul 6</th><th>Δ vs base</th><th>90-day target</th><th>On track?</th></tr>
       </thead>
       <tbody>
-        <tr><td>Brand mentions</td><td>452</td><td><strong>487</strong></td><td>+35 (+7.7%)</td><td>475</td><td>525</td><td><span class="badge ok">✓ Exceeded 30d</span></td></tr>
-        <tr><td>Brand rank</td><td>#2</td><td>#2</td><td>flat</td><td>#2</td><td>#1 or #2</td><td><span class="badge flat">On track</span></td></tr>
-        <tr><td>Brand coverage %</td><td>29.1%</td><td><strong>31.2%</strong></td><td>+2.1pp</td><td>30%</td><td>32%</td><td><span class="badge ok">✓ Exceeded 30d</span></td></tr>
-        <tr><td>Brand coverage trend</td><td>−1</td><td><strong>+1</strong></td><td>reversed</td><td>0</td><td>+1</td><td><span class="badge ok">✓ Hit 90d</span></td></tr>
-        <tr><td>Average brand position <span style="color:var(--midnight-50);font-size:12px;">(lower = better)</span></td><td>1.94</td><td><strong>1.76</strong></td><td>−0.18 (better)</td><td>1.80</td><td>1.65</td><td><span class="badge ok">✓ Exceeded 30d</span></td></tr>
-        <tr><td>Likelihood to buy</td><td>79%</td><td><strong>83%</strong></td><td>+4pp</td><td>80%</td><td>83%</td><td><span class="badge ok">✓ Hit 90d</span></td></tr>
-        <tr><td>Sentiment score</td><td>+63</td><td>+59</td><td>−4</td><td>+65</td><td>+68</td><td><span class="badge warn">✗ Slight decline</span></td></tr>
+        <tr><td>Brand mentions</td><td>452</td><td>487</td><td>516</td><td><strong>521</strong></td><td>+69 (+15.3%)</td><td>525</td><td><span class="badge ok">✓ Near 90d</span></td></tr>
+        <tr><td>Brand rank</td><td>#2</td><td>#2</td><td>#2</td><td><strong>#1</strong></td><td>+1 place</td><td>#1 or #2</td><td><span class="badge ok">✓ Hit 90d</span></td></tr>
+        <tr><td>Brand coverage %</td><td>29.1%</td><td>31.2%</td><td>31.0%</td><td><strong>33.9%</strong></td><td>+4.8pp</td><td>32%</td><td><span class="badge ok">✓ Past 90d</span></td></tr>
+        <tr><td>Average brand position <span style="color:var(--midnight-50);font-size:12px;">(lower = better)</span></td><td>1.94</td><td>1.76</td><td>1.82</td><td><strong>1.83</strong></td><td>−0.11 (better)</td><td>1.65</td><td><span class="badge warn">✗ Drifted off Jun 9 low</span></td></tr>
+        <tr><td>Likelihood to buy</td><td>79%</td><td>83%</td><td>81%</td><td><strong>81%</strong></td><td>+2pp</td><td>83%</td><td><span class="badge flat">At 30d, shy of 90d</span></td></tr>
+        <tr><td>Sentiment score</td><td>+63</td><td>+59</td><td>+62</td><td><strong>+62</strong></td><td>−1</td><td>+68</td><td><span class="badge warn">✗ Below target</span></td></tr>
       </tbody>
     </table>
-    <p class="kpi-meta">The sentiment dip (−4) is within Otterly's natural +63 to +73 variance across competitors — watch it, don't over-read it.</p>
+    <p class="kpi-meta">Brand rank flipped to #1 in the latest window — Travel Guard 521 vs Seven Corners 504. Sentiment recovered from the Jun 9 dip (+59 → +62) and now sits ~1 point under baseline, within Otterly's normal cross-competitor variance. Average brand position drifted back from the Jun 9 low (1.76 → 1.83) but stays better than baseline. Otterly's "brand coverage trend" arrow was not separately captured on these two pulls — the coverage % column carries the movement.</p>
 
     <h3>3.2 Citation metrics <span style="font-weight:400;color:var(--midnight-50);font-size:14px;">(most directly tied to schema)</span></h3>
     <table>
       <thead>
-        <tr><th>KPI</th><th>Baseline</th><th>Current</th><th>Δ</th><th>30-day target</th><th>90-day target</th><th>On track?</th></tr>
+        <tr><th>KPI</th><th>Baseline</th><th>Jun 9</th><th>Jun 23</th><th>Jul 6</th><th>Δ vs base</th><th>90-day target</th><th>On track?</th></tr>
       </thead>
       <tbody>
-        <tr><td>Own-domain citations</td><td>185</td><td><strong>294</strong></td><td>+109 (+58.9%)</td><td>250</td><td>400</td><td><span class="badge ok">✓ Strongly on pace</span></td></tr>
-        <tr><td>Citation share</td><td>1%</td><td><strong>2%</strong></td><td>doubled</td><td>1.5%</td><td>3–4%</td><td><span class="badge ok">✓ Halfway at day 21</span></td></tr>
-        <tr><td>Domain coverage</td><td>8%</td><td><strong>13%</strong></td><td>+5pp (+62.5%)</td><td>10%</td><td>14%</td><td><span class="badge ok">✓ Near 90d already</span></td></tr>
-        <tr><td>Top-cited TG URL (count)</td><td>26</td><td><strong>34</strong></td><td>+8</td><td>35</td><td>50</td><td><span class="badge ok">✓ Near 30d</span></td></tr>
+        <tr><td>Own-domain citations</td><td>185</td><td>294</td><td>255</td><td><strong>287</strong></td><td>+102 (+55.1%)</td><td>400</td><td><span class="badge ok">✓ On pace (72%)</span></td></tr>
+        <tr><td>Citation share</td><td>1%</td><td>2%</td><td>2%</td><td><strong>2%</strong></td><td>+1pp</td><td>3–4%</td><td><span class="badge flat">Plateaued at 2%</span></td></tr>
+        <tr><td>Domain coverage</td><td>8%</td><td>13%</td><td>16%</td><td><strong>15%</strong></td><td>+7pp</td><td>14%</td><td><span class="badge ok">✓ Past 90d</span></td></tr>
+        <tr><td>Top-cited TG URL (count)</td><td>26</td><td>34</td><td>40</td><td><strong>49</strong></td><td>+23</td><td>50</td><td><span class="badge ok">✓ Near 90d</span></td></tr>
       </tbody>
     </table>
+    <p class="kpi-meta">Own-domain citations are non-monotonic: the Jun 9 reading (294) was the high point, dipped to 255 at Jun 23, and recovered to 287 — a reminder that the Jun 9 figure likely overstated the run-rate. Citation share has held flat at 2% for three straight pulls: this is the metric to watch, since the 3–4% 90-day target now looks like the hardest to reach. The top-cited URL is the pre-existing-conditions page, which has climbed every pull (26 → 34 → 40 → 49).</p>
 
     <h2 id="pages">4. Pages winning citations</h2>
-    <p>The mix of top-cited URLs shifted significantly between the baseline and Jun 9.</p>
+    <p>The top-cited URL set stabilised around three schema'd pages between baseline and the latest pull.</p>
     <table>
       <thead>
-        <tr><th>Rank</th><th>Baseline top 3 URLs</th><th>Citations</th><th>Current top 3 URLs</th><th>Citations</th></tr>
+        <tr><th>Rank</th><th>Baseline top 3 URLs</th><th>Cites</th><th>Jun 23 top 3</th><th>Cites</th><th>Jul 6 top 3</th><th>Cites</th></tr>
       </thead>
       <tbody>
-        <tr><td>1</td><td><code>/travel-resources/travel-safety/student-travel-safety</code></td><td>26</td><td><code>/traveler-types/pre-existing-medical-condition…</code></td><td><strong>34</strong></td></tr>
-        <tr><td>2</td><td><code>/traveler-types/pre-existing-medical-condition…</code></td><td>19</td><td><code>/info/assistance-services</code></td><td><strong>22</strong></td></tr>
-        <tr><td>3</td><td><code>/travel-insurance/optional-coverage/cancel-for-any-reason</code></td><td>18</td><td><code>/travel-insurance/benefits/baggage-insurance</code></td><td><strong>22</strong></td></tr>
+        <tr><td>1</td><td><code>/travel-resources/…/student-travel-safety</code></td><td>26</td><td><code>/traveler-types/pre-existing-medical-condition…</code></td><td>40</td><td><code>/traveler-types/pre-existing-medical-condition…</code></td><td><strong>49</strong></td></tr>
+        <tr><td>2</td><td><code>/traveler-types/pre-existing-medical-condition…</code></td><td>19</td><td><code>/…/optional-coverage/cancel-for-any-reason</code></td><td>25</td><td><code>/travel-insurance/benefits/baggage-insurance</code></td><td><strong>29</strong></td></tr>
+        <tr><td>3</td><td><code>/travel-insurance/optional-coverage/cancel-for-any-reason</code></td><td>18</td><td><code>/travel-insurance/plans</code></td><td>19</td><td><code>/…/optional-coverage/cancel-for-any-reason</code></td><td><strong>27</strong></td></tr>
       </tbody>
     </table>
     <ul>
-      <li><strong>Pre-existing conditions</strong> climbed #2 → #1 (+79%, 19 → 34) — one of the P0 pages we added schema for. The gain likely predates the schema going live, but reinforcement should compound.</li>
-      <li><strong>Two brand-new top-3 entrants</strong> — <code>/info/assistance-services</code> and <code>/travel-insurance/benefits/baggage-insurance</code> — rose on the site-wide bundle + content alone (no dedicated schema yet at the time). Both now have JSON-LD built (Jun 10) and awaiting deploy.</li>
-      <li><strong>Student travel safety</strong> dropped out of the visible top 3; the full Otterly Citations page would confirm whether it actually declined or was just out-paced.</li>
+      <li><strong>Pre-existing conditions</strong> is now the clear #1 and has grown every single pull (19 → 34 → 40 → 49). It's one of the P0 pages we built schema for — the most encouraging page-level signal in the dataset.</li>
+      <li><strong>CFAR</strong> (<code>/optional-coverage/cancel-for-any-reason</code>) has held a top-3 spot throughout and reached 27 — also a schema'd P0 page.</li>
+      <li><strong>Baggage insurance</strong> re-entered the top 3 at 29 (it was a new entrant at Jun 9). Its JSON-LD was built Jun 10 and is awaiting deploy — worth confirming the deploy lands so the gain is reinforced.</li>
+      <li><strong>Assistance-services</strong>, a Jun 9 top-3 entrant, dropped out of the visible top 3 by Jul 6 — out-paced rather than necessarily declining; the full Citations page would confirm.</li>
     </ul>
 
     <h2 id="prompts">5. Per-prompt citation movement</h2>
-    <p>Travel Guard's domain-citation count on the high-value prompts from the audit (§8.3). 7 of 8 moved up.</p>
+    <p>Travel Guard's domain-citation count on the high-value prompts from the audit (§8.3), across all four pulls. The story is now split: the three schema'd-page prompts (pre-existing, CFAR, baggage) hit or passed their 90-day targets, while three others gave back their earlier gains.</p>
     <table>
       <thead>
-        <tr><th>Prompt</th><th>Baseline</th><th>Current</th><th>Δ</th><th>90-day target</th><th>Status</th></tr>
+        <tr><th>Prompt</th><th>Base</th><th>Jun 9</th><th>Jun 23</th><th>Jul 6</th><th>90d target</th><th>Status</th></tr>
       </thead>
       <tbody>
-        <tr><td>Are there travel insurance plans that cover pre-existing conditions?</td><td>29</td><td><strong>44</strong></td><td>+15</td><td>50</td><td><span class="badge ok">88% to target</span></td></tr>
-        <tr><td>How do I know if my trip protection covers medical emergencies?</td><td>21</td><td><strong>35</strong></td><td>+14</td><td>35</td><td><span class="badge ok">Hit target</span></td></tr>
-        <tr><td>What is the best travel emergency assistance plan for a family vacation?</td><td>19</td><td><strong>33</strong></td><td>+14</td><td>—</td><td><span class="badge ok">Strong gain</span></td></tr>
-        <tr><td>How do I get trip protection for a last-minute trip?</td><td>33</td><td>27</td><td>−6</td><td>40</td><td><span class="badge warn">Regressed</span></td></tr>
-        <tr><td>Are there travel safety services for students studying abroad?</td><td>29</td><td>26</td><td>−3</td><td>50</td><td><span class="badge warn">Slight decline</span></td></tr>
-        <tr><td>Is there a travel insurance plan that covers trip cancellations for any reason?</td><td>14</td><td><strong>23</strong></td><td>+9</td><td>35</td><td><span class="badge ok">66% to target</span></td></tr>
-        <tr><td>What are the top travel insurance providers for lost baggage coverage?</td><td>12</td><td><strong>25</strong></td><td>+13</td><td>30</td><td><span class="badge ok">83% to target</span></td></tr>
-        <tr><td>How do I track the status of my travel insurance claim?</td><td>12</td><td><strong>20</strong></td><td>+8</td><td>25</td><td><span class="badge ok">80% to target</span></td></tr>
+        <tr><td>Are there travel insurance plans that cover pre-existing conditions?</td><td>29</td><td>44</td><td>45</td><td><strong>66</strong></td><td>50</td><td><span class="badge ok">✓ Past target</span></td></tr>
+        <tr><td>Is there a travel insurance plan that covers trip cancellations for any reason?</td><td>14</td><td>23</td><td>27</td><td><strong>36</strong></td><td>35</td><td><span class="badge ok">✓ Past target</span></td></tr>
+        <tr><td>What are the top travel insurance providers for lost baggage coverage?</td><td>12</td><td>25</td><td>19</td><td><strong>31</strong></td><td>30</td><td><span class="badge ok">✓ Past target</span></td></tr>
+        <tr><td>What is the best travel emergency assistance plan for a family vacation?</td><td>19</td><td>33</td><td>22</td><td><strong>40</strong></td><td>—</td><td><span class="badge ok">Strong gain</span></td></tr>
+        <tr><td>How do I get trip protection for a last-minute trip?</td><td>33</td><td>27</td><td>35</td><td><strong>34</strong></td><td>40</td><td><span class="badge flat">85% to target</span></td></tr>
+        <tr><td>Are there travel safety services for students studying abroad?</td><td>29</td><td>26</td><td>22</td><td><strong>18</strong></td><td>50</td><td><span class="badge warn">✗ Declining every pull</span></td></tr>
+        <tr><td>How do I track the status of my travel insurance claim?</td><td>12</td><td>20</td><td>23</td><td><strong>12</strong></td><td>25</td><td><span class="badge warn">✗ Gave back gains</span></td></tr>
+        <tr><td>How do I know if my trip protection covers medical emergencies?</td><td>21</td><td>35</td><td>15</td><td><strong>12</strong></td><td>35</td><td><span class="badge warn">✗ Regressed below baseline</span></td></tr>
       </tbody>
     </table>
-    <p class="kpi-meta">The two regressions (last-minute trip −6, student safety −3) are small enough to be plausibly noise — worth watching at the next pull.</p>
+    <p class="kpi-meta">The three prompts that map directly to schema'd P0 pages (pre-existing, CFAR, baggage) all cleared their 90-day targets — the cleanest page-to-prompt signal in the report. But two prompts now sit <em>below</em> baseline: <strong>student safety</strong> (29 → 18, down every pull) and <strong>medical emergencies</strong> (21 → 12, after peaking at 35). Student safety's page has no dedicated schema deployed and is losing ground — a candidate to prioritise. The medical-emergencies drop is worth a closer look at the full Citations page next pull to see which competitor is displacing us.</p>
 
     <h2 id="competitive">6. Competitive context</h2>
-    <p>The brand-level gains came in a window where most competitors were flat or declining. Travel Guard had the second-largest absolute gain (+35), behind only Travelex.</p>
+    <p>Travel Guard climbed while nearly every competitor lost ground across the two windows. Travel Guard rose to <strong>#1</strong> not only by gaining (+69 vs baseline) but because Seven Corners and World Nomads fell back after a strong Jun 23 showing.</p>
     <table>
       <thead>
-        <tr><th>Brand</th><th>Baseline mentions</th><th>Current</th><th>Δ</th></tr>
+        <tr><th>Brand (mentions)</th><th>Baseline</th><th>Jun 23</th><th>Jul 6</th><th>Δ vs base</th></tr>
       </thead>
       <tbody>
-        <tr><td>Seven Corners (#1)</td><td>526</td><td>521</td><td>−5</td></tr>
-        <tr><td><strong>Travel Guard (#2)</strong></td><td><strong>452</strong></td><td><strong>487</strong></td><td><span class="badge ok">+35</span></td></tr>
-        <tr><td>World Nomads (#3)</td><td>435</td><td>407</td><td>−28</td></tr>
-        <tr><td>Berkshire Hathaway</td><td>219</td><td>177</td><td>−42</td></tr>
-        <tr><td>Allianz Global Assistance</td><td>196</td><td>189</td><td>−7</td></tr>
-        <tr><td>Travelex Insurance Services</td><td>195</td><td>232</td><td>+37</td></tr>
+        <tr><td><strong>Travel Guard</strong></td><td><strong>452</strong></td><td><strong>516</strong></td><td><strong>521</strong></td><td><span class="badge ok">+69 · now #1</span></td></tr>
+        <tr><td>Seven Corners</td><td>526</td><td>537</td><td>504</td><td>−22</td></tr>
+        <tr><td>World Nomads</td><td>435</td><td>426</td><td>360</td><td>−75</td></tr>
+        <tr><td>Travel Insured International</td><td>—</td><td>237</td><td>270</td><td>n/a</td></tr>
+        <tr><td>Berkshire Hathaway</td><td>219</td><td>259</td><td>215</td><td>−4</td></tr>
+        <tr><td>Travelex Insurance Services</td><td>195</td><td>253</td><td>200</td><td>+5</td></tr>
+        <tr><td>Allianz Global Assistance</td><td>196</td><td>188</td><td>164</td><td>−32</td></tr>
       </tbody>
     </table>
-    <p class="kpi-meta">The gap to Seven Corners narrowed from 74 mentions to 34. Note: Allianz's own-domain citations also fell (541 → 518), so the citation landscape redistributed somewhat — which makes pure schema attribution harder.</p>
+    <p class="kpi-meta">The 74-mention gap to Seven Corners at baseline is now a 17-mention lead. This is the headline win — but note it depends heavily on <em>competitor decay</em> (World Nomads −75, Seven Corners −33 from its Jun 23 peak), not just Travel Guard's own growth. That makes clean schema attribution harder, not easier: when the whole field softens, a rising brand gains rank partly by default.</p>
 
     <h2 id="attribution">7. What's attributable to schema vs. noise</h2>
     <p>The honest read: <strong>probably some, but not all.</strong></p>
@@ -306,15 +309,17 @@
       <li><strong>Competitor decay</strong> accounts for some of the relative gain — when Allianz and World Nomads lose ground, Travel Guard rises by default.</li>
       <li><strong>Content quality + index churn</strong> — the pre-existing-conditions +79% jump likely predates the schema being live, so most of that movement is content + LLM index updates, not yet schema.</li>
     </ul>
-    <p><strong>What to watch at Jun 23:</strong> if citation share keeps climbing 2% → 3%, that's the strongest week-5 schema signal available. If the per-page-schema'd pages (CFAR, pre-existing, plans) keep gaining disproportionately, that supports the schema-first hypothesis. A plateau would mean the jump was mostly competitor weakness + seasonality.</p>
+    <p><strong>What the Jun 23 + Jul 6 pulls tell us:</strong> the schema-first hypothesis held up where it's testable. The three prompts mapped to schema'd P0 pages (pre-existing, CFAR, baggage) each cleared their 90-day targets, and those same pages dominate the top-cited-URL list. That's the signal most consistent with schema working. Against it: citation share plateaued at 2% (not the 3% we hoped to see by now), the Jun 9 citation peak turned out to overstate the run-rate, and the biggest brand-rank gain leaned on competitor decay. Net read: schema is helping the pages it's been applied to; the brand-level #1 is real but partly a gift from a softening field.</p>
+    <p><strong>What to watch at Day 90 (mid-Aug):</strong> whether citation share finally breaks above 2% (the make-or-break for the 3–4% target), whether the deploy of the built-but-undeployed baggage/assistance schema lifts those pages further, and whether the two regressing prompts (student safety, medical emergencies) stabilise or keep sliding.</p>
 
     <h2 id="actions">8. Recommended actions before next pull</h2>
     <ol>
-      <li><strong>Add page-specific JSON-LD for <code>/info/assistance-services</code> and <code>/travel-insurance/benefits/baggage-insurance</code></strong> — both climbed into the top-cited URLs without dedicated schema. <span class="badge ok">✓ Done Jun 10</span> — built from live-page content, awaiting deploy.</li>
-      <li><strong>Pull a per-engine Otterly breakdown</strong> at Jun 23 (ChatGPT / Perplexity / Google AI Overviews / Gemini / Copilot) to see whether gains concentrate where schema has had most time to land. The cleanest natural experiment available.</li>
-      <li><strong>Take a Google Search Console snapshot now</strong> so there's a structured-data-impressions baseline for the Jun 23 comparison — the Rich Results dashboards take 7–14 days to reflect a deployment.</li>
-      <li><strong>Archive baseline + this checkpoint</strong> to a <code>baseline-2026-05-20/</code> folder so future checkpoints diff mechanically.</li>
-      <li><strong>Refresh the Trustpilot <code>aggregateRating</code></strong> (snapshot 4.1 / 1,600 reviews, added Jun 11 to homepage + reviews-page files). Re-pull the widget-data endpoint at every checkpoint; update both files if score or review count changed. Targets LLM citations on "top-rated travel insurance" prompts — no SERP-star movement expected (Google ignores self-serving org ratings).</li>
+      <li><strong>Deploy the built-but-undeployed baggage &amp; assistance JSON-LD</strong> — both are already earning top-cited-URL positions on the site-wide bundle alone; the deploy is the reinforcement. Confirm it lands so the Day 90 pull can measure the lift.</li>
+      <li><strong>Prioritise the student-safety page</strong> — its prompt has declined every pull (29 → 18, now below baseline) and the page has no dedicated schema deployed. Build/deploy schema for it, or investigate what's displacing it.</li>
+      <li><strong>Pull a per-engine Otterly breakdown at Day 90</strong> (ChatGPT / Perplexity / Google AI Overviews / Gemini / Copilot) — still outstanding from Jun 9. The clearest natural experiment for isolating schema effect by index refresh speed.</li>
+      <li><strong>Fill Tier 4 from the work laptop</strong> — the Adobe CJA connector (data view <em>TGUS (Prod)</em>) is reachable there; the VPN on the personal laptop blocked the report endpoint. Pull Sessions + Prequote Start segmented by AI referrers.</li>
+      <li><strong>Re-pull GSC</strong> for the first post-deploy rich-result impressions (FAQ / Product / Breadcrumb rows appearing is the cleanest GSC signal the markup is recognised).</li>
+      <li><strong>Trustpilot <code>aggregateRating</code> refreshed Jul 6</strong> <span class="badge ok">✓ Done</span> — score held at 4.1, review count moved 1,600 → <strong>1,711</strong>; homepage + reviews-page JSON updated (awaiting deploy on those live pages). Re-pull the widget-data endpoint each checkpoint.</li>
     </ol>
 
     <h2 id="tier34">9. Tier 3 — traditional search (GSC baseline)</h2>
@@ -336,9 +341,15 @@
     </table>
     <p class="kpi-meta">The Search Appearance breakdown showed only <em>Translated results</em> and <em>Videos</em> — no FAQ, Product, HowTo, Breadcrumb, or Merchant rich results. After the per-page schema deploys, watch for those rows to appear here; their first nonzero impressions are the cleanest GSC signal that the markup is recognized.</p>
 
-    <h2 id="tier4">10. Tier 4 — business metrics (Adobe Analytics)</h2>
+    <h2 id="tier4">10. Tier 4 — business metrics (Adobe CJA)</h2>
     <div class="callout">
-      <p><strong>Still to capture.</strong> Needs an Adobe Analytics pull (last 90 days): organic + AI-referral visits (<strong>Referring Domain</strong> = <code>chatgpt.com</code> / <code>perplexity.ai</code> / <code>gemini.google.com</code> / <code>copilot.microsoft.com</code>), quote starts segmented by organic and by AI referrals, and bounce / time-on-page for the schema'd page set. Adobe isn't reachable from here — hand me those numbers and this section gets the same table + chart treatment.</p>
+      <p><strong>Pull deferred to the work laptop (Jul 6).</strong> The Adobe Customer Journey Analytics connector is now wired up and the components are identified — but the report endpoint was blocked by the VPN on the personal laptop this session (lightweight discovery calls succeeded; report queries errored). On the work laptop this is a quick pull:</p>
+      <ul style="margin:8px 0 0;">
+        <li><strong>Data view:</strong> TGUS Dataview (Prod) · <code>dv_6887e717e9927cf644bbd0dc</code></li>
+        <li><strong>Traffic metric:</strong> Sessions · <strong>AI referrers</strong> via <em>Referrer URL</em> (<code>variables/web.webReferrer.URL</code>) filtered to <code>chatgpt.com</code> / <code>perplexity.ai</code> / <code>gemini.google.com</code> / <code>copilot.microsoft.com</code></li>
+        <li><strong>Conversion:</strong> Prequote Start (<code>metrics/_aigtravelinc.event.purchase.prequoteStart</code>), segmented by organic and by AI referral</li>
+      </ul>
+      <p style="margin:8px 0 0;">Once pulled, this section gets the same table + chart treatment as Tiers 2–3.</p>
     </div>
 
     <h2 id="log">11. Checkpoint log &amp; how to update</h2>
@@ -349,7 +360,8 @@
       <tbody>
         <tr><td>2026-05-20</td><td>Baseline</td><td>May 6–19</td><td>185 own-domain citations · 1% share · 8% domain coverage · #2 brand, 452 mentions</td></tr>
         <tr><td>2026-06-09</td><td>Day 21 · Checkpoint 1</td><td>May 27 – Jun 9</td><td>Citations +58.9%, share doubled to 2%, coverage trend reversed −1 → +1</td></tr>
-        <tr><td>2026-06-23</td><td>Day 35 · Checkpoint 2</td><td>(pending)</td><td>—</td></tr>
+        <tr><td>2026-06-23</td><td>Day 35 · Checkpoint 2</td><td>Jun 10 – Jun 23</td><td>Citations eased to 255, domain coverage 16%, still #2 (Seven Corners 537 vs 516); pre-existing page top-cited (40)</td></tr>
+        <tr><td>2026-07-06</td><td>Day 48 · Checkpoint 3</td><td>Jun 23 – Jul 6</td><td><strong>Travel Guard #1</strong> (521 vs 504); coverage 33.9% &amp; domain coverage 15% both past 90d target; citations 287; share flat at 2%; 3 schema'd-page prompts cleared 90d targets</td></tr>
       </tbody>
     </table>
 
@@ -365,7 +377,7 @@
   </main>
 
   <footer class="docfoot">
-    Travel Guard Schema Rollout — KPI Scorecard · Latest checkpoint Jun 9 2026 (Day 21) · Data from <code>TravelGuard-KPI-Tracking.md</code> · Self-contained (no external assets)
+    Travel Guard Schema Rollout — KPI Scorecard · Latest checkpoint Jul 6 2026 (Day 48) · Data from <code>TravelGuard-KPI-Tracking.md</code> · Self-contained (no external assets)
   </footer>
 
 </div>
@@ -375,26 +387,27 @@
 var MILESTONES = [
   { date: '2026-05-25', label: 'Site-wide bundle live', color: '#0076be' },
   { date: '2026-06-06', label: 'Per-page schemas finalized (repo)', color: '#64c5b9' },
+  { date: '2026-06-11', label: 'Homepage/FAQ/plans + 6 plan pages deployed', color: '#f0a726' },
   { date: '2026-06-11', label: 'Trustpilot rating added', color: '#db5989' }
 ];
 
 var SERIES = [
   { group:'Brand', key:'mentions', label:'Brand mentions', unit:'', prefix:'', lowerIsBetter:false, t30:475, t90:525,
-    note:'+35 (+7.7%) vs baseline', data:[ {date:'2026-05-19', value:452, label:'Baseline'}, {date:'2026-06-09', value:487, label:'Jun 9'} ] },
+    note:'+69 (+15.3%) vs baseline · now #1', data:[ {date:'2026-05-19', value:452, label:'Baseline'}, {date:'2026-06-09', value:487, label:'Jun 9'}, {date:'2026-06-23', value:516, label:'Jun 23'}, {date:'2026-07-06', value:521, label:'Jul 6'} ] },
   { group:'Brand', key:'brandCoverage', label:'Brand coverage', unit:'%', prefix:'', lowerIsBetter:false, t30:30, t90:32,
-    note:'+2.1pp · LLM share-of-voice', data:[ {date:'2026-05-19', value:29.1, label:'Baseline'}, {date:'2026-06-09', value:31.2, label:'Jun 9'} ] },
+    note:'+4.8pp vs baseline · past 90d target', data:[ {date:'2026-05-19', value:29.1, label:'Baseline'}, {date:'2026-06-09', value:31.2, label:'Jun 9'}, {date:'2026-06-23', value:31.0, label:'Jun 23'}, {date:'2026-07-06', value:33.9, label:'Jul 6'} ] },
   { group:'Brand', key:'avgPosition', label:'Avg brand position', unit:'', prefix:'', lowerIsBetter:true, t30:1.80, t90:1.65,
-    note:'−0.18 · lower is better', data:[ {date:'2026-05-19', value:1.94, label:'Baseline'}, {date:'2026-06-09', value:1.76, label:'Jun 9'} ] },
+    note:'−0.11 vs baseline · lower is better', data:[ {date:'2026-05-19', value:1.94, label:'Baseline'}, {date:'2026-06-09', value:1.76, label:'Jun 9'}, {date:'2026-06-23', value:1.82, label:'Jun 23'}, {date:'2026-07-06', value:1.83, label:'Jul 6'} ] },
   { group:'Brand', key:'likelihoodBuy', label:'Likelihood to buy', unit:'%', prefix:'', lowerIsBetter:false, t30:80, t90:83,
-    note:'+4pp · already at 90d target', data:[ {date:'2026-05-19', value:79, label:'Baseline'}, {date:'2026-06-09', value:83, label:'Jun 9'} ] },
+    note:'+2pp vs baseline · at 30d target', data:[ {date:'2026-05-19', value:79, label:'Baseline'}, {date:'2026-06-09', value:83, label:'Jun 9'}, {date:'2026-06-23', value:81, label:'Jun 23'}, {date:'2026-07-06', value:81, label:'Jul 6'} ] },
   { group:'Brand', key:'sentiment', label:'Sentiment score', unit:'', prefix:'+', lowerIsBetter:false, t30:65, t90:68,
-    note:'−4 · within natural variance', data:[ {date:'2026-05-19', value:63, label:'Baseline'}, {date:'2026-06-09', value:59, label:'Jun 9'} ] },
+    note:'−1 vs baseline · within variance', data:[ {date:'2026-05-19', value:63, label:'Baseline'}, {date:'2026-06-09', value:59, label:'Jun 9'}, {date:'2026-06-23', value:62, label:'Jun 23'}, {date:'2026-07-06', value:62, label:'Jul 6'} ] },
   { group:'Citation', key:'ownCitations', label:'Own-domain citations', unit:'', prefix:'', lowerIsBetter:false, t30:250, t90:400,
-    note:'+109 (+58.9%) · the headline number', data:[ {date:'2026-05-19', value:185, label:'Baseline'}, {date:'2026-06-09', value:294, label:'Jun 9'} ] },
+    note:'+102 (+55.1%) vs baseline · the headline number', data:[ {date:'2026-05-19', value:185, label:'Baseline'}, {date:'2026-06-09', value:294, label:'Jun 9'}, {date:'2026-06-23', value:255, label:'Jun 23'}, {date:'2026-07-06', value:287, label:'Jul 6'} ] },
   { group:'Citation', key:'citationShare', label:'Citation share', unit:'%', prefix:'', lowerIsBetter:false, t30:1.5, t90:3.5,
-    note:'doubled 1% → 2% · 90d target 3–4%', data:[ {date:'2026-05-19', value:1, label:'Baseline'}, {date:'2026-06-09', value:2, label:'Jun 9'} ] },
+    note:'held at 2% · 90d target 3–4%', data:[ {date:'2026-05-19', value:1, label:'Baseline'}, {date:'2026-06-09', value:2, label:'Jun 9'}, {date:'2026-06-23', value:2, label:'Jun 23'}, {date:'2026-07-06', value:2, label:'Jul 6'} ] },
   { group:'Citation', key:'domainCoverage', label:'Domain coverage', unit:'%', prefix:'', lowerIsBetter:false, t30:10, t90:14,
-    note:'+5pp (+62.5%) · near 90d target', data:[ {date:'2026-05-19', value:8, label:'Baseline'}, {date:'2026-06-09', value:13, label:'Jun 9'} ] }
+    note:'+7pp vs baseline · past 90d target', data:[ {date:'2026-05-19', value:8, label:'Baseline'}, {date:'2026-06-09', value:13, label:'Jun 9'}, {date:'2026-06-23', value:16, label:'Jun 23'}, {date:'2026-07-06', value:15, label:'Jul 6'} ] }
 ];
 
 /* ---- Renderer (no external libraries) ---- */

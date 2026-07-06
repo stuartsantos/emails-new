@@ -4,6 +4,14 @@ Structured-data (JSON-LD) build-out for travelguard.com, aimed at LLM/AI-search 
 
 This folder is git-synced — after any file changes, suggest a commit message (conventional-commit style, summarizing what changed and why).
 
+## Session handoff (2026-07-06) — pending KPI checkpoint work
+
+The KPI report is two checkpoints behind (Jun 23 pending; ~day 48 now). Pending, in order:
+1. Otterly pull from Stuart (Brand Report, last 14 days, US, all engines — same view) or via Chrome extension → update §3/§5 tables, `SERIES` arrays, checkpoint log, and narrative in `TravelGuard-KPI-Report.html` + a §12 in `TravelGuard-KPI-Tracking.md`
+2. Trustpilot refresh: the rule #7 widget endpoint timed out twice from the sandbox — retry or fetch from browser context; update homepage + reviews JSON if values moved from 4.1 / 1,600
+3. `MILESTONES` array in the KPI report is missing the Jun 11 deploy (homepage, FAQ, plans listing, 6 plan pages live) — add it
+4. Optional: Adobe CJA connector is now available — can fill the report's empty §10 Tier 4 section (AI-referral visits, quote starts); Stuart deferred this, confirm before pulling
+
 ## Key documents
 
 | File | Purpose |
