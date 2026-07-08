@@ -4,7 +4,7 @@ Responsive HTML emails for Zurich Travel Insurance customer journey, BAU, holida
 
 For shared technical patterns (DOCTYPE, meta tags, MSO conditional, Google Fonts, dark mode CSS, layout, preheader, font stack, brand color palette, gotchas), see the **root `/CLAUDE.md`**. This file covers TG-Zurich-specific content: Figma-to-HTML mapping, hosted CDN assets, hero-image pattern, and known-issue workarounds.
 
-**Brand source of truth:** `_work-items/tg-design-system/` is the bundled CoverMore-2025 Travel Guard design system (tokens, voice & tone, brand assets, do/don'ts). Skim `project/SKILL.md` before designing a new template — it spells out the rules that aren't obvious from the tokens alone. Root `/CLAUDE.md` has the asset inventory and token cross-reference.
+**Brand source of truth:** `../tg-brand/design-system/` is the bundled CoverMore-2025 Travel Guard design system (tokens, voice & tone, brand assets, do/don'ts). Skim `project/SKILL.md` before designing a new template — it spells out the rules that aren't obvious from the tokens alone. Root `/CLAUDE.md` has the asset inventory and token cross-reference.
 
 ## Folder Structure
 
@@ -189,7 +189,7 @@ Use these URLs instead of local `../img/` paths for production emails.
 
 ## Voice & Tone (from design system)
 
-Paraphrased from `_work-items/tg-design-system/README.md` and `project/SKILL.md`. Read those for full detail.
+Paraphrased from `../tg-brand/design-system/README.md` and `project/SKILL.md`. Read those for full detail.
 
 - **Reassuring, not alarmist.** Lead with what's possible ("Travel covered. Trips earned."), not what could go wrong.
 - **Clear, never breezy.** Insurance language has to be precise — *Trip Cancellation*, *Pre-Existing Medical Conditions*, *Cancel For Any Reason* are proper-noun product features, not casualisms.

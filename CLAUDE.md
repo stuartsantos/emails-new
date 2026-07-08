@@ -39,7 +39,7 @@ Each brand directory has its own `CLAUDE.md` with brand-specific details (Handle
 | claude.ai Google Calendar (`mcp__claude_ai_Google_Calendar__*`) | Remote | Calendar read/write |
 | claude.ai Intuit TurboTax | Remote | Tax assistant tools |
 | claude.ai Microsoft 365 | Remote | Needs authentication before use |
-| claude.ai Adobe Customer Journey Analytics (`mcp__claude_ai_Adobe_Customer_Journey_Analytics__*`) | Remote | CJA reporting — **read `_work-items/cja/CLAUDE.md` before use** (data view IDs, mandatory bot/internal-traffic segments, bootstrap flow) |
+| claude.ai Adobe Customer Journey Analytics (`mcp__claude_ai_Adobe_Customer_Journey_Analytics__*`) | Remote | CJA reporting — **read `../cja/CLAUDE.md` before use** (data view IDs, mandatory bot/internal-traffic segments, bootstrap flow) |
 
 If any server fails, run `claude mcp list` to check current health before troubleshooting.
 
@@ -166,12 +166,12 @@ Used across `tg/`, `row/`, `expedia/`. Qantas has its own palette in `qantas/CLA
 
 ## Design System Reference (TG)
 
-Authoritative TG brand source (CoverMore 2025): **`_work-items/tg-design-system/`** — generated from `Travel Guard Styles 2025.fig` via Claude Design.
+Authoritative TG brand source (CoverMore 2025): **`../tg-brand/design-system/`** — generated from `Travel Guard Styles 2025.fig` via Claude Design.
 
-- `_work-items/tg-design-system/README.md` — content fundamentals, voice & tone, visual foundations
-- `_work-items/tg-design-system/project/SKILL.md` — hard rules and don'ts when designing in the system
-- `_work-items/tg-design-system/project/colors_and_type.css` — canonical token file (colors, type, spacing, radii, shadows)
-- `_work-items/tg-design-system/project/preview/` — atomic specimen HTMLs (buttons, hero, plan tiles, accordion, alerts, type, color, spacing)
+- `../tg-brand/design-system/README.md` — content fundamentals, voice & tone, visual foundations
+- `../tg-brand/design-system/project/SKILL.md` — hard rules and don'ts when designing in the system
+- `../tg-brand/design-system/project/colors_and_type.css` — canonical token file (colors, type, spacing, radii, shadows)
+- `../tg-brand/design-system/project/preview/` — atomic specimen HTMLs (buttons, hero, plan tiles, accordion, alerts, type, color, spacing)
 
 This is a **web** design system (1280px page width, 96px section padding, hover states, full-pill buttons). Tokens, voice/tone, and the don'ts list translate directly to email work; web-only layout rules do not.
 
@@ -181,21 +181,21 @@ Primary brand SVGs (use these as the canonical source — convert to PNG for ema
 
 | Asset | Path | Purpose |
 |---|---|---|
-| TG wordmark navy | `_work-items/tg-design-system/project/brand/logo-tg-navy.svg` | Primary on light bg |
-| TG wordmark white | `_work-items/tg-design-system/project/brand/logo-tg-white.svg` | Reverse on TG Navy / dark hero |
-| Map-pin navy | `_work-items/tg-design-system/project/brand/icon-mappin-navy.svg` | Brand mark; `filter: invert` for white/sand |
-| Speech-bubbles | `_work-items/tg-design-system/project/brand/icon-speech-bubbles.svg` | Help / Advisor Connect |
-| Pattern — topographic | `_work-items/tg-design-system/project/brand/pattern-topographic.svg` | Hero accent on TG Navy |
-| Pattern — waves | `_work-items/tg-design-system/project/brand/pattern-waves.svg` | Section dividers on Glacier |
+| TG wordmark navy | `../tg-brand/design-system/project/brand/logo-tg-navy.svg` | Primary on light bg |
+| TG wordmark white | `../tg-brand/design-system/project/brand/logo-tg-white.svg` | Reverse on TG Navy / dark hero |
+| Map-pin navy | `../tg-brand/design-system/project/brand/icon-mappin-navy.svg` | Brand mark; `filter: invert` for white/sand |
+| Speech-bubbles | `../tg-brand/design-system/project/brand/icon-speech-bubbles.svg` | Help / Advisor Connect |
+| Pattern — topographic | `../tg-brand/design-system/project/brand/pattern-topographic.svg` | Hero accent on TG Navy |
+| Pattern — waves | `../tg-brand/design-system/project/brand/pattern-waves.svg` | Section dividers on Glacier |
 
 Secondary asset set (line icons + extra logo variants + product screenshot):
 
 | Asset | Path |
 |---|---|
-| Brand icons (headset, map, map-pin, palm, plane, shield, speech) | `_work-items/tg-design-system/project/assets/brand-icons/` |
-| Logo variants (color, black, white, wordmark, wordmark-white) | `_work-items/tg-design-system/project/assets/logo/` |
-| Patterns (topographic-island, topographic-sand) | `_work-items/tg-design-system/project/assets/patterns/` |
-| Product screenshot | `_work-items/tg-design-system/project/assets/imagery/product-screenshot.png` |
+| Brand icons (headset, map, map-pin, palm, plane, shield, speech) | `../tg-brand/design-system/project/assets/brand-icons/` |
+| Logo variants (color, black, white, wordmark, wordmark-white) | `../tg-brand/design-system/project/assets/logo/` |
+| Patterns (topographic-island, topographic-sand) | `../tg-brand/design-system/project/assets/patterns/` |
+| Product screenshot | `../tg-brand/design-system/project/assets/imagery/product-screenshot.png` |
 
 Hosted CDN equivalents (already baked into emails) live in `tg/us/zurich/CLAUDE.md`.
 

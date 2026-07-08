@@ -4,7 +4,7 @@
 
 ## Problem
 
-The 2025 Travel Guard design system bundle (`_work-items/tg-design-system/`) introduces a refined Zurich Blue palette that conflicts with how `#0076be` is currently used across email templates.
+The 2025 Travel Guard design system bundle (`../tg-brand/design-system/`) introduces a refined Zurich Blue palette that conflicts with how `#0076be` is currently used across email templates.
 
 Today, every TG/ROW/Expedia template uses `#0076be` for **everything blue**: anchor links, headings, accent text, CTA fills, accent borders. The April 2026 anchor-pinning sweep (commit `9773f12`) hard-coded this single hex into the inline `style="color: #0076be"` rule for every `<a href>`.
 
@@ -20,7 +20,7 @@ So `#0076be` is no longer the single brand blue — it's been pushed to a narrow
 
 ## Scope of impact
 
-Per `grep -rIl "#0076be" --include="*.html"`: **66 HTML files** across `tg/`, `row/`, `expedia/`, plus root `CLAUDE.md` and the rule set in `_work-items/tg-design-system/`.
+Per `grep -rIl "#0076be" --include="*.html"`: **66 HTML files** across `tg/`, `row/`, `expedia/`, plus root `CLAUDE.md` and the rule set in `../tg-brand/design-system/`.
 
 ## Audit checklist (before any sweep)
 
