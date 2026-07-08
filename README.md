@@ -90,6 +90,20 @@ npm install && grunt        # Dev server with live reload
 grunt inline                # Build only
 ```
 
+## Related Repositories
+
+Shared and adjacent work lives in sibling repos alongside this one. Several were split out of the former `_work-items/` folder (July 2026, git history preserved); where noted they're wired into this project as Claude Code additional working directories and referenced read-only.
+
+| Repo (sibling path) | What it holds | Previously |
+|---------------------|---------------|------------|
+| `../tg-brand` | Canonical Travel Guard / Zurich design system — tokens, voice & tone, brand assets. Edit here, never copy back in. | `_work-items/tg-design-system/` |
+| `../cja` | Adobe Customer Journey Analytics reporting reference — data views, mandatory segments, bootstrap flow. | `_work-items/cja/` |
+| `../seo-geo` | JSON-LD schema markup, KPI reports, and schema audit (SEO/GEO). | `_work-items/json/` |
+| `../qa-test-harness` | Playwright QA harness for the travelguard.com purchase path — also holds the PP-rebuild BRD talking points. | `_work-items/brd/` |
+| `../responsive-modular-email-templates` | Component library (see [Component Library](#component-library) above). | — |
+
+`_work-items/` now holds only email-specific working notes (`work-items.md`, `tg-color-migration.md`).
+
 ## Brand Colors (Zurich / Travel Guard)
 
 | Color | Hex | Usage |
