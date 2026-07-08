@@ -58,7 +58,9 @@
     "additionalDirectories": [
       "/Users/stuartsantos/Documents/Projects/responsive-modular-email-templates/build/html/wrappers",
       "/Users/stuartsantos/Documents/Projects/responsive-modular-email-templates/build/html/components",
-      "/Users/stuartsantos/Documents/Projects/responsive-modular-email-templates/build/html/headers"
+      "/Users/stuartsantos/Documents/Projects/responsive-modular-email-templates/build/html/headers",
+      "/Users/stuartsantos/Documents/Projects/tg-brand",
+      "/Users/stuartsantos/Documents/Projects/cja"
     ]
   },
   "hooks": {

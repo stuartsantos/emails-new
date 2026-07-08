@@ -168,6 +168,8 @@ Used across `tg/`, `row/`, `expedia/`. Qantas has its own palette in `qantas/CLA
 
 Authoritative TG brand source (CoverMore 2025): **`../tg-brand/design-system/`** — generated from `Travel Guard Styles 2025.fig` via Claude Design.
 
+> **Shared repo:** `tg-brand` is a standalone sibling repo (`github.com/stuartsantos/tg-brand`), wired in here as a Claude Code additional working directory. It is **read-only** from this project — edit brand assets in `tg-brand` itself, never copy them back in. The Adobe CJA reference is likewise its own sibling repo, `../cja`.
+
 - `../tg-brand/design-system/README.md` — content fundamentals, voice & tone, visual foundations
 - `../tg-brand/design-system/project/SKILL.md` — hard rules and don'ts when designing in the system
 - `../tg-brand/design-system/project/colors_and_type.css` — canonical token file (colors, type, spacing, radii, shadows)
