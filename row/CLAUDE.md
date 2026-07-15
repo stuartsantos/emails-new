@@ -16,11 +16,11 @@ row/
         └── policy-confirmation.html
 ```
 
-**Markets:** ae (UAE), at (Austria), be (Belgium), ca (Canada), ch (Switzerland), cz (Czech Republic), de (Germany), es (Spain), fr (France), gb (United Kingdom), ie (Ireland), it (Italy), kw (Kuwait), lb (Lebanon), nl (Netherlands), no (Norway), nz (New Zealand), om (Oman), pt (Portugal), qa (Qatar), se (Sweden), sg (Singapore), us (United States)
+**Markets:** ae (UAE), at (Austria), be (Belgium), bh (Bahrain), ca (Canada), ch (Switzerland), cz (Czech Republic), de (Germany), es (Spain), fr (France), gb (United Kingdom), ie (Ireland), it (Italy), kw (Kuwait), lb (Lebanon), nl (Netherlands), no (Norway), nz (New Zealand), om (Oman), pt (Portugal), qa (Qatar), se (Sweden), sg (Singapore), us (United States)
 
-**Multi-language countries:** Austria (de/en), Belgium (en/fr/nl), Canada (en/fr), Switzerland (de/en/fr), UAE (en/ar), Kuwait (en/ar), Norway (en/nb), Oman (en/ar), Qatar (en/ar), Sweden (en/sv)
+**Multi-language countries:** Austria (de/en), Bahrain (en/ar), Belgium (en/fr/nl), Canada (en/fr), Switzerland (de/en/fr), UAE (en/ar), Kuwait (en/ar), Norway (en/nb), Oman (en/ar), Qatar (en/ar), Sweden (en/sv)
 
-**RTL (Arabic) markets:** ae, kw, om, qa each have an `ar/` template built on `_template/row-reference-rtl.html` — see [RTL templates](#rtl-arabic-templates) below.
+**RTL (Arabic) markets:** ae, bh, kw, om, qa each have an `ar/` template built on `_template/row-reference-rtl.html` — see [RTL templates](#rtl-arabic-templates) below.
 
 ## Handlebars Variables
 
@@ -56,12 +56,13 @@ Legacy `{Variable}` (single-brace) placeholders should be converted to the moder
 | Market | Underwriter (provisional) | Hosted logo URL |
 |--------|---------------------------|-----------------|
 | ae | LIVA | `https://policy.travelguard.com/content/dam/site-images-docs/ae/LIVA_UAE_Logo.png` (140px) |
+| bh | GIG Bahrain | `https://www.travelguard.com/content/dam/tg-documents/qatar/gig-logo-bh.png` (180px) |
 | kw | GIG | `https://www.travelguard.com/content/dam/tg-documents/qatar/giga-logo-kt.png` |
 | lb | GIG | `https://www.travelguard.com/content/dam/tg-documents/qatar/gig-logo-lb.png` |
 | om | Sukoon | `https://www.travelguard.com/content/dam/tg-documents/qatar/sukoon-logo.png` |
 | qa | Qatar General Insurance | `https://www.travelguard.com/content/dam/tg-documents/qatar/qa-gen-logo.png` |
 
-> The KW/LB/OM/QA logos live in the CDN folder `/content/dam/tg-documents/qatar/`. The local PNG copies under `row/{country}/` are source assets only — templates reference the hosted URLs, not the local files. The underwriter names (and therefore `alt` text) are provisional and need confirmation.
+> The BH/KW/LB/OM/QA logos live in the CDN folder `/content/dam/tg-documents/qatar/`. The local PNG copies under `row/{country}/` are source assets only — templates reference the hosted URLs, not the local files. The underwriter names (and therefore `alt` text) are provisional and need confirmation.
 
 ## Rebranding Rules (AIG Travel → Travel Guard)
 
@@ -112,18 +113,24 @@ All ROW policy confirmation templates have been updated to the modern responsive
 | qa (Qatar) | en, ar | ar is RTL |
 | se (Sweden) | en, sv | 3-bullet contact block; sv retains a market-specific "Viktig information" liability notice |
 
+**Added July 2026 (Qatar Airways, later market):**
+
+| Country | Languages | Notes |
+|---------|-----------|-------|
+| bh (Bahrain) | en, ar | **GIG Bahrain** underwriter logo (not Travel Guard); ar is RTL and uses the `ترافل جارد` brand rendering (same as ae) |
+
 All Qatar Airways templates have the `{{AltViewPolicyLinks}}` section **removed** (per partner requirement). The same removal was applied to the existing **ch (Switzerland)** templates (de, en, fr) for this partner.
 
 ### RTL (Arabic) templates
 
-Arabic templates (`ae/ar`, `kw/ar`, `om/ar`, `qa/ar`) are built on `_template/row-reference-rtl.html`. RTL-specific conventions:
+Arabic templates (`ae/ar`, `bh/ar`, `kw/ar`, `om/ar`, `qa/ar`) are built on `_template/row-reference-rtl.html`. RTL-specific conventions:
 
 - `<html lang="ar" dir="rtl">` + `dir="rtl"` / `direction: rtl` on the body and content containers; body text cells use `text-align: right`.
 - Font: **Noto Sans Arabic** loaded first, Latin Noto Sans as fallback — stack `'Noto Sans Arabic', 'Noto Sans', 'Source Sans Pro', Arial, sans-serif`.
 - **Split header is mirrored** — navy thank-you banner on the right, photo on the left (banner `<td>` ordered first under `dir=rtl`).
 - Bullet lists use `padding-right` (not `padding-left`).
 - **Bidi isolation:** wrap LTR data (phone numbers, emails, policy numbers, URLs) in `<span dir="ltr">` so digits/punctuation don't reorder inside Arabic text.
-- Brand name uses each market's **base-content Arabic rendering** (not Latinised): `حراس السفر` for kw/om/qa, `ترافل جارد` for ae. The legacy AIG company reference (`أيه آي جي`) in the assistance line was de-branded to that market's brand term. **Arabic copy is pending native-speaker / QA-team review.**
+- Brand name uses each market's **base-content Arabic rendering** (not Latinised): `حراس السفر` for kw/om/qa, `ترافل جارد` for ae and bh. The legacy AIG company reference (`أيه آي جي`) in the assistance line was de-branded to that market's brand term. **Arabic copy is pending native-speaker / QA-team review.**
 
 ## Content variations by language
 
@@ -142,9 +149,9 @@ Markets covered per partner:
 | United | BE, CH, DE, ES, FR, IE, IT, PT |
 | Emirates | AT, BA, BE, CA, CZ, DE, DK, ES, FR, GR, HG, IE, IT, KT, LB, MT, NL, NO, NZ, OM, PL, PT, QT, SA, SE, SG, SZ, UE, UK, ZA |
 | Qatar (planning set) | AT, BE, CZ, DE, ES, FR, IT, KT, LB, NL, NO, OM, QT, SE, UE, UK |
-| **Qatar Airways** (delivered, Jun 2026) | ae, ch, kw, lb, no, om, qa, se |
+| **Qatar Airways** (delivered, Jun–Jul 2026) | ae, bh, ch, kw, lb, no, om, qa, se |
 
-> Note: the older Emirates/Qatar partner rows use legacy market codes (`UE`=UAE, `QT`=Qatar, `KT`=Kuwait). The delivered Qatar Airways templates use ISO folder codes: **`ae`** (UAE), **`qa`** (Qatar), **`kw`** (Kuwait). The Kuwait CDN logo asset keeps its original filename `giga-logo-kt.png`.
+> Note: the older Emirates/Qatar partner rows use legacy market codes (`UE`=UAE, `QT`=Qatar, `KT`=Kuwait). The delivered Qatar Airways templates use ISO folder codes: **`ae`** (UAE), **`qa`** (Qatar), **`kw`** (Kuwait), **`bh`** (Bahrain). The Kuwait CDN logo asset keeps its original filename `giga-logo-kt.png`; Bahrain (added July 2026) uses `gig-logo-bh.png`.
 
 Live deployed template URLs (per language):
 

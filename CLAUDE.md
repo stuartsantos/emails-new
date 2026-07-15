@@ -11,7 +11,7 @@ This repository contains HTML email templates for travel insurance products acro
 | Directory | Brand | Description |
 |-----------|-------|-------------|
 | `tg/` | Travel Guard / Zurich | US market (customer journey, BAU, travel tips, holiday, sponsor emails) + international (CA, IT, MY, SG), agent templates, certificates |
-| `row/` | Zurich Travel Guard | "Rest of World" policy confirmations (23 countries, multi-language) |
+| `row/` | Zurich Travel Guard | "Rest of World" policy confirmations (24 countries, multi-language) |
 | `expedia/` | Expedia Travel Insurance | Policy confirmations across 19 markets (US, CA, MX, NZ, IT, HK, SG, EU markets) |
 | `qantas/` | Qantas Travel Insurance | NZ and AU lifecycle emails (confirmation, pre-trip, cancel, void, AMT expiry, medical, save-quote) |
 | `jetstar/` | Jetstar Travel Insurance | AU, NZ, SG markets |
