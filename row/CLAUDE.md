@@ -97,6 +97,8 @@ All ROW policy confirmation templates have been updated to the modern responsive
 | pt (Portugal) | en, pt | Fixed typo "fposso" → "posso" in pt/pt |
 | us (United States) | en | US-specific content (World Service Center, claims online link, self-service page) |
 
+**United-under-ROW prototype (July 2026):** `us/en/policy-confirmation-united-composite.html` is a draft composite merging the existing United US fulfillment copy (World Service Center, online claims, self-service, cancellation notice) into the standard ROW template structure, per the proposal in `_work-items/united-under-row.md`. It's a static first-pass merge, not yet the hybrid Handlebars (`{{#if}}`-flagged) model the spec describes — see that doc for open questions before promoting it to the real template.
+
 **Already modern (not modified):** ca (en, fr) — note ca/en is a deliberate plain-HTML stub; it (en, it), nz (en), sg (en)
 
 **Modernized subsequently:** ie (en) — expanded CSS formatting, dark mode, full responsive layout; gb (en) — renamed from uk/ (ISO 3166-1 alpha-2)
