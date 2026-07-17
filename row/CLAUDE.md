@@ -24,29 +24,66 @@ row/
 
 ## Handlebars Variables
 
-Common variables across ROW templates:
+Handlebars tokens in ROW templates come from **two sources**, and the distinction matters when auditing:
+
+**A. MVS content fields** — the authoritative list of tokens the multi-variate sheets (MVS) can populate. **A template may only use a token from this list** (plus the service-provided values in group B). If a token isn't here and isn't a `policyDetail-*` service value, it will render literally / blank — it is a bug. Approved MVS vocabulary (verified against the live MVS, July 2026):
+
+```
+# Office / entity
+OfficeOfficialEntityNameLabel   Image_OfficeOfficialStamp
+Image_AuthorisedSignaturesImage Image_AuthorisedSignaturesImage2
+AuthorisedSignaturesNames       AuthorisedSignaturesNames2
+OfficeWebsite                   OfficeAddressLine1..5
+OfficeAddressPostcode           PostalAddressLine1
+OfficeTelephone1  OfficeTelephone2  OfficeFax
+DirectorsName  CompanySecretary  CompanyNumber
+# Customer services
+CustomerServicesContactNumber   CustomerServicesFaxNumber
+CustomerServicesEmailAddress    CustomerServicesURL
+CustomerServiceOperatingHours   technicalSupportContactNumber
+# Claims
+ClaimsContactNumber  ClaimsFaxNumber  ClaimsEmailAddress
+ClaimsOperatingHours  ClaimsURL  OfflineClaimsFormLink
+# Assistance
+AssistanceServicesContactNumber AssistanceServicesFaxNumber
+AssistanceServicesEmailAddress  AssistanceOperatingHours
+# Other contacts
+OtherContactNumber2..4  OtherClientEmailAddress
+EmailSubjectLine  EmailFromAddress
+# Copy blocks
+ImportantNotes  ImportantNotes1  ImportantNotes2
+ImportantNotes1SecondLanguage  ImportantNotes2SecondLanguage  ImportantNotes3SecondLanguage
+AdditionalInformation  AdditionalInformation1  AdditionalInformation2
+AdditionalInformation1LocalLanguage  AdditionalInformation2LocalLanguage
+Header1  Footer1  Footer1LocalLanguage
+FinancialServicesText  Brexit1  Brexit2  GDPR1  GDPR2  CountryExclusions
+# Product / geography
+ProductNamePlaceHolder  GeographicalTerritoryLabel  GeographicalTerritoryValue
+PlaceHolderField1..4
+# View-policy block
+ViewPolicyURL  AltViewPolicyLinks  ViewPolicyContactDetails
+ViewPolicyNavigationLinks  ViewPolicySocialMediaList  ViewPolicySecurityIconList
+ViewPolicyCopyright  ViewPolicyDisclaimer
+# Links & images
+TermsOfUseLink  PrivacyPolicyLink  AboutUsLink
+Image_AIGGlobalLogoHeader  Image_AIGGlobalLogoFooter
+```
+
+**B. Service-provided values** — injected by back-end services, NOT in the MVS. Currently in use:
 
 ```
 {{policyDetail-policyNumber}}              # Policy number
+{{policyDetail-primaryInsured}}            # Full name (first + last combined)
 {{policyDetail-primaryInsured-firstName}}  # Customer first name
 {{policyDetail-primaryInsured-lastName}}   # Customer last name
 {{policyDetail-address-country}}           # Residency country
 {{policyDetail-productName}}               # Product name
-{{CustomerServicesContactNumber}}          # Support phone
-{{CustomerServicesEmailAddress}}           # Support email
-{{CustomerServicesURL}}                    # Support website URL
-{{ClaimsContactNumber}}                    # Claims phone
-{{ClaimsEmailAddress}}                     # Claims email
-{{AssistanceServicesContactNumber}}        # Emergency assistance phone
-{{AssistanceServicesEmailAddress}}         # Emergency assistance email
-{{ViewPolicyURL}}                          # Policy portal link
-{{CustomerServiceOperatingHours}}          # Service hours
-{{ClaimsOperatingHours}}                   # Claims hours
-{{AltViewPolicyLinks}}                     # Alternative policy viewing links
-{{ProductNamePlaceHolder}}                 # Product/plan name
+{{policyDetail-planDescription}}           # Plan description (it/it only)
 ```
 
-Legacy `{Variable}` (single-brace) placeholders should be converted to the modern `{{policyDetail-variable}}` Handlebars form.
+> **Auditing rule — check every new country/template against list A before shipping.** When adding a new country or template, confirm each `{{token}}` is either in list A (MVS) or a known `policyDetail-*` service value from list B. Any token that is neither is almost certainly a typo or an invented field the MVS can't populate — flag it, don't ship it. Quick scan: `grep -rhoE '\{\{[^}]+\}\}' row --include=*.html | sort -u` then diff against list A + B. Legacy files with `old` in the name (e.g. `us/en/lhgroup-old-policy-confirmation.html`) are out of scope — skip them.
+
+Legacy `{Variable}` (single-brace) placeholders should be converted to the modern `{{...}}` Handlebars form (none currently remain in `row/`).
 
 ## Logo
 
