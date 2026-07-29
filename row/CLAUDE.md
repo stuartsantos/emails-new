@@ -160,6 +160,8 @@ All ROW policy confirmation templates have been updated to the modern responsive
 
 All Qatar Airways templates have the `{{AltViewPolicyLinks}}` section **removed** (per partner requirement). The same removal was applied to the existing **ch (Switzerland)** templates (de, en, fr) for this partner.
 
+**LHGROUP claims/contact update (July 2026):** `at (de, en)`, `fr (en, fr)`, `gb (en)`, and `nl (en, nl)` had `{{AltViewPolicyLinks}}` removed and a `{{ClaimsURL}}` (and, for gb, `{{CustomerServicesURL}}`) line added to the claims/customer-service contact copy, matching the pattern already applied to Expedia AT/DE and BE/NL. `it (it)` and `se (en, sv)` received the equivalent `{{ClaimsURL}}`/`{{CustomerServicesURL}}` copy addition without an existing `{{AltViewPolicyLinks}}` block to remove.
+
 ### RTL (Arabic) templates
 
 Arabic templates (`ae/ar`, `bh/ar`, `kw/ar`, `om/ar`, `qa/ar`) are built on `_template/row-reference-rtl.html`. RTL-specific conventions:
