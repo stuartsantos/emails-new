@@ -8,6 +8,7 @@
 | `30350fc` | `row/us/en/lhgroup-old-policy-confirmation.html` |
 | `9ad4c73` | `jetstar/sg/en/policy-confirmation.html` (the broken fragment), replaced by the promoted redesign |
 | `181feae` | `united/us/en/policy-confirmation.html` and the LHGROUP-only `row/us/en/policy-confirmation.html`, in the United-under-ROW consolidation |
+| `a1c0ae8` | The frozen `policy-confirmation.html` in `digdrct/us/en` and `digdrct/sg/en`, replaced by the promoted `-new.html` rebuilds |
 
 Scope was everything outside `tg/`, limited to **dead files only**: dated backups, scratch
 files, and orphans. Superseded-but-coherent templates, unmodernized live templates, and
@@ -109,6 +110,24 @@ The promoted template is partner-neutral — its only "United" is the country na
 hybrid model the spec proposed turned out to be unnecessary: MVS substitutes partner content
 through ordinary tokens.
 
+### digdrct US and SG frozen templates — replaced in `a1c0ae8`
+
+Both markets had shipped a rebuild alongside the file it replaced, so the canonical name
+pointed at the stale copy while `-new.html` was production. The `-new.html` files were
+renamed into place and the frozen ones deleted.
+
+| Market | Frozen file deleted | Promoted in its place |
+|---|---|---|
+| `digdrct/us/en` | 38,304 B, last touched by the `050027f` generic QA sweep (2026-03-04) | 45,055 B, forked at `47226f0` and developed across five commits to `2fd110a` "Modernize … for PROD" (2026-05-12) |
+| `digdrct/sg/en` | 29,207 B, likewise frozen at `050027f` | 29,014 B, last updated by `cfe26eb` (2026-06-11) |
+
+Same recovery subtlety as the US consolidation: the path still exists, so reading the old
+frozen content needs the parent — `git show a1c0ae8^:digdrct/us/en/policy-confirmation.html`.
+
+This was the last of the three inverted-naming cases (with `jetstar/sg/en`). Root
+`CLAUDE.md`'s hero-cell reference was repointed at the canonical path, and the "Retiring a
+template" convention now cites all three as the reason the rule exists.
+
 ### Untracked
 
 `bash.exe.stackdump` (repo root) — Git Bash crash artifact, gitignored. **Not recoverable
@@ -138,10 +157,9 @@ Recorded so the next cleanup doesn't re-litigate these.
 
 | File(s) | Why it stays |
 |---|---|
-| `digdrct/us/en/policy-confirmation.html`, `digdrct/sg/en/policy-confirmation.html` | **The naming is inverted.** `policy-confirmation-new.html` is the live one in both markets — the US one was forked at `47226f0`, developed across 5 commits to `2fd110a` "Modernize … for PROD" (2026-05-12), and is cited in root `CLAUDE.md` as the canonical two-column-header reference. The plainly-named files are frozen at a March 2026 generic sweep. That makes them *superseded*, not dead. Renaming `-new` into place would be the real fix. |
 | Qantas non-`-revisions` originals (11 files) | Superseded by `au-revisions/` and `nz-revisions/`, not dead. |
 | `.docx` / `.doc` / `.txt` sources | Deliberate. `qantas/CLAUDE.md` documents a "Source Document Workflow"; `row/*/email.docx` are copy/translation sources. |
-| `digdrct/us/en/tiktok-white.png` | Referenced by the live `policy-confirmation-new.html`. |
+| `digdrct/us/en/tiktok-white.png` | Referenced by the live `policy-confirmation.html`. |
 
 ## Open issues surfaced during the audit
 
