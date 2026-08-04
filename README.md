@@ -124,7 +124,7 @@ The project is transitioning from **AIG Travel** to **Travel Guard / Zurich** br
 | ROW (24 countries) | Complete |
 | Expedia | Complete |
 | Qantas NZ | Complete |
-| Qantas AU | Planned |
+| Qantas AU | Complete |
 | Jetstar | In progress |
 | United | Complete |
 

@@ -85,11 +85,18 @@ at an unusable file while a complete modern rebuild sat beside it under a `-rede
 To read the replaced file: `git show 9ad4c73^:jetstar/sg/en/policy-confirmation.html`.
 The promoted file's own history is under its old name — use `git log --follow`.
 
-**Left open deliberately:** the promoted template still carries AIG Asia Pacific underwriter
-copy, `sgtravelclaims@aig.com` and `aig.sg` links. Whether Jetstar SG has transitioned to
-Zurich is a separate question needing the correct legal copy. It also uses
-`{{policyDetail-primaryInsured}}` where the rest of the repo uses
-`{{policyDetail-primaryInsured-firstName}}` — likely a bug, unverified.
+**Left as-is by decision (2026-08-04):** the promoted template still carries AIG Asia Pacific
+underwriter copy, `sgtravelclaims@aig.com` and `aig.sg` links. Not to be changed speculatively
+— the Jetstar SG team will request an update if they need one.
+
+Its `{{policyDetail-primaryInsured}}` token is **correct, not a bug** — it outputs first and
+last name combined, which is why it appears instead of separate `-firstName`/`-lastName`
+tokens. This is already documented at `row/CLAUDE.md:76`; an earlier revision of this manifest
+wrongly flagged it, having skipped the list-B check the ROW auditing rule requires.
+
+Note for future QA sweeps: 4 of the 5 AIG hits in this file (L14, 22, 23, 24) are a developer
+comment block naming colour tokens (`aig-core-blue`, `pale-aig-blue`, `cobalt-aig-blue`) — not
+customer-visible. Only L226 (underwriter sentence) and L351 (claims email) reach recipients.
 
 ### United US consolidation — removed in `181feae`
 
@@ -180,13 +187,17 @@ Not cleanup items, but found while inventorying and worth tracking.
      Note its sibling stubs `agents/ca/en/policy-confirmation.html:17` and
      `united/ca/en/policy-confirmation.html:18` use production `policy.travelguard.ca` —
      they are different, already-live products, so the mismatch is not evidence of a bug.
-2. **Qantas AU status contradiction** — `qantas/CLAUDE.md` says the AU underwriter transition
-   is "complete"; root `README.md` says "Planned". Open UAT bugs in `work-items.md` favour
-   the README.
+2. **Qantas AU status — RESOLVED 2026-08-04.** `qantas/CLAUDE.md` said the AU underwriter
+   transition was "complete" while root `README.md` said "Planned". AU is complete; the
+   README was corrected to match. The open UAT bugs in `work-items.md` are ordinary defects,
+   not evidence the transition is outstanding.
 3. **`qantas/CLAUDE.md` claims some templates use XHTML 1.0 Transitional** — no longer true;
-   all Qantas files now open with `<!DOCTYPE html>`.
-4. **`row/se/sv/policy-confirmation.html`** retains a Swedish AIG liability clause despite
-   being listed as modernized. **`row/cz/cs`** lacks dark mode with no documenting note
-   (unlike `row/sg/en`, whose light-mode-only choice is documented).
+   all Qantas files now open with `<!DOCTYPE html>`. Still worth correcting when someone next
+   touches that file.
+4. **`row/se/sv`** (Swedish AIG liability clause) and **`row/cz/cs`** (missing dark mode, no
+   documenting note) — **leave alone by decision, 2026-08-04.** Both are known and accepted;
+   do not "fix" them in a future sweep.
 5. **Five brands have no `CLAUDE.md`** — `jetstar/`, `united/`, `admin/`, `agents/`,
    `digdrct/`. That absence is why the ambiguous variants above needed git archaeology.
+   **Decided 2026-08-04: not worth adding** — each holds only a handful of templates. Revisit
+   only if one of them grows.
