@@ -1,6 +1,11 @@
 # Legacy template cleanup — August 2026
 
-**Removal commit: `cd57d85`** — *Remove dead email templates and purge stale QA exclude paths*
+**Removal commits:**
+
+| SHA | What it removed |
+|---|---|
+| `cd57d85` | 9 dead templates (Expedia dated duplicates, admin scratch files) + 22 stale QA exclude paths |
+| `30350fc` | `row/us/en/lhgroup-old-policy-confirmation.html` |
 
 Scope was everything outside `tg/`, limited to **dead files only**: dated backups, scratch
 files, and orphans. Superseded-but-coherent templates, unmodernized live templates, and
@@ -14,8 +19,9 @@ git show cd57d85^:expedia/us/en/policy-confirmation-old.html   # read one, witho
 git checkout cd57d85^ -- expedia/us/en/policy-confirmation-old.html  # restore it to the tree
 ```
 
-The `^` matters: `cd57d85` is the commit that *deleted* the files, so their last living
-content is in its parent. To find a deleted file when you don't know the path:
+The `^` matters: the recorded SHA is the commit that *deleted* the file, so its last living
+content is in that commit's parent. Use `30350fc^` for the LHGROUP template. To find a
+deleted file when you don't know the path:
 
 ```bash
 git log --diff-filter=D --name-only --oneline
@@ -50,6 +56,16 @@ their entire history is bulk folder-move and generic QA sweeps. A real 36KB
 | `admin/us/en/xxx-admin-save-quote.html` | 7,222 B |
 | `admin/us/en/xxx-admin-save-quote-new.html` | ~7,021 B |
 
+### ROW US legacy LHGROUP template — removed in `30350fc`
+
+`row/us/en/lhgroup-old-policy-confirmation.html` (1,681 B). AIG-branded, no dark mode, no
+`role="presentation"` — one of the two remaining AIG-branding warnings in the `row` QA sweep.
+Superseded by the current LHGROUP copy applied in the July 2026 claims/contact update.
+
+The same commit dropped the "legacy files with `old` in the name are out of scope — skip
+them" clause from the Handlebars auditing rule in `row/CLAUDE.md`, since this file was its
+only example and no `-old` files remain under `row/`.
+
 ### Untracked
 
 `bash.exe.stackdump` (repo root) — Git Bash crash artifact, gitignored. **Not recoverable
@@ -81,7 +97,6 @@ Recorded so the next cleanup doesn't re-litigate these.
 |---|---|
 | `digdrct/us/en/policy-confirmation.html`, `digdrct/sg/en/policy-confirmation.html` | **The naming is inverted.** `policy-confirmation-new.html` is the live one in both markets — the US one was forked at `47226f0`, developed across 5 commits to `2fd110a` "Modernize … for PROD" (2026-05-12), and is cited in root `CLAUDE.md` as the canonical two-column-header reference. The plainly-named files are frozen at a March 2026 generic sweep. That makes them *superseded*, not dead. Renaming `-new` into place would be the real fix. |
 | `jetstar/sg/en/policy-confirmation.html`, `…-redesign.html` | Neither can be confidently called dead. The plain file is the most degraded template in the repo (bare fragment — no DOCTYPE, `<html>`, `<head>` or `<body>`; RTE paste artifact; single-brace `{FirstName}`/`{PolicyNumber}` placeholders; AIG branding, links and email throughout; a `policy.qa.travelguard.com` URL). `-redesign.html` is structurally modern but was never renamed into place and still carries AIG legal copy and `sgtravelclaims@aig.com`. The redesign may never have shipped, so deleting either risks removing the live template. **Needs a decision from whoever owns Jetstar SG.** |
-| `row/us/en/lhgroup-old-policy-confirmation.html` | Held pending confirmation — `row/CLAUDE.md` names it explicitly as out of scope for Handlebars audits, and LHGROUP is an active market. |
 | Qantas non-`-revisions` originals (11 files) | Superseded by `au-revisions/` and `nz-revisions/`, not dead. |
 | `.docx` / `.doc` / `.txt` sources | Deliberate. `qantas/CLAUDE.md` documents a "Source Document Workflow"; `row/*/email.docx` are copy/translation sources. |
 | `digdrct/us/en/tiktok-white.png` | Referenced by the live `policy-confirmation-new.html`. |
