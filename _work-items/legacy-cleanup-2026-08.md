@@ -7,6 +7,7 @@
 | `cd57d85` | 9 dead templates (Expedia dated duplicates, admin scratch files) + 22 stale QA exclude paths |
 | `30350fc` | `row/us/en/lhgroup-old-policy-confirmation.html` |
 | `9ad4c73` | `jetstar/sg/en/policy-confirmation.html` (the broken fragment), replaced by the promoted redesign |
+| `181feae` | `united/us/en/policy-confirmation.html` and the LHGROUP-only `row/us/en/policy-confirmation.html`, in the United-under-ROW consolidation |
 
 Scope was everything outside `tg/`, limited to **dead files only**: dated backups, scratch
 files, and orphans. Superseded-but-coherent templates, unmodernized live templates, and
@@ -88,6 +89,25 @@ copy, `sgtravelclaims@aig.com` and `aig.sg` links. Whether Jetstar SG has transi
 Zurich is a separate question needing the correct legal copy. It also uses
 `{{policyDetail-primaryInsured}}` where the rest of the repo uses
 `{{policyDetail-primaryInsured-firstName}}` — likely a bug, unverified.
+
+### United US consolidation — removed in `181feae`
+
+United US moved onto the shared ROW US template. Two files were deleted and one directory
+retired. Full rationale in `_work-items/united-under-row.md` (now marked DONE).
+
+| File | Why |
+|---|---|
+| `united/us/en/policy-confirmation.html` | 2,570 B unstyled plain-HTML legacy template — the file the consolidation spec was written to replace. |
+| `row/us/en/policy-confirmation.html` (LHGROUP-only version) | Replaced in place by the promoted composite. **Note the subtlety:** the path still exists, so `git show 181feae^:row/us/en/policy-confirmation.html` is how you read the *old LHGROUP* content — the current file at that path is the composite. |
+
+`united/us/en/post-trip.html` and `pre-trip.html` were **moved**, not deleted, to
+`row/us/en/`. Git recorded both as 100%-similarity renames, so `git log --follow` traces
+their history across the move. `united/` now holds only `ca/en`.
+
+The promoted template is partner-neutral — its only "United" is the country name in
+`<title>`, and all 8 of its tokens validate against the approved MVS list. The `{{#if}}`
+hybrid model the spec proposed turned out to be unnecessary: MVS substitutes partner content
+through ordinary tokens.
 
 ### Untracked
 
