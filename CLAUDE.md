@@ -282,6 +282,38 @@ Use the `/batch-qa` skill in Claude Code as a convenience wrapper.
 - Background color consistency behind logos
 - Consistency with sibling regional templates (ROW, Singapore, Zurich, etc.)
 
+## Retiring a template
+
+Git history is the archive — there is no `_archive/` directory and templates are not kept
+around "just in case". When a template stops being live:
+
+1. **Delete it** with `git rm`. Do not rename it to `-old`, leave it beside its replacement,
+   or park it under a new suffix.
+2. **Update `.claude/qa-exclude.txt` in the same commit.** Every path in that file must
+   resolve to a real file — it is the repo's primary "this template is not live" signal, and
+   it is worthless once it points at things that no longer exist.
+3. **Record it in a dated manifest** under `_work-items/` (e.g.
+   `legacy-cleanup-2026-08.md`): the deleted paths, one line of why each went, and the
+   removal commit SHA. List the files in the commit body too, so the commit is
+   self-describing.
+
+Recovering a deleted template — note the `^`, since the recorded SHA is the commit that
+*removed* the file, so its last living content is in that commit's parent:
+
+```bash
+git show <SHA>^:path/to/file.html            # read it without restoring
+git checkout <SHA>^ -- path/to/file.html     # restore it
+git log --diff-filter=D --name-only --oneline  # find deletions when you don't know the path
+```
+
+**Never name a live file `-new`, `-redesign`, or `xxx-`.** These suffixes have been used
+inconsistently enough that the name no longer tells you which file is real — in `digdrct/`
+the `-new.html` files are the production ones while the plainly-named siblings are frozen.
+The canonical template for a market is `policy-confirmation.html`; if a rebuild replaces it,
+rename the new file into place and delete the old one rather than shipping both.
+
+Past cleanups: [`_work-items/legacy-cleanup-2026-08.md`](_work-items/legacy-cleanup-2026-08.md).
+
 ## Component Library
 
 Templates can be built from components in the external project at `/responsive-modular-email-templates/build/html/`:
