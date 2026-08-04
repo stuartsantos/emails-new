@@ -9,26 +9,21 @@
 #   - Delete or comment out any files you DO want included in QA scans
 #   - Leave uncommented any files you want EXCLUDED from future audits
 #   - When you're done editing, tell Claude to update the scripts
+#
+# Every path here must resolve to a real file. Paths for deleted or moved
+# templates were purged 2026-08-04 — see _work-items/legacy-cleanup-2026-08.md.
 # =============================================================================
 
-# --- expedia/ (15 files) ---
- expedia/ca/en/expedia-ca-en-august-2023.html
- expedia/ca/en/expedia-ca-en-june-2022.html
- expedia/ca/en/expedia-ca-en.html
+# --- expedia/ (7 files) ---
 # expedia/ca/en/policy-confirmation.html
- expedia/ca/fr/expedia-ca-fr-august-2023.html
- expedia/ca/fr/expedia-ca-fr-june-2022.html
- expedia/ca/fr/expedia-ca-fr.html
 # expedia/ca/fr/policy-confirmation.html
 # expedia/hk/en/policy-confirmation.html
-# expedia/it/en/policy-confirmation.html
 # expedia/mx/es/policy-confirmation.html
 # expedia/nz/en/policy-confirmation.html
 # expedia/sg/en/policy-confirmation.html
- expedia/us/en/policy-confirmation-old.html
 # expedia/us/en/policy-confirmation.html
 
-# --- digdrct/ ---
+# --- digdrct/ (3 files) ---
 digdrct/it/it/policy-confirmation.html
 digdrct/my/en/cancel.html
 digdrct/my/en/policy-confirmation.html
@@ -71,7 +66,7 @@ jetstar/sg/en/policy-confirmation.html
  qantas/nz/en/pre-trip.html
  qantas/nz/en/void.html
 
-# --- row/ (28 files) ---
+# --- row/ (27 files) ---
 # row/_template/row-reference.html
 # row/at/de/policy-confirmation.html
 # row/at/en/policy-confirmation.html
@@ -99,25 +94,8 @@ jetstar/sg/en/policy-confirmation.html
 # row/pt/en/policy-confirmation.html
 # row/pt/pt/policy-confirmation.html
 # row/sg/en/policy-confirmation.html
-# row/uk/en/policy-confirmation.html
 
-# --- tg/ (57 files) ---
-# tg/admin/us/en/policy-confirmation.html
-# tg/admin/us/en/save-quote.html
- tg/admin/us/en/xxx-admin-save-quote-new.html
- tg/admin/us/en/xxx-admin-save-quote.html
-# tg/agents/us/en/policy-confirmation.html
-# tg/agents/us/en/save-quote.html
-# tg/ca/en/annual-followup.html
-# tg/ca/en/policy-confirmation.html
-# tg/ca/en/post-trip.html
-# tg/ca/en/save-quote.html
-tg/it/it/policy-confirmation.html
-tg/my/en/cancel.html
-tg/my/en/policy-confirmation.html
-# tg/sg/en/cancel.html
-# tg/sg/en/policy-confirmation-new.html
-# tg/sg/en/policy-confirmation.html
+# --- tg/ (17 files) ---
 # tg/us/zurich/fulfillment/eighteen-month.html
 # tg/us/zurich/fulfillment/save-quote-followup.html
 # tg/us/zurich/fulfillment/six-month-bag.html
@@ -136,10 +114,6 @@ tg/my/en/policy-confirmation.html
 # tg/us/zurich/travel-tips/travel-tips-02-26.html
 # tg/us/zurich/travel-tips/travel-tips-03-26.html
 
-# --- united/ (7 files) ---
- united/be/fr/policy-confirmation.html
- united/be/nl/policy-confirmation.html
-# united/new-policy-confirmation.html
- united/old-policy-confirmation.html
+# --- united/ (2 files) ---
 # united/us/en/post-trip.html
 # united/us/en/pre-trip.html
