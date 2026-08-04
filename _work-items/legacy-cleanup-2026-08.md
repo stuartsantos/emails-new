@@ -127,17 +127,21 @@ Recorded so the next cleanup doesn't re-litigate these.
 
 Not cleanup items, but found while inventorying and worth tracking.
 
-1. **UAT/QA hosts in policy links.** The 14 Expedia EU/international markets pointing at
-   `policy.uat.travelguard.com` (`ch/{de,fr,it}`, `de/de`, `dk/da`, `es/es`, `fi/fi`,
-   `fr/fr`, `hk/en` — also a UAT *claims* link — `ie/en`, `it/it`, `nl/nl`, `no/nb`, `se/sv`)
-   are **expected**: those markets are still in QA/UAT and the links get swapped to
-   production as each one launches. Not a defect; do not "fix" them in bulk.
+1. **UAT/QA hosts in policy links are usually pre-launch markers, not defects.** Confirmed
+   2026-08-04: a UAT host in this repo generally means the market has not launched yet, and
+   the link gets swapped to production as part of that launch. `batch-qa.sh` flags
+   "UAT/QA environment URLs" as a HIGH-priority issue, so expect standing false positives
+   there. **Check whether the market is live before treating one as a bug, and never fix
+   them in bulk.**
 
-   `row/ca/en/policy-confirmation.html` is a **separate case** — it uses
-   `policy.uat.travelguard.ca` while its two near-identical sibling stubs,
-   `agents/ca/en/policy-confirmation.html:17` and `united/ca/en/policy-confirmation.html:18`,
-   both use production `policy.travelguard.ca`. Left as-is by decision (2026-08-04), but it
-   is a genuine leftover rather than a staged link.
+   - The 14 Expedia EU/international markets on `policy.uat.travelguard.com`
+     (`ch/{de,fr,it}`, `de/de`, `dk/da`, `es/es`, `fi/fi`, `fr/fr`, `hk/en` — also a UAT
+     *claims* link — `ie/en`, `it/it`, `nl/nl`, `no/nb`, `se/sv`) are still in QA/UAT.
+   - `row/ca/en/policy-confirmation.html` (`policy.uat.travelguard.ca`) belongs to the
+     **Emirates CA ROW launch**, held in UAT for months as of August 2026. Expected.
+     Note its sibling stubs `agents/ca/en/policy-confirmation.html:17` and
+     `united/ca/en/policy-confirmation.html:18` use production `policy.travelguard.ca` —
+     they are different, already-live products, so the mismatch is not evidence of a bug.
 2. **Qantas AU status contradiction** — `qantas/CLAUDE.md` says the AU underwriter transition
    is "complete"; root `README.md` says "Planned". Open UAT bugs in `work-items.md` favour
    the README.
