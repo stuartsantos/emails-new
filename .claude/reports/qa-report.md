@@ -1,17 +1,18 @@
 # Email Template QA Report
 
-**Scanned:** all brands (160 templates)
-**Date:** 2026-08-04 18:33 UTC
-**Pass:** 131 | **Warn:** 29 | **Fail:** 0 | **Total issues:** 29
+**Scanned:** all brands (156 templates)
+**Date:** 2026-08-04 19:38 UTC
+**Pass:** 129 | **Warn:** 27 | **Fail:** 0 | **Total issues:** 28
 
 ## Summary by Issue Type
 
 | Issue | Files Affected | Priority |
 |-------|---------------|----------|
 | UAT/QA environment URLs | 15 | HIGH |
-| AIG branding references | 12 | HIGH |
+| AIG branding references | 10 | HIGH |
 | Relative image paths | 1 | MED |
 | Missing role=presentation | 1 | LOW |
+| @aig.com email domains | 1 | HIGH |
 
 ## Results by Brand
 
@@ -24,12 +25,11 @@
 - ⚠️ `agents/ca/en/policy-confirmation.html` — AIG branding (L21)
 - ⚠️ `agents/us/en/policy-confirmation.html` — AIG branding (L184,317)
 
-### digdrct/ (13 files: 9 pass, 4 warn, 0 fail)
+### digdrct/ (11 files: 8 pass, 3 warn, 0 fail)
 
 - ⚠️ `digdrct/ca/en/annual-followup.html` — AIG branding (L830,832,834,836)
 - ⚠️ `digdrct/ca/en/policy-confirmation.html` — AIG branding (L210)
 - ⚠️ `digdrct/ca/en/post-trip.html` — AIG branding (L632,634,636,638)
-- ⚠️ `digdrct/us/en/policy-confirmation.html` — AIG branding (L113,238)
 
 ### expedia/ (23 files: 9 pass, 14 warn, 0 fail)
 
@@ -48,8 +48,9 @@
 - ⚠️ `expedia/no/nb/policy-confirmation.html` — UAT/QA env URL (L211)
 - ⚠️ `expedia/se/sv/policy-confirmation.html` — UAT/QA env URL (L211)
 
-### jetstar/ (8 files: 8 pass, 0 warn, 0 fail)
+### jetstar/ (9 files: 8 pass, 1 warn, 0 fail)
 
+- ⚠️ `jetstar/sg/en/policy-confirmation.html` — AIG branding (L14,22,23,24,226);@aig.com email (L351)
 
 ### qantas/ (13 files: 12 pass, 1 warn, 0 fail)
 
@@ -59,17 +60,15 @@
 
 - ⚠️ `row/ca/en/policy-confirmation.html` — UAT/QA env URL (L15)
 - ⚠️ `row/se/sv/policy-confirmation.html` — AIG branding (L222)
-- ⚠️ `row/us/en/lhgroup-old-policy-confirmation.html` — AIG branding (L22)
+- ⚠️ `row/us/en/post-trip.html` — AIG branding (L227)
 
 ### tg/ (46 files: 44 pass, 2 warn, 0 fail)
 
 - ⚠️ `tg/us/zurich/docs/review-response.html` — Missing role=presentation (3 tables)
 - ⚠️ `tg/us/zurich/fulfillment/save-quote-followup.html` — Relative img path (2)
 
-### united/ (4 files: 2 pass, 2 warn, 0 fail)
+### united/ (1 files: 1 pass, 0 warn, 0 fail)
 
-- ⚠️ `united/us/en/policy-confirmation.html` — AIG branding (L18,21)
-- ⚠️ `united/us/en/post-trip.html` — AIG branding (L227)
 
 ---
 
