@@ -6,6 +6,7 @@
 |---|---|
 | `cd57d85` | 9 dead templates (Expedia dated duplicates, admin scratch files) + 22 stale QA exclude paths |
 | `30350fc` | `row/us/en/lhgroup-old-policy-confirmation.html` |
+| `9ad4c73` | `jetstar/sg/en/policy-confirmation.html` (the broken fragment), replaced by the promoted redesign |
 
 Scope was everything outside `tg/`, limited to **dead files only**: dated backups, scratch
 files, and orphans. Superseded-but-coherent templates, unmodernized live templates, and
@@ -66,6 +67,28 @@ The same commit dropped the "legacy files with `old` in the name are out of scop
 them" clause from the Handlebars auditing rule in `row/CLAUDE.md`, since this file was its
 only example and no `-old` files remain under `row/`.
 
+### Jetstar SG broken fragment — replaced in `9ad4c73`
+
+`jetstar/sg/en/` held two files and neither was named correctly: the canonical name pointed
+at an unusable file while a complete modern rebuild sat beside it under a `-redesign` suffix.
+`policy-confirmation-redesign.html` was promoted to `policy-confirmation.html`, replacing:
+
+- a bare fragment with no DOCTYPE, `<html>`, `<head>` or `<body>`
+- literal rich-text-editor paste garbage on line 1 (`_rte_temp_br`)
+- legacy single-brace `{FirstName}`/`{LastName}`/`{PolicyNumber}` placeholders — the last
+  instances of that format anywhere in the repo
+- a relative logo `src="/content/dam/…"` that cannot resolve in an email client
+- a `policy.qa.travelguard.com` URL
+
+To read the replaced file: `git show 9ad4c73^:jetstar/sg/en/policy-confirmation.html`.
+The promoted file's own history is under its old name — use `git log --follow`.
+
+**Left open deliberately:** the promoted template still carries AIG Asia Pacific underwriter
+copy, `sgtravelclaims@aig.com` and `aig.sg` links. Whether Jetstar SG has transitioned to
+Zurich is a separate question needing the correct legal copy. It also uses
+`{{policyDetail-primaryInsured}}` where the rest of the repo uses
+`{{policyDetail-primaryInsured-firstName}}` — likely a bug, unverified.
+
 ### Untracked
 
 `bash.exe.stackdump` (repo root) — Git Bash crash artifact, gitignored. **Not recoverable
@@ -96,7 +119,6 @@ Recorded so the next cleanup doesn't re-litigate these.
 | File(s) | Why it stays |
 |---|---|
 | `digdrct/us/en/policy-confirmation.html`, `digdrct/sg/en/policy-confirmation.html` | **The naming is inverted.** `policy-confirmation-new.html` is the live one in both markets — the US one was forked at `47226f0`, developed across 5 commits to `2fd110a` "Modernize … for PROD" (2026-05-12), and is cited in root `CLAUDE.md` as the canonical two-column-header reference. The plainly-named files are frozen at a March 2026 generic sweep. That makes them *superseded*, not dead. Renaming `-new` into place would be the real fix. |
-| `jetstar/sg/en/policy-confirmation.html`, `…-redesign.html` | Neither can be confidently called dead. The plain file is the most degraded template in the repo (bare fragment — no DOCTYPE, `<html>`, `<head>` or `<body>`; RTE paste artifact; single-brace `{FirstName}`/`{PolicyNumber}` placeholders; AIG branding, links and email throughout; a `policy.qa.travelguard.com` URL). `-redesign.html` is structurally modern but was never renamed into place and still carries AIG legal copy and `sgtravelclaims@aig.com`. The redesign may never have shipped, so deleting either risks removing the live template. **Needs a decision from whoever owns Jetstar SG.** |
 | Qantas non-`-revisions` originals (11 files) | Superseded by `au-revisions/` and `nz-revisions/`, not dead. |
 | `.docx` / `.doc` / `.txt` sources | Deliberate. `qantas/CLAUDE.md` documents a "Source Document Workflow"; `row/*/email.docx` are copy/translation sources. |
 | `digdrct/us/en/tiktok-white.png` | Referenced by the live `policy-confirmation-new.html`. |
@@ -105,11 +127,17 @@ Recorded so the next cleanup doesn't re-litigate these.
 
 Not cleanup items, but found while inventorying and worth tracking.
 
-1. **14 Expedia templates link to UAT, not production** — `policy.uat.travelguard.com` in the
-   "view your policy" link across `ch/{de,fr,it}`, `de/de`, `dk/da`, `es/es`, `fi/fi`,
-   `fr/fr`, `hk/en` (also a UAT *claims* link), `ie/en`, `it/it`, `nl/nl`, `no/nb`, `se/sv`.
-   Also `jetstar/sg/en` (`policy.qa.…`) and `row/ca/en` (`policy.uat.travelguard.ca`).
-   `expedia/CLAUDE.md` describes these as active and says nothing about UAT.
+1. **UAT/QA hosts in policy links.** The 14 Expedia EU/international markets pointing at
+   `policy.uat.travelguard.com` (`ch/{de,fr,it}`, `de/de`, `dk/da`, `es/es`, `fi/fi`,
+   `fr/fr`, `hk/en` — also a UAT *claims* link — `ie/en`, `it/it`, `nl/nl`, `no/nb`, `se/sv`)
+   are **expected**: those markets are still in QA/UAT and the links get swapped to
+   production as each one launches. Not a defect; do not "fix" them in bulk.
+
+   `row/ca/en/policy-confirmation.html` is a **separate case** — it uses
+   `policy.uat.travelguard.ca` while its two near-identical sibling stubs,
+   `agents/ca/en/policy-confirmation.html:17` and `united/ca/en/policy-confirmation.html:18`,
+   both use production `policy.travelguard.ca`. Left as-is by decision (2026-08-04), but it
+   is a genuine leftover rather than a staged link.
 2. **Qantas AU status contradiction** — `qantas/CLAUDE.md` says the AU underwriter transition
    is "complete"; root `README.md` says "Planned". Open UAT bugs in `work-items.md` favour
    the README.
