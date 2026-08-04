@@ -15,7 +15,7 @@ This repository contains HTML email templates for travel insurance products acro
 | `expedia/` | Expedia Travel Insurance | Policy confirmations across 19 markets (US, CA, MX, NZ, IT, HK, SG, EU markets) |
 | `qantas/` | Qantas Travel Insurance | NZ and AU lifecycle emails (confirmation, pre-trip, cancel, void, AMT expiry, medical, save-quote) |
 | `jetstar/` | Jetstar Travel Insurance | AU, NZ, SG markets |
-| `united/` | United Airlines | US, CA markets |
+| `united/` | United Airlines | CA market only — US moved under `row/us/en/` in the August 2026 ROW consolidation |
 | `admin/` | Travel Guard | US admin/internal templates |
 | `agents/` | Travel Guard | Agent-facing templates (US, CA) |
 | `digdrct/` | Travel Guard | Digital direct templates (US, CA, IT, MY, SG) |

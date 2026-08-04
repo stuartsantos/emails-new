@@ -113,6 +113,6 @@ digdrct/my/en/policy-confirmation.html
 # tg/us/zurich/travel-tips/travel-tips-02-26.html
 # tg/us/zurich/travel-tips/travel-tips-03-26.html
 
-# --- united/ (2 files) ---
-# united/us/en/post-trip.html
-# united/us/en/pre-trip.html
+# --- united/ ---
+# united/us/ was retired in the ROW consolidation (August 2026); post-trip and
+# pre-trip now live under row/us/en/. Only united/ca/en remains, and it is scanned.

@@ -9,12 +9,12 @@ HTML email templates for travel insurance products across multiple brands and in
 | `tg/` | Travel Guard / Zurich | US (AIG archive + Zurich) | ~141 |
 | `digdrct/` | Travel Guard — digital direct | US, CA, IT, MY, SG | 16 |
 | `agents/` | Travel Guard — agent-facing | US, CA | 3 |
-| `admin/` | Travel Guard — admin/internal | US | 4 |
-| `row/` | Zurich Travel Guard | 24 countries (AE, AT, BE, BH, CA, CH, CZ, DE, ES, FR, GB, IE, IT, KW, LB, NL, NO, NZ, OM, PT, QA, SE, SG, US) | 44 |
-| `expedia/` | Expedia Travel Insurance | 19 markets (AT, BE, CA, CH, DE, DK, ES, FI, FR, HK, IE, IT, MX, NL, NO, NZ, SE, SG, US) | 30 |
+| `admin/` | Travel Guard — admin/internal | US | 2 |
+| `row/` | Zurich Travel Guard | 24 countries (AE, AT, BE, BH, CA, CH, CZ, DE, ES, FR, GB, IE, IT, KW, LB, NL, NO, NZ, OM, PT, QA, SE, SG, US) | 48 |
+| `expedia/` | Expedia Travel Insurance | 19 markets (AT, BE, CA, CH, DE, DK, ES, FI, FR, HK, IE, IT, MX, NL, NO, NZ, SE, SG, US) | 23 |
 | `qantas/` | Qantas Travel Insurance | AU, NZ | 24 |
-| `jetstar/` | Jetstar Travel Insurance | AU, NZ, SG | 10 |
-| `united/` | United Airlines | US, CA | 5 |
+| `jetstar/` | Jetstar Travel Insurance | AU, NZ, SG | 9 |
+| `united/` | United Airlines | CA | 1 |
 
 Multi-language support where applicable (e.g. Belgium: en/fr/nl, Switzerland: de/en/fr, Canada: en/fr).
 
@@ -72,8 +72,7 @@ iPhone Mail, Android Mail, Gmail (web + mobile), Apple Mail, Outlook 2016
 │   ├── nz/                  # New Zealand
 │   └── sg/                  # Singapore
 └── united/
-    ├── us/en/               # United States
-    └── ca/en/               # Canada
+    └── ca/en/               # Canada (US moved under row/us/en/, Aug 2026)
 ```
 
 ## Component Library

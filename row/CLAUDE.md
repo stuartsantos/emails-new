@@ -132,9 +132,11 @@ All ROW policy confirmation templates have been updated to the modern responsive
 | fr (France) | en, fr | fr/fr includes France residency disclaimer |
 | nl (Netherlands) | en, nl | |
 | pt (Portugal) | en, pt | Fixed typo "fposso" → "posso" in pt/pt |
-| us (United States) | en | US-specific content (World Service Center, claims online link, self-service page) |
+| us (United States) | en | US-specific content (World Service Center, claims online link, self-service page). Shared by United + LHGROUP; also holds `post-trip.html` and `pre-trip.html` |
 
-**United-under-ROW prototype (July 2026):** `us/en/policy-confirmation-united-composite.html` is a draft composite merging the existing United US fulfillment copy (World Service Center, online claims, self-service, cancellation notice) into the standard ROW template structure, per the proposal in `_work-items/united-under-row.md`. The claims link, self-service link and United footnotes have since been replaced by `{{ClaimsURL}}`, `{{CustomerServicesURL}}` and `{{Footer1}}` (August 2026), so partner-specific copy comes from MVS rather than being hardcoded. It is still not the hybrid Handlebars (`{{#if}}`-flagged) model the spec describes — see that doc for open questions before promoting it to the real template.
+**United-under-ROW consolidation (completed August 2026):** `us/en/policy-confirmation.html` is now shared by **both United and LHGROUP**, the same multi-partner arrangement used across the EMEA markets — MVS substitutes the partner-specific content, so there is no per-partner template. It began as a composite merging United US fulfillment copy (World Service Center, online claims, self-service, cancellation notice) into the ROW structure, per `_work-items/united-under-row.md`; the claims link, self-service link and United footnotes became `{{ClaimsURL}}`, `{{CustomerServicesURL}}` and `{{Footer1}}`, leaving the template partner-neutral. It then replaced the old LHGROUP-only `policy-confirmation.html`.
+
+The `united/us/` directory was retired in the same change: its legacy unstyled `policy-confirmation.html` was deleted, and `post-trip.html` / `pre-trip.html` moved to `row/us/en/`. Only `united/ca/en/` remains outside ROW. Because the `{{#if}}`-flagged hybrid model in the spec proved unnecessary — MVS handles the partner split — the open questions in that doc are moot.
 
 **Already modern (not modified):** ca (en, fr) — note ca/en is a deliberate plain-HTML stub; it (en, it), nz (en), sg (en)
 
@@ -186,8 +188,8 @@ Markets covered per partner:
 
 | Partner | Markets |
 |---------|---------|
-| LHGROUP | AT, BE, CH, DE, ES, FR, IT, NL, PT, UK |
-| United | BE, CH, DE, ES, FR, IE, IT, PT |
+| LHGROUP | AT, BE, CH, DE, ES, FR, IT, NL, PT, UK, **US** |
+| United | BE, CH, DE, ES, FR, IE, IT, PT, **US** |
 | Emirates | AT, BA, BE, CA, CZ, DE, DK, ES, FR, GR, HG, IE, IT, KT, LB, MT, NL, NO, NZ, OM, PL, PT, QT, SA, SE, SG, SZ, UE, UK, ZA |
 | Qatar (planning set) | AT, BE, CZ, DE, ES, FR, IT, KT, LB, NL, NO, OM, QT, SE, UE, UK |
 | **Qatar Airways** (delivered, Jun–Jul 2026) | ae, bh, ch, kw, lb, no, om, qa, se |

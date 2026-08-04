@@ -1,7 +1,14 @@
 # Bringing US United under the shared ROW template
 
-**Status:** Proposal — for review by the US United team. No template HTML is changed by this
-document; the actual ROW edit is a follow-up once United signs off.
+**Status: DONE — executed August 2026.** `row/us/en/policy-confirmation.html` is now shared by
+United and LHGROUP, with MVS substituting partner-specific content (the same multi-partner
+arrangement as the EMEA markets). The `united/us/` directory was retired: its legacy template
+was deleted and `post-trip.html` / `pre-trip.html` moved to `row/us/en/`.
+
+The `{{#if}}`-flagged hybrid model proposed below was **not** needed — MVS handles the partner
+split through ordinary tokens (`{{ClaimsURL}}`, `{{CustomerServicesURL}}`, `{{Footer1}}`), so
+the open questions in this document are moot. Kept for the copy comparison and rationale.
+See `_work-items/legacy-cleanup-2026-08.md` for the removal commits.
 
 **Files compared:**
 - `united/us/en/policy-confirmation.html` — legacy, unstyled plain HTML (United today)
