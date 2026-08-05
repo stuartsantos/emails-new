@@ -78,8 +78,8 @@
   - Singapore (sg/en): light-only mode (color-scheme: light only) — no dark mode classes
 
   Greeting style:
-  - Most templates: "Hello/Bonjour/Hola {{firstName}} {{lastName}},"
-  - Singapore: "Dear {{firstName}}," (no lastName)
+  - Most templates: "Hello/Bonjour/Hola {{policyDetail-primaryInsured-firstName}} {{policyDetail-primaryInsured-lastName}},"
+  - Singapore: "Dear {{policyDetail-primaryInsured-firstName}}," (no last name)
   - Canada: "Hello {{PlaceHolderField2}}," (dynamic name variable)
 
   Section heading style:
@@ -267,8 +267,8 @@ Color Reference (Zurich / Travel Guard):
                              {{ViewPolicyURL}}
 
                              VARIATIONS:
-                             - Most markets: "Hello {{firstName}} {{lastName}},"
-                             - Singapore: "Dear {{firstName}}," (no lastName)
+                             - Most markets: "Hello {{policyDetail-primaryInsured-firstName}} {{policyDetail-primaryInsured-lastName}},"
+                             - Singapore: "Dear {{policyDetail-primaryInsured-firstName}}," (no last name)
                              - Canada: "Hello {{PlaceHolderField2}}," (dynamic name)
 
                              Some markets include {{PlaceHolderField1}} for the document name
