@@ -16,9 +16,9 @@ row/
         └── policy-confirmation.html
 ```
 
-**Markets:** ae (UAE), at (Austria), be (Belgium), bh (Bahrain), ca (Canada), ch (Switzerland), cz (Czech Republic), de (Germany), es (Spain), fr (France), gb (United Kingdom), ie (Ireland), it (Italy), kw (Kuwait), lb (Lebanon), nl (Netherlands), no (Norway), nz (New Zealand), om (Oman), pt (Portugal), qa (Qatar), se (Sweden), sg (Singapore), us (United States)
+**Markets:** ae (UAE), at (Austria), be (Belgium), bh (Bahrain), ca (Canada), ch (Switzerland), cy (Cyprus), cz (Czech Republic), de (Germany), es (Spain), fr (France), gb (United Kingdom), ie (Ireland), it (Italy), kw (Kuwait), lb (Lebanon), nl (Netherlands), no (Norway), nz (New Zealand), om (Oman), pt (Portugal), qa (Qatar), se (Sweden), sg (Singapore), us (United States)
 
-**Multi-language countries:** Austria (de/en), Bahrain (en/ar), Belgium (en/fr/nl), Canada (en/fr), Switzerland (de/en/fr), UAE (en/ar), Kuwait (en/ar), Norway (en/nb), Oman (en/ar), Qatar (en/ar), Sweden (en/sv)
+**Multi-language countries:** Austria (de/en), Bahrain (en/ar), Belgium (en/fr/nl), Canada (en/fr), Switzerland (de/en/fr), Cyprus (en/el), UAE (en/ar), Kuwait (en/ar), Norway (en/nb), Oman (en/ar), Qatar (en/ar), Sweden (en/sv)
 
 **RTL (Arabic) markets:** ae, bh, kw, om, qa each have an `ar/` template built on `_template/row-reference-rtl.html` — see [RTL templates](#rtl-arabic-templates) below.
 
@@ -161,6 +161,12 @@ The `united/us/` directory was retired in the same change: its legacy unstyled `
 | bh (Bahrain) | en, ar | **GIG Bahrain** underwriter logo (not Travel Guard); ar is RTL and uses the `ترافل جارد` brand rendering (same as ae) |
 
 All Qatar Airways templates have the `{{AltViewPolicyLinks}}` section **removed** (per partner requirement). The same removal was applied to the existing **ch (Switzerland)** templates (de, en, fr) for this partner.
+
+**Added August 2026 (new market):**
+
+| Country | Languages | Notes |
+|---------|-----------|-------|
+| cy (Cyprus) | en, el | **Greek is a new ROW language** (`lang="el"`) — no other `el` template exists to diff against, so the Greek copy is carried verbatim from the legacy AEM source and is **pending native-speaker / QA-team review**. Both templates were legacy AIG AEM exports (`aem-Grid` fragments, single-brace variables). Split-header banner uses the source's own top heading — "Travel Insurance" / "Ταξιδιωτική Ασφάλιση" — rather than the usual thank-you line. `{{AltViewPolicyLinks}}` removed. **Partner not yet confirmed.** |
 
 **LHGROUP claims/contact update (July 2026):** `at (de, en)`, `fr (en, fr)`, `gb (en)`, and `nl (en, nl)` had `{{AltViewPolicyLinks}}` removed and a `{{ClaimsURL}}` (and, for gb, `{{CustomerServicesURL}}`) line added to the claims/customer-service contact copy, matching the pattern already applied to Expedia AT/DE and BE/NL. `it (it)` and `se (en, sv)` received the equivalent `{{ClaimsURL}}`/`{{CustomerServicesURL}}` copy addition without an existing `{{AltViewPolicyLinks}}` block to remove.
 
