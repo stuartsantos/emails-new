@@ -41,6 +41,17 @@ expedia/
 {{ClaimsEmailAddress}}                     # Claims email
 ```
 
+`us/en` additionally injects its partner header logo through a token rather than a
+hardcoded `<img>` — the only template in the repo that does:
+
+```
+{{Image_AIGGlobalLogoHeader}}              # Partner logo, second header cell (us/en only)
+```
+
+The ESP supplies the whole tag, including `alt` text. Note the token name is AIG-era and
+the QA validator's `\bAIG\b` check does not match it (the underscore blocks the word
+boundary) — so if the ESP ever renames the token, nothing here will flag the old name.
+
 ## Logo Usage
 
 Four header-logo strategies are in use across the 22 active templates. New templates should follow the EU/ROW pattern (CM_Travel_Guard_v_RGB.png @ 200px) unless a regional partner agreement requires otherwise.
@@ -50,7 +61,7 @@ Four header-logo strategies are in use across the 22 active templates. New templ
 | EU/ROW (default for new templates) | `.../travel-guard/us/en/CM_Travel_Guard_v_RGB.png` | 200px | at/de, ch/de, ch/fr, ch/it, de/de, dk/da, es/es, fi/fi, fr/fr, it/it, nl/nl, no/nb, se/sv |
 | Travel Guard header (legacy 600px) | `.../travel-guard/us/en/tg_logo_header.png` | 600px | be/fr, be/nl, ca/en, ca/fr, mx/es, sg/en |
 | Zurich-only (jetstar path) | `.../jetstar/au/en/images/emails/zurich-logo.png` | 200px | hk/en, nz/en |
-| US co-brand (split TG + Expedia) | `.../travel-guard/us/en/travel-guard-logo-blue.png` (200px) + `.../travel-guard/us/en/expedia-logo_fulfillment.png` (120px) | — | us/en |
+| US co-brand (split TG + injected partner logo) | `.../travel-guard/us/en/travel-guard-logo-blue.png` (200px) + `{{Image_AIGGlobalLogoHeader}}` in the second cell | — | us/en |
 
 For logo tables, use empty class `class=""` to prevent mobile scaling from `.header img` rule.
 
