@@ -273,6 +273,13 @@ Two existing scripts cover the same checks I keep manually grepping for during s
 
 Scope examples: `./batch-qa.sh row`, `./batch-qa.sh expedia`, `./batch-qa.sh tg/us/zurich`. Files can be excluded via `.claude/qa-exclude.txt`.
 
+**Handlebars token names are exempt from the branding checks.** Both scripts strip
+`{{...}}` before testing for AIG branding and legacy `{Variable}` placeholders. Token names
+are ESP-side identifiers that never reach the customer, and some are AIG-era names we don't
+control (e.g. `{{Image_AIGGlobalLogoHeader}}` in `expedia/us/en/`). Only visible copy counts
+as a branding issue — don't "fix" a token name to satisfy a QA check, and don't widen these
+regexes to cover token names again.
+
 Use the `/batch-qa` skill in Claude Code as a convenience wrapper.
 
 ### Keep in mind

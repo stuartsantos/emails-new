@@ -100,12 +100,16 @@ fi
 # ---------------------------------------------------------------------------
 # 2. AIG branding references (rebranding to Travel Guard / Zurich)
 # ---------------------------------------------------------------------------
-AIG_REFS=$(pgrep_lines_i '\bAIG\b(?!\s*Travel\s*Guard)' "$CONTENT")
+# Strip {{handlebars}} first. Token names are ESP-side identifiers, never rendered
+# to the customer, and some are AIG-era names we don't control (e.g.
+# {{Image_AIGGlobalLogoHeader}}). Only visible copy is a branding issue.
+# sed keeps the lines, so reported line numbers stay accurate.
+CONTENT_NO_HBS=$(echo "$CONTENT" | sed 's/{{[^}]*}}//g')
+AIG_REFS=$(pgrep_lines_i '\bAIG\b(?!\s*Travel\s*Guard)' "$CONTENT_NO_HBS")
 # Also check for old AIG email domains
 AIG_EMAILS=$(pgrep_lines '@aig\.com' "$CONTENT")
 # Check for old AIG variable format {Variable} vs {{handlebars}}
-# Strip {{handlebars}} first, then match remaining {SingleBrace} vars
-OLD_VARS=$(pgrep_lines '\{[A-Z][a-zA-Z_-]+\}' "$(echo "$CONTENT" | sed 's/{{[^}]*}}//g')")
+OLD_VARS=$(pgrep_lines '\{[A-Z][a-zA-Z_-]+\}' "$CONTENT_NO_HBS")
 
 if [[ -n "$AIG_REFS" ]]; then
   ISSUES+=("AIG BRANDING on line(s) $(issue_lines "$AIG_REFS") — should be 'Travel Guard' or 'Zurich'. See rebranding rules in CLAUDE.md.")

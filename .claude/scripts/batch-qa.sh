@@ -157,7 +157,12 @@ while IFS= read -r FILE_PATH; do
   fi
 
   # --- 2. AIG branding ---
-  AIG_REFS=$(pgrep_lines_i '\bAIG\b(?!\s*Travel\s*Guard)' "$CONTENT")
+  # Strip {{handlebars}} first. Token names are ESP-side identifiers, never
+  # rendered to the customer, and some are AIG-era names we don't control
+  # (e.g. {{Image_AIGGlobalLogoHeader}}). Only visible copy is a branding issue.
+  # sed keeps the lines, so reported line numbers stay accurate.
+  CONTENT_NO_HBS=$(echo "$CONTENT" | sed 's/{{[^}]*}}//g')
+  AIG_REFS=$(pgrep_lines_i '\bAIG\b(?!\s*Travel\s*Guard)' "$CONTENT_NO_HBS")
   if [[ -n "$AIG_REFS" ]]; then
     LINES=$(echo "$AIG_REFS" | cut -d: -f1 | tr '\n' ', ' | sed 's/,$//')
     FILE_ISSUES+=("AIG branding (L$LINES)")
@@ -173,7 +178,7 @@ while IFS= read -r FILE_PATH; do
   fi
 
   # --- 4. Legacy {Variable} format ---
-  CONTENT_NO_HBS=$(echo "$CONTENT" | sed 's/{{[^}]*}}//g')
+  # Reuses CONTENT_NO_HBS from the AIG branding check above.
   OLD_VARS=$(pgrep_lines '\{[A-Z][a-zA-Z_-]+\}' "$CONTENT_NO_HBS")
   if [[ -n "$OLD_VARS" ]]; then
     LINES=$(echo "$OLD_VARS" | cut -d: -f1 | tr '\n' ', ' | sed 's/,$//')

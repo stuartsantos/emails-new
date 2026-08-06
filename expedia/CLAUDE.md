@@ -48,9 +48,10 @@ hardcoded `<img>` — the only template in the repo that does:
 {{Image_AIGGlobalLogoHeader}}              # Partner logo, second header cell (us/en only)
 ```
 
-The ESP supplies the whole tag, including `alt` text. Note the token name is AIG-era and
-the QA validator's `\bAIG\b` check does not match it (the underscore blocks the word
-boundary) — so if the ESP ever renames the token, nothing here will flag the old name.
+The ESP supplies the whole tag, including `alt` text. The AIG-era token name is the ESP's
+and cannot be changed from this repo — it is an internal identifier, never rendered to the
+customer, so it is not a rebranding violation. The QA scripts strip `{{handlebars}}` before
+the AIG branding check for exactly this reason; see the note in the root `CLAUDE.md`.
 
 ## Logo Usage
 
