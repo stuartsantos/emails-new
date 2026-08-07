@@ -66,7 +66,26 @@ Four header-logo strategies are in use across the 22 active templates. New templ
 
 For logo tables, use empty class `class=""` to prevent mobile scaling from `.header img` rule.
 
+## Footer
+
+`us/en` is the **only** Expedia template with a social footer — the other 21 end at the
+legal copy. Its footer follows the modernized `digdrct/us/en/policy-confirmation.html`
+pattern, not the Expedia legacy one: a single full-width bar with a navy → Zurich-blue
+gradient (`#003d6e` → `#0076be`, 99deg), heading and four social icons centered.
+
+Do not reintroduce the two-column footer or the `straight-progress-teal-faded@2x.png`
+chevron image it used to sit beside — the pattern read as a rendering artifact at 600px
+content width (August 2026). That image is still live in 44 legacy templates elsewhere in
+the repo; this note applies to Expedia only.
+
+digdrct's "How did we do? Leave us a review!" row is deliberately **omitted** here: the
+purchase was made through Expedia, so a Travel Guard review CTA is off-context on a partner
+template.
+
 ## Editing Constraints
 
 **DO NOT modify:** HTML table structure, CSS styles, Handlebars syntax, image dimensions.
 **ONLY update:** text content, email addresses, phone numbers, URLs, legal/footer copy.
+
+These constraints govern routine copy, translation and link work. A structural rebuild —
+like the `us/en` footer above — happens only on an explicit request for one.
