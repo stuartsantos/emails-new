@@ -1,8 +1,8 @@
 # Email Template QA Report
 
-**Scanned:** all brands (156 templates)
-**Date:** 2026-08-04 19:38 UTC
-**Pass:** 129 | **Warn:** 27 | **Fail:** 0 | **Total issues:** 28
+**Scanned:** all brands (158 templates)
+**Date:** 2026-08-07 15:15 UTC
+**Pass:** 131 | **Warn:** 27 | **Fail:** 0 | **Total issues:** 28
 
 ## Summary by Issue Type
 
@@ -56,7 +56,7 @@
 
 - ⚠️ `qantas/au/en/amt-expiry.html` — AIG branding (L207,354,356)
 
-### row/ (48 files: 45 pass, 3 warn, 0 fail)
+### row/ (50 files: 47 pass, 3 warn, 0 fail)
 
 - ⚠️ `row/ca/en/policy-confirmation.html` — UAT/QA env URL (L15)
 - ⚠️ `row/se/sv/policy-confirmation.html` — AIG branding (L222)

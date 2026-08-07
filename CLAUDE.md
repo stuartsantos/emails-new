@@ -273,6 +273,16 @@ Two existing scripts cover the same checks I keep manually grepping for during s
 
 Scope examples: `./batch-qa.sh row`, `./batch-qa.sh expedia`, `./batch-qa.sh tg/us/zurich`. Files can be excluded via `.claude/qa-exclude.txt`.
 
+**All 14 checks run in a single `perl` process for the whole scan — keep it that way.**
+`batch-qa.sh` originally shelled out ~100 times per file (a `perl`/`grep`/`sed`/`cut` pipeline
+per check), which is fine on macOS where a spawn costs ~1ms. On Windows Git Bash a spawn
+costs ~230ms — measured — and worse inside this OneDrive-synced folder, where sync and AV
+hooks fire on every exec. That put a full 158-template scan at **~90 minutes**, so it was
+routinely killed by the 2-minute tool timeout and looked like a hang rather than a slow run.
+Consolidating to one `perl` pass took the same scan to **~3 seconds** with byte-identical
+output. When adding a check, add it inside the perl block; do not reintroduce a per-file
+pipeline, however much more readable it looks.
+
 **Handlebars token names are exempt from the branding checks.** Both scripts strip
 `{{...}}` before testing for AIG branding and legacy `{Variable}` placeholders. Token names
 are ESP-side identifiers that never reach the customer, and some are AIG-era names we don't
