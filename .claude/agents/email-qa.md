@@ -1,7 +1,7 @@
 ---
 name: email-qa
 description: Use when the user asks to QA, review, or verify an email template after edits or creation. Renders the template in Chrome, checks light + dark + mobile breakpoints, compares against Figma (TG/Zurich) or a reference doc (ROW), runs static lint, and flags known gotchas. Report-only — does not edit files.
-tools: Read, Glob, Grep, WebFetch, Skill, Bash, mcp__chrome-devtools__new_page, mcp__chrome-devtools__navigate_page, mcp__chrome-devtools__close_page, mcp__chrome-devtools__list_pages, mcp__chrome-devtools__select_page, mcp__chrome-devtools__resize_page, mcp__chrome-devtools__emulate, mcp__chrome-devtools__take_screenshot, mcp__chrome-devtools__take_snapshot, mcp__chrome-devtools__list_console_messages, mcp__chrome-devtools__get_console_message, mcp__chrome-devtools__list_network_requests, mcp__chrome-devtools__get_network_request, mcp__chrome-devtools__evaluate_script, mcp__chrome-devtools__wait_for, mcp__claude_ai_Figma__get_design_context, mcp__claude_ai_Figma__get_screenshot, mcp__claude_ai_Figma__get_metadata, mcp__claude_ai_Figma__get_variable_defs, mcp__claude_ai_Figma__get_code_connect_map, mcp__claude_ai_Figma__search_design_system
+tools: Read, Glob, Grep, WebFetch, Skill, Bash, mcp__plugin_chrome-devtools-mcp_chrome-devtools__new_page, mcp__plugin_chrome-devtools-mcp_chrome-devtools__navigate_page, mcp__plugin_chrome-devtools-mcp_chrome-devtools__close_page, mcp__plugin_chrome-devtools-mcp_chrome-devtools__list_pages, mcp__plugin_chrome-devtools-mcp_chrome-devtools__select_page, mcp__plugin_chrome-devtools-mcp_chrome-devtools__resize_page, mcp__plugin_chrome-devtools-mcp_chrome-devtools__emulate, mcp__plugin_chrome-devtools-mcp_chrome-devtools__take_screenshot, mcp__plugin_chrome-devtools-mcp_chrome-devtools__take_snapshot, mcp__plugin_chrome-devtools-mcp_chrome-devtools__list_console_messages, mcp__plugin_chrome-devtools-mcp_chrome-devtools__get_console_message, mcp__plugin_chrome-devtools-mcp_chrome-devtools__list_network_requests, mcp__plugin_chrome-devtools-mcp_chrome-devtools__get_network_request, mcp__plugin_chrome-devtools-mcp_chrome-devtools__evaluate_script, mcp__plugin_chrome-devtools-mcp_chrome-devtools__wait_for, mcp__claude_ai_Figma__get_design_context, mcp__claude_ai_Figma__get_screenshot, mcp__claude_ai_Figma__get_metadata, mcp__claude_ai_Figma__get_variable_defs, mcp__claude_ai_Figma__get_code_connect_map, mcp__claude_ai_Figma__search_design_system
 model: sonnet
 hooks:
   PreToolUse:
@@ -44,7 +44,7 @@ Capture stdout/stderr verbatim. The script covers 14 categories: duplicate class
 
 ### 5. Render in Chrome
 
-Use the `mcp__chrome-devtools__*` toolkit:
+Use the `mcp__plugin_chrome-devtools-mcp_chrome-devtools__*` toolkit:
 
 1. `new_page` — open a new page
 2. `navigate_page` to `file://<absolute path>` — wait for load
