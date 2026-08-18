@@ -166,7 +166,7 @@ All Qatar Airways templates have the `{{AltViewPolicyLinks}}` section **removed*
 
 | Country | Languages | Notes |
 |---------|-----------|-------|
-| cy (Cyprus) | en, el | **Greek is a new ROW language** (`lang="el"`) — no other `el` template exists to diff against, so the Greek copy is carried verbatim from the legacy AEM source and is **pending native-speaker / QA-team review**. Both templates were legacy AIG AEM exports (`aem-Grid` fragments, single-brace variables). Split-header banner uses the source's own top heading — "Travel Insurance" / "Ταξιδιωτική Ασφάλιση" — rather than the usual thank-you line. `{{AltViewPolicyLinks}}` removed. **Partner not yet confirmed.** |
+| cy (Cyprus) | en, el | **Greek is a new ROW language** (`lang="el"`) — no other `el` template exists to diff against, so the Greek copy is carried verbatim from the legacy AEM source and is **pending native-speaker / QA-team review**. Both templates were legacy AIG AEM exports (`aem-Grid` fragments, single-brace variables). Split-header banner uses the source's own top heading — "Travel Insurance" / "Ταξιδιωτική Ασφάλιση" — rather than the usual thank-you line. Partner: **Emirates**. |
 
 **LHGROUP claims/contact update (July 2026):** `at (de, en)`, `fr (en, fr)`, `gb (en)`, and `nl (en, nl)` had `{{AltViewPolicyLinks}}` removed and a `{{ClaimsURL}}` (and, for gb, `{{CustomerServicesURL}}`) line added to the claims/customer-service contact copy, matching the pattern already applied to Expedia AT/DE and BE/NL. `it (it)` and `se (en, sv)` received the equivalent `{{ClaimsURL}}`/`{{CustomerServicesURL}}` copy addition without an existing `{{AltViewPolicyLinks}}` block to remove.
 
@@ -200,7 +200,7 @@ Markets covered per partner:
 |---------|---------|
 | LHGROUP | AT, BE, CH, DE, ES, FR, IT, NL, PT, UK, **US** |
 | United | BE, CH, DE, ES, FR, IE, IT, PT, **US** |
-| Emirates | AT, BA, BE, CA, CZ, DE, DK, ES, FR, GR, HG, IE, IT, KT, LB, MT, NL, NO, NZ, OM, PL, PT, QT, SA, SE, SG, SZ, UE, UK, ZA |
+| Emirates | AT, BA, BE, CA, CY, CZ, DE, DK, ES, FR, GR, HG, IE, IT, KT, LB, MT, NL, NO, NZ, OM, PL, PT, QT, SA, SE, SG, SZ, UE, UK, ZA |
 | Qatar (planning set) | AT, BE, CZ, DE, ES, FR, IT, KT, LB, NL, NO, OM, QT, SE, UE, UK |
 | **Qatar Airways** (delivered, Jun–Jul 2026) | ae, bh, ch, kw, lb, no, om, qa, se |
 
