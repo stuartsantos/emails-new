@@ -2,6 +2,11 @@
 
 **Status:** `bh` converted (August 2026). The rest of MEA is **deliberately not converted** — do not sweep it without a decision from the partner/MVS side.
 
+**August 2026 descope: `SA`, `QA`, `OM` and `LB` left Emirates' scope.** That takes `qa`, `om`
+and `lb` out of this work item entirely — Qatar Airways is now their only partner, so their
+hardcoded underwriter logos are correct as they stand. Only `ae` and `kw` are still contested
+and still need converting.
+
 ## Problem
 
 The Emirates and Qatar Airways market sets overlap, and the two partners want different
@@ -12,9 +17,10 @@ header logos in the same markets:
 | Qatar Airways | the local underwriter's logo — GIG Bahrain, LIVA, GIG, Sukoon, Qatar General Insurance |
 | Emirates | **no logo at all** |
 
-Emirates' market list includes `BH`, `AE`, `QA`, `KW`, `OM`, `LB` — exactly the markets the
-Qatar Airways build delivered. ROW keeps **one template per market/language**, not one per
-partner, so a hardcoded `<img>` can only satisfy one of them.
+Emirates' market list includes `BH`, `AE` and `KW` — three of the nine markets the Qatar
+Airways build delivered. (It also covered `QA`, `OM` and `LB` until the August 2026 descope.)
+ROW keeps **one template per market/language**, not one per partner, so a hardcoded `<img>`
+can only satisfy one of them.
 
 > The source partner list wrote those as `BA`/`UE`/`QT`/`KT`, none of which are the ISO
 > codes for Bahrain/UAE/Qatar/Kuwait. Corrected in `row/CLAUDE.md` → Partner Reference,
@@ -44,6 +50,14 @@ Airways, an empty value for Emirates.
 |---|---|---|
 | ae | en, ar | `LIVA_UAE_Logo.png` (140px) |
 | kw | en, ar | `giga-logo-kt.png` (200px) |
+
+## No longer in scope — descoped from Emirates, August 2026
+
+Qatar Airways is the only partner in these three markets now, so there is nothing to
+reconcile: the hardcoded underwriter logo **is** the correct header. Do not tokenize them.
+
+| Market | Langs | Logo (correct as-is) |
+|---|---|---|
 | lb | en | `gig-logo-lb.png` (200px) |
 | om | en, ar | `sukoon-logo.png` (200px) |
 | qa | en, ar | `qa-gen-logo.png` (200px) |

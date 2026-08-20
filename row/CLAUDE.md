@@ -106,10 +106,15 @@ list-A token:
 **Why:** the MEA markets are shared between partners, and the partners disagree about the
 logo. The Qatar Airways build wants the local underwriter's logo (GIG, LIVA, Sukoon, …);
 **Emirates wants no logo at all** in the same markets. Compare the Partner Reference table
-below — Emirates covers `BH`/`AE`/`QA`/`KW`/`OM`/`LB` — bh, ae, qa, kw, om, lb —
-exactly the markets Qatar Airways delivered. One template per market can't serve both with
-the logo baked in, so the whole `<img>` tag moves into the MVS: Qatar Airways' MVS supplies
-the underwriter `<img>`, Emirates' supplies an empty value and the header renders bare.
+below — Emirates covers `BH`/`AE`/`KW` — bh, ae, kw — three of the nine markets
+Qatar Airways delivered. One template per market can't serve both with the logo baked in, so
+the whole `<img>` tag moves into the MVS: Qatar Airways' MVS supplies the underwriter
+`<img>`, Emirates' supplies an empty value and the header renders bare.
+
+**August 2026 — `SA`, `QA`, `OM` and `LB` were descoped from Emirates.** `qa`, `om` and `lb`
+now have Qatar Airways as their only partner, so their hardcoded underwriter logos are
+correct as they stand and need no tokenization. The conflict is confined to `bh` (converted),
+`ae` and `kw`.
 
 **Consequences when converting a market:**
 
@@ -264,9 +269,15 @@ Markets covered per partner:
 |---------|---------|
 | LHGROUP | AT, BE, CH, DE, ES, FR, IT, NL, PT, UK, **US** |
 | United | BE, CH, DE, ES, FR, IE, IT, PT, **US** |
-| Emirates | AE, AT, BE, BH, CA, CH, CY, CZ, DE, DK, ES, FR, GR, HU, IE, IT, KW, LB, MT, NL, NO, NZ, OM, PL, PT, QA, SA, SE, SG, UK, ZA |
+| Emirates | AE, AT, BE, BH, CA, CH, CY, CZ, DE, DK, ES, FR, GR, HU, IE, IT, KW, MT, NL, NO, NZ, PL, PT, SE, SG, UK, ZA |
 | Qatar (planning set) | AE, AT, BE, CZ, DE, ES, FR, IT, KW, LB, NL, NO, OM, QA, SE, UK |
 | **Qatar Airways** (delivered, Jun–Jul 2026) | ae, bh, ch, kw, lb, no, om, qa, se |
+
+> **August 2026 — `SA`, `QA`, `OM` and `LB` are descoped from Emirates**, and have been
+> removed from the Emirates row above (31 markets → 27). `QA`, `OM` and `LB` stay in scope
+> for Qatar Airways, which is now the only partner in those three markets — which is why
+> they drop out of the header-logo conflict below. `SA` (Saudi Arabia) is out of scope
+> entirely; there was never a ROW folder for it.
 
 > **Codes in the Emirates/Qatar rows above have been corrected to ISO 3166-1 alpha-2.** The
 > source partner lists used codes that are not valid ISO for the country meant. Corrected
@@ -286,15 +297,15 @@ Markets covered per partner:
 > `row/gb/` (renamed from `uk/` for that reason), as are template paths, `cmpid` values and
 > any backend identifier. Don't "fix" `UK` here, and don't let it leak into a path.
 >
-> `SA` is also carried as-is, but it is not a mistake — `ZA` (South Africa) appears
-> separately in the same list, so `SA` reads as genuinely Saudi Arabia. There is no ROW
-> folder for it.
+> `SA` used to sit in the Emirates row and was carried as-is rather than "corrected" to
+> `ZA` — `ZA` (South Africa) appeared separately in the same list, so `SA` read as genuinely
+> Saudi Arabia. It was descoped in August 2026 and no longer appears above.
 >
 > CDN asset filenames were minted under the old codes and keep them — Kuwait's logo is still
 > `giga-logo-kt.png`; Bahrain (added July 2026) uses `gig-logo-bh.png`. Don't rename the
 > assets to match.
 
-> **The Emirates and Qatar Airways market sets overlap, and they disagree about the header logo.** Emirates covers `BH`/`AE`/`QA`/`KW`/`OM`/`LB` — bh, ae, qa, kw, om, lb — the same markets Qatar Airways was delivered for, but Emirates wants **no logo** where Qatar Airways wants the underwriter's. There is one template per market, so the logo is being moved into `{{Image_AIGGlobalLogoHeader}}` for MVS to fill per partner. Only `bh` has been converted — see [Logo](#logo) before touching a header in any MEA market.
+> **The Emirates and Qatar Airways market sets overlap, and they disagree about the header logo.** After the August 2026 descope, Emirates covers `BH`/`AE`/`KW` — bh, ae, kw — three of the nine markets Qatar Airways was delivered for, but Emirates wants **no logo** where Qatar Airways wants the underwriter's. There is one template per market, so the logo is being moved into `{{Image_AIGGlobalLogoHeader}}` for MVS to fill per partner. Only `bh` has been converted — see [Logo](#logo) before touching a header in any MEA market. `qa`, `om` and `lb` are no longer contested and keep their hardcoded underwriter logos.
 
 Live deployed template URLs (per language):
 

@@ -85,7 +85,7 @@
 | 657541 | [Placeholder] [RLL] United CA - Email Fulfillment | [View](https://devops.tg-tfs-prod.awsamer.com/tfs/DefaultCollection/Travel%20IT/_workitems/edit/657541) |
 | 649639 | AEM TSA Fronting - Emirates IE - Email Update | [View](https://devops.tg-tfs-prod.awsamer.com/tfs/DefaultCollection/Travel%20IT/_workitems/edit/649639) |
 | 649646 | AEM TSA Fronting - Emirates KT - Email Update | [View](https://devops.tg-tfs-prod.awsamer.com/tfs/DefaultCollection/Travel%20IT/_workitems/edit/649646) |
-| 649649 | AEM TSA Fronting - Emirates LB - Email Update | [View](https://devops.tg-tfs-prod.awsamer.com/tfs/DefaultCollection/Travel%20IT/_workitems/edit/649649) |
+| 649649 | AEM TSA Fronting - Emirates LB - Email Update — **LB descoped from Emirates, Aug 2026** | [View](https://devops.tg-tfs-prod.awsamer.com/tfs/DefaultCollection/Travel%20IT/_workitems/edit/649649) |
 | 649652 | AEM TSA Fronting - Emirates MT - Email Update | [View](https://devops.tg-tfs-prod.awsamer.com/tfs/DefaultCollection/Travel%20IT/_workitems/edit/649652) |
 | 657534 | AEM TSA Fronting - Lufthansa US - GCS Mapping | [View](https://devops.tg-tfs-prod.awsamer.com/tfs/DefaultCollection/Travel%20IT/_workitems/edit/657534) |
 | 657542 | [Placeholder] [RLL] United CA - GCS Mapping | [View](https://devops.tg-tfs-prod.awsamer.com/tfs/DefaultCollection/Travel%20IT/_workitems/edit/657542) |
