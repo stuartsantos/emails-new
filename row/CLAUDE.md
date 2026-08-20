@@ -87,17 +87,60 @@ Legacy `{Variable}` (single-brace) placeholders should be converted to the moder
 
 ## Logo
 
-- **Travel Guard + Zurich logo:** `https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/CM_Travel_Guard_v_RGB.png` (200px width) — default for ROW templates.
-- Several Qatar Airways markets use the **underwriter's own logo** instead, each hosted on the CDN and referenced by absolute URL (applied to both en and ar):
+- **Travel Guard + Zurich logo:** `https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/CM_Travel_Guard_v_RGB.png` (200px width) — default for ROW templates, hardcoded as an `<img>` in `_template/row-reference.html`.
+- Several Qatar Airways markets use the **underwriter's own logo** instead — see the table below.
 
-| Market | Underwriter (provisional) | Hosted logo URL |
-|--------|---------------------------|-----------------|
-| ae | LIVA | `https://policy.travelguard.com/content/dam/site-images-docs/ae/LIVA_UAE_Logo.png` (140px) |
-| bh | GIG Bahrain | `https://www.travelguard.com/content/dam/tg-documents/qatar/gig-logo-bh.png` (180px) |
-| kw | GIG | `https://www.travelguard.com/content/dam/tg-documents/qatar/giga-logo-kt.png` |
-| lb | GIG | `https://www.travelguard.com/content/dam/tg-documents/qatar/gig-logo-lb.png` |
-| om | Sukoon | `https://www.travelguard.com/content/dam/tg-documents/qatar/sukoon-logo.png` |
-| qa | Qatar General Insurance | `https://www.travelguard.com/content/dam/tg-documents/qatar/qa-gen-logo.png` |
+### Tokenized header logo — `{{Image_AIGGlobalLogoHeader}}`
+
+**Status (August 2026): `bh` only. Every other market still hardcodes its `<img>`.**
+
+`bh/en` and `bh/ar` no longer carry a logo `<img>` at all — the header cell is just the
+list-A token:
+
+```html
+<td style="…padding-bottom: 30px; padding-top: 30px;">
+  {{Image_AIGGlobalLogoHeader}}
+</td>
+```
+
+**Why:** the MEA markets are shared between partners, and the partners disagree about the
+logo. The Qatar Airways build wants the local underwriter's logo (GIG, LIVA, Sukoon, …);
+**Emirates wants no logo at all** in the same markets. Compare the Partner Reference table
+below — Emirates covers `BH`/`AE`/`QA`/`KW`/`OM`/`LB` — bh, ae, qa, kw, om, lb —
+exactly the markets Qatar Airways delivered. One template per market can't serve both with
+the logo baked in, so the whole `<img>` tag moves into the MVS: Qatar Airways' MVS supplies
+the underwriter `<img>`, Emirates' supplies an empty value and the header renders bare.
+
+**Consequences when converting a market:**
+
+- The **MVS must now carry the full `<img>` tag**, not just a URL — width, `alt`, and inline
+  styles included. The table below becomes the reference for what MVS has to supply; the
+  template no longer documents it. A market converted without its MVS entry populated ships
+  with **no logo at all**, silently.
+- The header `<td>` keeps its `padding-top: 30px; padding-bottom: 30px` when the token is
+  empty, so the no-logo variant has a ~60px band of `#F1F6FB` above the split header. That
+  reads as extra whitespace rather than a visible break (the body background is the same
+  colour), but it is not the same as deleting the row.
+- `Image_AIGGlobalLogoHeader` is an approved list-A MVS field (see Handlebars Variables) and
+  the AIG in the name is a token identifier, not visible branding — the QA scripts strip
+  `{{…}}` before the AIG-branding check, so don't "fix" it.
+- **Precedent:** `expedia/us/en/policy-confirmation.html` moved its co-brand header logo into
+  the same `{{Image_AIGGlobalLogoHeader}}` token (commit `748ac02`) — different brand, same
+  reasoning, and the same requirement that the ESP supply the whole tag including `alt`.
+
+**Do not convert the remaining markets ahead of the partner decision.** `ae`, `kw`, `lb`,
+`om`, `qa` — and the Travel Guard default in `_template/row-reference.html` /
+`row-reference-rtl.html` — keep their hardcoded `<img>` for now. When they are converted, do
+en and ar together. Tracked in [`_work-items/mea-logo-tokenization.md`](../_work-items/mea-logo-tokenization.md).
+
+| Market | Underwriter (provisional) | Hosted logo URL | In template today |
+|--------|---------------------------|-----------------|-------------------|
+| ae | LIVA | `https://policy.travelguard.com/content/dam/site-images-docs/ae/LIVA_UAE_Logo.png` (140px) | hardcoded `<img>` |
+| bh | GIG Bahrain | `https://www.travelguard.com/content/dam/tg-documents/qatar/gig-logo-bh.png` (180px) | **`{{Image_AIGGlobalLogoHeader}}`** |
+| kw | GIG | `https://www.travelguard.com/content/dam/tg-documents/qatar/giga-logo-kt.png` (200px) | hardcoded `<img>` |
+| lb | GIG | `https://www.travelguard.com/content/dam/tg-documents/qatar/gig-logo-lb.png` (200px) | hardcoded `<img>` |
+| om | Sukoon | `https://www.travelguard.com/content/dam/tg-documents/qatar/sukoon-logo.png` (200px) | hardcoded `<img>` |
+| qa | Qatar General Insurance | `https://www.travelguard.com/content/dam/tg-documents/qatar/qa-gen-logo.png` (200px) | hardcoded `<img>` |
 
 > The BH/KW/LB/OM/QA logos live in the CDN folder `/content/dam/tg-documents/qatar/`. The local PNG copies under `row/{country}/` are source assets only — templates reference the hosted URLs, not the local files. The underwriter names (and therefore `alt` text) are provisional and need confirmation.
 
@@ -158,7 +201,7 @@ The `united/us/` directory was retired in the same change: its legacy unstyled `
 
 | Country | Languages | Notes |
 |---------|-----------|-------|
-| bh (Bahrain) | en, ar | **GIG Bahrain** underwriter logo (not Travel Guard); ar is RTL and uses the `ترافل جارد` brand rendering (same as ae) |
+| bh (Bahrain) | en, ar | **GIG Bahrain** underwriter logo (not Travel Guard); ar is RTL and uses the `ترافل جارد` brand rendering (same as ae). **August 2026:** the header logo `<img>` was replaced by `{{Image_AIGGlobalLogoHeader}}` in both languages so the Emirates build of the same market can render logo-free — bh is the only market converted so far, see [Logo](#logo). |
 
 All Qatar Airways templates have the `{{AltViewPolicyLinks}}` section **removed** (per partner requirement). The same removal was applied to the existing **ch (Switzerland)** templates (de, en, fr) for this partner.
 
@@ -169,7 +212,7 @@ All Qatar Airways templates have the `{{AltViewPolicyLinks}}` section **removed*
 | cy (Cyprus) | en, el | **Greek is a new ROW language** (`lang="el"`) — no other `el` template exists to diff against, so the Greek copy is carried verbatim from the legacy AEM source and is **pending native-speaker / QA-team review**. Both templates were legacy AIG AEM exports (`aem-Grid` fragments, single-brace variables). The split-header banner originally carried the source's own top heading; it was realigned to the standard ROW thank-you line in the same sweep that added `dk`, so no ROW market deviates any more. Anchor colours were normalised off the skeleton's stale `#1352DE` to the repo-standard `#0076be` when `gr` shipped — the last three holdouts (`_template/row-reference.html` and `us/en/pre-trip.html`/`post-trip.html`) were cleaned up in the same follow-up, so `#1352DE` no longer appears anywhere in `row/`. Partner: **Emirates**. |
 | dk (Denmark) | en, da | **Danish is a new ROW language** (`lang="da"`). Both files were legacy AIG AEM exports; copy comes from the DK team's tracked-change Word redlines kept alongside them (`en/denmark-en.docx`, `da/denmark-dk.docx`). Built on the `no`/`se` shape: bulleted Website/Email/Telephone/Opening-hours contact block plus a `{{ClaimsURL}}` "Report your claim via:" claims line. Emergency line follows the redline's "Call **us** any time on" rather than the sibling "Call Travel Guard". Danish cross-checked against `expedia/dk/da` but **pending native-speaker / QA-team review** — the source typo "undtagelserr" is knowingly retained. Partner: **Emirates**. |
 | gr (Greece) | en, el | Second `el` market. Both files were legacy AIG AEM exports and arrived with **no** redline, so all copy is carried verbatim from source. The Greek is word-for-word identical to `cy/el` in every section and was lifted from it — the only content difference between the two markets is that **GR assistance is phone-only** (no `{{AssistanceServicesEmailAddress}}`), in both languages. Plain contact pattern: `Please call …` sentence rather than the `no`/`se` bullet block, and no `{{ClaimsURL}}` line. Greek is **pending native-speaker / QA-team review**, same as `cy`. Partner: **Emirates**. |
-| hu (Hungary) | en, hu | Underwriter **Colonnade Insurance**; `HG` in the legacy Emirates partner code list. Both files were legacy AIG AEM exports; copy comes from Colonnade's tracked-change Word redlines kept alongside the templates (`en/hungary-en.docx`, `hu/hungary-hu.docx`). Built on the `no`/`dk` bulleted Website/Email/Telephone/Opening-hours customer-service shape. Both redlines leave the claims section untouched (still the legacy literal `+36 1 801 0801` / `karrendezes@colonnade.hu`), unlike the customer-service section — the 46/52 ROW precedent is `{{ClaimsContactNumber}}`/`{{ClaimsOperatingHours}}`/`{{ClaimsEmailAddress}}` tokens, so claims was converted to match rather than left literal (only `ca/en` and `ca/fr` keep genuinely literal, region-specific claims numbers, and that's documented as a deliberate stub, not the case here). Eligibility reminders are **asymmetric between languages**, matching the existing `cz` precedent: `hu/en` is residency-based, `hu/hu` is purchase-date-based — this split exists in the legacy source itself, not something introduced here. `hu/en`'s emergency line was tokenized to `{{AssistanceServicesContactNumber}}` to match `hu/hu`'s redline, even though `hu/en`'s own redline left the old number hardcoded (untouched by any tracked change) — treated as a reviewer oversight rather than a market-specific choice, since every other ROW market tokenizes this field. Bold text on *Certificate of Insurance (COI)* / *Policy Wording* uses `#003D6E` TG navy, matching `cy`/`gr` — confirmed as a deliberate choice even though plain bold (matching the skeleton) is actually the more common pattern across the 27 markets. Partner: **Emirates**. |
+| hu (Hungary) | en, hu | Underwriter **Colonnade Insurance**; listed as `HG` in the source Emirates partner list (corrected to `HU` in Partner Reference). Both files were legacy AIG AEM exports; copy comes from Colonnade's tracked-change Word redlines kept alongside the templates (`en/hungary-en.docx`, `hu/hungary-hu.docx`). Built on the `no`/`dk` bulleted Website/Email/Telephone/Opening-hours customer-service shape. Both redlines leave the claims section untouched (still the legacy literal `+36 1 801 0801` / `karrendezes@colonnade.hu`), unlike the customer-service section — the 46/52 ROW precedent is `{{ClaimsContactNumber}}`/`{{ClaimsOperatingHours}}`/`{{ClaimsEmailAddress}}` tokens, so claims was converted to match rather than left literal (only `ca/en` and `ca/fr` keep genuinely literal, region-specific claims numbers, and that's documented as a deliberate stub, not the case here). Eligibility reminders are **asymmetric between languages**, matching the existing `cz` precedent: `hu/en` is residency-based, `hu/hu` is purchase-date-based — this split exists in the legacy source itself, not something introduced here. `hu/en`'s emergency line was tokenized to `{{AssistanceServicesContactNumber}}` to match `hu/hu`'s redline, even though `hu/en`'s own redline left the old number hardcoded (untouched by any tracked change) — treated as a reviewer oversight rather than a market-specific choice, since every other ROW market tokenizes this field. Bold text on *Certificate of Insurance (COI)* / *Policy Wording* uses `#003D6E` TG navy, matching `cy`/`gr` — confirmed as a deliberate choice even though plain bold (matching the skeleton) is actually the more common pattern across the 27 markets. Partner: **Emirates**. |
 | pl (Poland) | en, pl | **Polish is a new ROW language** (`lang="pl"`). Both files were bare unstyled AIG AEM fragments with single-brace `{Variable}` placeholders — the genuine last holdouts (see the `AltViewPolicyLinks` note below; `mt` was wrongly recorded as last because `pl` was an unregistered, never-committed drop). Copy comes from `poland.doc` — note this is a **legacy OLE2 binary `.doc`, not a `.docx` zip**; extract it with `antiword -m UTF-8.txt row/pl/poland.doc` (`unzip` fails, and the Store-stub `python` on PATH won't run). Unlike the dk/hu/mt redlines it carries **no tracked changes** — it is a clean bilingual spec covering **only the customer-service contact block**, so every other section's copy is carried verbatim from the legacy source per the `gr` precedent, with the rebrand applied. The doc's English column uses descriptive pseudo-tokens (`{{Customer services Website}}`, and Polish `{{Godziny pracy Działu Obsługi Klienta}}`) that would render literally — all mapped onto the real list-A names. The doc also **deletes** the "and quote your policy number" clause in both languages, and rewrites the Polish "by post" sentence into second-person register (`należy` → `chcesz`/`możesz`). Emergency line follows rebranding rule 3 (`Call Travel Guard` / `zadzwonić do Travel Guard`) rather than dk/mt's redline-specific "Call us", since the doc is silent there. No `{{ClaimsURL}}` line (mt precedent). Eligibility reminders are **asymmetric between languages**, matching `cz`/`hu`: `pl/en` is residency-based, `pl/pl` is purchase-date-based — the split is in the legacy source. COI/Policy Wording bold is plain, not navy (mt precedent). Polish is **pending native-speaker / QA-team review**; the source typo `obowiązują pewnie wyjątki` (should be `pewne`) is knowingly retained, same as dk's "undtagelserr". Partner: **Emirates**. |
 | mt (Malta) | en | English only. Was a bare unstyled AIG AEM fragment (no `&lt;!DOCTYPE&gt;`/`&lt;head&gt;`/`&lt;body&gt;`, single-brace `{Variable}` placeholders) — the last market on this list still in that state. Copy comes from a tracked-change Word redline kept alongside the template (`en/malta.docx`). Structurally a hybrid: `dk`-style bulleted Website/Email/Telephone/Opening-hours customer-service block **and** `dk`'s "Call us any time on..." emergency-line wording, but `hu`-style claims section (redline leaves `+356 21 238 500` / `info@montaldoinsurance.com` literal, converted to `{{ClaimsContactNumber}}`/`{{ClaimsOperatingHours}}`/`{{ClaimsEmailAddress}}` per the same precedent as `hu`, and unlike `dk` there is no redlined "Report your claim via: `{{ClaimsURL}}`" line so that addition was not carried over). Bold text on *Certificate of Insurance (COI)* / *Policy Wording* is plain (skeleton default), not navy — unlike `hu`/`cy`/`gr`. Partner: **Emirates**. |
 
@@ -221,11 +264,37 @@ Markets covered per partner:
 |---------|---------|
 | LHGROUP | AT, BE, CH, DE, ES, FR, IT, NL, PT, UK, **US** |
 | United | BE, CH, DE, ES, FR, IE, IT, PT, **US** |
-| Emirates | AT, BA, BE, CA, CY, CZ, DE, DK, ES, FR, GR, HG, IE, IT, KT, LB, MT, NL, NO, NZ, OM, PL, PT, QT, SA, SE, SG, SZ, UE, UK, ZA |
-| Qatar (planning set) | AT, BE, CZ, DE, ES, FR, IT, KT, LB, NL, NO, OM, QT, SE, UE, UK |
+| Emirates | AE, AT, BE, BH, CA, CH, CY, CZ, DE, DK, ES, FR, GR, HU, IE, IT, KW, LB, MT, NL, NO, NZ, OM, PL, PT, QA, SA, SE, SG, UK, ZA |
+| Qatar (planning set) | AE, AT, BE, CZ, DE, ES, FR, IT, KW, LB, NL, NO, OM, QA, SE, UK |
 | **Qatar Airways** (delivered, Jun–Jul 2026) | ae, bh, ch, kw, lb, no, om, qa, se |
 
-> Note: the older Emirates/Qatar partner rows use legacy market codes (`UE`=UAE, `QT`=Qatar, `KT`=Kuwait). The delivered Qatar Airways templates use ISO folder codes: **`ae`** (UAE), **`qa`** (Qatar), **`kw`** (Kuwait), **`bh`** (Bahrain). The Kuwait CDN logo asset keeps its original filename `giga-logo-kt.png`; Bahrain (added July 2026) uses `gig-logo-bh.png`.
+> **Codes in the Emirates/Qatar rows above have been corrected to ISO 3166-1 alpha-2.** The
+> source partner lists used codes that are not valid ISO for the country meant. Corrected
+> here — if you are diffing against the partner's original list, expect these six to differ:
+>
+> | Source code | Country | Corrected to | Why the source code is wrong |
+> |---|---|---|---|
+> | `UE` | UAE | **`AE`** | transposed |
+> | `QT` | Qatar | **`QA`** | not ISO |
+> | `KT` | Kuwait | **`KW`** | not ISO |
+> | `BA` | Bahrain | **`BH`** | `BA` is ISO for Bosnia & Herzegovina |
+> | `HG` | Hungary | **`HU`** | not ISO |
+> | `SZ` | Switzerland | **`CH`** | `SZ` is ISO for Eswatini |
+>
+> **`UK` is left as `UK` on purpose** — it stays readable to people, and this table is a
+> human reference, not a machine input. Everything technical uses **`GB`**: the folder is
+> `row/gb/` (renamed from `uk/` for that reason), as are template paths, `cmpid` values and
+> any backend identifier. Don't "fix" `UK` here, and don't let it leak into a path.
+>
+> `SA` is also carried as-is, but it is not a mistake — `ZA` (South Africa) appears
+> separately in the same list, so `SA` reads as genuinely Saudi Arabia. There is no ROW
+> folder for it.
+>
+> CDN asset filenames were minted under the old codes and keep them — Kuwait's logo is still
+> `giga-logo-kt.png`; Bahrain (added July 2026) uses `gig-logo-bh.png`. Don't rename the
+> assets to match.
+
+> **The Emirates and Qatar Airways market sets overlap, and they disagree about the header logo.** Emirates covers `BH`/`AE`/`QA`/`KW`/`OM`/`LB` — bh, ae, qa, kw, om, lb — the same markets Qatar Airways was delivered for, but Emirates wants **no logo** where Qatar Airways wants the underwriter's. There is one template per market, so the logo is being moved into `{{Image_AIGGlobalLogoHeader}}` for MVS to fill per partner. Only `bh` has been converted — see [Logo](#logo) before touching a header in any MEA market.
 
 Live deployed template URLs (per language):
 
