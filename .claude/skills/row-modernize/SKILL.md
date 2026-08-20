@@ -89,7 +89,7 @@ Insert extracted content into each of the 12 sections documented in the referenc
 7. **Customer service** — phone, hours, email
 8. **Emergency overseas** — 24/7 assistance phone (+ email if source has it)
 9. **Claims** — claims phone, hours, email
-10. **Alternative policy links** — `{{AltViewPolicyLinks}}` (market-dependent — include unless the market omits it, e.g. Italy it/en + it/it removed it entirely)
+10. **Alternative policy links** — **RETIRED.** `AltViewPolicyLinks` was removed from every ROW market (August 2026) and is used by no template. Do **not** add it to a new market. Keep only the `SECTION 10 … RETIRED` comment so the 9 → 11 numbering stays readable.
 11. **Sign-off** — translated farewell + "Travel Guard" in bold navy
 12. **Footer** — empty for most markets; legal text for Singapore
 
@@ -126,7 +126,7 @@ Also convert any contact-related legacy variables:
 - `{ClaimsOperatingHours}` → `{{ClaimsOperatingHours}}`
 - `{CustomerServiceOperatingHours}` → `{{CustomerServiceOperatingHours}}`
 - `{ViewPolicyURL}` → `{{ViewPolicyURL}}`
-- `{AltViewPolicyLinks}` → `{{AltViewPolicyLinks}}`
+- `{AltViewPolicyLinks}` → **delete** (retired — remove the token and its wrapping element, don't convert it)
 
 ### Apply rebranding rules (AIG → Travel Guard)
 
@@ -182,8 +182,8 @@ Before finishing, verify:
 - [ ] Inline styles preserved on all elements (Gmail strips `<style>` blocks)
 - [ ] Responsive breakpoint CSS at 600px is present
 - [ ] Font stack is `'Noto Sans', 'Source Sans Pro', Arial, sans-serif`
-- [ ] Link color is `#1352DE` for email links (or `#0076be` for Singapore)
+- [ ] Link color is `#0076be` for email links (repo-standard; the old `#1352DE` was purged from `row/` in August 2026)
 - [ ] Preheader div includes `&zwnj;&nbsp;` padding (20 repetitions after text)
 - [ ] `{{ViewPolicyURL}}` is present in the greeting section
-- [ ] `{{AltViewPolicyLinks}}` is present in Section 10 *unless* the market omits it (e.g. Italy)
+- [ ] `AltViewPolicyLinks` does **not** appear — Section 10 is retired, comment only
 - [ ] Sign-off uses bold navy `#003D6E` for "Travel Guard"
