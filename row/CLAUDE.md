@@ -250,9 +250,9 @@ Opening hours: {{CustomerServiceOperatingHours}}<br>
 If you would like to receive your policy documentation by post, …
 ```
 
-This is the shape in **32 of 32** bulleted templates (at, be, ch, de, dk, es, fr, gb, hu, ie, it, mt, nl, no, pl, pt, se — both languages each; `es/es` reads `Abierto {{…}}` with no colon). The label localizes (`Öffnungszeiten:`, `Åbningstider:`, `Nyitvatartás:`, `Godziny otwarcia:`, `Heures d'ouverture:`, …); the structure does not.
+This is the shape in **36 of 36** bulleted templates (at, be, ch, cy, de, dk, es, fr, gb, gr, hu, ie, it, mt, nl, no, pl, pt, se — both languages each, except the en-only gb, ie, mt and the three-language ch; `es/es` reads `Abierto {{…}}` with no colon). The label localizes (`Öffnungszeiten:`, `Åbningstider:`, `Nyitvatartás:`, `Godziny otwarcia:`, `Heures d'ouverture:`, `Ώρες λειτουργίας:`, …); the structure does not.
 
-`dk (en, da)`, `hu (en, hu)` and `mt (en)` briefly deviated by making opening hours a 4th `<li>` — those five were normalized in August 2026 when `pl` arrived and its source doc confirmed the outside-the-list form. **Do not reintroduce the 4th-bullet variant.** Markets using the plain `Please call …` sentence instead of a bullet block (cy, gr, nz, cz, ae/bh/kw/om/qa, be/nl, sg) are a separate pattern and are unaffected.
+`dk (en, da)`, `hu (en, hu)` and `mt (en)` briefly deviated by making opening hours a 4th `<li>` — those five were normalized in August 2026 when `pl` arrived and its source doc confirmed the outside-the-list form. **Do not reintroduce the 4th-bullet variant.** Markets using the plain `Please call …` sentence instead of a bullet block (nz, cz, ae/bh/kw/om/qa, be/nl, sg) are a separate pattern and are unaffected. `gr (en, el)` and `cy (en, el)` moved off that plain sentence onto this bulleted block in August 2026.
 
 ## Content variations by language
 
