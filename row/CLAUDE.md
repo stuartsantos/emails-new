@@ -92,10 +92,11 @@ Legacy `{Variable}` (single-brace) placeholders should be converted to the moder
 
 ### Tokenized header logo — `{{Image_AIGGlobalLogoHeader}}`
 
-**Status (August 2026): `bh` only. Every other market still hardcodes its `<img>`.**
+**Status (August 2026): `bh`, `ae` and `kw` — all three contested markets are converted.
+Every other market keeps its hardcoded `<img>`, and should.**
 
-`bh/en` and `bh/ar` no longer carry a logo `<img>` at all — the header cell is just the
-list-A token:
+Those six files (`en` and `ar` for each of the three) no longer carry a logo `<img>` at all —
+the header cell is just the list-A token:
 
 ```html
 <td style="…padding-bottom: 30px; padding-top: 30px;">
@@ -113,8 +114,8 @@ the whole `<img>` tag moves into the MVS: Qatar Airways' MVS supplies the underw
 
 **August 2026 — `SA`, `QA`, `OM` and `LB` were descoped from Emirates.** `qa`, `om` and `lb`
 now have Qatar Airways as their only partner, so their hardcoded underwriter logos are
-correct as they stand and need no tokenization. The conflict is confined to `bh` (converted),
-`ae` and `kw`.
+correct as they stand and need no tokenization. That confined the conflict to `bh`, `ae` and
+`kw` — all three since converted.
 
 **Consequences when converting a market:**
 
@@ -133,16 +134,23 @@ correct as they stand and need no tokenization. The conflict is confined to `bh`
   the same `{{Image_AIGGlobalLogoHeader}}` token (commit `748ac02`) — different brand, same
   reasoning, and the same requirement that the ESP supply the whole tag including `alt`.
 
-**Do not convert the remaining markets ahead of the partner decision.** `ae`, `kw`, `lb`,
-`om`, `qa` — and the Travel Guard default in `_template/row-reference.html` /
-`row-reference-rtl.html` — keep their hardcoded `<img>` for now. When they are converted, do
-en and ar together. Tracked in [`_work-items/mea-logo-tokenization.md`](../_work-items/mea-logo-tokenization.md).
+**Nothing further should be converted.** `lb`, `om` and `qa` were descoped from Emirates, so
+Qatar Airways is their only partner and the hardcoded underwriter logo **is** the correct
+header — tokenizing them would lose a logo nobody asked to lose. The Travel Guard default in
+`_template/row-reference.html` / `row-reference-rtl.html` stays hardcoded too: a new non-MEA
+market has no partner split to solve. Tracked in
+[`_work-items/mea-logo-tokenization.md`](../_work-items/mea-logo-tokenization.md).
+
+> **The MVS entries for `ae` and `kw` must be populated before these ship.** Both markets now
+> depend on MVS to supply the whole `<img>` — until Qatar Airways' MVS carries it, the Qatar
+> Airways build of `ae`/`kw` renders with no logo and no error. The URLs in the table below
+> are the reference for what MVS has to supply.
 
 | Market | Underwriter (provisional) | Hosted logo URL | In template today |
 |--------|---------------------------|-----------------|-------------------|
-| ae | LIVA | `https://policy.travelguard.com/content/dam/site-images-docs/ae/LIVA_UAE_Logo.png` (140px) | hardcoded `<img>` |
+| ae | LIVA | `https://policy.travelguard.com/content/dam/site-images-docs/ae/LIVA_UAE_Logo.png` (140px) | **`{{Image_AIGGlobalLogoHeader}}`** |
 | bh | GIG Bahrain | `https://www.travelguard.com/content/dam/tg-documents/qatar/gig-logo-bh.png` (180px) | **`{{Image_AIGGlobalLogoHeader}}`** |
-| kw | GIG | `https://www.travelguard.com/content/dam/tg-documents/qatar/giga-logo-kt.png` (200px) | hardcoded `<img>` |
+| kw | GIG | `https://www.travelguard.com/content/dam/tg-documents/qatar/giga-logo-kt.png` (200px) | **`{{Image_AIGGlobalLogoHeader}}`** |
 | lb | GIG | `https://www.travelguard.com/content/dam/tg-documents/qatar/gig-logo-lb.png` (200px) | hardcoded `<img>` |
 | om | Sukoon | `https://www.travelguard.com/content/dam/tg-documents/qatar/sukoon-logo.png` (200px) | hardcoded `<img>` |
 | qa | Qatar General Insurance | `https://www.travelguard.com/content/dam/tg-documents/qatar/qa-gen-logo.png` (200px) | hardcoded `<img>` |
@@ -194,8 +202,8 @@ The `united/us/` directory was retired in the same change: its legacy unstyled `
 
 | Country | Languages | Notes |
 |---------|-----------|-------|
-| ae (UAE) | en, ar | **LIVA** underwriter logo (not Travel Guard); ar is RTL |
-| kw (Kuwait) | en, ar | ar is RTL |
+| ae (UAE) | en, ar | **LIVA** underwriter logo (not Travel Guard); ar is RTL. **August 2026:** header logo tokenized to `{{Image_AIGGlobalLogoHeader}}` in both languages — see [Logo](#logo) |
+| kw (Kuwait) | en, ar | **GIG** underwriter logo (not Travel Guard); ar is RTL. **August 2026:** header logo tokenized to `{{Image_AIGGlobalLogoHeader}}` in both languages — see [Logo](#logo) |
 | lb (Lebanon) | en | English only; customer-service + claims are email-only (no phone) |
 | no (Norway) | en, nb | 3-bullet Website/Email/Telephone contact block + `{{ClaimsURL}}` claims line |
 | om (Oman) | en, ar | ar is RTL |
@@ -206,7 +214,7 @@ The `united/us/` directory was retired in the same change: its legacy unstyled `
 
 | Country | Languages | Notes |
 |---------|-----------|-------|
-| bh (Bahrain) | en, ar | **GIG Bahrain** underwriter logo (not Travel Guard); ar is RTL and uses the `ترافل جارد` brand rendering (same as ae). **August 2026:** the header logo `<img>` was replaced by `{{Image_AIGGlobalLogoHeader}}` in both languages so the Emirates build of the same market can render logo-free — bh is the only market converted so far, see [Logo](#logo). |
+| bh (Bahrain) | en, ar | **GIG Bahrain** underwriter logo (not Travel Guard); ar is RTL and uses the `ترافل جارد` brand rendering (same as ae). **August 2026:** the header logo `<img>` was replaced by `{{Image_AIGGlobalLogoHeader}}` in both languages so the Emirates build of the same market can render logo-free — bh was the first market converted, with `ae` and `kw` following; see [Logo](#logo). |
 
 All Qatar Airways templates have the `{{AltViewPolicyLinks}}` section **removed** (per partner requirement). The same removal was applied to the existing **ch (Switzerland)** templates (de, en, fr) for this partner.
 
@@ -305,7 +313,7 @@ Markets covered per partner:
 > `giga-logo-kt.png`; Bahrain (added July 2026) uses `gig-logo-bh.png`. Don't rename the
 > assets to match.
 
-> **The Emirates and Qatar Airways market sets overlap, and they disagree about the header logo.** After the August 2026 descope, Emirates covers `BH`/`AE`/`KW` — bh, ae, kw — three of the nine markets Qatar Airways was delivered for, but Emirates wants **no logo** where Qatar Airways wants the underwriter's. There is one template per market, so the logo is being moved into `{{Image_AIGGlobalLogoHeader}}` for MVS to fill per partner. Only `bh` has been converted — see [Logo](#logo) before touching a header in any MEA market. `qa`, `om` and `lb` are no longer contested and keep their hardcoded underwriter logos.
+> **The Emirates and Qatar Airways market sets overlap, and they disagree about the header logo.** After the August 2026 descope, Emirates covers `BH`/`AE`/`KW` — bh, ae, kw — three of the nine markets Qatar Airways was delivered for, but Emirates wants **no logo** where Qatar Airways wants the underwriter's. There is one template per market, so the logo was moved into `{{Image_AIGGlobalLogoHeader}}` for MVS to fill per partner. **All three are now converted** — see [Logo](#logo) before touching a header in any MEA market. `qa`, `om` and `lb` are no longer contested and keep their hardcoded underwriter logos.
 
 Live deployed template URLs (per language):
 

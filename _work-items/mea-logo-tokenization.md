@@ -1,11 +1,18 @@
 # MEA header logo → `{{Image_AIGGlobalLogoHeader}}`
 
-**Status:** `bh` converted (August 2026). The rest of MEA is **deliberately not converted** — do not sweep it without a decision from the partner/MVS side.
+**Status: COMPLETE (August 2026).** All three contested markets — `bh`, then `ae` and `kw` —
+are converted, six files in total. The rest of MEA is **deliberately not converted** and
+should stay that way; see "No longer in scope" below.
 
-**August 2026 descope: `SA`, `QA`, `OM` and `LB` left Emirates' scope.** That takes `qa`, `om`
+**August 2026 descope: `SA`, `QA`, `OM` and `LB` left Emirates' scope.** That took `qa`, `om`
 and `lb` out of this work item entirely — Qatar Airways is now their only partner, so their
-hardcoded underwriter logos are correct as they stand. Only `ae` and `kw` are still contested
-and still need converting.
+hardcoded underwriter logos are correct as they stand, which left `ae` and `kw` as the only
+markets still needing conversion.
+
+> **Remaining dependency:** the templates are done, but the **MVS entries are not this repo's
+> to populate**. Until Qatar Airways' MVS carries the full `<img>` for `ae` and `kw`, the
+> Qatar Airways build of those markets renders with no logo and no error. Confirm before
+> either goes live.
 
 ## Problem
 
@@ -43,13 +50,18 @@ Airways, an empty value for Emirates.
 
 - `row/bh/en/policy-confirmation.html`
 - `row/bh/ar/policy-confirmation.html`
+- `row/ae/en/policy-confirmation.html`
+- `row/ae/ar/policy-confirmation.html`
+- `row/kw/en/policy-confirmation.html`
+- `row/kw/ar/policy-confirmation.html`
 
-## Not done — on purpose
+The `<img>` each one replaced, for whoever populates the MVS:
 
-| Market | Langs | Logo still hardcoded |
+| Market | Langs | Logo the MVS must now supply |
 |---|---|---|
-| ae | en, ar | `LIVA_UAE_Logo.png` (140px) |
-| kw | en, ar | `giga-logo-kt.png` (200px) |
+| ae | en, ar | `LIVA_UAE_Logo.png` (140px), `alt="LIVA"` |
+| bh | en, ar | `gig-logo-bh.png` (180px), `alt="GIG Bahrain"` |
+| kw | en, ar | `giga-logo-kt.png` (200px), `alt="GIG"` |
 
 ## No longer in scope — descoped from Emirates, August 2026
 
@@ -66,10 +78,13 @@ Also unconverted, and probably should stay that way: `_template/row-reference.ht
 `_template/row-reference-rtl.html` keep the Travel Guard + Zurich `<img>` as the skeleton
 default, since new non-MEA markets have no partner split to solve.
 
-## Before converting the rest
+## Standing facts about the converted markets
+
+These stay true for `bh`/`ae`/`kw` now that they are tokenized, and are the rules to follow
+if a further market ever is (nothing is queued — see "No longer in scope").
 
 1. **MVS has to carry the full `<img>` tag** — width, `alt`, inline styles — not just a URL.
-   The hosted URLs in `row/CLAUDE.md` → Logo become the reference for what MVS must supply.
+   The hosted URLs in `row/CLAUDE.md` → Logo are the reference for what MVS must supply.
    A converted market whose MVS entry is empty ships with **no logo and no error**.
 2. Convert **en and ar together** for a market; the header markup is identical apart from
    the font stack.
