@@ -9,10 +9,9 @@ and `lb` out of this work item entirely — Qatar Airways is now their only part
 hardcoded underwriter logos are correct as they stand, which left `ae` and `kw` as the only
 markets still needing conversion.
 
-> **Remaining dependency:** the templates are done, but the **MVS entries are not this repo's
-> to populate**. Until Qatar Airways' MVS carries the full `<img>` for `ae` and `kw`, the
-> Qatar Airways build of those markets renders with no logo and no error. Confirm before
-> either goes live.
+> **Closed, August 2026:** the templates are done and Qatar Airways' MVS entries for `ae` and
+> `kw` have been populated, so the `<img>` the templates no longer carry is supplied from the
+> MVS side. Nothing outstanding on this work item.
 
 ## Problem
 

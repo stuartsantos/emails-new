@@ -141,10 +141,10 @@ header — tokenizing them would lose a logo nobody asked to lose. The Travel Gu
 market has no partner split to solve. Tracked in
 [`_work-items/mea-logo-tokenization.md`](../_work-items/mea-logo-tokenization.md).
 
-> **The MVS entries for `ae` and `kw` must be populated before these ship.** Both markets now
-> depend on MVS to supply the whole `<img>` — until Qatar Airways' MVS carries it, the Qatar
-> Airways build of `ae`/`kw` renders with no logo and no error. The URLs in the table below
-> are the reference for what MVS has to supply.
+> **Qatar Airways' MVS entries for `ae` and `kw` were populated in August 2026** — that
+> dependency is closed. The standing rule still holds for any converted market: the MVS
+> supplies the whole `<img>`, and one whose entry is empty renders with no logo and no
+> error. The URLs in the table below are the reference for what MVS has to carry.
 
 | Market | Underwriter (provisional) | Hosted logo URL | In template today |
 |--------|---------------------------|-----------------|-------------------|
