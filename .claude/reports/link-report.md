@@ -1,16 +1,14 @@
 # Link Check Report
 
 **Scanned:** digdrct (11 templates)
-**Date:** Thu Sep  3 11:10:04 2026
+**Date:** Thu Sep  3 11:21:46 2026
 **Unique destinations:** 81
-**Pass:** 79 | **Warn:** 2 | **Fail:** 0
+**Pass:** 80 | **Warn:** 1 | **Fail:** 0
 
 ## Warnings (couldn't independently confirm — worth a manual check)
 
 - ⚠️ **404** https://claims.travelguard.com/status — response is cached per User-Agent (Vary header present) -- this checker's UA may see a different cached result than a browser; verify manually
   - used in: `digdrct/us/en/policy-confirmation.html`, `digdrct/us/en/post-trip.html`, `digdrct/us/en/pre-trip.html`
-- ⚠️ **302** https://www.travelguard.com/o/coronavirus-resource-center/voucher-and-refund-form — redirects to https://www.travelguard.com/content/travelguard/us/en/configurations/error-page.html — target URL looks like a dead/error page, verify manually
-  - used in: `digdrct/us/en/policy-confirmation.html`, `digdrct/us/en/pre-trip.html`
 
 ## Redirects (healthy — the template's own link responded and handed off)
 
@@ -32,7 +30,7 @@
 
 ## Passed
 
-64 destinations returned 2xx. Not itemized — see link-report.md history if needed.
+65 destinations returned 2xx. Not itemized — see link-report.md history if needed.
 
 ---
 
