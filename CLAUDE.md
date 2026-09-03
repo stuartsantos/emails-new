@@ -262,14 +262,48 @@ In the split header (image cell + navy thank-you banner), the image cell must ca
 
 ## QA Tooling
 
-Two existing scripts cover the same checks I keep manually grepping for during sweeps. Use them before reinventing one-off greps.
+Three existing scripts cover the same checks I keep manually grepping for during sweeps. Use them before reinventing one-off greps.
 
 | Script | When it runs | What it checks |
 |--------|--------------|----------------|
 | `.claude/scripts/validate-email-html.sh` | PostToolUse hook on every Edit/Write to `*.html` | Per-file validation: blocks the operation and returns issues to Claude |
 | `.claude/scripts/batch-qa.sh` | Manual sweep — `./batch-qa.sh [scope]` | Batch validation across all templates → writes `.claude/reports/qa-report.md` |
+| `.claude/scripts/check-links.sh` | Manual sweep — `./check-links.sh [scope]` | Live reachability of every `http(s)` href/src → writes `.claude/reports/link-report.md` |
 
-**14 categories of checks:** duplicate class attrs, AIG branding, `@aig.com` emails, legacy `{Variable}` placeholders, missing Gmail dark mode `[data-ogsc]`, dark-mode gotcha (`.content-bg`/`.dark-text` on white areas), missing `.body-bg` class, missing `<img alt>`, relative image paths, tables missing `role="presentation"`, mismatched MSO conditionals, UAT/QA URLs, missing `box-sizing` for mobile blocks, missing preheader `&zwnj;&nbsp;` padding.
+The first two only check URL **shape** (absolute vs relative, UAT/QA host, `cmpid` presence) by
+static regex — neither ever issues a network request, so neither can tell you a link 404s.
+`check-links.sh` is the one that actually fetches every destination. It's deliberately kept out
+of the PostToolUse hook: network checks are slow and flaky in ways local regex isn't, and a
+transient DNS blip or a bot-blocking WAF would then block an unrelated edit. Run it by hand
+before shipping a template, not on every keystroke. It dedupes by URL with the query string
+(`cmpid` tracking values) stripped, so one request covers every market/campaign variant of the
+same destination, and runs checks in parallel (default 20 at once). It does **not** follow
+redirects (`-L`) — a 3xx from the template's own domain means that link works; what a
+downstream redirect target does with the request is a separate site's problem. (Real case:
+`travelguard.com/o/write-a-review` healthily 302s to `trustpilot.com/review/travelguard.com`,
+but Trustpilot's own bot-management then blocks curl — following the redirect made a good
+link look broken.) Known-noisy findings are handled rather than reported as false FAILs:
+- URLs containing an unresolved `{{...}}` Handlebars token or an ESP merge tag (literal or
+  percent-encoded braces, e.g. Responsys' `%7B%email_address%%7D` in unsubscribe links) are
+  skipped — these only resolve when the ESP renders the send, not as literal text.
+- Social platforms (`facebook.com`, `instagram.com`, `tiktok.com`, `x.com`/`twitter.com`,
+  `youtube.com`, `linkedin.com`, `trustpilot.com`) are notorious for bot-blocking scripted
+  requests; a 4xx/5xx there is reported as a WARN ("verify manually"), not a hard FAIL.
+- A response whose headers include `Vary: ... User-Agent` may be cached per-UA at the CDN —
+  this checker's synthetic UA can land in a different (stale/wrong) cache partition than a
+  real browser's. (Real case: `claims.travelguard.com/status` 404s for curl while resolving
+  fine in a browser, and does carry `Vary: User-Agent`.) A 4xx/5xx with that header present is
+  reported as a WARN, not a FAIL.
+- A same-site redirect landing on a target whose path looks like an error/not-found page
+  (`error-page`, `/404`, `not-found`) is reported as a WARN even though the HTTP status is a
+  healthy 3xx — a status code alone doesn't prove the destination is real. (Real case:
+  `travelguard.com/o/coronavirus-resource-center/voucher-and-refund-form` 302s to
+  `.../configurations/error-page.html`, whose title is literally "Error Page".)
+- On this Windows/Git-Bash curl build, `--ssl-no-revoke` is required — without it, OCSP
+  revocation checks fail outbound on this network (`CRYPT_E_NO_REVOCATION_CHECK`) and even
+  live sites like `facebook.com` or `fonts.googleapis.com` come back as connection errors.
+
+**14 categories of checks (`validate-email-html.sh` / `batch-qa.sh`):** duplicate class attrs, AIG branding, `@aig.com` emails, legacy `{Variable}` placeholders, missing Gmail dark mode `[data-ogsc]`, dark-mode gotcha (`.content-bg`/`.dark-text` on white areas), missing `.body-bg` class, missing `<img alt>`, relative image paths, tables missing `role="presentation"`, mismatched MSO conditionals, UAT/QA URLs, missing `box-sizing` for mobile blocks, missing preheader `&zwnj;&nbsp;` padding.
 
 Scope examples: `./batch-qa.sh row`, `./batch-qa.sh expedia`, `./batch-qa.sh tg/us/zurich`. Files can be excluded via `.claude/qa-exclude.txt`.
 
