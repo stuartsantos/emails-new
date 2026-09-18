@@ -78,7 +78,6 @@ Image_AIGGlobalLogoHeader  Image_AIGGlobalLogoFooter
 {{policyDetail-primaryInsured-lastName}}   # Customer last name
 {{policyDetail-address-country}}           # Residency country
 {{policyDetail-productName}}               # Product name
-{{policyDetail-planDescription}}           # Plan description (it/it only)
 ```
 
 > **Auditing rule — check every new country/template against list A before shipping.** When adding a new country or template, confirm each `{{token}}` is either in list A (MVS) or a known `policyDetail-*` service value from list B. Any token that is neither is almost certainly a typo or an invented field the MVS can't populate — flag it, don't ship it. Quick scan: `grep -rhoE '\{\{[^}]+\}\}' row --include=*.html | sort -u` then diff against list A + B.

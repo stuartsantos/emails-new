@@ -109,7 +109,7 @@ Apply these mappings:
 | `{FirstName}` | `{{policyDetail-primaryInsured-firstName}}` |
 | `{LastName}` | `{{policyDetail-primaryInsured-lastName}}` |
 | `{ProductName}` | `{{ProductNamePlaceHolder}}` |
-| `{PlanName}` | `{{policyDetail-planDescription}}` |
+| `{PlanName}` | `{{ProductNamePlaceHolder}}` |
 | `{ResidencyCountry}` | `{{policyDetail-address-country}}` |
 | `{InceptionDate}` | `{{policyDetail-departure}}` |
 | `{ExpiryDate}` | `{{policyDetail-return}}` |
