@@ -189,7 +189,7 @@ All ROW policy confirmation templates have been updated to the modern responsive
 | at (Austria) | de, en | |
 | be (Belgium) | en, fr, nl | be/nl was created from scratch (file was empty) |
 | ch (Switzerland) | de, en, fr | ch/de and ch/fr include cancellation policy section |
-| cz (Czech Republic) | cz, en | cz/cz had modern format, only needed rebrand |
+| cz (Czech Republic) | cs, en | The language folder is `cs`, not `cz` (the live template URL uses `cs` too). Had modern format, only needed rebrand. **September 2026:** both languages moved off the plain `Please call …` sentence onto the bulleted Website/Email/Telephone contact block, from a bilingual spec table (TSA Exit Fronting Business Enhancement Request). Two deviations from that spec, both deliberate: its `{{CustomerServicesOperatingHoursLocal}}` is not a list-A field and was mapped onto the real `{{CustomerServiceOperatingHours}}` (the `pl` pseudo-token precedent), and opening hours were kept **outside** the `<ul>` per the convention below rather than as the 4th bullet the spec draws. The spec also drops the trailing "and quote your policy number" / "a sdělte číslo vaší smlouvy" clause in both languages, and rewrites the Czech by-post sentence (`dokumentaci vaší smlouvy` → `dokumentaci k vaší pojistce`). Czech copy is carried verbatim from the spec and is **pending native-speaker / QA-team review**. |
 | de (Germany) | de, en | |
 | es (Spain) | en, es | es/es includes Spain residency disclaimer |
 | fr (France) | en, fr | fr/fr includes France residency disclaimer |
@@ -266,9 +266,9 @@ Opening hours: {{CustomerServiceOperatingHours}}<br>
 If you would like to receive your policy documentation by post, …
 ```
 
-This is the shape in **36 of 36** bulleted templates (at, be, ch, cy, de, dk, es, fr, gb, gr, hu, ie, it, mt, nl, no, pl, pt, se — both languages each, except the en-only gb, ie, mt and the three-language ch; `es/es` reads `Abierto {{…}}` with no colon). The label localizes (`Öffnungszeiten:`, `Åbningstider:`, `Nyitvatartás:`, `Godziny otwarcia:`, `Heures d'ouverture:`, `Ώρες λειτουργίας:`, …); the structure does not.
+This is the shape in **38 of 38** bulleted templates (at, be, ch, cy, cz, de, dk, es, fr, gb, gr, hu, ie, it, mt, nl, no, pl, pt, se — both languages each, except the en-only gb, ie, mt and the three-language ch; `es/es` reads `Abierto {{…}}` with no colon). The label localizes (`Öffnungszeiten:`, `Åbningstider:`, `Nyitvatartás:`, `Godziny otwarcia:`, `Heures d'ouverture:`, `Ώρες λειτουργίας:`, `Otevírací doba:`, …); the structure does not.
 
-`dk (en, da)`, `hu (en, hu)` and `mt (en)` briefly deviated by making opening hours a 4th `<li>` — those five were normalized in August 2026 when `pl` arrived and its source doc confirmed the outside-the-list form. **Do not reintroduce the 4th-bullet variant.** Markets using the plain `Please call …` sentence instead of a bullet block (nz, cz, ae/bh/kw/om/qa, be/nl, sg, za) are a separate pattern and are unaffected. `gr (en, el)` and `cy (en, el)` moved off that plain sentence onto this bulleted block in August 2026.
+`dk (en, da)`, `hu (en, hu)` and `mt (en)` briefly deviated by making opening hours a 4th `<li>` — those five were normalized in August 2026 when `pl` arrived and its source doc confirmed the outside-the-list form. **Do not reintroduce the 4th-bullet variant.** Markets using the plain `Please call …` sentence instead of a bullet block (nz, ae/bh/kw/om/qa, be/nl, sg, za) are a separate pattern and are unaffected. `gr (en, el)` and `cy (en, el)` moved off that plain sentence onto this bulleted block in August 2026, and `cz (cs, en)` followed in September 2026.
 
 > `za` joined the plain-sentence group in August 2026 because that is what its legacy source
 > carries and it shipped with no redline to direct otherwise. Worth a second look if new
@@ -279,7 +279,7 @@ This is the shape in **36 of 36** bulleted templates (at, be, ch, cy, de, dk, es
 
 - **Belgian French (be/fr)** uses different terminology than France French (fr/fr): "Attestation d'Assurance" vs "Certificat d'assurance", "Termes de Votre Police" vs "Conditions Générales"
 - **Swiss French (ch/fr)** and **Swiss German (ch/de)** include an additional "policy cancellation" section not in other templates
-- **Czech (cz/cz)** eligibility section focuses on purchase date requirements rather than residency
+- **Czech (cz/cs)** eligibility section focuses on purchase date requirements rather than residency
 - **Singapore (sg/en)** is light-mode-only — `color-scheme: light` instead of `light dark`, no dark-mode classes; greeting uses "Dear {firstName}," (no lastName); includes MFA eRegister notice and legal/regulatory footer
 
 ## Partner Reference
