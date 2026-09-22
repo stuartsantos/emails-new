@@ -1,18 +1,33 @@
 # Email Template QA Report
 
-**Scanned:** row/za (1 templates)
-**Date:** 2026-09-02 17:44 UTC
-**Pass:** 1 | **Warn:** 0 | **Fail:** 0 | **Total issues:** 0
+**Scanned:** expedia (23 templates)
+**Date:** 2026-09-22 11:26 UTC
+**Pass:** 9 | **Warn:** 14 | **Fail:** 0 | **Total issues:** 14
 
 ## Summary by Issue Type
 
 | Issue | Files Affected | Priority |
 |-------|---------------|----------|
+| UAT/QA environment URLs | 14 | HIGH |
 
 ## Results by Brand
 
-### row/ (1 files: 1 pass, 0 warn, 0 fail)
+### expedia/ (23 files: 9 pass, 14 warn, 0 fail)
 
+- ⚠️ `expedia/ch/de/policy-confirmation.html` — UAT/QA env URL (L213)
+- ⚠️ `expedia/ch/fr/policy-confirmation.html` — UAT/QA env URL (L213)
+- ⚠️ `expedia/ch/it/policy-confirmation.html` — UAT/QA env URL (L213)
+- ⚠️ `expedia/de/de/policy-confirmation.html` — UAT/QA env URL (L213)
+- ⚠️ `expedia/dk/da/policy-confirmation.html` — UAT/QA env URL (L210)
+- ⚠️ `expedia/es/es/policy-confirmation.html` — UAT/QA env URL (L213)
+- ⚠️ `expedia/fi/fi/policy-confirmation.html` — UAT/QA env URL (L210)
+- ⚠️ `expedia/fr/fr/policy-confirmation.html` — UAT/QA env URL (L213)
+- ⚠️ `expedia/hk/en/policy-confirmation.html` — UAT/QA env URL (L358,502)
+- ⚠️ `expedia/ie/en/policy-confirmation.html` — UAT/QA env URL (L213)
+- ⚠️ `expedia/it/it/policy-confirmation.html` — UAT/QA env URL (L211)
+- ⚠️ `expedia/nl/nl/policy-confirmation.html` — UAT/QA env URL (L211)
+- ⚠️ `expedia/no/nb/policy-confirmation.html` — UAT/QA env URL (L211)
+- ⚠️ `expedia/se/sv/policy-confirmation.html` — UAT/QA env URL (L211)
 
 ---
 

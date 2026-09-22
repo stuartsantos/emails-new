@@ -59,8 +59,8 @@ Four header-logo strategies are in use across the 22 active templates. New templ
 
 | Strategy | Logo URL(s) | Width | Markets |
 |----------|-------------|-------|---------|
-| EU/ROW (default for new templates) | `.../travel-guard/us/en/CM_Travel_Guard_v_RGB.png` | 200px | at/de, ch/de, ch/fr, ch/it, de/de, dk/da, es/es, fi/fi, fr/fr, it/it, nl/nl, no/nb, se/sv |
-| Travel Guard header (legacy 600px) | `.../travel-guard/us/en/tg_logo_header.png` | 600px | be/fr, be/nl, ca/en, ca/fr, mx/es, sg/en |
+| EU/ROW (default for new templates) | `.../travel-guard/us/en/CM_Travel_Guard_v_RGB.png` | 200px | at/de, be/fr, be/nl, ch/de, ch/fr, ch/it, de/de, dk/da, es/es, fi/fi, fr/fr, it/it, nl/nl, no/nb, se/sv |
+| Travel Guard header (legacy 600px) | `.../travel-guard/us/en/tg_logo_header.png` | 600px | ca/en, ca/fr, mx/es, sg/en |
 | Zurich-only (jetstar path) | `.../jetstar/au/en/images/emails/zurich-logo.png` | 200px | hk/en, nz/en |
 | US co-brand (split TG + injected partner logo) | `.../travel-guard/us/en/travel-guard-logo-blue.png` (200px) + `{{Image_AIGGlobalLogoHeader}}` in the second cell | — | us/en |
 
