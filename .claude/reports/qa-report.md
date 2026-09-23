@@ -1,18 +1,20 @@
 # Email Template QA Report
 
-**Scanned:** row/cz (2 templates)
-**Date:** 2026-09-22 11:49 UTC
-**Pass:** 2 | **Warn:** 0 | **Fail:** 0 | **Total issues:** 0
+**Scanned:** row (60 templates)
+**Date:** 2026-09-23 14:57 UTC
+**Pass:** 59 | **Warn:** 1 | **Fail:** 0 | **Total issues:** 1
 
 ## Summary by Issue Type
 
 | Issue | Files Affected | Priority |
 |-------|---------------|----------|
+| AIG branding references | 1 | HIGH |
 
 ## Results by Brand
 
-### row/ (2 files: 2 pass, 0 warn, 0 fail)
+### row/ (60 files: 59 pass, 1 warn, 0 fail)
 
+- ⚠️ `row/us/en/post-trip.html` — AIG branding (L227)
 
 ---
 

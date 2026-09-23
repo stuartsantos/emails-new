@@ -218,7 +218,7 @@ The `united/us/` directory was retired in the same change: its legacy unstyled `
 | no (Norway) | en, nb | 3-bullet Website/Email/Telephone contact block + `{{ClaimsURL}}` claims line |
 | om (Oman) | en, ar | ar is RTL |
 | qa (Qatar) | en, ar | ar is RTL |
-| se (Sweden) | en, sv | 3-bullet contact block; sv retains a market-specific "Viktig information" liability notice |
+| se (Sweden) | en, sv | 3-bullet contact block. sv's market-specific "Viktig information" liability notice (legacy AIG copy) was removed in September 2026 |
 
 **Added July 2026 (Qatar Airways, later market):**
 
