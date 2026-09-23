@@ -278,6 +278,16 @@ This is the shape in **38 of 38** bulleted templates (at, be, ch, cy, cz, de, dk
 > Emirates markets are meant to standardise on the bulleted block — `gr` and `cy` were moved
 > onto it the same month, so the plain-sentence group is no longer purely legacy.
 
+## Character encoding: raw UTF-8, not entities
+
+Every ROW template is saved as UTF-8 under `<meta charset="UTF-8">`, so accented letters and
+symbols go in as raw characters — `å ö ø æ é ß ę ř`, `®`, `’` — never as `&aring;`, `&reg;`,
+`&#233;` and the like. The only entities that belong in visible markup are the preheader
+`&zwnj;&nbsp;` padding (see root `CLAUDE.md`) and `&amp;` for a literal ampersand in copy.
+`se/sv` and `no/nb` were the last holdouts for letter entities and `&reg;` was mixed with raw
+`®` across 50 files; both were normalized in September 2026. Paste translated copy exactly as
+the source doc has it; don't let an editor "escape" it on the way in.
+
 ## Content variations by language
 
 - **Belgian French (be/fr)** uses different terminology than France French (fr/fr): "Attestation d'Assurance" vs "Certificat d'assurance", "Termes de Votre Police" vs "Conditions Générales"
