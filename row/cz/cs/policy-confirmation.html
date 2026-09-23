@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<html lang="cs" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,8 +19,57 @@
     </xml>
   </noscript>
   <![endif]-->
+  <!--[if !mso]><!-->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <!--<![endif]-->
 
   <style type="text/css">
+    /* CSS Reset */
+    body, table, td, p, a, li { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    img { -ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; }
+    body { margin: 0; padding: 0; width: 100% !important; height: 100% !important; }
+
+    /* Google Fonts fallback */
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+    /* Dark Mode */
+    :root { color-scheme: light dark; supported-color-schemes: light dark; }
+
+    @media (prefers-color-scheme: dark) {
+      .body-bg { background-color: #1a1a1a !important; }
+      .content-bg { background-color: #2d2d2d !important; }
+      .dark-text { color: #ffffff !important; }
+      .dark-text-secondary { color: #cccccc !important; }
+    }
+
+    /* Gmail dark mode */
+    [data-ogsc] .body-bg { background-color: #1a1a1a !important; }
+    [data-ogsc] .content-bg { background-color: #2d2d2d !important; }
+    [data-ogsc] .dark-text { color: #ffffff !important; }
+    [data-ogsc] .dark-text-secondary { color: #cccccc !important; }
+
+/*
+
+########COLORS#######
+
+Color Reference (Zurich / Travel Guard):
+- Navy (TG Navy): #003d6e
+- Zurich Blue Dark: #005b94
+- Zurich Blue: #0076be
+- Nightsky Purple: #302261
+- Seafoam/Teal: #64c5b9
+- Cyan accent: #66cbe1
+- Snowmelt border: #9cc7e6
+- Pink (watermelon): #db5989
+- Pink light (watermelon50): #edacc4
+- Green (jungle): #a5d069
+- Glacier blue: #e4edf8
+- Red (highlight): #af0827
+- Body text: #1c252e or #343741
+- Background: #f1f6fb
+
+*/
 @media (max-width: 600px) {
   .wrapper, .section {
     width: 100% !important;

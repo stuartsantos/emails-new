@@ -143,6 +143,7 @@ my @cat_order = (
   ['aig_email',                '@aig.com email domains',                  'HIGH'],
   ['legacy_vars',              'Legacy {Variable} format',                'MED'],
   ['missing_dark_gmail',       'Missing Gmail dark mode',                 'MED'],
+  ['missing_dark_css',         'Declares dark mode but no dark CSS',      'MED'],
   ['dark_mode_gotcha',         'Dark mode .content-bg/.dark-text gotcha',  'HIGH'],
   ['missing_body_bg',          'Missing .body-bg class',                  'MED'],
   ['missing_alt',              'Missing img alt attributes',              'MED'],
@@ -266,6 +267,15 @@ while (my $file = <$lf>) {
       push @issues, 'Missing Gmail dark mode [data-ogsc] selectors';
       $cat{missing_dark_gmail}++;
     }
+  }
+
+  # The checks above only run once a dark media query exists, so a template
+  # that declares dark support but ships no dark CSS used to pass silently
+  # (row/cz/cs, Sept 2026). Light-only templates (sg/en) declare "light only".
+  if ($has_dark_mq == 0
+      && count_lines(\@lines, qr/name="color-scheme" content="[^"]*dark/i) > 0) {
+    push @issues, 'Declares dark mode (color-scheme meta) but has no dark-mode CSS';
+    $cat{missing_dark_css}++;
   }
 
   # --- 8. Missing alt attributes ---

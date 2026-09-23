@@ -303,11 +303,11 @@ link look broken.) Known-noisy findings are handled rather than reported as fals
   revocation checks fail outbound on this network (`CRYPT_E_NO_REVOCATION_CHECK`) and even
   live sites like `facebook.com` or `fonts.googleapis.com` come back as connection errors.
 
-**14 categories of checks (`validate-email-html.sh` / `batch-qa.sh`):** duplicate class attrs, AIG branding, `@aig.com` emails, legacy `{Variable}` placeholders, missing Gmail dark mode `[data-ogsc]`, dark-mode gotcha (`.content-bg`/`.dark-text` on white areas), missing `.body-bg` class, missing `<img alt>`, relative image paths, tables missing `role="presentation"`, mismatched MSO conditionals, UAT/QA URLs, missing `box-sizing` for mobile blocks, missing preheader `&zwnj;&nbsp;` padding.
+**15 categories of checks (`validate-email-html.sh` / `batch-qa.sh`):** duplicate class attrs, AIG branding, `@aig.com` emails, legacy `{Variable}` placeholders, missing Gmail dark mode `[data-ogsc]`, dark support declared in the `color-scheme` meta but no dark-mode CSS at all, dark-mode gotcha (`.content-bg`/`.dark-text` on white areas), missing `.body-bg` class, missing `<img alt>`, relative image paths, tables missing `role="presentation"`, mismatched MSO conditionals, UAT/QA URLs, missing `box-sizing` for mobile blocks, missing preheader `&zwnj;&nbsp;` padding.
 
 Scope examples: `./batch-qa.sh row`, `./batch-qa.sh expedia`, `./batch-qa.sh tg/us/zurich`. Files can be excluded via `.claude/qa-exclude.txt`.
 
-**All 14 checks run in a single `perl` process for the whole scan — keep it that way.**
+**All 15 checks run in a single `perl` process for the whole scan — keep it that way.**
 `batch-qa.sh` originally shelled out ~100 times per file (a `perl`/`grep`/`sed`/`cut` pipeline
 per check), which is fine on macOS where a spawn costs ~1ms. On Windows Git Bash a spawn
 costs ~230ms — measured — and worse inside this OneDrive-synced folder, where sync and AV

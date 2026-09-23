@@ -1,7 +1,7 @@
 # Email Template QA Report
 
 **Scanned:** row (60 templates)
-**Date:** 2026-09-23 14:57 UTC
+**Date:** 2026-09-23 20:21 UTC
 **Pass:** 59 | **Warn:** 1 | **Fail:** 0 | **Total issues:** 1
 
 ## Summary by Issue Type

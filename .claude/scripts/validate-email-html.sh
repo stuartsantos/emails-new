@@ -158,6 +158,15 @@ if [[ "$HAS_DARK_MQ" -gt 0 && "$HAS_OGSC" -eq 0 ]]; then
   ISSUES+=("MISSING GMAIL DARK MODE — template has prefers-color-scheme:dark but no [data-ogsc] selectors for Gmail dark mode support.")
 fi
 
+# The checks above only fire once a dark media query exists, so a template that
+# declares dark support in its meta but ships no dark CSS at all used to pass
+# silently (row/cz/cs, Sept 2026). Light-only templates (sg/en) declare
+# "light only" and are unaffected.
+DECLARES_DARK=$(echo "$CONTENT" | grep -ciE 'name="color-scheme" content="[^"]*dark' || true)
+if [[ "$DECLARES_DARK" -gt 0 && "$HAS_DARK_MQ" -eq 0 ]]; then
+  ISSUES+=("MISSING DARK MODE CSS — color-scheme meta declares dark support but there is no prefers-color-scheme:dark block or [data-ogsc] selectors. Restore the standard dark-mode <style> block from a sibling template.")
+fi
+
 # ---------------------------------------------------------------------------
 # 4. Missing alt attributes on <img> tags
 # ---------------------------------------------------------------------------
