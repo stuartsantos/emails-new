@@ -134,8 +134,11 @@ correct as they stand and need no tokenization. That confined the conflict to `b
   reasoning, and the same requirement that the ESP supply the whole tag including `alt`.
 
 **Nothing further should be converted.** `lb`, `om` and `qa` were descoped from Emirates, so
-Qatar Airways is their only partner and the hardcoded underwriter logo **is** the correct
-header — tokenizing them would lose a logo nobody asked to lose. The Travel Guard default in
+the hardcoded underwriter logo **is** the correct header — tokenizing them would lose a logo
+nobody asked to lose. `om` is shared with DNATA (September 2026), but DNATA takes the same
+underwriter logo, so the hardcoded `<img>` serves both partners. The rule of thumb: **a market
+needs the token only if one of its partners wants a different logo** — in practice, only
+markets that include Emirates (which wants none). The Travel Guard default in
 `_template/row-reference.html` / `row-reference-rtl.html` stays hardcoded too: a new non-MEA
 market has no partner split to solve. Tracked in
 [`_work-items/mea-logo-tokenization.md`](../_work-items/mea-logo-tokenization.md).
@@ -293,6 +296,13 @@ Markets covered per partner:
 | Emirates | AE, AT, BE, BH, CA, CH, CY, CZ, DE, DK, ES, FR, GR, HU, IE, IT, KW, MT, NL, NO, NZ, PL, PT, SE, SG, UK, ZA |
 | Qatar (planning set) | AE, AT, BE, CZ, DE, ES, FR, IT, KW, LB, NL, NO, OM, QA, SE, UK |
 | **Qatar Airways** (delivered, Jun–Jul 2026) | ae, bh, ch, kw, lb, no, om, qa, se |
+| DNATA | AE, BH, OM |
+| ARABCM | AE |
+
+> **September 2026 — DNATA and ARABCM added.** Both show the underwriter logo. `ae` and `bh`
+> are already tokenized, so they only need MVS entries for the new partners supplying the
+> underwriter `<img>`. `om` is now shared (Qatar Airways + DNATA) but stays hardcoded: neither
+> partner wants no logo, so there is no conflict to solve. See [Logo](#logo).
 
 > **August 2026 — `SA`, `QA`, `OM` and `LB` are descoped from Emirates**, and have been
 > removed from the Emirates row above (31 markets → 27). `QA`, `OM` and `LB` stay in scope
