@@ -156,8 +156,8 @@ the same: **delete, don't tokenize.** Tokenization is only for a market two part
 > supplies the whole `<img>`, and one whose entry is empty renders with no logo and no
 > error. The URLs in the table below are the reference for what MVS has to carry.
 
-| Market | Underwriter (provisional) | Hosted logo URL | In template today |
-|--------|---------------------------|-----------------|-------------------|
+| Market | Underwriter | Hosted logo URL | In template today |
+|--------|-------------|-----------------|-------------------|
 | ae | LIVA | `https://policy.travelguard.com/content/dam/site-images-docs/ae/LIVA_UAE_Logo.png` (140px) | **`{{Image_AIGGlobalLogoHeader}}`** |
 | bh | GIG Bahrain | `https://www.travelguard.com/content/dam/tg-documents/qatar/gig-logo-bh.png` (180px) | **`{{Image_AIGGlobalLogoHeader}}`** |
 | kw | GIG | `https://www.travelguard.com/content/dam/tg-documents/qatar/giga-logo-kt.png` (200px) | **`{{Image_AIGGlobalLogoHeader}}`** |
@@ -165,7 +165,7 @@ the same: **delete, don't tokenize.** Tokenization is only for a market two part
 | om | Sukoon | `https://www.travelguard.com/content/dam/tg-documents/qatar/sukoon-logo.png` (200px) | hardcoded `<img>` |
 | qa | Qatar General Insurance | `https://www.travelguard.com/content/dam/tg-documents/qatar/qa-gen-logo.png` (200px) | hardcoded `<img>` |
 
-> The BH/KW/LB/OM/QA logos live in the CDN folder `/content/dam/tg-documents/qatar/`. The local PNG copies under `row/{country}/` are source assets only — templates reference the hosted URLs, not the local files. The underwriter names (and therefore `alt` text) are provisional and need confirmation.
+> The BH/KW/LB/OM/QA logos live in the CDN folder `/content/dam/tg-documents/qatar/`. The local PNG copies under `row/{country}/` are source assets only — templates reference the hosted URLs, not the local files. The underwriter names (and therefore `alt` text) were confirmed for the September 2026 launch.
 
 ## Rebranding Rules (AIG Travel → Travel Guard)
 
