@@ -36,6 +36,7 @@ All HTML files reference local images using `../img/` relative paths. Production
 | fulfillment/twelve-month.html | [12-mo Follow up](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=610-853&m=dev) |
 | fulfillment/eighteen-month.html | [18-mo Follow up](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=610-3731&m=dev) |
 | fulfillment/two-year.html | [2-yr Follow up](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=610-3894&m=dev) |
+| fulfillment/braze-abandon-cart.html, braze-abandon-cart-followup.html, braze-abandon-cart-png.html | [Abandon cart headers](https://www.figma.com/design/1TFzWPErTki2hFoIEUjMzB/Customer-Journey-Emails?node-id=1119-562&m=dev) — text + CTA left, image right; hero images `abandon-card-hero-{1,2,3}-2.jpg` (234×155, curve baked in) |
 
 ### BAU / Seasonal
 
