@@ -88,6 +88,7 @@ Legacy `{Variable}` (single-brace) placeholders should be converted to the moder
 
 - **Travel Guard + Zurich logo:** `https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/CM_Travel_Guard_v_RGB.png` (200px width) — default for ROW templates, hardcoded as an `<img>` in `_template/row-reference.html`.
 - Several Qatar Airways markets use the **underwriter's own logo** instead — see the table below.
+- **`nz/en` uses the standalone Zurich logo** (`https://www.travelguard.com/content/dam/tg-documents/jetstar/au/en/images/emails/zurich-logo.png`, 200px, `alt="Zurich"`) instead of the TG + Zurich lockup (October 2026) — the same asset `expedia/nz/en` and `expedia/hk/en` use. It lives under the **Jetstar** CDN path; don't move or clean up that folder without updating these three templates. The same change **removed the split header** (photo + navy thank-you banner) from `nz/en` entirely, so the logo sits directly above the greeting; the thank-you line survives only in the preheader. Apart from the `ca/en` plain-HTML stub, it is the only ROW template without the split header — don't restore it from the skeleton.
 
 ### Tokenized header logo — `{{Image_AIGGlobalLogoHeader}}`
 
