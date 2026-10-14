@@ -1,36 +1,17 @@
 # Link Check Report
 
-**Scanned:** digdrct (11 templates)
-**Date:** Thu Sep  3 11:21:46 2026
-**Unique destinations:** 81
-**Pass:** 80 | **Warn:** 1 | **Fail:** 0
-
-## Warnings (couldn't independently confirm — worth a manual check)
-
-- ⚠️ **404** https://claims.travelguard.com/status — response is cached per User-Agent (Vary header present) -- this checker's UA may see a different cached result than a browser; verify manually
-  - used in: `digdrct/us/en/policy-confirmation.html`, `digdrct/us/en/post-trip.html`, `digdrct/us/en/pre-trip.html`
+**Scanned:** row/sg (1 templates)
+**Date:** Wed Oct 14 04:27:16 2026
+**Unique destinations:** 9
+**Pass:** 9 | **Warn:** 0 | **Fail:** 0
 
 ## Redirects (healthy — the template's own link responded and handed off)
 
-- ✅ **301** http://www.gia.org.sg — redirects to https://www.gia.org.sg/
-- ✅ **301** http://www.sdic.org.sg — redirects to https://www.sdic.org.sg/
-- ✅ **301** http://www.zurich.com.sg — redirects to https://www.zurich.com.sg/
-- ✅ **301** https://buy.travelguard.com/tgi2/policytools/modifypolicy.aspx — redirects to https://policy.travelguard.com/aig-travel/us/en
-- ✅ **301** https://buy.travelguard.com/tgi2/policytools/viewpolicy.aspx — redirects to https://policy.travelguard.com/aig-travel/us/en
 - ✅ **302** https://eregister.mfa.gov.sg/ — redirects to https://eregister.mfa.gov.sg:443/eregisterportal/landing.html
-- ✅ **302** https://maps.app.goo.gl/KMD1Z8zKb8r9tVo36 — redirects to https://www.google.com/maps/place/1271+6th+Ave,+New+York,+NY+10020/@40.7605212,-73.983379,17z/data=!3m1!4b1!4m6!3m5!1s0x89c258f8dacf1f63:0xf66c3a0cd0efd2fd!8m2!3d40.7605212!4d-73.9807987!16s%2Fg%2F11c28_1fvt?entry=tts
-- ✅ **302** https://policy.travelguard.com/aig-travel/ca/en — redirects to http://policy.travelguard.com/travelguard/ca/en
-- ✅ **301** https://tiktok.com/@travel.guard — redirects to https://www.tiktok.com/@travel.guard
-- ✅ **301** https://www.aig.ca — redirects to https://www.aig.ca/home
-- ✅ **301** https://www.aig.com — redirects to https://www.aig.com/home
-- ✅ **302** https://www.facebook.com/travelguard — redirects to https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Ftravelguard
-- ✅ **302** https://www.instagram.com/travelguard/ — redirects to https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Ftravelguard%2F&is_from_rle
-- ✅ **301** https://www.travelguard.ca/info/ — redirects to http://www.travelguard.ca/info?cmpid=emc-tgdirect-ca-en-fulfillment-annual-followup
-- ✅ **302** https://www.travelguard.com/o/write-a-review — redirects to https://www.trustpilot.com/review/travelguard.com?cmpid=emc-tgdirect-us-en-fulfillment-annual-followup
 
 ## Passed
 
-65 destinations returned 2xx. Not itemized — see link-report.md history if needed.
+8 destinations returned 2xx. Not itemized — see link-report.md history if needed.
 
 ---
 
