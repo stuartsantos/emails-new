@@ -53,6 +53,19 @@ and cannot be changed from this repo — it is an internal identifier, never ren
 customer, so it is not a rebranding violation. The QA scripts strip `{{handlebars}}` before
 the AIG branding check for exactly this reason; see the note in the root `CLAUDE.md`.
 
+`us/en` also names the selling partner in copy (hero banner, cancellation text) via:
+
+```
+{{policy-partnerSystemId}}                 # Partner brand name (us/en only; available in QA)
+```
+
+Confirm in a QA send that this renders a display name ("Expedia") rather than a raw system ID.
+
+The "Proud provider for:" label above the partner logo is HTML text in the template, not part
+of the logo image — so it shows for every partner (CarRentals, CheapTickets, Hotels, Orbitz,
+Hotwire, Travelocity, Expedia). Partner logo images must therefore carry **no** wording;
+`expedia-logo_fulfillment.png` was re-cropped to drop its baked-in label (October 2026).
+
 ## Logo Usage
 
 Four header-logo strategies are in use across the 22 active templates. New templates should follow the EU/ROW pattern (CM_Travel_Guard_v_RGB.png @ 200px) unless a regional partner agreement requires otherwise.
