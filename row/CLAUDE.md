@@ -20,6 +20,8 @@ row/
 
 **Multi-language countries:** Austria (de/en), Bahrain (en/ar), Belgium (en/fr/nl), Canada (en/fr), Switzerland (de/en/fr), Cyprus (en/el), Denmark (en/da), Greece (en/el), Hungary (en/hu), UAE (en/ar), Kuwait (en/ar), Norway (en/nb), Oman (en/ar), Poland (en/pl), Qatar (en/ar), Sweden (en/sv)
 
+**Non-confirmation templates:** `us/en` also has `pre-trip.html` / `post-trip.html`, and `nz/en` has `cancel.html` (October 2026) — the Emirates NZ policy cancellation confirmation. It is built from `nz/en/nz-cancel.docx` on the `nz/en` confirmation's shell (standalone Zurich logo, no split header) and adds a label/value details table (policy number, cancellation date, status, refund amount). Two of its tokens are **placeholders, not approved fields**: `{{policyDetail-cancellationDate}}` and `{{policyDetail-premium}}` stand in for the doc's `<CancellationDate DD/MM/YYYY>` and `<Premium>`, and are in neither list A nor list B — confirm the real service-value names before it ships (an HTML comment in the file marks them). The doc's literal contact details (`09 921 7171`, Mon–Fri 9.00am–5.00pm NZST, traveladmin@travelguard.com) were mapped onto the `CustomerServices*` tokens the confirmation uses; the underwriter/distributor legal copy is carried literally as small print rather than via `{{Footer1LocalLanguage}}`.
+
 **RTL (Arabic) markets:** ae, bh, kw, om, qa each have an `ar/` template built on `_template/row-reference-rtl.html` — see [RTL templates](#rtl-arabic-templates) below.
 
 ## Handlebars Variables
@@ -88,7 +90,7 @@ Legacy `{Variable}` (single-brace) placeholders should be converted to the moder
 
 - **Travel Guard + Zurich logo:** `https://www.travelguard.com/content/dam/tg-documents/travel-guard/us/en/CM_Travel_Guard_v_RGB.png` (200px width) — default for ROW templates, hardcoded as an `<img>` in `_template/row-reference.html`.
 - Several Qatar Airways markets use the **underwriter's own logo** instead — see the table below.
-- **`nz/en` uses the standalone Zurich logo** (`https://www.travelguard.com/content/dam/tg-documents/jetstar/au/en/images/emails/zurich-logo.png`, 200px, `alt="Zurich"`) instead of the TG + Zurich lockup (October 2026) — the same asset `expedia/nz/en` and `expedia/hk/en` use. It lives under the **Jetstar** CDN path; don't move or clean up that folder without updating these three templates. The same change **removed the split header** (photo + navy thank-you banner) from `nz/en` entirely, so the logo sits directly above the greeting; the thank-you line survives only in the preheader. Apart from the `ca/en` plain-HTML stub, it is the only ROW template without the split header — don't restore it from the skeleton.
+- **`nz/en` uses the standalone Zurich logo** (`https://www.travelguard.com/content/dam/tg-documents/jetstar/au/en/images/emails/zurich-logo.png`, 200px, `alt="Zurich"`) instead of the TG + Zurich lockup (October 2026) — the same asset `expedia/nz/en` and `expedia/hk/en` use. `nz/en/cancel.html` uses it too. It lives under the **Jetstar** CDN path; don't move or clean up that folder without updating these four templates. The same change **removed the split header** (photo + navy thank-you banner) from `nz/en` entirely, so the logo sits directly above the greeting; the thank-you line survives only in the preheader. Apart from the `ca/en` plain-HTML stub, it is the only ROW template without the split header — don't restore it from the skeleton.
 
 ### Tokenized header logo — `{{Image_AIGGlobalLogoHeader}}`
 

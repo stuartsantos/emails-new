@@ -1,7 +1,7 @@
 # Email Template QA Report
 
-**Scanned:** row/pl (2 templates)
-**Date:** 2026-10-14 09:08 UTC
+**Scanned:** row/nz (2 templates)
+**Date:** 2026-10-26 04:56 UTC
 **Pass:** 2 | **Warn:** 0 | **Fail:** 0 | **Total issues:** 0
 
 ## Summary by Issue Type
