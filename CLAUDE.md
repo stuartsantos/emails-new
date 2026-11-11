@@ -29,9 +29,8 @@ Each brand directory has its own `CLAUDE.md` with brand-specific details (Handle
 
 | Server | Type | Status notes |
 |--------|------|--------------|
-| claude.ai Figma (`mcp__claude_ai_Figma__*`) | Remote | Primary Figma integration — use for design context, screenshots, Code Connect |
-| figma (`mcp__figma__*`) | Local SSE (port 3845) | Secondary/legacy Figma — often fails to connect; prefer claude.ai Figma |
-| github (`mcp__github__*`) | HTTP | GitHub Copilot MCP — may need token refresh if connection drops |
+| figma (`mcp__figma__*`) | Remote HTTP (`https://mcp.figma.com/mcp`, user scope) | Figma's hosted server, OAuth via `/mcp` → figma → Authenticate. Use for design context, screenshots, Code Connect. Call `create_session` before file tools. Replaces the old claude.ai Figma connector and the local desktop SSE server (port 3845) |
+| github (`mcp__github__*`) | Remote HTTP (`https://api.githubcopilot.com/mcp/`, user scope) | Auth header reads the `GITHUB_PAT` Windows user env var. After rotating the token, fully quit VS Code (no `Code.exe` left) so the new value is inherited |
 | chrome-devtools (`mcp__plugin_chrome-devtools-mcp_chrome-devtools__*`) | plugin (`chrome-devtools-mcp@claude-plugins-official`, npx) | **Preferred for browser automation** — Chrome DevTools automation |
 | claude-in-chrome (`mcp__claude-in-chrome__*`) | Browser extension | DOM-aware browser automation; load tools via ToolSearch before use. Use only when chrome-devtools can't do the job (e.g., needs persistent extension session) |
 | postman / claude.ai Postman Full | npx + Remote | Dual Postman servers; read instructions resource before use |
@@ -42,6 +41,8 @@ Each brand directory has its own `CLAUDE.md` with brand-specific details (Handle
 | claude.ai Adobe Customer Journey Analytics (`mcp__claude_ai_Adobe_Customer_Journey_Analytics__*`) | Remote | CJA reporting — **read `../cja/CLAUDE.md` before use** (data view IDs, mandatory bot/internal-traffic segments, bootstrap flow) |
 
 If any server fails, run `claude mcp list` to check current health before troubleshooting.
+
+**claude.ai connectors are off on the Zurich gateway.** When `ANTHROPIC_AUTH_TOKEN` / `ANTHROPIC_BASE_URL` in `~/.claude/settings.json` point at the Zurich LiteLLM gateway, that auth takes precedence over the claude.ai login and every `claude.ai …` row above (Postman Full, Gmail, Calendar, TurboTax, M365, CJA) fails to load. Servers configured directly with `claude mcp add` (figma, github) and plugin servers are unaffected. Plugin MCPs (chrome-devtools, context7) only load when listed under `enabledPlugins` in `~/.claude/settings.json`.
 
 ## Shared Technical Patterns
 
