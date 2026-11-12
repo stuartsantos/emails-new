@@ -3,3 +3,7 @@
 .claude/settings.local.json
 .claude/qa-renders/
 *.stackdump
+
+# Postman MCP local workspace state (may contain credentials)
+.postman/
+postman/
