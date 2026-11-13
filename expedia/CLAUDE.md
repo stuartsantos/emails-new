@@ -53,13 +53,20 @@ and cannot be changed from this repo — it is an internal identifier, never ren
 customer, so it is not a rebranding violation. The QA scripts strip `{{handlebars}}` before
 the AIG branding check for exactly this reason; see the note in the root `CLAUDE.md`.
 
-`us/en` also names the selling partner in copy (hero banner, cancellation text) via:
+`us/en` also names the selling partner in copy (hero banner, cancellation text) via two
+MVS fields, populated per co-brand row (CarRentals, CheapTickets, Hotels, Orbitz, Hotwire,
+Travelocity, Expedia):
 
 ```
-{{policy-partnerSystemId}}                 # Partner brand name (us/en only; available in QA)
+{{PlaceHolderField4}}                      # Partner display name, e.g. "Expedia" (hero + cancellation link text)
+{{AltViewPolicyLinks}}                     # Bare https:// URL to the partner's Trips page (cancellation link href)
 ```
 
-Confirm in a QA send that this renders a display name ("Expedia") rather than a raw system ID.
+These replaced `{{policy-partnerSystemId}}` (November 2026), which is blank for the base
+Expedia partner and so rendered "through !" in the hero. `AltViewPolicyLinks` carries the URL
+**only** — the `<a>`, its inline `color: #0076be` pin and its link text
+(`{{PlaceHolderField4}} Trips`) live in the template. Don't move the whole tag into the MVS.
+Every co-brand row needs both fields; an empty one renders blank with no error.
 
 The "Proud provider for:" label above the partner logo is HTML text in the template, not part
 of the logo image — so it shows for every partner (CarRentals, CheapTickets, Hotels, Orbitz,
